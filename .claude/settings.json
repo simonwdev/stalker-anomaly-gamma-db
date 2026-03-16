@@ -1,0 +1,58 @@
+{
+	"permissions": {
+		"allow": [
+			"Bash(dotnet build:*)",
+			"Bash(dotnet test:*)",
+			"Bash(dotnet restore:*)",
+			"Bash(dotnet clean:*)",
+			"Bash(dotnet add:*)",
+			"Bash(dotnet list:*)",
+			"Bash(dotnet sln:*)",
+			"Bash(dotnet new:*)",
+			"Bash(dotnet run:*)",
+			"Bash(dotnet format:*)",
+
+			"Bash(npm:*)",
+			"Bash(npx:*)",
+			"Bash(tsc:*)",
+
+			"Bash(func start:*)",
+			"Bash(func new:*)",
+			"Bash(func host:*)",
+			"Bash(func settings:*)",
+
+			"Bash(az functionapp:*)",
+			"Bash(az account show:*)",
+			"Bash(az group:*)",
+			"Bash(az repos pr:*)",
+
+			"Bash(git:*)",
+
+			"Bash(cat:*)",
+			"Bash(find:*)",
+			"Bash(tree:*)",
+			"Bash(ls:*)",
+			"Bash(head:*)",
+			"Bash(tail:*)",
+			"Bash(grep:*)",
+			"Bash(findstr:*)",
+			"Bash(wc:*)",
+
+			"WebFetch(domain:learn.microsoft.com)",
+			"WebFetch(domain:github.com)",
+			"WebFetch(domain:stackoverflow.com)",
+			"WebFetch(domain:testcontainers.com)",
+			"WebFetch(domain:docs.npmjs.com)",
+			"WebFetch(domain:typescriptlang.org)",
+			"WebFetch(domain:dev.azure.com)",
+
+			"mcp__microsoft_docs_mcp__microsoft_docs_search",
+			"mcp__microsoft_docs_mcp__microsoft_docs_fetch",
+			"mcp__microsoft_docs_mcp__microsoft_code_sample_search",
+
+			"mcp__context7__resolve-library-id",
+			"mcp__context7__get-library-docs"
+		]
+	},
+	"enableAllProjectMcpServers": true
+}

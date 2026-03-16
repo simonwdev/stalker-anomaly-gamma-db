@@ -1,0 +1,1665 @@
+{
+  "factions": [
+    "Army",
+    "Bandit",
+    "Csky",
+    "Dolg",
+    "Ecolog",
+    "Freedom",
+    "Greh",
+    "Isg",
+    "Killer",
+    "Monolith",
+    "Renegade",
+    "Stalker"
+  ],
+  "exchanges": [
+    {
+      "name": "exo_wood_outfit_name",
+      "sourceFaction": "st_data_export_unknown",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "ghillie_outfit_name",
+      "sourceFaction": "st_data_export_unknown",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "trenchcoat_brown_outfit_name",
+      "sourceFaction": "st_data_export_unknown",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "trenchcoat_green_outfit_name",
+      "sourceFaction": "st_data_export_unknown",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "trenchcoat_outfit_name",
+      "sourceFaction": "st_data_export_unknown",
+      "results": {
+        "Renegade": "renegademerc_outfit_name"
+      }
+    },
+    {
+      "name": "army_nosorog_outfit_name",
+      "sourceFaction": "army",
+      "results": {
+        "Dolg": "dolg_nosorog_outfit_name",
+        "Freedom": "freedom_nosorog_outfit_name",
+        "Isg": "isg_nosorog_outfit_name",
+        "Killer": "merc_nosorog_outfit_name",
+        "Monolith": "monolith_nosorog_outfit_name"
+      }
+    },
+    {
+      "name": "military_exo_outfit_name",
+      "sourceFaction": "army",
+      "results": {
+        "Bandit": "bandit_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "military_exolight_outfit_name",
+      "sourceFaction": "army",
+      "results": {
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "military_outfit_name",
+      "sourceFaction": "army",
+      "results": {
+        "Bandit": "military_bandit_outfit_name",
+        "Csky": "military_sky_outfit_name",
+        "Dolg": "dolg_heavy_redline_outfit_name",
+        "Freedom": "military_freedom_outfit_name",
+        "Isg": "light_isg_outfit_name",
+        "Killer": "military_merc_outfit_name",
+        "Monolith": "military_monolit_outfit_name"
+      }
+    },
+    {
+      "name": "bandit_exo_outfit_name",
+      "sourceFaction": "bandit",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "bandit_exolight_outfit_name",
+      "sourceFaction": "bandit",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "bandit_nbc_outfit_name",
+      "sourceFaction": "bandit",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "bandit_ps5_outfit_name",
+      "sourceFaction": "bandit",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "bandit_scientific_dark_outfit_name",
+      "sourceFaction": "bandit",
+      "results": {
+        "Csky": "cs_scientific_outfit_name",
+        "Dolg": "dolg_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "bandit_scientific_outfit_name",
+      "sourceFaction": "bandit",
+      "results": {
+        "Csky": "cs_scientific_outfit_name",
+        "Dolg": "dolg_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "bandit_sun_outfit_name",
+      "sourceFaction": "bandit",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "banditmerc_outfit_name",
+      "sourceFaction": "bandit",
+      "results": {
+        "Csky": "csky_light_outfit_name",
+        "Killer": "merc_scout_outfit_name",
+        "Stalker": "stalker_salamander_outfit_name"
+      }
+    },
+    {
+      "name": "military_bandit_outfit_name",
+      "sourceFaction": "bandit",
+      "results": {
+        "Army": "military_outfit_name",
+        "Csky": "military_sky_outfit_name",
+        "Dolg": "dolg_heavy_redline_outfit_name",
+        "Freedom": "military_freedom_outfit_name",
+        "Isg": "light_isg_outfit_name",
+        "Killer": "military_merc_outfit_name",
+        "Monolith": "military_monolit_outfit_name"
+      }
+    },
+    {
+      "name": "cs_exo_outfit_name",
+      "sourceFaction": "csky",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Bandit": "bandit_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "cs_exolight_outfit_name",
+      "sourceFaction": "csky",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "cs_nbc_outfit_name",
+      "sourceFaction": "csky",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "cs_scientific_outfit_name",
+      "sourceFaction": "csky",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Dolg": "dolg_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "cs_stalker_outfit_name",
+      "sourceFaction": "csky",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "csky_light_novice_outfit_name",
+      "sourceFaction": "csky",
+      "results": {
+        "Bandit": "banditmerc_outfit_name",
+        "Killer": "merc_scout_outfit_name",
+        "Stalker": "stalker_salamander_outfit_name"
+      }
+    },
+    {
+      "name": "csky_light_outfit_name",
+      "sourceFaction": "csky",
+      "results": {
+        "Bandit": "banditmerc_outfit_name",
+        "Killer": "merc_scout_outfit_name",
+        "Stalker": "stalker_salamander_outfit_name"
+      }
+    },
+    {
+      "name": "military_sky_outfit_name",
+      "sourceFaction": "csky",
+      "results": {
+        "Army": "military_outfit_name",
+        "Bandit": "military_bandit_outfit_name",
+        "Dolg": "dolg_heavy_redline_outfit_name",
+        "Freedom": "military_freedom_outfit_name",
+        "Isg": "light_isg_outfit_name",
+        "Killer": "military_merc_outfit_name",
+        "Monolith": "military_monolit_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_exo_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Bandit": "bandit_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_exolight_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_heavy_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "military_outfit_name",
+        "Bandit": "military_bandit_outfit_name",
+        "Csky": "military_sky_outfit_name",
+        "Freedom": "military_freedom_outfit_name",
+        "Isg": "light_isg_outfit_name",
+        "Killer": "military_merc_outfit_name",
+        "Monolith": "military_monolit_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_heavy_redline_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "military_outfit_name",
+        "Bandit": "military_bandit_outfit_name",
+        "Csky": "military_sky_outfit_name",
+        "Freedom": "military_freedom_outfit_name",
+        "Isg": "light_isg_outfit_name",
+        "Killer": "military_merc_outfit_name",
+        "Monolith": "military_monolit_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_nosorog_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "army_nosorog_outfit_name",
+        "Freedom": "freedom_nosorog_outfit_name",
+        "Isg": "isg_nosorog_outfit_name",
+        "Killer": "merc_nosorog_outfit_name",
+        "Monolith": "monolith_nosorog_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_pantsir_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "military_outfit_name",
+        "Bandit": "military_bandit_outfit_name",
+        "Csky": "military_sky_outfit_name",
+        "Freedom": "military_freedom_outfit_name",
+        "Isg": "light_isg_outfit_name",
+        "Killer": "military_merc_outfit_name",
+        "Monolith": "military_monolit_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_red_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_scientific_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Csky": "cs_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_scientific_red_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Csky": "cs_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_scientific_wood_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Csky": "cs_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "dolg_scout_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "exo_dolg_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "exo_dolg_red_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "exo_dolg_urban_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "exo_dolg_wood_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "nbc_dolg_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "trenchcoat_dolg_brown_outfit_name",
+      "sourceFaction": "dolg",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "ecolog_exo_outfit_name",
+      "sourceFaction": "ecolog",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Bandit": "bandit_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "ecologist_guard_outfit_name",
+      "sourceFaction": "ecolog",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "freedom_exo_vineleaf_outfit_name",
+      "sourceFaction": "freedom",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "freedom_nosorog_outfit_name",
+      "sourceFaction": "freedom",
+      "results": {
+        "Army": "army_nosorog_outfit_name",
+        "Dolg": "dolg_nosorog_outfit_name",
+        "Isg": "isg_nosorog_outfit_name",
+        "Killer": "merc_nosorog_outfit_name",
+        "Monolith": "monolith_nosorog_outfit_name"
+      }
+    },
+    {
+      "name": "military_freedom_outfit_name",
+      "sourceFaction": "freedom",
+      "results": {
+        "Army": "military_outfit_name",
+        "Bandit": "military_bandit_outfit_name",
+        "Csky": "military_sky_outfit_name",
+        "Dolg": "dolg_heavy_redline_outfit_name",
+        "Isg": "light_isg_outfit_name",
+        "Killer": "military_merc_outfit_name",
+        "Monolith": "military_monolit_outfit_name"
+      }
+    },
+    {
+      "name": "nbc_freedom_outfit_name",
+      "sourceFaction": "freedom",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "svoboda_exo_outfit_name",
+      "sourceFaction": "freedom",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Bandit": "bandit_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "svoboda_exolight_outfit_name",
+      "sourceFaction": "freedom",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "svoboda_heavy_outfit_2_name",
+      "sourceFaction": "freedom",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "svoboda_light_outfit_name",
+      "sourceFaction": "freedom",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "svoboda_scientific_outfit_name",
+      "sourceFaction": "freedom",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Csky": "cs_scientific_outfit_name",
+        "Dolg": "dolg_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "trenchcoat_freedom_brown_outfit_name",
+      "sourceFaction": "freedom",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "greh_armored_camo_outfit_name",
+      "sourceFaction": "greh",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "greh_armored_outfit_name",
+      "sourceFaction": "greh",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "greh_exo_outfit_name",
+      "sourceFaction": "greh",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Bandit": "bandit_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "greh_ps5_outfit_name",
+      "sourceFaction": "greh",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "greh_trenchcoat_outfit_name",
+      "sourceFaction": "greh",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "isg_exo_outfit_name",
+      "sourceFaction": "isg",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Bandit": "bandit_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "isg_exolight_outfit_name",
+      "sourceFaction": "isg",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "isg_lcs_camo_outfit_name",
+      "sourceFaction": "isg",
+      "results": {
+        "Bandit": "banditmerc_outfit_name",
+        "Csky": "csky_light_outfit_name",
+        "Killer": "merc_scout_outfit_name",
+        "Stalker": "stalker_salamander_outfit_name"
+      }
+    },
+    {
+      "name": "isg_lcs_outfit_name",
+      "sourceFaction": "isg",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "isg_lcs_urban_outfit_name",
+      "sourceFaction": "isg",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "isg_merc_outfit_name",
+      "sourceFaction": "isg",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "isg_nosorog_outfit_name",
+      "sourceFaction": "isg",
+      "results": {
+        "Army": "army_nosorog_outfit_name",
+        "Dolg": "dolg_nosorog_outfit_name",
+        "Freedom": "freedom_nosorog_outfit_name",
+        "Killer": "merc_nosorog_outfit_name",
+        "Monolith": "monolith_nosorog_outfit_name"
+      }
+    },
+    {
+      "name": "isg_outfit_name",
+      "sourceFaction": "isg",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "isg_scientific_outfit_name",
+      "sourceFaction": "isg",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Csky": "cs_scientific_outfit_name",
+        "Dolg": "dolg_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "exo_merc_grass_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "exo_merc_urban_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "exo_merc_wood_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "merc_coyote_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "merc_exo_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Bandit": "bandit_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "merc_exolight_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "merc_fighter_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Bandit": "banditmerc_outfit_name",
+        "Csky": "csky_light_outfit_name",
+        "Stalker": "stalker_salamander_outfit_name"
+      }
+    },
+    {
+      "name": "merc_jackal_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "merc_nosorog_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "army_nosorog_outfit_name",
+        "Dolg": "dolg_nosorog_outfit_name",
+        "Freedom": "freedom_nosorog_outfit_name",
+        "Isg": "isg_nosorog_outfit_name",
+        "Monolith": "monolith_nosorog_outfit_name"
+      }
+    },
+    {
+      "name": "merc_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "merc_scientific_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Csky": "cs_scientific_outfit_name",
+        "Dolg": "dolg_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "merc_scout_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Bandit": "banditmerc_outfit_name",
+        "Csky": "csky_light_outfit_name",
+        "Stalker": "stalker_salamander_outfit_name"
+      }
+    },
+    {
+      "name": "merc_sun_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "merc_sunset_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "merc_wolven_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Bandit": "banditmerc_outfit_name",
+        "Csky": "csky_light_outfit_name",
+        "Stalker": "stalker_salamander_outfit_name"
+      }
+    },
+    {
+      "name": "military_merc_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "military_outfit_name",
+        "Bandit": "military_bandit_outfit_name",
+        "Csky": "military_sky_outfit_name",
+        "Dolg": "dolg_heavy_redline_outfit_name",
+        "Freedom": "military_freedom_outfit_name",
+        "Isg": "light_isg_outfit_name",
+        "Monolith": "military_monolit_outfit_name"
+      }
+    },
+    {
+      "name": "nbc_merc_outfit_name",
+      "sourceFaction": "killer",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "military_monolit_outfit_name",
+      "sourceFaction": "monolith",
+      "results": {
+        "Army": "military_outfit_name",
+        "Bandit": "military_bandit_outfit_name",
+        "Csky": "military_sky_outfit_name",
+        "Dolg": "dolg_heavy_redline_outfit_name",
+        "Freedom": "military_freedom_outfit_name",
+        "Isg": "light_isg_outfit_name",
+        "Killer": "military_merc_outfit_name"
+      }
+    },
+    {
+      "name": "monolith_exo_outfit_name",
+      "sourceFaction": "monolith",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Bandit": "bandit_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "monolith_exolight_outfit_name",
+      "sourceFaction": "monolith",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Stalker": "exolight_outfit_name"
+      }
+    },
+    {
+      "name": "monolith_nbc_outfit_name",
+      "sourceFaction": "monolith",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "monolith_nosorog_outfit_name",
+      "sourceFaction": "monolith",
+      "results": {
+        "Army": "army_nosorog_outfit_name",
+        "Dolg": "dolg_nosorog_outfit_name",
+        "Freedom": "freedom_nosorog_outfit_name",
+        "Isg": "isg_nosorog_outfit_name",
+        "Killer": "merc_nosorog_outfit_name"
+      }
+    },
+    {
+      "name": "monolith_outfit_name",
+      "sourceFaction": "monolith",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "monolith_scientific_light_outfit_name",
+      "sourceFaction": "monolith",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Csky": "cs_scientific_outfit_name",
+        "Dolg": "dolg_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "monolith_scientific_outfit_name",
+      "sourceFaction": "monolith",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Csky": "cs_scientific_outfit_name",
+        "Dolg": "dolg_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "monolith_trenchcoat_outfit_name",
+      "sourceFaction": "monolith",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Renegade": "renegademerc_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "renegade_exo_outfit_name",
+      "sourceFaction": "renegade",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Bandit": "bandit_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Stalker": "exo_outfit_name"
+      }
+    },
+    {
+      "name": "renegade_scientific_outfit_name",
+      "sourceFaction": "renegade",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Csky": "cs_scientific_outfit_name",
+        "Dolg": "dolg_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Stalker": "scientific_outfit_name"
+      }
+    },
+    {
+      "name": "renegademerc_outfit_name",
+      "sourceFaction": "renegade",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Stalker": "stalker_drought_outfit_name"
+      }
+    },
+    {
+      "name": "exo_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Army": "military_exo_outfit_name",
+        "Bandit": "bandit_exo_outfit_name",
+        "Csky": "cs_exo_outfit_name",
+        "Dolg": "dolg_exo_outfit_name",
+        "Ecolog": "ecolog_exo_outfit_name",
+        "Freedom": "svoboda_exo_outfit_name",
+        "Greh": "greh_exo_outfit_name",
+        "Isg": "isg_exo_outfit_name",
+        "Killer": "merc_exo_outfit_name",
+        "Monolith": "monolith_exo_outfit_name",
+        "Renegade": "renegade_exo_outfit_name"
+      }
+    },
+    {
+      "name": "exolight_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Army": "military_exolight_outfit_name",
+        "Bandit": "bandit_exolight_outfit_name",
+        "Csky": "cs_exolight_outfit_name",
+        "Dolg": "dolg_exolight_outfit_name",
+        "Freedom": "svoboda_exolight_outfit_name",
+        "Isg": "isg_exolight_outfit_name",
+        "Killer": "exo_merc_grass_outfit_name",
+        "Monolith": "monolith_exolight_outfit_name"
+      }
+    },
+    {
+      "name": "nbc_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name"
+      }
+    },
+    {
+      "name": "scientific_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Bandit": "bandit_scientific_outfit_name",
+        "Csky": "cs_scientific_outfit_name",
+        "Dolg": "dolg_scientific_outfit_name",
+        "Ecolog": "st_ecologist_outfit_grn_name",
+        "Freedom": "svoboda_scientific_outfit_name",
+        "Isg": "isg_scientific_outfit_name",
+        "Killer": "merc_scientific_outfit_name",
+        "Monolith": "monolith_scientific_light_outfit_name",
+        "Renegade": "renegade_scientific_outfit_name"
+      }
+    },
+    {
+      "name": "stalker_autumn_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Bandit": "banditmerc_outfit_name",
+        "Csky": "csky_light_outfit_name",
+        "Killer": "merc_scout_outfit_name"
+      }
+    },
+    {
+      "name": "stalker_bear_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name"
+      }
+    },
+    {
+      "name": "stalker_drought_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name"
+      }
+    },
+    {
+      "name": "stalker_graphite_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name"
+      }
+    },
+    {
+      "name": "stalker_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Bandit": "banditmerc_outfit_name",
+        "Csky": "csky_light_outfit_name",
+        "Killer": "merc_scout_outfit_name"
+      }
+    },
+    {
+      "name": "stalker_salamander_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Bandit": "banditmerc_outfit_name",
+        "Csky": "csky_light_outfit_name",
+        "Killer": "merc_scout_outfit_name"
+      }
+    },
+    {
+      "name": "stalker_tigerstripe_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name"
+      }
+    },
+    {
+      "name": "travel_outfit_name",
+      "sourceFaction": "stalker",
+      "results": {
+        "Army": "specops_outfit_name",
+        "Bandit": "specops_bandit_outfit_name",
+        "Csky": "cs_stalker_outfit_name",
+        "Dolg": "dolg_outfit_name",
+        "Ecolog": "ecologist_guard_outfit_name",
+        "Freedom": "svoboda_heavy_outfit_name",
+        "Greh": "greh_armored_camo_outfit_name",
+        "Isg": "isg_merc_outfit_name",
+        "Killer": "merc_jackal_outfit_name",
+        "Monolith": "monolith_trenchcoat_outfit_name",
+        "Renegade": "renegademerc_outfit_name"
+      }
+    }
+  ]
+}

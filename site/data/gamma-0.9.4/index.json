@@ -1,0 +1,6997 @@
+[
+  {
+    "id": "merc_ace_outfit",
+    "name": "ace_outfit_name",
+    "category": "Outfits",
+    "displayName": "ace_outfit_name"
+  },
+  {
+    "id": "ammo_12.7x55_ap",
+    "name": "ammo_12.7x55_ap",
+    "category": "Ammo",
+    "displayName": "ammo_12.7x55_ap"
+  },
+  {
+    "id": "ammo_20x70_buck",
+    "name": "ammo_20x70_buck",
+    "category": "Ammo",
+    "displayName": "ammo_20x70_buck"
+  },
+  {
+    "id": "ammo_23_eco",
+    "name": "ammo_23_eco",
+    "category": "Ammo",
+    "displayName": "ammo_23_eco"
+  },
+  {
+    "id": "ammo_23x75_barrikada",
+    "name": "ammo_23x75_barrikada",
+    "category": "Ammo",
+    "displayName": "ammo_23x75_barrikada"
+  },
+  {
+    "id": "ammo_23x75_shrapnel",
+    "name": "ammo_23x75_shrapnel",
+    "category": "Ammo",
+    "displayName": "ammo_23x75_shrapnel"
+  },
+  {
+    "id": "ammo_338_federal",
+    "name": "ammo_338_federal",
+    "category": "Ammo",
+    "displayName": "ammo_338_federal"
+  },
+  {
+    "id": "ammo_9x21_sp10",
+    "name": "ammo_9x21_sp10",
+    "category": "Ammo",
+    "displayName": "ammo_9x21_sp10"
+  },
+  {
+    "id": "ammo_vog-30",
+    "name": "ammo_vog_30",
+    "category": "Ammo",
+    "displayName": "ammo_vog_30"
+  },
+  {
+    "id": "ammo_11.43x23_fmj",
+    "name": "ammo-11.43x23-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-11.43x23-fmj"
+  },
+  {
+    "id": "ammo_11.43x23_hydro",
+    "name": "ammo-11.43x23-hydro",
+    "category": "Ammo",
+    "displayName": "ammo-11.43x23-hydro"
+  },
+  {
+    "id": "ammo_12.7x55_fmj",
+    "name": "ammo-12.7x55-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-12.7x55-fmj"
+  },
+  {
+    "id": "ammo_12x70_buck",
+    "name": "ammo-12x70-buck",
+    "category": "Ammo",
+    "displayName": "ammo-12x70-buck"
+  },
+  {
+    "id": "ammo_12x70_buck_self",
+    "name": "ammo-12x70-buck_self",
+    "category": "Ammo",
+    "displayName": "ammo-12x70-buck_self"
+  },
+  {
+    "id": "ammo_12x76_bull",
+    "name": "ammo-12x76-bull",
+    "category": "Ammo",
+    "displayName": "ammo-12x76-bull"
+  },
+  {
+    "id": "ammo_12x76_dart",
+    "name": "ammo-12x76-dart",
+    "category": "Ammo",
+    "displayName": "ammo-12x76-dart"
+  },
+  {
+    "id": "ammo_12x76_zhekan",
+    "name": "ammo-12x76-zhekan",
+    "category": "Ammo",
+    "displayName": "ammo-12x76-zhekan"
+  },
+  {
+    "id": "ammo_magnum_300",
+    "name": "ammo-338-lapua",
+    "category": "Ammo",
+    "displayName": "ammo-338-lapua"
+  },
+  {
+    "id": "ammo_357_hp_mag",
+    "name": "ammo-357-hp",
+    "category": "Ammo",
+    "displayName": "ammo-357-hp"
+  },
+  {
+    "id": "ammo_4.6x30_fmj",
+    "name": "ammo-4.6x30-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-4.6x30-fmj"
+  },
+  {
+    "id": "ammo_5.45x39_ap",
+    "name": "ammo-5.45x39-ap",
+    "category": "Ammo",
+    "displayName": "ammo-5.45x39-ap"
+  },
+  {
+    "id": "ammo_5.45x39_ep",
+    "name": "ammo-5.45x39-ep",
+    "category": "Ammo",
+    "displayName": "ammo-5.45x39-ep"
+  },
+  {
+    "id": "ammo_5.45x39_fmj",
+    "name": "ammo-5.45x39-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-5.45x39-fmj"
+  },
+  {
+    "id": "ammo_5.56x45_ap",
+    "name": "ammo-5.56x45-ap",
+    "category": "Ammo",
+    "displayName": "ammo-5.56x45-ap"
+  },
+  {
+    "id": "ammo_5.56x45_fmj",
+    "name": "ammo-5.56x45-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-5.56x45-fmj"
+  },
+  {
+    "id": "ammo_5.56x45_ss190",
+    "name": "ammo-5.56x45-ss190",
+    "category": "Ammo",
+    "displayName": "ammo-5.56x45-ss190"
+  },
+  {
+    "id": "ammo_5.7x28_ss190",
+    "name": "ammo-5.7x28-ss190",
+    "category": "Ammo",
+    "displayName": "ammo-5.7x28-ss190"
+  },
+  {
+    "id": "ammo_5.7x28_ss195",
+    "name": "ammo-5.7x28-ss195",
+    "category": "Ammo",
+    "displayName": "ammo-5.7x28-ss195"
+  },
+  {
+    "id": "ammo_50_bmg",
+    "name": "ammo-50-bmg",
+    "category": "Ammo",
+    "displayName": "ammo-50-bmg"
+  },
+  {
+    "id": "ammo_7.62x25_p",
+    "name": "ammo-7.62x25-p",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x25-p"
+  },
+  {
+    "id": "ammo_7.62x25_ps",
+    "name": "ammo-7.62x25-ps",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x25-ps"
+  },
+  {
+    "id": "ammo_7.62x39_ap",
+    "name": "ammo-7.62x39_ap",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x39_ap"
+  },
+  {
+    "id": "ammo_7.62x39_fmj",
+    "name": "ammo-7.62x39_fmj",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x39_fmj"
+  },
+  {
+    "id": "ammo_7.62x51_ap",
+    "name": "ammo-7.62x51_ap",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x51_ap"
+  },
+  {
+    "id": "ammo_7.62x51_fmj",
+    "name": "ammo-7.62x51_fmj",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x51_fmj"
+  },
+  {
+    "id": "ammo_7.62x54_7h14",
+    "name": "ammo-7.62x54_7n14",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x54_7n14"
+  },
+  {
+    "id": "ammo_7.62x54_7h1",
+    "name": "ammo-7.62x54-7n1",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x54-7n1"
+  },
+  {
+    "id": "ammo_7.62x54_ap",
+    "name": "ammo-7.62x54-ap",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x54-ap"
+  },
+  {
+    "id": "ammo_pkm_100",
+    "name": "ammo-7.62x54-r",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x54-r"
+  },
+  {
+    "id": "ammo_7.92x33_ap",
+    "name": "ammo-7.92x33_ap",
+    "category": "Ammo",
+    "displayName": "ammo-7.92x33_ap"
+  },
+  {
+    "id": "ammo_7.92x33_fmj",
+    "name": "ammo-7.92x33_fmj",
+    "category": "Ammo",
+    "displayName": "ammo-7.92x33_fmj"
+  },
+  {
+    "id": "ammo_9x18_ap",
+    "name": "ammo-9x18-ap",
+    "category": "Ammo",
+    "displayName": "ammo-9x18-ap"
+  },
+  {
+    "id": "ammo_9x18_fmj",
+    "name": "ammo-9x18-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-9x18-fmj"
+  },
+  {
+    "id": "ammo_9x18_pmm",
+    "name": "ammo-9x18-pmm",
+    "category": "Ammo",
+    "displayName": "ammo-9x18-pmm"
+  },
+  {
+    "id": "ammo_9x19_ap",
+    "name": "ammo-9x19-ap",
+    "category": "Ammo",
+    "displayName": "ammo-9x19-ap"
+  },
+  {
+    "id": "ammo_9x19_fmj",
+    "name": "ammo-9x19-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-9x19-fmj"
+  },
+  {
+    "id": "ammo_9x19_pbp",
+    "name": "ammo-9x19-pbp",
+    "category": "Ammo",
+    "displayName": "ammo-9x19-pbp"
+  },
+  {
+    "id": "ammo_9x39_ap",
+    "name": "ammo-9x39-ap",
+    "category": "Ammo",
+    "displayName": "ammo-9x39-ap"
+  },
+  {
+    "id": "ammo_9x39_pab9",
+    "name": "ammo-9x39-pab9",
+    "category": "Ammo",
+    "displayName": "ammo-9x39-pab9"
+  },
+  {
+    "id": "ammo_gauss",
+    "name": "ammo-gauss",
+    "category": "Ammo",
+    "displayName": "ammo-gauss"
+  },
+  {
+    "id": "ammo_gauss_cardan",
+    "name": "ammo-gauss_cardan",
+    "category": "Ammo",
+    "displayName": "ammo-gauss_cardan"
+  },
+  {
+    "id": "ammo_m209",
+    "name": "ammo-m209",
+    "category": "Ammo",
+    "displayName": "ammo-m209"
+  },
+  {
+    "id": "ammo_og-7b",
+    "name": "ammo-og-7b",
+    "category": "Ammo",
+    "displayName": "ammo-og-7b"
+  },
+  {
+    "id": "ammo_vog-25",
+    "name": "ammo-vog-25",
+    "category": "Ammo",
+    "displayName": "ammo-vog-25"
+  },
+  {
+    "id": "army_nosorog_outfit",
+    "name": "army_nosorog_outfit_name",
+    "category": "Outfits",
+    "displayName": "army_nosorog_outfit_name"
+  },
+  {
+    "id": "army_outfit",
+    "name": "army_outfit_name",
+    "category": "Outfits",
+    "displayName": "army_outfit_name"
+  },
+  {
+    "id": "bandit_exo_outfit",
+    "name": "bandit_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "bandit_exo_outfit_name"
+  },
+  {
+    "id": "bandit_exolight_outfit",
+    "name": "bandit_exolight_outfit_name",
+    "category": "Outfits",
+    "displayName": "bandit_exolight_outfit_name"
+  },
+  {
+    "id": "bandit_nbc_outfit",
+    "name": "bandit_nbc_outfit_name",
+    "category": "Outfits",
+    "displayName": "bandit_nbc_outfit_name"
+  },
+  {
+    "id": "bandit_novice_outfit_alt",
+    "name": "bandit_novice_alt_outfit_name",
+    "category": "Outfits",
+    "displayName": "bandit_novice_alt_outfit_name"
+  },
+  {
+    "id": "bandit_novice_outfit",
+    "name": "bandit_novice_outfit_name",
+    "category": "Outfits",
+    "displayName": "bandit_novice_outfit_name"
+  },
+  {
+    "id": "bandit_ps5_outfit",
+    "name": "bandit_ps5_outfit_name",
+    "category": "Outfits",
+    "displayName": "bandit_ps5_outfit_name"
+  },
+  {
+    "id": "bandit_scientific_dark_outfit",
+    "name": "bandit_scientific_dark_outfit_name",
+    "category": "Outfits",
+    "displayName": "bandit_scientific_dark_outfit_name"
+  },
+  {
+    "id": "bandit_scientific_outfit",
+    "name": "bandit_scientific_outfit_name",
+    "category": "Outfits",
+    "displayName": "bandit_scientific_outfit_name"
+  },
+  {
+    "id": "bandit_sun_outfit",
+    "name": "bandit_sun_outfit_name",
+    "category": "Outfits",
+    "displayName": "bandit_sun_outfit_name"
+  },
+  {
+    "id": "banditmerc_outfit",
+    "name": "banditmerc_outfit_name",
+    "category": "Outfits",
+    "displayName": "banditmerc_outfit_name"
+  },
+  {
+    "id": "cs_exo_outfit",
+    "name": "cs_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "cs_exo_outfit_name"
+  },
+  {
+    "id": "cs_exolight_outfit",
+    "name": "cs_exolight_outfit_name",
+    "category": "Outfits",
+    "displayName": "cs_exolight_outfit_name"
+  },
+  {
+    "id": "cs_nbc_outfit",
+    "name": "cs_nbc_outfit_name",
+    "category": "Outfits",
+    "displayName": "cs_nbc_outfit_name"
+  },
+  {
+    "id": "cs_scientific_outfit_good",
+    "name": "cs_scientific_outfit_good_name",
+    "category": "Outfits",
+    "displayName": "cs_scientific_outfit_good_name"
+  },
+  {
+    "id": "cs_scientific_outfit",
+    "name": "cs_scientific_outfit_name",
+    "category": "Outfits",
+    "displayName": "cs_scientific_outfit_name"
+  },
+  {
+    "id": "cs_stalker_outfit",
+    "name": "cs_stalker_outfit_name",
+    "category": "Outfits",
+    "displayName": "cs_stalker_outfit_name"
+  },
+  {
+    "id": "cs_stalker_proto_exo_outfit",
+    "name": "cs_stalker_proto_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "cs_stalker_proto_exo_outfit_name"
+  },
+  {
+    "id": "cs_heavy_outfit",
+    "name": "csky_heavy_outfit_name",
+    "category": "Outfits",
+    "displayName": "csky_heavy_outfit_name"
+  },
+  {
+    "id": "cs_light_novice_outfit",
+    "name": "csky_light_novice_outfit_name",
+    "category": "Outfits",
+    "displayName": "csky_light_novice_outfit_name"
+  },
+  {
+    "id": "cs_light_outfit",
+    "name": "csky_light_outfit_name",
+    "category": "Outfits",
+    "displayName": "csky_light_outfit_name"
+  },
+  {
+    "id": "cs_medium_outfit",
+    "name": "csky_medium_outfit_name",
+    "category": "Outfits",
+    "displayName": "csky_medium_outfit_name"
+  },
+  {
+    "id": "cs_novice_outfit",
+    "name": "csky_novice_outfit_name",
+    "category": "Outfits",
+    "displayName": "csky_novice_outfit_name"
+  },
+  {
+    "id": "dolg_exo_outfit",
+    "name": "dolg_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_exo_outfit_name"
+  },
+  {
+    "id": "dolg_exolight_outfit",
+    "name": "dolg_exolight_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_exolight_outfit_name"
+  },
+  {
+    "id": "dolg_heavy_outfit",
+    "name": "dolg_heavy_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_heavy_outfit_name"
+  },
+  {
+    "id": "dolg_heavy_proto_exo_outfit",
+    "name": "dolg_heavy_proto_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_heavy_proto_exo_outfit_name"
+  },
+  {
+    "id": "dolg_heavy_redline_outfit",
+    "name": "dolg_heavy_redline_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_heavy_redline_outfit_name"
+  },
+  {
+    "id": "dolg_nosorog_outfit",
+    "name": "dolg_nosorog_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_nosorog_outfit_name"
+  },
+  {
+    "id": "dolg_novice_outfit",
+    "name": "dolg_novice_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_novice_outfit_name"
+  },
+  {
+    "id": "dolg_outfit",
+    "name": "dolg_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_outfit_name"
+  },
+  {
+    "id": "dolg_pantsir_outfit",
+    "name": "dolg_pantsir_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_pantsir_outfit_name"
+  },
+  {
+    "id": "dolg_proto_exo_outfit",
+    "name": "dolg_proto_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_proto_exo_outfit_name"
+  },
+  {
+    "id": "dolg_red_outfit",
+    "name": "dolg_red_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_red_outfit_name"
+  },
+  {
+    "id": "dolg_scientific_outfit",
+    "name": "dolg_scientific_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_scientific_outfit_name"
+  },
+  {
+    "id": "dolg_scientific_red_outfit",
+    "name": "dolg_scientific_red_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_scientific_red_outfit_name"
+  },
+  {
+    "id": "dolg_scientific_wood_outfit",
+    "name": "dolg_scientific_wood_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_scientific_wood_outfit_name"
+  },
+  {
+    "id": "dolg_scout_outfit",
+    "name": "dolg_scout_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_scout_outfit_name"
+  },
+  {
+    "id": "dolg_specops_red_outfit",
+    "name": "dolg_specops_red_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_specops_red_outfit_name"
+  },
+  {
+    "id": "dolg_voin_outfit",
+    "name": "dolg_voin_outfit_name",
+    "category": "Outfits",
+    "displayName": "dolg_voin_outfit_name"
+  },
+  {
+    "id": "ecolog_exo_outfit",
+    "name": "ecolog_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "ecolog_exo_outfit_name"
+  },
+  {
+    "id": "ecolog_proto_exo_outfit",
+    "name": "ecolog_proto_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "ecolog_proto_exo_outfit_name"
+  },
+  {
+    "id": "ecolog_guard_outfit",
+    "name": "ecologist_guard_outfit_name",
+    "category": "Outfits",
+    "displayName": "ecologist_guard_outfit_name"
+  },
+  {
+    "id": "exo_dolg_outfit",
+    "name": "exo_dolg_outfit_name",
+    "category": "Outfits",
+    "displayName": "exo_dolg_outfit_name"
+  },
+  {
+    "id": "exo_dolg_red_outfit",
+    "name": "exo_dolg_red_outfit_name",
+    "category": "Outfits",
+    "displayName": "exo_dolg_red_outfit_name"
+  },
+  {
+    "id": "exo_dolg_urban_outfit",
+    "name": "exo_dolg_urban_outfit_name",
+    "category": "Outfits",
+    "displayName": "exo_dolg_urban_outfit_name"
+  },
+  {
+    "id": "exo_dolg_wood_outfit",
+    "name": "exo_dolg_wood_outfit_name",
+    "category": "Outfits",
+    "displayName": "exo_dolg_wood_outfit_name"
+  },
+  {
+    "id": "exo_merc_grass_outfit",
+    "name": "exo_merc_grass_outfit_name",
+    "category": "Outfits",
+    "displayName": "exo_merc_grass_outfit_name"
+  },
+  {
+    "id": "exo_merc_urban_outfit",
+    "name": "exo_merc_urban_outfit_name",
+    "category": "Outfits",
+    "displayName": "exo_merc_urban_outfit_name"
+  },
+  {
+    "id": "exo_merc_wood_outfit",
+    "name": "exo_merc_wood_outfit_name",
+    "category": "Outfits",
+    "displayName": "exo_merc_wood_outfit_name"
+  },
+  {
+    "id": "exo_outfit",
+    "name": "exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "exo_outfit_name"
+  },
+  {
+    "id": "exo_wood_outfit",
+    "name": "exo_wood_outfit_name",
+    "category": "Outfits",
+    "displayName": "exo_wood_outfit_name"
+  },
+  {
+    "id": "exolight_outfit",
+    "name": "exolight_outfit_name",
+    "category": "Outfits",
+    "displayName": "exolight_outfit_name"
+  },
+  {
+    "id": "mag_kriss_11.43x23_ext",
+    "name": "ext_mag_kriss_drum",
+    "category": "Ammo",
+    "displayName": "ext_mag_kriss_drum"
+  },
+  {
+    "id": "mag_kriss_9x19_ext",
+    "name": "ext_mag_kriss9_drum",
+    "category": "Ammo",
+    "displayName": "ext_mag_kriss9_drum"
+  },
+  {
+    "id": "freedom_exo_vineleaf_outfit",
+    "name": "freedom_exo_vineleaf_outfit_name",
+    "category": "Outfits",
+    "displayName": "freedom_exo_vineleaf_outfit_name"
+  },
+  {
+    "id": "freedom_nosorog_outfit",
+    "name": "freedom_nosorog_outfit_name",
+    "category": "Outfits",
+    "displayName": "freedom_nosorog_outfit_name"
+  },
+  {
+    "id": "ghillie_outfit",
+    "name": "ghillie_outfit_name",
+    "category": "Outfits",
+    "displayName": "ghillie_outfit_name"
+  },
+  {
+    "id": "greh_armored_camo_outfit",
+    "name": "greh_armored_camo_outfit_name",
+    "category": "Outfits",
+    "displayName": "greh_armored_camo_outfit_name"
+  },
+  {
+    "id": "greh_armored_outfit",
+    "name": "greh_armored_outfit_name",
+    "category": "Outfits",
+    "displayName": "greh_armored_outfit_name"
+  },
+  {
+    "id": "greh_exo_outfit",
+    "name": "greh_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "greh_exo_outfit_name"
+  },
+  {
+    "id": "greh_ps5_outfit",
+    "name": "greh_ps5_outfit_name",
+    "category": "Outfits",
+    "displayName": "greh_ps5_outfit_name"
+  },
+  {
+    "id": "greh_trenchcoat_outfit",
+    "name": "greh_trenchcoat_outfit_name",
+    "category": "Outfits",
+    "displayName": "greh_trenchcoat_outfit_name"
+  },
+  {
+    "id": "helm_ach7",
+    "name": "helm_ach7",
+    "category": "Helmets",
+    "displayName": "helm_ach7"
+  },
+  {
+    "id": "helm_ach7ex",
+    "name": "helm_ach7ex",
+    "category": "Helmets",
+    "displayName": "helm_ach7ex"
+  },
+  {
+    "id": "helm_m50",
+    "name": "helm_m50",
+    "category": "Helmets",
+    "displayName": "helm_m50"
+  },
+  {
+    "id": "helm_ppm88",
+    "name": "helm_ppm88",
+    "category": "Helmets",
+    "displayName": "helm_ppm88"
+  },
+  {
+    "id": "helm_ranger",
+    "name": "helm_ranger",
+    "category": "Helmets",
+    "displayName": "helm_ranger"
+  },
+  {
+    "id": "helm_spartan",
+    "name": "helm_spartan",
+    "category": "Helmets",
+    "displayName": "helm_spartan"
+  },
+  {
+    "id": "hybrid_outfit",
+    "name": "hybrid_outfit_name",
+    "category": "Outfits",
+    "displayName": "hybrid_outfit_name"
+  },
+  {
+    "id": "isg_exo_outfit",
+    "name": "isg_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "isg_exo_outfit_name"
+  },
+  {
+    "id": "isg_exolight_outfit",
+    "name": "isg_exolight_outfit_name",
+    "category": "Outfits",
+    "displayName": "isg_exolight_outfit_name"
+  },
+  {
+    "id": "isg_lcs_camo_outfit",
+    "name": "isg_lcs_camo_outfit_name",
+    "category": "Outfits",
+    "displayName": "isg_lcs_camo_outfit_name"
+  },
+  {
+    "id": "isg_lcs_outfit",
+    "name": "isg_lcs_outfit_name",
+    "category": "Outfits",
+    "displayName": "isg_lcs_outfit_name"
+  },
+  {
+    "id": "isg_lcs_urban_outfit",
+    "name": "isg_lcs_urban_outfit_name",
+    "category": "Outfits",
+    "displayName": "isg_lcs_urban_outfit_name"
+  },
+  {
+    "id": "isg_camo_outfit",
+    "name": "isg_merc_outfit_name",
+    "category": "Outfits",
+    "displayName": "isg_merc_outfit_name"
+  },
+  {
+    "id": "isg_nosorog_outfit",
+    "name": "isg_nosorog_outfit_name",
+    "category": "Outfits",
+    "displayName": "isg_nosorog_outfit_name"
+  },
+  {
+    "id": "isg_outfit",
+    "name": "isg_outfit_name",
+    "category": "Outfits",
+    "displayName": "isg_outfit_name"
+  },
+  {
+    "id": "isg_proto_exo_outfit",
+    "name": "isg_proto_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "isg_proto_exo_outfit_name"
+  },
+  {
+    "id": "isg_scientific_outfit",
+    "name": "isg_scientific_outfit_name",
+    "category": "Outfits",
+    "displayName": "isg_scientific_outfit_name"
+  },
+  {
+    "id": "light_dolg_outfit",
+    "name": "light_dolg_outfit_name",
+    "category": "Outfits",
+    "displayName": "light_dolg_outfit_name"
+  },
+  {
+    "id": "light_freedom_outfit",
+    "name": "light_freedom_outfit_name",
+    "category": "Outfits",
+    "displayName": "light_freedom_outfit_name"
+  },
+  {
+    "id": "light_isg_outfit",
+    "name": "light_isg_outfit_name",
+    "category": "Outfits",
+    "displayName": "light_isg_outfit_name"
+  },
+  {
+    "id": "light_loner_outfit",
+    "name": "light_loner_outfit_name",
+    "category": "Outfits",
+    "displayName": "light_loner_outfit_name"
+  },
+  {
+    "id": "light_merc_outfit",
+    "name": "light_merc_outfit_name",
+    "category": "Outfits",
+    "displayName": "light_merc_outfit_name"
+  },
+  {
+    "id": "light_monolit_outfit",
+    "name": "light_monolit_outfit_name",
+    "category": "Outfits",
+    "displayName": "light_monolit_outfit_name"
+  },
+  {
+    "id": "light_voen_outfit",
+    "name": "light_voen_outfit_name",
+    "category": "Outfits",
+    "displayName": "light_voen_outfit_name"
+  },
+  {
+    "id": "wpn_gauss_quest",
+    "name": "lttz_ll_wpn_gauss_quest_name",
+    "category": "Snipers",
+    "displayName": "lttz_ll_wpn_gauss_quest_name",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "mag_kriss_11.43x23_default",
+    "name": "mag_kriss45",
+    "category": "Ammo",
+    "displayName": "mag_kriss45"
+  },
+  {
+    "id": "mag_kriss_9x19_default",
+    "name": "mag_kriss9",
+    "category": "Ammo",
+    "displayName": "mag_kriss9"
+  },
+  {
+    "id": "mag_raptr_12x76_default",
+    "name": "mag_raptr",
+    "category": "Ammo",
+    "displayName": "mag_raptr"
+  },
+  {
+    "id": "wpn_dtmdr",
+    "name": "MDR",
+    "category": "Rifles",
+    "displayName": "MDR [default]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_dtmdr_sup",
+    "name": "MDR",
+    "category": "Rifles",
+    "displayName": "MDR [sup]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_dtmdr_black",
+    "name": "MDR_black",
+    "category": "Rifles",
+    "displayName": "MDR_black [default]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_dtmdr_black_sup",
+    "name": "MDR_black",
+    "category": "Rifles",
+    "displayName": "MDR_black [sup]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "merc_combat_scientific_outfit",
+    "name": "merc_combat_scientific_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_combat_scientific_outfit_name"
+  },
+  {
+    "id": "merc_coyote_outfit",
+    "name": "merc_coyote_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_coyote_outfit_name"
+  },
+  {
+    "id": "merc_exo_outfit",
+    "name": "merc_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_exo_outfit_name"
+  },
+  {
+    "id": "merc_exolight_outfit",
+    "name": "merc_exolight_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_exolight_outfit_name"
+  },
+  {
+    "id": "merc_fighter_outfit",
+    "name": "merc_fighter_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_fighter_outfit_name"
+  },
+  {
+    "id": "merc_jackal_outfit",
+    "name": "merc_jackal_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_jackal_outfit_name"
+  },
+  {
+    "id": "merc_nighthunter_outfit",
+    "name": "merc_nighthunter_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_nighthunter_outfit_name"
+  },
+  {
+    "id": "merc_nosorog_outfit",
+    "name": "merc_nosorog_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_nosorog_outfit_name"
+  },
+  {
+    "id": "merc_outfit",
+    "name": "merc_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_outfit_name"
+  },
+  {
+    "id": "merc_scientific_armored_outfit",
+    "name": "merc_scientific_armored_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_scientific_armored_outfit_name"
+  },
+  {
+    "id": "merc_scientific_outfit",
+    "name": "merc_scientific_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_scientific_outfit_name"
+  },
+  {
+    "id": "merc_scout_outfit",
+    "name": "merc_scout_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_scout_outfit_name"
+  },
+  {
+    "id": "merc_sun_outfit",
+    "name": "merc_sun_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_sun_outfit_name"
+  },
+  {
+    "id": "merc_sunset_outfit",
+    "name": "merc_sunset_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_sunset_outfit_name"
+  },
+  {
+    "id": "merc_wolven_outfit",
+    "name": "merc_wolven_outfit_name",
+    "category": "Outfits",
+    "displayName": "merc_wolven_outfit_name"
+  },
+  {
+    "id": "military_bandit_outfit",
+    "name": "military_bandit_outfit_name",
+    "category": "Outfits",
+    "displayName": "military_bandit_outfit_name"
+  },
+  {
+    "id": "military_exo_outfit",
+    "name": "military_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "military_exo_outfit_name"
+  },
+  {
+    "id": "military_exolight_outfit",
+    "name": "military_exolight_outfit_name",
+    "category": "Outfits",
+    "displayName": "military_exolight_outfit_name"
+  },
+  {
+    "id": "military_freedom_outfit",
+    "name": "military_freedom_outfit_name",
+    "category": "Outfits",
+    "displayName": "military_freedom_outfit_name"
+  },
+  {
+    "id": "military_merc_outfit",
+    "name": "military_merc_outfit_name",
+    "category": "Outfits",
+    "displayName": "military_merc_outfit_name"
+  },
+  {
+    "id": "military_monolit_outfit",
+    "name": "military_monolit_outfit_name",
+    "category": "Outfits",
+    "displayName": "military_monolit_outfit_name"
+  },
+  {
+    "id": "military_outfit",
+    "name": "military_outfit_name",
+    "category": "Outfits",
+    "displayName": "military_outfit_name"
+  },
+  {
+    "id": "military_proto_exo_outfit",
+    "name": "military_proto_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "military_proto_exo_outfit_name"
+  },
+  {
+    "id": "military_sky_outfit",
+    "name": "military_sky_outfit_name",
+    "category": "Outfits",
+    "displayName": "military_sky_outfit_name"
+  },
+  {
+    "id": "monolith_exo_outfit",
+    "name": "monolith_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "monolith_exo_outfit_name"
+  },
+  {
+    "id": "monolith_exolight_outfit",
+    "name": "monolith_exolight_outfit_name",
+    "category": "Outfits",
+    "displayName": "monolith_exolight_outfit_name"
+  },
+  {
+    "id": "monolith_nbc_outfit",
+    "name": "monolith_nbc_outfit_name",
+    "category": "Outfits",
+    "displayName": "monolith_nbc_outfit_name"
+  },
+  {
+    "id": "monolith_nosorog_outfit",
+    "name": "monolith_nosorog_outfit_name",
+    "category": "Outfits",
+    "displayName": "monolith_nosorog_outfit_name"
+  },
+  {
+    "id": "monolith_outfit",
+    "name": "monolith_outfit_name",
+    "category": "Outfits",
+    "displayName": "monolith_outfit_name"
+  },
+  {
+    "id": "monolith_proto_exo_outfit",
+    "name": "monolith_proto_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "monolith_proto_exo_outfit_name"
+  },
+  {
+    "id": "monolith_scientific_light_outfit",
+    "name": "monolith_scientific_light_outfit_name",
+    "category": "Outfits",
+    "displayName": "monolith_scientific_light_outfit_name"
+  },
+  {
+    "id": "monolith_scientific_outfit",
+    "name": "monolith_scientific_outfit_name",
+    "category": "Outfits",
+    "displayName": "monolith_scientific_outfit_name"
+  },
+  {
+    "id": "monolith_trenchcoat_outfit",
+    "name": "monolith_trenchcoat_outfit_name",
+    "category": "Outfits",
+    "displayName": "monolith_trenchcoat_outfit_name"
+  },
+  {
+    "id": "mutant_part_boar_chop",
+    "name": "mutant_boar_chop",
+    "category": "Food",
+    "displayName": "mutant_boar_chop"
+  },
+  {
+    "id": "mutant_part_chimera_meat",
+    "name": "mutant_chimera_meat",
+    "category": "Food",
+    "displayName": "mutant_chimera_meat"
+  },
+  {
+    "id": "mutant_part_dog_meat",
+    "name": "mutant_dog_meat",
+    "category": "Food",
+    "displayName": "mutant_dog_meat"
+  },
+  {
+    "id": "mutant_part_flesh_meat",
+    "name": "mutant_flesh_meat",
+    "category": "Food",
+    "displayName": "mutant_flesh_meat"
+  },
+  {
+    "id": "mutant_part_krovosos_meat",
+    "name": "mutant_krovosos_meat",
+    "category": "Food",
+    "displayName": "mutant_krovosos_meat"
+  },
+  {
+    "id": "mutant_part_lurker_meat",
+    "name": "mutant_lurker_meat",
+    "category": "Food",
+    "displayName": "mutant_lurker_meat"
+  },
+  {
+    "id": "mutant_part_psevdodog_meat",
+    "name": "mutant_psevdodog_meat",
+    "category": "Food",
+    "displayName": "mutant_psevdodog_meat"
+  },
+  {
+    "id": "mutant_part_psysucker_meat",
+    "name": "mutant_psysucker_meat",
+    "category": "Food",
+    "displayName": "mutant_psysucker_meat"
+  },
+  {
+    "id": "mutant_part_snork_hand",
+    "name": "mutant_snork_hand",
+    "category": "Food",
+    "displayName": "mutant_snork_hand"
+  },
+  {
+    "id": "mutant_part_tushkano_meat",
+    "name": "mutant_tushkano_meat",
+    "category": "Food",
+    "displayName": "mutant_tushkano_meat"
+  },
+  {
+    "id": "nbc_dolg_outfit",
+    "name": "nbc_dolg_outfit_name",
+    "category": "Outfits",
+    "displayName": "nbc_dolg_outfit_name"
+  },
+  {
+    "id": "nbc_freedom_outfit",
+    "name": "nbc_freedom_outfit_name",
+    "category": "Outfits",
+    "displayName": "nbc_freedom_outfit_name"
+  },
+  {
+    "id": "nbc_merc_outfit",
+    "name": "nbc_merc_outfit_name",
+    "category": "Outfits",
+    "displayName": "nbc_merc_outfit_name"
+  },
+  {
+    "id": "nbc_outfit",
+    "name": "nbc_outfit_name",
+    "category": "Outfits",
+    "displayName": "nbc_outfit_name"
+  },
+  {
+    "id": "mine_new_blow",
+    "name": "nil",
+    "category": "Explosives",
+    "displayName": "nil",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "nomad_outfit",
+    "name": "nomad_outfit_name",
+    "category": "Outfits",
+    "displayName": "nomad_outfit_name"
+  },
+  {
+    "id": "novice_outfit_camo",
+    "name": "novice_outfit_camo_name",
+    "category": "Outfits",
+    "displayName": "novice_outfit_camo_name"
+  },
+  {
+    "id": "novice_outfit",
+    "name": "novice_outfit_name",
+    "category": "Outfits",
+    "displayName": "novice_outfit_name"
+  },
+  {
+    "id": "novice_outfit_tourist",
+    "name": "novice_outfit_tourist_name",
+    "category": "Outfits",
+    "displayName": "novice_outfit_tourist_name"
+  },
+  {
+    "id": "redline_novice_outfit",
+    "name": "redline_novice_outfit_name",
+    "category": "Outfits",
+    "displayName": "redline_novice_outfit_name"
+  },
+  {
+    "id": "renegade_exo_outfit",
+    "name": "renegade_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "renegade_exo_outfit_name"
+  },
+  {
+    "id": "renegade_scientific_outfit",
+    "name": "renegade_scientific_outfit_name",
+    "category": "Outfits",
+    "displayName": "renegade_scientific_outfit_name"
+  },
+  {
+    "id": "renegademerc_outfit",
+    "name": "renegademerc_outfit_name",
+    "category": "Outfits",
+    "displayName": "renegademerc_outfit_name"
+  },
+  {
+    "id": "scientific_outfit",
+    "name": "scientific_outfit_name",
+    "category": "Outfits",
+    "displayName": "scientific_outfit_name"
+  },
+  {
+    "id": "specops_bandit_outfit",
+    "name": "specops_bandit_outfit_name",
+    "category": "Outfits",
+    "displayName": "specops_bandit_outfit_name"
+  },
+  {
+    "id": "specops_dolg_outfit",
+    "name": "specops_dolg_outfit_name",
+    "category": "Outfits",
+    "displayName": "specops_dolg_outfit_name"
+  },
+  {
+    "id": "specops_merc_outfit",
+    "name": "specops_merc_outfit_name",
+    "category": "Outfits",
+    "displayName": "specops_merc_outfit_name"
+  },
+  {
+    "id": "specops_outfit",
+    "name": "specops_outfit_name",
+    "category": "Outfits",
+    "displayName": "specops_outfit_name"
+  },
+  {
+    "id": "adrenalin",
+    "name": "st_adrenalin",
+    "category": "Medicine",
+    "displayName": "st_adrenalin"
+  },
+  {
+    "id": "af_ah_e1",
+    "name": "st_af_ah_e1",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_e1"
+  },
+  {
+    "id": "af_ah_e2",
+    "name": "st_af_ah_e2",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_e2"
+  },
+  {
+    "id": "af_ah_f1",
+    "name": "st_af_ah_f1",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_f1"
+  },
+  {
+    "id": "af_ah_g1",
+    "name": "st_af_ah_g1",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_g1"
+  },
+  {
+    "id": "af_ah_g2",
+    "name": "st_af_ah_g2",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_g2"
+  },
+  {
+    "id": "af_ah_h1",
+    "name": "st_af_ah_h1",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_h1"
+  },
+  {
+    "id": "af_ah_h2",
+    "name": "st_af_ah_h2",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_h2"
+  },
+  {
+    "id": "af_ah_o1",
+    "name": "st_af_ah_o1",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_o1"
+  },
+  {
+    "id": "af_ah_o2",
+    "name": "st_af_ah_o2",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_o2"
+  },
+  {
+    "id": "af_ah_r1",
+    "name": "st_af_ah_r1",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_r1"
+  },
+  {
+    "id": "af_ah_r2",
+    "name": "st_af_ah_r2",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_r2"
+  },
+  {
+    "id": "af_ah_r3",
+    "name": "st_af_ah_r3",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_r3"
+  },
+  {
+    "id": "af_ah_r4",
+    "name": "st_af_ah_r4",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_r4"
+  },
+  {
+    "id": "af_ah_r5",
+    "name": "st_af_ah_r5",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_r5"
+  },
+  {
+    "id": "af_ah_s1",
+    "name": "st_af_ah_s1",
+    "category": "Artefacts",
+    "displayName": "st_af_ah_s1"
+  },
+  {
+    "id": "af_atom",
+    "name": "st_af_atom_name",
+    "category": "Artefacts",
+    "displayName": "st_af_atom_name"
+  },
+  {
+    "id": "af_ball",
+    "name": "st_af_ball_name",
+    "category": "Artefacts",
+    "displayName": "st_af_ball_name"
+  },
+  {
+    "id": "af_baloon",
+    "name": "st_af_baloon_name",
+    "category": "Artefacts",
+    "displayName": "st_af_baloon_name"
+  },
+  {
+    "id": "af_bat",
+    "name": "st_af_bat_name",
+    "category": "Artefacts",
+    "displayName": "st_af_bat_name"
+  },
+  {
+    "id": "af_black_angel",
+    "name": "st_af_black_angel_name",
+    "category": "Artefacts",
+    "displayName": "st_af_black_angel_name"
+  },
+  {
+    "id": "af_black",
+    "name": "st_af_black_name",
+    "category": "Artefacts",
+    "displayName": "st_af_black_name"
+  },
+  {
+    "id": "af_black_spray",
+    "name": "st_af_black_spray_name",
+    "category": "Artefacts",
+    "displayName": "st_af_black_spray_name"
+  },
+  {
+    "id": "af_blood",
+    "name": "st_af_blood_name",
+    "category": "Artefacts",
+    "displayName": "st_af_blood_name"
+  },
+  {
+    "id": "af_bracelet",
+    "name": "st_af_bracelet_name",
+    "category": "Artefacts",
+    "displayName": "st_af_bracelet_name"
+  },
+  {
+    "id": "af_camelbak",
+    "name": "st_af_camelbak_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_camelbak_name"
+  },
+  {
+    "id": "af_camelbak_up",
+    "name": "st_af_camelbak_up_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_camelbak_up_name"
+  },
+  {
+    "id": "af_cell",
+    "name": "st_af_cell_name",
+    "category": "Artefacts",
+    "displayName": "st_af_cell_name"
+  },
+  {
+    "id": "af_chelust",
+    "name": "st_af_chelust_name",
+    "category": "Artefacts",
+    "displayName": "st_af_chelust_name"
+  },
+  {
+    "id": "af_cocoon",
+    "name": "st_af_cocoon_name",
+    "category": "Artefacts",
+    "displayName": "st_af_cocoon_name"
+  },
+  {
+    "id": "af_compass",
+    "name": "st_af_compass_name",
+    "category": "Artefacts",
+    "displayName": "st_af_compass_name"
+  },
+  {
+    "id": "af_cooler",
+    "name": "st_af_cooler_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_cooler_name"
+  },
+  {
+    "id": "af_cooler_up",
+    "name": "st_af_cooler_up_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_cooler_up_name"
+  },
+  {
+    "id": "af_cristall_flower",
+    "name": "st_af_cristall_flower_name",
+    "category": "Artefacts",
+    "displayName": "st_af_cristall_flower_name"
+  },
+  {
+    "id": "af_cristall",
+    "name": "st_af_cristall_name",
+    "category": "Artefacts",
+    "displayName": "st_af_cristall_name"
+  },
+  {
+    "id": "af_death_lamp",
+    "name": "st_af_death_lamp_name",
+    "category": "Artefacts",
+    "displayName": "st_af_death_lamp_name"
+  },
+  {
+    "id": "af_dragon_eye",
+    "name": "st_af_dragon_eye_name",
+    "category": "Artefacts",
+    "displayName": "st_af_dragon_eye_name"
+  },
+  {
+    "id": "af_dummy_battery",
+    "name": "st_af_dummy_battery_name",
+    "category": "Artefacts",
+    "displayName": "st_af_dummy_battery_name"
+  },
+  {
+    "id": "af_dummy_dummy",
+    "name": "st_af_dummy_dummy_name",
+    "category": "Artefacts",
+    "displayName": "st_af_dummy_dummy_name"
+  },
+  {
+    "id": "af_dummy_glassbeads",
+    "name": "st_af_dummy_glassbeads_name",
+    "category": "Artefacts",
+    "displayName": "st_af_dummy_glassbeads_name"
+  },
+  {
+    "id": "af_ear",
+    "name": "st_af_ear_name",
+    "category": "Artefacts",
+    "displayName": "st_af_ear_name"
+  },
+  {
+    "id": "af_electra_flash",
+    "name": "st_af_electra_flash_name",
+    "category": "Artefacts",
+    "displayName": "st_af_electra_flash_name"
+  },
+  {
+    "id": "af_electra_moonlight",
+    "name": "st_af_electra_moonlight_name",
+    "category": "Artefacts",
+    "displayName": "st_af_electra_moonlight_name"
+  },
+  {
+    "id": "af_electra_sparkler",
+    "name": "st_af_electra_sparkler_name",
+    "category": "Artefacts",
+    "displayName": "st_af_electra_sparkler_name"
+  },
+  {
+    "id": "af_elektron",
+    "name": "st_af_elektron_name",
+    "category": "Artefacts",
+    "displayName": "st_af_elektron_name"
+  },
+  {
+    "id": "af_empty",
+    "name": "st_af_empty_name",
+    "category": "Artefacts",
+    "displayName": "st_af_empty_name"
+  },
+  {
+    "id": "af_eye",
+    "name": "st_af_eye_name",
+    "category": "Artefacts",
+    "displayName": "st_af_eye_name"
+  },
+  {
+    "id": "af_fire_loop",
+    "name": "st_af_fire_loop_name",
+    "category": "Artefacts",
+    "displayName": "st_af_fire_loop_name"
+  },
+  {
+    "id": "af_fire",
+    "name": "st_af_fire_name",
+    "category": "Artefacts",
+    "displayName": "st_af_fire_name"
+  },
+  {
+    "id": "af_fireball",
+    "name": "st_af_fireball_name",
+    "category": "Artefacts",
+    "displayName": "st_af_fireball_name"
+  },
+  {
+    "id": "af_fonar",
+    "name": "st_af_fonar_name",
+    "category": "Artefacts",
+    "displayName": "st_af_fonar_name"
+  },
+  {
+    "id": "af_fountain",
+    "name": "st_af_fountain_name",
+    "category": "Artefacts",
+    "displayName": "st_af_fountain_name"
+  },
+  {
+    "id": "af_frames",
+    "name": "st_af_frames_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_frames_name"
+  },
+  {
+    "id": "af_frames_up",
+    "name": "st_af_frames_up_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_frames_up_name"
+  },
+  {
+    "id": "af_freon",
+    "name": "st_af_freon_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_freon_name"
+  },
+  {
+    "id": "af_freon_up",
+    "name": "st_af_freon_up_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_freon_up_name"
+  },
+  {
+    "id": "af_full_empty",
+    "name": "st_af_full_empty_name",
+    "category": "Artefacts",
+    "displayName": "st_af_full_empty_name"
+  },
+  {
+    "id": "af_fuzz_kolobok",
+    "name": "st_af_fuzz_kolobok_name",
+    "category": "Artefacts",
+    "displayName": "st_af_fuzz_kolobok_name"
+  },
+  {
+    "id": "af_geliy",
+    "name": "st_af_geliy_name",
+    "category": "Artefacts",
+    "displayName": "st_af_geliy_name"
+  },
+  {
+    "id": "af_generator",
+    "name": "st_af_generator_name",
+    "category": "Artefacts",
+    "displayName": "st_af_generator_name"
+  },
+  {
+    "id": "af_gimlet",
+    "name": "st_af_gimlet_name",
+    "category": "Artefacts",
+    "displayName": "st_af_gimlet_name"
+  },
+  {
+    "id": "af_glass",
+    "name": "st_af_glass_name",
+    "category": "Artefacts",
+    "displayName": "st_af_glass_name"
+  },
+  {
+    "id": "af_gold_fish",
+    "name": "st_af_gold_fish_name",
+    "category": "Artefacts",
+    "displayName": "st_af_gold_fish_name"
+  },
+  {
+    "id": "af_grapes",
+    "name": "st_af_grapes_name",
+    "category": "Artefacts",
+    "displayName": "st_af_grapes_name"
+  },
+  {
+    "id": "af_gravi",
+    "name": "st_af_gravi_name",
+    "category": "Artefacts",
+    "displayName": "st_af_gravi_name"
+  },
+  {
+    "id": "af_grid",
+    "name": "st_af_grid_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_grid_name"
+  },
+  {
+    "id": "af_grid_up",
+    "name": "st_af_grid_up_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_grid_up_name"
+  },
+  {
+    "id": "af_ice",
+    "name": "st_af_ice_name",
+    "category": "Artefacts",
+    "displayName": "st_af_ice_name"
+  },
+  {
+    "id": "af_itcher",
+    "name": "st_af_itcher_name",
+    "category": "Artefacts",
+    "displayName": "st_af_itcher_name"
+  },
+  {
+    "id": "af_kevlar",
+    "name": "st_af_kevlar_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_kevlar_name"
+  },
+  {
+    "id": "af_kevlar_up",
+    "name": "st_af_kevlar_up_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_kevlar_up_name"
+  },
+  {
+    "id": "af_kislushka",
+    "name": "st_af_kislushka_name",
+    "category": "Artefacts",
+    "displayName": "st_af_kislushka_name"
+  },
+  {
+    "id": "af_kogot",
+    "name": "st_af_kogot_name",
+    "category": "Artefacts",
+    "displayName": "st_af_kogot_name"
+  },
+  {
+    "id": "af_lighthouse",
+    "name": "st_af_lighthouse_name",
+    "category": "Artefacts",
+    "displayName": "st_af_lighthouse_name"
+  },
+  {
+    "id": "af_lobster_eyes",
+    "name": "st_af_lobster_eyes_name",
+    "category": "Artefacts",
+    "displayName": "st_af_lobster_eyes_name"
+  },
+  {
+    "id": "af_medallion",
+    "name": "st_af_medallion_name",
+    "category": "Artefacts",
+    "displayName": "st_af_medallion_name"
+  },
+  {
+    "id": "af_medusa",
+    "name": "st_af_medusa_name",
+    "category": "Artefacts",
+    "displayName": "st_af_medusa_name"
+  },
+  {
+    "id": "af_mincer_meat",
+    "name": "st_af_mincer_meat_name",
+    "category": "Artefacts",
+    "displayName": "st_af_mincer_meat_name"
+  },
+  {
+    "id": "af_moh",
+    "name": "st_af_moh_name",
+    "category": "Artefacts",
+    "displayName": "st_af_moh_name"
+  },
+  {
+    "id": "af_monolith",
+    "name": "st_af_monolith_name",
+    "category": "Artefacts",
+    "displayName": "st_af_monolith_name"
+  },
+  {
+    "id": "af_night_star",
+    "name": "st_af_night_star_name",
+    "category": "Artefacts",
+    "displayName": "st_af_night_star_name"
+  },
+  {
+    "id": "af_oasis_heart",
+    "name": "st_af_oasis_heart_name",
+    "category": "Artefacts",
+    "displayName": "st_af_oasis_heart_name"
+  },
+  {
+    "id": "af_peas",
+    "name": "st_af_peas_name",
+    "category": "Artefacts",
+    "displayName": "st_af_peas_name"
+  },
+  {
+    "id": "af_pin",
+    "name": "st_af_pin_name",
+    "category": "Artefacts",
+    "displayName": "st_af_pin_name"
+  },
+  {
+    "id": "af_plates",
+    "name": "st_af_plates_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_plates_name"
+  },
+  {
+    "id": "af_plates_up",
+    "name": "st_af_plates_up_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_plates_up_name"
+  },
+  {
+    "id": "af_repei",
+    "name": "st_af_repei_name",
+    "category": "Artefacts",
+    "displayName": "st_af_repei_name"
+  },
+  {
+    "id": "af_ring",
+    "name": "st_af_ring_name",
+    "category": "Artefacts",
+    "displayName": "st_af_ring_name"
+  },
+  {
+    "id": "af_sandstone",
+    "name": "st_af_sandstone_name",
+    "category": "Artefacts",
+    "displayName": "st_af_sandstone_name"
+  },
+  {
+    "id": "af_serofim",
+    "name": "st_af_serofim_name",
+    "category": "Artefacts",
+    "displayName": "st_af_serofim_name"
+  },
+  {
+    "id": "af_signet",
+    "name": "st_af_signet_name",
+    "category": "Artefacts",
+    "displayName": "st_af_signet_name"
+  },
+  {
+    "id": "af_skull_miser",
+    "name": "st_af_skull_miser_name",
+    "category": "Artefacts",
+    "displayName": "st_af_skull_miser_name"
+  },
+  {
+    "id": "af_soul",
+    "name": "st_af_soul_name",
+    "category": "Artefacts",
+    "displayName": "st_af_soul_name"
+  },
+  {
+    "id": "af_spaika",
+    "name": "st_af_spaika_name",
+    "category": "Artefacts",
+    "displayName": "st_af_spaika_name"
+  },
+  {
+    "id": "af_sponge",
+    "name": "st_af_sponge_name",
+    "category": "Artefacts",
+    "displayName": "st_af_sponge_name"
+  },
+  {
+    "id": "af_star_phantom",
+    "name": "st_af_star_phantom_name",
+    "category": "Artefacts",
+    "displayName": "st_af_star_phantom_name"
+  },
+  {
+    "id": "af_sun",
+    "name": "st_af_sun_name",
+    "category": "Artefacts",
+    "displayName": "st_af_sun_name"
+  },
+  {
+    "id": "af_surge",
+    "name": "st_af_surge_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_surge_name"
+  },
+  {
+    "id": "af_surge_up",
+    "name": "st_af_surge_up_name",
+    "category": "Belt Attachments",
+    "displayName": "st_af_surge_up_name"
+  },
+  {
+    "id": "af_tapeworm",
+    "name": "st_af_tapeworm_name",
+    "category": "Artefacts",
+    "displayName": "st_af_tapeworm_name"
+  },
+  {
+    "id": "af_tlf_lost_soul",
+    "name": "st_af_tlf_lost_soul",
+    "category": "Artefacts",
+    "displayName": "st_af_tlf_lost_soul"
+  },
+  {
+    "id": "af_tlf_prometheus",
+    "name": "st_af_tlf_prometheus",
+    "category": "Artefacts",
+    "displayName": "st_af_tlf_prometheus"
+  },
+  {
+    "id": "af_vaselisk",
+    "name": "st_af_vaselisk_name",
+    "category": "Artefacts",
+    "displayName": "st_af_vaselisk_name"
+  },
+  {
+    "id": "af_vyvert",
+    "name": "st_af_vyvert_name",
+    "category": "Artefacts",
+    "displayName": "st_af_vyvert_name"
+  },
+  {
+    "id": "af_zhelch",
+    "name": "st_af_zhelch_name",
+    "category": "Artefacts",
+    "displayName": "st_af_zhelch_name"
+  },
+  {
+    "id": "akvatab",
+    "name": "st_akvatab",
+    "category": "Medicine",
+    "displayName": "st_akvatab"
+  },
+  {
+    "id": "analgetic",
+    "name": "st_analgetic",
+    "category": "Medicine",
+    "displayName": "st_analgetic"
+  },
+  {
+    "id": "antibio_chlor",
+    "name": "st_antibio_chlor",
+    "category": "Medicine",
+    "displayName": "st_antibio_chlor"
+  },
+  {
+    "id": "antibio_sulfad",
+    "name": "st_antibio_sulfad",
+    "category": "Medicine",
+    "displayName": "st_antibio_sulfad"
+  },
+  {
+    "id": "antiemetic",
+    "name": "st_antiemetic",
+    "category": "Medicine",
+    "displayName": "st_antiemetic"
+  },
+  {
+    "id": "antirad",
+    "name": "st_antirad",
+    "category": "Medicine",
+    "displayName": "st_antirad"
+  },
+  {
+    "id": "antirad_cystamine",
+    "name": "st_antirad_cystamine",
+    "category": "Medicine",
+    "displayName": "st_antirad_cystamine"
+  },
+  {
+    "id": "antirad_kalium",
+    "name": "st_antirad_kalium",
+    "category": "Medicine",
+    "displayName": "st_antirad_kalium"
+  },
+  {
+    "id": "wpn_axe",
+    "name": "st_axe",
+    "category": "Melee",
+    "displayName": "st_axe"
+  },
+  {
+    "id": "bandage",
+    "name": "st_bandage",
+    "category": "Medicine",
+    "displayName": "st_bandage"
+  },
+  {
+    "id": "beans",
+    "name": "st_beans",
+    "category": "Food",
+    "displayName": "st_beans"
+  },
+  {
+    "id": "beer",
+    "name": "st_beer",
+    "category": "Food",
+    "displayName": "st_beer"
+  },
+  {
+    "id": "bottle_metal",
+    "name": "st_bottle_metal",
+    "category": "Food",
+    "displayName": "st_bottle_metal"
+  },
+  {
+    "id": "bread",
+    "name": "st_bread",
+    "category": "Food",
+    "displayName": "st_bread"
+  },
+  {
+    "id": "breadold",
+    "name": "st_breadold",
+    "category": "Food",
+    "displayName": "st_breadold"
+  },
+  {
+    "id": "brewed_coffee",
+    "name": "st_brewed_coffee",
+    "category": "Food",
+    "displayName": "st_brewed_coffee"
+  },
+  {
+    "id": "caffeine",
+    "name": "st_caffeine",
+    "category": "Medicine",
+    "displayName": "st_caffeine"
+  },
+  {
+    "id": "chili",
+    "name": "st_chili",
+    "category": "Food",
+    "displayName": "st_chili"
+  },
+  {
+    "id": "chocolate",
+    "name": "st_chocolate",
+    "category": "Food",
+    "displayName": "st_chocolate"
+  },
+  {
+    "id": "chocolate_p",
+    "name": "st_chocolate_p",
+    "category": "Food",
+    "displayName": "st_chocolate_p"
+  },
+  {
+    "id": "cigar1",
+    "name": "st_cigar1",
+    "category": "Food",
+    "displayName": "st_cigar1"
+  },
+  {
+    "id": "cigar2",
+    "name": "st_cigar2",
+    "category": "Food",
+    "displayName": "st_cigar2"
+  },
+  {
+    "id": "cigar3",
+    "name": "st_cigar3",
+    "category": "Food",
+    "displayName": "st_cigar3"
+  },
+  {
+    "id": "cigarettes",
+    "name": "st_cigarettes",
+    "category": "Food",
+    "displayName": "st_cigarettes"
+  },
+  {
+    "id": "cigarettes_lucky",
+    "name": "st_cigarettes_lucky",
+    "category": "Food",
+    "displayName": "st_cigarettes_lucky"
+  },
+  {
+    "id": "cigarettes_russian",
+    "name": "st_cigarettes_russian",
+    "category": "Food",
+    "displayName": "st_cigarettes_russian"
+  },
+  {
+    "id": "cocaine",
+    "name": "st_cocaine",
+    "category": "Medicine",
+    "displayName": "st_cocaine"
+  },
+  {
+    "id": "coffee_drink",
+    "name": "st_coffee_drink",
+    "category": "Food",
+    "displayName": "st_coffee_drink"
+  },
+  {
+    "id": "conserva",
+    "name": "st_conserva",
+    "category": "Food",
+    "displayName": "st_conserva"
+  },
+  {
+    "id": "corn",
+    "name": "st_corn",
+    "category": "Food",
+    "displayName": "st_corn"
+  },
+  {
+    "id": "cigar",
+    "name": "st_cuban_cigar",
+    "category": "Food",
+    "displayName": "st_cuban_cigar"
+  },
+  {
+    "id": "drink_crow",
+    "name": "st_drink_crow",
+    "category": "Food",
+    "displayName": "st_drink_crow"
+  },
+  {
+    "id": "drug_anabiotic",
+    "name": "st_drug_anabiotic",
+    "category": "Medicine",
+    "displayName": "st_drug_anabiotic"
+  },
+  {
+    "id": "drug_antidot",
+    "name": "st_drug_antidot",
+    "category": "Medicine",
+    "displayName": "st_drug_antidot"
+  },
+  {
+    "id": "drug_booster",
+    "name": "st_drug_booster",
+    "category": "Medicine",
+    "displayName": "st_drug_booster"
+  },
+  {
+    "id": "drug_coagulant",
+    "name": "st_drug_coagulant",
+    "category": "Medicine",
+    "displayName": "st_drug_coagulant"
+  },
+  {
+    "id": "drug_psy_blockade",
+    "name": "st_drug_psy_blockade",
+    "category": "Medicine",
+    "displayName": "st_drug_psy_blockade"
+  },
+  {
+    "id": "drug_radioprotector",
+    "name": "st_drug_radioprotector",
+    "category": "Medicine",
+    "displayName": "st_drug_radioprotector"
+  },
+  {
+    "id": "ecolog_outfit_blue",
+    "name": "st_ecologist_outfit_blue_name",
+    "category": "Outfits",
+    "displayName": "st_ecologist_outfit_blue_name"
+  },
+  {
+    "id": "ecolog_outfit_green",
+    "name": "st_ecologist_outfit_grn_name",
+    "category": "Outfits",
+    "displayName": "st_ecologist_outfit_grn_name"
+  },
+  {
+    "id": "ecolog_outfit_orange",
+    "name": "st_ecologist_outfit_orange_name",
+    "category": "Outfits",
+    "displayName": "st_ecologist_outfit_orange_name"
+  },
+  {
+    "id": "ecolog_outfit_red",
+    "name": "st_ecologist_outfit_red_name",
+    "category": "Outfits",
+    "displayName": "st_ecologist_outfit_red_name"
+  },
+  {
+    "id": "ecolog_outfit_white",
+    "name": "st_ecologist_outfit_white_name",
+    "category": "Outfits",
+    "displayName": "st_ecologist_outfit_white_name"
+  },
+  {
+    "id": "ecolog_outfit_yello",
+    "name": "st_ecologist_outfit_yello_name",
+    "category": "Outfits",
+    "displayName": "st_ecologist_outfit_yello_name"
+  },
+  {
+    "id": "energy_drink",
+    "name": "st_energy_drink",
+    "category": "Food",
+    "displayName": "st_energy_drink"
+  },
+  {
+    "id": "equ_military_pack",
+    "name": "st_equ_milpack_name",
+    "category": "Belt Attachments",
+    "displayName": "st_equ_milpack_name"
+  },
+  {
+    "id": "equ_small_pack",
+    "name": "st_equ_smallpack_name",
+    "category": "Belt Attachments",
+    "displayName": "st_equ_smallpack_name"
+  },
+  {
+    "id": "equ_small_military_pack",
+    "name": "st_equ_smilpack_name",
+    "category": "Belt Attachments",
+    "displayName": "st_equ_smilpack_name"
+  },
+  {
+    "id": "equ_tourist_pack",
+    "name": "st_equ_touristpack_name",
+    "category": "Belt Attachments",
+    "displayName": "st_equ_touristpack_name"
+  },
+  {
+    "id": "flask",
+    "name": "st_flask",
+    "category": "Food",
+    "displayName": "st_flask"
+  },
+  {
+    "id": "glucose",
+    "name": "st_glucose",
+    "category": "Medicine",
+    "displayName": "st_glucose"
+  },
+  {
+    "id": "glucose_s",
+    "name": "st_glucose_s",
+    "category": "Medicine",
+    "displayName": "st_glucose_s"
+  },
+  {
+    "id": "grenade_f1",
+    "name": "st_grenade_f1",
+    "category": "Explosives",
+    "displayName": "st_grenade_f1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "grenade_rgd5",
+    "name": "st_grenade_rgd5",
+    "category": "Explosives",
+    "displayName": "st_grenade_rgd5",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "grenade_smoke",
+    "name": "st_grenade_smoke",
+    "category": "Explosives",
+    "displayName": "st_grenade_smoke",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "grenade_gd-05",
+    "name": "st_grenade_thermite",
+    "category": "Explosives",
+    "displayName": "st_grenade_thermite",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "ground_coffee",
+    "name": "st_ground_coffee",
+    "category": "Food",
+    "displayName": "st_ground_coffee"
+  },
+  {
+    "id": "hand_rolling_tobacco",
+    "name": "st_hand_rolling_tobacco",
+    "category": "Food",
+    "displayName": "st_hand_rolling_tobacco"
+  },
+  {
+    "id": "helm_bandana",
+    "name": "st_helm_bandana",
+    "category": "Helmets",
+    "displayName": "st_helm_bandana"
+  },
+  {
+    "id": "helm_battle",
+    "name": "st_helm_battle",
+    "category": "Helmets",
+    "displayName": "st_helm_battle"
+  },
+  {
+    "id": "helm_cloth_mask",
+    "name": "st_helm_cloth_mask",
+    "category": "Helmets",
+    "displayName": "st_helm_cloth_mask"
+  },
+  {
+    "id": "helm_exo",
+    "name": "st_helm_exo_name",
+    "category": "Helmets",
+    "displayName": "st_helm_exo_name"
+  },
+  {
+    "id": "helm_hardhat",
+    "name": "st_helm_hardhat",
+    "category": "Helmets",
+    "displayName": "st_helm_hardhat [default]"
+  },
+  {
+    "id": "helm_hardhat_snag",
+    "name": "st_helm_hardhat",
+    "category": "Helmets",
+    "displayName": "st_helm_hardhat [snag]"
+  },
+  {
+    "id": "helm_m40",
+    "name": "st_helm_m40",
+    "category": "Helmets",
+    "displayName": "st_helm_m40"
+  },
+  {
+    "id": "helm_metro",
+    "name": "st_helm_metro",
+    "category": "Helmets",
+    "displayName": "st_helm_metro"
+  },
+  {
+    "id": "helm_protective",
+    "name": "st_helm_protective",
+    "category": "Helmets",
+    "displayName": "st_helm_protective"
+  },
+  {
+    "id": "helm_resp",
+    "name": "st_helm_resp",
+    "category": "Helmets",
+    "displayName": "st_helm_resp"
+  },
+  {
+    "id": "helm_respirator",
+    "name": "st_helm_respirator",
+    "category": "Helmets",
+    "displayName": "st_helm_respirator [default]"
+  },
+  {
+    "id": "helm_respirator_old",
+    "name": "st_helm_respirator",
+    "category": "Helmets",
+    "displayName": "st_helm_respirator [old]"
+  },
+  {
+    "id": "helm_respirator_gp5",
+    "name": "st_helm_respirator_gp5",
+    "category": "Helmets",
+    "displayName": "st_helm_respirator_gp5"
+  },
+  {
+    "id": "helm_rp_bala",
+    "name": "st_helm_rp_bala",
+    "category": "Helmets",
+    "displayName": "st_helm_rp_bala"
+  },
+  {
+    "id": "helm_tactic",
+    "name": "st_helm_tactic",
+    "category": "Helmets",
+    "displayName": "st_helm_tactic"
+  },
+  {
+    "id": "hide_bloodsucker",
+    "name": "st_hide_bloodsucker_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_bloodsucker_name"
+  },
+  {
+    "id": "hide_boar",
+    "name": "st_hide_boar_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_boar_name"
+  },
+  {
+    "id": "hide_burer",
+    "name": "st_hide_burer_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_burer_name"
+  },
+  {
+    "id": "hide_chimera",
+    "name": "st_hide_chimera_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_chimera_name"
+  },
+  {
+    "id": "hide_controller",
+    "name": "st_hide_controller_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_controller_name"
+  },
+  {
+    "id": "hide_flesh",
+    "name": "st_hide_flesh_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_flesh_name"
+  },
+  {
+    "id": "hide_lurker",
+    "name": "st_hide_lurker_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_lurker_name"
+  },
+  {
+    "id": "hide_pseudodog",
+    "name": "st_hide_pseudodog_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_pseudodog_name"
+  },
+  {
+    "id": "hide_pseudogiant",
+    "name": "st_hide_pseudogiant_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_pseudogiant_name"
+  },
+  {
+    "id": "hide_psy_dog",
+    "name": "st_hide_psy_dog_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_psy_dog_name"
+  },
+  {
+    "id": "hide_psysucker",
+    "name": "st_hide_psysucker_name",
+    "category": "Belt Attachments",
+    "displayName": "st_hide_psysucker_name"
+  },
+  {
+    "id": "ied_blow",
+    "name": "st_ied",
+    "category": "Explosives",
+    "displayName": "st_ied [blow]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "ied",
+    "name": "st_ied",
+    "category": "Explosives",
+    "displayName": "st_ied [default]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "ied_new_blow",
+    "name": "st_ied",
+    "category": "Explosives",
+    "displayName": "st_ied [new_blow]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "ied_rpg",
+    "name": "st_ied_rpg",
+    "category": "Explosives",
+    "displayName": "st_ied_rpg",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "artefact_container",
+    "name": "st_itm_artefact_container_name",
+    "category": "Belt Attachments",
+    "displayName": "st_itm_artefact_container_name"
+  },
+  {
+    "id": "itm_backpack",
+    "name": "st_itm_backpack_name",
+    "category": "Belt Attachments",
+    "displayName": "st_itm_backpack_name"
+  },
+  {
+    "id": "jgut",
+    "name": "st_jgut_zhgut",
+    "category": "Medicine",
+    "displayName": "st_jgut_zhgut"
+  },
+  {
+    "id": "joint",
+    "name": "st_joint",
+    "category": "Medicine",
+    "displayName": "st_joint"
+  },
+  {
+    "id": "kit_hunt",
+    "name": "st_kit_hunt",
+    "category": "Belt Attachments",
+    "displayName": "st_kit_hunt"
+  },
+  {
+    "id": "wpn_knife",
+    "name": "st_knife_6x4",
+    "category": "Melee",
+    "displayName": "st_knife_6x4"
+  },
+  {
+    "id": "wpn_knife5",
+    "name": "st_knife_combat",
+    "category": "Melee",
+    "displayName": "st_knife_combat"
+  },
+  {
+    "id": "wpn_knife3",
+    "name": "st_knife_hunting",
+    "category": "Melee",
+    "displayName": "st_knife_hunting"
+  },
+  {
+    "id": "wpn_knife2",
+    "name": "st_knife_needle",
+    "category": "Melee",
+    "displayName": "st_knife_needle"
+  },
+  {
+    "id": "wpn_knife4",
+    "name": "st_knife_swat",
+    "category": "Melee",
+    "displayName": "st_knife_swat"
+  },
+  {
+    "id": "wpn_knife6",
+    "name": "st_knifebf4",
+    "category": "Melee",
+    "displayName": "st_knifebf4"
+  },
+  {
+    "id": "kolbasa",
+    "name": "st_kolbasa",
+    "category": "Food",
+    "displayName": "st_kolbasa"
+  },
+  {
+    "id": "wpn_knife8",
+    "name": "st_kukri",
+    "category": "Melee",
+    "displayName": "st_kukri"
+  },
+  {
+    "id": "mag_1921_11.43x23_default",
+    "name": "st_mag_1921_11.43x23_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_1921_11.43x23_fmj"
+  },
+  {
+    "id": "mag_ace21_5.56x45_default",
+    "name": "st_mag_ace21_5.56x45",
+    "category": "Ammo",
+    "displayName": "st_mag_ace21_5.56x45"
+  },
+  {
+    "id": "mag_ak_7.62x39_default",
+    "name": "st_mag_ak_7.62x39",
+    "category": "Ammo",
+    "displayName": "st_mag_ak_7.62x39"
+  },
+  {
+    "id": "mag_ak_5.56x45_default",
+    "name": "st_mag_ak101_5.56x45",
+    "category": "Ammo",
+    "displayName": "st_mag_ak101_5.56x45 [default]"
+  },
+  {
+    "id": "mag_ak_5.56x45_modern",
+    "name": "st_mag_ak101_5.56x45",
+    "category": "Ammo",
+    "displayName": "st_mag_ak101_5.56x45 [modern]"
+  },
+  {
+    "id": "mag_ak_7.62x39_modern",
+    "name": "st_mag_ak103_7.62x39",
+    "category": "Ammo",
+    "displayName": "st_mag_ak103_7.62x39"
+  },
+  {
+    "id": "mag_ak_7.62x39_fast",
+    "name": "st_mag_ak103_fast_7.62x39",
+    "category": "Ammo",
+    "displayName": "st_mag_ak103_fast_7.62x39"
+  },
+  {
+    "id": "mag_ak_5.45x39_default",
+    "name": "st_mag_ak74_5.45x39",
+    "category": "Ammo",
+    "displayName": "st_mag_ak74_5.45x39"
+  },
+  {
+    "id": "mag_ak_5.45x39_extended",
+    "name": "st_mag_ak74_5.45x39_extended",
+    "category": "Ammo",
+    "displayName": "st_mag_ak74_5.45x39_extended"
+  },
+  {
+    "id": "mag_ak_5.45x39_fast",
+    "name": "st_mag_ak74_fast_5.45x39",
+    "category": "Ammo",
+    "displayName": "st_mag_ak74_fast_5.45x39"
+  },
+  {
+    "id": "mag_ak_5.45x39_modern",
+    "name": "st_mag_ak74m_5.45x39",
+    "category": "Ammo",
+    "displayName": "st_mag_ak74m_5.45x39"
+  },
+  {
+    "id": "mag_akalfa_5.56x45_bas",
+    "name": "st_mag_akalfa_5.56x45_bas",
+    "category": "Ammo",
+    "displayName": "st_mag_akalfa_5.56x45_bas"
+  },
+  {
+    "id": "mag_akalfa_7.62x39_bas",
+    "name": "st_mag_akalfa_7.62x39_bas",
+    "category": "Ammo",
+    "displayName": "st_mag_akalfa_7.62x39_bas"
+  },
+  {
+    "id": "mag_aps_9x18_default",
+    "name": "st_mag_aps_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_aps_9x18_fmj"
+  },
+  {
+    "id": "mag_aps_9x19_alt",
+    "name": "st_mag_aps_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_aps_9x19_fmj"
+  },
+  {
+    "id": "mag_ash_12.7x55_default",
+    "name": "st_mag_ash12_12.7x55",
+    "category": "Ammo",
+    "displayName": "st_mag_ash12_12.7x55"
+  },
+  {
+    "id": "mag_ash_12.7x55_extended",
+    "name": "st_mag_ash12_ext_12.7x55",
+    "category": "Ammo",
+    "displayName": "st_mag_ash12_ext_12.7x55"
+  },
+  {
+    "id": "mag_aug_5.56x45_default",
+    "name": "st_mag_aug_5.56x45",
+    "category": "Ammo",
+    "displayName": "st_mag_aug_5.56x45"
+  },
+  {
+    "id": "mag_aug_9x19_default",
+    "name": "st_mag_aug_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_aug_9x19_fmj"
+  },
+  {
+    "id": "mag_vssbas_9x39_extended2",
+    "name": "st_mag_basextvintorez_9x39_pab9",
+    "category": "Ammo",
+    "displayName": "st_mag_basextvintorez_9x39_pab9"
+  },
+  {
+    "id": "mag_baskiparis_9x18_20",
+    "name": "st_mag_baskiparis_9x18_20",
+    "category": "Ammo",
+    "displayName": "st_mag_baskiparis_9x18_20"
+  },
+  {
+    "id": "mag_baskiparis_9x18_40",
+    "name": "st_mag_baskiparis_9x18_40",
+    "category": "Ammo",
+    "displayName": "st_mag_baskiparis_9x18_40"
+  },
+  {
+    "id": "mag_baskiparis_9x18_81",
+    "name": "st_mag_baskiparis_9x18_81",
+    "category": "Ammo",
+    "displayName": "st_mag_baskiparis_9x18_81"
+  },
+  {
+    "id": "mag_baskiparis_9x19_20",
+    "name": "st_mag_baskiparis_9x19_20",
+    "category": "Ammo",
+    "displayName": "st_mag_baskiparis_9x19_20"
+  },
+  {
+    "id": "mag_baskiparis_9x19_40",
+    "name": "st_mag_baskiparis_9x19_40",
+    "category": "Ammo",
+    "displayName": "st_mag_baskiparis_9x19_40"
+  },
+  {
+    "id": "mag_baskiparis_9x19_81",
+    "name": "st_mag_baskiparis_9x19_81",
+    "category": "Ammo",
+    "displayName": "st_mag_baskiparis_9x19_81"
+  },
+  {
+    "id": "mag_remington700_7.62x51",
+    "name": "st_mag_basremington700_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_basremington700_7.62x51"
+  },
+  {
+    "id": "mag_vssbas_9x39_extended1",
+    "name": "st_mag_basvintorez_9x39_pab9",
+    "category": "Ammo",
+    "displayName": "st_mag_basvintorez_9x39_pab9"
+  },
+  {
+    "id": "mag_basvz61_9x18_30",
+    "name": "st_mag_basvz61_9x18_30",
+    "category": "Ammo",
+    "displayName": "st_mag_basvz61_9x18_30"
+  },
+  {
+    "id": "mag_basvz61_9x18_60",
+    "name": "st_mag_basvz61_9x18_60",
+    "category": "Ammo",
+    "displayName": "st_mag_basvz61_9x18_60"
+  },
+  {
+    "id": "mag_basvz61_9x19_30",
+    "name": "st_mag_basvz61_9x19_30",
+    "category": "Ammo",
+    "displayName": "st_mag_basvz61_9x19_30"
+  },
+  {
+    "id": "mag_basvz61_9x19_60",
+    "name": "st_mag_basvz61_9x19_60",
+    "category": "Ammo",
+    "displayName": "st_mag_basvz61_9x19_60"
+  },
+  {
+    "id": "mag_beretta_9x18_alt",
+    "name": "st_mag_beretta_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_beretta_9x18_fmj"
+  },
+  {
+    "id": "mag_beretta_9x19_default",
+    "name": "st_mag_beretta_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_beretta_9x19_fmj"
+  },
+  {
+    "id": "mag_bizon_7.62x25_alt",
+    "name": "st_mag_bizon_7.62x25_p",
+    "category": "Ammo",
+    "displayName": "st_mag_bizon_7.62x25_p"
+  },
+  {
+    "id": "mag_bizon_9x18_defalt",
+    "name": "st_mag_bizon_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_bizon_9x18_fmj"
+  },
+  {
+    "id": "mag_bizon_9x19_alt",
+    "name": "st_mag_bizon_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_bizon_9x19_fmj"
+  },
+  {
+    "id": "mag_colt1911_default",
+    "name": "st_mag_colt1911_11.43x23_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_colt1911_11.43x23_fmj"
+  },
+  {
+    "id": "mag_cz52_default",
+    "name": "st_mag_cz52_7.62x25_p",
+    "category": "Ammo",
+    "displayName": "st_mag_cz52_7.62x25_p"
+  },
+  {
+    "id": "mag_cz75_9x18_alt",
+    "name": "st_mag_cz75_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_cz75_9x18_fmj"
+  },
+  {
+    "id": "mag_cz75_9x19_default",
+    "name": "st_mag_cz75_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_cz75_9x19_fmj"
+  },
+  {
+    "id": "mag_deserteagal_default",
+    "name": "st_mag_desert_eagle_357_hp",
+    "category": "Ammo",
+    "displayName": "st_mag_desert_eagle_357_hp"
+  },
+  {
+    "id": "mag_dvl_338fed",
+    "name": "st_mag_dvl_338",
+    "category": "Ammo",
+    "displayName": "st_mag_dvl_338"
+  },
+  {
+    "id": "mag_dvl_7.62x51",
+    "name": "st_mag_dvl_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_dvl_7.62x51"
+  },
+  {
+    "id": "mag_bas_toz106m1",
+    "name": "st_mag_etoz106_20x70_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_etoz106_20x70_fmj"
+  },
+  {
+    "id": "mag_bas_toz106m1_zhekan",
+    "name": "st_mag_etoz106_20x70_zhekan_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_etoz106_20x70_zhekan_fmj"
+  },
+  {
+    "id": "mag_fn57_default",
+    "name": "st_mag_fn57_5.7x28_ss190",
+    "category": "Ammo",
+    "displayName": "st_mag_fn57_5.7x28_ss190"
+  },
+  {
+    "id": "mag_fnp45_default",
+    "name": "st_mag_fnp45_11.43x23_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_fnp45_11.43x23_fmj"
+  },
+  {
+    "id": "mag_fnx45_default",
+    "name": "st_mag_fnx45_11.43x23_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_fnx45_11.43x23_fmj"
+  },
+  {
+    "id": "mag_fort_9x18_default",
+    "name": "st_mag_fort_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_fort_9x18_fmj"
+  },
+  {
+    "id": "mag_fort_9x19_alt",
+    "name": "st_mag_fort_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_fort_9x19_fmj"
+  },
+  {
+    "id": "mag_g36_5.56x45_default",
+    "name": "st_mag_g36_5.56x45",
+    "category": "Ammo",
+    "displayName": "st_mag_g36_5.56x45"
+  },
+  {
+    "id": "mag_g43_7.92x33_default",
+    "name": "st_mag_g43_7.92x33",
+    "category": "Ammo",
+    "displayName": "st_mag_g43_7.92x33"
+  },
+  {
+    "id": "mag_galil_7.62x51_default",
+    "name": "st_mag_galil_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_galil_7.62x51"
+  },
+  {
+    "id": "mag_galil_7.62x54_7h1_default",
+    "name": "st_mag_galil_7.62x54_7h1",
+    "category": "Ammo",
+    "displayName": "st_mag_galil_7.62x54_7h1"
+  },
+  {
+    "id": "mag_glock_9x18_alt",
+    "name": "st_mag_glock_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_glock_9x18_fmj"
+  },
+  {
+    "id": "mag_glock_9x19_default",
+    "name": "st_mag_glock_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_glock_9x19_fmj"
+  },
+  {
+    "id": "mag_ots_9x39_default",
+    "name": "st_mag_groza_9x39_pab9",
+    "category": "Ammo",
+    "displayName": "st_mag_groza_9x39_pab9"
+  },
+  {
+    "id": "mag_gsh18_9x19_default",
+    "name": "st_mag_gsh18_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_gsh18_9x19_fmj"
+  },
+  {
+    "id": "mag_hinge_7.62x51_default",
+    "name": "st_mag_hinge_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_hinge_7.62x51"
+  },
+  {
+    "id": "mag_hinge_7.62x51_extended",
+    "name": "st_mag_hinge_ext_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_hinge_ext_7.62x51"
+  },
+  {
+    "id": "mag_hpsa_9x18_alt",
+    "name": "st_mag_hpsa_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_hpsa_9x18_fmj"
+  },
+  {
+    "id": "mag_hpsa_9x19_default",
+    "name": "st_mag_hpsa_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_hpsa_9x19_fmj"
+  },
+  {
+    "id": "mag_k98_7.62x54",
+    "name": "st_mag_k98_7.62x54",
+    "category": "Ammo",
+    "displayName": "st_mag_k98_7.62x54"
+  },
+  {
+    "id": "mag_k98_7.92x33",
+    "name": "st_mag_k98_7.92x33",
+    "category": "Ammo",
+    "displayName": "st_mag_k98_7.92x33"
+  },
+  {
+    "id": "mag_kiparis_9x18_default",
+    "name": "st_mag_kiparis_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_kiparis_9x18_fmj"
+  },
+  {
+    "id": "mag_kiparis_9x19_alt",
+    "name": "st_mag_kiparis_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_kiparis_9x19_fmj"
+  },
+  {
+    "id": "mag_l96a1_7.62x51_default",
+    "name": "st_mag_l96a1_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_l96a1_7.62x51"
+  },
+  {
+    "id": "mag_196a1_7.62x54_alt",
+    "name": "st_mag_l96a1_pkm",
+    "category": "Ammo",
+    "displayName": "st_mag_l96a1_pkm"
+  },
+  {
+    "id": "mag_m1a1_11.43x23_default",
+    "name": "st_mag_m1a1_11.43x23_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_m1a1_11.43x23_fmj"
+  },
+  {
+    "id": "mag_m249_5.56x45_default",
+    "name": "st_mag_m249_5.56x45",
+    "category": "Ammo",
+    "displayName": "st_mag_m249_5.56x45"
+  },
+  {
+    "id": "mag_m82_12.7x55_default",
+    "name": "st_mag_m82_12.7x55",
+    "category": "Ammo",
+    "displayName": "st_mag_m82_12.7x55"
+  },
+  {
+    "id": "mag_m98b_300_default",
+    "name": "st_mag_m98b_magnum_300",
+    "category": "Ammo",
+    "displayName": "st_mag_m98b_magnum_300"
+  },
+  {
+    "id": "mag_mp443_9x18_alt",
+    "name": "st_mag_mp443_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_mp443_9x18_fmj"
+  },
+  {
+    "id": "mag_mp443_9x19_default",
+    "name": "st_mag_mp443_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_mp443_9x19_fmj"
+  },
+  {
+    "id": "mag_frasier_11.43x23_default",
+    "name": "st_mag_mp5_11.43x23_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_mp5_11.43x23_fmj"
+  },
+  {
+    "id": "mag_mp5_9x18_alt",
+    "name": "st_mag_mp5_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_mp5_9x18_fmj"
+  },
+  {
+    "id": "mag_mp5_9x19_default",
+    "name": "st_mag_mp5_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_mp5_9x19_fmj"
+  },
+  {
+    "id": "mag_mp7_5.7x28_default",
+    "name": "st_mag_mp7_5.7x28_ss190",
+    "category": "Ammo",
+    "displayName": "st_mag_mp7_5.7x28_ss190"
+  },
+  {
+    "id": "mag_mp7_9x18_alt",
+    "name": "st_mag_mp7_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_mp7_9x18_fmj"
+  },
+  {
+    "id": "mag_mp7_9x19_default",
+    "name": "st_mag_mp7_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_mp7_9x19_fmj"
+  },
+  {
+    "id": "mag_mp9iwp",
+    "name": "st_mag_mp9iwp",
+    "category": "Ammo",
+    "displayName": "st_mag_mp9iwp"
+  },
+  {
+    "id": "mag_nato_5.45x39_alt",
+    "name": "st_mag_nato_5.45x39",
+    "category": "Ammo",
+    "displayName": "st_mag_nato_5.45x39"
+  },
+  {
+    "id": "mag_nato_5.56x45_casket",
+    "name": "st_mag_nato_5.56x45_casket",
+    "category": "Ammo",
+    "displayName": "st_mag_nato_5.56x45_casket"
+  },
+  {
+    "id": "mag_nato_5.56x45_drum",
+    "name": "st_mag_nato_5.56x45_drum",
+    "category": "Ammo",
+    "displayName": "st_mag_nato_5.56x45_drum"
+  },
+  {
+    "id": "mag_nato_5.56x45_drum_ext",
+    "name": "st_mag_nato_5.56x45_drum_ext",
+    "category": "Ammo",
+    "displayName": "st_mag_nato_5.56x45_drum_ext"
+  },
+  {
+    "id": "mag_nato_5.56x45_extended",
+    "name": "st_mag_nato_5.56x45_extended",
+    "category": "Ammo",
+    "displayName": "st_mag_nato_5.56x45_extended"
+  },
+  {
+    "id": "mag_nato_5.56x45_fast",
+    "name": "st_mag_nato_5.56x45_fast",
+    "category": "Ammo",
+    "displayName": "st_mag_nato_5.56x45_fast"
+  },
+  {
+    "id": "mag_oc_9x18_default",
+    "name": "st_mag_oc33_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_oc33_9x18_fmj"
+  },
+  {
+    "id": "mag_oc_9x19_alt",
+    "name": "st_mag_oc33_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_oc33_9x19_fmj"
+  },
+  {
+    "id": "mag_50_762x51_drum",
+    "name": "st_mag_overlylarge_50_762x51_drum",
+    "category": "Ammo",
+    "displayName": "st_mag_overlylarge_50_762x51_drum"
+  },
+  {
+    "id": "mag_50_762x51_drum_hinge",
+    "name": "st_mag_overlylarge_50_762x51_drum2",
+    "category": "Ammo",
+    "displayName": "st_mag_overlylarge_50_762x51_drum2"
+  },
+  {
+    "id": "mag_75_762x39_drum",
+    "name": "st_mag_overlylarge_75_762x39_drum",
+    "category": "Ammo",
+    "displayName": "st_mag_overlylarge_75_762x39_drum"
+  },
+  {
+    "id": "mag_95_545x39_drum",
+    "name": "st_mag_overlylarge_95_545_drum",
+    "category": "Ammo",
+    "displayName": "st_mag_overlylarge_95_545_drum"
+  },
+  {
+    "id": "mag_95_5.56x45_drum",
+    "name": "st_mag_overlylarge_95_556_drum",
+    "category": "Ammo",
+    "displayName": "st_mag_overlylarge_95_556_drum"
+  },
+  {
+    "id": "mag_p220_9x19_u2p2bas",
+    "name": "st_mag_p220_9x19_u2p2bas",
+    "category": "Ammo",
+    "displayName": "st_mag_p220_9x19_u2p2bas"
+  },
+  {
+    "id": "mag_p90_5.7x28_default",
+    "name": "st_mag_p90_5.7x28_ss190",
+    "category": "Ammo",
+    "displayName": "st_mag_p90_5.7x28_ss190"
+  },
+  {
+    "id": "mag_pkp_pkm_default",
+    "name": "st_mag_pkm_pkm",
+    "category": "Ammo",
+    "displayName": "st_mag_pkm_pkm"
+  },
+  {
+    "id": "mag_bas_pl15_9x19",
+    "name": "st_mag_pl15_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_pl15_9x19_fmj"
+  },
+  {
+    "id": "mag_bas_pl15_9x19_extended",
+    "name": "st_mag_pl15_9x19_fmjext",
+    "category": "Ammo",
+    "displayName": "st_mag_pl15_9x19_fmjext"
+  },
+  {
+    "id": "mag_pm_9x18_default",
+    "name": "st_mag_pm_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_pm_9x18_fmj"
+  },
+  {
+    "id": "mag_pm_9x19_alt",
+    "name": "st_mag_pm_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_pm_9x19_fmj"
+  },
+  {
+    "id": "mag_pmm_9x18_default",
+    "name": "st_mag_pmm_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_pmm_9x18_fmj"
+  },
+  {
+    "id": "mag_pmm_9x19_alt",
+    "name": "st_mag_pmm_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_pmm_9x19_fmj"
+  },
+  {
+    "id": "mag_pp2000_9x18_alt",
+    "name": "st_mag_pp2000_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_pp2000_9x18_fmj"
+  },
+  {
+    "id": "mag_pp2000_9x19_default",
+    "name": "st_mag_pp2000_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_pp2000_9x19_fmj"
+  },
+  {
+    "id": "mag_coonan_357_default",
+    "name": "st_mag_ppp_1911_357_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_ppp_1911_357_fmj"
+  },
+  {
+    "id": "mag_mk23_45",
+    "name": "st_mag_ppp_mk23_45",
+    "category": "Ammo",
+    "displayName": "st_mag_ppp_mk23_45"
+  },
+  {
+    "id": "mag_px4_45_default",
+    "name": "st_mag_ppp_px4_45",
+    "category": "Ammo",
+    "displayName": "st_mag_ppp_px4_45"
+  },
+  {
+    "id": "mag_px4_9x19_default",
+    "name": "st_mag_ppp_px4_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_ppp_px4_9x19_fmj"
+  },
+  {
+    "id": "mag_legion_9x19",
+    "name": "st_mag_ppp_sig_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_ppp_sig_9x19_fmj"
+  },
+  {
+    "id": "mag_rxp_45",
+    "name": "st_mag_ppp_signimble_45_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_ppp_signimble_45_fmj"
+  },
+  {
+    "id": "mag_rxp_9x19",
+    "name": "st_mag_ppp_signimble_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_ppp_signimble_9x19_fmj"
+  },
+  {
+    "id": "mag_svi_45",
+    "name": "st_mag_ppp_svi_45",
+    "category": "Ammo",
+    "displayName": "st_mag_ppp_svi_45"
+  },
+  {
+    "id": "mag_ppsh_7.62x25_default",
+    "name": "st_mag_ppsh41_7.62x25_p",
+    "category": "Ammo",
+    "displayName": "st_mag_ppsh41_7.62x25_p"
+  },
+  {
+    "id": "mag_rem_7.62x51_default",
+    "name": "st_mag_remington700_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_remington700_7.62x51"
+  },
+  {
+    "id": "mag_remingtonarchangel_7.62x51",
+    "name": "st_mag_remingtonarchangel_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_remingtonarchangel_7.62x51"
+  },
+  {
+    "id": "mag_remingtonla_300",
+    "name": "st_mag_remingtonla_300",
+    "category": "Ammo",
+    "displayName": "st_mag_remingtonla_300"
+  },
+  {
+    "id": "mag_rpd_7.62x39_default",
+    "name": "st_mag_rpd_7.62x39",
+    "category": "Ammo",
+    "displayName": "st_mag_rpd_7.62x39"
+  },
+  {
+    "id": "mag_rpk_7.62x39_default",
+    "name": "st_mag_rpk_7.62x39",
+    "category": "Ammo",
+    "displayName": "st_mag_rpk_7.62x39"
+  },
+  {
+    "id": "mag_rpk_5.45x39_default",
+    "name": "st_mag_rpk74_5.45x39",
+    "category": "Ammo",
+    "displayName": "st_mag_rpk74_5.45x39"
+  },
+  {
+    "id": "mag_rpk_5.56x45_default",
+    "name": "st_mag_rpk74_5.56x45",
+    "category": "Ammo",
+    "displayName": "st_mag_rpk74_5.56x45"
+  },
+  {
+    "id": "mag_saiga12_drum",
+    "name": "st_mag_saiga12_drum",
+    "category": "Ammo",
+    "displayName": "st_mag_saiga12_drum"
+  },
+  {
+    "id": "mag_saiga12s_12x70_default",
+    "name": "st_mag_saiga12s_12x70",
+    "category": "Ammo",
+    "displayName": "st_mag_saiga12s_12x70"
+  },
+  {
+    "id": "mag_saiga12s_12x70_extended",
+    "name": "st_mag_saiga12s_ext_12x70",
+    "category": "Ammo",
+    "displayName": "st_mag_saiga12s_ext_12x70"
+  },
+  {
+    "id": "mag_sig_11.43x23_default",
+    "name": "st_mag_sig220_11.43x23_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_sig220_11.43x23_fmj"
+  },
+  {
+    "id": "mag_bas_sig226_9x19",
+    "name": "st_mag_sig226_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_sig226_9x19_fmj"
+  },
+  {
+    "id": "mag_bas_sig226_9x19_extended",
+    "name": "st_mag_sig226_9x19_fmjext",
+    "category": "Ammo",
+    "displayName": "st_mag_sig226_9x19_fmjext"
+  },
+  {
+    "id": "mag_sig_5.56x45_default",
+    "name": "st_mag_sig550_5.56x45",
+    "category": "Ammo",
+    "displayName": "st_mag_sig550_5.56x45"
+  },
+  {
+    "id": "mag_sig_5.56x45_sniper",
+    "name": "st_mag_sig550_sniper_5.56x45",
+    "category": "Ammo",
+    "displayName": "st_mag_sig550_sniper_5.56x45"
+  },
+  {
+    "id": "mag_sigp220_default",
+    "name": "st_mag_sigp220_11.43x23_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_sigp220_11.43x23_fmj"
+  },
+  {
+    "id": "mag_sigp220_extended",
+    "name": "st_mag_sigp220_11.43x23_fmjext",
+    "category": "Ammo",
+    "displayName": "st_mag_sigp220_11.43x23_fmjext"
+  },
+  {
+    "id": "mag_sks_7.62x39",
+    "name": "st_mag_sks_7.62x39",
+    "category": "Ammo",
+    "displayName": "st_mag_sks_7.62x39"
+  },
+  {
+    "id": "mag_sks_7.62x54",
+    "name": "st_mag_sks_7.62x54",
+    "category": "Ammo",
+    "displayName": "st_mag_sks_7.62x54"
+  },
+  {
+    "id": "mag_sks_7.62x54_extended",
+    "name": "st_mag_sks_7.62x54ext",
+    "category": "Ammo",
+    "displayName": "st_mag_sks_7.62x54ext"
+  },
+  {
+    "id": "mag_sks_7.62x39_extended",
+    "name": "st_mag_sksext_7.62x39",
+    "category": "Ammo",
+    "displayName": "st_mag_sksext_7.62x39"
+  },
+  {
+    "id": "mag_sr1m_9x21_default",
+    "name": "st_mag_sr1m_9x21",
+    "category": "Ammo",
+    "displayName": "st_mag_sr1m_9x21"
+  },
+  {
+    "id": "mag_sr1m_9x21_extended",
+    "name": "st_mag_sr1m_9x21ext",
+    "category": "Ammo",
+    "displayName": "st_mag_sr1m_9x21ext"
+  },
+  {
+    "id": "mag_sr2m_9x18_veresk",
+    "name": "st_mag_sr2m_9x18_veresk",
+    "category": "Ammo",
+    "displayName": "st_mag_sr2m_9x18_veresk"
+  },
+  {
+    "id": "mag_sr2m_9x21_veresk",
+    "name": "st_mag_sr2m_9x21_veresk",
+    "category": "Ammo",
+    "displayName": "st_mag_sr2m_9x21_veresk"
+  },
+  {
+    "id": "mag_nato_5.56x45_default",
+    "name": "st_mag_stanag",
+    "category": "Ammo",
+    "displayName": "st_mag_stanag"
+  },
+  {
+    "id": "mag_stanag_7.62x51_default",
+    "name": "st_mag_stanag_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_stanag_7.62x51"
+  },
+  {
+    "id": "mag_stanag_7.62x51_extended",
+    "name": "st_mag_stanag_7.62x51_ext",
+    "category": "Ammo",
+    "displayName": "st_mag_stanag_7.62x51_ext"
+  },
+  {
+    "id": "mag_stanag_7.62x51_short",
+    "name": "st_mag_stanag_7.62x51_short",
+    "category": "Ammo",
+    "displayName": "st_mag_stanag_7.62x51_short"
+  },
+  {
+    "id": "mag_stanag_7.62x51_fast",
+    "name": "st_mag_stanag_fast_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_stanag_fast_7.62x51"
+  },
+  {
+    "id": "mag_steyr_556",
+    "name": "st_mag_steyr_556",
+    "category": "Ammo",
+    "displayName": "st_mag_steyr_556"
+  },
+  {
+    "id": "mag_steyr_762",
+    "name": "st_mag_steyr_762",
+    "category": "Ammo",
+    "displayName": "st_mag_steyr_762"
+  },
+  {
+    "id": "mag_sv98_7.62x54_default",
+    "name": "st_mag_sv98_7.62x54",
+    "category": "Ammo",
+    "displayName": "st_mag_sv98_7.62x54"
+  },
+  {
+    "id": "mag_svdbas_5.56_default",
+    "name": "st_mag_svd_5.56",
+    "category": "Ammo",
+    "displayName": "st_mag_svd_5.56"
+  },
+  {
+    "id": "mag_svdbas_5.56_extended",
+    "name": "st_mag_svd_5.56_extended",
+    "category": "Ammo",
+    "displayName": "st_mag_svd_5.56_extended"
+  },
+  {
+    "id": "mag_svd_7.62x54_default",
+    "name": "st_mag_svd_7.62x54",
+    "category": "Ammo",
+    "displayName": "st_mag_svd_7.62x54 [7.62x54_default]"
+  },
+  {
+    "id": "mag_svdbas_7.62x54_default",
+    "name": "st_mag_svd_7.62x54",
+    "category": "Ammo",
+    "displayName": "st_mag_svd_7.62x54 [bas_7.62x54_default]"
+  },
+  {
+    "id": "mag_svd_7.62x54_extended",
+    "name": "st_mag_svd_7.62x54_extended",
+    "category": "Ammo",
+    "displayName": "st_mag_svd_7.62x54_extended [7.62x54_extended]"
+  },
+  {
+    "id": "mag_svdbas_7.62x54_extended",
+    "name": "st_mag_svd_7.62x54_extended",
+    "category": "Ammo",
+    "displayName": "st_mag_svd_7.62x54_extended [bas_7.62x54_extended]"
+  },
+  {
+    "id": "mag_svt_7.62x39_alt",
+    "name": "st_mag_svt40_7.62x39",
+    "category": "Ammo",
+    "displayName": "st_mag_svt40_7.62x39"
+  },
+  {
+    "id": "mag_svt_7.62x54_default",
+    "name": "st_mag_svt40_7.62x54",
+    "category": "Ammo",
+    "displayName": "st_mag_svt40_7.62x54"
+  },
+  {
+    "id": "mag_bas_toz106",
+    "name": "st_mag_toz106_20x70_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_toz106_20x70_fmj"
+  },
+  {
+    "id": "mag_bas_toz106_zhekan",
+    "name": "st_mag_toz106_20x70_zhekan_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_toz106_20x70_zhekan_fmj"
+  },
+  {
+    "id": "mag_bolt_300_default",
+    "name": "st_mag_trg_magnum_300",
+    "category": "Ammo",
+    "displayName": "st_mag_trg_magnum_300"
+  },
+  {
+    "id": "mag_tt33_7.62x25_default",
+    "name": "st_mag_tt33_7.62x25_p",
+    "category": "Ammo",
+    "displayName": "st_mag_tt33_7.62x25_p"
+  },
+  {
+    "id": "mag_t63_7.62x39_default",
+    "name": "st_mag_type63_7.62x39",
+    "category": "Ammo",
+    "displayName": "st_mag_type63_7.62x39"
+  },
+  {
+    "id": "mag_t63_7.62x54_alt",
+    "name": "st_mag_type63_7.62x54",
+    "category": "Ammo",
+    "displayName": "st_mag_type63_7.62x54"
+  },
+  {
+    "id": "mag_ump45_11.43x23_default",
+    "name": "st_mag_ump45_11.43x23_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_ump45_11.43x23_fmj"
+  },
+  {
+    "id": "mag_usas12_12x70_default",
+    "name": "st_mag_usas12_12x70",
+    "category": "Ammo",
+    "displayName": "st_mag_usas12_12x70"
+  },
+  {
+    "id": "mag_usp_11.43x23_default",
+    "name": "st_mag_usp_11.43x23_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_usp_11.43x23_fmj"
+  },
+  {
+    "id": "mag_usp_9x19_default",
+    "name": "st_mag_usp_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_usp_9x19_fmj"
+  },
+  {
+    "id": "mag_usptac_9x19",
+    "name": "st_mag_usptac_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_usptac_9x19_fmj"
+  },
+  {
+    "id": "mag_usptac_9x19_extended",
+    "name": "st_mag_usptac_9x19_fmjext",
+    "category": "Ammo",
+    "displayName": "st_mag_usptac_9x19_fmjext"
+  },
+  {
+    "id": "mag_val_9x39_default",
+    "name": "st_mag_val_9x39_pab9",
+    "category": "Ammo",
+    "displayName": "st_mag_val_9x39_pab9 [9x39_default]"
+  },
+  {
+    "id": "mag_valbas_9x39_default",
+    "name": "st_mag_val_9x39_pab9",
+    "category": "Ammo",
+    "displayName": "st_mag_val_9x39_pab9 [bas_9x39_default]"
+  },
+  {
+    "id": "mag_valbas_9x39_extended",
+    "name": "st_mag_valbas_9x39_pab9",
+    "category": "Ammo",
+    "displayName": "st_mag_valbas_9x39_pab9"
+  },
+  {
+    "id": "mag_vepr_12x70_default",
+    "name": "st_mag_vepr_12x70",
+    "category": "Ammo",
+    "displayName": "st_mag_vepr_12x70"
+  },
+  {
+    "id": "mag_vepr_12x70_compact",
+    "name": "st_mag_vepr_compact_12x70",
+    "category": "Ammo",
+    "displayName": "st_mag_vepr_compact_12x70"
+  },
+  {
+    "id": "mag_vihr_9x39_default",
+    "name": "st_mag_vihr_9x39_pab9",
+    "category": "Ammo",
+    "displayName": "st_mag_vihr_9x39_pab9"
+  },
+  {
+    "id": "mag_vss_9x39_default",
+    "name": "st_mag_vintorez_9x39_pab9",
+    "category": "Ammo",
+    "displayName": "st_mag_vintorez_9x39_pab9 [9x39_default]"
+  },
+  {
+    "id": "mag_vssbas_9x39_default",
+    "name": "st_mag_vintorez_9x39_pab9",
+    "category": "Ammo",
+    "displayName": "st_mag_vintorez_9x39_pab9 [bas_9x39_default]"
+  },
+  {
+    "id": "mag_vityaz_9x18_alt",
+    "name": "st_mag_vityaz_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_vityaz_9x18_fmj"
+  },
+  {
+    "id": "mag_vityaz_9x19_default",
+    "name": "st_mag_vityaz_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_vityaz_9x19_fmj"
+  },
+  {
+    "id": "mag_vsk_9x39_default",
+    "name": "st_mag_vsk94_9x39_pab9",
+    "category": "Ammo",
+    "displayName": "st_mag_vsk94_9x39_pab9"
+  },
+  {
+    "id": "mag_vsk_12.7x55_default",
+    "name": "st_mag_vssk_12.7x55",
+    "category": "Ammo",
+    "displayName": "st_mag_vssk_12.7x55"
+  },
+  {
+    "id": "mag_vz61_9x18_alt",
+    "name": "st_mag_vz61_9x18_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_vz61_9x18_fmj"
+  },
+  {
+    "id": "mag_vz61_9x19_default",
+    "name": "st_mag_vz61_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_vz61_9x19_fmj"
+  },
+  {
+    "id": "mag_wa_7.62x51_default",
+    "name": "st_mag_wa2000_7.62x51",
+    "category": "Ammo",
+    "displayName": "st_mag_wa2000_7.62x51"
+  },
+  {
+    "id": "mag_walther_9x19_default",
+    "name": "st_mag_walther_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_walther_9x19_fmj"
+  },
+  {
+    "id": "mag_wp99_9x19",
+    "name": "st_mag_wp99_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_mag_wp99_9x19_fmj"
+  },
+  {
+    "id": "mag_wp99_9x19_extended",
+    "name": "st_mag_wp99_9x19_fmjext",
+    "category": "Ammo",
+    "displayName": "st_mag_wp99_9x19_fmjext"
+  },
+  {
+    "id": "marijuana",
+    "name": "st_marijuana",
+    "category": "Medicine",
+    "displayName": "st_marijuana"
+  },
+  {
+    "id": "meat_bloodsucker_a",
+    "name": "st_meat_bloodsucker",
+    "category": "Food",
+    "displayName": "st_meat_bloodsucker [a]"
+  },
+  {
+    "id": "meat_bloodsucker_b",
+    "name": "st_meat_bloodsucker",
+    "category": "Food",
+    "displayName": "st_meat_bloodsucker [b]"
+  },
+  {
+    "id": "meat_bloodsucker",
+    "name": "st_meat_bloodsucker",
+    "category": "Food",
+    "displayName": "st_meat_bloodsucker [default]"
+  },
+  {
+    "id": "meat_boar_a",
+    "name": "st_meat_boar",
+    "category": "Food",
+    "displayName": "st_meat_boar [a]"
+  },
+  {
+    "id": "meat_boar_b",
+    "name": "st_meat_boar",
+    "category": "Food",
+    "displayName": "st_meat_boar [b]"
+  },
+  {
+    "id": "meat_boar",
+    "name": "st_meat_boar",
+    "category": "Food",
+    "displayName": "st_meat_boar [default]"
+  },
+  {
+    "id": "meat_chimera_a",
+    "name": "st_meat_chimera",
+    "category": "Food",
+    "displayName": "st_meat_chimera [a]"
+  },
+  {
+    "id": "meat_chimera_b",
+    "name": "st_meat_chimera",
+    "category": "Food",
+    "displayName": "st_meat_chimera [b]"
+  },
+  {
+    "id": "meat_chimera",
+    "name": "st_meat_chimera",
+    "category": "Food",
+    "displayName": "st_meat_chimera [default]"
+  },
+  {
+    "id": "meat_dog_a",
+    "name": "st_meat_dog",
+    "category": "Food",
+    "displayName": "st_meat_dog [a]"
+  },
+  {
+    "id": "meat_dog_b",
+    "name": "st_meat_dog",
+    "category": "Food",
+    "displayName": "st_meat_dog [b]"
+  },
+  {
+    "id": "meat_dog",
+    "name": "st_meat_dog",
+    "category": "Food",
+    "displayName": "st_meat_dog [default]"
+  },
+  {
+    "id": "meat_flesh_a",
+    "name": "st_meat_flesh",
+    "category": "Food",
+    "displayName": "st_meat_flesh [a]"
+  },
+  {
+    "id": "meat_flesh_b",
+    "name": "st_meat_flesh",
+    "category": "Food",
+    "displayName": "st_meat_flesh [b]"
+  },
+  {
+    "id": "meat_flesh",
+    "name": "st_meat_flesh",
+    "category": "Food",
+    "displayName": "st_meat_flesh [default]"
+  },
+  {
+    "id": "meat_lurker_a",
+    "name": "st_meat_lurker",
+    "category": "Food",
+    "displayName": "st_meat_lurker [a]"
+  },
+  {
+    "id": "meat_lurker_b",
+    "name": "st_meat_lurker",
+    "category": "Food",
+    "displayName": "st_meat_lurker [b]"
+  },
+  {
+    "id": "meat_lurker",
+    "name": "st_meat_lurker",
+    "category": "Food",
+    "displayName": "st_meat_lurker [default]"
+  },
+  {
+    "id": "meat_pseudodog_a",
+    "name": "st_meat_pseudodog",
+    "category": "Food",
+    "displayName": "st_meat_pseudodog [a]"
+  },
+  {
+    "id": "meat_pseudodog_b",
+    "name": "st_meat_pseudodog",
+    "category": "Food",
+    "displayName": "st_meat_pseudodog [b]"
+  },
+  {
+    "id": "meat_pseudodog",
+    "name": "st_meat_pseudodog",
+    "category": "Food",
+    "displayName": "st_meat_pseudodog [default]"
+  },
+  {
+    "id": "meat_psysucker_a",
+    "name": "st_meat_psysucker",
+    "category": "Food",
+    "displayName": "st_meat_psysucker [a]"
+  },
+  {
+    "id": "meat_psysucker_b",
+    "name": "st_meat_psysucker",
+    "category": "Food",
+    "displayName": "st_meat_psysucker [b]"
+  },
+  {
+    "id": "meat_psysucker",
+    "name": "st_meat_psysucker",
+    "category": "Food",
+    "displayName": "st_meat_psysucker [default]"
+  },
+  {
+    "id": "meat_snork_a",
+    "name": "st_meat_snork",
+    "category": "Food",
+    "displayName": "st_meat_snork [a]"
+  },
+  {
+    "id": "meat_snork_b",
+    "name": "st_meat_snork",
+    "category": "Food",
+    "displayName": "st_meat_snork [b]"
+  },
+  {
+    "id": "meat_snork",
+    "name": "st_meat_snork",
+    "category": "Food",
+    "displayName": "st_meat_snork [default]"
+  },
+  {
+    "id": "meat_tushkano_a",
+    "name": "st_meat_tushkano",
+    "category": "Food",
+    "displayName": "st_meat_tushkano [a]"
+  },
+  {
+    "id": "meat_tushkano_b",
+    "name": "st_meat_tushkano",
+    "category": "Food",
+    "displayName": "st_meat_tushkano [b]"
+  },
+  {
+    "id": "meat_tushkano",
+    "name": "st_meat_tushkano",
+    "category": "Food",
+    "displayName": "st_meat_tushkano [default]"
+  },
+  {
+    "id": "medkit",
+    "name": "st_medkit",
+    "category": "Medicine",
+    "displayName": "st_medkit"
+  },
+  {
+    "id": "medkit_army",
+    "name": "st_medkit_army",
+    "category": "Medicine",
+    "displayName": "st_medkit_army"
+  },
+  {
+    "id": "medkit_scientic",
+    "name": "st_medkit_science",
+    "category": "Medicine",
+    "displayName": "st_medkit_science"
+  },
+  {
+    "id": "mine",
+    "name": "st_mine_name",
+    "category": "Explosives",
+    "displayName": "st_mine_name",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "mineral_water",
+    "name": "st_mineral_water",
+    "category": "Food",
+    "displayName": "st_mineral_water"
+  },
+  {
+    "id": "mint",
+    "name": "st_mint",
+    "category": "Food",
+    "displayName": "st_mint"
+  },
+  {
+    "id": "morphine",
+    "name": "st_morphine",
+    "category": "Medicine",
+    "displayName": "st_morphine"
+  },
+  {
+    "id": "mre",
+    "name": "st_mre",
+    "category": "Food",
+    "displayName": "st_mre"
+  },
+  {
+    "id": "nuts",
+    "name": "st_nuts",
+    "category": "Food",
+    "displayName": "st_nuts"
+  },
+  {
+    "id": "powder_poltergeist",
+    "name": "st_powder_poltergeist",
+    "category": "Belt Attachments",
+    "displayName": "st_powder_poltergeist"
+  },
+  {
+    "id": "mag_colt1911_762x25",
+    "name": "st_ppp_colt1911_762x25_fmj",
+    "category": "Ammo",
+    "displayName": "st_ppp_colt1911_762x25_fmj"
+  },
+  {
+    "id": "mag_ppp_glock_45_default",
+    "name": "st_ppp_glock_45_fmj",
+    "category": "Ammo",
+    "displayName": "st_ppp_glock_45_fmj"
+  },
+  {
+    "id": "mag_sw_45_default",
+    "name": "st_ppp_sw_45_fmj",
+    "category": "Ammo",
+    "displayName": "st_ppp_sw_45_fmj"
+  },
+  {
+    "id": "mag_sw_919_default",
+    "name": "st_ppp_sw_919_fmj",
+    "category": "Ammo",
+    "displayName": "st_ppp_sw_919_fmj"
+  },
+  {
+    "id": "mag_xd9_9x19_default",
+    "name": "st_ppp_xd9_9x19_fmj",
+    "category": "Ammo",
+    "displayName": "st_ppp_xd9_9x19_fmj"
+  },
+  {
+    "id": "protein",
+    "name": "st_protein",
+    "category": "Food",
+    "displayName": "st_protein"
+  },
+  {
+    "id": "raisins",
+    "name": "st_raisins",
+    "category": "Food",
+    "displayName": "st_raisins"
+  },
+  {
+    "id": "ration_ru",
+    "name": "st_ration_ru",
+    "category": "Food",
+    "displayName": "st_ration_ru"
+  },
+  {
+    "id": "ration_ukr",
+    "name": "st_ration_ukr",
+    "category": "Food",
+    "displayName": "st_ration_ukr"
+  },
+  {
+    "id": "rebirth",
+    "name": "st_rebirth",
+    "category": "Medicine",
+    "displayName": "st_rebirth"
+  },
+  {
+    "id": "salicidic_acid",
+    "name": "st_salicidic_acid",
+    "category": "Medicine",
+    "displayName": "st_salicidic_acid"
+  },
+  {
+    "id": "salmon",
+    "name": "st_salmon",
+    "category": "Food",
+    "displayName": "st_salmon"
+  },
+  {
+    "id": "sausage",
+    "name": "st_sausage",
+    "category": "Food",
+    "displayName": "st_sausage"
+  },
+  {
+    "id": "wpn_axe3",
+    "name": "st_sledge_hammer",
+    "category": "Melee",
+    "displayName": "st_sledge_hammer"
+  },
+  {
+    "id": "drug_sleepingpills",
+    "name": "st_sleepingpills",
+    "category": "Medicine",
+    "displayName": "st_sleepingpills"
+  },
+  {
+    "id": "stimpack",
+    "name": "st_stim_impro",
+    "category": "Medicine",
+    "displayName": "st_stim_impro"
+  },
+  {
+    "id": "stimpack_army",
+    "name": "st_stim_military",
+    "category": "Medicine",
+    "displayName": "st_stim_military"
+  },
+  {
+    "id": "stimpack_scientic",
+    "name": "st_stim_scientic",
+    "category": "Medicine",
+    "displayName": "st_stim_scientic"
+  },
+  {
+    "id": "survival_kit",
+    "name": "st_survival_kit",
+    "category": "Medicine",
+    "displayName": "st_survival_kit"
+  },
+  {
+    "id": "wpn_knife7",
+    "name": "st_tactical_knife",
+    "category": "Melee",
+    "displayName": "st_tactical_knife"
+  },
+  {
+    "id": "tea",
+    "name": "st_tea",
+    "category": "Food",
+    "displayName": "st_tea"
+  },
+  {
+    "id": "tetanus",
+    "name": "st_tetanus",
+    "category": "Medicine",
+    "displayName": "st_tetanus"
+  },
+  {
+    "id": "tobacco",
+    "name": "st_tobacco",
+    "category": "Food",
+    "displayName": "st_tobacco"
+  },
+  {
+    "id": "wpn_knife9",
+    "name": "st_tomahawk",
+    "category": "Melee",
+    "displayName": "st_tomahawk"
+  },
+  {
+    "id": "tomato",
+    "name": "st_tomato",
+    "category": "Food",
+    "displayName": "st_tomato"
+  },
+  {
+    "id": "wpn_trg",
+    "name": "st_trg_sako",
+    "category": "Snipers",
+    "displayName": "st_trg_sako",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "tushonka",
+    "name": "st_tushonka",
+    "category": "Food",
+    "displayName": "st_tushonka"
+  },
+  {
+    "id": "vodka",
+    "name": "st_vodka",
+    "category": "Food",
+    "displayName": "st_vodka"
+  },
+  {
+    "id": "vodka_quality",
+    "name": "st_vodka_quality",
+    "category": "Food",
+    "displayName": "st_vodka_quality"
+  },
+  {
+    "id": "vodka2",
+    "name": "st_vodka2",
+    "category": "Food",
+    "displayName": "st_vodka2"
+  },
+  {
+    "id": "water_drink",
+    "name": "st_water_drink",
+    "category": "Food",
+    "displayName": "st_water_drink"
+  },
+  {
+    "id": "wpn_9a91",
+    "name": "st_wpn_9a91",
+    "category": "Rifles",
+    "displayName": "st_wpn_9a91",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_abakan",
+    "name": "st_wpn_abakan",
+    "category": "Rifles",
+    "displayName": "st_wpn_abakan",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_abakan_camo",
+    "name": "st_wpn_abakan_camo",
+    "category": "Rifles",
+    "displayName": "st_wpn_abakan_camo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_abakan_n",
+    "name": "st_wpn_abakan_n",
+    "category": "Rifles",
+    "displayName": "st_wpn_abakan_n",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ace21",
+    "name": "st_wpn_ace21",
+    "category": "Rifles",
+    "displayName": "st_wpn_ace21",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ace52",
+    "name": "st_wpn_ace52",
+    "category": "Rifles",
+    "displayName": "st_wpn_ace52",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_adar2_15",
+    "name": "st_wpn_adar2_15",
+    "category": "Rifles",
+    "displayName": "st_wpn_adar2_15",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_aek",
+    "name": "st_wpn_aek971",
+    "category": "Rifles",
+    "displayName": "st_wpn_aek971",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak",
+    "name": "st_wpn_ak",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak101",
+    "name": "st_wpn_ak101",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak101",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak101_camo",
+    "name": "st_wpn_ak101_camo",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak101_camo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak102",
+    "name": "st_wpn_ak102",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak102",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak103",
+    "name": "st_wpn_ak103",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak103",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak103_camo",
+    "name": "st_wpn_ak103_camo",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak103_camo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak104",
+    "name": "st_wpn_ak104",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak104",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak104_alfa",
+    "name": "st_wpn_ak104_alfa",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak104_alfa",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak105",
+    "name": "st_wpn_ak105",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak105",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak105_shakal",
+    "name": "st_wpn_ak105_shakal",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak105_shakal",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak105_sp",
+    "name": "st_wpn_ak105_sp",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak105_sp",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak105_swamp",
+    "name": "st_wpn_ak105_swamp",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak105_swamp",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak12",
+    "name": "st_wpn_ak12",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak12",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak12_custom",
+    "name": "st_wpn_ak12_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak12_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak12_m1",
+    "name": "st_wpn_ak12_m1",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak12_m1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak12_custom_mono_kit",
+    "name": "st_wpn_ak12_mono_kit",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak12_mono_kit",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak5c_bas",
+    "name": "st_wpn_ak5c_bas",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak5c_bas",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak5c_bas_5c_tik",
+    "name": "st_wpn_ak5c_bas_5c_tik",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak5c_bas_5c_tik",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak5c_isg",
+    "name": "st_wpn_ak5c_isg",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak5c_isg",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74",
+    "name": "st_wpn_ak74",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak74_alt",
+    "name": "st_wpn_ak74_alt",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74_custom",
+    "name": "st_wpn_ak74_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74_rpk",
+    "name": "st_wpn_ak74_eot",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74_eot",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74_isg",
+    "name": "st_wpn_ak74_isg",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74_isg",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak74_modern",
+    "name": "st_wpn_ak74_modern",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74_modern",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74_n",
+    "name": "st_wpn_ak74_n",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74_n",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74_old",
+    "name": "st_wpn_ak74_old",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74_old",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74_pmc",
+    "name": "st_wpn_ak74_pmc",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74_pmc",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak74m",
+    "name": "st_wpn_ak74m",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74m",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak74m_alt",
+    "name": "st_wpn_ak74m_alt",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74m_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74m_beard",
+    "name": "st_wpn_ak74m_beard",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74m_beard",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak74m_camo",
+    "name": "st_wpn_ak74m_camo",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74m_camo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74m_custom",
+    "name": "st_wpn_ak74m_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74m_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74m_duty",
+    "name": "st_wpn_ak74m_duty",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74m_duty",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74m_n",
+    "name": "st_wpn_ak74m_n",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74m_n",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74u",
+    "name": "st_wpn_ak74u",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74u",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak74u_camo",
+    "name": "st_wpn_ak74u_camo",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74u_camo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74u_custom",
+    "name": "st_wpn_ak74u_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74u_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74u_isg",
+    "name": "st_wpn_ak74u_isg",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74u_isg",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74u_m1_isg",
+    "name": "st_wpn_ak74u_m1_isg",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74u_m1_isg",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ak74u_n1",
+    "name": "st_wpn_ak74u_n1",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74u_n1",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74u_old",
+    "name": "st_wpn_ak74u_old",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74u_old",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74u_snag",
+    "name": "st_wpn_ak74u_snag",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74u_snag",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ak74u_tac",
+    "name": "st_wpn_ak74u_tac",
+    "category": "Rifles",
+    "displayName": "st_wpn_ak74u_tac",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_akm",
+    "name": "st_wpn_akm",
+    "category": "Rifles",
+    "displayName": "st_wpn_akm",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_akm_alfa",
+    "name": "st_wpn_akm_alfa",
+    "category": "Rifles",
+    "displayName": "st_wpn_akm_alfa",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_akm_bas",
+    "name": "st_wpn_akm_bas",
+    "category": "Rifles",
+    "displayName": "st_wpn_akm_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_akm_isg",
+    "name": "st_wpn_akm_isg",
+    "category": "Rifles",
+    "displayName": "st_wpn_akm_isg",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_akms",
+    "name": "st_wpn_akms",
+    "category": "Rifles",
+    "displayName": "st_wpn_akms",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_akms_alt",
+    "name": "st_wpn_akms_alt",
+    "category": "Rifles",
+    "displayName": "st_wpn_akms_alt",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_akms_bas",
+    "name": "st_wpn_akms_bas",
+    "category": "Rifles",
+    "displayName": "st_wpn_akms_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aks",
+    "name": "st_wpn_aks",
+    "category": "Rifles",
+    "displayName": "st_wpn_aks",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aks74",
+    "name": "st_wpn_aks74",
+    "category": "Rifles",
+    "displayName": "st_wpn_aks74",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aks74_new",
+    "name": "st_wpn_aks74_new",
+    "category": "Rifles",
+    "displayName": "st_wpn_aks74_new",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_am17",
+    "name": "st_wpn_am17",
+    "category": "Rifles",
+    "displayName": "st_wpn_am17",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_amb17",
+    "name": "st_wpn_amb17",
+    "category": "Rifles",
+    "displayName": "st_wpn_amb17",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_aps",
+    "name": "st_wpn_aps",
+    "category": "Pistols",
+    "displayName": "st_wpn_aps",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_aps_bas",
+    "name": "st_wpn_aps_bas",
+    "category": "Pistols",
+    "displayName": "st_wpn_aps_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aps_bas_apsabigo",
+    "name": "st_wpn_aps_bas_apsabigo",
+    "category": "Pistols",
+    "displayName": "st_wpn_aps_bas_apsabigo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ar15_freedom",
+    "name": "st_wpn_ar15_freedom",
+    "category": "Rifles",
+    "displayName": "st_wpn_ar15_freedom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ash12",
+    "name": "st_wpn_ash12",
+    "category": "Rifles",
+    "displayName": "st_wpn_ash12 [default]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ash12_sup",
+    "name": "st_wpn_ash12",
+    "category": "Rifles",
+    "displayName": "st_wpn_ash12 [sup]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aug_freedom",
+    "name": "st_wpn_aug_9mm",
+    "category": "SMGs",
+    "displayName": "st_wpn_aug_9mm",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_aug",
+    "name": "st_wpn_aug_a1",
+    "category": "Rifles",
+    "displayName": "st_wpn_aug_a1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_aug_a1_bas",
+    "name": "st_wpn_aug_a1_bas",
+    "category": "Rifles",
+    "displayName": "st_wpn_aug_a1_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aug_a1_custom_bas",
+    "name": "st_wpn_aug_a1_custom_bas",
+    "category": "Rifles",
+    "displayName": "st_wpn_aug_a1_custom_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aug_custom",
+    "name": "st_wpn_aug_a2",
+    "category": "Rifles",
+    "displayName": "st_wpn_aug_a2",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aug_a3",
+    "name": "st_wpn_aug_a3",
+    "category": "Rifles",
+    "displayName": "st_wpn_aug_a3 [a3]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aug_modern",
+    "name": "st_wpn_aug_a3",
+    "category": "Rifles",
+    "displayName": "st_wpn_aug_a3 [modern]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aug_a3_bas",
+    "name": "st_wpn_aug_a3_bas",
+    "category": "Rifles",
+    "displayName": "st_wpn_aug_a3_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aug_a3_custom_bas",
+    "name": "st_wpn_aug_a3_custom_bas",
+    "category": "Rifles",
+    "displayName": "st_wpn_aug_a3_custom_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_aug_merc",
+    "name": "st_wpn_aug_thales",
+    "category": "Rifles",
+    "displayName": "st_wpn_aug_thales",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_benelli_m1014",
+    "name": "st_wpn_benelli_m1014",
+    "category": "Shotguns",
+    "displayName": "st_wpn_benelli_m1014",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_beretta",
+    "name": "st_wpn_beretta",
+    "category": "Pistols",
+    "displayName": "st_wpn_beretta [default]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_beretta_modern_d0cter",
+    "name": "st_wpn_beretta",
+    "category": "Pistols",
+    "displayName": "st_wpn_beretta [modern_d0cter]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_beretta_modern_deltapoint",
+    "name": "st_wpn_beretta",
+    "category": "Pistols",
+    "displayName": "st_wpn_beretta [modern_deltapoint]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_beretta_modern_rmr",
+    "name": "st_wpn_beretta",
+    "category": "Pistols",
+    "displayName": "st_wpn_beretta [modern_rmr]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_beretta_modern",
+    "name": "st_wpn_beretta",
+    "category": "Pistols",
+    "displayName": "st_wpn_beretta [modern]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_beretta_alt",
+    "name": "st_wpn_beretta_alt",
+    "category": "Pistols",
+    "displayName": "st_wpn_beretta_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_beretta_camo",
+    "name": "st_wpn_beretta_px4",
+    "category": "Pistols",
+    "displayName": "st_wpn_beretta_px4",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_bizon",
+    "name": "st_wpn_bizon",
+    "category": "SMGs",
+    "displayName": "st_wpn_bizon",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_bm16",
+    "name": "st_wpn_bm16",
+    "category": "Shotguns",
+    "displayName": "st_wpn_bm16",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_bm16_alt",
+    "name": "st_wpn_bm16_alt",
+    "category": "Shotguns",
+    "displayName": "st_wpn_bm16_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_bm16_full",
+    "name": "st_wpn_bm16_full",
+    "category": "Shotguns",
+    "displayName": "st_wpn_bm16_full",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_bm16_full_alt",
+    "name": "st_wpn_bm16_full_alt",
+    "category": "Shotguns",
+    "displayName": "st_wpn_bm16_full_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_bm16_full_alt_23",
+    "name": "st_wpn_bm16_full_alt_23",
+    "category": "Shotguns",
+    "displayName": "st_wpn_bm16_full_alt_23",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_brn180",
+    "name": "st_wpn_brn180",
+    "category": "Rifles",
+    "displayName": "st_wpn_brn180",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_colt1911",
+    "name": "st_wpn_colt1911",
+    "category": "Pistols",
+    "displayName": "st_wpn_colt1911",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_colt1911_alt",
+    "name": "st_wpn_colt1911_alt",
+    "category": "Pistols",
+    "displayName": "st_wpn_colt1911_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_colt1911_duty",
+    "name": "st_wpn_colt1911_duty",
+    "category": "Pistols",
+    "displayName": "st_wpn_colt1911_duty",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_colt1911_merc",
+    "name": "st_wpn_colt1911_merc",
+    "category": "Pistols",
+    "displayName": "st_wpn_colt1911_merc",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_colt1911_modern",
+    "name": "st_wpn_colt1911_modern",
+    "category": "Pistols",
+    "displayName": "st_wpn_colt1911_modern",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_colt1911_n",
+    "name": "st_wpn_colt1911_n",
+    "category": "Pistols",
+    "displayName": "st_wpn_colt1911_n",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_colt1911_new",
+    "name": "st_wpn_colt1911_new",
+    "category": "Pistols",
+    "displayName": "st_wpn_colt1911_new",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_colt1911_camo",
+    "name": "st_wpn_coonan357",
+    "category": "Pistols",
+    "displayName": "st_wpn_coonan357",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_cz75",
+    "name": "st_wpn_cz75",
+    "category": "Pistols",
+    "displayName": "st_wpn_cz75",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_desert_eagle",
+    "name": "st_wpn_desert_eagle",
+    "category": "Pistols",
+    "displayName": "st_wpn_desert_eagle",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_desert_eagle_nimble",
+    "name": "st_wpn_desert_eagle_nimble",
+    "category": "Pistols",
+    "displayName": "st_wpn_desert_eagle_nimble",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_dvl10",
+    "name": "st_wpn_dvl10",
+    "category": "Snipers",
+    "displayName": "st_wpn_dvl10",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_dvl10_m1",
+    "name": "st_wpn_dvl10_m1",
+    "category": "Snipers",
+    "displayName": "st_wpn_dvl10_m1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_eft_rsh12",
+    "name": "st_wpn_eft_rsh12",
+    "category": "Pistols",
+    "displayName": "st_wpn_eft_rsh12",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_fal",
+    "name": "st_wpn_fal",
+    "category": "Rifles",
+    "displayName": "st_wpn_fal",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_fal_aus",
+    "name": "st_wpn_fal_aus",
+    "category": "Rifles",
+    "displayName": "st_wpn_fal_aus",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_fal_sa58_osw",
+    "name": "st_wpn_fal_sa58_osw",
+    "category": "Rifles",
+    "displayName": "st_wpn_fal_sa58_osw",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_famas3",
+    "name": "st_wpn_famas3",
+    "category": "Rifles",
+    "displayName": "st_wpn_famas3",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_fn2000",
+    "name": "st_wpn_fn2000",
+    "category": "Rifles",
+    "displayName": "st_wpn_fn2000",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_fn2000_camo",
+    "name": "st_wpn_fn2000_camo",
+    "category": "Rifles",
+    "displayName": "st_wpn_fn2000_camo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_fn2000_custom",
+    "name": "st_wpn_fn2000_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_fn2000_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_fn2000_nimble",
+    "name": "st_wpn_fn2000e_nimble",
+    "category": "Rifles",
+    "displayName": "st_wpn_fn2000e_nimble",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_fn57",
+    "name": "st_wpn_fn57",
+    "category": "Pistols",
+    "displayName": "st_wpn_fn57",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_fnc",
+    "name": "st_wpn_fnc",
+    "category": "Rifles",
+    "displayName": "st_wpn_fnc",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_fnp45",
+    "name": "st_wpn_fnp45",
+    "category": "Pistols",
+    "displayName": "st_wpn_fnp45",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_fnp45_custom",
+    "name": "st_wpn_fnp45_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_fnp45_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_fnx45",
+    "name": "st_wpn_fnx45",
+    "category": "Pistols",
+    "displayName": "st_wpn_fnx45",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_fnx45_alt",
+    "name": "st_wpn_fnx45_alt",
+    "category": "Pistols",
+    "displayName": "st_wpn_fnx45_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_fnx45_custom",
+    "name": "st_wpn_fnx45_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_fnx45_custom",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_fort",
+    "name": "st_wpn_fort12",
+    "category": "Pistols",
+    "displayName": "st_wpn_fort12",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_fort17",
+    "name": "st_wpn_fort17",
+    "category": "Pistols",
+    "displayName": "st_wpn_fort17",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_fort_snag",
+    "name": "st_wpn_fort21",
+    "category": "Pistols",
+    "displayName": "st_wpn_fort21",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_fort500",
+    "name": "st_wpn_fort500",
+    "category": "Shotguns",
+    "displayName": "st_wpn_fort500",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_g3",
+    "name": "st_wpn_g3",
+    "category": "Rifles",
+    "displayName": "st_wpn_g3",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_g36",
+    "name": "st_wpn_g36new",
+    "category": "Rifles",
+    "displayName": "st_wpn_g36new [default]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_g36v_rwap",
+    "name": "st_wpn_g36new",
+    "category": "Rifles",
+    "displayName": "st_wpn_g36new [v_rwap]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_g36c_rwap",
+    "name": "st_wpn_g36new_c",
+    "category": "Rifles",
+    "displayName": "st_wpn_g36new_c [c_rwap]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_g36k",
+    "name": "st_wpn_g36new_c",
+    "category": "Rifles",
+    "displayName": "st_wpn_g36new_c [k]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_g36_camo",
+    "name": "st_wpn_g36new_k",
+    "category": "Rifles",
+    "displayName": "st_wpn_g36new_k [camo]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_g36k_rwap",
+    "name": "st_wpn_g36new_k",
+    "category": "Rifles",
+    "displayName": "st_wpn_g36new_k [k_rwap]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_g36ka4_rwap",
+    "name": "st_wpn_g36new_k",
+    "category": "Rifles",
+    "displayName": "st_wpn_g36new_k [ka4_rwap]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_g36_nimble",
+    "name": "st_wpn_g36new_nimble",
+    "category": "Rifles",
+    "displayName": "st_wpn_g36new_nimble",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_g36nimble_rwap",
+    "name": "st_wpn_g36nimble_rwap",
+    "category": "Rifles",
+    "displayName": "st_wpn_g36nimble_rwap",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_g3sg1",
+    "name": "st_wpn_g3sg1",
+    "category": "Rifles",
+    "displayName": "st_wpn_g3sg1",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_g43",
+    "name": "st_wpn_g43",
+    "category": "Snipers",
+    "displayName": "st_wpn_g43",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_galil",
+    "name": "st_wpn_galil",
+    "category": "Rifles",
+    "displayName": "st_wpn_galil",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_galil_custom",
+    "name": "st_wpn_galil_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_galil_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_galil_modern",
+    "name": "st_wpn_galil_modern",
+    "category": "Rifles",
+    "displayName": "st_wpn_galil_modern",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_gauss",
+    "name": "st_wpn_gauss_bas",
+    "category": "Snipers",
+    "displayName": "st_wpn_gauss_bas",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_glock",
+    "name": "st_wpn_glock",
+    "category": "Pistols",
+    "displayName": "st_wpn_glock",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_glock_modern",
+    "name": "st_wpn_glock_modern",
+    "category": "Pistols",
+    "displayName": "st_wpn_glock_modern",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_glock17",
+    "name": "st_wpn_glock17",
+    "category": "Pistols",
+    "displayName": "st_wpn_glock17",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_glock17_m1",
+    "name": "st_wpn_glock17_m1",
+    "category": "Pistols",
+    "displayName": "st_wpn_glock17_m1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mp443",
+    "name": "st_wpn_grach",
+    "category": "Pistols",
+    "displayName": "st_wpn_grach",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_groza_nimble",
+    "name": "st_wpn_groza_guns_nimble",
+    "category": "Rifles",
+    "displayName": "st_wpn_groza_guns_nimble",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_gsh18",
+    "name": "st_wpn_gsh18",
+    "category": "Pistols",
+    "displayName": "st_wpn_gsh18",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_gsh18_custom",
+    "name": "st_wpn_gsh18_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_gsh18_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_groza",
+    "name": "st_wpn_guns_groza",
+    "category": "Rifles",
+    "displayName": "st_wpn_guns_groza",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_hk416",
+    "name": "st_wpn_hk416",
+    "category": "Rifles",
+    "displayName": "st_wpn_hk416",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_hk417",
+    "name": "st_wpn_hk417",
+    "category": "Rifles",
+    "displayName": "st_wpn_hk417",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_howa20",
+    "name": "st_wpn_howa20",
+    "category": "Rifles",
+    "displayName": "st_wpn_howa20",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_hpsa",
+    "name": "st_wpn_hpsa",
+    "category": "Pistols",
+    "displayName": "st_wpn_hpsa",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_hpsa_alt",
+    "name": "st_wpn_hpsa_alt",
+    "category": "Pistols",
+    "displayName": "st_wpn_hpsa_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_glock_custom",
+    "name": "st_wpn_hs2000",
+    "category": "Pistols",
+    "displayName": "st_wpn_hs2000",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ithacam37",
+    "name": "st_wpn_ithacam37",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ithacam37",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ithacam37_mag",
+    "name": "st_wpn_ithacam37_extmag",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ithacam37_extmag",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ithacam37_sawnoff",
+    "name": "st_wpn_ithacam37_sawnoff",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ithacam37_sawnoff",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ithacam37_stakeout_20x70",
+    "name": "st_wpn_ithacam37_stakeout",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ithacam37_stakeout [20x70]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ithacam37_stakeout",
+    "name": "st_wpn_ithacam37_stakeout",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ithacam37_stakeout [default]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ithacam37_trench",
+    "name": "st_wpn_ithacam37_trench",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ithacam37_trench",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_k98",
+    "name": "st_wpn_k98",
+    "category": "Snipers",
+    "displayName": "st_wpn_k98",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_k98_mod",
+    "name": "st_wpn_k98_mod",
+    "category": "Snipers",
+    "displayName": "st_wpn_k98_mod",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_k98_mauser_kit",
+    "name": "st_wpn_k98_mod_silen98",
+    "category": "Snipers",
+    "displayName": "st_wpn_k98_mod_silen98 [auser_kit]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_k98_mod_silen98",
+    "name": "st_wpn_k98_mod_silen98",
+    "category": "Snipers",
+    "displayName": "st_wpn_k98_mod_silen98 [od_silen98]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_kiparis",
+    "name": "st_wpn_kiparis",
+    "category": "SMGs",
+    "displayName": "st_wpn_kiparis",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_korth",
+    "name": "st_wpn_korth",
+    "category": "Pistols",
+    "displayName": "st_wpn_korth",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_korth_custom",
+    "name": "st_wpn_korth_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_korth_custom",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_kriss_vector",
+    "name": "st_wpn_kriss",
+    "category": "SMGs",
+    "displayName": "st_wpn_kriss",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ks23",
+    "name": "st_wpn_ks23",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ks23",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ks23_23_up",
+    "name": "st_wpn_ks23_23_up",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ks23_23_up",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ks23_ecolog",
+    "name": "st_wpn_ks23_ecolog",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ks23_ecolog",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ks23_kaban",
+    "name": "st_wpn_ks23_kaban",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ks23_kaban",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ks23_kaban_kab_up",
+    "name": "st_wpn_ks23_kaban_kab_up",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ks23_kaban_kab_up",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ksg23",
+    "name": "st_wpn_ksg",
+    "category": "Shotguns",
+    "displayName": "st_wpn_ksg",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_l85",
+    "name": "st_wpn_l85",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l85_alt",
+    "name": "st_wpn_l85_alt",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l85_custom",
+    "name": "st_wpn_l85_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l85_m1",
+    "name": "st_wpn_l85_m1",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85_m1",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l85_m2",
+    "name": "st_wpn_l85_m2",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85_m2",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_l85_m3",
+    "name": "st_wpn_l85_m3",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85_m3",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l85_modern",
+    "name": "st_wpn_l85_modern",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85_modern",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l85a2",
+    "name": "st_wpn_l85a2",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85a2",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l85a2_alt",
+    "name": "st_wpn_l85a2_alt",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85a2_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l85a2_custom",
+    "name": "st_wpn_l85a2_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85a2_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l85a2_modern",
+    "name": "st_wpn_l85a2_modern",
+    "category": "Rifles",
+    "displayName": "st_wpn_l85a2_modern",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l96a1",
+    "name": "st_wpn_l96a1",
+    "category": "Snipers",
+    "displayName": "st_wpn_l96a1",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_l96a1m",
+    "name": "st_wpn_l96a1m",
+    "category": "Snipers",
+    "displayName": "st_wpn_l96a1m",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_lr300",
+    "name": "st_wpn_lr300",
+    "category": "Rifles",
+    "displayName": "st_wpn_lr300",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_lr300_camo",
+    "name": "st_wpn_lr300_camo",
+    "category": "Rifles",
+    "displayName": "st_wpn_lr300_camo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_lr300_custom",
+    "name": "st_wpn_lr300_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_lr300_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m16",
+    "name": "st_wpn_m16",
+    "category": "Rifles",
+    "displayName": "st_wpn_m16",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m16a2",
+    "name": "st_wpn_m16a2",
+    "category": "Rifles",
+    "displayName": "st_wpn_m16a2",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m24",
+    "name": "st_wpn_m24",
+    "category": "Snipers",
+    "displayName": "st_wpn_m24",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m249",
+    "name": "st_wpn_m249",
+    "category": "Rifles",
+    "displayName": "st_wpn_m249",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_m4",
+    "name": "st_wpn_m4",
+    "category": "Rifles",
+    "displayName": "st_wpn_m4",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m4_butcher",
+    "name": "st_wpn_m4_butcher",
+    "category": "Rifles",
+    "displayName": "st_wpn_m4_butcher",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m4_ru556",
+    "name": "st_wpn_m4_ru556",
+    "category": "Rifles",
+    "displayName": "st_wpn_m4_ru556",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_m4_tac",
+    "name": "st_wpn_m4_tac",
+    "category": "Rifles",
+    "displayName": "st_wpn_m4_tac",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_m4a1",
+    "name": "st_wpn_m4a1",
+    "category": "Rifles",
+    "displayName": "st_wpn_m4a1",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m4a1_camo",
+    "name": "st_wpn_m4a1_camo",
+    "category": "Rifles",
+    "displayName": "st_wpn_m4a1_camo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m4a1_custom",
+    "name": "st_wpn_m4a1_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_m4a1_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m4a1_freedom",
+    "name": "st_wpn_m4a1_freedom",
+    "category": "Rifles",
+    "displayName": "st_wpn_m4a1_freedom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m4a1_siber",
+    "name": "st_wpn_m4a1_siber",
+    "category": "Rifles",
+    "displayName": "st_wpn_m4a1_siber",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_m60",
+    "name": "st_wpn_m60",
+    "category": "Rifles",
+    "displayName": "st_wpn_m60",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m79",
+    "name": "st_wpn_m79",
+    "category": "Launchers",
+    "displayName": "st_wpn_m79",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m82",
+    "name": "st_wpn_m82",
+    "category": "Snipers",
+    "displayName": "st_wpn_m82",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_m98b",
+    "name": "st_wpn_m98b",
+    "category": "Snipers",
+    "displayName": "st_wpn_m98b",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mk14",
+    "name": "st_wpn_mk14",
+    "category": "Rifles",
+    "displayName": "st_wpn_mk14",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_mk47",
+    "name": "st_wpn_mk47",
+    "category": "Rifles",
+    "displayName": "st_wpn_mk47",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mosin",
+    "name": "st_wpn_mosin_k",
+    "category": "Snipers",
+    "displayName": "st_wpn_mosin_k",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mossberg590",
+    "name": "st_wpn_mossberg590a1",
+    "category": "Shotguns",
+    "displayName": "st_wpn_mossberg590a1",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_mossberg590_rail",
+    "name": "st_wpn_mossberg590a1_rail",
+    "category": "Shotguns",
+    "displayName": "st_wpn_mossberg590a1_rail",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mossberg590_wood",
+    "name": "st_wpn_mossberg590a1_wood",
+    "category": "Shotguns",
+    "displayName": "st_wpn_mossberg590a1_wood",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_mp133",
+    "name": "st_wpn_mp133_bas",
+    "category": "Shotguns",
+    "displayName": "st_wpn_mp133_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_mp153",
+    "name": "st_wpn_mp153_bas",
+    "category": "Shotguns",
+    "displayName": "st_wpn_mp153_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_mp153_m1",
+    "name": "st_wpn_mp153_m1",
+    "category": "Shotguns",
+    "displayName": "st_wpn_mp153_m1",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_mp155",
+    "name": "st_wpn_mp155",
+    "category": "Shotguns",
+    "displayName": "st_wpn_mp155",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mp412",
+    "name": "st_wpn_mp412",
+    "category": "Pistols",
+    "displayName": "st_wpn_mp412",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mp5",
+    "name": "st_wpn_mp5",
+    "category": "SMGs",
+    "displayName": "st_wpn_mp5",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mp5_alt",
+    "name": "st_wpn_mp5_alt",
+    "category": "SMGs",
+    "displayName": "st_wpn_mp5_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_mp5_custom",
+    "name": "st_wpn_mp5_custom",
+    "category": "SMGs",
+    "displayName": "st_wpn_mp5_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_mp5_nimble",
+    "name": "st_wpn_mp5_nimble",
+    "category": "SMGs",
+    "displayName": "st_wpn_mp5_nimble",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mp5sd",
+    "name": "st_wpn_mp5sd",
+    "category": "SMGs",
+    "displayName": "st_wpn_mp5sd",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mp5sd_custom",
+    "name": "st_wpn_mp5sd_custom",
+    "category": "SMGs",
+    "displayName": "st_wpn_mp5sd_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_mp5sd_new",
+    "name": "st_wpn_mp5sd_new",
+    "category": "SMGs",
+    "displayName": "st_wpn_mp5sd_new",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_mp7",
+    "name": "st_wpn_mp7",
+    "category": "SMGs",
+    "displayName": "st_wpn_mp7",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_mp9",
+    "name": "st_wpn_mp9",
+    "category": "SMGs",
+    "displayName": "st_wpn_mp9",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_oc33",
+    "name": "st_wpn_oc33",
+    "category": "Pistols",
+    "displayName": "st_wpn_oc33",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_p90",
+    "name": "st_wpn_p90",
+    "category": "SMGs",
+    "displayName": "st_wpn_p90 [default]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_p90gamma",
+    "name": "st_wpn_p90",
+    "category": "SMGs",
+    "displayName": "st_wpn_p90 [gamma]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_p90_gs",
+    "name": "st_wpn_p90",
+    "category": "SMGs",
+    "displayName": "st_wpn_p90 [gs]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_pb",
+    "name": "st_wpn_pb",
+    "category": "Pistols",
+    "displayName": "st_wpn_pb",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_pb_bas",
+    "name": "st_wpn_pb_bas",
+    "category": "Pistols",
+    "displayName": "st_wpn_pb_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pb_bas_custom",
+    "name": "st_wpn_pb_bas_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_pb_bas_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pb_custom",
+    "name": "st_wpn_pb_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_pb_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pkm_siber",
+    "name": "st_wpn_pkm_siber",
+    "category": "Rifles",
+    "displayName": "st_wpn_pkm_siber",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_pkm_zenit_siber",
+    "name": "st_wpn_pkm_zenit_siber",
+    "category": "Rifles",
+    "displayName": "st_wpn_pkm_zenit_siber",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pkm_zulus",
+    "name": "st_wpn_pkm_zulus",
+    "category": "Rifles",
+    "displayName": "st_wpn_pkm_zulus",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pkp",
+    "name": "st_wpn_pkp",
+    "category": "Rifles",
+    "displayName": "st_wpn_pkp",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pkp_siber",
+    "name": "st_wpn_pkp_siber",
+    "category": "Rifles",
+    "displayName": "st_wpn_pkp_siber",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_pl15",
+    "name": "st_wpn_pl15",
+    "category": "Pistols",
+    "displayName": "st_wpn_pl15 [default]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pl15_tan",
+    "name": "st_wpn_pl15",
+    "category": "Pistols",
+    "displayName": "st_wpn_pl15 [tan]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_pl15_pl15_scolaz",
+    "name": "st_wpn_pl15_pl15_scolaz",
+    "category": "Pistols",
+    "displayName": "st_wpn_pl15_pl15_scolaz [pl15_scolaz]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pl15_tan_pl15_scolaz",
+    "name": "st_wpn_pl15_pl15_scolaz",
+    "category": "Pistols",
+    "displayName": "st_wpn_pl15_pl15_scolaz [tan_pl15_scolaz]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pm",
+    "name": "st_wpn_pm",
+    "category": "Pistols",
+    "displayName": "st_wpn_pm",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pm_actor",
+    "name": "st_wpn_pm_actor",
+    "category": "Pistols",
+    "displayName": "st_wpn_pm_actor",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pm_bas",
+    "name": "st_wpn_pm_bas",
+    "category": "Pistols",
+    "displayName": "st_wpn_pm_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pm_bas_actor",
+    "name": "st_wpn_pm_bas_actor",
+    "category": "Pistols",
+    "displayName": "st_wpn_pm_bas_actor",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pm_bas_custom",
+    "name": "st_wpn_pm_bas_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_pm_bas_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pm_custom",
+    "name": "st_wpn_pm_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_pm_custom",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_pmm",
+    "name": "st_wpn_pmm",
+    "category": "Pistols",
+    "displayName": "st_wpn_pmm",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pmm_bas",
+    "name": "st_wpn_pmm_bas",
+    "category": "Pistols",
+    "displayName": "st_wpn_pmm_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pp2000_operator",
+    "name": "st_wpn_pp2000_oper",
+    "category": "SMGs",
+    "displayName": "st_wpn_pp2000_oper",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pp2000",
+    "name": "st_wpn_pp2000n",
+    "category": "SMGs",
+    "displayName": "st_wpn_pp2000n",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ppsh41",
+    "name": "st_wpn_ppsh41",
+    "category": "Rifles",
+    "displayName": "st_wpn_ppsh41",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_ppsh41_rednew",
+    "name": "st_wpn_ppsh41_camo",
+    "category": "Rifles",
+    "displayName": "st_wpn_ppsh41_camo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ppsh41_woodnew",
+    "name": "st_wpn_ppsh41_new",
+    "category": "Rifles",
+    "displayName": "st_wpn_ppsh41_new",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_raptr",
+    "name": "st_wpn_raptr",
+    "category": "Shotguns",
+    "displayName": "st_wpn_raptr",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_remington700",
+    "name": "st_wpn_remington700",
+    "category": "Snipers",
+    "displayName": "st_wpn_remington700",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_remington700_archangel",
+    "name": "st_wpn_remington700_archangel",
+    "category": "Snipers",
+    "displayName": "st_wpn_remington700_archangel",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_remington700_lapua700",
+    "name": "st_wpn_remington700_lapua700",
+    "category": "Snipers",
+    "displayName": "st_wpn_remington700_lapua700",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_remington700_magpul_pro",
+    "name": "st_wpn_remington700_magpul_pro",
+    "category": "Snipers",
+    "displayName": "st_wpn_remington700_magpul_pro",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_remington700_mod_x_gen3",
+    "name": "st_wpn_remington700_mod_x_gen3",
+    "category": "Snipers",
+    "displayName": "st_wpn_remington700_mod_x_gen3",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_remington870",
+    "name": "st_wpn_remington870",
+    "category": "Shotguns",
+    "displayName": "st_wpn_remington870",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_rg-6",
+    "name": "st_wpn_rg6",
+    "category": "Launchers",
+    "displayName": "st_wpn_rg6",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_pkm",
+    "name": "st_wpn_rp",
+    "category": "Rifles",
+    "displayName": "st_wpn_rp",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_rpd",
+    "name": "st_wpn_rpd",
+    "category": "Rifles",
+    "displayName": "st_wpn_rpd",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_rpg7",
+    "name": "st_wpn_rpg7",
+    "category": "Launchers",
+    "displayName": "st_wpn_rpg7",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_rpk",
+    "name": "st_wpn_rpk",
+    "category": "Rifles",
+    "displayName": "st_wpn_rpk",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_rpk74",
+    "name": "st_wpn_rpk74",
+    "category": "Rifles",
+    "displayName": "st_wpn_rpk74",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_rpk74_16",
+    "name": "st_wpn_rpk74_16",
+    "category": "Rifles",
+    "displayName": "st_wpn_rpk74_16 [default]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_rpk74_16_drum",
+    "name": "st_wpn_rpk74_16",
+    "category": "Rifles",
+    "displayName": "st_wpn_rpk74_16 [drum]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_saiga12s",
+    "name": "st_wpn_saiga12s",
+    "category": "Shotguns",
+    "displayName": "st_wpn_saiga12s",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_saiga12s_isg",
+    "name": "st_wpn_saiga12s_isg",
+    "category": "Shotguns",
+    "displayName": "st_wpn_saiga12s_isg",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_saiga12s_m1",
+    "name": "st_wpn_saiga12s_m1",
+    "category": "Shotguns",
+    "displayName": "st_wpn_saiga12s_m1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_saiga12s_m2",
+    "name": "st_wpn_saiga12s_m2",
+    "category": "Shotguns",
+    "displayName": "st_wpn_saiga12s_m2",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_scar",
+    "name": "st_wpn_scar",
+    "category": "Rifles",
+    "displayName": "st_wpn_scar",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_scar_custom",
+    "name": "st_wpn_scar_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_scar_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_scar_new",
+    "name": "st_wpn_scar_new",
+    "category": "Rifles",
+    "displayName": "st_wpn_scar_new",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_scar_siber",
+    "name": "st_wpn_scar_siber",
+    "category": "Rifles",
+    "displayName": "st_wpn_scar_siber",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_scar_siber_black",
+    "name": "st_wpn_scar_siber_black",
+    "category": "Rifles",
+    "displayName": "st_wpn_scar_siber_black",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_scar_siber_m1",
+    "name": "st_wpn_scar_siber_m1",
+    "category": "Rifles",
+    "displayName": "st_wpn_scar_siber_m1",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_scar_siber_m1_black",
+    "name": "st_wpn_scar_siber_m1_black",
+    "category": "Rifles",
+    "displayName": "st_wpn_scar_siber_m1_black",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_scar_siber_m2",
+    "name": "st_wpn_scar_siber_m2",
+    "category": "Rifles",
+    "displayName": "st_wpn_scar_siber_m2",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_scar_siber_m2_custom",
+    "name": "st_wpn_scar_siber_m2_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_scar_siber_m2_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sig220",
+    "name": "st_wpn_sig220",
+    "category": "Pistols",
+    "displayName": "st_wpn_sig220",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sig220_custom",
+    "name": "st_wpn_sig220_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_sig220_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sig220_n",
+    "name": "st_wpn_sig220_n",
+    "category": "Pistols",
+    "displayName": "st_wpn_sig220_n",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sig220_n_u2p2g0r",
+    "name": "st_wpn_sig220_n_u2p2g0r",
+    "category": "Pistols",
+    "displayName": "st_wpn_sig220_n_u2p2g0r",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sig220_n_upg220",
+    "name": "st_wpn_sig220_n_upg220",
+    "category": "Pistols",
+    "displayName": "st_wpn_sig220_n_upg220",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sig220_nimble",
+    "name": "st_wpn_sig220_nimble",
+    "category": "Pistols",
+    "displayName": "st_wpn_sig220_nimble",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sig226",
+    "name": "st_wpn_sig226",
+    "category": "Pistols",
+    "displayName": "st_wpn_sig226",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sig226_226sig_kit",
+    "name": "st_wpn_sig226_226sig_kit",
+    "category": "Pistols",
+    "displayName": "st_wpn_sig226_226sig_kit",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sig550",
+    "name": "st_wpn_sig550",
+    "category": "Rifles",
+    "displayName": "st_wpn_sig550",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sig550_camo",
+    "name": "st_wpn_sig550_camos",
+    "category": "Rifles",
+    "displayName": "st_wpn_sig550_camos",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sig550_custom",
+    "name": "st_wpn_sig550_custom",
+    "category": "Rifles",
+    "displayName": "st_wpn_sig550_custom",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sig550_sniper",
+    "name": "st_wpn_sig550_sniper",
+    "category": "Snipers",
+    "displayName": "st_wpn_sig550_sniper",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sig550_luckygun",
+    "name": "st_wpn_sig550_strelok",
+    "category": "Rifles",
+    "displayName": "st_wpn_sig550_strelok",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sig552",
+    "name": "st_wpn_sig552",
+    "category": "Rifles",
+    "displayName": "st_wpn_sig552",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sks",
+    "name": "st_wpn_sks",
+    "category": "Snipers",
+    "displayName": "st_wpn_sks",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sks_b",
+    "name": "st_wpn_sks_b",
+    "category": "Snipers",
+    "displayName": "st_wpn_sks_b",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sks_modern",
+    "name": "st_wpn_sks_modern",
+    "category": "Snipers",
+    "displayName": "st_wpn_sks_modern",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sks_molot",
+    "name": "st_wpn_sks_molot",
+    "category": "Snipers",
+    "displayName": "st_wpn_sks_molot",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sks_tac",
+    "name": "st_wpn_sks_tac",
+    "category": "Snipers",
+    "displayName": "st_wpn_sks_tac",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_spas12_custom",
+    "name": "st_wpn_spas12_new",
+    "category": "Shotguns",
+    "displayName": "st_wpn_spas12_new [custom]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_spas12",
+    "name": "st_wpn_spas12_new",
+    "category": "Shotguns",
+    "displayName": "st_wpn_spas12_new [default]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_spas12_nimble",
+    "name": "st_wpn_spas12_new",
+    "category": "Shotguns",
+    "displayName": "st_wpn_spas12_new [nimble]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sr1m",
+    "name": "st_wpn_sr1m",
+    "category": "Pistols",
+    "displayName": "st_wpn_sr1m",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sr1m_gurza_up",
+    "name": "st_wpn_sr1m_sr1upgr1",
+    "category": "Pistols",
+    "displayName": "st_wpn_sr1m_sr1upgr1 [gurza_up]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sr1m_sr1upgr1",
+    "name": "st_wpn_sr1m_sr1upgr1",
+    "category": "Pistols",
+    "displayName": "st_wpn_sr1m_sr1upgr1 [sr1upgr1]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sr2_m1",
+    "name": "st_wpn_sr2_m1",
+    "category": "SMGs",
+    "displayName": "st_wpn_sr2_m1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sr2_veresk",
+    "name": "st_wpn_sr2_veresk",
+    "category": "SMGs",
+    "displayName": "st_wpn_sr2_veresk",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sr2_veresk_sr2_upkit",
+    "name": "st_wpn_sr2_veresk_sr2_upkit",
+    "category": "SMGs",
+    "displayName": "st_wpn_sr2_veresk_sr2_upkit",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sr25",
+    "name": "st_wpn_sr25",
+    "category": "Snipers",
+    "displayName": "st_wpn_sr25",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_steyr_scout",
+    "name": "st_wpn_steyr_scout",
+    "category": "Snipers",
+    "displayName": "st_wpn_steyr_scout",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_steyr_scout_big",
+    "name": "st_wpn_steyr_scout_big",
+    "category": "Snipers",
+    "displayName": "st_wpn_steyr_scout_big",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_protecta_camo",
+    "name": "st_wpn_streetsweeper",
+    "category": "Shotguns",
+    "displayName": "st_wpn_streetsweeper [camo]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_protecta_custom",
+    "name": "st_wpn_streetsweeper",
+    "category": "Shotguns",
+    "displayName": "st_wpn_streetsweeper [custom]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_protecta",
+    "name": "st_wpn_streetsweeper",
+    "category": "Shotguns",
+    "displayName": "st_wpn_streetsweeper [default]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_protecta_aim",
+    "name": "st_wpn_streetsweeper_aim",
+    "category": "Shotguns",
+    "displayName": "st_wpn_streetsweeper_aim",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_protecta_nimble",
+    "name": "st_wpn_streetsweeper_nimble",
+    "category": "Shotguns",
+    "displayName": "st_wpn_streetsweeper_nimble",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_sv98",
+    "name": "st_wpn_sv98",
+    "category": "Snipers",
+    "displayName": "st_wpn_sv98",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_sv98_custom",
+    "name": "st_wpn_sv98_custom",
+    "category": "Snipers",
+    "displayName": "st_wpn_sv98_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_svd",
+    "name": "st_wpn_svd",
+    "category": "Snipers",
+    "displayName": "st_wpn_svd",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_svd_custom",
+    "name": "st_wpn_svd_custom",
+    "category": "Snipers",
+    "displayName": "st_wpn_svd_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_svd_m1",
+    "name": "st_wpn_svd_m1",
+    "category": "Snipers",
+    "displayName": "st_wpn_svd_m1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_svd_nimble",
+    "name": "st_wpn_svd_nimble",
+    "category": "Snipers",
+    "displayName": "st_wpn_svd_nimble",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_svds",
+    "name": "st_wpn_svds",
+    "category": "Snipers",
+    "displayName": "st_wpn_svds",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_svds_pmc",
+    "name": "st_wpn_svds_pmc",
+    "category": "Snipers",
+    "displayName": "st_wpn_svds_pmc",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_colt1911_custom",
+    "name": "st_wpn_svi",
+    "category": "Pistols",
+    "displayName": "st_wpn_svi",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_svt40",
+    "name": "st_wpn_svt40",
+    "category": "Snipers",
+    "displayName": "st_wpn_svt40",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_svt40_modern",
+    "name": "st_wpn_svt40_modern",
+    "category": "Snipers",
+    "displayName": "st_wpn_svt40_modern",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_svu",
+    "name": "st_wpn_svu",
+    "category": "Snipers",
+    "displayName": "st_wpn_svu",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_svu_alt",
+    "name": "st_wpn_svu_alt",
+    "category": "Snipers",
+    "displayName": "st_wpn_svu_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_svu_nimble",
+    "name": "st_wpn_svu_nimble",
+    "category": "Snipers",
+    "displayName": "st_wpn_svu_nimble",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_thompson_1921",
+    "name": "st_wpn_thompson_1921",
+    "category": "SMGs",
+    "displayName": "st_wpn_thompson_1921",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_thompson_m1a1",
+    "name": "st_wpn_thompson_m1a1",
+    "category": "SMGs",
+    "displayName": "st_wpn_thompson_m1a1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_toz106",
+    "name": "st_wpn_toz106",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz106",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_toz106_m1",
+    "name": "st_wpn_toz106_m1",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz106_m1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_wincheaster1300",
+    "name": "st_wpn_toz194",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz194 [default]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_wincheaster1300_trapper",
+    "name": "st_wpn_toz194",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz194 [trapper]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_toz34",
+    "name": "st_wpn_toz34",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz34",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_toz34_bull",
+    "name": "st_wpn_toz34_bull",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz34_bull",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_toz34_custom",
+    "name": "st_wpn_toz34_custom",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz34_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_toz34_decor",
+    "name": "st_wpn_toz34_decor",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz34_decor",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_toz34_mark4",
+    "name": "st_wpn_toz34_mark4",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz34_mark4",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_toz34_mark4_23",
+    "name": "st_wpn_toz34_mark4_23",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz34_mark4_23",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_toz34_obrez",
+    "name": "st_wpn_toz34_obrez",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz34_obrez",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_toz34_obrez_custom",
+    "name": "st_wpn_toz34_obrez_custom",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz34_obrez_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_toz34_obrez_decor",
+    "name": "st_wpn_toz34_obrez_decor",
+    "category": "Shotguns",
+    "displayName": "st_wpn_toz34_obrez_decor",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_tt33",
+    "name": "st_wpn_tt33",
+    "category": "Pistols",
+    "displayName": "st_wpn_tt33",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_tt33_modern",
+    "name": "st_wpn_tt33_modern",
+    "category": "Pistols",
+    "displayName": "st_wpn_tt33_modern",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_type63",
+    "name": "st_wpn_type63",
+    "category": "Rifles",
+    "displayName": "st_wpn_type63",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_udp9",
+    "name": "st_wpn_udp9",
+    "category": "SMGs",
+    "displayName": "st_wpn_udp9",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "pri_a17_gauss_rifle",
+    "name": "st_wpn_umirotvoritel_bas",
+    "category": "Snipers",
+    "displayName": "st_wpn_umirotvoritel_bas",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ump45",
+    "name": "st_wpn_ump45",
+    "category": "SMGs",
+    "displayName": "st_wpn_ump45",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_ump45_custom",
+    "name": "st_wpn_ump45_custom",
+    "category": "SMGs",
+    "displayName": "st_wpn_ump45_custom",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_usas12",
+    "name": "st_wpn_usas12",
+    "category": "Shotguns",
+    "displayName": "st_wpn_usas12",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_usp",
+    "name": "st_wpn_usp",
+    "category": "Pistols",
+    "displayName": "st_wpn_usp",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_usp_custom",
+    "name": "st_wpn_usp_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_usp_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_usp_match",
+    "name": "st_wpn_usp_match",
+    "category": "Pistols",
+    "displayName": "st_wpn_usp_match",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_usp_nimble",
+    "name": "st_wpn_usp_nimble",
+    "category": "Pistols",
+    "displayName": "st_wpn_usp_nimble",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_usp_tac_45",
+    "name": "st_wpn_usp_tac",
+    "category": "Pistols",
+    "displayName": "st_wpn_usp_tac [45]",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_usp_tac",
+    "name": "st_wpn_usp_tac",
+    "category": "Pistols",
+    "displayName": "st_wpn_usp_tac [default]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_val",
+    "name": "st_wpn_val",
+    "category": "Rifles",
+    "displayName": "st_wpn_val",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_val_modern",
+    "name": "st_wpn_val_modern",
+    "category": "Rifles",
+    "displayName": "st_wpn_val_modern",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_val_tac",
+    "name": "st_wpn_val_tac",
+    "category": "Rifles",
+    "displayName": "st_wpn_val_tac",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vepr",
+    "name": "st_wpn_vepr12",
+    "category": "Shotguns",
+    "displayName": "st_wpn_vepr12",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vihr",
+    "name": "st_wpn_vihrn",
+    "category": "Rifles",
+    "displayName": "st_wpn_vihrn",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_vintorez_1pn93",
+    "name": "st_wpn_vintorez",
+    "category": "Rifles",
+    "displayName": "st_wpn_vintorez [1pn93]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vintorez",
+    "name": "st_wpn_vintorez",
+    "category": "Rifles",
+    "displayName": "st_wpn_vintorez [default]",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vintorez_alt",
+    "name": "st_wpn_vintorez_alt",
+    "category": "Rifles",
+    "displayName": "st_wpn_vintorez_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vintorez_isg",
+    "name": "st_wpn_vintorez_isg",
+    "category": "Rifles",
+    "displayName": "st_wpn_vintorez_isg",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_vintorez_m1",
+    "name": "st_wpn_vintorez_m1",
+    "category": "Rifles",
+    "displayName": "st_wpn_vintorez_m1",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vintorez_m2",
+    "name": "st_wpn_vintorez_m2",
+    "category": "Rifles",
+    "displayName": "st_wpn_vintorez_m2",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vintorez_n1",
+    "name": "st_wpn_vintorez_n1",
+    "category": "Rifles",
+    "displayName": "st_wpn_vintorez_n1",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_vintorez_nimble",
+    "name": "st_wpn_vintorez_nimble",
+    "category": "Rifles",
+    "displayName": "st_wpn_vintorez_nimble",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vityaz",
+    "name": "st_wpn_vityaznew",
+    "category": "SMGs",
+    "displayName": "st_wpn_vityaznew",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_vsk94",
+    "name": "st_wpn_vsk94",
+    "category": "Rifles",
+    "displayName": "st_wpn_vsk94",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vssk",
+    "name": "st_wpn_vssk",
+    "category": "Snipers",
+    "displayName": "st_wpn_vssk",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_vz61",
+    "name": "st_wpn_vz61",
+    "category": "SMGs",
+    "displayName": "st_wpn_vz61",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_vz61_alt",
+    "name": "st_wpn_vz61_alt",
+    "category": "SMGs",
+    "displayName": "st_wpn_vz61_alt",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vz61_camo",
+    "name": "st_wpn_vz61_camo",
+    "category": "SMGs",
+    "displayName": "st_wpn_vz61_camo",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_vz61_freedom",
+    "name": "st_wpn_vz61_freedom",
+    "category": "SMGs",
+    "displayName": "st_wpn_vz61_freedom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_wa2000",
+    "name": "st_wpn_wa2000",
+    "category": "Snipers",
+    "displayName": "st_wpn_wa2000",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_walther",
+    "name": "st_wpn_walther",
+    "category": "Pistols",
+    "displayName": "st_wpn_walther",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_walther_custom",
+    "name": "st_wpn_walther_custom",
+    "category": "Pistols",
+    "displayName": "st_wpn_walther_custom",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_walther_p99",
+    "name": "st_wpn_walther_p99",
+    "category": "Pistols",
+    "displayName": "st_wpn_walther_p99",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_walther_p99_mod9",
+    "name": "st_wpn_walther_p99_mod9",
+    "category": "Pistols",
+    "displayName": "st_wpn_walther_p99_mod9",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "wpn_winchester1873",
+    "name": "st_wpn_winchester1873",
+    "category": "Snipers",
+    "displayName": "st_wpn_winchester1873",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_xm4",
+    "name": "st_wpn_xm4",
+    "category": "Rifles",
+    "displayName": "st_wpn_xm4",
+    "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_xm8",
+    "name": "st_wpn_xm8",
+    "category": "Rifles",
+    "displayName": "st_wpn_xm8",
+    "hasNpcWeaponDrop": false
+  },
+  {
+    "id": "yadylin",
+    "name": "st_yadylin",
+    "category": "Medicine",
+    "displayName": "st_yadylin"
+  },
+  {
+    "id": "stalker_autumn_outfit",
+    "name": "stalker_autumn_outfit_name",
+    "category": "Outfits",
+    "displayName": "stalker_autumn_outfit_name"
+  },
+  {
+    "id": "stalker_bear_outfit",
+    "name": "stalker_bear_outfit_name",
+    "category": "Outfits",
+    "displayName": "stalker_bear_outfit_name"
+  },
+  {
+    "id": "stalker_drought_outfit",
+    "name": "stalker_drought_outfit_name",
+    "category": "Outfits",
+    "displayName": "stalker_drought_outfit_name"
+  },
+  {
+    "id": "stalker_graphite_outfit",
+    "name": "stalker_graphite_outfit_name",
+    "category": "Outfits",
+    "displayName": "stalker_graphite_outfit_name"
+  },
+  {
+    "id": "stalker_outfit",
+    "name": "stalker_outfit_name",
+    "category": "Outfits",
+    "displayName": "stalker_outfit_name"
+  },
+  {
+    "id": "stalker_predator_outfit",
+    "name": "stalker_predator_outfit_name",
+    "category": "Outfits",
+    "displayName": "stalker_predator_outfit_name"
+  },
+  {
+    "id": "stalker_proto_exo_outfit",
+    "name": "stalker_proto_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "stalker_proto_exo_outfit_name"
+  },
+  {
+    "id": "stalker_salamander_outfit",
+    "name": "stalker_salamander_outfit_name",
+    "category": "Outfits",
+    "displayName": "stalker_salamander_outfit_name"
+  },
+  {
+    "id": "stalker_tigerstripe_outfit",
+    "name": "stalker_tigerstripe_outfit_name",
+    "category": "Outfits",
+    "displayName": "stalker_tigerstripe_outfit_name"
+  },
+  {
+    "id": "svoboda_exo_outfit",
+    "name": "svoboda_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "svoboda_exo_outfit_name"
+  },
+  {
+    "id": "svoboda_exolight_outfit",
+    "name": "svoboda_exolight_outfit_name",
+    "category": "Outfits",
+    "displayName": "svoboda_exolight_outfit_name"
+  },
+  {
+    "id": "svoboda_heavy_outfit_2",
+    "name": "svoboda_heavy_outfit_2_name",
+    "category": "Outfits",
+    "displayName": "svoboda_heavy_outfit_2_name"
+  },
+  {
+    "id": "svoboda_heavy_outfit",
+    "name": "svoboda_heavy_outfit_name",
+    "category": "Outfits",
+    "displayName": "svoboda_heavy_outfit_name"
+  },
+  {
+    "id": "svoboda_light_outfit",
+    "name": "svoboda_light_outfit_name",
+    "category": "Outfits",
+    "displayName": "svoboda_light_outfit_name"
+  },
+  {
+    "id": "svoboda_light_proto_exo_outfit",
+    "name": "svoboda_light_proto_exo_outfit_name",
+    "category": "Outfits",
+    "displayName": "svoboda_light_proto_exo_outfit_name"
+  },
+  {
+    "id": "svoboda_novice_outfit",
+    "name": "svoboda_novice_outfit_name",
+    "category": "Outfits",
+    "displayName": "svoboda_novice_outfit_name"
+  },
+  {
+    "id": "svoboda_scientific_outfit",
+    "name": "svoboda_scientific_outfit_name",
+    "category": "Outfits",
+    "displayName": "svoboda_scientific_outfit_name"
+  },
+  {
+    "id": "travel_outfit",
+    "name": "travel_outfit_name",
+    "category": "Outfits",
+    "displayName": "travel_outfit_name"
+  },
+  {
+    "id": "trenchcoat_brown_outfit",
+    "name": "trenchcoat_brown_outfit_name",
+    "category": "Outfits",
+    "displayName": "trenchcoat_brown_outfit_name"
+  },
+  {
+    "id": "trenchcoat_dolg_brown_outfit",
+    "name": "trenchcoat_dolg_brown_outfit_name",
+    "category": "Outfits",
+    "displayName": "trenchcoat_dolg_brown_outfit_name"
+  },
+  {
+    "id": "trenchcoat_freedom_brown_outfit",
+    "name": "trenchcoat_freedom_brown_outfit_name",
+    "category": "Outfits",
+    "displayName": "trenchcoat_freedom_brown_outfit_name"
+  },
+  {
+    "id": "trenchcoat_green_outfit",
+    "name": "trenchcoat_green_outfit_name",
+    "category": "Outfits",
+    "displayName": "trenchcoat_green_outfit_name"
+  },
+  {
+    "id": "trenchcoat_outfit",
+    "name": "trenchcoat_outfit_name",
+    "category": "Outfits",
+    "displayName": "trenchcoat_outfit_name"
+  },
+  {
+    "id": "wastelander_outfit",
+    "name": "wastelander_outfit_name",
+    "category": "Outfits",
+    "displayName": "wastelander_outfit_name"
+  }
+]

@@ -1,0 +1,22 @@
+~, Pda_encyclopedia_name, St_prop_weight, St_upgr_cost, Ui_mm_repair, Ui_inv_ap_res, Ui_inv_outfit_fire_wound_protection, Ui_inv_outfit_wound_protection, Ui_inv_outfit_burn_protection, Ui_inv_outfit_shock_protection, Ui_inv_outfit_chemical_burn_protection, Ui_inv_outfit_radiation_protection, Ui_inv_outfit_telepatic_protection, Ui_inv_outfit_strike_protection, Ui_inv_outfit_explosion_protection
+helm_ach7ex,helm_ach7ex,3,17500,M,30,17%,4%,2%,2%,5%,20%,12%,0%,12%
+helm_cloth_mask,st_helm_cloth_mask,0,450,F,0,0%,0%,1%,1%,4%,2%,0%,0%,0%
+helm_m50,helm_m50,2,20700,H,15,3%,3%,1%,1%,20%,49%,12%,0%,7%
+helm_hardhat_snag,st_helm_hardhat,2,15820,L,25,17%,3%,1%,1%,1%,1%,9%,0%,12%
+helm_respirator_old,st_helm_respirator,2,7120,L,10,1%,3%,1%,1%,6%,18%,2%,0%,2%
+helm_respirator,st_helm_respirator,1,6120,L,10,1%,3%,1%,1%,6%,12%,1%,0%,2%
+helm_hardhat,st_helm_hardhat,2,10640,L,25,17%,3%,1%,1%,1%,1%,9%,0%,12%
+helm_metro,st_helm_metro,6,33440,H,55,36%,5%,12%,0%,10%,30%,24%,0%,16%
+helm_bandana,st_helm_bandana,0,230,F,0,0%,0%,2%,1%,6%,3%,0%,0%,0%
+helm_respirator_gp5,st_helm_respirator_gp5,1,10120,L,10,1%,3%,1%,1%,2%,23%,2%,0%,2%
+helm_spartan,helm_spartan,5,37000,E,65,36%,9%,28%,0%,19%,54%,26%,0%,19%
+helm_battle,st_helm_battle,4,27520,H,30,28%,6%,2%,1%,6%,29%,14%,0%,13%
+helm_resp,st_helm_resp,1,4220,F,5,1%,2%,1%,1%,3%,9%,1%,0%,1%
+helm_exo,st_helm_exo_name,5,30520,E,50,33%,7%,8%,2%,18%,47%,23%,0%,14%
+helm_ach7,helm_ach7,3,13700,M,25,17%,3%,1%,1%,1%,1%,12%,0%,10%
+helm_rp_bala,st_helm_rp_bala,0,550,F,0,0%,0%,2%,1%,6%,3%,0%,0%,0%
+helm_m40,st_helm_m40,2,15920,M,10,3%,5%,2%,1%,9%,29%,5%,0%,7%
+helm_tactic,st_helm_tactic,4,22440,H,30,25%,4%,2%,3%,8%,25%,16%,0%,12%
+helm_ranger,helm_ranger,2,24300,H,15,3%,3%,21%,1%,22%,60%,22%,0%,10%
+helm_ppm88,helm_ppm88,2,18500,M,10,3%,2%,1%,1%,5%,35%,2%,0%,1%
+helm_protective,st_helm_protective,3,17720,M,15,13%,4%,4%,1%,19%,33%,11%,0%,1%

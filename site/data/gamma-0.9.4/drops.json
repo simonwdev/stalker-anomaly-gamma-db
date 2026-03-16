@@ -1,0 +1,7666 @@
+{
+  "wpn_sks_b": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_veteran"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_toz106_m1": {
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_vz61": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee"
+    ]
+  },
+  "wpn_toz106": {
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ]
+  },
+  "wpn_desert_eagle": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ]
+  },
+  "wpn_spas12": {
+    "Csky": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_sr25": {
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_rg6",
+      "st_rank_gauss",
+      "st_rank_sniper"
+    ]
+  },
+  "wpn_sr1m": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee"
+    ]
+  },
+  "wpn_m249": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ]
+  },
+  "wpn_vintorez_isg": {
+    "Greh": [
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak105": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_usp_tac_45": {
+    "Freedom": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ithacam37_mag": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_p90gamma": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ]
+  },
+  "wpn_m98b": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ]
+  },
+  "wpn_g36v_rwap": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_adar2_15": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_korth_custom": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ]
+  },
+  "wpn_dvl10": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_aek": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_k98_mod": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ks23_kaban": {
+    "Greh": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_spas12_custom": {
+    "Isg": [
+      "st_rank_blackops"
+    ]
+  },
+  "wpn_xm4": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_svu": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_walther_p99": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_l96a1m": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_fn2000_nimble": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak74u_tac": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_ssu"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "grenade_f1": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Greh": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Isg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_scar_siber": {
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_bizon": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_k98": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_brn180": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_p90": {
+    "Isg": [
+      "st_rank_blackops"
+    ]
+  },
+  "wpn_ksg23": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_beretta_camo": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ]
+  },
+  "wpn_rpk74_16_drum": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_pl15_tan": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee"
+    ]
+  },
+  "wpn_ak74": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_p90_gs": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_rpk": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_sv98": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_fnx45_custom": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ]
+  },
+  "wpn_pm_custom": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee"
+    ]
+  },
+  "wpn_groza_nimble": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_ssu"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_sr2_veresk": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Greh": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_winchester1873": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_sr2_m1": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_glock_modern": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_toz34": {
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_toz34_mark4_23": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_mp5sd": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_raptr": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_vintorez_n1": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_svds": {
+    "Army": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_colt1911_camo": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_benelli_m1014": {
+    "Csky": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ks23": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master"
+    ],
+    "Stalker": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_sig550": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_mp412": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_sig220_n_upg220": {
+    "Isg": [
+      "st_rank_blackops"
+    ]
+  },
+  "wpn_mk47": {
+    "Army": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_aug_freedom": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_g36ka4_rwap": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_remington700": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_rpk74_16": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_pb": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee"
+    ]
+  },
+  "wpn_eft_rsh12": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_gauss": {
+    "Isg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ]
+  },
+  "wpn_sks_molot": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Bandit": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_saiga12s_m1": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_ssu"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_howa20": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ]
+  },
+  "wpn_dvl10_m1": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_9a91": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_ssu"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_mp5": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_mp7": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_blackops"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_sig220_n": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_blackops"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_akm_alfa": {
+    "Army": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_aug": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "bolt": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak74_pmc": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ithacam37_stakeout_20x70": {
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_ak74u_m1_isg": {
+    "Greh": [
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ump45_custom": {
+    "Csky": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_blackops"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_rpg7": {
+    "Army": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak74m_beard": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_akms_alt": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_remington700_magpul_pro": {
+    "Csky": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ]
+  },
+  "wpn_tt33_modern": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee"
+    ]
+  },
+  "wpn_vityaz": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_ssu"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_l85_m2": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_wincheaster1300": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_kriss_vector": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ]
+  },
+  "wpn_usp_match": {
+    "Isg": [
+      "st_rank_blackops"
+    ]
+  },
+  "wpn_akm_isg": {
+    "Greh": [
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_svd_m1": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_toz34_obrez": {
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_ak74_isg": {
+    "Greh": [
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak74m": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_saiga12s_isg": {
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ]
+  },
+  "wpn_remington700_lapua700": {
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_pkm_siber": {
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_fort": {
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional"
+    ]
+  },
+  "wpn_pkp_siber": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak12_m1": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_sig226": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "grenade_rgd5": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Greh": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Isg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_m4a1_siber": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_protecta": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_mp5_nimble": {
+    "Csky": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_glock17_m1": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_fnp45": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_fn57": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_blackops"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_saiga12s_m2": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master"
+    ],
+    "Renegade": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_m4_tac": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_blackops"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_thompson_1921": {
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_colt1911_n": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ]
+  },
+  "wpn_colt1911_custom": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ]
+  },
+  "wpn_ash12": {
+    "Army": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_ssu"
+    ],
+    "Dolg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak74u": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_pp2000": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_ssu"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_remington870": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_fal_aus": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak5c_bas": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_glock": {
+    "Csky": [
+      "st_rank_novice"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_aug_merc": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak104_alfa": {
+    "Army": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_val": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_ssu"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_udp9": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional"
+    ]
+  },
+  "wpn_ace52": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_vssk": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_bm16_full": {
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_mp155": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak105_swamp": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_mosin": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_rpd": {
+    "Army": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "grenade_gd-05": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Greh": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Isg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_svds_pmc": {
+    "Army": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_aps": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee"
+    ]
+  },
+  "wpn_bm16": {
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_vihr": {
+    "Army": [
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_ssu"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_mp9": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_groza": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_ssu"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_fort17": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  },
+  "wpn_mossberg590_rail": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_mp443": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee"
+    ]
+  },
+  "wpn_dtmdr_black": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_oc33": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_ssu",
+      "st_rank_sniper"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Csky": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend",
+      "st_rank_gauss",
+      "st_rank_rg6",
+      "st_rank_sniper"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee"
+    ]
+  },
+  "wpn_ak103": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_kiparis": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_fal_sa58_osw": {
+    "Csky": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ak101": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Bandit": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Renegade": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_sig550_custom": {
+    "Csky": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ithacam37_trench": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_abakan_n": {
+    "Army": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Bandit": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Renegade": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_thompson_m1a1": {
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Freedom": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Killer": [
+      "st_rank_novice",
+      "st_rank_trainee"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_m4_ru556": {
+    "Csky": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ]
+  },
+  "wpn_steyr_scout_big": {
+    "Csky": [
+      "st_rank_novice",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Freedom": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Killer": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Zombied": [
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_amb17": {
+    "Army": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Dolg": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Ecolog": [
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Greh": [
+      "st_rank_legend"
+    ],
+    "Isg": [
+      "st_rank_veteran",
+      "st_rank_expert",
+      "st_rank_master",
+      "st_rank_legend"
+    ],
+    "Monolith": [
+      "st_rank_legend"
+    ],
+    "Stalker": [
+      "st_rank_master",
+      "st_rank_legend"
+    ]
+  },
+  "wpn_ppsh41": {
+    "Army": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Bandit": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ],
+    "Csky": [
+      "st_rank_trainee"
+    ],
+    "Dolg": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Ecolog": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Renegade": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional"
+    ],
+    "Stalker": [
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_veteran"
+    ],
+    "Zombied": [
+      "st_rank_any",
+      "st_rank_novice",
+      "st_rank_trainee",
+      "st_rank_experienced",
+      "st_rank_professional",
+      "st_rank_veteran",
+      "st_rank_expert"
+    ]
+  }
+}

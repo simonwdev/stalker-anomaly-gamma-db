@@ -1,0 +1,1727 @@
+{
+  "category": "Materials",
+  "headers": [
+    "id",
+    "pda_encyclopedia_name"
+  ],
+  "items": [
+    {
+      "id": "e0t2",
+      "pda_encyclopedia_name": "st_addon_scope_e0t2",
+      "sources": [
+        {
+          "name": "st_addon_scope_e0t2_mag",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "magnifier",
+      "pda_encyclopedia_name": "st_addon_scope_mag",
+      "sources": [
+        {
+          "name": "st_addon_scope_e0t2_mag",
+          "amount": "1"
+        },
+        {
+          "name": "st_addon_scope_razor_mag",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "uh2",
+      "pda_encyclopedia_name": "st_addon_scope_razor",
+      "sources": [
+        {
+          "name": "st_addon_scope_razor_mag",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "bandage",
+      "pda_encyclopedia_name": "st_bandage",
+      "sources": [
+        {
+          "name": "st_jgut_zhgut",
+          "amount": "1"
+        },
+        {
+          "name": "st_medkit_army",
+          "amount": "1"
+        },
+        {
+          "name": "st_medkit_science",
+          "amount": "1"
+        },
+        {
+          "name": "st_survival_kit",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "duct_tape",
+      "pda_encyclopedia_name": "st_duct_tape",
+      "sources": [
+        {
+          "name": "st_armor_repair_fa",
+          "amount": "2"
+        }
+      ]
+    },
+    {
+      "id": "e_syringe",
+      "pda_encyclopedia_name": "st_e_syringe",
+      "sources": [
+        {
+          "name": "st_medkit",
+          "amount": "2"
+        },
+        {
+          "name": "st_medkit_science",
+          "amount": "2"
+        },
+        {
+          "name": "st_stim_scientic",
+          "amount": "2"
+        },
+        {
+          "name": "st_adrenalin",
+          "amount": "1"
+        },
+        {
+          "name": "st_analgetic",
+          "amount": "1"
+        },
+        {
+          "name": "st_glucose",
+          "amount": "1"
+        },
+        {
+          "name": "st_glucose_s",
+          "amount": "1"
+        },
+        {
+          "name": "st_medkit_army",
+          "amount": "1"
+        },
+        {
+          "name": "st_morphine",
+          "amount": "1"
+        },
+        {
+          "name": "st_rebirth",
+          "amount": "1"
+        },
+        {
+          "name": "st_salicidic_acid",
+          "amount": "1"
+        },
+        {
+          "name": "st_stim_impro",
+          "amount": "1"
+        },
+        {
+          "name": "st_stim_military",
+          "amount": "1"
+        },
+        {
+          "name": "st_survival_kit",
+          "amount": "1"
+        },
+        {
+          "name": "st_tetanus",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "jar",
+      "pda_encyclopedia_name": "st_jar",
+      "sources": [
+        {
+          "name": "st_drug_booster",
+          "amount": "1"
+        },
+        {
+          "name": "st_glue_a",
+          "amount": "1"
+        },
+        {
+          "name": "st_glue_b",
+          "amount": "1"
+        },
+        {
+          "name": "st_glue_e",
+          "amount": "1"
+        },
+        {
+          "name": "st_grease",
+          "amount": "1"
+        },
+        {
+          "name": "st_gun_oil_ru",
+          "amount": "1"
+        },
+        {
+          "name": "st_solvent",
+          "amount": "1"
+        },
+        {
+          "name": "st_yadylin",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "medkit_army",
+      "pda_encyclopedia_name": "st_medkit_army",
+      "sources": [
+        {
+          "name": "st_survival_kit",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "powder_3",
+      "pda_encyclopedia_name": "st_powder_mag",
+      "sources": [
+        {
+          "name": "st_metalcan_powder",
+          "amount": "2"
+        }
+      ]
+    },
+    {
+      "id": "powder_1",
+      "pda_encyclopedia_name": "st_powder_pistol",
+      "sources": [
+        {
+          "name": "st_metalcan_powder",
+          "amount": "3"
+        }
+      ]
+    },
+    {
+      "id": "powder_2",
+      "pda_encyclopedia_name": "st_powder_rifle",
+      "sources": [
+        {
+          "name": "st_metalcan_powder",
+          "amount": "3"
+        }
+      ]
+    },
+    {
+      "id": "prt_i_capacitors",
+      "pda_encyclopedia_name": "st_prt_i_capacitors",
+      "sources": [
+        {
+          "name": "st_detector4",
+          "amount": "4"
+        },
+        {
+          "name": "st_af_aam_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_detector2",
+          "amount": "3"
+        },
+        {
+          "name": "st_pda_2_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_af_aac_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_iam_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector1",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector3",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector8",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector9",
+          "amount": "2"
+        },
+        {
+          "name": "st_device_torch_nv_1_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_device_torch_nv_2_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_geiger_dead",
+          "amount": "2"
+        },
+        {
+          "name": "st_pda_1_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_pda_3_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_binocular_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_binocular_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_broken_detector",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_flashlight",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_torch_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_torch_nv_3_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_flashlight_broken",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_radio2",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_i_copper",
+      "pda_encyclopedia_name": "st_prt_i_copper",
+      "sources": [
+        {
+          "name": "st_af_aam_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_aac_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_iam_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector1",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector8",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector9",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_flashlight",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_torch_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_torch_nv_1_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_torch_nv_2_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_torch_nv_3_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_geiger_dead",
+          "amount": "1"
+        },
+        {
+          "name": "st_headlamp",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_1_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_2_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_3_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_radio2",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_i_fasteners",
+      "pda_encyclopedia_name": "st_prt_i_fasteners",
+      "sources": [
+        {
+          "name": "st_fieldcooker",
+          "amount": "3"
+        },
+        {
+          "name": "st_af_cooler_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_frames_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_grid_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_plates_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_surge_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_lead_box_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_prt_o_support_1",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_cooler_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_frames_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_grid_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_plates_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_surge_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_balon_gas",
+          "amount": "1"
+        },
+        {
+          "name": "st_binocular_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_binocular_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_broken_detector",
+          "amount": "1"
+        },
+        {
+          "name": "st_cooking",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector1",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector2",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector3",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector4",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector8",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector9",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_flashlight",
+          "amount": "1"
+        },
+        {
+          "name": "st_exo_repair_kit",
+          "amount": "1"
+        },
+        {
+          "name": "st_exolight_repair_kit",
+          "amount": "1"
+        },
+        {
+          "name": "st_geiger_dead",
+          "amount": "1"
+        },
+        {
+          "name": "st_hand_watch",
+          "amount": "1"
+        },
+        {
+          "name": "st_headlamp",
+          "amount": "1"
+        },
+        {
+          "name": "st_mine_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_mirror",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_1_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_2_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_3_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_radio",
+          "amount": "1"
+        },
+        {
+          "name": "st_walkie",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_i_paper",
+      "pda_encyclopedia_name": "st_prt_i_paper",
+      "sources": [
+        {
+          "name": "st_ecologist_report_1_of_3_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_ecologist_report_2_of_3_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_ecologist_report_3_of_3_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_itm_mapkit_1",
+          "amount": "3"
+        },
+        {
+          "name": "st_itm_mapkit_2",
+          "amount": "3"
+        },
+        {
+          "name": "st_itm_mapkit_3",
+          "amount": "3"
+        },
+        {
+          "name": "st_itm_mapkit_4",
+          "amount": "3"
+        },
+        {
+          "name": "st_itm_mapkit_5",
+          "amount": "3"
+        },
+        {
+          "name": "st_itm_mapkit_6",
+          "amount": "3"
+        },
+        {
+          "name": "st_itm_mapkit_7",
+          "amount": "3"
+        },
+        {
+          "name": "st_itm_mapkit_8",
+          "amount": "3"
+        },
+        {
+          "name": "st_itm_mapkit_9",
+          "amount": "3"
+        },
+        {
+          "name": "st_freedom_manual_1_of_2_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_freedom_manual_1_of_2_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_advanced_1",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_advanced_2",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_advanced_3",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_advanced_4",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_basic_1",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_basic_2",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_basic_3",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_basic_4",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_expert_1",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_expert_2",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_expert_3",
+          "amount": "1"
+        },
+        {
+          "name": "st_gamma_recipe_expert_4",
+          "amount": "1"
+        },
+        {
+          "name": "st_letter_mercenary_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_letter_military_log_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_letter_military_stalker_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_letter_stalker_letter_3_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_letter_to_outside_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_medkit",
+          "amount": "1"
+        },
+        {
+          "name": "st_meinkampf",
+          "amount": "1"
+        },
+        {
+          "name": "st_memoirs_1_of_2_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_memoirs_2_of_2_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_monolith_prayer_1_of_3_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_monolith_prayer_2_of_3_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_monolith_prayer_3_of_3_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_monolithian_thoughts_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_porn",
+          "amount": "1"
+        },
+        {
+          "name": "st_porn2",
+          "amount": "1"
+        },
+        {
+          "name": "st_recipe_drug_1",
+          "amount": "1"
+        },
+        {
+          "name": "st_recipe_drug_2",
+          "amount": "1"
+        },
+        {
+          "name": "st_recipe_drug_3",
+          "amount": "1"
+        },
+        {
+          "name": "st_recipe_drug_4",
+          "amount": "1"
+        },
+        {
+          "name": "st_stalker_letter_1_of_2_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_stalker_letter_2_of_2_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_survival_kit",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_i_plastic",
+      "pda_encyclopedia_name": "st_prt_i_plastic",
+      "sources": [
+        {
+          "name": "st_af_freon_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_medkit_army",
+          "amount": "2"
+        },
+        {
+          "name": "st_medkit_science",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_freon_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_cooking",
+          "amount": "1"
+        },
+        {
+          "name": "st_stim_impro",
+          "amount": "1"
+        },
+        {
+          "name": "st_stim_military",
+          "amount": "1"
+        },
+        {
+          "name": "st_stim_scientic",
+          "amount": "1"
+        },
+        {
+          "name": "st_survival_kit",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_i_resistors",
+      "pda_encyclopedia_name": "st_prt_i_resistors",
+      "sources": [
+        {
+          "name": "st_detector4",
+          "amount": "4"
+        },
+        {
+          "name": "st_af_aam_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_af_aac_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_surge_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector2",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector3",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector8",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector9",
+          "amount": "2"
+        },
+        {
+          "name": "st_device_torch_nv_3_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_geiger_dead",
+          "amount": "2"
+        },
+        {
+          "name": "st_pda_1_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_pda_2_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_pda_3_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_iam_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_surge_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_binocular_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_binocular_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_broken_detector",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector1",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_flashlight",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_torch_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_torch_nv_1_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_torch_nv_2_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_flashlight_broken",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_radio",
+          "amount": "1"
+        },
+        {
+          "name": "st_radio2",
+          "amount": "1"
+        },
+        {
+          "name": "st_walkie",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_i_scrap",
+      "pda_encyclopedia_name": "st_prt_i_scrap",
+      "sources": [
+        {
+          "name": "st_exo_repair_kit",
+          "amount": "3"
+        },
+        {
+          "name": "st_fieldcooker",
+          "amount": "3"
+        },
+        {
+          "name": "st_af_camelbak_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_cooler_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_frames_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_freon_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_grid_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_plates_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_surge_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_exolight_repair_kit",
+          "amount": "2"
+        },
+        {
+          "name": "st_ied",
+          "amount": "2"
+        },
+        {
+          "name": "st_ied_rpg",
+          "amount": "2"
+        },
+        {
+          "name": "st_lead_box_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_prt_o_support_1",
+          "amount": "2"
+        },
+        {
+          "name": "st_shovel_mili",
+          "amount": "2"
+        },
+        {
+          "name": "st_shovel_old",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_aac_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_aam_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_camelbak_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_cooler_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_frames_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_freon_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_grid_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_iam_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_plates_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_surge_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_army_bowler",
+          "amount": "1"
+        },
+        {
+          "name": "st_ball_hammer",
+          "amount": "1"
+        },
+        {
+          "name": "st_balon_gas",
+          "amount": "1"
+        },
+        {
+          "name": "st_beans",
+          "amount": "1"
+        },
+        {
+          "name": "st_binocular_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_binocular_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_chili",
+          "amount": "1"
+        },
+        {
+          "name": "st_conserva",
+          "amount": "1"
+        },
+        {
+          "name": "st_corn",
+          "amount": "1"
+        },
+        {
+          "name": "st_cutlery",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector1",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector2",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector3",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector4",
+          "amount": "1"
+        },
+        {
+          "name": "st_detector8",
+          "amount": "1"
+        },
+        {
+          "name": "st_geiger_dead",
+          "amount": "1"
+        },
+        {
+          "name": "st_hand_watch",
+          "amount": "1"
+        },
+        {
+          "name": "st_metalcan_powder",
+          "amount": "1"
+        },
+        {
+          "name": "st_mine_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_mirror",
+          "amount": "1"
+        },
+        {
+          "name": "st_tomato",
+          "amount": "1"
+        },
+        {
+          "name": "st_tushonka",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_i_textolite",
+      "pda_encyclopedia_name": "st_prt_i_textolite",
+      "sources": [
+        {
+          "name": "st_armor_repair_fa",
+          "amount": "1"
+        },
+        {
+          "name": "st_glue_a",
+          "amount": "1"
+        },
+        {
+          "name": "st_glue_b",
+          "amount": "1"
+        },
+        {
+          "name": "st_glue_e",
+          "amount": "1"
+        },
+        {
+          "name": "st_gun_oil_ru",
+          "amount": "1"
+        },
+        {
+          "name": "st_medkit",
+          "amount": "1"
+        },
+        {
+          "name": "st_medkit_army",
+          "amount": "1"
+        },
+        {
+          "name": "st_medkit_science",
+          "amount": "1"
+        },
+        {
+          "name": "st_solvent",
+          "amount": "1"
+        },
+        {
+          "name": "st_survival_kit",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_i_transistors",
+      "pda_encyclopedia_name": "st_prt_i_transistors",
+      "sources": [
+        {
+          "name": "st_detector3",
+          "amount": "4"
+        },
+        {
+          "name": "st_detector4",
+          "amount": "4"
+        },
+        {
+          "name": "st_pda_3_name",
+          "amount": "4"
+        },
+        {
+          "name": "st_detector2",
+          "amount": "3"
+        },
+        {
+          "name": "st_device_torch_nv_3_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_af_aac_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_aam_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector1",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector8",
+          "amount": "2"
+        },
+        {
+          "name": "st_detector9",
+          "amount": "2"
+        },
+        {
+          "name": "st_device_torch_nv_2_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_geiger_dead",
+          "amount": "2"
+        },
+        {
+          "name": "st_pda_1_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_pda_2_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_iam_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_broken_detector",
+          "amount": "1"
+        },
+        {
+          "name": "st_device_torch_nv_1_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_headlamp",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_pda_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_radio",
+          "amount": "1"
+        },
+        {
+          "name": "st_walkie",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_i_wood",
+      "pda_encyclopedia_name": "st_prt_i_wood",
+      "sources": [
+        {
+          "name": "st_guitar_name",
+          "amount": "4"
+        },
+        {
+          "name": "st_itms_campfire_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_shovel_mili",
+          "amount": "2"
+        },
+        {
+          "name": "st_shovel_old",
+          "amount": "2"
+        },
+        {
+          "name": "st_ball_hammer",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_ballistic_1",
+      "pda_encyclopedia_name": "st_prt_o_ballistic_1",
+      "sources": [
+        {
+          "name": "st_af_kevlar_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_kevlar_up_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_ballistic_13",
+      "pda_encyclopedia_name": "st_prt_o_ballistic_13",
+      "sources": [
+        {
+          "name": "st_af_camelbak_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_camelbak_up_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_plates_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_plates_up_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_ballistic_15",
+      "pda_encyclopedia_name": "st_prt_o_ballistic_15",
+      "sources": [
+        {
+          "name": "st_af_frames_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_frames_up_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_ballistic_3",
+      "pda_encyclopedia_name": "st_prt_o_ballistic_3",
+      "sources": [
+        {
+          "name": "st_af_kevlar_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_kevlar_up_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_ballistic_5",
+      "pda_encyclopedia_name": "st_prt_o_ballistic_5",
+      "sources": [
+        {
+          "name": "st_af_kevlar_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_grid_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_grid_up_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_kevlar_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_ballistic_7",
+      "pda_encyclopedia_name": "st_prt_o_ballistic_7",
+      "sources": [
+        {
+          "name": "st_af_kevlar_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_kevlar_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_ballistic_9",
+      "pda_encyclopedia_name": "st_prt_o_ballistic_9",
+      "sources": [
+        {
+          "name": "st_af_camelbak_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_camelbak_up_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_plates_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_plates_up_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_fabrics_1",
+      "pda_encyclopedia_name": "st_prt_o_fabrics_1",
+      "sources": [
+        {
+          "name": "st_equ_touristpack_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_beadspread",
+          "amount": "1"
+        },
+        {
+          "name": "st_equ_smallpack_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_gloves",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_fabrics_2",
+      "pda_encyclopedia_name": "st_prt_o_fabrics_2",
+      "sources": [
+        {
+          "name": "st_equ_milpack_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_equ_touristpack_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_equ_smallpack_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_equ_smilpack_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_itm_backpack_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_underwear",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_fabrics_3",
+      "pda_encyclopedia_name": "st_prt_o_fabrics_3",
+      "sources": [
+        {
+          "name": "st_equ_touristpack_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_equ_milpack_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_itm_sleepbag_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_itm_tent_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_kit_hunt",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_frames_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_frames_up_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_grid_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_grid_up_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_bandage",
+          "amount": "1"
+        },
+        {
+          "name": "st_beadspread",
+          "amount": "1"
+        },
+        {
+          "name": "st_boots",
+          "amount": "1"
+        },
+        {
+          "name": "st_compression_bag",
+          "amount": "1"
+        },
+        {
+          "name": "st_equ_smallpack_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_equ_smilpack_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_gloves",
+          "amount": "1"
+        },
+        {
+          "name": "st_itm_backpack_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_fabrics_4",
+      "pda_encyclopedia_name": "st_prt_o_fabrics_4",
+      "sources": [
+        {
+          "name": "st_equ_milpack_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_itm_tent_name",
+          "amount": "3"
+        },
+        {
+          "name": "st_equ_smilpack_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_itm_sleepbag_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_jgut_zhgut",
+          "amount": "2"
+        },
+        {
+          "name": "st_kit_hunt",
+          "amount": "2"
+        },
+        {
+          "name": "st_af_cooler_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_cooler_up_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_armor_repair_fa",
+          "amount": "1"
+        },
+        {
+          "name": "st_boots",
+          "amount": "1"
+        },
+        {
+          "name": "st_compression_bag",
+          "amount": "1"
+        },
+        {
+          "name": "st_glue_a",
+          "amount": "1"
+        },
+        {
+          "name": "st_glue_b",
+          "amount": "1"
+        },
+        {
+          "name": "st_glue_e",
+          "amount": "1"
+        },
+        {
+          "name": "st_gun_oil_ru",
+          "amount": "1"
+        },
+        {
+          "name": "st_solvent",
+          "amount": "1"
+        },
+        {
+          "name": "st_tarpaulin",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_retardant_1",
+      "pda_encyclopedia_name": "st_prt_o_retardant_1",
+      "sources": [
+        {
+          "name": "st_af_freon_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_freon_up_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_retardant_13",
+      "pda_encyclopedia_name": "st_prt_o_retardant_13",
+      "sources": [
+        {
+          "name": "st_af_camelbak_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_camelbak_up_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_retardant_17",
+      "pda_encyclopedia_name": "st_prt_o_retardant_17",
+      "sources": [
+        {
+          "name": "st_af_surge_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_surge_up_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_retardant_5",
+      "pda_encyclopedia_name": "st_prt_o_retardant_5",
+      "sources": [
+        {
+          "name": "st_af_freon_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_freon_up_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "prt_o_retardant_7",
+      "pda_encyclopedia_name": "st_prt_o_retardant_7",
+      "sources": [
+        {
+          "name": "st_af_cooler_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_af_cooler_up_name",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "rope",
+      "pda_encyclopedia_name": "st_rope",
+      "sources": [
+        {
+          "name": "st_synthrope",
+          "amount": "2"
+        }
+      ]
+    },
+    {
+      "id": "swiss_knife",
+      "pda_encyclopedia_name": "st_swiss",
+      "sources": [
+        {
+          "name": "st_kit_hunt",
+          "amount": "1"
+        }
+      ]
+    }
+  ]
+}

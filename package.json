@@ -1,0 +1,14 @@
+{
+  "name": "gamma-tools",
+  "private": true,
+  "scripts": {
+    "dev": "five-server site --port=3000",
+    "release": "node scripts/release.mjs",
+    "deploy": "node scripts/deploy.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "five-server": "^0.4.5",
+    "wrangler": "^4.0.0"
+  }
+}

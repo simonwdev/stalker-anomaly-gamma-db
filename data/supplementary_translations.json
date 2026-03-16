@@ -1,0 +1,41 @@
+{
+  "en": {
+    "st_data_export_outfit_artefact_count_max": "Maximum belt slots",
+    "ui_mcm_menu_exo": "Powered Exos",
+    "ui_inv_ap_res": "BR Class",
+    "ui_st_community": "Faction",
+    "st_helm_rp_bala": "Balaclava",
+    "ui_inv_outfit_speed": "Movespeed",
+    "st_helm_cloth_mask": "Cloth Mask",
+    "st_helm_bandana": "Bandana",
+    "ace_outfit_name": "Mercenary ACE Scientific Suit",
+    "ui_inv_outfit_artefact_count": "Belt Slots",
+    "unit_kg": "kg",
+    "unit_m": "m",
+    "unit_m_per_s": "m/s",
+    "unit_rpm": "rpm",
+    "unit_msv_per_s": "mSv/s",
+    "unit_msv": "mSv",
+    "unit_s": "s"
+  },
+  "ru": {
+    "st_data_export_outfit_artefact_count_max": "Макс. слоты на поясе",
+    "ui_mcm_menu_exo": "Экзо с питанием",
+    "ui_inv_ap_res": "Класс БР",
+    "ui_st_community": "Фракция",
+    "st_helm_rp_bala": "Балаклава",
+    "ui_inv_outfit_speed": "Скорость передвижения",
+    "st_helm_cloth_mask": "Тканевая маска",
+    "st_helm_bandana": "Бандана",
+    "ace_outfit_name": "Научный костюм наёмника ACE",
+    "ui_inv_outfit_artefact_count": "Слоты на поясе",
+    "unit_kg": "кг",
+    "unit_m": "м",
+    "unit_m_per_s": "м/с",
+    "unit_rpm": "выстр/мин",
+    "unit_msv_per_s": "мЗв/с",
+    "unit_msv": "мЗв",
+    "unit_s": "с",
+    "st_prop_weight": "Вес"
+  }
+}

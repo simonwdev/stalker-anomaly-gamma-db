@@ -1,0 +1,13 @@
+{
+  "packs": [
+    {
+      "id": "gamma-0.9.4",
+      "name": "GAMMA 0.9.4",
+      "links": [
+        { "url": "https://discord.gg/stalker-gamma", "icon": "discord", "label": "Discord" },
+        { "url": "https://www.stalkergamma.com/", "icon": "globe", "label": "Website" }
+      ]
+    }
+  ],
+  "default": "gamma-0.9.4"
+}

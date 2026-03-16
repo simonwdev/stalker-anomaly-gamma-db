@@ -1,0 +1,777 @@
+{
+  "category": "Recipes",
+  "headers": [
+    "id",
+    "pda_encyclopedia_name"
+  ],
+  "items": [
+    {
+      "id": "af_baloon",
+      "pda_encyclopedia_name": "st_af_baloon_name",
+      "ingredients": [
+        {
+          "name": "st_af_bracelet_name",
+          "amount": "x1"
+        },
+        {
+          "name": "st_af_cristall_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_chimera_cogot",
+          "amount": "x4"
+        }
+      ],
+      "displayName": "st_af_baloon_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_black_spray",
+      "pda_encyclopedia_name": "st_af_black_spray_name",
+      "ingredients": [
+        {
+          "name": "st_af_dummy_dummy_name",
+          "amount": "x1"
+        },
+        {
+          "name": "st_af_sponge_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_part_controller_brain_tissue",
+          "amount": "x2"
+        },
+        {
+          "name": "mutant_burer_hand",
+          "amount": "x3"
+        }
+      ],
+      "displayName": "st_af_black_spray_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_blood",
+      "pda_encyclopedia_name": "st_af_blood_name",
+      "ingredients": [
+        {
+          "name": "st_af_sandstone_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_psevdodog_meat",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_zombi_hand",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_blood_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_bracelet",
+      "pda_encyclopedia_name": "st_af_bracelet_name",
+      "ingredients": [
+        {
+          "name": "st_af_blood_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_krovosos_meat",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_bracelet_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_compass",
+      "pda_encyclopedia_name": "st_af_compass_name",
+      "ingredients": [
+        {
+          "name": "st_af_full_empty_name",
+          "amount": "x1"
+        },
+        {
+          "name": "st_af_black_spray_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_part_controller_brain_tissue",
+          "amount": "x4"
+        },
+        {
+          "name": "mutant_heart_chimera",
+          "amount": "x4"
+        }
+      ],
+      "displayName": "st_af_compass_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_cristall_flower",
+      "pda_encyclopedia_name": "st_af_cristall_flower_name",
+      "ingredients": [
+        {
+          "name": "st_af_black_angel_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_dog_heart",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_snork_leg",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_cristall_flower_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_cristall",
+      "pda_encyclopedia_name": "st_af_cristall_name",
+      "ingredients": [
+        {
+          "name": "st_af_dummy_glassbeads_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_fang_psevdodog",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_zombi_hand",
+          "amount": "x2"
+        }
+      ],
+      "displayName": "st_af_cristall_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_dummy_battery",
+      "pda_encyclopedia_name": "st_af_dummy_battery_name",
+      "ingredients": [
+        {
+          "name": "st_af_generator_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_cat_tail",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_dog_liver",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_dummy_battery_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_dummy_dummy",
+      "pda_encyclopedia_name": "st_af_dummy_dummy_name",
+      "ingredients": [
+        {
+          "name": "st_af_dummy_battery_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_brain_burer",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_dummy_dummy_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_dummy_glassbeads",
+      "pda_encyclopedia_name": "st_af_dummy_glassbeads_name",
+      "ingredients": [
+        {
+          "name": "st_af_sun_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_cat_tail",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_tusk_boar",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_dummy_glassbeads_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_electra_flash",
+      "pda_encyclopedia_name": "st_af_electra_flash_name",
+      "ingredients": [
+        {
+          "name": "st_af_ring_name",
+          "amount": "x1"
+        },
+        {
+          "name": "st_af_electra_moonlight_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_controller_hand",
+          "amount": "x3"
+        }
+      ],
+      "displayName": "st_af_electra_flash_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_electra_moonlight",
+      "pda_encyclopedia_name": "st_af_electra_moonlight_name",
+      "ingredients": [
+        {
+          "name": "st_af_dummy_battery_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_psysucker_hand",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_psevdodog_tail",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_electra_moonlight_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_electra_sparkler",
+      "pda_encyclopedia_name": "st_af_electra_sparkler_name",
+      "ingredients": [
+        {
+          "name": "st_af_fonar_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_cat_thyroid",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_cat_claw",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_electra_sparkler_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_empty",
+      "pda_encyclopedia_name": "st_af_empty_name",
+      "ingredients": [
+        {
+          "name": "st_af_medusa_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_fang_psevdodog",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_snork_mask",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_empty_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_eye",
+      "pda_encyclopedia_name": "st_af_eye_name",
+      "ingredients": [
+        {
+          "name": "st_af_blood_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_lurker_eye",
+          "amount": "x2"
+        },
+        {
+          "name": "mutant_flesh_eye",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_eye_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_fire_loop",
+      "pda_encyclopedia_name": "st_af_fire_loop_name",
+      "ingredients": [
+        {
+          "name": "st_af_fire_name",
+          "amount": "x1"
+        },
+        {
+          "name": "st_af_fireball_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_heart_chimera",
+          "amount": "x6"
+        },
+        {
+          "name": "mutant_controller_hand",
+          "amount": "x6"
+        }
+      ],
+      "displayName": "st_af_fire_loop_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_fire",
+      "pda_encyclopedia_name": "st_af_fire_name",
+      "ingredients": [
+        {
+          "name": "st_af_pin_name",
+          "amount": "x1"
+        },
+        {
+          "name": "st_af_eye_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_chimera_claw",
+          "amount": "x2"
+        },
+        {
+          "name": "mutant_chimera_cogot",
+          "amount": "x3"
+        }
+      ],
+      "displayName": "st_af_fire_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_fireball",
+      "pda_encyclopedia_name": "st_af_fireball_name",
+      "ingredients": [
+        {
+          "name": "st_af_cristall_name",
+          "amount": "x1"
+        },
+        {
+          "name": "st_af_lobster_eyes_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_pseudogigant_eye",
+          "amount": "x3"
+        }
+      ],
+      "displayName": "st_af_fireball_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_full_empty",
+      "pda_encyclopedia_name": "st_af_full_empty_name",
+      "ingredients": [
+        {
+          "name": "st_af_empty_name",
+          "amount": "x1"
+        },
+        {
+          "name": "st_af_vyvert_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_pseudogigant_hand",
+          "amount": "x4"
+        }
+      ],
+      "displayName": "st_af_full_empty_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_fuzz_kolobok",
+      "pda_encyclopedia_name": "st_af_fuzz_kolobok_name",
+      "ingredients": [
+        {
+          "name": "st_af_soul_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_krovosos_meat",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_fuzz_kolobok_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_glass",
+      "pda_encyclopedia_name": "st_af_glass_name",
+      "ingredients": [
+        {
+          "name": "st_af_fuzz_kolobok_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_chimera_meat",
+          "amount": "x4"
+        }
+      ],
+      "displayName": "st_af_glass_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_gold_fish",
+      "pda_encyclopedia_name": "st_af_gold_fish_name",
+      "ingredients": [
+        {
+          "name": "st_af_gravi_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_burer_hand",
+          "amount": "x3"
+        },
+        {
+          "name": "mutant_controller_hand",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_chimera_claw",
+          "amount": "x2"
+        }
+      ],
+      "displayName": "st_af_gold_fish_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_gravi",
+      "pda_encyclopedia_name": "st_af_gravi_name",
+      "ingredients": [
+        {
+          "name": "st_af_night_star_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_snork_hand",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_zombi_hand",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_fracture_hand",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_gravi_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_ice",
+      "pda_encyclopedia_name": "st_af_ice_name",
+      "ingredients": [
+        {
+          "name": "st_af_ring_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_krovosos_jaw",
+          "amount": "x2"
+        },
+        {
+          "name": "mutant_chimera_claw",
+          "amount": "x2"
+        },
+        {
+          "name": "mutant_part_controller_brain_tissue",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_ice_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_itcher",
+      "pda_encyclopedia_name": "st_af_itcher_name",
+      "ingredients": [
+        {
+          "name": "st_af_zhelch_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_cat_thyroid",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_dog_heart",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_itcher_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_lobster_eyes",
+      "pda_encyclopedia_name": "st_af_lobster_eyes_name",
+      "ingredients": [
+        {
+          "name": "st_af_cristall_flower_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_flesh_eye",
+          "amount": "x2"
+        }
+      ],
+      "displayName": "st_af_lobster_eyes_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_medusa",
+      "pda_encyclopedia_name": "st_af_medusa_name",
+      "ingredients": [
+        {
+          "name": "st_af_spaika_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_dog_tail",
+          "amount": "x2"
+        },
+        {
+          "name": "mutant_cat_claw",
+          "amount": "x2"
+        }
+      ],
+      "displayName": "st_af_medusa_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_mincer_meat",
+      "pda_encyclopedia_name": "st_af_mincer_meat_name",
+      "ingredients": [
+        {
+          "name": "st_af_skull_miser_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_flesh_meat",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_dog_meat",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_mincer_meat_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_monolith",
+      "pda_encyclopedia_name": "st_af_monolith_name",
+      "ingredients": [
+        {
+          "name": "st_af_electra_flash_name",
+          "amount": "x1"
+        },
+        {
+          "name": "st_af_baloon_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_pseudogigant_hand",
+          "amount": "x4"
+        },
+        {
+          "name": "mutant_pseudogigant_eye",
+          "amount": "x4"
+        }
+      ],
+      "displayName": "st_af_monolith_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_night_star",
+      "pda_encyclopedia_name": "st_af_night_star_name",
+      "ingredients": [
+        {
+          "name": "st_af_signet_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_boar_leg",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_dog_liver",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_night_star_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_oasis_heart",
+      "pda_encyclopedia_name": "st_af_oasis_heart_name",
+      "ingredients": [
+        {
+          "name": "st_af_ice_name",
+          "amount": "x1"
+        },
+        {
+          "name": "st_af_glass_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_heart_bloodsucker",
+          "amount": "x6"
+        },
+        {
+          "name": "mutant_heart_chimera",
+          "amount": "x4"
+        }
+      ],
+      "displayName": "st_af_oasis_heart_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_pin",
+      "pda_encyclopedia_name": "st_af_pin_name",
+      "ingredients": [
+        {
+          "name": "st_af_itcher_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_snork_leg",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_boar_leg",
+          "amount": "x2"
+        }
+      ],
+      "displayName": "st_af_pin_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_ring",
+      "pda_encyclopedia_name": "st_af_ring_name",
+      "ingredients": [
+        {
+          "name": "st_af_electra_sparkler_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_lurker_tail",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_krovosos_meat",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_ring_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_soul",
+      "pda_encyclopedia_name": "st_af_soul_name",
+      "ingredients": [
+        {
+          "name": "st_af_ear_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_dog_meat",
+          "amount": "x3"
+        }
+      ],
+      "displayName": "st_af_soul_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_sponge",
+      "pda_encyclopedia_name": "st_af_sponge_name",
+      "ingredients": [
+        {
+          "name": "st_af_itcher_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_snork_mask",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_tusk_boar",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_sponge_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "af_vyvert",
+      "pda_encyclopedia_name": "st_af_vyvert_name",
+      "ingredients": [
+        {
+          "name": "st_af_mincer_meat_name",
+          "amount": "x1"
+        },
+        {
+          "name": "mutant_lurker_tail",
+          "amount": "x2"
+        },
+        {
+          "name": "mutant_fracture_hand",
+          "amount": "x1"
+        }
+      ],
+      "displayName": "st_af_vyvert_name",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    }
+  ]
+}
