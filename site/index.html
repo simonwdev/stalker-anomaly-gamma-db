@@ -157,7 +157,7 @@
                                     <div class="range-inputs">
                                         <div class="range-input-wrap">
                                             <input type="number" class="range-input"
-                                                   :placeholder="def.dataMin"
+                                                   :placeholder="def.dataMin" :step="def.step"
                                                    :value="activeFilters[def.key]?.[0] ?? ''"
                                                    @input="setRangeMin(def.key, $event.target.value)">
                                             <div class="range-spinners">
@@ -168,7 +168,7 @@
                                         <span class="range-sep">&ndash;</span>
                                         <div class="range-input-wrap">
                                             <input type="number" class="range-input"
-                                                   :placeholder="def.dataMax"
+                                                   :placeholder="def.dataMax" :step="def.step"
                                                    :value="activeFilters[def.key]?.[1] ?? ''"
                                                    @input="setRangeMax(def.key, $event.target.value)">
                                             <div class="range-spinners">
@@ -187,7 +187,7 @@
                                     <div class="range-inputs">
                                         <div class="range-input-wrap">
                                             <input type="number" class="range-input"
-                                                   :placeholder="def.dataMin"
+                                                   :placeholder="def.dataMin" :step="def.step"
                                                    :value="activeFilters[def.key]?.[0] ?? ''"
                                                    @input="setRangeMin(def.key, $event.target.value)">
                                             <div class="range-spinners">
@@ -198,7 +198,7 @@
                                         <span class="range-sep">&ndash;</span>
                                         <div class="range-input-wrap">
                                             <input type="number" class="range-input"
-                                                   :placeholder="def.dataMax"
+                                                   :placeholder="def.dataMax" :step="def.step"
                                                    :value="activeFilters[def.key]?.[1] ?? ''"
                                                    @input="setRangeMax(def.key, $event.target.value)">
                                             <div class="range-spinners">
@@ -307,7 +307,7 @@
                     <button class="exchange-chip" :class="{ active: !exchangeFactionFilter }" @click="exchangeFactionFilter = null">{{ t('app_label_all') }}</button>
                     <button v-for="f in exchangeFactions" :key="f" class="exchange-chip" :class="{ active: exchangeFactionFilter === f }" @click="exchangeFactionFilter = exchangeFactionFilter === f ? null : f">
                         <img v-if="factionIcon(f)" :src="'img/' + factionIcon(f)" :alt="f" class="exchange-chip-icon">
-                        <span>{{ f }}</span>
+                        <span>{{ t(f) }}</span>
                     </button>
                 </div>
                 <div class="tile-grid">
@@ -322,7 +322,7 @@
                                 <div v-if="ex.results[f]" class="exchange-result-row">
                                     <span class="exchange-result-faction">
                                         <img v-if="factionIcon(f)" :src="'img/' + factionIcon(f)" :alt="f" class="exchange-result-icon">
-                                        <span>{{ f }}</span>
+                                        <span>{{ t(f) }}</span>
                                     </span>
                                     <span class="exchange-result-name">
                                         <a v-if="exchangeItemId(ex.results[f])" href="#" @click.prevent.stop="navigateToItem(exchangeItemId(ex.results[f]))">{{ t(ex.results[f]) }}</a>
