@@ -189,6 +189,7 @@ const app = createApp({
             // Localisation
             locale: "en",
             translations: null,
+            fileManifest: {},
 
             index: [],
             categories: [],
@@ -874,10 +875,15 @@ const app = createApp({
             });
         },
 
+        dataUrl(filename) {
+            const v = this.fileManifest[filename];
+            return `${this.dataBasePath}/${filename}${v ? '?v=' + v : ''}`;
+        },
+
         async fetchJsonCached(cacheKey, filename) {
             if (this[cacheKey] !== null) return this[cacheKey];
             try {
-                const res = await fetch(`${this.dataBasePath}/${filename}`);
+                const res = await fetch(this.dataUrl(filename));
                 this[cacheKey] = res.ok ? await res.json() : {};
             } catch {
                 this[cacheKey] = {};
@@ -914,13 +920,13 @@ const app = createApp({
         },
 
         async loadItemById(id) {
-            const indexRes = await fetch(`${this.dataBasePath}/index.json`);
+            const indexRes = await fetch(this.dataUrl("index.json"));
             const index = await indexRes.json();
             const entry = index.find((i) => i.id === id);
             if (!entry) return null;
 
             const slug = categorySlug(entry.category);
-            const catRes = await fetch(`${this.dataBasePath}/${slug}.json`);
+            const catRes = await fetch(this.dataUrl(`${slug}.json`));
             const catData = await catRes.json();
             const item = catData.items.find((i) => i.id === id);
 
@@ -964,11 +970,15 @@ const app = createApp({
         async loadPackData() {
             this.loading = true;
             try {
+                try {
+                    const mRes = await fetch(`${this.dataBasePath}/manifest.json`, { cache: "no-cache" });
+                    this.fileManifest = mRes.ok ? await mRes.json() : {};
+                } catch { this.fileManifest = {}; }
                 const [indexRes, catRes, trRes, dlRes] = await Promise.all([
-                    fetch(`${this.dataBasePath}/index.json`),
-                    fetch(`${this.dataBasePath}/categories.json`),
-                    fetch(`${this.dataBasePath}/translations.json`),
-                    fetch(`${this.dataBasePath}/display-labels.json`),
+                    fetch(this.dataUrl("index.json")),
+                    fetch(this.dataUrl("categories.json")),
+                    fetch(this.dataUrl("translations.json")),
+                    fetch(this.dataUrl("display-labels.json")),
                 ]);
                 try { this.translations = trRes.ok ? await trRes.json() : null; } catch { this.translations = null; }
                 try { this.displayLabels = dlRes.ok ? await dlRes.json() : {}; } catch { this.displayLabels = {}; }
@@ -1143,7 +1153,7 @@ const app = createApp({
                                 items: this.categoryItems[s],
                             });
                         }
-                        return fetch(`${this.dataBasePath}/${s}.json`).then(r => r.json());
+                        return fetch(this.dataUrl(`${s}.json`)).then(r => r.json());
                     });
                     const results = await Promise.all(fetches);
 
@@ -1194,7 +1204,7 @@ const app = createApp({
                 if (!this.outfitExchange) {
                     this.startContentLoading();
                     try {
-                        const res = await fetch(`${this.dataBasePath}/outfit-exchange.json`);
+                        const res = await fetch(this.dataUrl("outfit-exchange.json"));
                         this.outfitExchange = res.ok ? await res.json() : null;
                     } catch (e) {
                         console.error("Failed to load outfit exchange:", e);
@@ -1229,7 +1239,7 @@ const app = createApp({
 
             this.startContentLoading();
             try {
-                const res = await fetch(`${this.dataBasePath}/${slug}.json`);
+                const res = await fetch(this.dataUrl(`${slug}.json`));
                 const data = await res.json();
                 this.categoryItems[slug] = data.items;
                 this.categoryHeaders[slug] = data.headers;
@@ -1274,7 +1284,7 @@ const app = createApp({
                 const slug = categorySlug(entry.category);
 
                 if (!this.categoryItems[slug]) {
-                    const res = await fetch(`${this.dataBasePath}/${slug}.json`);
+                    const res = await fetch(this.dataUrl(`${slug}.json`));
                     const data = await res.json();
                     this.categoryItems[slug] = data.items;
                     this.categoryHeaders[slug] = data.headers;

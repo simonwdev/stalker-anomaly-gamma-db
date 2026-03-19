@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from "fs";
 import { join } from "path";
+import { createHash } from "crypto";
 
 // Parse --pack argument (supports both --pack=value and --pack value)
 function parsePackArg(argv) {
@@ -782,4 +783,14 @@ if (existsSync(appPath)) {
 const translationsOut = join(OUT_DIR, "translations.json");
 writeFileSync(translationsOut, JSON.stringify(translations, null, 2));
 console.log(`Wrote translations (${Object.keys(translations.en).length} en, ${Object.keys(translations.ru).length} ru) to ${translationsOut}`);
+
+// Generate manifest.json with content hashes for cache busting
+const manifest = {};
+for (const file of readdirSync(OUT_DIR).filter(f => f.endsWith(".json") && f !== "manifest.json")) {
+  const content = readFileSync(join(OUT_DIR, file));
+  manifest[file] = createHash("md5").update(content).digest("hex").slice(0, 8);
+}
+const manifestOut = join(OUT_DIR, "manifest.json");
+writeFileSync(manifestOut, JSON.stringify(manifest, null, 2));
+console.log(`Wrote manifest (${Object.keys(manifest).length} entries) to ${manifestOut}`);
 
