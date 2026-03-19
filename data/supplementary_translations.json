@@ -17,7 +17,8 @@
     "unit_msv_per_s": "mSv/s",
     "unit_msv": "mSv",
     "unit_s": "s",
-    "st_data_export_ap": "AP"
+    "st_data_export_ap": "AP",
+    "st_data_export_damage_mult": "Damage Multiplier"
   },
   "ru": {
     "st_data_export_outfit_artefact_count_max": "Макс. слоты на поясе",
@@ -38,6 +39,7 @@
     "unit_msv": "мЗв",
     "unit_s": "с",
     "st_prop_weight": "Вес",
-    "st_data_export_ap": "БП"
+    "st_data_export_ap": "БП",
+    "st_data_export_damage_mult": "Множитель урона"
   }
 }

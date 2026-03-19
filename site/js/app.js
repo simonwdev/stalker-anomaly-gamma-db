@@ -1995,6 +1995,7 @@ const app = createApp({
         headerLabel(h) {
             if (!h) return "";
             if (h === "_heal") return this.t("app_heal_heals");
+            if (h === "ui_inv_damage" && this.activeCategory === "Ammo") return this.t("st_data_export_damage_mult");
             const translated = this.t(h);
             if (translated !== h) return translated;
             return h;
