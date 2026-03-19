@@ -16,7 +16,8 @@
     "unit_rpm": "rpm",
     "unit_msv_per_s": "mSv/s",
     "unit_msv": "mSv",
-    "unit_s": "s"
+    "unit_s": "s",
+    "st_data_export_ap": "AP"
   },
   "ru": {
     "st_data_export_outfit_artefact_count_max": "Макс. слоты на поясе",
@@ -36,6 +37,7 @@
     "unit_msv_per_s": "мЗв/с",
     "unit_msv": "мЗв",
     "unit_s": "с",
-    "st_prop_weight": "Вес"
+    "st_prop_weight": "Вес",
+    "st_data_export_ap": "БП"
   }
 }

@@ -558,6 +558,46 @@ try {
   console.log("No outfit exchange CSV found, skipping outfit-exchange.json");
 }
 
+// Inject AP value into ammo items before writing category files
+const ammoDataPre = categoryData.get("ammo");
+if (ammoDataPre) {
+  const ammoBRPre = new Map();
+  const BR_COLS_PRE = ["BR1", "BR2", "BR3", "BR4", "BR5", "BR6", "BR7"];
+  try {
+    const ammoFile = readdirSync(CSV_DIR).find(f => /^export_ammo/.test(f));
+    if (ammoFile) {
+      const rawText = readFileSync(join(CSV_DIR, ammoFile), "utf-8");
+      const rawLines = rawText.split(/\r?\n/).filter(l => l.length > 0);
+      const rawHeaders = parseCsvLine(rawLines[0]).map(h => h.trim() === "~" ? "id" : h.trim());
+      const brIndices = BR_COLS_PRE.map(b => rawHeaders.indexOf(b));
+      for (let i = 1; i < rawLines.length; i++) {
+        const cols = parseCsvLine(rawLines[i]);
+        const id = cols[0]?.trim();
+        if (!id) continue;
+        for (let b = 0; b < BR_COLS_PRE.length; b++) {
+          const idx = brIndices[b];
+          const val = idx >= 0 ? cols[idx]?.trim() : "";
+          if (val) {
+            ammoBRPre.set(id, { class: b + 1, value: parseInt(val, 10) });
+            break;
+          }
+        }
+      }
+    }
+  } catch (e) {
+    console.warn("Could not read ammo BR data for AP injection:", e.message);
+  }
+  if (ammoBRPre.size > 0) {
+    if (!ammoDataPre.headers.includes("st_data_export_ap")) {
+      ammoDataPre.headers.push("st_data_export_ap");
+    }
+    for (const item of ammoDataPre.items) {
+      const br = ammoBRPre.get(item.id);
+      if (br) item.st_data_export_ap = br.value;
+    }
+  }
+}
+
 // Write per-category JSON files and build categories manifest
 const categoriesList = [];
 for (const [slug, data] of categoryData) {
