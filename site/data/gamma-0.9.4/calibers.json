@@ -708,5 +708,985 @@
         "apValue": 27
       }
     ]
+  },
+  "ammo-5.7x28-ss190": {
+    "name": "ammo-5.7x28-ss190",
+    "variants": [
+      {
+        "id": "ammo_5.7x28_ss190",
+        "name": "ammo-5.7x28-ss190",
+        "displayName": "ammo-5.7x28-ss190",
+        "ui_inv_damage": "0.69",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "30%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "2600",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 5,
+        "apValue": 40
+      }
+    ]
+  },
+  "ammo-5.7x28-ss195": {
+    "name": "ammo-5.7x28-ss195",
+    "variants": [
+      {
+        "id": "ammo_5.7x28_ss195",
+        "name": "ammo-5.7x28-ss195",
+        "displayName": "ammo-5.7x28-ss195",
+        "ui_inv_damage": "0.69",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "30%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1275",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 3,
+        "apValue": 25
+      }
+    ]
+  },
+  "ammo-9x18-fmj": {
+    "name": "ammo-9x18-fmj",
+    "variants": [
+      {
+        "id": "ammo_9x18_fmj",
+        "name": "ammo-9x18-fmj",
+        "displayName": "ammo-9x18-fmj",
+        "ui_inv_damage": "0.6",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "80%",
+        "ui_inv_bspeed": "187%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "560",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 2,
+        "apValue": 15
+      }
+    ]
+  },
+  "ammo-9x18-pmm": {
+    "name": "ammo-9x18-pmm",
+    "variants": [
+      {
+        "id": "ammo_9x18_pmm",
+        "name": "ammo-9x18-pmm",
+        "displayName": "ammo-9x18-pmm",
+        "ui_inv_damage": "1.1",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "80%",
+        "ui_inv_bspeed": "187%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "960",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 1,
+        "apValue": 10
+      }
+    ]
+  },
+  "ammo-9x18-ap": {
+    "name": "ammo-9x18-ap",
+    "variants": [
+      {
+        "id": "ammo_9x18_ap",
+        "name": "ammo-9x18-ap",
+        "displayName": "ammo-9x18-ap",
+        "ui_inv_damage": "0.6",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "80%",
+        "ui_inv_bspeed": "187%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1200",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 3,
+        "apValue": 27
+      }
+    ]
+  },
+  "ammo-357-hp": {
+    "name": "ammo-357-hp",
+    "variants": [
+      {
+        "id": "ammo_357_hp_mag",
+        "name": "ammo-357-hp",
+        "displayName": "ammo-357-hp",
+        "ui_inv_damage": "2.6",
+        "ui_inv_accuracy": "50%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "80%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "2600",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 3,
+        "apValue": 19
+      }
+    ]
+  },
+  "ammo_9x21_sp10": {
+    "name": "ammo_9x21_sp10",
+    "variants": [
+      {
+        "id": "ammo_9x21_sp10",
+        "name": "ammo_9x21_sp10",
+        "displayName": "ammo_9x21_sp10",
+        "ui_inv_damage": "1.15",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "80%",
+        "ui_inv_bspeed": "125%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "2150",
+        "st_data_export_weapon_degradation": "110%",
+        "apClass": 4,
+        "apValue": 32
+      }
+    ]
+  },
+  "ammo-11.43x23-fmj": {
+    "name": "ammo-11.43x23-fmj",
+    "variants": [
+      {
+        "id": "ammo_11.43x23_fmj",
+        "name": "ammo-11.43x23-fmj",
+        "displayName": "ammo-11.43x23-fmj",
+        "ui_inv_damage": "0.74",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "82%",
+        "ui_inv_bspeed": "187%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "950",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 3,
+        "apValue": 20
+      }
+    ]
+  },
+  "ammo-11.43x23-hydro": {
+    "name": "ammo-11.43x23-hydro",
+    "variants": [
+      {
+        "id": "ammo_11.43x23_hydro",
+        "name": "ammo-11.43x23-hydro",
+        "displayName": "ammo-11.43x23-hydro",
+        "ui_inv_damage": "1.64",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "82%",
+        "ui_inv_bspeed": "187%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1425",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 1,
+        "apValue": 10
+      }
+    ]
+  },
+  "ammo-9x19-fmj": {
+    "name": "ammo-9x19-fmj",
+    "variants": [
+      {
+        "id": "ammo_9x19_fmj",
+        "name": "ammo-9x19-fmj",
+        "displayName": "ammo-9x19-fmj",
+        "ui_inv_damage": "0.7",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "75%",
+        "ui_inv_bspeed": "187%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "645",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 2,
+        "apValue": 17
+      }
+    ]
+  },
+  "ammo-9x19-pbp": {
+    "name": "ammo-9x19-pbp",
+    "variants": [
+      {
+        "id": "ammo_9x19_pbp",
+        "name": "ammo-9x19-pbp",
+        "displayName": "ammo-9x19-pbp",
+        "ui_inv_damage": "1.35",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "75%",
+        "ui_inv_bspeed": "187%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1125",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 1,
+        "apValue": 10
+      }
+    ]
+  },
+  "ammo-9x19-ap": {
+    "name": "ammo-9x19-ap",
+    "variants": [
+      {
+        "id": "ammo_9x19_ap",
+        "name": "ammo-9x19-ap",
+        "displayName": "ammo-9x19-ap",
+        "ui_inv_damage": "0.7",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "75%",
+        "ui_inv_bspeed": "187%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "2350",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 4,
+        "apValue": 34
+      }
+    ]
+  },
+  "ammo-7.62x25-p": {
+    "name": "ammo-7.62x25-p",
+    "variants": [
+      {
+        "id": "ammo_7.62x25_p",
+        "name": "ammo-7.62x25-p",
+        "displayName": "ammo-7.62x25-p",
+        "ui_inv_damage": "0.7",
+        "ui_inv_accuracy": "70%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "35%",
+        "ui_inv_bspeed": "187%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "875",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 1,
+        "apValue": 8
+      }
+    ]
+  },
+  "ammo-7.62x25-ps": {
+    "name": "ammo-7.62x25-ps",
+    "variants": [
+      {
+        "id": "ammo_7.62x25_ps",
+        "name": "ammo-7.62x25-ps",
+        "displayName": "ammo-7.62x25-ps",
+        "ui_inv_damage": "0.7",
+        "ui_inv_accuracy": "68%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "35%",
+        "ui_inv_bspeed": "187%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "975",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 3,
+        "apValue": 25
+      }
+    ]
+  },
+  "ammo-12.7x55-fmj": {
+    "name": "ammo-12.7x55-fmj",
+    "variants": [
+      {
+        "id": "ammo_12.7x55_fmj",
+        "name": "ammo-12.7x55-fmj",
+        "displayName": "ammo-12.7x55-fmj",
+        "ui_inv_damage": "1.2",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "75%",
+        "ui_inv_bspeed": "80%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "3000",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 4,
+        "apValue": 38
+      }
+    ]
+  },
+  "ammo_12.7x55_ap": {
+    "name": "ammo_12.7x55_ap",
+    "variants": [
+      {
+        "id": "ammo_12.7x55_ap",
+        "name": "ammo_12.7x55_ap",
+        "displayName": "ammo_12.7x55_ap",
+        "ui_inv_damage": "1.2",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "75%",
+        "ui_inv_bspeed": "80%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "6900",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 7,
+        "apValue": 75
+      }
+    ]
+  },
+  "ammo-12x70-buck": {
+    "name": "ammo-12x70-buck",
+    "variants": [
+      {
+        "id": "ammo_12x70_buck",
+        "name": "ammo-12x70-buck",
+        "displayName": "ammo-12x70-buck",
+        "ui_inv_damage": "0.42",
+        "ui_inv_accuracy": "400%",
+        "ui_inv_wrange": "75%",
+        "st_data_export_falloff": "100%",
+        "ui_inv_bspeed": "142%",
+        "st_data_export_projectiles": "9",
+        "st_upgr_cost": "1000",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 1,
+        "apValue": 3
+      }
+    ]
+  },
+  "ammo-12x76-zhekan": {
+    "name": "ammo-12x76-zhekan",
+    "variants": [
+      {
+        "id": "ammo_12x76_zhekan",
+        "name": "ammo-12x76-zhekan",
+        "displayName": "ammo-12x76-zhekan",
+        "ui_inv_damage": "2.7",
+        "ui_inv_accuracy": "50%",
+        "ui_inv_wrange": "90%",
+        "st_data_export_falloff": "80%",
+        "ui_inv_bspeed": "120%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1650",
+        "st_data_export_weapon_degradation": "105%",
+        "apClass": 3,
+        "apValue": 24
+      }
+    ]
+  },
+  "ammo-12x76-dart": {
+    "name": "ammo-12x76-dart",
+    "variants": [
+      {
+        "id": "ammo_12x76_dart",
+        "name": "ammo-12x76-dart",
+        "displayName": "ammo-12x76-dart",
+        "ui_inv_damage": "1.52",
+        "ui_inv_accuracy": "33%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "80%",
+        "ui_inv_bspeed": "125%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "5000",
+        "st_data_export_weapon_degradation": "105%",
+        "apClass": 5,
+        "apValue": 42
+      }
+    ]
+  },
+  "ammo-12x70-buck_self": {
+    "name": "ammo-12x70-buck_self",
+    "variants": [
+      {
+        "id": "ammo_12x70_buck_self",
+        "name": "ammo-12x70-buck_self",
+        "displayName": "ammo-12x70-buck_self",
+        "ui_inv_damage": "0.3",
+        "ui_inv_accuracy": "500%",
+        "ui_inv_wrange": "70%",
+        "st_data_export_falloff": "200%",
+        "ui_inv_bspeed": "142%",
+        "st_data_export_projectiles": "11",
+        "st_upgr_cost": "460",
+        "st_data_export_weapon_degradation": "100%",
+        "apClass": 1,
+        "apValue": 3
+      }
+    ]
+  },
+  "ammo_20x70_buck": {
+    "name": "ammo_20x70_buck",
+    "variants": [
+      {
+        "id": "ammo_20x70_buck",
+        "name": "ammo_20x70_buck",
+        "displayName": "ammo_20x70_buck",
+        "ui_inv_damage": "0.3",
+        "ui_inv_accuracy": "380%",
+        "ui_inv_wrange": "75%",
+        "st_data_export_falloff": "100%",
+        "ui_inv_bspeed": "100%",
+        "st_data_export_projectiles": "9",
+        "st_upgr_cost": "600",
+        "st_data_export_weapon_degradation": "105%",
+        "apClass": 1,
+        "apValue": 3
+      }
+    ]
+  },
+  "ammo_23x75_shrapnel": {
+    "name": "ammo_23x75_shrapnel",
+    "variants": [
+      {
+        "id": "ammo_23x75_shrapnel",
+        "name": "ammo_23x75_shrapnel",
+        "displayName": "ammo_23x75_shrapnel",
+        "ui_inv_damage": "1.5",
+        "ui_inv_accuracy": "250%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "80%",
+        "ui_inv_bspeed": "110%",
+        "st_data_export_projectiles": "6",
+        "st_upgr_cost": "2000",
+        "st_data_export_weapon_degradation": "105%",
+        "apClass": 1,
+        "apValue": 6
+      }
+    ]
+  },
+  "ammo_23x75_barrikada": {
+    "name": "ammo_23x75_barrikada",
+    "variants": [
+      {
+        "id": "ammo_23x75_barrikada",
+        "name": "ammo_23x75_barrikada",
+        "displayName": "ammo_23x75_barrikada",
+        "ui_inv_damage": "4.2",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "70%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "7000",
+        "st_data_export_weapon_degradation": "105%",
+        "apClass": 6,
+        "apValue": 54
+      }
+    ]
+  },
+  "ammo-12x76-bull": {
+    "name": "ammo-12x76-bull",
+    "variants": [
+      {
+        "id": "ammo_12x76_bull",
+        "name": "ammo-12x76-bull",
+        "displayName": "ammo-12x76-bull",
+        "ui_inv_damage": "2.5",
+        "ui_inv_accuracy": "50%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "100%",
+        "ui_inv_bspeed": "100%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "5000",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 5,
+        "apValue": 40
+      }
+    ]
+  },
+  "ammo_23_eco": {
+    "name": "ammo_23_eco",
+    "variants": [
+      {
+        "id": "ammo_23_eco",
+        "name": "ammo_23_eco",
+        "displayName": "ammo_23_eco",
+        "ui_inv_damage": "1",
+        "ui_inv_accuracy": "50%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "15%",
+        "ui_inv_bspeed": "100%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "3500",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 2,
+        "apValue": 12
+      }
+    ]
+  },
+  "ammo-5.45x39-fmj": {
+    "name": "ammo-5.45x39-fmj",
+    "variants": [
+      {
+        "id": "ammo_5.45x39_fmj",
+        "name": "ammo-5.45x39-fmj",
+        "displayName": "ammo-5.45x39-fmj",
+        "ui_inv_damage": "1.14",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "25%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1350",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 3,
+        "apValue": 27
+      }
+    ]
+  },
+  "ammo-5.45x39-ep": {
+    "name": "ammo-5.45x39-ep",
+    "variants": [
+      {
+        "id": "ammo_5.45x39_ep",
+        "name": "ammo-5.45x39-ep",
+        "displayName": "ammo-5.45x39-ep",
+        "ui_inv_damage": "1.75",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "25%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1600",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 1,
+        "apValue": 10
+      }
+    ]
+  },
+  "ammo-5.45x39-ap": {
+    "name": "ammo-5.45x39-ap",
+    "variants": [
+      {
+        "id": "ammo_5.45x39_ap",
+        "name": "ammo-5.45x39-ap",
+        "displayName": "ammo-5.45x39-ap",
+        "ui_inv_damage": "1.1",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "25%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "5100",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 6,
+        "apValue": 47
+      }
+    ]
+  },
+  "ammo-5.56x45-fmj": {
+    "name": "ammo-5.56x45-fmj",
+    "variants": [
+      {
+        "id": "ammo_5.56x45_fmj",
+        "name": "ammo-5.56x45-fmj",
+        "displayName": "ammo-5.56x45-fmj",
+        "ui_inv_damage": "1.05",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "20%",
+        "ui_inv_bspeed": "160%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1500",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 3,
+        "apValue": 29
+      }
+    ]
+  },
+  "ammo-5.56x45-ss190": {
+    "name": "ammo-5.56x45-ss190",
+    "variants": [
+      {
+        "id": "ammo_5.56x45_ss190",
+        "name": "ammo-5.56x45-ss190",
+        "displayName": "ammo-5.56x45-ss190",
+        "ui_inv_damage": "1.57",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "20%",
+        "ui_inv_bspeed": "160%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1600",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 2,
+        "apValue": 13
+      }
+    ]
+  },
+  "ammo-5.56x45-ap": {
+    "name": "ammo-5.56x45-ap",
+    "variants": [
+      {
+        "id": "ammo_5.56x45_ap",
+        "name": "ammo-5.56x45-ap",
+        "displayName": "ammo-5.56x45-ap",
+        "ui_inv_damage": "1.05",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "20%",
+        "ui_inv_bspeed": "160%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "4100",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 6,
+        "apValue": 52
+      }
+    ]
+  },
+  "ammo-9x39-pab9": {
+    "name": "ammo-9x39-pab9",
+    "variants": [
+      {
+        "id": "ammo_9x39_pab9",
+        "name": "ammo-9x39-pab9",
+        "displayName": "ammo-9x39-pab9",
+        "ui_inv_damage": "1.04",
+        "ui_inv_accuracy": "50%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "63%",
+        "ui_inv_bspeed": "73%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1650",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 4,
+        "apValue": 34
+      }
+    ]
+  },
+  "ammo-9x39-ap": {
+    "name": "ammo-9x39-ap",
+    "variants": [
+      {
+        "id": "ammo_9x39_ap",
+        "name": "ammo-9x39-ap",
+        "displayName": "ammo-9x39-ap",
+        "ui_inv_damage": "1.04",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "63%",
+        "ui_inv_bspeed": "73%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "5350",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 7,
+        "apValue": 55
+      }
+    ]
+  },
+  "ammo-7.62x39_fmj": {
+    "name": "ammo-7.62x39_fmj",
+    "variants": [
+      {
+        "id": "ammo_7.62x39_fmj",
+        "name": "ammo-7.62x39_fmj",
+        "displayName": "ammo-7.62x39_fmj",
+        "ui_inv_damage": "1.17",
+        "ui_inv_accuracy": "75%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "30%",
+        "ui_inv_bspeed": "120%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1950",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 4,
+        "apValue": 30
+      }
+    ]
+  },
+  "ammo-7.62x39_ap": {
+    "name": "ammo-7.62x39_ap",
+    "variants": [
+      {
+        "id": "ammo_7.62x39_ap",
+        "name": "ammo-7.62x39_ap",
+        "displayName": "ammo-7.62x39_ap",
+        "ui_inv_damage": "1.17",
+        "ui_inv_accuracy": "75%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "30%",
+        "ui_inv_bspeed": "120%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "5450",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 7,
+        "apValue": 55
+      }
+    ]
+  },
+  "ammo-7.62x51_fmj": {
+    "name": "ammo-7.62x51_fmj",
+    "variants": [
+      {
+        "id": "ammo_7.62x51_fmj",
+        "name": "ammo-7.62x51_fmj",
+        "displayName": "ammo-7.62x51_fmj",
+        "ui_inv_damage": "0.89",
+        "ui_inv_accuracy": "50%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "25%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "3000",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 4,
+        "apValue": 34
+      }
+    ]
+  },
+  "ammo-7.62x51_ap": {
+    "name": "ammo-7.62x51_ap",
+    "variants": [
+      {
+        "id": "ammo_7.62x51_ap",
+        "name": "ammo-7.62x51_ap",
+        "displayName": "ammo-7.62x51_ap",
+        "ui_inv_damage": "0.89",
+        "ui_inv_accuracy": "50%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "25%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "7500",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 7,
+        "apValue": 62
+      }
+    ]
+  },
+  "ammo-7.62x54-7n1": {
+    "name": "ammo-7.62x54-7n1",
+    "variants": [
+      {
+        "id": "ammo_7.62x54_7h1",
+        "name": "ammo-7.62x54-7n1",
+        "displayName": "ammo-7.62x54-7n1",
+        "ui_inv_damage": "0.85",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "25%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "2250",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 4,
+        "apValue": 30
+      }
+    ]
+  },
+  "ammo-7.62x54-ap": {
+    "name": "ammo-7.62x54-ap",
+    "variants": [
+      {
+        "id": "ammo_7.62x54_ap",
+        "name": "ammo-7.62x54-ap",
+        "displayName": "ammo-7.62x54-ap",
+        "ui_inv_damage": "0.85",
+        "ui_inv_accuracy": "90%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "5%",
+        "ui_inv_bspeed": "125%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "9500",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 7,
+        "apValue": 80
+      }
+    ]
+  },
+  "ammo-7.62x54_7n14": {
+    "name": "ammo-7.62x54_7n14",
+    "variants": [
+      {
+        "id": "ammo_7.62x54_7h14",
+        "name": "ammo-7.62x54_7n14",
+        "displayName": "ammo-7.62x54_7n14",
+        "ui_inv_damage": "0.85",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "25%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "4000",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 5,
+        "apValue": 45
+      }
+    ]
+  },
+  "ammo-7.62x54-r": {
+    "name": "ammo-7.62x54-r",
+    "variants": [
+      {
+        "id": "ammo_pkm_100",
+        "name": "ammo-7.62x54-r",
+        "displayName": "ammo-7.62x54-r",
+        "ui_inv_damage": "1.02",
+        "ui_inv_accuracy": "90%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "10%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "5000",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 4,
+        "apValue": 37
+      }
+    ]
+  },
+  "ammo_338_federal": {
+    "name": "ammo_338_federal",
+    "variants": [
+      {
+        "id": "ammo_338_federal",
+        "name": "ammo_338_federal",
+        "displayName": "ammo_338_federal",
+        "ui_inv_damage": "10.7",
+        "ui_inv_accuracy": "67%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "5%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "4000",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 1,
+        "apValue": 8
+      }
+    ]
+  },
+  "ammo-338-lapua": {
+    "name": "ammo-338-lapua",
+    "variants": [
+      {
+        "id": "ammo_magnum_300",
+        "name": "ammo-338-lapua",
+        "displayName": "ammo-338-lapua",
+        "ui_inv_damage": "1.45",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "35%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "17000",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 7,
+        "apValue": 140
+      }
+    ]
+  },
+  "ammo-gauss": {
+    "name": "ammo-gauss",
+    "variants": [
+      {
+        "id": "ammo_gauss",
+        "name": "ammo-gauss",
+        "displayName": "ammo-gauss",
+        "ui_inv_damage": "2.5",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "1%",
+        "ui_inv_bspeed": "100%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "20512",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 7,
+        "apValue": 500
+      }
+    ]
+  },
+  "ammo-7.92x33_fmj": {
+    "name": "ammo-7.92x33_fmj",
+    "variants": [
+      {
+        "id": "ammo_7.92x33_fmj",
+        "name": "ammo-7.92x33_fmj",
+        "displayName": "ammo-7.92x33_fmj",
+        "ui_inv_damage": "1",
+        "ui_inv_accuracy": "85%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "25%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "1350",
+        "st_data_export_weapon_degradation": "200%",
+        "apClass": 3,
+        "apValue": 27
+      }
+    ]
+  },
+  "ammo-7.92x33_ap": {
+    "name": "ammo-7.92x33_ap",
+    "variants": [
+      {
+        "id": "ammo_7.92x33_ap",
+        "name": "ammo-7.92x33_ap",
+        "displayName": "ammo-7.92x33_ap",
+        "ui_inv_damage": "1",
+        "ui_inv_accuracy": "85%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "25%",
+        "ui_inv_bspeed": "150%",
+        "st_data_export_projectiles": "1",
+        "st_upgr_cost": "4500",
+        "st_data_export_weapon_degradation": "200%",
+        "apClass": 5,
+        "apValue": 39
+      }
+    ]
+  },
+  "ammo-og-7b": {
+    "name": "ammo-og-7b",
+    "variants": [
+      {
+        "id": "ammo_og-7b",
+        "name": "ammo-og-7b",
+        "displayName": "ammo-og-7b",
+        "ui_inv_damage": "1",
+        "ui_inv_accuracy": "152%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "100%",
+        "ui_inv_bspeed": "100%",
+        "st_data_export_projectiles": "0",
+        "st_upgr_cost": "12490",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 7,
+        "apValue": 125
+      }
+    ]
+  },
+  "ammo-m209": {
+    "name": "ammo-m209",
+    "variants": [
+      {
+        "id": "ammo_m209",
+        "name": "ammo-m209",
+        "displayName": "ammo-m209",
+        "ui_inv_damage": "0.8",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "100%",
+        "ui_inv_bspeed": "100%",
+        "st_data_export_projectiles": "0",
+        "st_upgr_cost": "2264",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 4,
+        "apValue": 35
+      }
+    ]
+  },
+  "ammo-vog-25": {
+    "name": "ammo-vog-25",
+    "variants": [
+      {
+        "id": "ammo_vog-25",
+        "name": "ammo-vog-25",
+        "displayName": "ammo-vog-25",
+        "ui_inv_damage": "0.8",
+        "ui_inv_accuracy": "66%",
+        "ui_inv_wrange": "100%",
+        "st_data_export_falloff": "100%",
+        "ui_inv_bspeed": "100%",
+        "st_data_export_projectiles": "0",
+        "st_upgr_cost": "2180",
+        "st_data_export_weapon_degradation": "40%",
+        "apClass": 4,
+        "apValue": 35
+      }
+    ]
   }
 }

@@ -2333,12 +2333,16 @@ const app = createApp({
             return SINGULAR_CATEGORY[val] || val;
         },
 
+        shortAmmoName(name) {
+            return name.replace(/\s*rounds$/i, "").replace(/^Патроны\s*/i, "").replace(/\s*мм\b/i, "").replace(/\s*mm\b/i, "").replace(/\bPst\b/, "PST");
+        },
+
         caliberName(val) {
             if (!val) return "--";
             return val.split(";").map(s => {
                 const cal = s.trim();
                 const entry = this.calibers[cal];
-                return entry ? entry.name : cal;
+                return this.shortAmmoName(entry ? this.t(entry.name) : this.t(cal));
             }).join(", ");
         },
 

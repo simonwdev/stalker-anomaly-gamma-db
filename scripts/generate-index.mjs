@@ -75,18 +75,24 @@ function parseCsvLine(line) {
   let i = 0;
   while (i < line.length) {
     if (line[i] === '"') {
-      // Quoted field
-      i++;
+      // Quoted field — also handles "val";"val" (semicolon-separated quoted values)
       let val = "";
-      while (i < line.length) {
-        if (line[i] === '"' && line[i + 1] === '"') {
-          val += '"';
-          i += 2;
-        } else if (line[i] === '"') {
-          i++; // closing quote
-          break;
+      while (i < line.length && line[i] !== ",") {
+        if (line[i] === '"') {
+          i++; // opening quote
+          while (i < line.length) {
+            if (line[i] === '"' && line[i + 1] === '"') {
+              val += '"';
+              i += 2;
+            } else if (line[i] === '"') {
+              i++; // closing quote
+              break;
+            } else {
+              val += line[i++];
+            }
+          }
         } else {
-          val += line[i++];
+          val += line[i++]; // semicolons between quoted values
         }
       }
       fields.push(val);

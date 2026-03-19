@@ -1,4 +1,4 @@
 ~, Pda_encyclopedia_name, St_prop_weight, St_upgr_cost, Ui_mm_repair, St_data_export_single_handed, Ui_inv_accuracy, Ui_inv_handling, Ui_inv_damage, Ui_inv_rate_of_fire, Ui_ammo_count, Ui_inv_wrange, Ui_inv_bspeed, Ui_inv_reli, Ui_inv_recoil, Ui_ammo_types, St_data_export_ammo_types_alt, BR1, BR2, BR3, BR4, BR5, BR6, BR7
-wpn_rpg7,st_wpn_rpg7,6.3,29800,N/A,N,77%,70%,0,200,1,1000,50,91%,25,OG-7B,,,,,,,,125
-wpn_m79,st_wpn_m79,2.7,26840,N/A,N,49%,77%,0,200,1,500,206,91%,26,M203,,,,,35,,,
-wpn_rg-6,st_wpn_rg6,6.2,38850,N/A,N,49%,77%,0,115,6,500,53,91%,32,VOG-25,,,,27,35,,,
+wpn_rpg7,st_wpn_rpg7,6.3,29800,N/A,N,77%,70%,0,200,1,1000,50,91%,25,"ammo-og-7b",,,,,,,,125
+wpn_m79,st_wpn_m79,2.7,26840,N/A,N,49%,77%,0,200,1,500,206,91%,26,"ammo-m209",,,,,35,,,
+wpn_rg-6,st_wpn_rg6,6.2,38850,N/A,N,49%,77%,0,115,6,500,53,91%,32,"ammo-vog-25",,,,27,35,,,

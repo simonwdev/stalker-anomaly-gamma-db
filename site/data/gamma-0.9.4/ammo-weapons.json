@@ -16,38 +16,6 @@
       "noDrop": true
     },
     {
-      "id": "wpn_pkm",
-      "name": "st_wpn_rp",
-      "displayName": "st_wpn_rp",
-      "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_pkp",
-      "name": "st_wpn_pkp",
-      "displayName": "st_wpn_pkp",
-      "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_pkm_zenit_siber",
-      "name": "st_wpn_pkm_zenit_siber",
-      "displayName": "st_wpn_pkm_zenit_siber",
-      "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_pkm_zulus",
-      "name": "st_wpn_pkm_zulus",
-      "displayName": "st_wpn_pkm_zulus",
-      "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
       "id": "wpn_l96a1",
       "name": "st_wpn_l96a1",
       "displayName": "st_wpn_l96a1",
@@ -429,38 +397,6 @@
       "displayName": "st_wpn_type63",
       "category": "Rifles",
       "isAlt": true,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_pkm",
-      "name": "st_wpn_rp",
-      "displayName": "st_wpn_rp",
-      "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_pkp",
-      "name": "st_wpn_pkp",
-      "displayName": "st_wpn_pkp",
-      "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_pkm_zenit_siber",
-      "name": "st_wpn_pkm_zenit_siber",
-      "displayName": "st_wpn_pkm_zenit_siber",
-      "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_pkm_zulus",
-      "name": "st_wpn_pkm_zulus",
-      "displayName": "st_wpn_pkm_zulus",
-      "category": "Rifles",
-      "isAlt": false,
       "noDrop": true
     },
     {
@@ -4186,14 +4122,6 @@
       "isAlt": false
     },
     {
-      "id": "wpn_toz34_bull",
-      "name": "st_wpn_toz34_bull",
-      "displayName": "st_wpn_toz34_bull",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
       "id": "wpn_protecta_nimble",
       "name": "st_wpn_streetsweeper_nimble",
       "displayName": "st_wpn_streetsweeper_nimble",
@@ -4543,14 +4471,6 @@
       "isAlt": false
     },
     {
-      "id": "wpn_toz34_bull",
-      "name": "st_wpn_toz34_bull",
-      "displayName": "st_wpn_toz34_bull",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
       "id": "wpn_protecta_nimble",
       "name": "st_wpn_streetsweeper_nimble",
       "displayName": "st_wpn_streetsweeper_nimble",
@@ -4683,359 +4603,12 @@
   ],
   "ammo_12x76_bull": [
     {
-      "id": "wpn_toz34_obrez",
-      "name": "st_wpn_toz34_obrez",
-      "displayName": "st_wpn_toz34_obrez",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_toz106_m1",
-      "name": "st_wpn_toz106_m1",
-      "displayName": "st_wpn_toz106_m1",
-      "category": "Shotguns",
-      "isAlt": true
-    },
-    {
-      "id": "wpn_protecta_custom",
-      "name": "st_wpn_streetsweeper",
-      "displayName": "st_wpn_streetsweeper [custom]",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_ithacam37",
-      "name": "st_wpn_ithacam37",
-      "displayName": "st_wpn_ithacam37",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_bm16_full",
-      "name": "st_wpn_bm16_full",
-      "displayName": "st_wpn_bm16_full",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_protecta_camo",
-      "name": "st_wpn_streetsweeper",
-      "displayName": "st_wpn_streetsweeper [camo]",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_bm16",
-      "name": "st_wpn_bm16",
-      "displayName": "st_wpn_bm16",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_ithacam37_trench",
-      "name": "st_wpn_ithacam37_trench",
-      "displayName": "st_wpn_ithacam37_trench",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_mossberg590_rail",
-      "name": "st_wpn_mossberg590a1_rail",
-      "displayName": "st_wpn_mossberg590a1_rail",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_saiga12s",
-      "name": "st_wpn_saiga12s",
-      "displayName": "st_wpn_saiga12s",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_ithacam37_mag",
-      "name": "st_wpn_ithacam37_extmag",
-      "displayName": "st_wpn_ithacam37_extmag",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_saiga12s_isg",
-      "name": "st_wpn_saiga12s_isg",
-      "displayName": "st_wpn_saiga12s_isg",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_mp153",
-      "name": "st_wpn_mp153_bas",
-      "displayName": "st_wpn_mp153_bas",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_toz34_decor",
-      "name": "st_wpn_toz34_decor",
-      "displayName": "st_wpn_toz34_decor",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_wincheaster1300",
-      "name": "st_wpn_toz194",
-      "displayName": "st_wpn_toz194 [default]",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_vepr",
-      "name": "st_wpn_vepr12",
-      "displayName": "st_wpn_vepr12",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_toz34",
-      "name": "st_wpn_toz34",
-      "displayName": "st_wpn_toz34",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_mp153_m1",
-      "name": "st_wpn_mp153_m1",
-      "displayName": "st_wpn_mp153_m1",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_usas12",
-      "name": "st_wpn_usas12",
-      "displayName": "st_wpn_usas12",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_mossberg590_wood",
-      "name": "st_wpn_mossberg590a1_wood",
-      "displayName": "st_wpn_mossberg590a1_wood",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_raptr",
-      "name": "st_wpn_raptr",
-      "displayName": "st_wpn_raptr",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_toz34_obrez_decor",
-      "name": "st_wpn_toz34_obrez_decor",
-      "displayName": "st_wpn_toz34_obrez_decor",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_toz34_obrez_custom",
-      "name": "st_wpn_toz34_obrez_custom",
-      "displayName": "st_wpn_toz34_obrez_custom",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_toz34_mark4_23",
-      "name": "st_wpn_toz34_mark4_23",
-      "displayName": "st_wpn_toz34_mark4_23",
-      "category": "Shotguns",
-      "isAlt": true
-    },
-    {
-      "id": "wpn_toz34_mark4",
-      "name": "st_wpn_toz34_mark4",
-      "displayName": "st_wpn_toz34_mark4",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_spas12_custom",
-      "name": "st_wpn_spas12_new",
-      "displayName": "st_wpn_spas12_new [custom]",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_toz106",
-      "name": "st_wpn_toz106",
-      "displayName": "st_wpn_toz106",
-      "category": "Shotguns",
-      "isAlt": true
-    },
-    {
-      "id": "wpn_fort500",
-      "name": "st_wpn_fort500",
-      "displayName": "st_wpn_fort500",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_benelli_m1014",
-      "name": "st_wpn_benelli_m1014",
-      "displayName": "st_wpn_benelli_m1014",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
       "id": "wpn_toz34_bull",
       "name": "st_wpn_toz34_bull",
       "displayName": "st_wpn_toz34_bull",
       "category": "Shotguns",
       "isAlt": false,
       "noDrop": true
-    },
-    {
-      "id": "wpn_protecta_nimble",
-      "name": "st_wpn_streetsweeper_nimble",
-      "displayName": "st_wpn_streetsweeper_nimble",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_ithacam37_stakeout",
-      "name": "st_wpn_ithacam37_stakeout",
-      "displayName": "st_wpn_ithacam37_stakeout [default]",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_bm16_full_alt",
-      "name": "st_wpn_bm16_full_alt",
-      "displayName": "st_wpn_bm16_full_alt",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_toz34_custom",
-      "name": "st_wpn_toz34_custom",
-      "displayName": "st_wpn_toz34_custom",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_bm16_alt",
-      "name": "st_wpn_bm16_alt",
-      "displayName": "st_wpn_bm16_alt",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_spas12_nimble",
-      "name": "st_wpn_spas12_new",
-      "displayName": "st_wpn_spas12_new [nimble]",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_spas12",
-      "name": "st_wpn_spas12_new",
-      "displayName": "st_wpn_spas12_new [default]",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_saiga12s_m2",
-      "name": "st_wpn_saiga12s_m2",
-      "displayName": "st_wpn_saiga12s_m2",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_wincheaster1300_trapper",
-      "name": "st_wpn_toz194",
-      "displayName": "st_wpn_toz194 [trapper]",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_mp133",
-      "name": "st_wpn_mp133_bas",
-      "displayName": "st_wpn_mp133_bas",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_ithacam37_sawnoff",
-      "name": "st_wpn_ithacam37_sawnoff",
-      "displayName": "st_wpn_ithacam37_sawnoff",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_remington870",
-      "name": "st_wpn_remington870",
-      "displayName": "st_wpn_remington870",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_protecta",
-      "name": "st_wpn_streetsweeper",
-      "displayName": "st_wpn_streetsweeper [default]",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_mossberg590",
-      "name": "st_wpn_mossberg590a1",
-      "displayName": "st_wpn_mossberg590a1",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_protecta_aim",
-      "name": "st_wpn_streetsweeper_aim",
-      "displayName": "st_wpn_streetsweeper_aim",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_saiga12s_m1",
-      "name": "st_wpn_saiga12s_m1",
-      "displayName": "st_wpn_saiga12s_m1",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_mp155",
-      "name": "st_wpn_mp155",
-      "displayName": "st_wpn_mp155",
-      "category": "Shotguns",
-      "isAlt": false
     }
   ],
   "ammo_7.62x25_ps": [
@@ -8661,13 +8234,6 @@
       "isAlt": false
     },
     {
-      "id": "wpn_mossberg590_rail",
-      "name": "st_wpn_mossberg590a1_rail",
-      "displayName": "st_wpn_mossberg590a1_rail",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
       "id": "wpn_saiga12s",
       "name": "st_wpn_saiga12s",
       "displayName": "st_wpn_saiga12s",
@@ -8681,21 +8247,6 @@
       "displayName": "st_wpn_ithacam37_extmag",
       "category": "Shotguns",
       "isAlt": false
-    },
-    {
-      "id": "wpn_saiga12s_isg",
-      "name": "st_wpn_saiga12s_isg",
-      "displayName": "st_wpn_saiga12s_isg",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
-      "id": "wpn_mp153",
-      "name": "st_wpn_mp153_bas",
-      "displayName": "st_wpn_mp153_bas",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
     },
     {
       "id": "wpn_toz34_decor",
@@ -8728,25 +8279,9 @@
       "isAlt": false
     },
     {
-      "id": "wpn_mp153_m1",
-      "name": "st_wpn_mp153_m1",
-      "displayName": "st_wpn_mp153_m1",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
       "id": "wpn_usas12",
       "name": "st_wpn_usas12",
       "displayName": "st_wpn_usas12",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_mossberg590_wood",
-      "name": "st_wpn_mossberg590a1_wood",
-      "displayName": "st_wpn_mossberg590a1_wood",
       "category": "Shotguns",
       "isAlt": false,
       "noDrop": true
@@ -8860,24 +8395,9 @@
       "isAlt": false
     },
     {
-      "id": "wpn_saiga12s_m2",
-      "name": "st_wpn_saiga12s_m2",
-      "displayName": "st_wpn_saiga12s_m2",
-      "category": "Shotguns",
-      "isAlt": false
-    },
-    {
       "id": "wpn_wincheaster1300_trapper",
       "name": "st_wpn_toz194",
       "displayName": "st_wpn_toz194 [trapper]",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
-      "id": "wpn_mp133",
-      "name": "st_wpn_mp133_bas",
-      "displayName": "st_wpn_mp133_bas",
       "category": "Shotguns",
       "isAlt": false,
       "noDrop": true
@@ -8905,27 +8425,12 @@
       "isAlt": false
     },
     {
-      "id": "wpn_mossberg590",
-      "name": "st_wpn_mossberg590a1",
-      "displayName": "st_wpn_mossberg590a1",
-      "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
-    },
-    {
       "id": "wpn_protecta_aim",
       "name": "st_wpn_streetsweeper_aim",
       "displayName": "st_wpn_streetsweeper_aim",
       "category": "Shotguns",
       "isAlt": false,
       "noDrop": true
-    },
-    {
-      "id": "wpn_saiga12s_m1",
-      "name": "st_wpn_saiga12s_m1",
-      "displayName": "st_wpn_saiga12s_m1",
-      "category": "Shotguns",
-      "isAlt": false
     },
     {
       "id": "wpn_mp155",
@@ -10446,6 +9951,227 @@
       "displayName": "st_wpn_kiparis",
       "category": "SMGs",
       "isAlt": false
+    }
+  ],
+  "ammo_357_hp_mag": [
+    {
+      "id": "wpn_desert_eagle",
+      "name": "st_wpn_desert_eagle",
+      "displayName": "st_wpn_desert_eagle",
+      "category": "Pistols",
+      "isAlt": false
+    },
+    {
+      "id": "wpn_desert_eagle_nimble",
+      "name": "st_wpn_desert_eagle_nimble",
+      "displayName": "st_wpn_desert_eagle_nimble",
+      "category": "Pistols",
+      "isAlt": false,
+      "noDrop": true
+    },
+    {
+      "id": "wpn_colt1911_camo",
+      "name": "st_wpn_coonan357",
+      "displayName": "st_wpn_coonan357",
+      "category": "Pistols",
+      "isAlt": false
+    },
+    {
+      "id": "wpn_mp412",
+      "name": "st_wpn_mp412",
+      "displayName": "st_wpn_mp412",
+      "category": "Pistols",
+      "isAlt": false
+    },
+    {
+      "id": "wpn_winchester1873",
+      "name": "st_wpn_winchester1873",
+      "displayName": "st_wpn_winchester1873",
+      "category": "Snipers",
+      "isAlt": false
+    }
+  ],
+  "ammo_23_eco": [
+    {
+      "id": "wpn_ks23_ecolog",
+      "name": "st_wpn_ks23_ecolog",
+      "displayName": "st_wpn_ks23_ecolog",
+      "category": "Shotguns",
+      "isAlt": false,
+      "noDrop": true
+    }
+  ],
+  "ammo_pkm_100": [
+    {
+      "id": "wpn_pkm",
+      "name": "st_wpn_rp",
+      "displayName": "st_wpn_rp",
+      "category": "Rifles",
+      "isAlt": false,
+      "noDrop": true
+    },
+    {
+      "id": "wpn_pkp",
+      "name": "st_wpn_pkp",
+      "displayName": "st_wpn_pkp",
+      "category": "Rifles",
+      "isAlt": false,
+      "noDrop": true
+    },
+    {
+      "id": "wpn_pkm_zenit_siber",
+      "name": "st_wpn_pkm_zenit_siber",
+      "displayName": "st_wpn_pkm_zenit_siber",
+      "category": "Rifles",
+      "isAlt": false,
+      "noDrop": true
+    },
+    {
+      "id": "wpn_pkm_siber",
+      "name": "st_wpn_pkm_siber",
+      "displayName": "st_wpn_pkm_siber",
+      "category": "Rifles",
+      "isAlt": false
+    },
+    {
+      "id": "wpn_pkp_siber",
+      "name": "st_wpn_pkp_siber",
+      "displayName": "st_wpn_pkp_siber",
+      "category": "Rifles",
+      "isAlt": false
+    },
+    {
+      "id": "wpn_pkm_zulus",
+      "name": "st_wpn_pkm_zulus",
+      "displayName": "st_wpn_pkm_zulus",
+      "category": "Rifles",
+      "isAlt": false,
+      "noDrop": true
+    },
+    {
+      "id": "wpn_svt40_modern",
+      "name": "st_wpn_svt40_modern",
+      "displayName": "st_wpn_svt40_modern",
+      "category": "Snipers",
+      "isAlt": true,
+      "noDrop": true
+    },
+    {
+      "id": "wpn_svt40",
+      "name": "st_wpn_svt40",
+      "displayName": "st_wpn_svt40",
+      "category": "Snipers",
+      "isAlt": true,
+      "noDrop": true
+    },
+    {
+      "id": "wpn_k98",
+      "name": "st_wpn_k98",
+      "displayName": "st_wpn_k98",
+      "category": "Snipers",
+      "isAlt": true
+    }
+  ],
+  "ammo_338_federal": [
+    {
+      "id": "wpn_dvl10_m1",
+      "name": "st_wpn_dvl10_m1",
+      "displayName": "st_wpn_dvl10_m1",
+      "category": "Snipers",
+      "isAlt": false
+    },
+    {
+      "id": "wpn_remington700_lapua700",
+      "name": "st_wpn_remington700_lapua700",
+      "displayName": "st_wpn_remington700_lapua700",
+      "category": "Snipers",
+      "isAlt": false
+    }
+  ],
+  "ammo_magnum_300": [
+    {
+      "id": "wpn_m24",
+      "name": "st_wpn_m24",
+      "displayName": "st_wpn_m24",
+      "category": "Snipers",
+      "isAlt": false,
+      "noDrop": true
+    },
+    {
+      "id": "wpn_l96a1m",
+      "name": "st_wpn_l96a1m",
+      "displayName": "st_wpn_l96a1m",
+      "category": "Snipers",
+      "isAlt": false
+    },
+    {
+      "id": "wpn_m98b",
+      "name": "st_wpn_m98b",
+      "displayName": "st_wpn_m98b",
+      "category": "Snipers",
+      "isAlt": false
+    },
+    {
+      "id": "wpn_trg",
+      "name": "st_trg_sako",
+      "displayName": "st_trg_sako",
+      "category": "Snipers",
+      "isAlt": false,
+      "noDrop": true
+    }
+  ],
+  "ammo_gauss": [
+    {
+      "id": "wpn_gauss_quest",
+      "name": "lttz_ll_wpn_gauss_quest_name",
+      "displayName": "lttz_ll_wpn_gauss_quest_name",
+      "category": "Snipers",
+      "isAlt": false,
+      "noDrop": true
+    },
+    {
+      "id": "wpn_gauss",
+      "name": "st_wpn_gauss_bas",
+      "displayName": "st_wpn_gauss_bas",
+      "category": "Snipers",
+      "isAlt": false
+    },
+    {
+      "id": "pri_a17_gauss_rifle",
+      "name": "st_wpn_umirotvoritel_bas",
+      "displayName": "st_wpn_umirotvoritel_bas",
+      "category": "Snipers",
+      "isAlt": false,
+      "noDrop": true
+    }
+  ],
+  "ammo_og-7b": [
+    {
+      "id": "wpn_rpg7",
+      "name": "st_wpn_rpg7",
+      "displayName": "st_wpn_rpg7",
+      "category": "Launchers",
+      "isAlt": false
+    }
+  ],
+  "ammo_m209": [
+    {
+      "id": "wpn_m79",
+      "name": "st_wpn_m79",
+      "displayName": "st_wpn_m79",
+      "category": "Launchers",
+      "isAlt": false,
+      "noDrop": true
+    }
+  ],
+  "ammo_vog-25": [
+    {
+      "id": "wpn_rg-6",
+      "name": "st_wpn_rg6",
+      "displayName": "st_wpn_rg6",
+      "category": "Launchers",
+      "isAlt": false,
+      "noDrop": true
     }
   ]
 }

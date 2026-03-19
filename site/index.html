@@ -496,7 +496,9 @@
                                 <span class="badge" :style="displayStyle(field, item[field])">{{ displayLabel(field, item[field]) }}</span>
                             </template>
                             <template v-else-if="field === 'ui_ammo_types' || field === 'st_data_export_ammo_types_alt'">
-                                <span v-if="item[field]" :class="field === 'st_data_export_ammo_types_alt' ? 'badge-ammo badge-ammo-alt' : 'badge-ammo'">{{ caliberName(item[field]) }}</span>
+                                <span v-if="item[field]" class="tile-ammo-list">
+                                    <span v-for="a in item[field].split(';')" :key="a" :class="field === 'st_data_export_ammo_types_alt' ? 'badge-ammo badge-ammo-alt' : 'badge-ammo'">{{ caliberName(a.trim()) }}</span>
+                                </span>
                                 <span v-else class="stat-value">--</span>
                             </template>
                             <template v-else-if="field === 'ui_st_community'">
@@ -643,7 +645,7 @@
                         <template v-else-if="(row.key === 'ui_ammo_types' || row.key === 'st_data_export_ammo_types_alt') && row.value">
                             <span class="stat-label">{{ headerLabel(row.key) }}</span>
                             <span class="stat-value ammo-variants">
-                                <span v-for="v in caliberVariantObjects(row.value)" :key="v.id || v.name" class="badge-ammo" :class="{ clickable: v.id }" @click="v.id && navigateToItem(v.id)">{{ tName(v) }}</span>
+                                <span v-for="v in caliberVariantObjects(row.value)" :key="v.id || v.name" class="badge-ammo" :class="{ clickable: v.id }" @click="v.id && navigateToItem(v.id)">{{ shortAmmoName(tName(v)) }}</span>
                             </span>
                         </template>
                         <template v-else>
@@ -677,8 +679,8 @@
                             <tbody>
                                 <tr v-for="v in modalAmmoVariants" :key="v.id || v.name" :class="{ 'ammo-alt-row': v.isAlt }">
                                     <td>
-                                        <a v-if="v.id" href="#" @click.prevent="navigateToItem(v.id)" class="ammo-variant-link">{{ tName(v) }}</a>
-                                        <span v-else>{{ tName(v) }}</span>
+                                        <a v-if="v.id" href="#" @click.prevent="navigateToItem(v.id)" class="ammo-variant-link">{{ shortAmmoName(tName(v)) }}</a>
+                                        <span v-else>{{ shortAmmoName(tName(v)) }}</span>
                                         <span v-if="v.isAlt" class="badge-ammo badge-ammo-alt ammo-alt-tag">{{ t('app_badge_alt') }}</span>
                                     </td>
                                     <td v-for="k in modalAmmoStatKeys" :key="k" class="ammo-stat-cell" :class="{ 'ammo-best': isAmmoBest(k, v[k], v) }">{{ formatAmmoStat(k, v[k], v) }}<template v-if="ammoArrow(k, v[k]) !== null"><span class="ammo-arrow" :class="ammoArrow(k, v[k]) > 0 ? 'arrow-up' : ammoArrow(k, v[k]) < 0 ? 'arrow-down' : 'arrow-neutral'">{{ ammoArrow(k, v[k]) > 0 ? '\u25B2' : ammoArrow(k, v[k]) < 0 ? '\u25BC' : '\u25CF' }}</span></template></td>

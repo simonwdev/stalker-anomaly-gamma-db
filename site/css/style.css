@@ -554,6 +554,22 @@ a.tile-card-name:hover {
     grid-template-columns: 1fr 1fr;
     gap: 0.1rem 0.75rem;
 }
+.tile-stat-row:has(.tile-ammo-list) {
+    grid-column: 1 / -1;
+}
+.tile-ammo-list {
+    display: flex;
+    gap: 0.2rem;
+    overflow: hidden;
+    min-width: 0;
+}
+.tile-ammo-list .badge-ammo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    min-width: 0;
+}
 .tile-stat-row .badge,
 .tile-stat-row .badge-ammo,
 .tile-stat-row .badge-flag {

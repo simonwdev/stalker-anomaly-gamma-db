@@ -1,4 +1,5 @@
 local cmd_list = {
+    {name = "Change headers mode", cmd = "change_headers_mode", hide_ui = 0},
     { name = "Export outfits", cmd = "export_outfits", hide_ui = 0 },
     --{ 	name = "Export outfits upgrades" 				, cmd = "export_outfits_upgrades"    				         , hide_ui = 0 								},
     { name = "Export eatable", cmd = "export_eatable", hide_ui = 0 },
@@ -18,8 +19,27 @@ local cmd_list = {
     { name = "Export mutant parts prices", cmd = "export_mutant_parts_prices", hide_ui = 0 },
     { name = "Export weapon drop sources", cmd = "export_weapon_drop_sources", hide_ui = 0 },
     { name = "Export complete item list", cmd = "export_item_list", hide_ui = 0 },
+    {name = "Export translations", cmd = "export_translations", hide_ui = 0},
+    {name = "Export all", cmd = "export_all", hide_ui = 0},
     --{ 	name = "Export weapons upgrades" 				, cmd = "export_weapons_upgrades"    				         , hide_ui = 0 								},
 }
+
+function debug_cmd_list.cmd.export_all(_, txt, x)
+    for i, cmd in ipairs(cmd_list) do
+        if cmd.cmd ~= "export_translations" and cmd.cmd ~= "change_headers_mode" and cmd.cmd ~= "export_all" and cmd.cmd ~= "export_item_list" then
+            debug_cmd_list.cmd[cmd.cmd](nil, nil, x)
+        end
+    end
+end
+
+-- 0 - translated values, 1 - translation keys
+local headers_mode = 0
+function debug_cmd_list.cmd.change_headers_mode(_, txt, x)
+    headers_mode = (headers_mode + 1) % 2
+    local mode_text = headers_mode == 0 and "Translated" or "Translation Keys"
+    x:SendOutput("Headers mode changed to %s", mode_text)
+end
+
 
 for i, cmd in ipairs(cmd_list) do
     ui_debug_launcher.inject("action", cmd)
@@ -69,6 +89,7 @@ function to_percent_stash(value)
 end
 
 function decimal_to_percent(value)
+    value = value or 0
     return to_percent_floor(tonumber(value) * 100)
 end
 
@@ -114,6 +135,55 @@ function string.sanitize(s)
     return s:gsub("%%.*%[.*%]", ""):gsub(":", ""):gsub(",", "."):gsub("%%s", "")
 end
 
+local translated_keys = {}
+function translate(name, default, context)
+    if not name then
+        printf("[TRANSLATE for context %s] %s", context or "", debug.traceback())
+    end
+
+    name = name or ""
+    translated_keys[name] = true
+    if headers_mode == 1 then
+        if name ~= "" then
+            return name
+        end
+        translated_keys[default or ""] = true
+        return default or ""
+    end
+
+    local translated = game.translate_string(name)
+    if translated ~= "" then
+        return translated
+    end
+    return translate_with_context(default or "", context .. " (default)")
+end
+
+function translate_with_context(name, context)
+    return translate(name, nil, context)
+end
+
+function debug_cmd_list.cmd.export_translations(_, txt, x)
+    x:SendOutput("[START] export translations")
+
+    local p_file = "export_translations.csv"
+    local debug_file = io.open(p_file, "w+")
+    if (debug_file == nil) then
+        x:SendOutput("Failed to create/open file %s", p_file)
+        debug_file:close()
+        return
+    end
+    write_file(debug_file, "Translation Key,Translated Value")
+    local cnt = 0
+    for key, _ in pairs(translated_keys) do
+        if key ~= "" then
+            write_file(debug_file, "%s,%s", key, game.translate_string(key) or "")
+            cnt = cnt + 1
+        end
+    end
+    debug_file:close()
+    x:SendOutput("[END] export translations - %s total keys exported - see in Gamma\\Overwrite\\bin\\%s", cnt, p_file)
+end
+
 function translate_headers(headers)
     local header = ""
     for i, v in ipairs(headers) do
@@ -121,7 +191,7 @@ function translate_headers(headers)
             header = header .. ", "
         end
 
-        local translated = game.translate_string(v)
+        local translated = translate_with_context(v, "header for " .. v)
         local clean = translated:sanitize():trim():capitalize()
         printf("translated header '%s' to '%s'", v, translated)
         header = header .. clean
@@ -244,8 +314,8 @@ function debug_cmd_list.cmd.export_outfits(_, txt, x)
                 local outfit = {}
                 outfit.typ = repair_type
                 outfit.indx = outfit_type[repair_type] or 0
-                outfit.faction = game.translate_string(ini_sys:r_string_ex(section, "community")) or "Unknown"
-                outfit.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name")) or ""
+                outfit.faction = translate(ini_sys:r_string_ex(section, "community"), "st_data_export_unknown", "faction for " .. section)
+                outfit.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
                 local rt = ini_sys:r_string_ex(section, "repair_type")
                 --printf("export outfit - %s, repair type %s", section, rt)
                 outfit.repair_label = get_outfit_repair_label(rt)
@@ -394,7 +464,7 @@ function getEatableSleepiness(section)
     local sleep_mult = get_local_val([[gamedata\scripts\actor_status_sleep.script]], "actor_status_sleep", "local eat_sleepiness_mul") or 1000
     eat_sleepiness = eat_sleepiness * sleep_mult
     local sleep_num = eat_sleepiness / max_sleep * 100
-    return sleep_num
+    return tonumber(string.format("%.2f", sleep_num))
 end
 
 function getEatableThirstiness(section)
@@ -518,7 +588,7 @@ function debug_cmd_list.cmd.export_eatable(_, txt, x)
         if kind and food_kinds[kind] then
             x:SendOutput("export eatable - %s", section)
             local eatable = {}
-            eatable.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name")) or ""
+            eatable.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
             eatable.cost = ini_sys:r_float_ex(section, "cost") or 0
             eatable.weight = ini_sys:r_float_ex(section, "inv_weight") or 0
             eatable.tier = ini_sys:r_float_ex(section, "tier") or 0
@@ -699,7 +769,7 @@ function debug_cmd_list.cmd.export_medicine(_, txt, x)
         if kind and food_kinds[kind] then
             x:SendOutput("export medicine - %s", section)
             local eatable = {}
-            eatable.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name")) or ""
+            eatable.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
             eatable.cost = ini_sys:r_float_ex(section, "cost") or 0
             eatable.weight = ini_sys:r_float_ex(section, "inv_weight") or 0
             eatable.tier = ini_sys:r_float_ex(section, "tier") or 0
@@ -823,7 +893,7 @@ function debug_cmd_list.cmd.export_artefacts(_, txt, x)
         if kind and artefacts_kinds[kind] then
             x:SendOutput("export artefact - %s", section)
             local artefact = {}
-            artefact.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name")) or ""
+            artefact.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
             artefact.cost = ini_sys:r_float_ex(section, "cost") or 0
             artefact.weight = ini_sys:r_float_ex(section, "inv_weight") or 0
             artefact.tier = ini_sys:r_float_ex(section, "tier") or 0
@@ -910,14 +980,14 @@ function debug_cmd_list.cmd.export_artefact_recipes(_, txt, x)
     for section, recipes in pairs(craftable) do
         for i, raw_recipe in ipairs(recipes) do
             local recipe = {}
-            recipe.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name")) or ""
-            recipe.ingr_1_name = raw_recipe[1] and ini_sys:r_string_ex(raw_recipe[1][1], "inv_name") and game.translate_string(ini_sys:r_string_ex(raw_recipe[1][1], "inv_name")) or ""
+            recipe.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
+            recipe.ingr_1_name = raw_recipe[1] and ini_sys:r_string_ex(raw_recipe[1][1], "inv_name") and translate_with_context(ini_sys:r_string_ex(raw_recipe[1][1], "inv_name"), "item name for " .. raw_recipe[1][1])
             recipe.ingr_1_amt = raw_recipe[1] and raw_recipe[1][2] and "x" .. raw_recipe[1][2] or ""
-            recipe.ingr_2_name = raw_recipe[2] and ini_sys:r_string_ex(raw_recipe[2][1], "inv_name") and game.translate_string(ini_sys:r_string_ex(raw_recipe[2][1], "inv_name")) or ""
+            recipe.ingr_2_name = raw_recipe[2] and ini_sys:r_string_ex(raw_recipe[2][1], "inv_name") and translate_with_context(ini_sys:r_string_ex(raw_recipe[2][1], "inv_name"), "item name for " .. raw_recipe[2][1])
             recipe.ingr_2_amt = raw_recipe[2] and raw_recipe[2][2] and "x" .. raw_recipe[2][2] or ""
-            recipe.ingr_3_name = raw_recipe[3] and ini_sys:r_string_ex(raw_recipe[3][1], "inv_name") and game.translate_string(ini_sys:r_string_ex(raw_recipe[3][1], "inv_name")) or ""
+            recipe.ingr_3_name = raw_recipe[3] and ini_sys:r_string_ex(raw_recipe[3][1], "inv_name") and translate_with_context(ini_sys:r_string_ex(raw_recipe[3][1], "inv_name"), "item name for " .. raw_recipe[3][1])
             recipe.ingr_3_amt = raw_recipe[3] and raw_recipe[3][2] and "x" .. raw_recipe[3][2] or ""
-            recipe.ingr_4_name = raw_recipe[4] and ini_sys:r_string_ex(raw_recipe[4][1], "inv_name") and game.translate_string(ini_sys:r_string_ex(raw_recipe[4][1], "inv_name")) or ""
+            recipe.ingr_4_name = raw_recipe[4] and ini_sys:r_string_ex(raw_recipe[4][1], "inv_name") and translate_with_context(ini_sys:r_string_ex(raw_recipe[4][1], "inv_name"), "item name for " .. raw_recipe[4][1])
             recipe.ingr_4_amt = raw_recipe[4] and raw_recipe[4][2] and "x" .. raw_recipe[4][2] or ""
             tbl[section] = recipe
             cnt = cnt + 1
@@ -974,7 +1044,7 @@ function debug_cmd_list.cmd.export_belt_attachments(_, txt, x)
         if kind and artefacts_kinds[kind] or whitelist[section] then
             x:SendOutput("export belt attachment - %s", section)
             local belt_attachment = {}
-            belt_attachment.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name")) or ""
+            belt_attachment.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
             belt_attachment.cost = ini_sys:r_float_ex(section, "cost") or 0
             belt_attachment.weight = ini_sys:r_float_ex(section, "inv_weight") or 0
             belt_attachment.tier = ini_sys:r_float_ex(section, "tier") or 0
@@ -1048,38 +1118,53 @@ local ammo_special_types = {
     ["338"] = ".338 Federal",
 }
 
+local blacklist_ammo = {
+    ["_knife"] = true,
+    ["_binoc"] = true,
+    ["_base$"] = true,
+    ["_dyno$"] = true,
+    ["_batteries"] = true,
+    ["^mp_"] = true,
+    ["_bad$"] = true,
+    ["_verybad$"] = true,
+    ["_heli$"] = true,
+    ["_parts$"] = true,
+    ["^casing_"] = true,
+    ["^powder_"] = true,
+    ["^bullet_"] = true,
+}
+
+function is_blacklisted_ammo(section)
+    for black, _ in pairs(blacklist_ammo) do
+        if string.find(section, black) then
+            return true
+        end
+    end
+    return false
+end
+
 function get_weapon_caliber(ammo_class)
     --printf("ammo_class: %s", ammo_class)
     local ammo_tbl = str_explode(ammo_class, ",")
     if #ammo_tbl == 0 then
         return ""
     end
-    local ammo_types = {}
+    local ammo_list = ""
 
     for i, ammo in ipairs(ammo_tbl) do
         --printf("ammo: %s", ammo)
-        local regular_start, regular_end = string.find(ammo, "[0-9.]*x[0-9]*")
-        if regular_start then
-            ammo_types[string.sub(ammo, regular_start, regular_end)] = true
-        else
-            for ammo_type, label in pairs(ammo_special_types) do
-                local special_start, special_end = string.find(ammo, ammo_type)
-                --printf("try: %s - %s", ammo_type, special_start)
-                if special_start then
-                    ammo_types[label] = true
-                end
-            end
+        if is_blacklisted_ammo(ammo) then
+            goto continue
         end
-    end
 
-    local ammo_list = ""
-
-    for ammo_type, _ in pairs(ammo_types) do
+        local ammo_name = sanitize_ammo_name(translate_with_context(ini_sys:r_string_ex(ammo, "inv_name"), "item name for " .. ammo))
         if ammo_list == "" then
-            ammo_list = ammo_type
+            ammo_list = ammo_name
         else
-            ammo_list = ammo_list .. "; " .. ammo_type
+            local space = headers_mode == 0 and " " or ""
+            ammo_list = ammo_list .. ";" .. space .. ammo_name
         end
+        ::continue::
     end
 
     return ammo_list
@@ -1192,6 +1277,21 @@ function debug_cmd_list.cmd.export_weapons(_, txt, x)
     local id = AC_ID
     local se_obj
 
+    ui_inventory.start("inventory", nil)
+    local GUI = ui_inventory.GUI
+    local slot_cells = GUI.slot_cell
+    local onehanded_slots = {
+        1,4,5,6,8,9
+    }
+    local allowed_slots = {}
+    for _, slot in pairs(onehanded_slots) do
+        local cells = slot_cells[slot]
+        for _, slot_idx in pairs(cells) do
+            allowed_slots[slot_idx] = true
+        end
+    end
+    GUI:Close()
+
     local function process_queue(idx, itr)
         if idx > #sections_queue then
             x:SendOutput("[END] export weapons - %s total exported", cnt)
@@ -1228,13 +1328,15 @@ function debug_cmd_list.cmd.export_weapons(_, txt, x)
             end
             -- Now offline, export parameters
             local weapon = {}
-            weapon.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name")) or ""
+            weapon.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
             weapon.cost = ini_sys:r_float_ex(section, "cost") or 0
             weapon.weight = ini_sys:r_float_ex(section, "inv_weight") or 0
             local repair_type = ini_sys:r_string_ex(section, "repair_type") or ""
             weapon.repair_label = get_weapon_repair_label(repair_type)
-            weapon.single_handed = ini_sys:r_float_ex(section, "single_handed")
-            weapon.single_handed = weapon.single_handed == 1 and "Y" or "N"
+
+            weapon.single_handed = ini_sys:r_float_ex(section, "slot") or -1
+            weapon.single_handed = allowed_slots[weapon.single_handed] and "Y" or "N"
+
             weapon.accuracy = to_percent_floor(get_weapon_stat_value(obj, section, "accuracy"))
             weapon.handling = to_percent_floor(get_weapon_stat_value(obj, section, "handling"))
             weapon.damage = get_weapon_stat_value(obj, section, "damage")
@@ -1439,7 +1541,7 @@ function debug_cmd_list.cmd.export_melee(_, txt, x)
 
                 --x:SendOutput("export weapon - %s, back offline", section)
                 local weapon = {}
-                weapon.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name")) or ""
+                weapon.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
                 weapon.cost = ini_sys:r_float_ex(section, "cost") or 0
                 weapon.weight = ini_sys:r_float_ex(section, "inv_weight") or 0
                 weapon.max_range = get_weapon_stat_value(obj, section, "max_range")
@@ -1519,6 +1621,7 @@ function debug_cmd_list.cmd.export_explosives(_, txt, x)
 
     local blacklist = {
         [""] = true,
+        ["helicopter"] = true,
     }
 
     local tbl = {}
@@ -1540,7 +1643,7 @@ function debug_cmd_list.cmd.export_explosives(_, txt, x)
                 return
             end
             local explosive = {}
-            explosive.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name"))
+            explosive.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
             if not explosive.name or explosive.name == "" then
                 return
             end
@@ -1654,29 +1757,11 @@ end
 function debug_cmd_list.cmd.export_ammo(_, txt, x)
     x:SendOutput("[START] export ammo")
 
-    local blacklist = {
-        ["_knife"] = true,
-        ["_binoc"] = true,
-        ["_base$"] = true,
-        ["_dyno$"] = true,
-        ["_batteries"] = true,
-        ["^mp_"] = true,
-        ["_bad$"] = true,
-        ["_verybad$"] = true,
-        ["_heli$"] = true,
-        ["_parts$"] = true,
-        ["^casing_"] = true,
-        ["^powder_"] = true,
-        ["^bullet_"] = true,
-    }
-
     local tbl = {}
     local cnt = 0
     ini_sys:section_for_each(function(section)
-        for black, _ in pairs(blacklist) do
-            if string.find(section, black) then
-                return
-            end
+        if is_blacklisted_ammo(section) then
+            return
         end
 
         local kind = ini_sys:r_string_ex(section, "kind") -- special class name for the sake of correct listing
@@ -1684,8 +1769,9 @@ function debug_cmd_list.cmd.export_ammo(_, txt, x)
         if kind == "w_ammo" then
             x:SendOutput("export ammo - %s", section)
             local ammo = {}
-            ammo.name = sanitize_ammo_name(game.translate_string(ini_sys:r_string_ex(section, "inv_name")))
+            ammo.name = sanitize_ammo_name(translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section))
             ammo.cost = ini_sys:r_float_ex(section, "cost") or 0
+            ammo.box_size = round(ini_sys:r_float_ex(section, "box_size"))
             ammo.weight = ini_sys:r_float_ex(section, "inv_weight") or 0
             ammo.projectiles = ini_sys:r_float_ex(section, "buck_shot") or 1
             ammo.damage = ini_sys:r_float_ex(section, "k_hit") or 0
@@ -1704,11 +1790,11 @@ function debug_cmd_list.cmd.export_ammo(_, txt, x)
     local p_file = "export_ammo.csv"
     local debug_file = io.open(p_file, "w+")
     local header = translate_headers({
-        "~", "pda_encyclopedia_name", "st_prop_weight", "st_upgr_cost", "BR1", "BR2", "BR3", "BR4", "BR5", "BR6", "BR7", "st_data_export_projectiles", "ui_inv_damage", "ui_inv_accuracy", "ui_inv_wrange", "st_data_export_falloff", "ui_inv_bspeed", "st_data_export_impulse", "st_data_export_weapon_degradation" })
+        "~", "pda_encyclopedia_name", "st_prop_weight", "st_data_export_ammo_box_size", "st_upgr_cost", "BR1", "BR2", "BR3", "BR4", "BR5", "BR6", "BR7", "st_data_export_projectiles", "ui_inv_damage", "ui_inv_accuracy", "ui_inv_wrange", "st_data_export_falloff", "ui_inv_bspeed", "st_data_export_impulse", "st_data_export_weapon_degradation" })
     write_file(debug_file, "%s", header)
     for section, v in pairs(tbl) do
-        write_file(debug_file, "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s",
-                section, v.name, v.weight, v.cost, v.br1, v.br2, v.br3, v.br4, v.br5, v.br6, v.br7, v.projectiles, v.damage, v.accuracy, v.range, v.falloff, v.velocity, v.impulse, v.degr
+        write_file(debug_file, "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s",
+                section, v.name, v.weight, v.box_size, v.cost, v.br1, v.br2, v.br3, v.br4, v.br5, v.br6, v.br7, v.projectiles, v.damage, v.accuracy, v.range, v.falloff, v.velocity, v.impulse, v.degr
         )
     end
     debug_file:close()
@@ -1746,7 +1832,7 @@ function debug_cmd_list.cmd.export_disassemble_table(_, txt, x)
         x:SendOutput("export disassemble item - %s", section)
 
         local disassemble = {}
-        local item_name = game.translate_string(ini_sys:r_string_ex(section, "inv_name"))
+        local item_name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
         table.insert(disassemble, item_name)
         local parts = {}
         for i, part in ipairs(parts_tbl) do
@@ -1768,7 +1854,7 @@ function debug_cmd_list.cmd.export_disassemble_table(_, txt, x)
         end
 
         for part_section, part in spairs(parts, sortByCount) do
-            local part_name = game.translate_string(ini_sys:r_string_ex(part_section, "inv_name"))
+            local part_name = translate_with_context(ini_sys:r_string_ex(part_section, "inv_name"), "item name for " .. part_section)
             local parts_count = part.count
             table.insert(disassemble, part_name)
             table.insert(disassemble, "x" .. parts_count)
@@ -1817,7 +1903,7 @@ function debug_cmd_list.cmd.export_disassemble_table(_, txt, x)
     local sortMaterialsByName = function(t, a, b)
         return t[a].name < t[b].name
     end
-    local fromStr = game.translate_string("st_data_export_from")
+    local fromStr = translate("st_data_export_from")
     header = translate_headers({
         "~", "pda_encyclopedia_name", "st_data_export_disassemble_amount", "st_data_export_disassemble_item", "st_data_export_disassemble_amount", "st_data_export_disassemble_item", "st_data_export_disassemble_amount", "st_data_export_disassemble_item", "st_data_export_disassemble_amount", "st_data_export_disassemble_item", "st_data_export_disassemble_amount", "st_data_export_disassemble_item", "st_data_export_disassemble_amount", "st_data_export_disassemble_item", "st_data_export_disassemble_amount", "st_data_export_disassemble_item", "st_data_export_disassemble_amount", "st_data_export_disassemble_item", "st_data_export_disassemble_amount", "st_data_export_disassemble_item", "st_data_export_disassemble_amount", "st_data_export_disassemble_item" })
     write_file(materials_file, "%s", header)
@@ -1857,13 +1943,13 @@ function debug_cmd_list.cmd.export_outfit_exchange(_, txt, x)
                     if not outfit_map[outfit]["rewards"] then
                         outfit_map[outfit]["rewards"] = {}
                         outfit_map[outfit]["community"] = ini_sys:r_string_ex(outfit, "community") or ""
-                        outfit_map[outfit]["name"] = game.translate_string(ini_sys:r_string_ex(outfit, "inv_name")) or ""
+                        outfit_map[outfit]["name"] = translate_with_context(ini_sys:r_string_ex(outfit, "inv_name"), "item name for " .. outfit)
                     end
 
                     table.insert(outfit_map[outfit]["rewards"], {
                         ["community"] = ini_sys:r_string_ex(reward, "community") or "",
                         ["reward"] = reward,
-                        ["name"] = game.translate_string(ini_sys:r_string_ex(reward, "inv_name")) or ""
+                        ["name"] = translate_with_context(ini_sys:r_string_ex(reward, "inv_name"), "item name for " .. reward)
                     })
                 end
             end
@@ -1899,9 +1985,9 @@ function debug_cmd_list.cmd.export_outfit_exchange(_, txt, x)
     end
     local header = translate_headers(headers)
     write_file(file, "%s", header)
-    local unknown_str = game.translate_string("st_data_export_unknown")
+    local unknown_str = translate("st_data_export_unknown")
     for outfit, data in spairs(outfit_map, sortByFactionAndName) do
-        local value = (game.translate_string(data["community"]) or unknown_str) .. "," .. data["name"] .. ","
+        local value = (translate(data["community"], unknown_str)) .. "," .. data["name"] .. ","
         for i, reward in spairs(data["rewards"], sortByFactionAndName) do
             community_map[reward.community] = reward.name
             cnt = cnt + 1
@@ -2033,7 +2119,7 @@ function debug_cmd_list.cmd.export_mutant_parts_prices(_, txt, x)
             local part = {}
             part = {}
             part.type = type
-            part.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name"))
+            part.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
             part.sakharov_price = math.floor(utils_item.get_item_cost(obj, sakharov_profile))
             part.butcher_price = math.floor(utils_item.get_item_cost(obj, butcher_profile))
 
@@ -2213,14 +2299,14 @@ function debug_cmd_list.cmd.export_weapon_drop_sources(_, txt, x)
     local value = ""
     local gun_name, kind, ranks
     for gun, gun_factions in pairs(sources) do
-        gun_name = game.translate_string(ini_sys:r_string_ex(gun, "inv_name") or "")
-        kind = game.translate_string(get_weapon_kind(ini_sys:r_string_ex(gun, "kind") or ""))
+        gun_name = translate_with_context(ini_sys:r_string_ex(gun, "inv_name"), "item name for " .. gun)
+        kind = translate_with_context(get_weapon_kind(ini_sys:r_string_ex(gun, "kind")), "weapon kind for " .. gun)
         value = gun .. "," .. kind .. "," .. gun_name .. ","
         for i, faction in pairs(factions_sorted) do
             if gun_factions[faction] and gun_factions[faction]["ranks"] then
                 ranks = ""
                 for rank, _ in spairs(gun_factions[faction]["ranks"], sortByRank) do
-                    ranks = ranks .. game.translate_string("st_rank_" .. rank) .. ", "
+                    ranks = ranks .. translate("st_rank_" .. rank) .. ", "
                 end
                 ranks = string.sub(ranks, 1, -3)
                 value = value .. "\"" .. ranks .. "\""
@@ -2262,7 +2348,7 @@ function debug_cmd_list.cmd.export_item_list(_, txt, x)
 
         -- Create item data structure with only the requested fields
         local item = {}
-        item.name = game.translate_string(ini_sys:r_string_ex(section, "inv_name")) or ""
+        item.name = translate_with_context(ini_sys:r_string_ex(section, "inv_name"), "item name for " .. section)
         item.cost = ini_sys:r_float_ex(section, "cost") or 0
         item.kind = kind
 
@@ -2312,8 +2398,8 @@ function debug_cmd_list.cmd.export_stash_drop_rates(_, txt, x)
     local kind_effects = { common = {}, rare = {} }
     local stash_sections = { common = "kind_tier_effect_common", rare = "kind_tier_effect_rare" }
     local stash_type_labels = {
-        common = game.translate_string("st_data_export_stash_type_common"),
-        rare   = game.translate_string("st_data_export_stash_type_rare"),
+        common = translate("st_data_export_stash_type_common"),
+        rare   = translate("st_data_export_stash_type_rare"),
     }
     local num_tiers = 5
 
@@ -2382,7 +2468,7 @@ function debug_cmd_list.cmd.export_stash_drop_rates(_, txt, x)
             tier = math.ceil(tier - (lost_uses / 2))
             tier = clamp(tier, 1, 5)
 
-            local inv_name = game.translate_string(ini_sys:r_string_ex(sec_p, "inv_name") or "") or section
+            local inv_name = translate_with_context(ini_sys:r_string_ex(sec_p, "inv_name"), "item name for " .. sec_p)
             items[section] = { kind = kind, tier = tier, allowed_ecos = allowed_ecos, name = inv_name }
 
             ::continue::
@@ -2438,7 +2524,7 @@ function debug_cmd_list.cmd.export_stash_drop_rates(_, txt, x)
             table.sort(row_items, function(a, b) return a.pct > b.pct end)
 
             -- Build and write the row
-            local row = map_name .. "," .. game.translate_string(map_name) .. ", " .. stash_type_labels[stash_type]
+            local row = map_name .. "," .. translate(map_name) .. ", " .. stash_type_labels[stash_type]
             for _, entry in ipairs(row_items) do
                 row = row
                     .. ", " .. entry.label
@@ -2465,8 +2551,8 @@ function debug_cmd_list.cmd.item_drop_locations(_, txt, x)
     local kind_effects = { common = {}, rare = {} }
     local stash_sections = { common = "kind_tier_effect_common", rare = "kind_tier_effect_rare" }
     local stash_type_labels = {
-        common = game.translate_string("st_data_export_stash_type_common"),
-        rare   = game.translate_string("st_data_export_stash_type_rare"),
+        common = translate("st_data_export_stash_type_common"),
+        rare   = translate("st_data_export_stash_type_rare"),
     }
     local num_tiers = 5
 
@@ -2527,7 +2613,7 @@ function debug_cmd_list.cmd.item_drop_locations(_, txt, x)
             tier = math.ceil(tier - (lost_uses / 2))
             tier = clamp(tier, 1, 5)
 
-            local inv_name = game.translate_string(ini_sys:r_string_ex(sec_p, "inv_name") or "") or section
+            local inv_name = translate_with_context(ini_sys:r_string_ex(sec_p, "inv_name"), "item name for " .. sec_p)
             items[section] = { kind = kind, tier = tier, allowed_ecos = allowed_ecos, name = inv_name }
 
             ::continue::
@@ -2593,7 +2679,7 @@ function debug_cmd_list.cmd.item_drop_locations(_, txt, x)
                 local row = label .. ", " .. item.name .. ", " .. stash_type_labels[stash_type]
                 for _, entry in ipairs(map_list) do
                     row = row
-                        .. ", " .. game.translate_string(entry.map)
+                        .. ", " .. translate(entry.map)
                         .. ", " .. to_percent_stash(entry.pct)
                         .. ", " .. item.allowed_ecos
                 end
