@@ -651,7 +651,7 @@ const app = createApp({
                     }
                 }
                 if (totalNonEmpty > 0 && numCount / totalNonEmpty >= 0.8) {
-                    const step = maxDecimals > 0 ? parseFloat((1 / Math.pow(10, maxDecimals)).toFixed(maxDecimals)) : 1;
+                    const step = maxDecimals > 0 ? 0.1 : 1;
                     rangeDefs.push({
                         key: h,
                         type: "range",
@@ -1852,7 +1852,8 @@ const app = createApp({
             const def = this.rangeFilters.find(d => d.key === key);
             const fallback = idx === 0 ? (def?.dataMin ?? 0) : (def?.dataMax ?? 0);
             const cur = Array.isArray(current) && current[idx] !== null ? current[idx] : fallback;
-            const next = Math.round(cur) + delta;
+            const step = def?.step ?? 1;
+            const next = parseFloat((cur + delta * step).toFixed(1));
             if (bound === "min") {
                 this.setRangeMin(key, String(next));
             } else {
