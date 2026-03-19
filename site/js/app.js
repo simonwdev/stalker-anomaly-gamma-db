@@ -152,7 +152,7 @@ function buildDropFactions(drops) {
     return Object.entries(drops).map(([name, ranks]) => ({
         name,
         ranks,
-        icon: FACTION_ICONS[name] || null,
+        icon: FACTION_ICONS[name] || FACTION_ICONS[name.toLowerCase()] || null,
     })).sort((a, b) => a.name.localeCompare(b.name));
 }
 
