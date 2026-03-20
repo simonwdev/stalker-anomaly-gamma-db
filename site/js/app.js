@@ -81,6 +81,30 @@ const UNITS = {
 };
 
 
+// Build Planner constants
+const PROTECTION_FIELDS = [
+    "ui_inv_outfit_fire_wound_protection", "ui_inv_outfit_wound_protection", "ui_inv_outfit_burn_protection",
+    "ui_inv_outfit_shock_protection", "ui_inv_outfit_chemical_burn_protection", "ui_inv_outfit_radiation_protection",
+    "ui_inv_outfit_telepatic_protection", "ui_inv_outfit_strike_protection", "ui_inv_outfit_explosion_protection",
+];
+const RESTORATION_FIELDS = [
+    "st_prop_restore_health", "st_prop_restore_bleeding", "st_data_export_restore_radiation", "ui_inv_outfit_power_restore",
+];
+const CAP_FIELD_MAP = {
+    "ui_inv_outfit_fire_wound_protection": "gamma_fire_wound_cap",
+    "ui_inv_outfit_wound_protection": "gamma_wound_cap",
+    "ui_inv_outfit_burn_protection": "gamma_burn_cap",
+    "ui_inv_outfit_shock_protection": "gamma_shock_cap",
+    "ui_inv_outfit_chemical_burn_protection": "gamma_chemical_burn_cap",
+    "ui_inv_outfit_telepatic_protection": "gamma_telepatic_cap",
+    "ui_inv_outfit_strike_protection": "gamma_strike_cap",
+    "ui_inv_outfit_explosion_protection": "gamma_explosion_cap",
+};
+const BUILD_SLOT_CATEGORIES = { outfit: "Outfits", helmet: "Helmets", belt: "Belt Attachments", artifact: "Artefacts", backpack: "Belt Attachments" };
+// TODO: replace with a data-driven field (e.g. item kind) from the generate script
+const BACKPACK_IDS = new Set(["itm_backpack", "equ_military_pack", "equ_small_pack", "equ_small_military_pack", "equ_tourist_pack"]);
+const MAX_SAVED_BUILDS = 10;
+
 const SINGULAR_TYPE = { Pistols: "app_type_pistol", SMGs: "app_type_smg", Shotguns: "app_type_shotgun", Rifles: "app_type_rifle", Snipers: "app_type_sniper", Launchers: "app_type_launcher", Melee: "app_cat_melee" };
 const SINGULAR_CATEGORY = { ...SINGULAR_TYPE, Outfits: "app_type_outfit", Helmets: "app_type_helmet", "Belt Attachments": "app_type_belt_attachment", Explosives: "app_type_explosive", Artefacts: "app_type_artefact", Materials: "app_type_material", "Mutant Parts": "app_type_mutant_part" };
 
@@ -101,9 +125,9 @@ const VIRTUAL_CATEGORIES = new Set(["All Weapons", "Crafting Trees"]);
 const CATEGORY_GROUPS = [
     { name: "app_group_weapons", categories: ["All Weapons", ...WEAPON_CATEGORIES] },
     { name: "app_group_ammo_explosives", categories: ["Ammo", "Explosives"] },
-    { name: "app_group_equipment", categories: ["Outfits", "Helmets", "Belt Attachments", "Outfit Exchange"] },
+    { name: "app_group_equipment", categories: ["Outfits", "Helmets", "Belt Attachments", "Artefacts", "Outfit Exchange"] },
     { name: "app_group_consumables", categories: ["Food", "Medicine"] },
-    { name: "app_group_items", categories: ["Artefacts", "Crafting Trees", "Materials", "Mutant Parts"] },
+    { name: "app_group_crafting", categories: ["Crafting Trees", "Materials", "Mutant Parts"] },
 ];
 
 function buildStatRows(item, headers) {
@@ -146,6 +170,8 @@ const FACTION_COLORS = {
     "isg": "#7a8b6a",
     "st_data_export_unknown": "#b0b0b0",
 };
+
+const FACTION_LIST = ["stalker", "dolg", "freedom", "csky", "ecolog", "army", "killer", "bandit", "monolith", "renegade", "greh", "isg"];
 
 function buildDropFactions(drops) {
     if (!drops) return [];
@@ -278,6 +304,37 @@ const app = createApp({
             copyModalLinkFeedback: false,
             copyLinkFeedback: false,
             _restoringUrl: false,
+
+            // Build Planner state
+            buildPlayerName: "Stalker",
+            buildPlayerFaction: "stalker",
+            buildFactionPickerOpen: false,
+            buildPlannerActive: false,
+            buildOutfit: null,
+            buildHelmet: null,
+            buildBackpack: null,
+            buildBelts: [],
+            buildArtifacts: [],
+            buildPickerOpen: false,
+            buildPickerSlot: null,   // { type: "outfit"|"helmet"|"backpack"|"belt"|"artifact", index?: number }
+            buildPickerQuery: "",
+            buildPickerFuse: null,
+            buildExpandedStats: {},
+            buildSavedBuilds: [],
+            buildSaveName: "",
+            buildSaveModalOpen: false,
+            buildSavedDropdownOpen: false,
+            copyBuildLinkFeedback: false,
+
+            // Item hover popover
+            buildHoverItem: null,
+            buildHoverPos: null,
+            buildHoverTimeout: null,
+
+            // Inventory staging area
+            buildInventory: [],              // Array of { item, slotType } objects
+            buildInventoryCollapsed: false,
+            buildDragState: null,            // { source, slotType, itemId, ... } for visual feedback
         };
     },
 
@@ -838,6 +895,205 @@ const app = createApp({
             }
             return ranges;
         },
+
+        buildBeltSlotMax() {
+            if (!this.buildOutfit) return 0;
+            return parseInt(this.buildOutfit["st_data_export_outfit_artefact_count_max"]) || 0;
+        },
+
+        buildBeltSlotUsed() {
+            return this.buildBelts.length + this.buildArtifacts.length;
+        },
+
+        // Fixed 5-slot array: filled items first, then empty available, then disabled
+        buildBeltSlots() {
+            const max = this.buildOutfit ? this.buildBeltSlotMax : 0;
+            if (max === 0) {
+                return [{ state: "disabled" }];
+            }
+            const slots = [];
+            for (let i = 0; i < this.buildBelts.length; i++) {
+                slots.push({ state: "filled", type: "belt", item: this.buildBelts[i], index: i });
+            }
+            for (let i = 0; i < this.buildArtifacts.length; i++) {
+                slots.push({ state: "filled", type: "artifact", item: this.buildArtifacts[i], index: i });
+            }
+            while (slots.length < max) {
+                slots.push({ state: "empty" });
+            }
+            return slots;
+        },
+
+        buildAllItems() {
+            const items = [];
+            if (this.buildOutfit) items.push({ item: this.buildOutfit, slot: "outfit" });
+            if (this.buildHelmet) items.push({ item: this.buildHelmet, slot: "helmet" });
+            if (this.buildBackpack) items.push({ item: this.buildBackpack, slot: "backpack" });
+            for (const b of this.buildBelts) items.push({ item: b, slot: "belt" });
+            for (const a of this.buildArtifacts) items.push({ item: a, slot: "artifact" });
+            return items;
+        },
+
+        buildCombinedStats() {
+            const all = this.buildAllItems;
+            const empty = all.length === 0;
+
+            const parseNum = (v) => {
+                if (v == null || v === "") return 0;
+                return parseFloat(String(v).replace(/%$/, "")) || 0;
+            };
+
+            // Sum protections with per-slot-type segments
+            const protections = {};
+            for (const f of PROTECTION_FIELDS) {
+                const slotTotals = { outfit: 0, helmet: 0, backpack: 0, belt: 0, artifact: 0 };
+                const breakdown = [];
+                for (const { item, slot } of all) {
+                    const v = parseNum(item[f]);
+                    if (v !== 0) breakdown.push({ name: item.pda_encyclopedia_name || item.id, value: v, slot });
+                    slotTotals[slot] += v;
+                }
+                const beltArtVal = slotTotals.belt + slotTotals.artifact + slotTotals.backpack;
+                // Apply artifact caps
+                const capField = CAP_FIELD_MAP[f];
+                let cappedBeltArt = beltArtVal;
+                if (capField && beltArtVal > 0) {
+                    let maxCap = 0;
+                    for (const { item, slot } of all) {
+                        if (slot === "artifact" || slot === "belt" || slot === "backpack") {
+                            const c = parseNum(item[capField]);
+                            if (c > maxCap) maxCap = c;
+                        }
+                    }
+                    if (maxCap > 0 && beltArtVal > maxCap) {
+                        cappedBeltArt = maxCap;
+                        // Scale belt, artifact & backpack proportionally
+                        const ratio = cappedBeltArt / beltArtVal;
+                        slotTotals.backpack *= ratio;
+                        slotTotals.belt *= ratio;
+                        slotTotals.artifact *= ratio;
+                    }
+                }
+                const total = slotTotals.outfit + slotTotals.helmet + cappedBeltArt;
+                protections[f] = { total, breakdown, capped: cappedBeltArt < beltArtVal, segments: slotTotals };
+            }
+
+            // Sum a field across items, returning { total, breakdown, segments }
+            const sumField = (field, slotFilter) => {
+                const breakdown = [];
+                const segments = { outfit: 0, helmet: 0, backpack: 0, belt: 0, artifact: 0 };
+                let total = 0;
+                for (const { item, slot } of all) {
+                    if (slotFilter && !slotFilter(slot)) continue;
+                    const v = parseNum(item[field]);
+                    if (v !== 0) {
+                        breakdown.push({ name: item.pda_encyclopedia_name || item.id, value: v, slot });
+                        total += v;
+                        segments[slot] += v;
+                    }
+                }
+                return { total, breakdown, segments };
+            };
+
+            // Sum restoration effects
+            const restorations = {};
+            for (const f of RESTORATION_FIELDS) {
+                restorations[f] = sumField(f);
+            }
+
+            const { total: totalWeight, breakdown: weightBreakdown, segments: weightSegments } = sumField("st_prop_weight");
+            const { total: carryWeight, breakdown: carryBreakdown, segments: carrySegments } = sumField("ui_inv_outfit_additional_weight");
+            const { total: armorPoints, breakdown: armorBreakdown, segments: armorSegments } = sumField("ui_inv_ap_res", s => s === "outfit" || s === "helmet");
+
+            // Speed (outfit-only)
+            const speed = this.buildOutfit ? parseNum(this.buildOutfit["ui_inv_outfit_speed"]) : null;
+
+            // Sort breakdowns descending by value
+            const sortDesc = arr => arr.sort((a, b) => b.value - a.value);
+            sortDesc(weightBreakdown);
+            sortDesc(carryBreakdown);
+            sortDesc(armorBreakdown);
+            for (const f of PROTECTION_FIELDS) sortDesc(protections[f].breakdown);
+            for (const f of RESTORATION_FIELDS) sortDesc(restorations[f].breakdown);
+
+            return { protections, restorations, totalWeight, weightBreakdown, weightSegments, carryWeight, carryBreakdown, carrySegments, armorPoints, armorBreakdown, armorSegments, speed };
+        },
+
+        factionList() { return FACTION_LIST.map(id => ({ id, label: this.t(id) || id })); },
+
+        buildAllExpanded() {
+            const stats = this.buildCombinedStats;
+            const allFields = ["weight", "carry", "armor", ...PROTECTION_FIELDS, ...RESTORATION_FIELDS];
+            const expandable = allFields.filter(f => {
+                if (f === "weight") return stats.weightBreakdown.length > 0;
+                if (f === "carry") return stats.carryBreakdown.length > 0;
+                if (f === "armor") return stats.armorBreakdown.length > 0;
+                if (PROTECTION_FIELDS.includes(f)) return stats.protections[f].breakdown.length > 0;
+                if (RESTORATION_FIELDS.includes(f)) return stats.restorations[f].breakdown.length > 0;
+                return false;
+            });
+            if (expandable.length === 0) return false;
+            return expandable.every(f => this.buildExpandedStats[f]);
+        },
+
+        buildPickerSlotLabel() {
+            if (!this.buildPickerSlot) return "";
+            if (this.buildPickerSlot.type === "inventory") return this.t("app_build_inventory");
+            if (this.buildPickerSlot.type === "backpack") return this.t("app_type_backpack");
+            const cat = BUILD_SLOT_CATEGORIES[this.buildPickerSlot.type] || "";
+            return this.t(SINGULAR_CATEGORY[cat] || cat);
+        },
+
+        buildPickerItems() {
+            if (!this.buildPickerSlot) return [];
+            const slotType = this.buildPickerSlot.type;
+
+            const sortAlpha = (arr) => arr.slice().sort((a, b) => (this.tName(a) || "").localeCompare(this.tName(b) || ""));
+
+            // Inventory mode: show all equipment categories combined
+            if (slotType === "inventory") {
+                const slugs = ["outfits", "helmets", "belt-attachments", "artefacts"];
+                let items = [];
+                for (const slug of slugs) {
+                    const catItems = this.categoryItems[slug] || [];
+                    items = items.concat(catItems);
+                }
+                if (this.hideNoDrop) {
+                    items = items.filter(i => i.hasNpcWeaponDrop !== false);
+                }
+                if (!this.buildPickerQuery.trim()) return sortAlpha(items);
+                if (!this.buildPickerFuse) return sortAlpha(items);
+                const filtered = new Set(items);
+                return this.buildPickerFuse.search(this.buildPickerQuery).map(r => r.item).filter(i => filtered.has(i));
+            }
+
+            // Belt picker: show belt attachments (excluding backpacks) + artifacts
+            if (slotType === "belt") {
+                let beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !BACKPACK_IDS.has(i.id));
+                let artItems = this.categoryItems["artefacts"] || [];
+                let items = beltItems.concat(artItems);
+                if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
+                if (!this.buildPickerQuery.trim()) return sortAlpha(items);
+                if (!this.buildPickerFuse) return sortAlpha(items);
+                const filtered = new Set(items);
+                return this.buildPickerFuse.search(this.buildPickerQuery).map(r => r.item).filter(i => filtered.has(i));
+            }
+
+            const cat = BUILD_SLOT_CATEGORIES[slotType];
+            if (!cat) return [];
+            const slug = categorySlug(cat);
+            let items = this.categoryItems[slug] || [];
+            if (this.hideNoDrop) {
+                items = items.filter(i => i.hasNpcWeaponDrop !== false);
+            }
+            if (slotType === "backpack") {
+                items = items.filter(i => BACKPACK_IDS.has(i.id));
+            }
+            if (!this.buildPickerQuery.trim()) return sortAlpha(items);
+            if (!this.buildPickerFuse) return sortAlpha(items);
+            const filtered = new Set(items);
+            return this.buildPickerFuse.search(this.buildPickerQuery).map(r => r.item).filter(i => filtered.has(i));
+        },
     },
 
     methods: {
@@ -1021,7 +1277,9 @@ const app = createApp({
                 this.rebuildGlobalFuse();
                 if (this.groupedCategories.length > 0) {
                     const urlCat = new URLSearchParams(window.location.search).get("cat");
-                    if (urlCat === "favorites") {
+                    if (urlCat === "build-planner") {
+                        // Defer to mounted handler
+                    } else if (urlCat === "favorites") {
                         this.favoritesViewActive = true;
                         this.activeCategory = null;
                         this.sortCol = "pda_encyclopedia_name";
@@ -1076,6 +1334,13 @@ const app = createApp({
             this.globalResults = [];
             this.filterQuery = "";
             this.activeCategory = null;
+            this.buildPlannerActive = false;
+            this.buildOutfit = null;
+            this.buildHelmet = null;
+            this.buildBackpack = null;
+            this.buildBelts = [];
+            this.buildArtifacts = [];
+            this.buildInventory = [];
 
             // Save selection
             localStorage.setItem("selectedPack", this.activePack.id);
@@ -1136,6 +1401,7 @@ const app = createApp({
                 });
             }
 
+            this.buildPlannerActive = false;
             this.favoritesViewActive = false;
             this.recentViewActive = false;
             this.showFavoritesOnly = false;
@@ -1336,40 +1602,27 @@ const app = createApp({
             this.modalLoading = false;
         },
 
-        async copyItemId(id) {
+        async copyToClipboard(text, feedbackKey) {
             try {
-                await navigator.clipboard.writeText(id);
-                this.copyIdFeedback = true;
-                setTimeout(() => { this.copyIdFeedback = false; }, 1500);
+                await navigator.clipboard.writeText(text);
             } catch {
-                // fallback
                 const ta = document.createElement("textarea");
-                ta.value = id;
+                ta.value = text;
                 document.body.appendChild(ta);
                 ta.select();
                 document.execCommand("copy");
                 document.body.removeChild(ta);
-                this.copyIdFeedback = true;
-                setTimeout(() => { this.copyIdFeedback = false; }, 1500);
             }
+            this[feedbackKey] = true;
+            setTimeout(() => { this[feedbackKey] = false; }, 1500);
+        },
+
+        async copyItemId(id) {
+            await this.copyToClipboard(id, "copyIdFeedback");
         },
 
         async copyModalLink() {
-            const url = window.location.href;
-            try {
-                await navigator.clipboard.writeText(url);
-                this.copyModalLinkFeedback = true;
-                setTimeout(() => { this.copyModalLinkFeedback = false; }, 1500);
-            } catch {
-                const ta = document.createElement("textarea");
-                ta.value = url;
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand("copy");
-                document.body.removeChild(ta);
-                this.copyModalLinkFeedback = true;
-                setTimeout(() => { this.copyModalLinkFeedback = false; }, 1500);
-            }
+            await this.copyToClipboard(window.location.href, "copyModalLinkFeedback");
         },
 
         closeModal() {
@@ -1460,8 +1713,9 @@ const app = createApp({
             }
         },
 
-        selectFavorites() {
-            this.favoritesViewActive = true;
+        resetViewState() {
+            this.buildPlannerActive = false;
+            this.favoritesViewActive = false;
             this.recentViewActive = false;
             this.showFavoritesOnly = false;
             this.activeCategory = null;
@@ -1472,6 +1726,11 @@ const app = createApp({
             this.activeFilters = {};
             this.filterPanelOpen = false;
             this.sidebarOpen = false;
+        },
+
+        selectFavorites() {
+            this.resetViewState();
+            this.favoritesViewActive = true;
             this.pushUrlState();
         },
 
@@ -1503,17 +1762,8 @@ const app = createApp({
         },
 
         selectRecent() {
+            this.resetViewState();
             this.recentViewActive = true;
-            this.favoritesViewActive = false;
-            this.showFavoritesOnly = false;
-            this.activeCategory = null;
-            this.filterQuery = "";
-            this.filterInput = "";
-            this.sortCol = "pda_encyclopedia_name";
-            this.sortAsc = true;
-            this.activeFilters = {};
-            this.filterPanelOpen = false;
-            this.sidebarOpen = false;
             this.pushUrlState();
         },
 
@@ -2373,7 +2623,27 @@ const app = createApp({
         pushUrlState() {
             const url = new URL(window.location);
             if (this.activePack) url.searchParams.set("pack", this.activePack.id);
-            if (this.favoritesViewActive) {
+            // Clear build params by default
+            url.searchParams.delete("outfit");
+            url.searchParams.delete("helmet");
+            url.searchParams.delete("backpack");
+            url.searchParams.delete("belt");
+            url.searchParams.delete("arts");
+            url.searchParams.delete("pn");
+            url.searchParams.delete("pf");
+            if (this.buildPlannerActive) {
+                url.searchParams.set("cat", "build-planner");
+                url.searchParams.delete("favonly");
+                // Add build params
+                const bp = this.buildUrlParams();
+                if (bp.pn) url.searchParams.set("pn", bp.pn);
+                if (bp.pf) url.searchParams.set("pf", bp.pf);
+                if (bp.outfit) url.searchParams.set("outfit", bp.outfit);
+                if (bp.helmet) url.searchParams.set("helmet", bp.helmet);
+                if (bp.backpack) url.searchParams.set("backpack", bp.backpack);
+                if (bp.belt) url.searchParams.set("belt", bp.belt);
+                if (bp.arts) url.searchParams.set("arts", bp.arts);
+            } else if (this.favoritesViewActive) {
                 url.searchParams.set("cat", "favorites");
                 url.searchParams.delete("favonly");
             } else if (this.recentViewActive) {
@@ -2446,7 +2716,10 @@ const app = createApp({
 
         restoreUrlState(search) {
             const params = new URLSearchParams(search || window.location.search);
-            if (params.get("cat") === "favorites") {
+            if (params.get("cat") === "build-planner") {
+                // Will be handled after data loads
+                this._pendingBuildRestore = params;
+            } else if (params.get("cat") === "favorites") {
                 this.favoritesViewActive = true;
                 this.activeCategory = null;
             } else if (params.get("cat") === "recent") {
@@ -2487,21 +2760,7 @@ const app = createApp({
         },
 
         async copyLink() {
-            const url = window.location.href;
-            try {
-                await navigator.clipboard.writeText(url);
-                this.copyLinkFeedback = true;
-                setTimeout(() => { this.copyLinkFeedback = false; }, 1500);
-            } catch {
-                const ta = document.createElement("textarea");
-                ta.value = url;
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand("copy");
-                document.body.removeChild(ta);
-                this.copyLinkFeedback = true;
-                setTimeout(() => { this.copyLinkFeedback = false; }, 1500);
-            }
+            await this.copyToClipboard(window.location.href, "copyLinkFeedback");
         },
 
         toggleSort(col) {
@@ -2520,7 +2779,13 @@ const app = createApp({
         },
 
         handleEscape() {
-            if (this.sortMenuOpen) {
+            if (this.buildSaveModalOpen) {
+                this.buildSaveModalOpen = false;
+            } else if (this.buildPickerOpen) {
+                this.closeBuildPicker();
+            } else if (this.buildSavedDropdownOpen) {
+                this.buildSavedDropdownOpen = false;
+            } else if (this.sortMenuOpen) {
                 this.sortMenuOpen = false;
             } else if (this.downloadMenuOpen) {
                 this.downloadMenuOpen = false;
@@ -2541,6 +2806,725 @@ const app = createApp({
         clearGlobalQuery() {
             this.globalQuery = "";
         },
+
+        // Build Planner methods
+        async openBuildPlanner() {
+            this.resetViewState();
+            this.buildPlannerActive = true;
+
+            // Load equipment category data
+            const cats = ["outfits", "helmets", "belt-attachments", "artefacts"];
+            await Promise.all(cats.map(async (slug) => {
+                if (this.categoryItems[slug]) return;
+                try {
+                    const res = await fetch(this.dataUrl(`${slug}.json`));
+                    const data = await res.json();
+                    this.categoryItems[slug] = data.items;
+                    this.categoryHeaders[slug] = data.headers;
+                    this.categoryFuse[slug] = new Fuse(data.items, {
+                        keys: ["displayName", "pda_encyclopedia_name", "localeName", "id"],
+                        threshold: 0.35,
+                    });
+                } catch (e) {
+                    console.error(`Failed to load ${slug}:`, e);
+                    this.categoryItems[slug] = [];
+                    this.categoryHeaders[slug] = [];
+                }
+            }));
+
+            this.loadBuildFromStorage();
+            this.loadInventoryFromStorage();
+            this.loadSavedBuilds();
+            this.pushUrlState();
+        },
+
+        openBuildPicker(slotType, index) {
+            this.buildPickerSlot = { type: slotType, index };
+            this.buildPickerQuery = "";
+            let items;
+            if (slotType === "belt") {
+                const beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !BACKPACK_IDS.has(i.id));
+                const artItems = this.categoryItems["artefacts"] || [];
+                items = beltItems.concat(artItems);
+            } else {
+                const cat = BUILD_SLOT_CATEGORIES[slotType];
+                const slug = categorySlug(cat);
+                items = this.categoryItems[slug] || [];
+            }
+            this.buildPickerFuse = new Fuse(items, {
+                keys: ["displayName", "pda_encyclopedia_name", "localeName", "id"],
+                threshold: 0.35,
+            });
+            this.buildPickerOpen = true;
+            document.body.style.overflow = "hidden";
+            this.$nextTick(() => {
+                const input = this.$refs.buildPickerInput;
+                if (input) input.focus();
+            });
+        },
+
+        closeBuildPicker() {
+            this.buildPickerOpen = false;
+            this.buildPickerSlot = null;
+            this.buildPickerQuery = "";
+            document.body.style.overflow = "";
+        },
+
+        selectBuildItem(item) {
+            if (!this.buildPickerSlot) return;
+            const { type, index } = this.buildPickerSlot;
+            if (type === "inventory") {
+                const slotType = this.getItemSlotType(item);
+                if (slotType && !this.buildInventory.some(e => e.item.id === item.id)) {
+                    this.buildInventory.push({ item, slotType });
+                    this.saveInventoryToStorage();
+                }
+                this.closeBuildPicker();
+                return;
+            }
+            if (type === "outfit") {
+                this.buildOutfit = item;
+                // Overflow belt+artifact items to inventory if new outfit has fewer slots
+                const maxSlots = parseInt(item["st_data_export_outfit_artefact_count_max"]) || 0;
+                while (this.buildBelts.length + this.buildArtifacts.length > maxSlots) {
+                    if (this.buildArtifacts.length > 0) {
+                        this.buildInventory.push({ item: this.buildArtifacts.pop(), slotType: "artifact" });
+                    } else {
+                        this.buildInventory.push({ item: this.buildBelts.pop(), slotType: "belt" });
+                    }
+                }
+                this.saveInventoryToStorage();
+            } else if (type === "helmet") {
+                this.buildHelmet = item;
+            } else if (type === "backpack") {
+                this.buildBackpack = item;
+            } else if (type === "belt") {
+                // Determine actual slot type from item category
+                const actualType = this.getItemSlotType(item);
+                if (actualType === "artifact") {
+                    this.buildArtifacts.push(item);
+                } else if (index !== undefined && index < this.buildBelts.length) {
+                    this.buildBelts[index] = item;
+                } else {
+                    this.buildBelts.push(item);
+                }
+            } else if (type === "artifact") {
+                if (index !== undefined && index < this.buildArtifacts.length) {
+                    this.buildArtifacts[index] = item;
+                } else {
+                    this.buildArtifacts.push(item);
+                }
+            }
+            this.closeBuildPicker();
+            this.saveBuildToStorage();
+            this.pushUrlState();
+        },
+
+        removeBuildSlot(type, index) {
+            if (type === "outfit") {
+                if (this.buildOutfit) this.buildInventory.push({ item: this.buildOutfit, slotType: "outfit" });
+                for (const b of this.buildBelts) this.buildInventory.push({ item: b, slotType: "belt" });
+                for (const a of this.buildArtifacts) this.buildInventory.push({ item: a, slotType: "artifact" });
+                this.buildOutfit = null;
+                this.buildBelts = [];
+                this.buildArtifacts = [];
+            } else if (type === "helmet") {
+                if (this.buildHelmet) this.buildInventory.push({ item: this.buildHelmet, slotType: "helmet" });
+                this.buildHelmet = null;
+            } else if (type === "backpack") {
+                if (this.buildBackpack) this.buildInventory.push({ item: this.buildBackpack, slotType: "backpack" });
+                this.buildBackpack = null;
+            } else if (type === "belt") {
+                if (this.buildBelts[index]) this.buildInventory.push({ item: this.buildBelts[index], slotType: "belt" });
+                this.buildBelts.splice(index, 1);
+            } else if (type === "artifact") {
+                if (this.buildArtifacts[index]) this.buildInventory.push({ item: this.buildArtifacts[index], slotType: "artifact" });
+                this.buildArtifacts.splice(index, 1);
+            }
+            this.saveBuildToStorage();
+            this.saveInventoryToStorage();
+            this.pushUrlState();
+        },
+
+        clearBuild() {
+            this.buildOutfit = null;
+            this.buildHelmet = null;
+            this.buildBackpack = null;
+            this.buildBelts = [];
+            this.buildArtifacts = [];
+            this.buildExpandedStats = {};
+            this.buildInventory = [];
+            this.saveBuildToStorage();
+            this.saveInventoryToStorage();
+            this.pushUrlState();
+        },
+
+        toggleBuildExpandAll() {
+            const allFields = ["weight", "carry", "armor", "speed", ...PROTECTION_FIELDS, ...RESTORATION_FIELDS];
+            if (this.buildAllExpanded) {
+                this.buildExpandedStats = {};
+            } else {
+                const expanded = {};
+                for (const f of allFields) expanded[f] = true;
+                this.buildExpandedStats = expanded;
+            }
+        },
+
+        toggleBuildStatExpand(field) {
+            if (this.buildExpandedStats[field]) {
+                delete this.buildExpandedStats[field];
+            } else {
+                this.buildExpandedStats[field] = true;
+            }
+            // Force reactivity
+            this.buildExpandedStats = { ...this.buildExpandedStats };
+        },
+
+        buildStatFormatted(field, value) {
+            if (PROTECTION_FIELDS.includes(field)) return value.toFixed(1) + "%";
+            if (field === "st_prop_weight") return parseFloat(value.toFixed(2)) + " " + this.tUnit("st_prop_weight");
+            if (field === "ui_inv_outfit_additional_weight") return "+" + value + " " + this.tUnit("st_prop_weight");
+            if (field === "ui_inv_ap_res") return String(value);
+            if (field === "ui_inv_outfit_speed") return value + "%";
+            if (field === "st_prop_restore_health" || field === "st_prop_restore_bleeding") return parseFloat(value.toFixed(4)).toString();
+            if (field === "st_data_export_restore_radiation") return parseFloat(value.toFixed(4)) + " " + this.tUnit("st_data_export_restore_radiation");
+            if (field === "ui_inv_outfit_power_restore") return parseFloat(value.toFixed(2)) + "%";
+            return value;
+        },
+
+        factionIcon(id) {
+            return FACTION_ICONS[id] || FACTION_ICONS["stalker"];
+        },
+        factionLabel(id) {
+            return this.t(id) || id;
+        },
+
+        buildSlotColor(slot) {
+            const colors = { outfit: "#5b8abd", helmet: "#5ba8a0", backpack: "#6bab5b", belt: "#c89050", artifact: "#9b6fb0" };
+            return colors[slot] || "#888";
+        },
+
+        buildBarSegments(segments, total) {
+            if (!total || total <= 0) return [];
+            const SLOT_COLORS = { outfit: "#5b8abd", helmet: "#5ba8a0", backpack: "#6bab5b", belt: "#c89050", artifact: "#9b6fb0" };
+            const result = [];
+            for (const slot of ["outfit", "helmet", "backpack", "belt", "artifact"]) {
+                const v = Math.abs(segments[slot] || 0);
+                if (v <= 0) continue;
+                const pct = (v / Math.abs(total)) * 100;
+                result.push({ slot, pct, color: SLOT_COLORS[slot] });
+            }
+            return result;
+        },
+
+        getBuildStorageKey() {
+            if (!this.activePack) return "build";
+            return `build:${this.activePack.id}`;
+        },
+
+        saveBuildToStorage() {
+            const data = {
+                outfit: this.buildOutfit?.id || null,
+                helmet: this.buildHelmet?.id || null,
+                backpack: this.buildBackpack?.id || null,
+                belts: this.buildBelts.map(b => b.id),
+                artifacts: this.buildArtifacts.map(a => a.id),
+            };
+            try {
+                localStorage.setItem(this.getBuildStorageKey(), JSON.stringify(data));
+            } catch (e) { /* quota */ }
+        },
+
+        loadBuildFromStorage() {
+            try {
+                const raw = localStorage.getItem(this.getBuildStorageKey());
+                if (!raw) return;
+                const data = JSON.parse(raw);
+                this.restoreBuildFromIds(data);
+            } catch (e) { /* ignore */ }
+        },
+
+        restoreBuildFromIds(data) {
+            const findItem = (id, slug) => {
+                if (!id) return null;
+                const items = this.categoryItems[slug] || [];
+                return items.find(i => i.id === id) || null;
+            };
+            this.buildOutfit = findItem(data.outfit, "outfits");
+            this.buildHelmet = findItem(data.helmet, "helmets");
+            this.buildBackpack = findItem(data.backpack, "belt-attachments");
+            this.buildBelts = (data.belts || []).map(id => findItem(id, "belt-attachments")).filter(Boolean);
+            this.buildArtifacts = (data.artifacts || []).map(id => findItem(id, "artefacts")).filter(Boolean);
+        },
+
+        getSavedBuildsKey() {
+            if (!this.activePack) return "builds";
+            return `builds:${this.activePack.id}`;
+        },
+
+        loadSavedBuilds() {
+            try {
+                const raw = localStorage.getItem(this.getSavedBuildsKey());
+                this.buildSavedBuilds = raw ? JSON.parse(raw) : [];
+            } catch (e) {
+                this.buildSavedBuilds = [];
+            }
+        },
+
+        saveCurrentBuild() {
+            const name = this.buildSaveName.trim();
+            if (!name) return;
+            const data = {
+                name,
+                playerName: this.buildPlayerName,
+                playerFaction: this.buildPlayerFaction,
+                outfit: this.buildOutfit?.id || null,
+                helmet: this.buildHelmet?.id || null,
+                backpack: this.buildBackpack?.id || null,
+                belts: this.buildBelts.map(b => b.id),
+                artifacts: this.buildArtifacts.map(a => a.id),
+                timestamp: Date.now(),
+            };
+            // Replace if same name exists
+            const idx = this.buildSavedBuilds.findIndex(b => b.name === name);
+            if (idx >= 0) {
+                this.buildSavedBuilds[idx] = data;
+            } else {
+                if (this.buildSavedBuilds.length >= MAX_SAVED_BUILDS) {
+                    this.buildSavedBuilds.pop();
+                }
+                this.buildSavedBuilds.unshift(data);
+            }
+            try {
+                localStorage.setItem(this.getSavedBuildsKey(), JSON.stringify(this.buildSavedBuilds));
+            } catch (e) { /* quota */ }
+            this.buildSaveName = "";
+            this.buildSaveModalOpen = false;
+        },
+
+        loadSavedBuild(build) {
+            if (build.playerName) this.buildPlayerName = build.playerName;
+            if (build.playerFaction) this.buildPlayerFaction = build.playerFaction;
+            this.restoreBuildFromIds(build);
+            this.saveBuildToStorage();
+            this.pushUrlState();
+        },
+
+        deleteSavedBuild(index) {
+            this.buildSavedBuilds.splice(index, 1);
+            try {
+                localStorage.setItem(this.getSavedBuildsKey(), JSON.stringify(this.buildSavedBuilds));
+            } catch (e) { /* quota */ }
+        },
+
+        async copyBuildLink() {
+            await this.copyToClipboard(window.location.href, "copyBuildLinkFeedback");
+        },
+
+        buildUrlParams() {
+            const params = {};
+            if (this.buildPlayerName && this.buildPlayerName !== "Stalker") params.pn = this.buildPlayerName;
+            if (this.buildPlayerFaction && this.buildPlayerFaction !== "stalker") params.pf = this.buildPlayerFaction;
+            if (this.buildOutfit) params.outfit = this.buildOutfit.id;
+            if (this.buildHelmet) params.helmet = this.buildHelmet.id;
+            if (this.buildBackpack) params.backpack = this.buildBackpack.id;
+            if (this.buildBelts.length) params.belt = this.buildBelts.map(b => b.id).join(",");
+            if (this.buildArtifacts.length) params.arts = this.buildArtifacts.map(a => a.id).join(",");
+            return params;
+        },
+
+        restoreBuildFromUrl(params) {
+            if (params.get("pn")) this.buildPlayerName = params.get("pn");
+            if (params.get("pf")) this.buildPlayerFaction = params.get("pf");
+            const data = {
+                outfit: params.get("outfit") || null,
+                helmet: params.get("helmet") || null,
+                backpack: params.get("backpack") || null,
+                belts: params.get("belt") ? params.get("belt").split(",") : [],
+                artifacts: params.get("arts") ? params.get("arts").split(",") : [],
+            };
+            if (data.outfit || data.helmet || data.backpack || data.belts.length || data.artifacts.length) {
+                this.restoreBuildFromIds(data);
+                this.saveBuildToStorage();
+            }
+        },
+
+        // Inventory methods
+        getItemSlotType(item) {
+            if (!item) return null;
+            // Check artefacts first to avoid misclassifying as belt
+            const checks = [
+                ["artefacts", "artifact"],
+                ["outfits", "outfit"],
+                ["helmets", "helmet"],
+                ["belt-attachments", "belt"],
+            ];
+            for (const [slug, type] of checks) {
+                const items = this.categoryItems[slug] || [];
+                if (items.some(i => i.id === item.id)) {
+                    if (slug === "belt-attachments") return BACKPACK_IDS.has(item.id) ? "backpack" : "belt";
+                    return type;
+                }
+            }
+            return null;
+        },
+
+        getInventoryStorageKey() {
+            if (!this.activePack) return "inventory";
+            return `inventory:${this.activePack.id}`;
+        },
+
+        saveInventoryToStorage() {
+            const data = this.buildInventory.map(entry => ({ id: entry.item.id, slotType: entry.slotType }));
+            try {
+                localStorage.setItem(this.getInventoryStorageKey(), JSON.stringify(data));
+            } catch (e) { /* quota */ }
+        },
+
+        loadInventoryFromStorage() {
+            try {
+                const raw = localStorage.getItem(this.getInventoryStorageKey());
+                if (!raw) return;
+                const data = JSON.parse(raw);
+                this.buildInventory = data.map(entry => {
+                    const slugMap = { outfit: "outfits", helmet: "helmets", backpack: "belt-attachments", belt: "belt-attachments", artifact: "artefacts" };
+                    const slug = slugMap[entry.slotType];
+                    const items = this.categoryItems[slug] || [];
+                    const item = items.find(i => i.id === entry.id);
+                    return item ? { item, slotType: entry.slotType } : null;
+                }).filter(Boolean);
+            } catch (e) { this.buildInventory = []; }
+        },
+
+        addFavoritesToInventory() {
+            const favSet = new Set(this.favoriteIds);
+            const existingIds = new Set(this.buildInventory.map(e => e.item.id));
+            const items = this.index.filter(i => favSet.has(i.id) && !existingIds.has(i.id));
+            let added = 0;
+            for (const item of items) {
+                const slotType = this.getItemSlotType(item);
+                if (slotType) {
+                    this.buildInventory.push({ item, slotType });
+                    added++;
+                }
+            }
+            if (added) this.saveInventoryToStorage();
+        },
+
+        openInventoryPicker() {
+            this.buildPickerSlot = { type: "inventory" };
+            this.buildPickerQuery = "";
+            // Combine all equipment categories into one Fuse instance
+            const slugs = ["outfits", "helmets", "belt-attachments", "artefacts"];
+            let allItems = [];
+            for (const slug of slugs) {
+                allItems = allItems.concat(this.categoryItems[slug] || []);
+            }
+            this.buildPickerFuse = new Fuse(allItems, {
+                keys: ["displayName", "pda_encyclopedia_name", "localeName", "id"],
+                threshold: 0.35,
+            });
+            this.buildPickerOpen = true;
+            document.body.style.overflow = "hidden";
+            this.$nextTick(() => {
+                const input = this.$refs.buildPickerInput;
+                if (input) input.focus();
+            });
+        },
+
+        inventorySlotTypeLabel(slotType) {
+            const map = { outfit: "app_type_outfit", helmet: "app_type_helmet", backpack: "app_type_backpack", belt: "app_type_belt_attachment", artifact: "app_type_artefact" };
+            return this.t(map[slotType] || slotType);
+        },
+
+        getItemFields(item) {
+            if (!item) return [];
+            const slotType = this.getItemSlotType(item);
+            const slugMap = { outfit: "outfits", helmet: "helmets", backpack: "belt-attachments", belt: "belt-attachments", artifact: "artefacts" };
+            const slug = slugMap[slotType];
+            if (!slug) return [];
+            const headers = this.categoryHeaders[slug] || [];
+            return headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id");
+        },
+
+        showBuildHover(item, event) {
+            clearTimeout(this.buildHoverTimeout);
+            this._buildHoverItem = item;
+            this._buildHoverMouse = { x: event.clientX, y: event.clientY };
+            this.buildHoverTimeout = setTimeout(() => {
+                this.buildHoverItem = this._buildHoverItem;
+                this.$nextTick(() => this._updateBuildHoverFloat());
+            }, 300);
+        },
+
+        moveBuildHover(event) {
+            this._buildHoverMouse = { x: event.clientX, y: event.clientY };
+            if (!this.buildHoverItem) return;
+            this._updateBuildHoverFloat();
+        },
+
+        _updateBuildHoverFloat() {
+            const popover = document.querySelector('.build-hover-popover');
+            if (!popover || !this._buildHoverMouse) return;
+            const { x, y } = this._buildHoverMouse;
+            const virtualEl = {
+                getBoundingClientRect: () => ({ x, y, top: y, left: x, bottom: y, right: x, width: 0, height: 0 }),
+            };
+            FloatingUIDOM.computePosition(virtualEl, popover, {
+                placement: 'right-start',
+                strategy: 'fixed',
+                middleware: [
+                    FloatingUIDOM.offset(16),
+                    FloatingUIDOM.flip({ fallbackPlacements: ['left-start', 'right-end', 'left-end'] }),
+                    FloatingUIDOM.shift({ padding: 8 }),
+                ],
+            }).then(({ x: px, y: py }) => {
+                this.buildHoverPos = { top: py, left: px };
+            });
+        },
+
+        hideBuildHover() {
+            clearTimeout(this.buildHoverTimeout);
+            this._buildHoverItem = null;
+            this._buildHoverMouse = null;
+            this.buildHoverItem = null;
+            this.buildHoverPos = null;
+        },
+
+        equipFromInventory(idx) {
+            const entry = this.buildInventory[idx];
+            if (!entry) return;
+            const { item, slotType } = entry;
+
+            if (slotType === "belt" || slotType === "artifact") {
+                if (this.buildBeltSlotUsed >= this.buildBeltSlotMax) return;
+                if (slotType === "belt") this.buildBelts.push(item);
+                else this.buildArtifacts.push(item);
+            } else if (slotType === "outfit") {
+                if (this.buildOutfit) {
+                    this.buildInventory.push({ item: this.buildOutfit, slotType: "outfit" });
+                    // Cascade overflow belt/artifact items
+                    const newMax = parseInt(item["st_data_export_outfit_artefact_count_max"]) || 0;
+                    while (this.buildBelts.length + this.buildArtifacts.length > newMax) {
+                        if (this.buildArtifacts.length > 0) {
+                            this.buildInventory.push({ item: this.buildArtifacts.pop(), slotType: "artifact" });
+                        } else {
+                            this.buildInventory.push({ item: this.buildBelts.pop(), slotType: "belt" });
+                        }
+                    }
+                }
+                this.buildOutfit = item;
+            } else if (slotType === "helmet") {
+                if (this.buildHelmet) {
+                    this.buildInventory.push({ item: this.buildHelmet, slotType: "helmet" });
+                }
+                this.buildHelmet = item;
+            } else if (slotType === "backpack") {
+                if (this.buildBackpack) {
+                    this.buildInventory.push({ item: this.buildBackpack, slotType: "backpack" });
+                }
+                this.buildBackpack = item;
+            }
+
+            this.buildInventory.splice(idx, 1);
+            this.saveBuildToStorage();
+            this.saveInventoryToStorage();
+            this.pushUrlState();
+        },
+
+        removeFromInventory(idx) {
+            this.buildInventory.splice(idx, 1);
+            this.saveInventoryToStorage();
+        },
+
+        // Drag-and-drop handlers
+        onInventoryDragStart(e, idx) {
+            const entry = this.buildInventory[idx];
+            const payload = { source: "inventory", slotType: entry.slotType, itemId: entry.item.id, inventoryIndex: idx };
+            e.dataTransfer.setData("application/json", JSON.stringify(payload));
+            e.dataTransfer.effectAllowed = "move";
+            this.buildDragState = { ...payload };
+        },
+
+        onSlotDragStart(e, type, idx) {
+            let item;
+            if (type === "outfit") item = this.buildOutfit;
+            else if (type === "helmet") item = this.buildHelmet;
+            else if (type === "backpack") item = this.buildBackpack;
+            else if (type === "belt") item = this.buildBelts[idx];
+            else if (type === "artifact") item = this.buildArtifacts[idx];
+            if (!item) return;
+            const payload = { source: "slot", slotType: type, itemId: item.id, slotIndex: idx };
+            e.dataTransfer.setData("application/json", JSON.stringify(payload));
+            e.dataTransfer.effectAllowed = "move";
+            this.buildDragState = { ...payload };
+        },
+
+        onSlotDragOver(e, type, idx) {
+            if (!this.buildDragState) return;
+            const drag = this.buildDragState;
+            // Check type compatibility
+            if (drag.slotType !== type) {
+                e.dataTransfer.dropEffect = "none";
+                return;
+            }
+            // Check capacity for belt/artifact
+            if ((type === "belt" || type === "artifact") && drag.source === "inventory") {
+                if (this.buildBeltSlotUsed >= this.buildBeltSlotMax) {
+                    e.dataTransfer.dropEffect = "none";
+                    return;
+                }
+            }
+            e.preventDefault();
+            e.dataTransfer.dropEffect = "move";
+            this.buildDragState = { ...drag, targetSlot: type, targetIndex: idx };
+        },
+
+        onSlotDragLeave() {
+            if (this.buildDragState) {
+                this.buildDragState = { ...this.buildDragState, targetSlot: null, targetIndex: null };
+            }
+        },
+
+        onSlotDrop(e, type, idx) {
+            e.preventDefault();
+            let payload;
+            try { payload = JSON.parse(e.dataTransfer.getData("application/json")); } catch { return; }
+            if (!payload || payload.slotType !== type) return;
+
+            if (payload.source === "inventory") {
+                const entry = this.buildInventory[payload.inventoryIndex];
+                if (!entry) return;
+                const item = entry.item;
+
+                if (type === "outfit" || type === "helmet" || type === "backpack") {
+                    // Singular slot: swap old item to inventory
+                    const current = type === "outfit" ? this.buildOutfit : type === "helmet" ? this.buildHelmet : this.buildBackpack;
+                    if (current) {
+                        this.buildInventory.push({ item: current, slotType: type });
+                        if (type === "outfit") {
+                            const newMax = parseInt(item["st_data_export_outfit_artefact_count_max"]) || 0;
+                            while (this.buildBelts.length + this.buildArtifacts.length > newMax) {
+                                if (this.buildArtifacts.length > 0) this.buildInventory.push({ item: this.buildArtifacts.pop(), slotType: "artifact" });
+                                else this.buildInventory.push({ item: this.buildBelts.pop(), slotType: "belt" });
+                            }
+                        }
+                    }
+                    if (type === "outfit") this.buildOutfit = item;
+                    else if (type === "helmet") this.buildHelmet = item;
+                    else this.buildBackpack = item;
+                } else {
+                    // Belt/artifact: check capacity
+                    if (this.buildBeltSlotUsed >= this.buildBeltSlotMax) return;
+                    if (type === "belt") this.buildBelts.push(item);
+                    else this.buildArtifacts.push(item);
+                }
+                this.buildInventory.splice(payload.inventoryIndex, 1);
+            } else if (payload.source === "slot") {
+                // Drag between slots of same type (swap for singular, no-op for multi to same)
+                if (type === "outfit" || type === "helmet" || type === "backpack") {
+                    // Same singular slot, no-op
+                } else {
+                    // Belt/artifact swap positions - no-op since they're in same pool
+                }
+            }
+
+            this.buildDragState = null;
+            this.saveBuildToStorage();
+            this.saveInventoryToStorage();
+            this.pushUrlState();
+        },
+
+        onBeltAreaDragOver(e) {
+            if (!this.buildDragState) return;
+            const drag = this.buildDragState;
+            // Accept belt or artifact from inventory
+            if (drag.source === "inventory" && (drag.slotType === "belt" || drag.slotType === "artifact")) {
+                if (this.buildBeltSlotUsed >= this.buildBeltSlotMax) {
+                    e.dataTransfer.dropEffect = "none";
+                    return;
+                }
+                e.dataTransfer.dropEffect = "move";
+                this.buildDragState = { ...drag, targetSlot: "beltarea" };
+            }
+        },
+
+        onBeltAreaDrop(e) {
+            let payload;
+            try { payload = JSON.parse(e.dataTransfer.getData("application/json")); } catch { return; }
+            if (!payload) return;
+
+            if (payload.source === "inventory" && (payload.slotType === "belt" || payload.slotType === "artifact")) {
+                if (this.buildBeltSlotUsed >= this.buildBeltSlotMax) return;
+                const entry = this.buildInventory[payload.inventoryIndex];
+                if (!entry) return;
+                if (payload.slotType === "belt") this.buildBelts.push(entry.item);
+                else this.buildArtifacts.push(entry.item);
+                this.buildInventory.splice(payload.inventoryIndex, 1);
+                this.buildDragState = null;
+                this.saveBuildToStorage();
+                this.saveInventoryToStorage();
+                this.pushUrlState();
+            }
+        },
+
+        onInventoryDragOver(e) {
+            if (!this.buildDragState) return;
+            if (this.buildDragState.source !== "slot") return;
+            e.preventDefault();
+            e.dataTransfer.dropEffect = "move";
+            this.buildDragState = { ...this.buildDragState, targetSlot: "inventory" };
+        },
+
+        onInventoryDrop(e) {
+            e.preventDefault();
+            let payload;
+            try { payload = JSON.parse(e.dataTransfer.getData("application/json")); } catch { return; }
+            if (!payload || payload.source !== "slot") return;
+
+            const type = payload.slotType;
+            let item;
+            if (type === "outfit") {
+                item = this.buildOutfit;
+                if (!item) return;
+                this.buildInventory.push({ item, slotType: "outfit" });
+                this.buildOutfit = null;
+                // Cascade belt/artifact to inventory
+                for (const b of this.buildBelts) this.buildInventory.push({ item: b, slotType: "belt" });
+                for (const a of this.buildArtifacts) this.buildInventory.push({ item: a, slotType: "artifact" });
+                this.buildBelts = [];
+                this.buildArtifacts = [];
+            } else if (type === "helmet") {
+                item = this.buildHelmet;
+                if (!item) return;
+                this.buildInventory.push({ item, slotType: "helmet" });
+                this.buildHelmet = null;
+            } else if (type === "backpack") {
+                item = this.buildBackpack;
+                if (!item) return;
+                this.buildInventory.push({ item, slotType: "backpack" });
+                this.buildBackpack = null;
+            } else if (type === "belt") {
+                item = this.buildBelts[payload.slotIndex];
+                if (!item) return;
+                this.buildInventory.push({ item, slotType: "belt" });
+                this.buildBelts.splice(payload.slotIndex, 1);
+            } else if (type === "artifact") {
+                item = this.buildArtifacts[payload.slotIndex];
+                if (!item) return;
+                this.buildInventory.push({ item, slotType: "artifact" });
+                this.buildArtifacts.splice(payload.slotIndex, 1);
+            }
+
+            this.buildDragState = null;
+            this.saveBuildToStorage();
+            this.saveInventoryToStorage();
+            this.pushUrlState();
+        },
+
+        onDragEnd() {
+            this.buildDragState = null;
+        },
     },
 
     watch: {
@@ -2552,6 +3536,23 @@ const app = createApp({
         },
         exchangeFactionFilter() {
             if (!this._restoringUrl) this.pushUrlState();
+        },
+        buildPlayerName() {
+            if (this.buildPlannerActive && !this._restoringUrl) this.debouncedPushUrl();
+        },
+        buildPlayerFaction() {
+            if (this.buildPlannerActive && !this._restoringUrl) this.pushUrlState();
+        },
+        buildSaveModalOpen(open) {
+            if (open) {
+                this.buildSaveName = this.buildPlayerName || "";
+                this.$nextTick(() => {
+                    setTimeout(() => {
+                        const input = this.$refs.buildSaveInput;
+                        if (input) { input.focus(); input.select(); }
+                    }, 50);
+                });
+            }
         },
     },
 
@@ -2648,6 +3649,14 @@ const app = createApp({
         this.restoreUrlState(initialSearch);
         this._restoringUrl = false;
         this.pushUrlState();
+
+        // 6c. Restore build planner if URL says so
+        if (this._pendingBuildRestore) {
+            const params = this._pendingBuildRestore;
+            this._pendingBuildRestore = null;
+            await this.openBuildPlanner();
+            this.restoreBuildFromUrl(params);
+        }
 
         // 7. Handle hash-based item navigation
         if (window.location.hash.length > 1) {
