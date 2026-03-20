@@ -1467,6 +1467,7 @@ const app = createApp({
                     for (const r of results) {
                         const type = r.category;
                         for (const item of r.items) {
+                            item.localeName = this.tName(item);
                             allItems.push({ ...item, Type: type });
                         }
                         const s = categorySlug(r.category);
@@ -1532,6 +1533,9 @@ const app = createApp({
             try {
                 const res = await fetch(this.dataUrl(`${slug}.json`));
                 const data = await res.json();
+                for (const item of data.items) {
+                    item.localeName = this.tName(item);
+                }
                 this.categoryItems[slug] = data.items;
                 this.categoryHeaders[slug] = data.headers;
                 this.categoryFuse[slug] = new Fuse(data.items, {
@@ -2819,6 +2823,9 @@ const app = createApp({
                 try {
                     const res = await fetch(this.dataUrl(`${slug}.json`));
                     const data = await res.json();
+                    for (const item of data.items) {
+                        item.localeName = this.tName(item);
+                    }
                     this.categoryItems[slug] = data.items;
                     this.categoryHeaders[slug] = data.headers;
                     this.categoryFuse[slug] = new Fuse(data.items, {
