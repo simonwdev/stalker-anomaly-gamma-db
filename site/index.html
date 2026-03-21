@@ -780,7 +780,7 @@
                                      @mouseenter="showBuildHover(entry.item, $event)"
                                      @mousemove="moveBuildHover($event)"
                                      @mouseleave="hideBuildHover()">
-                                    <span class="build-inventory-item-name">{{ tName(entry.item) }}</span>
+                                    <span class="build-inventory-item-name">{{ tItemName(entry.item) }}</span>
                                     <span class="build-inventory-item-type">{{ inventorySlotTypeLabel(entry.slotType) }}</span>
                                     <button class="build-inventory-item-remove" @click.stop="removeFromInventory(entry.originalIndex)">&times;</button>
                                 </div>
@@ -799,7 +799,7 @@
                     <!-- Single-item popover (no comparison) -->
                     <div v-if="!buildHoverCompareItem" class="tile-card build-hover-tile">
                         <div class="tile-card-header">
-                            <span class="tile-card-name">{{ tName(buildHoverItem) }}</span>
+                            <span class="tile-card-name">{{ tItemName(buildHoverItem) }}</span>
                             <span v-if="buildHoverItem['st_data_export_has_perk'] === 'Y'" class="badge-flag badge-perk">{{ t('app_badge_perk') }}</span>
                             <span v-if="buildHoverItem['ui_mcm_menu_exo'] === 'Y'" class="badge-flag badge-powered">{{ t('app_badge_powered') }}</span>
                         </div>
@@ -824,7 +824,7 @@
                     <!-- Comparison popover -->
                     <div v-else class="tile-card build-hover-tile build-hover-tile--compare">
                         <div class="build-compare-header">
-                            {{ tName(buildHoverCompareItem) }} <span class="build-compare-vs">vs</span> {{ tName(buildHoverItem) }}
+                            {{ tItemName(buildHoverCompareItem) }} <span class="build-compare-vs">vs</span> {{ tItemName(buildHoverItem) }}
                         </div>
                         <div class="build-compare-grid">
                             <span class="build-compare-sublabel"></span>

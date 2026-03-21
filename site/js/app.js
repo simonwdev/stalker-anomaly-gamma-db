@@ -2715,6 +2715,11 @@ const app = createApp({
             return SINGULAR_CATEGORY[val] || val;
         },
 
+        tItemName(item) {
+            const name = this.tName(item);
+            return this.getItemSlotType(item) === "ammo" ? this.shortAmmoName(name) : name;
+        },
+
         shortAmmoName(name) {
             return name.replace(/\s*rounds$/i, "").replace(/^Патроны\s*/i, "").replace(/\s*мм\b/i, "").replace(/\s*mm\b/i, "").replace(/\bPst\b/, "PST");
         },
