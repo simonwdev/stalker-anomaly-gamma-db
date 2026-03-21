@@ -27,6 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.9"></script>
     <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.13"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sqids@0.3.0/dist/sqids.js"></script>
 </head>
 <body>
 <div id="app-preloader">
@@ -475,6 +476,17 @@
                             <i v-show="!copyBuildLinkFeedback" data-lucide="link" width="16" height="16"></i>
                             <svg v-show="copyBuildLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                         </button>
+                        <button class="build-header-icon" :class="{ copied: copyBuildCodeFeedback }" v-tooltip="copyBuildCodeFeedback ? t('app_label_copied') : (t('app_build_copy_code') || 'Copy Code')" @click="copyBuildCode()">
+                            <i v-show="!copyBuildCodeFeedback" data-lucide="hash" width="16" height="16"></i>
+                            <svg v-show="copyBuildCodeFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </button>
+                        <div class="build-import-inline">
+                            <input class="build-import-input" v-model="buildImportCode" :placeholder="t('app_build_import_placeholder') || 'Paste build code'" @keydown.enter="importBuildFromCode()" spellcheck="false">
+                            <button class="build-header-icon" v-tooltip="t('app_build_import') || 'Import'" @click="importBuildFromCode()" :disabled="!buildImportCode.trim()">
+                                <i data-lucide="download" width="16" height="16"></i>
+                            </button>
+                            <span v-if="buildImportError" class="build-import-error">{{ buildImportError }}</span>
+                        </div>
                     </div>
                 </div>
 

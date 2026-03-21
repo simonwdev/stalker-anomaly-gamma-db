@@ -3094,6 +3094,39 @@ input.range-input {
     padding: 0 0.15rem;
 }
 
+.build-import-inline {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    margin-left: 0.3rem;
+    position: relative;
+}
+.build-import-input {
+    width: 140px;
+    padding: 0.2rem 0.4rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 0.72rem;
+    font-family: inherit;
+}
+.build-import-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+.build-import-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+.build-import-error {
+    color: #f06a5e;
+    font-size: 0.7rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    white-space: nowrap;
+}
+
 .build-planner {
     padding: 0 1.5rem 0.5rem 0;
     overflow-y: auto;

@@ -790,6 +790,48 @@ const translationsOut = join(OUT_DIR, "translations.json");
 writeFileSync(translationsOut, JSON.stringify(translations, null, 2));
 console.log(`Wrote translations (${Object.keys(translations.en).length} en, ${Object.keys(translations.ru).length} ru) to ${translationsOut}`);
 
+// Generate dictionary.json — stable ID-to-integer mapping for build codes
+const DICT_FILE = join(CSV_DIR, "dictionary.json");
+const DICT_OUT = join(OUT_DIR, "dictionary.json");
+
+// Load existing dictionary (append-only: never reassign existing entries)
+let dictionary = {};
+try {
+  dictionary = JSON.parse(readFileSync(DICT_FILE, "utf-8"));
+} catch (e) {
+  if (e.code !== "ENOENT") throw e;
+}
+
+// Find next available index
+let nextIndex = 0;
+for (const idx of Object.values(dictionary)) {
+  if (idx >= nextIndex) nextIndex = idx + 1;
+}
+
+// Collect all item IDs from category data (these are the items usable in build planner)
+const buildItemSlugs = ["outfits", "helmets", "belt-attachments", "artefacts",
+  "pistols", "smgs", "shotguns", "rifles", "snipers", "launchers", "melee",
+  "explosives", "ammo"];
+const allBuildIds = new Set();
+for (const slug of buildItemSlugs) {
+  const data = categoryData.get(slug);
+  if (!data) continue;
+  for (const item of data.items) {
+    allBuildIds.add(item.id);
+  }
+}
+
+// Append new IDs (sorted for deterministic ordering of new entries)
+const newIds = [...allBuildIds].filter(id => !(id in dictionary)).sort();
+for (const id of newIds) {
+  dictionary[id] = nextIndex++;
+}
+
+// Write dictionary to source (persistent) and output (for frontend)
+writeFileSync(DICT_FILE, JSON.stringify(dictionary, null, 2));
+writeFileSync(DICT_OUT, JSON.stringify(dictionary, null, 2));
+console.log(`Wrote dictionary (${Object.keys(dictionary).length} entries, ${newIds.length} new) to ${DICT_OUT}`);
+
 // Generate manifest.json with content hashes for cache busting
 const manifest = {};
 for (const file of readdirSync(OUT_DIR).filter(f => f.endsWith(".json") && f !== "manifest.json")) {

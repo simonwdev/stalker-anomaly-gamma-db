@@ -2,23 +2,19 @@
   {
     "date": "2026-03-22",
     "entries": [
-      { "type": "added", "text": "Radar chart view in the Compare modal — visually compare pinned items across all stats." },
-      { "type": "added", "text": "Weapon Chart in the build planner — overlay all your equipped weapons on a radar chart to compare stats at a glance." },
-      { "type": "added", "text": "Collapsible loadout section — hide your equipped gear to focus on stats, with a one-line summary of your build." },
-      { "type": "added", "text": "Bonus belt slots for tracking outfit upgrades, saved with your build." }
+      { "type": "added", "text": "Radar chart view in the Compare modal - visually compare pinned items across all stats." },
+      { "type": "added", "text": "Weapon Chart in the build planner - overlay your equipped weapons on a radar chart to compare stats at a glance." },
+      { "type": "added", "text": "Bonus belt slots for tracking outfit upgrades." },
+      { "type": "added", "text": "Shareable build codes - copy a short code or link to share your full loadout and inventory." }
     ]
   },
   {
     "date": "2026-03-21",
     "entries": [
       { "type": "added", "text": "Weapon slots in the build planner: primary, secondary, sidearm (pistol/knife), and grenade with ammo selection and combined weapon stats." },
-      { "type": "added", "text": "Weapon comparison selector to choose which equipped weapon to compare against when browsing inventory." },
-      { "type": "added", "text": "Sort inventory items by name or type in the build planner." },
-      { "type": "added", "text": "Toggle visibility of gear and weapon stats independently in the statistics panel." },
       { "type": "added", "text": "Build planner now shows your total carry capacity, combining base carry weight with equipment bonuses." },
       { "type": "added", "text": "Release notes page with a notification badge when new updates are available." },
-      { "type": "added", "text": "Ammo tiles now show cost per pack and cost per round." },
-      { "type": "changed", "text": "Improved language picker with a cleaner dropdown design." }
+      { "type": "added", "text": "Ammo tiles now show cost per pack and cost per round." }
     ]
   },
   {

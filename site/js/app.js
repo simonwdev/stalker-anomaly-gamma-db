@@ -43,6 +43,9 @@ const BADGE_COLS = new Set(["Type", "ui_mm_repair", "ui_ammo_types", "st_data_ex
 const MODAL_BADGE_KEYS = new Set(["st_data_export_has_perk", "st_data_export_is_junk", "st_data_export_can_be_crafted", "ui_mcm_menu_exo", "st_data_export_can_be_cooked", "st_data_export_used_in_cooking", "st_data_export_used_in_crafting", "st_data_export_cuts_thick_skin", "ui_ammo_types", "st_data_export_ammo_types_alt", "ui_st_community"]);
 const SKIP_KEYS = new Set(["id", "pda_encyclopedia_name", "hasNpcWeaponDrop", "hasStashDrop", "hasDisassemble"]);
 const MAX_PINS = 5;
+const BUILD_CODE_PREFIX = "BUILD-";
+const SLOT_TYPE_TO_NUM = { outfit: 1, helmet: 2, backpack: 3, belt: 4, artifact: 5, weapon: 6, sidearm: 7, grenade: 8, ammo: 9 };
+const NUM_TO_SLOT_TYPE = { 1: "outfit", 2: "helmet", 3: "backpack", 4: "belt", 5: "artifact", 6: "weapon", 7: "sidearm", 8: "grenade", 9: "ammo" };
 const LOWER_IS_BETTER = new Set(["st_data_export_weapon_degradation"]);
 const HIGHER_IS_WORSE = new Set(["st_prop_weight", "st_upgr_cost", "_cost_per_round", "_malfunction_chance"]);
 const NO_HIGHLIGHT = new Set(["ui_ammo_types", "st_data_export_ammo_types_alt", "ui_mm_repair"]);
@@ -370,6 +373,11 @@ const app = createApp({
             buildSaveModalOpen: false,
             buildSavedDropdownOpen: false,
             copyBuildLinkFeedback: false,
+            copyBuildCodeFeedback: false,
+            buildImportCode: "",
+            buildImportError: "",
+            buildDictionary: null,
+            buildDictionaryReverse: null,
 
             // Item hover popover
             buildHoverItem: null,
@@ -1507,14 +1515,24 @@ const app = createApp({
                     const mRes = await fetch(`${this.dataBasePath}/manifest.json`, { cache: "no-cache" });
                     this.fileManifest = mRes.ok ? await mRes.json() : {};
                 } catch { this.fileManifest = {}; }
-                const [indexRes, catRes, trRes, dlRes] = await Promise.all([
+                const [indexRes, catRes, trRes, dlRes, dictRes] = await Promise.all([
                     fetch(this.dataUrl("index.json")),
                     fetch(this.dataUrl("categories.json")),
                     fetch(this.dataUrl("translations.json")),
                     fetch(this.dataUrl("display-labels.json")),
+                    fetch(this.dataUrl("dictionary.json")),
                 ]);
                 try { this.translations = trRes.ok ? await trRes.json() : null; } catch { this.translations = null; }
                 try { this.displayLabels = dlRes.ok ? await dlRes.json() : {}; } catch { this.displayLabels = {}; }
+                try {
+                    if (dictRes.ok) {
+                        this.buildDictionary = await dictRes.json();
+                        this.buildDictionaryReverse = {};
+                        for (const [id, idx] of Object.entries(this.buildDictionary)) {
+                            this.buildDictionaryReverse[idx] = id;
+                        }
+                    }
+                } catch { this.buildDictionary = null; this.buildDictionaryReverse = null; }
                 this.index = await indexRes.json();
                 this.categories = catRes.ok
                     ? await catRes.json()
@@ -3152,51 +3170,34 @@ const app = createApp({
         pushUrlState() {
             const url = new URL(window.location);
             if (this.activePack) url.searchParams.set("pack", this.activePack.id);
-            // Clear build params by default
-            url.searchParams.delete("outfit");
-            url.searchParams.delete("helmet");
-            url.searchParams.delete("backpack");
-            url.searchParams.delete("belt");
-            url.searchParams.delete("arts");
-            url.searchParams.delete("pn");
-            url.searchParams.delete("pf");
-            for (const k of ["w1","w2","a1","a2","wp","ws","wsi","wg","ap","as","asi"]) url.searchParams.delete(k);
+            // Clear legacy build params
+            for (const k of ["outfit","helmet","backpack","belt","arts","pn","pf","bsb","w1","w2","a1","a2","wp","ws","wsi","wg","ap","as","asi"]) url.searchParams.delete(k);
             if (this.buildPlannerActive) {
                 url.searchParams.set("cat", "build-planner");
                 url.searchParams.delete("favonly");
-                // Add build params
-                const bp = this.buildUrlParams();
-                if (bp.pn) url.searchParams.set("pn", bp.pn);
-                if (bp.pf) url.searchParams.set("pf", bp.pf);
-                if (bp.outfit) url.searchParams.set("outfit", bp.outfit);
-                if (bp.helmet) url.searchParams.set("helmet", bp.helmet);
-                if (bp.backpack) url.searchParams.set("backpack", bp.backpack);
-                if (bp.belt) url.searchParams.set("belt", bp.belt);
-                if (bp.arts) url.searchParams.set("arts", bp.arts);
-                if (bp.wp) url.searchParams.set("wp", bp.wp);
-                if (bp.ws) url.searchParams.set("ws", bp.ws);
-                if (bp.wsi) url.searchParams.set("wsi", bp.wsi);
-                if (bp.wg) url.searchParams.set("wg", bp.wg);
-                if (bp.ap) url.searchParams.set("ap", bp.ap);
-                if (bp.as) url.searchParams.set("as", bp.as);
-                if (bp.asi) url.searchParams.set("asi", bp.asi);
-                if (bp.bsb) url.searchParams.set("bsb", bp.bsb);
-            } else if (this.favoritesViewActive) {
-                url.searchParams.set("cat", "favorites");
-                url.searchParams.delete("favonly");
-            } else if (this.recentViewActive) {
-                url.searchParams.set("cat", "recent");
-                url.searchParams.delete("favonly");
-            } else if (this.activeCategory) {
-                url.searchParams.set("cat", categorySlug(this.activeCategory));
-                if (this.showFavoritesOnly) {
-                    url.searchParams.set("favonly", "1");
+                // Build code goes in hash fragment
+                const code = this.encodeBuildCode();
+                url.hash = code ? `b/${code}` : "";
+            } else {
+                // Clear build hash when not in build planner
+                if (url.hash.startsWith("#b/")) url.hash = "";
+                if (this.favoritesViewActive) {
+                    url.searchParams.set("cat", "favorites");
+                    url.searchParams.delete("favonly");
+                } else if (this.recentViewActive) {
+                    url.searchParams.set("cat", "recent");
+                    url.searchParams.delete("favonly");
+                } else if (this.activeCategory) {
+                    url.searchParams.set("cat", categorySlug(this.activeCategory));
+                    if (this.showFavoritesOnly) {
+                        url.searchParams.set("favonly", "1");
+                    } else {
+                        url.searchParams.delete("favonly");
+                    }
                 } else {
+                    url.searchParams.delete("cat");
                     url.searchParams.delete("favonly");
                 }
-            } else {
-                url.searchParams.delete("cat");
-                url.searchParams.delete("favonly");
             }
             if (this.sortCol && this.sortCol !== "pda_encyclopedia_name") {
                 url.searchParams.set("sort", this.sortCol);
@@ -3728,6 +3729,23 @@ const app = createApp({
             this.buildAmmoSecondary = findItem(data.ammo2, "ammo");
             this.buildAmmoSidearm = findItem(data.ammoSidearm, "ammo");
             this.buildBeltSlotBonus = parseInt(data.beltBonus) || 0;
+            // Restore inventory if present
+            if (data.inventory && data.inventory.length) {
+                const findAny = (id) => {
+                    for (const slug of [...PRIMARY_WEAPON_SLUGS, ...SIDEARM_SLUGS, GRENADE_SLUG, "outfits", "helmets", "belt-attachments", "artefacts", "ammo"]) {
+                        const item = findItem(id, slug);
+                        if (item) return item;
+                    }
+                    return null;
+                };
+                this.buildInventory = data.inventory
+                    .map(e => {
+                        const item = findAny(e.id);
+                        return item ? { item, slotType: e.slotType } : null;
+                    })
+                    .filter(Boolean);
+                this.saveInventoryToStorage();
+            }
         },
 
         getSavedBuildsKey() {
@@ -3804,30 +3822,133 @@ const app = createApp({
             return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 12);
         },
 
+        encodeBuildCode() {
+            if (!this.buildDictionary) return null;
+            const dict = this.buildDictionary;
+            const lookup = (item) => item && dict[item.id] !== undefined ? dict[item.id] : null;
+
+            // Fixed slot order: outfit, helmet, backpack, weapon1, weapon2, sidearm, grenade, ammo1, ammo2, ammoSidearm
+            // Then variable-length arrays: belts, artifacts, inventory
+            const singles = [
+                lookup(this.buildOutfit),
+                lookup(this.buildHelmet),
+                lookup(this.buildBackpack),
+                lookup(this.buildWeaponPrimary),
+                lookup(this.buildWeaponSecondary),
+                lookup(this.buildWeaponSidearm),
+                lookup(this.buildWeaponGrenade),
+                lookup(this.buildAmmoPrimary),
+                lookup(this.buildAmmoSecondary),
+                lookup(this.buildAmmoSidearm),
+            ];
+            const beltIndices = this.buildBelts.map(b => dict[b.id]).filter(v => v !== undefined);
+            const artIndices = this.buildArtifacts.map(a => dict[a.id]).filter(v => v !== undefined);
+            const invEntries = this.buildInventory
+                .filter(e => dict[e.item.id] !== undefined)
+                .map(e => ({ idx: dict[e.item.id], slotType: SLOT_TYPE_TO_NUM[e.slotType] || 0 }));
+
+            // Number array: [beltCount, artCount, invCount, ...singles, ...belts, ...artifacts, ...inv pairs]
+            const nums = [beltIndices.length, artIndices.length, invEntries.length];
+            for (const s of singles) {
+                nums.push(s !== null ? s + 1 : 0);
+            }
+            nums.push(...beltIndices.map(v => v + 1));
+            nums.push(...artIndices.map(v => v + 1));
+            for (const e of invEntries) {
+                nums.push(e.idx + 1, e.slotType);
+            }
+
+            const sqids = new Sqids({ minLength: 6 });
+            return sqids.encode(nums);
+        },
+
+        decodeBuildCode(code) {
+            if (!this.buildDictionaryReverse) return null;
+            const rev = this.buildDictionaryReverse;
+            const sqids = new Sqids({ minLength: 6 });
+            let nums;
+            try {
+                nums = sqids.decode(code);
+            } catch { return null; }
+            if (!nums || nums.length < 3) return null;
+
+            const beltCount = nums[0];
+            const artCount = nums[1];
+            const invCount = nums[2];
+            const toId = (n) => n > 0 ? (rev[n - 1] || null) : null;
+
+            const data = {
+                outfit: toId(nums[3]),
+                helmet: toId(nums[4]),
+                backpack: toId(nums[5]),
+                weapon1: toId(nums[6]),
+                weapon2: toId(nums[7]),
+                sidearm: toId(nums[8]),
+                grenade: toId(nums[9]),
+                ammo1: toId(nums[10]),
+                ammo2: toId(nums[11]),
+                ammoSidearm: toId(nums[12]),
+                belts: [],
+                artifacts: [],
+                inventory: [],
+                beltBonus: 0,
+            };
+
+            let pos = 13;
+            for (let i = 0; i < beltCount && pos < nums.length; i++, pos++) {
+                const id = toId(nums[pos]);
+                if (id) data.belts.push(id);
+            }
+            for (let i = 0; i < artCount && pos < nums.length; i++, pos++) {
+                const id = toId(nums[pos]);
+                if (id) data.artifacts.push(id);
+            }
+            for (let i = 0; i < invCount && pos + 1 < nums.length; i++, pos += 2) {
+                const id = toId(nums[pos]);
+                const slotType = NUM_TO_SLOT_TYPE[nums[pos + 1]] || "weapon";
+                if (id) data.inventory.push({ id, slotType });
+            }
+
+            return data;
+        },
+
+        buildCodeUrl() {
+            const code = this.encodeBuildCode();
+            if (!code) return window.location.href;
+            const url = new URL(window.location);
+            url.hash = `b/${code}`;
+            return url.toString();
+        },
+
         async copyBuildLink() {
-            await this.copyToClipboard(window.location.href, "copyBuildLinkFeedback");
+            await this.copyToClipboard(this.buildCodeUrl(), "copyBuildLinkFeedback");
         },
 
-        buildUrlParams() {
-            const params = {};
-            if (this.buildPlayerName && this.buildPlayerName !== "Stalker") params.pn = this.buildPlayerName;
-            if (this.buildPlayerFaction && this.buildPlayerFaction !== "stalker") params.pf = this.buildPlayerFaction;
-            if (this.buildOutfit) params.outfit = this.buildOutfit.id;
-            if (this.buildHelmet) params.helmet = this.buildHelmet.id;
-            if (this.buildBackpack) params.backpack = this.buildBackpack.id;
-            if (this.buildBelts.length) params.belt = this.buildBelts.map(b => b.id).join(",");
-            if (this.buildArtifacts.length) params.arts = this.buildArtifacts.map(a => a.id).join(",");
-            if (this.buildWeaponPrimary) params.wp = this.buildWeaponPrimary.id;
-            if (this.buildWeaponSecondary) params.ws = this.buildWeaponSecondary.id;
-            if (this.buildWeaponSidearm) params.wsi = this.buildWeaponSidearm.id;
-            if (this.buildWeaponGrenade) params.wg = this.buildWeaponGrenade.id;
-            if (this.buildAmmoPrimary) params.ap = this.buildAmmoPrimary.id;
-            if (this.buildAmmoSecondary) params.as = this.buildAmmoSecondary.id;
-            if (this.buildAmmoSidearm) params.asi = this.buildAmmoSidearm.id;
-            if (this.buildBeltSlotBonus > 0) params.bsb = String(this.buildBeltSlotBonus);
-            return params;
+        async copyBuildCode() {
+            const code = this.encodeBuildCode();
+            if (code) {
+                await this.copyToClipboard(BUILD_CODE_PREFIX + code, "copyBuildCodeFeedback");
+            }
         },
 
+        importBuildFromCode() {
+            let code = this.buildImportCode.trim();
+            if (!code) return;
+            // Strip prefix if present
+            if (code.startsWith(BUILD_CODE_PREFIX)) code = code.slice(BUILD_CODE_PREFIX.length);
+            const data = this.decodeBuildCode(code);
+            if (!data) {
+                this.buildImportError = this.t("app_build_import_error") || "Invalid build code";
+                return;
+            }
+            this.buildImportError = "";
+            this.buildImportCode = "";
+            this.restoreBuildFromIds(data);
+            this.saveBuildToStorage();
+            this.pushUrlState();
+        },
+
+        // Legacy URL param support for backwards compatibility with old shared links
         restoreBuildFromUrl(params) {
             if (params.get("pn")) this.buildPlayerName = params.get("pn");
             if (params.get("pf")) this.buildPlayerFaction = params.get("pf");
@@ -4565,8 +4686,9 @@ const app = createApp({
             if (locale === "en" || locale === "ru") this.locale = locale;
         } catch (e) { /* ignore */ }
 
-        // 4. Load pack data (save initial search for later restoration)
+        // 4. Load pack data (save initial state for later restoration)
         const initialSearch = window.location.search;
+        const initialHash = window.location.hash;
         await this.loadPackData();
 
         // 5. Restore pinned items, favorites, and recent (scoped)
@@ -4598,22 +4720,39 @@ const app = createApp({
         this._restoringUrl = false;
         this.pushUrlState();
 
-        // 6c. Restore build planner if URL says so
-        if (this._pendingBuildRestore) {
+        // 6c. Restore build planner from hash code or legacy URL params
+        const buildHash = initialHash.startsWith("#b/") ? initialHash.slice(3) : null;
+        if (buildHash) {
+            await this.openBuildPlanner();
+            const data = this.decodeBuildCode(buildHash);
+            if (data) {
+                this.restoreBuildFromIds(data);
+                this.saveBuildToStorage();
+            }
+        } else if (this._pendingBuildRestore) {
+            // Legacy URL param support
             const params = this._pendingBuildRestore;
             this._pendingBuildRestore = null;
             await this.openBuildPlanner();
             this.restoreBuildFromUrl(params);
         }
 
-        // 7. Handle hash-based item navigation
-        if (window.location.hash.length > 1) {
-            this.openItem(window.location.hash.slice(1));
+        // 7. Handle hash-based item/build navigation
+        if (!buildHash && initialHash.length > 1) {
+            this.openItem(initialHash.slice(1));
         }
         window.addEventListener("hashchange", () => {
-            const id = window.location.hash.slice(1);
-            if (id) {
-                this.openItem(id);
+            const hash = window.location.hash.slice(1);
+            if (hash.startsWith("b/")) {
+                // Build code hash — decode and restore
+                const data = this.decodeBuildCode(hash.slice(2));
+                if (data) {
+                    if (!this.buildPlannerActive) this.openBuildPlanner();
+                    this.restoreBuildFromIds(data);
+                    this.saveBuildToStorage();
+                }
+            } else if (hash) {
+                this.openItem(hash);
             } else {
                 this.closeModal();
             }
