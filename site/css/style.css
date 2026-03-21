@@ -3711,6 +3711,65 @@ input.range-input {
     min-width: 18rem;
     max-width: 24rem;
 }
+.build-hover-tile--compare {
+    min-width: 18rem;
+    max-width: 26rem;
+}
+.build-compare-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0.1rem 0.5rem;
+}
+.build-compare-header {
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.build-compare-vs {
+    color: var(--text-primary, #e0e0e0);
+    font-weight: 400;
+    font-style: italic;
+}
+.build-compare-sublabel {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    opacity: 0.45;
+    text-align: right;
+    padding-bottom: 0.15rem;
+}
+.build-compare-sublabel:first-child {
+    text-align: left;
+}
+.build-compare-grid .stat-label {
+    color: var(--text-secondary);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    min-width: 0;
+    word-break: break-word;
+}
+.build-compare-val {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-align: right;
+}
+.build-compare-diff {
+    font-family: var(--mono);
+    text-align: right;
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+.diff-positive { color: #6ec87a; }
+.diff-negative { color: #f44336; }
+.diff-zero { opacity: 0.35; }
+.diff-dash { opacity: 0.25; }
 
 /* Drag feedback on slots */
 .build-slot.drag-over {

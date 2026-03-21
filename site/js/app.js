@@ -328,6 +328,7 @@ const app = createApp({
 
             // Item hover popover
             buildHoverItem: null,
+            buildHoverCompareItem: null,
             buildHoverPos: null,
             buildHoverTimeout: null,
 
@@ -3252,12 +3253,54 @@ const app = createApp({
             return headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id");
         },
 
+        buildHoverCompareFields() {
+            if (!this.buildHoverItem || !this.buildHoverCompareItem) return [];
+            const hoverFields = this.getItemFields(this.buildHoverItem);
+            const equippedFields = this.getItemFields(this.buildHoverCompareItem);
+            const seen = new Set(hoverFields);
+            const extra = equippedFields.filter(f => !seen.has(f));
+            return hoverFields.concat(extra);
+        },
+
+        buildHoverDiff(field, hoverItem, equippedItem) {
+            const NON_NUMERIC = new Set(["ui_ammo_types", "st_data_export_ammo_types_alt", "ui_mm_repair"]);
+            if (NON_NUMERIC.has(field)) return { value: null, positive: false };
+            const hv = parseFloat(hoverItem[field]);
+            const ev = parseFloat(equippedItem[field]);
+            if (isNaN(hv) || isNaN(ev)) return { value: null, positive: false };
+            const diff = Math.round((hv - ev) * 1000) / 1000;
+            let positive;
+            if (HIGHER_IS_WORSE.has(field) || LOWER_IS_BETTER.has(field)) {
+                positive = diff < 0;
+            } else {
+                positive = diff > 0;
+            }
+            return { value: diff, positive };
+        },
+
         showBuildHover(item, event) {
             clearTimeout(this.buildHoverTimeout);
             this._buildHoverItem = item;
             this._buildHoverMouse = { x: event.clientX, y: event.clientY };
+
+            // Resolve comparison item for outfit/helmet/backpack
+            let compareItem = null;
+            let slotType = null;
+            const invEntry = this.buildInventory.find(e => e.item.id === item.id);
+            if (invEntry) {
+                slotType = invEntry.slotType;
+            } else if (this.buildPickerOpen && this.buildPickerSlot) {
+                slotType = this.buildPickerSlot.type;
+            }
+            if (slotType === "outfit") compareItem = this.buildOutfit;
+            else if (slotType === "helmet") compareItem = this.buildHelmet;
+            else if (slotType === "backpack") compareItem = this.buildBackpack;
+            if (compareItem && compareItem.id === item.id) compareItem = null;
+            this._buildHoverCompareItem = compareItem;
+
             this.buildHoverTimeout = setTimeout(() => {
                 this.buildHoverItem = this._buildHoverItem;
+                this.buildHoverCompareItem = this._buildHoverCompareItem;
                 this.$nextTick(() => this._updateBuildHoverFloat());
             }, 300);
         },
@@ -3291,8 +3334,10 @@ const app = createApp({
         hideBuildHover() {
             clearTimeout(this.buildHoverTimeout);
             this._buildHoverItem = null;
+            this._buildHoverCompareItem = null;
             this._buildHoverMouse = null;
             this.buildHoverItem = null;
+            this.buildHoverCompareItem = null;
             this.buildHoverPos = null;
         },
 

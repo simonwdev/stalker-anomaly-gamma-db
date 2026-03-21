@@ -685,7 +685,8 @@
 
                 <!-- Item hover popover -->
                 <div v-if="buildHoverItem" class="build-hover-popover" :style="buildHoverPos ? { top: buildHoverPos.top + 'px', left: buildHoverPos.left + 'px' } : { visibility: 'hidden' }">
-                    <div class="tile-card build-hover-tile">
+                    <!-- Single-item popover (no comparison) -->
+                    <div v-if="!buildHoverCompareItem" class="tile-card build-hover-tile">
                         <div class="tile-card-header">
                             <span class="tile-card-name">{{ tName(buildHoverItem) }}</span>
                             <span v-if="buildHoverItem['st_data_export_has_perk'] === 'Y'" class="badge-flag badge-perk">{{ t('app_badge_perk') }}</span>
@@ -707,6 +708,32 @@
                                     <span class="stat-value" :class="statClass(field, cellValue(buildHoverItem, field))" :style="statStyle(field, cellValue(buildHoverItem, field))">{{ formatValue(field, cellValue(buildHoverItem, field)) }}</span>
                                 </template>
                             </div>
+                        </div>
+                    </div>
+                    <!-- Comparison popover -->
+                    <div v-else class="tile-card build-hover-tile build-hover-tile--compare">
+                        <div class="build-compare-header">
+                            {{ tName(buildHoverCompareItem) }} <span class="build-compare-vs">vs</span> {{ tName(buildHoverItem) }}
+                        </div>
+                        <div class="build-compare-grid">
+                            <span class="build-compare-sublabel"></span>
+                            <span class="build-compare-sublabel">{{ t('app_build_equipped') || 'Equipped' }}</span>
+                            <span class="build-compare-sublabel">{{ t('app_build_inventory') || 'Inventory' }}</span>
+                            <span class="build-compare-sublabel"></span>
+                            <template v-for="field in buildHoverCompareFields()" :key="field">
+                                <span class="stat-label">{{ headerLabel(field) }}</span>
+                                <span class="stat-value build-compare-val">{{ formatValue(field, cellValue(buildHoverCompareItem, field)) }}</span>
+                                <span class="stat-value build-compare-val">{{ formatValue(field, cellValue(buildHoverItem, field)) }}</span>
+                                <span class="build-compare-diff"
+                                      :class="buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value === null ? 'diff-dash'
+                                             : buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value === 0 ? 'diff-zero'
+                                             : buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).positive ? 'diff-positive'
+                                             : 'diff-negative'">
+                                    {{ buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value === null ? '—'
+                                       : buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value === 0 ? '='
+                                       : (buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value > 0 ? '+' : '') + formatValue(field, buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value) }}
+                                </span>
+                            </template>
                         </div>
                     </div>
                 </div>
