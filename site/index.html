@@ -934,7 +934,7 @@
     <Transition name="modal" appear>
     <div class="modal" v-if="modalOpen">
         <button class="modal-close" @click="closeModal()">&times;</button>
-        <img v-if="modalItem && factionIcon(modalItem.ui_st_community)"
+        <img v-if="modalItem && modalItem.ui_st_community && factionIcon(modalItem.ui_st_community)"
              :src="'img/' + factionIcon(modalItem.ui_st_community)"
              :alt="modalItem.ui_st_community"
              class="modal-faction-icon"

@@ -100,34 +100,46 @@ const CAP_FIELD_MAP = {
     "ui_inv_outfit_strike_protection": "gamma_strike_cap",
     "ui_inv_outfit_explosion_protection": "gamma_explosion_cap",
 };
-const BUILD_SLOT_CATEGORIES = { outfit: "Outfits", helmet: "Helmets", belt: "Belt Attachments", artifact: "Artefacts", backpack: "Belt Attachments" };
+const CAT = {
+    FAVORITES: "Favorites", ALL_WEAPONS: "All Weapons",
+    PISTOLS: "Pistols", SMGS: "SMGs", SHOTGUNS: "Shotguns",
+    RIFLES: "Rifles", SNIPERS: "Snipers", LAUNCHERS: "Launchers", MELEE: "Melee",
+    AMMO: "Ammo", EXPLOSIVES: "Explosives",
+    OUTFITS: "Outfits", HELMETS: "Helmets", BELT_ATTACHMENTS: "Belt Attachments",
+    OUTFIT_EXCHANGE: "Outfit Exchange", ARTEFACTS: "Artefacts",
+    FOOD: "Food", MEDICINE: "Medicine",
+    CRAFTING_TREES: "Crafting Trees", MATERIALS: "Materials",
+    MUTANT_PARTS: "Mutant Parts", RECIPES: "Recipes",
+};
+
+const BUILD_SLOT_CATEGORIES = { outfit: CAT.OUTFITS, helmet: CAT.HELMETS, belt: CAT.BELT_ATTACHMENTS, artifact: CAT.ARTEFACTS, backpack: CAT.BELT_ATTACHMENTS };
 // TODO: replace with a data-driven field (e.g. item kind) from the generate script
 const BACKPACK_IDS = new Set(["itm_backpack", "equ_military_pack", "equ_small_pack", "equ_small_military_pack", "equ_tourist_pack"]);
 const MAX_SAVED_BUILDS = 10;
 
-const SINGULAR_TYPE = { Pistols: "app_type_pistol", SMGs: "app_type_smg", Shotguns: "app_type_shotgun", Rifles: "app_type_rifle", Snipers: "app_type_sniper", Launchers: "app_type_launcher", Melee: "app_cat_melee" };
-const SINGULAR_CATEGORY = { ...SINGULAR_TYPE, Outfits: "app_type_outfit", Helmets: "app_type_helmet", "Belt Attachments": "app_type_belt_attachment", Explosives: "app_type_explosive", Artefacts: "app_type_artefact", Materials: "app_type_material", "Mutant Parts": "app_type_mutant_part" };
+const SINGULAR_TYPE = { [CAT.PISTOLS]: "app_type_pistol", [CAT.SMGS]: "app_type_smg", [CAT.SHOTGUNS]: "app_type_shotgun", [CAT.RIFLES]: "app_type_rifle", [CAT.SNIPERS]: "app_type_sniper", [CAT.LAUNCHERS]: "app_type_launcher", [CAT.MELEE]: "app_cat_melee" };
+const SINGULAR_CATEGORY = { ...SINGULAR_TYPE, [CAT.OUTFITS]: "app_type_outfit", [CAT.HELMETS]: "app_type_helmet", [CAT.BELT_ATTACHMENTS]: "app_type_belt_attachment", [CAT.EXPLOSIVES]: "app_type_explosive", [CAT.ARTEFACTS]: "app_type_artefact", [CAT.MATERIALS]: "app_type_material", [CAT.MUTANT_PARTS]: "app_type_mutant_part" };
 
 const CATEGORY_KEYS = {
-    "Favorites": "app_cat_favorites", "All Weapons": "app_cat_all_weapons",
-    "Pistols": "app_cat_pistols", "SMGs": "app_cat_smgs", "Shotguns": "app_cat_shotguns",
-    "Rifles": "app_cat_rifles", "Snipers": "app_cat_snipers", "Launchers": "app_cat_launchers",
-    "Melee": "app_cat_melee", "Ammo": "app_cat_ammo", "Explosives": "app_cat_explosives",
-    "Outfits": "app_cat_outfits", "Helmets": "app_cat_helmets",
-    "Belt Attachments": "app_cat_belt_attachments", "Outfit Exchange": "app_cat_outfit_exchange",
-    "Food": "app_cat_food", "Medicine": "app_cat_medicine", "Artefacts": "app_cat_artefacts",
-    "Crafting Trees": "app_cat_crafting_trees", "Materials": "app_cat_materials",
-    "Mutant Parts": "app_cat_mutant_parts", "Recipes": "app_cat_recipes",
+    [CAT.FAVORITES]: "app_cat_favorites", [CAT.ALL_WEAPONS]: "app_cat_all_weapons",
+    [CAT.PISTOLS]: "app_cat_pistols", [CAT.SMGS]: "app_cat_smgs", [CAT.SHOTGUNS]: "app_cat_shotguns",
+    [CAT.RIFLES]: "app_cat_rifles", [CAT.SNIPERS]: "app_cat_snipers", [CAT.LAUNCHERS]: "app_cat_launchers",
+    [CAT.MELEE]: "app_cat_melee", [CAT.AMMO]: "app_cat_ammo", [CAT.EXPLOSIVES]: "app_cat_explosives",
+    [CAT.OUTFITS]: "app_cat_outfits", [CAT.HELMETS]: "app_cat_helmets",
+    [CAT.BELT_ATTACHMENTS]: "app_cat_belt_attachments", [CAT.OUTFIT_EXCHANGE]: "app_cat_outfit_exchange",
+    [CAT.FOOD]: "app_cat_food", [CAT.MEDICINE]: "app_cat_medicine", [CAT.ARTEFACTS]: "app_cat_artefacts",
+    [CAT.CRAFTING_TREES]: "app_cat_crafting_trees", [CAT.MATERIALS]: "app_cat_materials",
+    [CAT.MUTANT_PARTS]: "app_cat_mutant_parts", [CAT.RECIPES]: "app_cat_recipes",
 };
-const WEAPON_CATEGORIES = ["Pistols", "SMGs", "Shotguns", "Rifles", "Snipers", "Launchers", "Melee"];
-const VIRTUAL_CATEGORIES = new Set(["All Weapons", "Crafting Trees"]);
+const WEAPON_CATEGORIES = [CAT.PISTOLS, CAT.SMGS, CAT.SHOTGUNS, CAT.RIFLES, CAT.SNIPERS, CAT.LAUNCHERS, CAT.MELEE];
+const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING_TREES]);
 
 const CATEGORY_GROUPS = [
-    { name: "app_group_weapons", categories: ["All Weapons", ...WEAPON_CATEGORIES] },
-    { name: "app_group_ammo_explosives", categories: ["Ammo", "Explosives"] },
-    { name: "app_group_equipment", categories: ["Outfits", "Helmets", "Belt Attachments", "Artefacts", "Outfit Exchange"] },
-    { name: "app_group_consumables", categories: ["Food", "Medicine"] },
-    { name: "app_group_crafting", categories: ["Crafting Trees", "Materials", "Mutant Parts"] },
+    { name: "app_group_weapons", categories: [CAT.ALL_WEAPONS, ...WEAPON_CATEGORIES] },
+    { name: "app_group_ammo_explosives", categories: [CAT.AMMO, CAT.EXPLOSIVES] },
+    { name: "app_group_equipment", categories: [CAT.OUTFITS, CAT.HELMETS, CAT.BELT_ATTACHMENTS, CAT.ARTEFACTS, CAT.OUTFIT_EXCHANGE] },
+    { name: "app_group_consumables", categories: [CAT.FOOD, CAT.MEDICINE] },
+    { name: "app_group_crafting", categories: [CAT.CRAFTING_TREES, CAT.MATERIALS, CAT.MUTANT_PARTS] },
 ];
 
 function buildStatRows(item, headers) {
@@ -359,9 +371,9 @@ const app = createApp({
             // "All Weapons" is the sum of all weapon categories
             let allWeapons = 0;
             for (const c of WEAPON_CATEGORIES) allWeapons += counts[c] || 0;
-            counts["All Weapons"] = allWeapons;
-            counts["Crafting Trees"] = counts["Recipes"] || 0;
-            counts["Favorites"] = this.favoriteIds.length;
+            counts[CAT.ALL_WEAPONS] = allWeapons;
+            counts[CAT.CRAFTING_TREES] = counts[CAT.RECIPES] || 0;
+            counts[CAT.FAVORITES] = this.favoriteIds.length;
             return counts;
         },
 
@@ -492,15 +504,15 @@ const app = createApp({
         },
 
         isOutfitExchange() {
-            return this.activeCategory === "Outfit Exchange";
+            return this.activeCategory === CAT.OUTFIT_EXCHANGE;
         },
 
         isMaterialsCategory() {
-            return this.activeCategory === "Materials";
+            return this.activeCategory === CAT.MATERIALS;
         },
 
         isCraftingTrees() {
-            return this.activeCategory === "Crafting Trees";
+            return this.activeCategory === CAT.CRAFTING_TREES;
         },
 
         filteredCraftingTrees() {
@@ -518,7 +530,7 @@ const app = createApp({
         },
 
         isAllWeapons() {
-            return this.activeCategory === "All Weapons";
+            return this.activeCategory === CAT.ALL_WEAPONS;
         },
 
         modalDisassembleMaterials() {
@@ -635,7 +647,7 @@ const app = createApp({
                 return true;
             });
 
-            const isWeapon = WEAPON_CATEGORIES.includes(this.activeCategory) || this.activeCategory === "All Weapons";
+            const isWeapon = WEAPON_CATEGORIES.includes(this.activeCategory) || this.activeCategory === CAT.ALL_WEAPONS;
             if (raw.includes("st_upgr_cost") && !isWeapon) filtered.push("st_upgr_cost");
 
             // Ensure Faction appears right after Name
@@ -1430,7 +1442,7 @@ const app = createApp({
             }
             this.pushUrlState();
 
-            if (cat === "All Weapons") {
+            if (cat === CAT.ALL_WEAPONS) {
                 const slug = "all-weapons";
                 if (this.categoryItems[slug]) return;
 
@@ -1493,7 +1505,7 @@ const app = createApp({
                 return;
             }
 
-            if (cat === "Outfit Exchange") {
+            if (cat === CAT.OUTFIT_EXCHANGE) {
                 if (!this.outfitExchange) {
                     this.startContentLoading();
                     try {
@@ -1508,7 +1520,7 @@ const app = createApp({
                 return;
             }
 
-            if (cat === "Crafting Trees") {
+            if (cat === CAT.CRAFTING_TREES) {
                 if (this.craftingTrees.length === 0) {
                     this.startContentLoading();
                     try {
@@ -2286,7 +2298,7 @@ const app = createApp({
             if (!h) return "";
             if (h === "_heal") return this.t("app_heal_heals");
             if (h === "_malfunction_chance") return this.t("_malfunction_chance");
-            if (h === "ui_inv_damage" && this.activeCategory === "Ammo") return this.t("st_data_export_damage_mult");
+            if (h === "ui_inv_damage" && this.activeCategory === CAT.AMMO) return this.t("st_data_export_damage_mult");
             const translated = this.t(h);
             if (translated !== h) return translated;
             return h;
