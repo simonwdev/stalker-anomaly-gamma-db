@@ -231,6 +231,7 @@ const app = createApp({
 
             // Localisation
             locale: "en",
+            localeOpen: false,
             translations: null,
             fileManifest: {},
 
