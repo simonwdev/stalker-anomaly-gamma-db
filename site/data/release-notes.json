@@ -8,6 +8,7 @@
       { "type": "added", "text": "Toggle visibility of gear and weapon stats independently in the statistics panel." },
       { "type": "added", "text": "Build planner now shows your total carry capacity, combining base carry weight with equipment bonuses." },
       { "type": "added", "text": "Release notes page with a notification badge when new updates are available." },
+      { "type": "added", "text": "Ammo tiles now show cost per pack and cost per round." },
       { "type": "changed", "text": "Improved language picker with a cleaner dropdown design." }
     ]
   },

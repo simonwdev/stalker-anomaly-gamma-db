@@ -44,7 +44,7 @@ const MODAL_BADGE_KEYS = new Set(["st_data_export_has_perk", "st_data_export_is_
 const SKIP_KEYS = new Set(["id", "pda_encyclopedia_name", "hasNpcWeaponDrop", "hasStashDrop", "hasDisassemble"]);
 const MAX_PINS = 5;
 const LOWER_IS_BETTER = new Set(["st_data_export_weapon_degradation"]);
-const HIGHER_IS_WORSE = new Set(["st_prop_weight", "st_upgr_cost", "_malfunction_chance"]);
+const HIGHER_IS_WORSE = new Set(["st_prop_weight", "st_upgr_cost", "_cost_per_round", "_malfunction_chance"]);
 const NO_HIGHLIGHT = new Set(["ui_ammo_types", "st_data_export_ammo_types_alt", "ui_mm_repair"]);
 const BIPOLAR = new Set([
     "ui_inv_outfit_fire_wound_protection", "ui_inv_outfit_wound_protection", "ui_inv_outfit_burn_protection", "ui_inv_outfit_shock_protection",
@@ -443,7 +443,12 @@ const app = createApp({
 
         tileFields() {
             if (!this.activeCategory) return [];
-            return this.displayHeaders.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total "));
+            const isAmmo = this.activeCategory === CAT.AMMO;
+            return this.displayHeaders.filter(h => {
+                if (h.startsWith("Total ")) return false;
+                if (h === "st_upgr_cost") return isAmmo;
+                return !TILE_HIDE.has(h);
+            });
         },
 
         tileHealGroups() {
@@ -476,6 +481,13 @@ const app = createApp({
                 if (!isNaN(reliVal)) {
                     const malf = malfunctionChance(reliVal);
                     rows.splice(reliIdx + 1, 0, { key: "_malfunction_chance", value: malf, isSection: false });
+                }
+            }
+            const costIdx = rows.findIndex(r => r.key === "st_upgr_cost");
+            if (costIdx >= 0 && this.modalCategory === CAT.AMMO) {
+                const cpr = this.cellValue(this.modalItem, "_cost_per_round");
+                if (cpr !== undefined) {
+                    rows.splice(costIdx + 1, 0, { key: "_cost_per_round", value: cpr, isSection: false });
                 }
             }
             return rows;
@@ -678,7 +690,10 @@ const app = createApp({
             });
 
             const isWeapon = WEAPON_CATEGORIES.includes(this.activeCategory) || this.activeCategory === CAT.ALL_WEAPONS;
-            if (raw.includes("st_upgr_cost") && !isWeapon) filtered.push("st_upgr_cost");
+            if (raw.includes("st_upgr_cost") && !isWeapon) {
+                filtered.push("st_upgr_cost");
+                if (this.activeCategory === CAT.AMMO) filtered.push("_cost_per_round");
+            }
 
             // Ensure Faction appears right after Name
             const facIdx = filtered.indexOf("ui_st_community");
@@ -921,6 +936,9 @@ const app = createApp({
             const allHeaders = [...headers];
             if (headers.includes("ui_inv_reli") && !allHeaders.includes("_malfunction_chance")) {
                 allHeaders.push("_malfunction_chance");
+            }
+            if (headers.includes("st_upgr_cost") && this.activeCategory === CAT.AMMO && !allHeaders.includes("_cost_per_round")) {
+                allHeaders.push("_cost_per_round");
             }
             for (const h of allHeaders) {
                 if (RANGE_EXCLUDE.has(h) || NO_HIGHLIGHT.has(h)) continue;
@@ -2462,6 +2480,8 @@ const app = createApp({
             if (!h) return "";
             if (h === "_heal") return this.t("app_heal_heals");
             if (h === "_malfunction_chance") return this.t("_malfunction_chance");
+            if (h === "_cost_per_round") return this.t("_cost_per_round");
+            if (h === "st_upgr_cost" && this.activeCategory === CAT.AMMO) return this.t("_cost_per_pack");
             if (h === "ui_inv_damage" && this.activeCategory === CAT.AMMO) return this.t("st_data_export_damage_mult");
             const translated = this.t(h);
             if (translated !== h) return translated;
@@ -2515,6 +2535,9 @@ const app = createApp({
             const allHeaders = [...headers];
             if (headers.includes("ui_inv_reli") && !allHeaders.includes("_malfunction_chance")) {
                 allHeaders.push("_malfunction_chance");
+            }
+            if (headers.includes("st_upgr_cost") && category === CAT.AMMO && !allHeaders.includes("_cost_per_round")) {
+                allHeaders.push("_cost_per_round");
             }
             const ranges = {};
             for (const h of allHeaders) {
@@ -2709,12 +2732,19 @@ const app = createApp({
                 const reliVal = parseFloat(String(item["ui_inv_reli"] || "").replace("%", ""));
                 return isNaN(reliVal) ? undefined : malfunctionChance(reliVal);
             }
+            if (field === "_cost_per_round") {
+                const cost = parseFloat(item["st_upgr_cost"]);
+                const box = parseFloat(item["st_data_export_ammo_box_size"]);
+                if (isNaN(cost) || isNaN(box) || box === 0) return undefined;
+                return cost / box;
+            }
             return item[field];
         },
 
         formatValue(h, val, tableMode) {
             if (val === undefined || val === null || val === "" || val === "--") return "--";
             if (h === "_malfunction_chance") return val.toFixed(2) + "%";
+            if (h === "_cost_per_round") return parseFloat(val).toFixed(1) + " ₽";
             if (h === "ui_ammo_types" || h === "st_data_export_ammo_types_alt") return this.caliberName(val);
             if (h === "ui_st_community") return this.t(val);
 
