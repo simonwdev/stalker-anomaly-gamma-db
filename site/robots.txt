@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://stalker-gamma-db.pages.dev/sitemap.xml
