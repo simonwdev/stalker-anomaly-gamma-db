@@ -448,12 +448,11 @@
                             <input class="build-player-name" v-model="buildPlayerName" spellcheck="false" maxlength="24">
                             <svg class="build-player-name-edit" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
                         </div>
-                        <span class="build-player-faction-label">{{ factionLabel(buildPlayerFaction) }}</span>
                     </div>
                     <div class="build-header-actions">
                         <div class="build-saved-dropdown" v-click-outside="() => buildSavedDropdownOpen = false">
                             <button class="build-header-icon" v-tooltip="t('app_build_saved_builds')" @click="buildSavedDropdownOpen = !buildSavedDropdownOpen">
-                                <i data-lucide="bookmark" width="20" height="20"></i>
+                                <i data-lucide="bookmark" width="16" height="16"></i>
                                 <span v-if="buildSavedBuilds.length" class="build-header-badge">{{ buildSavedBuilds.length }}</span>
                             </button>
                             <div v-if="buildSavedDropdownOpen" class="build-saved-menu">
@@ -467,14 +466,14 @@
                             </div>
                         </div>
                         <button class="build-header-icon" v-tooltip="t('app_build_save')" @click="buildSaveModalOpen = true">
-                            <i data-lucide="save" width="20" height="20"></i>
+                            <i data-lucide="save" width="16" height="16"></i>
                         </button>
                         <button class="build-header-icon" v-tooltip="t('app_build_clear')" @click="clearBuild()">
-                            <i data-lucide="trash-2" width="20" height="20"></i>
+                            <i data-lucide="trash-2" width="16" height="16"></i>
                         </button>
                         <button class="build-header-icon" :class="{ copied: copyBuildLinkFeedback }" v-tooltip="copyBuildLinkFeedback ? t('app_label_copied') : t('app_label_copy_link')" @click="copyBuildLink()">
-                            <i v-show="!copyBuildLinkFeedback" data-lucide="link" width="20" height="20"></i>
-                            <svg v-show="copyBuildLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <i v-show="!copyBuildLinkFeedback" data-lucide="link" width="16" height="16"></i>
+                            <svg v-show="copyBuildLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                         </button>
                     </div>
                 </div>
@@ -483,6 +482,18 @@
                 <!-- Left column: Equipment + Inventory -->
                 <div class="build-col-left">
                     <div class="build-loadout-area">
+                    <div class="build-loadout-header">
+                        <h3 class="build-stats-title" style="margin-bottom:0">{{ t('app_build_loadout') || 'Loadout' }}</h3>
+                        <div class="build-loadout-header-actions">
+                            <button v-if="buildOutfit && buildBeltSlotBonus > 0" class="build-expand-all-btn" @click="buildBeltSlotBonus = Math.max(0, buildBeltSlotBonus - 1)"><i data-lucide="minus" width="10" height="10"></i> {{ t('app_build_remove_slot') }}</button>
+                            <button v-if="buildOutfit && buildBeltSlotMax < 12" class="build-expand-all-btn" @click="buildBeltSlotBonus++"><i data-lucide="plus" width="10" height="10"></i> {{ t('app_build_add_slot') }}</button>
+                            <button class="build-expand-all-btn" @click="buildLoadoutCollapsed = !buildLoadoutCollapsed">{{ buildLoadoutCollapsed ? t('app_build_show_loadout') : t('app_build_hide_loadout') }}</button>
+                        </div>
+                    </div>
+                    <div v-if="buildLoadoutCollapsed && buildAllItems.length > 0" class="build-loadout-summary" @click="buildLoadoutCollapsed = false" v-tooltip="buildLoadoutSummary">
+                        <span class="build-loadout-summary-text">{{ buildLoadoutSummary }}</span>
+                    </div>
+                    <div v-show="!buildLoadoutCollapsed" class="build-loadout-content">
                     <div class="build-loadout-box">
                     <div class="build-slots">
                         <!-- Helmet -->
@@ -526,12 +537,11 @@
 
                         <!-- Belt Slots (always show 5) -->
                         <div class="build-slot-group build-slot-group-multi">
-                            <div class="build-slot-label">{{ t('app_build_belt_slots') }} <span class="build-slot-counter">{{ buildBeltSlotUsed }}/{{ buildOutfit ? buildBeltSlotMax : 0 }}</span></div>
+                            <div class="build-slot-label">{{ t('app_build_belt_slots') }} <span class="build-slot-counter">{{ buildBeltSlotUsed }}/{{ buildOutfit ? buildBeltSlotMax - buildBeltSlotBonus : 0 }}<template v-if="buildBeltSlotBonus > 0"> + {{ buildBeltSlotBonus }}</template></span></div>
                             <div class="build-slot-row" :class="{ 'drag-over': buildDragState && buildDragState.targetSlot === 'beltarea' }" @dragover.prevent="onBeltAreaDragOver($event)" @dragleave="onSlotDragLeave()" @drop.prevent="onBeltAreaDrop($event)">
                                 <template v-for="(slot, i) in buildBeltSlots" :key="i">
                                     <div v-if="slot.state === 'filled'" class="build-slot filled build-slot-sm" :class="slot.type === 'belt' ? 'build-slot-belt' : 'build-slot-artifact'" @click="openBuildPicker(slot.type, slot.index)" draggable="true" @dragstart="onSlotDragStart($event, slot.type, slot.index)" @dragend="onDragEnd()" @mouseenter="showBuildHover(slot.item, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">
                                         <span class="build-slot-name">{{ tName(slot.item) }}</span>
-                                        <span class="build-slot-type-tag" :class="slot.type === 'belt' ? 'build-slot-tag-belt' : 'build-slot-tag-artifact'">{{ slot.type === 'belt' ? t('app_type_belt_attachment') : t('app_type_artefact') }}</span>
                                         <button class="build-slot-remove" @click.stop="removeBuildSlot(slot.type, slot.index)">&times;</button>
                                     </div>
                                     <div v-else-if="slot.state === 'empty'" class="build-slot empty build-slot-sm" @click="openBuildPicker('belt')">
@@ -629,6 +639,7 @@
                             </div>
                         </div>
                     </div>
+                    </div><!-- end build-loadout-content -->
                     </div><!-- end build-loadout-area -->
 
                     <div class="build-stats">
@@ -636,10 +647,10 @@
                         <div class="build-stats-header">
                             <h3 class="build-stats-title" style="margin-bottom:0">{{ t('app_build_statistics') }}</h3>
                             <div class="build-stats-header-actions">
-                                <button class="build-expand-all-btn" @click="buildHideGearStats = !buildHideGearStats">{{ buildHideGearStats ? t('app_build_show_gear') : t('app_build_hide_gear') }}</button>
-                                <button class="build-expand-all-btn" @click="buildHideWeaponStats = !buildHideWeaponStats" v-if="buildWeaponPrimary || buildWeaponSecondary || buildWeaponSidearm || buildWeaponGrenade">{{ buildHideWeaponStats ? t('app_build_show_weapons') : t('app_build_hide_weapons') }}</button>
-                                <button class="build-expand-all-btn" @click="buildRadarVisible = !buildRadarVisible" v-if="buildAllItems.length > 0">{{ buildRadarVisible ? 'Stats' : 'Weapon Chart' }}</button>
+                                <button class="build-expand-all-btn" v-if="!buildRadarVisible" @click="buildHideGearStats = !buildHideGearStats">{{ buildHideGearStats ? t('app_build_show_gear') : t('app_build_hide_gear') }}</button>
+                                <button class="build-expand-all-btn" v-if="!buildRadarVisible && (buildWeaponPrimary || buildWeaponSecondary || buildWeaponSidearm || buildWeaponGrenade)" @click="buildHideWeaponStats = !buildHideWeaponStats">{{ buildHideWeaponStats ? t('app_build_show_weapons') : t('app_build_hide_weapons') }}</button>
                                 <button class="build-expand-all-btn" @click="toggleBuildExpandAll()" v-if="buildAllItems.length > 0 && !buildRadarVisible">{{ buildAllExpanded ? t('app_build_collapse_all') : t('app_build_expand_all') }}</button>
+                                <button class="build-expand-all-btn" :class="{ active: buildRadarVisible }" @click="buildRadarVisible = !buildRadarVisible" v-if="buildWeaponPrimary || buildWeaponSecondary || buildWeaponSidearm">{{ t('app_build_weapon_chart') || 'Weapon Chart' }}</button>
                             </div>
                         </div>
                         <div class="build-stats-body">
@@ -749,7 +760,7 @@
                         </template>
                         <!-- Weapon Stats -->
                         <template v-if="!buildHideWeaponStats && !buildRadarVisible && (buildWeaponPrimary || buildWeaponSecondary || buildWeaponSidearm || buildWeaponGrenade)">
-                        <div class="build-stats-divider"></div>
+                        <div v-if="!buildHideGearStats" class="build-stats-divider"></div>
                         <div class="build-weapon-toggle">
                             <button class="build-weapon-toggle-btn" :class="{ active: buildActiveWeaponTab === 'primary' }" @click="buildActiveWeaponTab = 'primary'" v-if="buildWeaponPrimary">
                                 {{ tName(buildWeaponPrimary) }}<template v-if="buildAmmoPrimary"> <span class="build-weapon-toggle-with">with</span> {{ shortAmmoName(tName(buildAmmoPrimary)) }}</template>
@@ -801,10 +812,12 @@
                     <div class="build-inventory">
                         <div class="build-inventory-header">
                             <h3 class="build-stats-title" style="margin-bottom:0">{{ t('app_build_inventory') }} <span v-if="buildInventory.length" class="build-slot-counter">({{ buildInventory.length }})</span></h3>
-                            <button v-if="buildInventory.length > 1" class="build-inventory-sort-btn" :class="{ active: buildInventorySort !== 'none' }" @click="cycleInventorySort()" v-tooltip="t('app_label_sort')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="m21 8-4-4-4 4"/><path d="M17 4v16"/></svg>
-                                <span v-if="buildInventorySort !== 'none'">{{ buildInventorySortLabel }}</span>
-                            </button>
+                            <div class="build-stats-header-actions">
+                                <button class="build-expand-all-btn" @click="openInventoryPicker()"><i data-lucide="plus" width="10" height="10"></i> {{ t('app_build_add_to_inventory') }}</button>
+                                <button class="build-expand-all-btn" @click="addFavoritesToInventory()" :disabled="!favoriteIds.length"><i data-lucide="star" width="10" height="10"></i> {{ t('app_build_add_favourites') }}</button>
+                                <button v-if="buildInventory.length > 0" class="build-expand-all-btn" @click="buildInventory = []; saveInventoryToStorage()"><i data-lucide="trash-2" width="10" height="10"></i> {{ t('app_build_clear_inventory') }}</button>
+                                <button v-if="buildInventory.length > 1" class="build-expand-all-btn" :class="{ active: buildInventorySort !== 'none' }" @click="cycleInventorySort()"><i data-lucide="arrow-up-down" width="10" height="10"></i><span v-if="buildInventorySort !== 'none'"> {{ buildInventorySortLabel }}</span></button>
+                            </div>
                         </div>
                         <div v-if="weaponCompareSlotCount > 1" class="build-compare-toggle">
                             <span class="build-compare-toggle-label">{{ t('app_build_weapon_comparison') }}</span>
@@ -813,16 +826,6 @@
                             <button v-if="buildWeaponSidearm" class="build-compare-toggle-btn" :class="{ active: buildWeaponCompareSlot === 'sidearm' }" @click="setWeaponCompareSlot('sidearm')">{{ t('app_build_sidearm') }}</button>
                         </div>
                         <div class="build-inventory-body" :class="{ 'drag-over': buildDragState && buildDragState.targetSlot === 'inventory' }" @dragover.prevent="onInventoryDragOver($event)" @drop.prevent="onInventoryDrop($event)">
-                            <div class="build-inventory-buttons">
-                                <button class="build-inventory-btn" @click="openInventoryPicker()">
-                                    <i data-lucide="plus" width="14" height="14"></i>
-                                    <span>{{ t('app_build_add_to_inventory') }}</span>
-                                </button>
-                                <button class="build-inventory-btn build-inventory-btn-fav" @click="addFavoritesToInventory()" :disabled="!favoriteIds.length" v-tooltip="t('app_build_add_favourites_tooltip')">
-                                    <i data-lucide="star" width="14" height="14"></i>
-                                    <span>{{ t('app_build_add_favourites') }}</span>
-                                </button>
-                            </div>
                             <div v-if="buildInventory.length > 0" class="build-inventory-items">
                                 <div v-for="entry in buildInventorySorted" :key="entry.originalIndex"
                                      class="build-inventory-item"

@@ -347,6 +347,7 @@ const app = createApp({
             buildBackpack: null,
             buildBelts: [],
             buildArtifacts: [],
+            buildBeltSlotBonus: 0,
             buildWeaponPrimary: null,
             buildWeaponSecondary: null,
             buildWeaponSidearm: null,
@@ -363,6 +364,7 @@ const app = createApp({
             buildHideGearStats: false,
             buildHideWeaponStats: false,
             buildRadarVisible: false,
+            buildLoadoutCollapsed: false,
             buildSavedBuilds: [],
             buildSaveName: "",
             buildSaveModalOpen: false,
@@ -979,7 +981,8 @@ const app = createApp({
 
         buildBeltSlotMax() {
             if (!this.buildOutfit) return 0;
-            return parseInt(this.buildOutfit["st_data_export_outfit_artefact_count_max"]) || 0;
+            const base = parseInt(this.buildOutfit["st_data_export_outfit_artefact_count_max"]) || 0;
+            return Math.min(base + this.buildBeltSlotBonus, 12);
         },
 
         buildBeltSlotUsed() {
@@ -1003,6 +1006,36 @@ const app = createApp({
                 slots.push({ state: "empty" });
             }
             return slots;
+        },
+
+        buildLoadoutSummary() {
+            const parts = [];
+            // Gear
+            const gear = [this.buildHelmet, this.buildOutfit, this.buildBackpack].filter(Boolean);
+            if (gear.length) parts.push(gear.map(i => this.tName(i)).join(" · "));
+            // Belt/artifacts
+            const beltArt = [...this.buildBelts, ...this.buildArtifacts];
+            if (beltArt.length) parts.push(beltArt.map(i => this.tName(i)).join(" · "));
+            // Weapons with ammo
+            const wpns = [];
+            if (this.buildWeaponPrimary) {
+                let s = this.tName(this.buildWeaponPrimary);
+                if (this.buildAmmoPrimary) s += " + " + this.shortAmmoName(this.tName(this.buildAmmoPrimary));
+                wpns.push(s);
+            }
+            if (this.buildWeaponSecondary) {
+                let s = this.tName(this.buildWeaponSecondary);
+                if (this.buildAmmoSecondary) s += " + " + this.shortAmmoName(this.tName(this.buildAmmoSecondary));
+                wpns.push(s);
+            }
+            if (this.buildWeaponSidearm) {
+                let s = this.tName(this.buildWeaponSidearm);
+                if (this.buildAmmoSidearm) s += " + " + this.shortAmmoName(this.tName(this.buildAmmoSidearm));
+                wpns.push(s);
+            }
+            if (this.buildWeaponGrenade) wpns.push(this.tName(this.buildWeaponGrenade));
+            if (wpns.length) parts.push(wpns.join(" · "));
+            return parts.join("  |  ");
         },
 
         buildAllItems() {
@@ -2116,7 +2149,8 @@ const app = createApp({
             if (!canvas) return;
             if (this._buildWeaponRadarChart) { this._buildWeaponRadarChart.destroy(); this._buildWeaponRadarChart = null; }
 
-            const fields = WEAPON_STAT_FIELDS;
+            const AP_FIELD = "st_data_export_ap";
+            const fields = [...WEAPON_STAT_FIELDS, AP_FIELD];
             const parseNum = (v) => {
                 if (v == null || v === "") return null;
                 return parseFloat(String(v).replace(/%$/, "")) || 0;
@@ -2150,6 +2184,18 @@ const app = createApp({
                     }
                 }
             }
+            // Compute AP range from equipped ammo only (avoids outliers like batteries/warheads)
+            let apMin = Infinity, apMax = -Infinity;
+            for (const s of slots) {
+                if (!s.ammo) continue;
+                const ap = parseNum(s.ammo[AP_FIELD]);
+                if (ap == null) continue;
+                if (ap < apMin) apMin = ap;
+                if (ap > apMax) apMax = ap;
+            }
+            if (apMin !== Infinity) {
+                allRanges[AP_FIELD] = { min: Math.min(0, apMin), max: apMax };
+            }
 
             const normalize = (field, val) => {
                 if (val == null) return 0;
@@ -2163,6 +2209,7 @@ const app = createApp({
             // Compute effective stats per weapon
             const computeEffective = (weapon, ammo) => {
                 return fields.map(f => {
+                    if (f === AP_FIELD) return ammo ? parseNum(ammo[f]) : null;
                     const base = parseNum(weapon[f]);
                     if (base == null) return null;
                     if (!ammo || !AMMO_MULTIPLIER_FIELDS.has(f)) return base;
@@ -2178,7 +2225,7 @@ const app = createApp({
             for (const s of slots) {
                 const effective = computeEffective(s.weapon, s.ammo);
                 rawValues.push(effective);
-                const label = slots.length === 1 ? this.tName(s.weapon) : s.label;
+                const label = this.tName(s.weapon);
                 datasets.push({
                     label,
                     data: fields.map((f, i) => normalize(f, effective[i])),
@@ -2221,7 +2268,7 @@ const app = createApp({
                                 label(ctx) {
                                     const field = fields[ctx.dataIndex];
                                     const val = rawValues[ctx.datasetIndex][ctx.dataIndex];
-                                    return `${slots[ctx.datasetIndex].label}: ${self.formatValue(field, val ?? "--")}`;
+                                    return `${self.tName(slots[ctx.datasetIndex].weapon)}: ${self.formatValue(field, val ?? "--")}`;
                                 }
                             }
                         }
@@ -3133,6 +3180,7 @@ const app = createApp({
                 if (bp.ap) url.searchParams.set("ap", bp.ap);
                 if (bp.as) url.searchParams.set("as", bp.as);
                 if (bp.asi) url.searchParams.set("asi", bp.asi);
+                if (bp.bsb) url.searchParams.set("bsb", bp.bsb);
             } else if (this.favoritesViewActive) {
                 url.searchParams.set("cat", "favorites");
                 url.searchParams.delete("favonly");
@@ -3426,7 +3474,7 @@ const app = createApp({
             if (type === "inventory") {
                 const slotType = this.getItemSlotType(item);
                 if (slotType && !this.buildInventory.some(e => e.item.id === item.id)) {
-                    this.buildInventory.push({ item, slotType });
+                    this.addToInventory(item, slotType);
                     this.saveInventoryToStorage();
                 }
                 this.closeBuildPicker();
@@ -3438,9 +3486,9 @@ const app = createApp({
                 const maxSlots = parseInt(item["st_data_export_outfit_artefact_count_max"]) || 0;
                 while (this.buildBelts.length + this.buildArtifacts.length > maxSlots) {
                     if (this.buildArtifacts.length > 0) {
-                        this.buildInventory.push({ item: this.buildArtifacts.pop(), slotType: "artifact" });
+                        this.addToInventory(this.buildArtifacts.pop(), "artifact");
                     } else {
-                        this.buildInventory.push({ item: this.buildBelts.pop(), slotType: "belt" });
+                        this.addToInventory(this.buildBelts.pop(), "belt");
                     }
                 }
                 this.saveInventoryToStorage();
@@ -3495,37 +3543,37 @@ const app = createApp({
         removeBuildSlot(type, index) {
             this.hideBuildHover();
             if (type === "outfit") {
-                if (this.buildOutfit) this.buildInventory.push({ item: this.buildOutfit, slotType: "outfit" });
-                for (const b of this.buildBelts) this.buildInventory.push({ item: b, slotType: "belt" });
-                for (const a of this.buildArtifacts) this.buildInventory.push({ item: a, slotType: "artifact" });
+                if (this.buildOutfit) this.addToInventory(this.buildOutfit, "outfit");
+                for (const b of this.buildBelts) this.addToInventory(b, "belt");
+                for (const a of this.buildArtifacts) this.addToInventory(a, "artifact");
                 this.buildOutfit = null;
                 this.buildBelts = [];
                 this.buildArtifacts = [];
             } else if (type === "helmet") {
-                if (this.buildHelmet) this.buildInventory.push({ item: this.buildHelmet, slotType: "helmet" });
+                if (this.buildHelmet) this.addToInventory(this.buildHelmet, "helmet");
                 this.buildHelmet = null;
             } else if (type === "backpack") {
-                if (this.buildBackpack) this.buildInventory.push({ item: this.buildBackpack, slotType: "backpack" });
+                if (this.buildBackpack) this.addToInventory(this.buildBackpack, "backpack");
                 this.buildBackpack = null;
             } else if (type === "belt") {
-                if (this.buildBelts[index]) this.buildInventory.push({ item: this.buildBelts[index], slotType: "belt" });
+                if (this.buildBelts[index]) this.addToInventory(this.buildBelts[index], "belt");
                 this.buildBelts.splice(index, 1);
             } else if (type === "artifact") {
-                if (this.buildArtifacts[index]) this.buildInventory.push({ item: this.buildArtifacts[index], slotType: "artifact" });
+                if (this.buildArtifacts[index]) this.addToInventory(this.buildArtifacts[index], "artifact");
                 this.buildArtifacts.splice(index, 1);
             } else if (type === "weapon") {
                 if (index === "primary") {
-                    if (this.buildWeaponPrimary) this.buildInventory.push({ item: this.buildWeaponPrimary, slotType: "weapon" });
+                    if (this.buildWeaponPrimary) this.addToInventory(this.buildWeaponPrimary, "weapon");
                     this.buildWeaponPrimary = null; this.buildAmmoPrimary = null;
                 } else {
-                    if (this.buildWeaponSecondary) this.buildInventory.push({ item: this.buildWeaponSecondary, slotType: "weapon" });
+                    if (this.buildWeaponSecondary) this.addToInventory(this.buildWeaponSecondary, "weapon");
                     this.buildWeaponSecondary = null; this.buildAmmoSecondary = null;
                 }
             } else if (type === "sidearm") {
-                if (this.buildWeaponSidearm) this.buildInventory.push({ item: this.buildWeaponSidearm, slotType: "sidearm" });
+                if (this.buildWeaponSidearm) this.addToInventory(this.buildWeaponSidearm, "sidearm");
                 this.buildWeaponSidearm = null; this.buildAmmoSidearm = null;
             } else if (type === "grenade") {
-                if (this.buildWeaponGrenade) this.buildInventory.push({ item: this.buildWeaponGrenade, slotType: "grenade" });
+                if (this.buildWeaponGrenade) this.addToInventory(this.buildWeaponGrenade, "grenade");
                 this.buildWeaponGrenade = null;
             } else if (type === "ammo") {
                 const ammoMap = { primary: "buildAmmoPrimary", secondary: "buildAmmoSecondary", sidearm: "buildAmmoSidearm" };
@@ -3554,6 +3602,7 @@ const app = createApp({
             this.buildAmmoPrimary = null;
             this.buildAmmoSecondary = null;
             this.buildAmmoSidearm = null;
+            this.buildBeltSlotBonus = 0;
             this.buildActiveWeaponTab = "primary";
             this.setWeaponCompareSlot("primary");
             this.buildExpandedStats = {};
@@ -3636,6 +3685,7 @@ const app = createApp({
                 ammo1: this.buildAmmoPrimary?.id || null,
                 ammo2: this.buildAmmoSecondary?.id || null,
                 ammoSidearm: this.buildAmmoSidearm?.id || null,
+                beltBonus: this.buildBeltSlotBonus || 0,
             };
             try {
                 localStorage.setItem(this.getBuildStorageKey(), JSON.stringify(data));
@@ -3677,6 +3727,7 @@ const app = createApp({
             this.buildAmmoPrimary = findItem(data.ammo1, "ammo");
             this.buildAmmoSecondary = findItem(data.ammo2, "ammo");
             this.buildAmmoSidearm = findItem(data.ammoSidearm, "ammo");
+            this.buildBeltSlotBonus = parseInt(data.beltBonus) || 0;
         },
 
         getSavedBuildsKey() {
@@ -3712,6 +3763,7 @@ const app = createApp({
                 ammo1: this.buildAmmoPrimary?.id || null,
                 ammo2: this.buildAmmoSecondary?.id || null,
                 ammoSidearm: this.buildAmmoSidearm?.id || null,
+                beltBonus: this.buildBeltSlotBonus || 0,
                 timestamp: Date.now(),
             };
             // Replace if same name exists
@@ -3772,6 +3824,7 @@ const app = createApp({
             if (this.buildAmmoPrimary) params.ap = this.buildAmmoPrimary.id;
             if (this.buildAmmoSecondary) params.as = this.buildAmmoSecondary.id;
             if (this.buildAmmoSidearm) params.asi = this.buildAmmoSidearm.id;
+            if (this.buildBeltSlotBonus > 0) params.bsb = String(this.buildBeltSlotBonus);
             return params;
         },
 
@@ -3791,6 +3844,7 @@ const app = createApp({
                 ammo1: params.get("ap") || params.get("a1") || null,
                 ammo2: params.get("as") || params.get("a2") || null,
                 ammoSidearm: params.get("asi") || null,
+                beltBonus: parseInt(params.get("bsb")) || 0,
             };
             if (data.outfit || data.helmet || data.backpack || data.belts.length || data.artifacts.length || data.weapon1 || data.weapon2 || data.sidearm || data.grenade) {
                 this.restoreBuildFromIds(data);
@@ -3799,6 +3853,12 @@ const app = createApp({
         },
 
         // Inventory methods
+        addToInventory(item, slotType) {
+            if (!item) return;
+            if (this.buildInventory.some(e => e.item.id === item.id)) return;
+            this.buildInventory.push({ item, slotType });
+        },
+
         getItemSlotType(item) {
             if (!item) return null;
             // Check artefacts first to avoid misclassifying as belt
@@ -3895,7 +3955,7 @@ const app = createApp({
             for (const item of items) {
                 const slotType = this.getItemSlotType(item);
                 if (slotType) {
-                    this.buildInventory.push({ item, slotType });
+                    this.addToInventory(item, slotType);
                     added++;
                 }
             }
@@ -3997,11 +4057,13 @@ const app = createApp({
             // Resolve comparison item — only for inventory/picker items, not equipped slots
             let compareItem = null;
             let slotType = null;
-            const isEquipped = item === this.buildOutfit || item === this.buildHelmet || item === this.buildBackpack
+            const inInventory = this.buildInventory.some(e => e.item === item);
+            const isEquipped = !inInventory && (
+                item === this.buildOutfit || item === this.buildHelmet || item === this.buildBackpack
                 || item === this.buildWeaponPrimary || item === this.buildWeaponSecondary
                 || item === this.buildWeaponSidearm || item === this.buildWeaponGrenade
                 || item === this.buildAmmoPrimary || item === this.buildAmmoSecondary || item === this.buildAmmoSidearm
-                || this.buildBelts.includes(item) || this.buildArtifacts.includes(item);
+                || this.buildBelts.includes(item) || this.buildArtifacts.includes(item));
             if (!isEquipped) {
                 const invEntry = this.buildInventory.find(e => e.item.id === item.id);
                 if (invEntry) {
@@ -4079,26 +4141,26 @@ const app = createApp({
                 else this.buildArtifacts.push(item);
             } else if (slotType === "outfit") {
                 if (this.buildOutfit) {
-                    this.buildInventory.push({ item: this.buildOutfit, slotType: "outfit" });
+                    this.addToInventory(this.buildOutfit, "outfit");
                     // Cascade overflow belt/artifact items
                     const newMax = parseInt(item["st_data_export_outfit_artefact_count_max"]) || 0;
                     while (this.buildBelts.length + this.buildArtifacts.length > newMax) {
                         if (this.buildArtifacts.length > 0) {
-                            this.buildInventory.push({ item: this.buildArtifacts.pop(), slotType: "artifact" });
+                            this.addToInventory(this.buildArtifacts.pop(), "artifact");
                         } else {
-                            this.buildInventory.push({ item: this.buildBelts.pop(), slotType: "belt" });
+                            this.addToInventory(this.buildBelts.pop(), "belt");
                         }
                     }
                 }
                 this.buildOutfit = item;
             } else if (slotType === "helmet") {
                 if (this.buildHelmet) {
-                    this.buildInventory.push({ item: this.buildHelmet, slotType: "helmet" });
+                    this.addToInventory(this.buildHelmet, "helmet");
                 }
                 this.buildHelmet = item;
             } else if (slotType === "backpack") {
                 if (this.buildBackpack) {
-                    this.buildInventory.push({ item: this.buildBackpack, slotType: "backpack" });
+                    this.addToInventory(this.buildBackpack, "backpack");
                 }
                 this.buildBackpack = item;
             } else if (slotType === "weapon") {
@@ -4107,19 +4169,19 @@ const app = createApp({
                 } else if (!this.buildWeaponSecondary) {
                     this.buildWeaponSecondary = item;
                 } else {
-                    this.buildInventory.push({ item: this.buildWeaponPrimary, slotType: "weapon" });
+                    this.addToInventory(this.buildWeaponPrimary, "weapon");
                     this.buildAmmoPrimary = null;
                     this.buildWeaponPrimary = item;
                 }
             } else if (slotType === "sidearm") {
                 if (this.buildWeaponSidearm) {
-                    this.buildInventory.push({ item: this.buildWeaponSidearm, slotType: "sidearm" });
+                    this.addToInventory(this.buildWeaponSidearm, "sidearm");
                     this.buildAmmoSidearm = null;
                 }
                 this.buildWeaponSidearm = item;
             } else if (slotType === "grenade") {
                 if (this.buildWeaponGrenade) {
-                    this.buildInventory.push({ item: this.buildWeaponGrenade, slotType: "grenade" });
+                    this.addToInventory(this.buildWeaponGrenade, "grenade");
                 }
                 this.buildWeaponGrenade = item;
             } else if (slotType === "ammo") {
@@ -4216,12 +4278,12 @@ const app = createApp({
                     // Singular slot: swap old item to inventory
                     const current = type === "outfit" ? this.buildOutfit : type === "helmet" ? this.buildHelmet : this.buildBackpack;
                     if (current) {
-                        this.buildInventory.push({ item: current, slotType: type });
+                        this.addToInventory(current, type);
                         if (type === "outfit") {
                             const newMax = parseInt(item["st_data_export_outfit_artefact_count_max"]) || 0;
                             while (this.buildBelts.length + this.buildArtifacts.length > newMax) {
-                                if (this.buildArtifacts.length > 0) this.buildInventory.push({ item: this.buildArtifacts.pop(), slotType: "artifact" });
-                                else this.buildInventory.push({ item: this.buildBelts.pop(), slotType: "belt" });
+                                if (this.buildArtifacts.length > 0) this.addToInventory(this.buildArtifacts.pop(), "artifact");
+                                else this.addToInventory(this.buildBelts.pop(), "belt");
                             }
                         }
                     }
@@ -4230,14 +4292,14 @@ const app = createApp({
                     else this.buildBackpack = item;
                 } else if (type === "weapon") {
                     const current = idx === "primary" ? this.buildWeaponPrimary : this.buildWeaponSecondary;
-                    if (current) this.buildInventory.push({ item: current, slotType: "weapon" });
+                    if (current) this.addToInventory(current, "weapon");
                     if (idx === "primary") { this.buildWeaponPrimary = item; this.buildAmmoPrimary = null; }
                     else { this.buildWeaponSecondary = item; this.buildAmmoSecondary = null; }
                 } else if (type === "sidearm") {
-                    if (this.buildWeaponSidearm) this.buildInventory.push({ item: this.buildWeaponSidearm, slotType: "sidearm" });
+                    if (this.buildWeaponSidearm) this.addToInventory(this.buildWeaponSidearm, "sidearm");
                     this.buildWeaponSidearm = item; this.buildAmmoSidearm = null;
                 } else if (type === "grenade") {
-                    if (this.buildWeaponGrenade) this.buildInventory.push({ item: this.buildWeaponGrenade, slotType: "grenade" });
+                    if (this.buildWeaponGrenade) this.addToInventory(this.buildWeaponGrenade, "grenade");
                     this.buildWeaponGrenade = item;
                 } else {
                     // Belt/artifact: check capacity
@@ -4318,48 +4380,48 @@ const app = createApp({
             if (type === "outfit") {
                 item = this.buildOutfit;
                 if (!item) return;
-                this.buildInventory.push({ item, slotType: "outfit" });
+                this.addToInventory(item, "outfit");
                 this.buildOutfit = null;
                 // Cascade belt/artifact to inventory
-                for (const b of this.buildBelts) this.buildInventory.push({ item: b, slotType: "belt" });
-                for (const a of this.buildArtifacts) this.buildInventory.push({ item: a, slotType: "artifact" });
+                for (const b of this.buildBelts) this.addToInventory(b, "belt");
+                for (const a of this.buildArtifacts) this.addToInventory(a, "artifact");
                 this.buildBelts = [];
                 this.buildArtifacts = [];
             } else if (type === "helmet") {
                 item = this.buildHelmet;
                 if (!item) return;
-                this.buildInventory.push({ item, slotType: "helmet" });
+                this.addToInventory(item, "helmet");
                 this.buildHelmet = null;
             } else if (type === "backpack") {
                 item = this.buildBackpack;
                 if (!item) return;
-                this.buildInventory.push({ item, slotType: "backpack" });
+                this.addToInventory(item, "backpack");
                 this.buildBackpack = null;
             } else if (type === "belt") {
                 item = this.buildBelts[payload.slotIndex];
                 if (!item) return;
-                this.buildInventory.push({ item, slotType: "belt" });
+                this.addToInventory(item, "belt");
                 this.buildBelts.splice(payload.slotIndex, 1);
             } else if (type === "artifact") {
                 item = this.buildArtifacts[payload.slotIndex];
                 if (!item) return;
-                this.buildInventory.push({ item, slotType: "artifact" });
+                this.addToInventory(item, "artifact");
                 this.buildArtifacts.splice(payload.slotIndex, 1);
             } else if (type === "weapon") {
                 item = payload.slotIndex === "primary" ? this.buildWeaponPrimary : this.buildWeaponSecondary;
                 if (!item) return;
-                this.buildInventory.push({ item, slotType: "weapon" });
+                this.addToInventory(item, "weapon");
                 if (payload.slotIndex === "primary") { this.buildWeaponPrimary = null; this.buildAmmoPrimary = null; }
                 else { this.buildWeaponSecondary = null; this.buildAmmoSecondary = null; }
             } else if (type === "sidearm") {
                 item = this.buildWeaponSidearm;
                 if (!item) return;
-                this.buildInventory.push({ item, slotType: "sidearm" });
+                this.addToInventory(item, "sidearm");
                 this.buildWeaponSidearm = null; this.buildAmmoSidearm = null;
             } else if (type === "grenade") {
                 item = this.buildWeaponGrenade;
                 if (!item) return;
-                this.buildInventory.push({ item, slotType: "grenade" });
+                this.addToInventory(item, "grenade");
                 this.buildWeaponGrenade = null;
             } else if (type === "ammo") {
                 const ammoMap = { primary: "buildAmmoPrimary", secondary: "buildAmmoSecondary", sidearm: "buildAmmoSidearm" };
@@ -4367,7 +4429,7 @@ const app = createApp({
                 if (!prop) return;
                 item = this[prop];
                 if (!item) return;
-                this.buildInventory.push({ item, slotType: "ammo" });
+                this.addToInventory(item, "ammo");
                 this[prop] = null;
             }
 
@@ -4402,6 +4464,13 @@ const app = createApp({
         },
         exchangeFactionFilter() {
             if (!this._restoringUrl) this.pushUrlState();
+        },
+        buildBeltSlotBonus() {
+            while (this.buildBeltSlotUsed > this.buildBeltSlotMax) {
+                if (this.buildArtifacts.length > 0) this.addToInventory(this.buildArtifacts.pop(), "artifact");
+                else if (this.buildBelts.length > 0) this.addToInventory(this.buildBelts.pop(), "belt");
+                else break;
+            }
         },
         buildRadarVisible(visible) {
             if (visible) {
