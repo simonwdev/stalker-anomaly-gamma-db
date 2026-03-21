@@ -357,6 +357,8 @@ const app = createApp({
             buildPickerQuery: "",
             buildPickerFuse: null,
             buildExpandedStats: {},
+            buildHideGearStats: false,
+            buildHideWeaponStats: false,
             buildSavedBuilds: [],
             buildSaveName: "",
             buildSaveModalOpen: false,
@@ -3707,14 +3709,21 @@ const app = createApp({
             this._buildHoverItem = item;
             this._buildHoverMouse = { x: event.clientX, y: event.clientY };
 
-            // Resolve comparison item for outfit/helmet/backpack
+            // Resolve comparison item — only for inventory/picker items, not equipped slots
             let compareItem = null;
             let slotType = null;
-            const invEntry = this.buildInventory.find(e => e.item.id === item.id);
-            if (invEntry) {
-                slotType = invEntry.slotType;
-            } else if (this.buildPickerOpen && this.buildPickerSlot) {
-                slotType = this.buildPickerSlot.type;
+            const isEquipped = item === this.buildOutfit || item === this.buildHelmet || item === this.buildBackpack
+                || item === this.buildWeaponPrimary || item === this.buildWeaponSecondary
+                || item === this.buildWeaponSidearm || item === this.buildWeaponGrenade
+                || item === this.buildAmmoPrimary || item === this.buildAmmoSecondary || item === this.buildAmmoSidearm
+                || this.buildBelts.includes(item) || this.buildArtifacts.includes(item);
+            if (!isEquipped) {
+                const invEntry = this.buildInventory.find(e => e.item.id === item.id);
+                if (invEntry) {
+                    slotType = invEntry.slotType;
+                } else if (this.buildPickerOpen && this.buildPickerSlot) {
+                    slotType = this.buildPickerSlot.type;
+                }
             }
             if (slotType === "outfit") compareItem = this.buildOutfit;
             else if (slotType === "helmet") compareItem = this.buildHelmet;
@@ -3870,6 +3879,10 @@ const app = createApp({
             else if (type === "weapon") item = idx === "primary" ? this.buildWeaponPrimary : this.buildWeaponSecondary;
             else if (type === "sidearm") item = this.buildWeaponSidearm;
             else if (type === "grenade") item = this.buildWeaponGrenade;
+            else if (type === "ammo") {
+                const ammoMap = { primary: this.buildAmmoPrimary, secondary: this.buildAmmoSecondary, sidearm: this.buildAmmoSidearm };
+                item = ammoMap[idx];
+            }
             if (!item) return;
             const payload = { source: "slot", slotType: type, itemId: item.id, slotIndex: idx };
             e.dataTransfer.setData("application/json", JSON.stringify(payload));
@@ -4063,6 +4076,14 @@ const app = createApp({
                 if (!item) return;
                 this.buildInventory.push({ item, slotType: "grenade" });
                 this.buildWeaponGrenade = null;
+            } else if (type === "ammo") {
+                const ammoMap = { primary: "buildAmmoPrimary", secondary: "buildAmmoSecondary", sidearm: "buildAmmoSidearm" };
+                const prop = ammoMap[payload.slotIndex];
+                if (!prop) return;
+                item = this[prop];
+                if (!item) return;
+                this.buildInventory.push({ item, slotType: "ammo" });
+                this[prop] = null;
             }
 
             this.buildDragState = null;

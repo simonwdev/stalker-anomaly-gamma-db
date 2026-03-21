@@ -2847,7 +2847,7 @@ input.range-input {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 0.3rem 0.75rem;
+    padding: 0.3rem 0.75rem 0.3rem 0.5rem;
     margin-bottom: 1rem;
 }
 .build-player-faction {
@@ -3367,6 +3367,11 @@ input.range-input {
     align-items: center;
     padding: 0.35rem 0.5rem;
     border-bottom: 1px solid var(--border);
+}
+.build-stats-header-actions {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
 }
 .build-expand-all-btn {
     background: none;
