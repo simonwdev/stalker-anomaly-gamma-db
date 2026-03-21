@@ -3670,6 +3670,7 @@ input.range-input {
 .build-compare-toggle {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 3px;
     padding: 0.25rem 0.5rem;
     border-bottom: 1px solid var(--border);
