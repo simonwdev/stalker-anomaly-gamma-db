@@ -481,10 +481,37 @@
                 <div class="build-columns">
                 <!-- Left column: Equipment + Inventory -->
                 <div class="build-col-left">
-                    <div class="build-loadout-box">
-                        <div class="build-stats-header">
-                            <h3 class="build-stats-title" style="margin-bottom:0">{{ t('app_build_loadout') }}</h3>
+                    <div class="build-loadout-area">
+                    <!-- Left weapon column: Primary -->
+                    <div class="build-weapon-col">
+                        <div class="build-slot-group">
+                            <div class="build-slot-label">{{ t('app_build_weapon_primary') }}</div>
+                            <div v-if="buildWeapon1" class="build-slot filled build-slot-weapon" @click="openBuildPicker('weapon', 0)" draggable="true" @dragstart="onSlotDragStart($event, 'weapon', 0)" @dragover.prevent="onSlotDragOver($event, 'weapon', 0)" @dragleave="onSlotDragLeave()" @drop.prevent="onSlotDrop($event, 'weapon', 0)" @dragend="onDragEnd()" @mouseenter="showBuildHover(buildWeapon1, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">
+                                <span class="build-slot-name">{{ tName(buildWeapon1) }}</span>
+                                <span class="build-slot-meta">{{ formatValue('st_prop_weight', buildWeapon1['st_prop_weight']) }}</span>
+                                <button class="build-slot-remove" @click.stop="removeBuildSlot('weapon', 0)">&times;</button>
+                            </div>
+                            <div v-else class="build-slot empty" @click="openBuildPicker('weapon', 0)" @dragover.prevent="onSlotDragOver($event, 'weapon', 0)" @dragleave="onSlotDragLeave()" @drop.prevent="onSlotDrop($event, 'weapon', 0)">
+                                <span class="build-slot-add">+ {{ t('app_build_add_weapon') }}</span>
+                            </div>
                         </div>
+                        <div v-if="!isWeaponMelee(buildWeapon1)" class="build-slot-group">
+                            <div class="build-slot-label">{{ t('app_build_ammo') }}</div>
+                            <div v-if="buildAmmo1" class="build-slot filled build-slot-sm build-slot-ammo" @click="openBuildPicker('ammo', 0)" @mouseenter="showBuildHover(buildAmmo1, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">
+                                <span class="build-slot-name">{{ tName(buildAmmo1) }}</span>
+                                <button class="build-slot-remove" @click.stop="removeBuildSlot('ammo', 0)">&times;</button>
+                            </div>
+                            <div v-else-if="buildWeapon1" class="build-slot empty build-slot-sm" @click="openBuildPicker('ammo', 0)">
+                                <span class="build-slot-add">+ {{ t('app_build_add_ammo') }}</span>
+                            </div>
+                            <div v-else class="build-slot empty build-slot-sm build-slot-disabled">
+                                <span class="build-slot-add">{{ t('app_build_ammo') }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center: existing loadout -->
+                    <div class="build-loadout-box">
                     <div class="build-slots">
                         <!-- Helmet -->
                         <div class="build-slot-group">
@@ -547,6 +574,36 @@
                         </div>
                     </div>
                     </div>
+
+                    <!-- Right weapon column: Secondary -->
+                    <div class="build-weapon-col">
+                        <div class="build-slot-group">
+                            <div class="build-slot-label">{{ t('app_build_weapon_secondary') }}</div>
+                            <div v-if="buildWeapon2" class="build-slot filled build-slot-weapon" @click="openBuildPicker('weapon', 1)" draggable="true" @dragstart="onSlotDragStart($event, 'weapon', 1)" @dragover.prevent="onSlotDragOver($event, 'weapon', 1)" @dragleave="onSlotDragLeave()" @drop.prevent="onSlotDrop($event, 'weapon', 1)" @dragend="onDragEnd()" @mouseenter="showBuildHover(buildWeapon2, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">
+                                <span class="build-slot-name">{{ tName(buildWeapon2) }}</span>
+                                <span class="build-slot-meta">{{ formatValue('st_prop_weight', buildWeapon2['st_prop_weight']) }}</span>
+                                <button class="build-slot-remove" @click.stop="removeBuildSlot('weapon', 1)">&times;</button>
+                            </div>
+                            <div v-else class="build-slot empty" @click="openBuildPicker('weapon', 1)" @dragover.prevent="onSlotDragOver($event, 'weapon', 1)" @dragleave="onSlotDragLeave()" @drop.prevent="onSlotDrop($event, 'weapon', 1)">
+                                <span class="build-slot-add">+ {{ t('app_build_add_weapon') }}</span>
+                            </div>
+                        </div>
+                        <div v-if="!isWeaponMelee(buildWeapon2)" class="build-slot-group">
+                            <div class="build-slot-label">{{ t('app_build_ammo') }}</div>
+                            <div v-if="buildAmmo2" class="build-slot filled build-slot-sm build-slot-ammo" @click="openBuildPicker('ammo', 1)" @mouseenter="showBuildHover(buildAmmo2, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">
+                                <span class="build-slot-name">{{ tName(buildAmmo2) }}</span>
+                                <button class="build-slot-remove" @click.stop="removeBuildSlot('ammo', 1)">&times;</button>
+                            </div>
+                            <div v-else-if="buildWeapon2" class="build-slot empty build-slot-sm" @click="openBuildPicker('ammo', 1)">
+                                <span class="build-slot-add">+ {{ t('app_build_add_ammo') }}</span>
+                            </div>
+                            <div v-else class="build-slot empty build-slot-sm build-slot-disabled">
+                                <span class="build-slot-add">{{ t('app_build_ammo') }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div><!-- end build-loadout-area -->
+
                     <div class="build-stats">
                     <div class="build-stats-box">
                         <div class="build-stats-header">
@@ -648,9 +705,47 @@
                                 </div>
                             </div>
                         </template>
+                        <!-- Weapon Stats -->
+                        <template v-if="buildWeapon1 || buildWeapon2">
+                        <div class="build-stats-divider"></div>
+                        <div class="build-weapon-toggle">
+                            <button class="build-weapon-toggle-btn" :class="{ active: buildActiveWeaponTab === 1 || !buildWeapon2 }" @click="buildActiveWeaponTab = 1" v-if="buildWeapon1">
+                                {{ tName(buildWeapon1) }}<template v-if="buildAmmo1"> <span class="build-weapon-toggle-with">with</span> {{ shortAmmoName(tName(buildAmmo1)) }}</template>
+                            </button>
+                            <button class="build-weapon-toggle-btn" :class="{ active: buildActiveWeaponTab === 2 || !buildWeapon1 }" @click="buildActiveWeaponTab = 2" v-if="buildWeapon2">
+                                {{ tName(buildWeapon2) }}<template v-if="buildAmmo2"> <span class="build-weapon-toggle-with">with</span> {{ shortAmmoName(tName(buildAmmo2)) }}</template>
+                            </button>
+                        </div>
+                        <template v-if="buildWeaponStats">
+                            <div v-for="s in buildWeaponStats.stats" :key="s.field" class="build-tile-wrap">
+                                <div class="build-tile-stat build-prot-expandable" :class="{ 'build-prot-low': s.effective == null || s.effective === 0 }" @click="toggleBuildStatExpand('wpn_' + s.field)">
+                                    <span class="build-prot-chevron" :class="{ 'build-prot-chevron-open': buildExpandedStats['wpn_' + s.field] }"></span>
+                                    <span class="build-tile-label">{{ headerLabel(s.field) }}</span>
+                                    <span class="build-tile-value">{{ s.effective != null ? formatValue(s.field, s.effective) : '--' }}</span>
+                                </div>
+                                <div v-if="buildExpandedStats['wpn_' + s.field]" class="build-stat-breakdown">
+                                    <div class="build-breakdown-row">
+                                        <span><span class="build-breakdown-dot" :style="{ background: buildSlotColor('weapon') }"></span>{{ t('app_build_base') }}</span><span>{{ s.base != null ? formatValue(s.field, s.base) : '--' }} <span class="build-breakdown-arrow arrow-up">&#x25B2;</span></span>
+                                    </div>
+                                    <div v-if="s.modifier != null" class="build-breakdown-row">
+                                        <span><span class="build-breakdown-dot" :style="{ background: buildSlotColor('ammo') }"></span>{{ t('app_build_ammo') }}</span><span>x{{ s.modifier }} <span class="build-breakdown-arrow" :class="s.modifier >= 1 ? 'arrow-up' : 'arrow-down'">{{ s.modifier >= 1 ? '&#x25B2;' : '&#x25BC;' }}</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-for="a in buildWeaponStats.ammoOnly" :key="a.field" class="build-tile-wrap">
+                                <div class="build-tile-stat" :class="{ 'build-prot-low': !a.value }">
+                                    <span class="build-prot-chevron" style="opacity:0.15"></span>
+                                    <span class="build-tile-label">{{ headerLabel(a.field) }}</span>
+                                    <span class="build-tile-value">{{ formatValue(a.field, a.value) }}</span>
+                                </div>
+                            </div>
+                        </template>
+                        </template>
+
                         </div>
                     </div>
                     </div>
+
                 </div>
 
                 <!-- Right column: Inventory -->
@@ -1177,7 +1272,7 @@
             <div class="build-picker-list">
                 <div v-for="item in buildPickerItems" :key="item.id" class="build-picker-item" @click="selectBuildItem(item)" @mouseenter="showBuildHover(item, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">
                     <span class="build-picker-item-name">{{ tName(item) }}</span>
-                    <span v-if="buildPickerSlot && (buildPickerSlot.type === 'inventory' || buildPickerSlot.type === 'belt')" class="build-picker-item-type" :class="'build-picker-type-' + getItemSlotType(item)">{{ inventorySlotTypeLabel(getItemSlotType(item)) }}</span>
+                    <span v-if="buildPickerSlot && (buildPickerSlot.type === 'inventory' || buildPickerSlot.type === 'belt' || buildPickerSlot.type === 'weapon')" class="build-picker-item-type" :class="'build-picker-type-' + getItemSlotType(item)">{{ inventorySlotTypeLabel(getItemSlotType(item)) }}</span>
                     <span class="build-picker-item-weight">{{ formatValue('st_prop_weight', item['st_prop_weight']) }}</span>
                 </div>
                 <div v-if="buildPickerItems.length === 0" class="build-picker-empty">{{ t('app_label_no_results') }}</div>

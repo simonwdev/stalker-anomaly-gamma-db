@@ -117,6 +117,16 @@ const BUILD_SLOT_CATEGORIES = { outfit: CAT.OUTFITS, helmet: CAT.HELMETS, belt: 
 const BACKPACK_IDS = new Set(["itm_backpack", "equ_military_pack", "equ_small_pack", "equ_small_military_pack", "equ_tourist_pack"]);
 const MAX_SAVED_BUILDS = 10;
 
+// Weapon/Ammo build planner constants
+const WEAPON_STAT_FIELDS = [
+    "ui_inv_accuracy", "ui_inv_handling", "ui_inv_damage",
+    "ui_inv_rate_of_fire", "ui_ammo_count", "ui_inv_wrange",
+    "ui_inv_bspeed", "ui_inv_reli", "ui_inv_recoil",
+];
+const AMMO_MULTIPLIER_FIELDS = new Set(["ui_inv_damage", "ui_inv_accuracy", "ui_inv_wrange", "ui_inv_bspeed"]);
+const AMMO_ONLY_FIELDS = ["st_data_export_ap", "st_data_export_projectiles", "st_data_export_falloff", "st_data_export_impulse", "st_data_export_weapon_degradation"];
+const SLOT_COLORS = { outfit: "#5b8abd", helmet: "#5ba8a0", backpack: "#6bab5b", belt: "#c89050", artifact: "#9b6fb0", weapon: "#b85c5c", ammo: "#8b8b5e" };
+
 const SINGULAR_TYPE = { [CAT.PISTOLS]: "app_type_pistol", [CAT.SMGS]: "app_type_smg", [CAT.SHOTGUNS]: "app_type_shotgun", [CAT.RIFLES]: "app_type_rifle", [CAT.SNIPERS]: "app_type_sniper", [CAT.LAUNCHERS]: "app_type_launcher", [CAT.MELEE]: "app_cat_melee" };
 const SINGULAR_CATEGORY = { ...SINGULAR_TYPE, [CAT.OUTFITS]: "app_type_outfit", [CAT.HELMETS]: "app_type_helmet", [CAT.BELT_ATTACHMENTS]: "app_type_belt_attachment", [CAT.EXPLOSIVES]: "app_type_explosive", [CAT.ARTEFACTS]: "app_type_artefact", [CAT.MATERIALS]: "app_type_material", [CAT.MUTANT_PARTS]: "app_type_mutant_part" };
 
@@ -132,6 +142,7 @@ const CATEGORY_KEYS = {
     [CAT.MUTANT_PARTS]: "app_cat_mutant_parts", [CAT.RECIPES]: "app_cat_recipes",
 };
 const WEAPON_CATEGORIES = [CAT.PISTOLS, CAT.SMGS, CAT.SHOTGUNS, CAT.RIFLES, CAT.SNIPERS, CAT.LAUNCHERS, CAT.MELEE];
+const WEAPON_CATEGORY_SLUGS = WEAPON_CATEGORIES.map(c => categorySlug(c));
 const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING_TREES]);
 
 const CATEGORY_GROUPS = [
@@ -329,8 +340,13 @@ const app = createApp({
             buildBackpack: null,
             buildBelts: [],
             buildArtifacts: [],
+            buildWeapon1: null,
+            buildWeapon2: null,
+            buildAmmo1: null,
+            buildAmmo2: null,
+            buildActiveWeaponTab: 1,
             buildPickerOpen: false,
-            buildPickerSlot: null,   // { type: "outfit"|"helmet"|"backpack"|"belt"|"artifact", index?: number }
+            buildPickerSlot: null,   // { type: "outfit"|"helmet"|"backpack"|"belt"|"artifact"|"weapon"|"ammo", index?: number }
             buildPickerQuery: "",
             buildPickerFuse: null,
             buildExpandedStats: {},
@@ -946,6 +962,10 @@ const app = createApp({
             if (this.buildBackpack) items.push({ item: this.buildBackpack, slot: "backpack" });
             for (const b of this.buildBelts) items.push({ item: b, slot: "belt" });
             for (const a of this.buildArtifacts) items.push({ item: a, slot: "artifact" });
+            if (this.buildWeapon1) items.push({ item: this.buildWeapon1, slot: "weapon" });
+            if (this.buildWeapon2) items.push({ item: this.buildWeapon2, slot: "weapon" });
+            if (this.buildAmmo1) items.push({ item: this.buildAmmo1, slot: "ammo" });
+            if (this.buildAmmo2) items.push({ item: this.buildAmmo2, slot: "ammo" });
             return items;
         },
 
@@ -1041,6 +1061,7 @@ const app = createApp({
         buildAllExpanded() {
             const stats = this.buildCombinedStats;
             const allFields = ["weight", "carry", "armor", ...PROTECTION_FIELDS, ...RESTORATION_FIELDS];
+            const wpnFields = this.buildWeaponStats ? this.buildWeaponStats.stats.filter(s => s.modifier != null).map(s => "wpn_" + s.field) : [];
             const expandable = allFields.filter(f => {
                 if (f === "weight") return stats.weightBreakdown.length > 0;
                 if (f === "carry") return stats.carryBreakdown.length > 0;
@@ -1048,15 +1069,85 @@ const app = createApp({
                 if (PROTECTION_FIELDS.includes(f)) return stats.protections[f].breakdown.length > 0;
                 if (RESTORATION_FIELDS.includes(f)) return stats.restorations[f].breakdown.length > 0;
                 return false;
-            });
+            }).concat(wpnFields);
             if (expandable.length === 0) return false;
             return expandable.every(f => this.buildExpandedStats[f]);
+        },
+
+        buildActiveWeapon() {
+            if (this.buildActiveWeaponTab === 1 && this.buildWeapon1) return this.buildWeapon1;
+            if (this.buildActiveWeaponTab === 2 && this.buildWeapon2) return this.buildWeapon2;
+            // Fallback: return whichever is set
+            return this.buildWeapon1 || this.buildWeapon2;
+        },
+
+        buildActiveAmmo() {
+            if (this.buildActiveWeaponTab === 1 && this.buildWeapon1) return this.buildAmmo1;
+            if (this.buildActiveWeaponTab === 2 && this.buildWeapon2) return this.buildAmmo2;
+            // Fallback
+            return this.buildWeapon1 ? this.buildAmmo1 : this.buildAmmo2;
+        },
+
+        buildWeaponStats() {
+            const weapon = this.buildActiveWeapon;
+            const ammo = this.buildActiveAmmo;
+            if (!weapon) return null;
+
+            const parseNum = (v) => {
+                if (v == null || v === "") return null;
+                return parseFloat(String(v).replace(/%$/, "")) || 0;
+            };
+
+            const stats = [];
+            for (const field of WEAPON_STAT_FIELDS) {
+                const base = parseNum(weapon[field]);
+                let modifier = null;
+                let effective = base;
+
+                if (ammo && AMMO_MULTIPLIER_FIELDS.has(field)) {
+                    const ammoVal = parseNum(ammo[field]);
+                    if (ammoVal != null && base != null) {
+                        if (field === "ui_inv_damage") {
+                            // Raw multiplier
+                            modifier = ammoVal;
+                            effective = Math.round(base * ammoVal * 100) / 100;
+                        } else {
+                            // Percentage multiplier (e.g. "66%" means x0.66)
+                            modifier = ammoVal / 100;
+                            effective = Math.round(base * (ammoVal / 100) * 100) / 100;
+                        }
+                    }
+                }
+                stats.push({ field, base, modifier, effective });
+            }
+
+            // Malfunction chance (derived from reliability)
+            const reli = parseNum(weapon["ui_inv_reli"]);
+            if (reli != null) {
+                const malf = malfunctionChance(reli);
+                stats.push({ field: "_malfunction_chance", base: malf, modifier: null, effective: malf });
+            }
+
+            // Ammo-only stats
+            const ammoOnly = [];
+            if (ammo) {
+                for (const field of AMMO_ONLY_FIELDS) {
+                    const val = ammo[field];
+                    if (val != null && val !== "") {
+                        ammoOnly.push({ field, value: val });
+                    }
+                }
+            }
+
+            return { stats, ammoOnly };
         },
 
         buildPickerSlotLabel() {
             if (!this.buildPickerSlot) return "";
             if (this.buildPickerSlot.type === "inventory") return this.t("app_build_inventory");
             if (this.buildPickerSlot.type === "backpack") return this.t("app_type_backpack");
+            if (this.buildPickerSlot.type === "weapon") return this.t("app_build_weapon");
+            if (this.buildPickerSlot.type === "ammo") return this.t("app_build_ammo");
             const cat = BUILD_SLOT_CATEGORIES[this.buildPickerSlot.type] || "";
             return this.t(SINGULAR_CATEGORY[cat] || cat);
         },
@@ -1065,51 +1156,49 @@ const app = createApp({
             if (!this.buildPickerSlot) return [];
             const slotType = this.buildPickerSlot.type;
 
-            const sortAlpha = (arr) => arr.slice().sort((a, b) => (this.tName(a) || "").localeCompare(this.tName(b) || ""));
+            const searchOrSort = (items) => {
+                if (!this.buildPickerQuery.trim() || !this.buildPickerFuse) {
+                    return items.slice().sort((a, b) => (this.tName(a) || "").localeCompare(this.tName(b) || ""));
+                }
+                const allowed = new Set(items);
+                return this.buildPickerFuse.search(this.buildPickerQuery).map(r => r.item).filter(i => allowed.has(i));
+            };
 
-            // Inventory mode: show all equipment categories combined
-            if (slotType === "inventory") {
-                const slugs = ["outfits", "helmets", "belt-attachments", "artefacts"];
+            const collectSlugs = (slugs) => {
                 let items = [];
-                for (const slug of slugs) {
-                    const catItems = this.categoryItems[slug] || [];
-                    items = items.concat(catItems);
-                }
-                if (this.hideNoDrop) {
-                    items = items.filter(i => i.hasNpcWeaponDrop !== false);
-                }
-                if (!this.buildPickerQuery.trim()) return sortAlpha(items);
-                if (!this.buildPickerFuse) return sortAlpha(items);
-                const filtered = new Set(items);
-                return this.buildPickerFuse.search(this.buildPickerQuery).map(r => r.item).filter(i => filtered.has(i));
+                for (const slug of slugs) items = items.concat(this.categoryItems[slug] || []);
+                if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
+                return items;
+            };
+
+            if (slotType === "inventory") {
+                return searchOrSort(collectSlugs(["outfits", "helmets", "belt-attachments", "artefacts", ...WEAPON_CATEGORY_SLUGS, "ammo"]));
             }
 
-            // Belt picker: show belt attachments (excluding backpacks) + artifacts
+            if (slotType === "weapon") {
+                return searchOrSort(collectSlugs(WEAPON_CATEGORY_SLUGS));
+            }
+
+            if (slotType === "ammo") {
+                const weapon = this.buildPickerSlot.index === 0 ? this.buildWeapon1 : this.buildWeapon2;
+                return searchOrSort(weapon ? this.getCompatibleAmmo(weapon) : []);
+            }
+
             if (slotType === "belt") {
-                let beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !BACKPACK_IDS.has(i.id));
-                let artItems = this.categoryItems["artefacts"] || [];
+                const beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !BACKPACK_IDS.has(i.id));
+                const artItems = this.categoryItems["artefacts"] || [];
                 let items = beltItems.concat(artItems);
                 if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
-                if (!this.buildPickerQuery.trim()) return sortAlpha(items);
-                if (!this.buildPickerFuse) return sortAlpha(items);
-                const filtered = new Set(items);
-                return this.buildPickerFuse.search(this.buildPickerQuery).map(r => r.item).filter(i => filtered.has(i));
+                return searchOrSort(items);
             }
 
             const cat = BUILD_SLOT_CATEGORIES[slotType];
             if (!cat) return [];
             const slug = categorySlug(cat);
             let items = this.categoryItems[slug] || [];
-            if (this.hideNoDrop) {
-                items = items.filter(i => i.hasNpcWeaponDrop !== false);
-            }
-            if (slotType === "backpack") {
-                items = items.filter(i => BACKPACK_IDS.has(i.id));
-            }
-            if (!this.buildPickerQuery.trim()) return sortAlpha(items);
-            if (!this.buildPickerFuse) return sortAlpha(items);
-            const filtered = new Set(items);
-            return this.buildPickerFuse.search(this.buildPickerQuery).map(r => r.item).filter(i => filtered.has(i));
+            if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
+            if (slotType === "backpack") items = items.filter(i => BACKPACK_IDS.has(i.id));
+            return searchOrSort(items);
         },
     },
 
@@ -2652,6 +2741,10 @@ const app = createApp({
             url.searchParams.delete("arts");
             url.searchParams.delete("pn");
             url.searchParams.delete("pf");
+            url.searchParams.delete("w1");
+            url.searchParams.delete("w2");
+            url.searchParams.delete("a1");
+            url.searchParams.delete("a2");
             if (this.buildPlannerActive) {
                 url.searchParams.set("cat", "build-planner");
                 url.searchParams.delete("favonly");
@@ -2664,6 +2757,10 @@ const app = createApp({
                 if (bp.backpack) url.searchParams.set("backpack", bp.backpack);
                 if (bp.belt) url.searchParams.set("belt", bp.belt);
                 if (bp.arts) url.searchParams.set("arts", bp.arts);
+                if (bp.w1) url.searchParams.set("w1", bp.w1);
+                if (bp.w2) url.searchParams.set("w2", bp.w2);
+                if (bp.a1) url.searchParams.set("a1", bp.a1);
+                if (bp.a2) url.searchParams.set("a2", bp.a2);
             } else if (this.favoritesViewActive) {
                 url.searchParams.set("cat", "favorites");
                 url.searchParams.delete("favonly");
@@ -2834,7 +2931,7 @@ const app = createApp({
             this.buildPlannerActive = true;
 
             // Load equipment category data
-            const cats = ["outfits", "helmets", "belt-attachments", "artefacts"];
+            const cats = ["outfits", "helmets", "belt-attachments", "artefacts", ...WEAPON_CATEGORY_SLUGS, "ammo"];
             await Promise.all(cats.map(async (slug) => {
                 if (this.categoryItems[slug]) return;
                 try {
@@ -2862,6 +2959,32 @@ const app = createApp({
             this.pushUrlState();
         },
 
+        getCompatibleAmmo(weapon) {
+            if (!weapon) return [];
+            const ammoTypes = new Set();
+            for (const f of ["ui_ammo_types", "st_data_export_ammo_types_alt"]) {
+                if (weapon[f]) {
+                    for (const a of weapon[f].split(";")) {
+                        const trimmed = a.trim();
+                        if (trimmed) {
+                            // Store both hyphen and underscore variants for flexible matching
+                            ammoTypes.add(trimmed);
+                            ammoTypes.add(trimmed.replace(/-/g, "_"));
+                            ammoTypes.add(trimmed.replace(/_/g, "-"));
+                        }
+                    }
+                }
+            }
+            const allAmmo = this.categoryItems["ammo"] || [];
+            return allAmmo.filter(a => ammoTypes.has(a.pda_encyclopedia_name));
+        },
+
+        isWeaponMelee(weapon) {
+            if (!weapon) return false;
+            const meleeItems = this.categoryItems["melee"] || [];
+            return meleeItems.some(i => i.id === weapon.id);
+        },
+
         openBuildPicker(slotType, index) {
             this.buildPickerSlot = { type: slotType, index };
             this.buildPickerQuery = "";
@@ -2870,6 +2993,14 @@ const app = createApp({
                 const beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !BACKPACK_IDS.has(i.id));
                 const artItems = this.categoryItems["artefacts"] || [];
                 items = beltItems.concat(artItems);
+            } else if (slotType === "weapon") {
+                items = [];
+                for (const slug of WEAPON_CATEGORY_SLUGS) {
+                    items = items.concat(this.categoryItems[slug] || []);
+                }
+            } else if (slotType === "ammo") {
+                const weapon = index === 0 ? this.buildWeapon1 : this.buildWeapon2;
+                items = weapon ? this.getCompatibleAmmo(weapon) : [];
             } else {
                 const cat = BUILD_SLOT_CATEGORIES[slotType];
                 const slug = categorySlug(cat);
@@ -2939,6 +3070,22 @@ const app = createApp({
                 } else {
                     this.buildArtifacts.push(item);
                 }
+            } else if (type === "weapon") {
+                if (index === 0) {
+                    this.buildWeapon1 = item;
+                    // Clear ammo if incompatible with new weapon or melee
+                    if (this.buildAmmo1 && (this.isWeaponMelee(item) || !this.getCompatibleAmmo(item).some(a => a.id === this.buildAmmo1.id))) {
+                        this.buildAmmo1 = null;
+                    }
+                } else {
+                    this.buildWeapon2 = item;
+                    if (this.buildAmmo2 && (this.isWeaponMelee(item) || !this.getCompatibleAmmo(item).some(a => a.id === this.buildAmmo2.id))) {
+                        this.buildAmmo2 = null;
+                    }
+                }
+            } else if (type === "ammo") {
+                if (index === 0) this.buildAmmo1 = item;
+                else this.buildAmmo2 = item;
             }
             this.closeBuildPicker();
             this.saveBuildToStorage();
@@ -2965,6 +3112,12 @@ const app = createApp({
             } else if (type === "artifact") {
                 if (this.buildArtifacts[index]) this.buildInventory.push({ item: this.buildArtifacts[index], slotType: "artifact" });
                 this.buildArtifacts.splice(index, 1);
+            } else if (type === "weapon") {
+                if (index === 0) { this.buildWeapon1 = null; this.buildAmmo1 = null; }
+                else { this.buildWeapon2 = null; this.buildAmmo2 = null; }
+            } else if (type === "ammo") {
+                if (index === 0) this.buildAmmo1 = null;
+                else this.buildAmmo2 = null;
             }
             this.saveBuildToStorage();
             this.saveInventoryToStorage();
@@ -2977,6 +3130,11 @@ const app = createApp({
             this.buildBackpack = null;
             this.buildBelts = [];
             this.buildArtifacts = [];
+            this.buildWeapon1 = null;
+            this.buildWeapon2 = null;
+            this.buildAmmo1 = null;
+            this.buildAmmo2 = null;
+            this.buildActiveWeaponTab = 1;
             this.buildExpandedStats = {};
             this.buildInventory = [];
             this.saveBuildToStorage();
@@ -2986,11 +3144,12 @@ const app = createApp({
 
         toggleBuildExpandAll() {
             const allFields = ["weight", "carry", "armor", "speed", ...PROTECTION_FIELDS, ...RESTORATION_FIELDS];
+            const wpnFields = this.buildWeaponStats ? this.buildWeaponStats.stats.map(s => "wpn_" + s.field) : [];
             if (this.buildAllExpanded) {
                 this.buildExpandedStats = {};
             } else {
                 const expanded = {};
-                for (const f of allFields) expanded[f] = true;
+                for (const f of [...allFields, ...wpnFields]) expanded[f] = true;
                 this.buildExpandedStats = expanded;
             }
         },
@@ -3022,15 +3181,13 @@ const app = createApp({
         },
 
         buildSlotColor(slot) {
-            const colors = { outfit: "#5b8abd", helmet: "#5ba8a0", backpack: "#6bab5b", belt: "#c89050", artifact: "#9b6fb0" };
-            return colors[slot] || "#888";
+            return SLOT_COLORS[slot] || "#888";
         },
 
         buildBarSegments(segments, total) {
             if (!total || total <= 0) return [];
-            const SLOT_COLORS = { outfit: "#5b8abd", helmet: "#5ba8a0", backpack: "#6bab5b", belt: "#c89050", artifact: "#9b6fb0" };
             const result = [];
-            for (const slot of ["outfit", "helmet", "backpack", "belt", "artifact"]) {
+            for (const slot of ["outfit", "helmet", "backpack", "belt", "artifact", "weapon", "ammo"]) {
                 const v = Math.abs(segments[slot] || 0);
                 if (v <= 0) continue;
                 const pct = (v / Math.abs(total)) * 100;
@@ -3051,6 +3208,10 @@ const app = createApp({
                 backpack: this.buildBackpack?.id || null,
                 belts: this.buildBelts.map(b => b.id),
                 artifacts: this.buildArtifacts.map(a => a.id),
+                weapon1: this.buildWeapon1?.id || null,
+                weapon2: this.buildWeapon2?.id || null,
+                ammo1: this.buildAmmo1?.id || null,
+                ammo2: this.buildAmmo2?.id || null,
             };
             try {
                 localStorage.setItem(this.getBuildStorageKey(), JSON.stringify(data));
@@ -3072,11 +3233,23 @@ const app = createApp({
                 const items = this.categoryItems[slug] || [];
                 return items.find(i => i.id === id) || null;
             };
+            const findWeapon = (id) => {
+                if (!id) return null;
+                for (const slug of WEAPON_CATEGORY_SLUGS) {
+                    const found = findItem(id, slug);
+                    if (found) return found;
+                }
+                return null;
+            };
             this.buildOutfit = findItem(data.outfit, "outfits");
             this.buildHelmet = findItem(data.helmet, "helmets");
             this.buildBackpack = findItem(data.backpack, "belt-attachments");
             this.buildBelts = (data.belts || []).map(id => findItem(id, "belt-attachments")).filter(Boolean);
             this.buildArtifacts = (data.artifacts || []).map(id => findItem(id, "artefacts")).filter(Boolean);
+            this.buildWeapon1 = findWeapon(data.weapon1);
+            this.buildWeapon2 = findWeapon(data.weapon2);
+            this.buildAmmo1 = findItem(data.ammo1, "ammo");
+            this.buildAmmo2 = findItem(data.ammo2, "ammo");
         },
 
         getSavedBuildsKey() {
@@ -3105,6 +3278,10 @@ const app = createApp({
                 backpack: this.buildBackpack?.id || null,
                 belts: this.buildBelts.map(b => b.id),
                 artifacts: this.buildArtifacts.map(a => a.id),
+                weapon1: this.buildWeapon1?.id || null,
+                weapon2: this.buildWeapon2?.id || null,
+                ammo1: this.buildAmmo1?.id || null,
+                ammo2: this.buildAmmo2?.id || null,
                 timestamp: Date.now(),
             };
             // Replace if same name exists
@@ -3152,6 +3329,10 @@ const app = createApp({
             if (this.buildBackpack) params.backpack = this.buildBackpack.id;
             if (this.buildBelts.length) params.belt = this.buildBelts.map(b => b.id).join(",");
             if (this.buildArtifacts.length) params.arts = this.buildArtifacts.map(a => a.id).join(",");
+            if (this.buildWeapon1) params.w1 = this.buildWeapon1.id;
+            if (this.buildWeapon2) params.w2 = this.buildWeapon2.id;
+            if (this.buildAmmo1) params.a1 = this.buildAmmo1.id;
+            if (this.buildAmmo2) params.a2 = this.buildAmmo2.id;
             return params;
         },
 
@@ -3164,8 +3345,12 @@ const app = createApp({
                 backpack: params.get("backpack") || null,
                 belts: params.get("belt") ? params.get("belt").split(",") : [],
                 artifacts: params.get("arts") ? params.get("arts").split(",") : [],
+                weapon1: params.get("w1") || null,
+                weapon2: params.get("w2") || null,
+                ammo1: params.get("a1") || null,
+                ammo2: params.get("a2") || null,
             };
-            if (data.outfit || data.helmet || data.backpack || data.belts.length || data.artifacts.length) {
+            if (data.outfit || data.helmet || data.backpack || data.belts.length || data.artifacts.length || data.weapon1 || data.weapon2) {
                 this.restoreBuildFromIds(data);
                 this.saveBuildToStorage();
             }
@@ -3188,6 +3373,14 @@ const app = createApp({
                     return type;
                 }
             }
+            // Check weapon categories
+            for (const slug of WEAPON_CATEGORY_SLUGS) {
+                const items = this.categoryItems[slug] || [];
+                if (items.some(i => i.id === item.id)) return "weapon";
+            }
+            // Check ammo
+            const ammoItems = this.categoryItems["ammo"] || [];
+            if (ammoItems.some(i => i.id === item.id)) return "ammo";
             return null;
         },
 
@@ -3209,6 +3402,19 @@ const app = createApp({
                 if (!raw) return;
                 const data = JSON.parse(raw);
                 this.buildInventory = data.map(entry => {
+                    if (entry.slotType === "weapon") {
+                        for (const slug of WEAPON_CATEGORY_SLUGS) {
+                            const items = this.categoryItems[slug] || [];
+                            const item = items.find(i => i.id === entry.id);
+                            if (item) return { item, slotType: "weapon" };
+                        }
+                        return null;
+                    }
+                    if (entry.slotType === "ammo") {
+                        const items = this.categoryItems["ammo"] || [];
+                        const item = items.find(i => i.id === entry.id);
+                        return item ? { item, slotType: "ammo" } : null;
+                    }
                     const slugMap = { outfit: "outfits", helmet: "helmets", backpack: "belt-attachments", belt: "belt-attachments", artifact: "artefacts" };
                     const slug = slugMap[entry.slotType];
                     const items = this.categoryItems[slug] || [];
@@ -3236,8 +3442,8 @@ const app = createApp({
         openInventoryPicker() {
             this.buildPickerSlot = { type: "inventory" };
             this.buildPickerQuery = "";
-            // Combine all equipment categories into one Fuse instance
-            const slugs = ["outfits", "helmets", "belt-attachments", "artefacts"];
+            // Combine all equipment + weapon + ammo categories into one Fuse instance
+            const slugs = ["outfits", "helmets", "belt-attachments", "artefacts", ...WEAPON_CATEGORY_SLUGS, "ammo"];
             let allItems = [];
             for (const slug of slugs) {
                 allItems = allItems.concat(this.categoryItems[slug] || []);
@@ -3255,13 +3461,28 @@ const app = createApp({
         },
 
         inventorySlotTypeLabel(slotType) {
-            const map = { outfit: "app_type_outfit", helmet: "app_type_helmet", backpack: "app_type_backpack", belt: "app_type_belt_attachment", artifact: "app_type_artefact" };
-            return this.t(map[slotType] || slotType);
+            const map = { outfit: "app_type_outfit", helmet: "app_type_helmet", backpack: "app_type_backpack", belt: "app_type_belt_attachment", artifact: "app_type_artefact", weapon: "app_build_weapon", ammo: "app_build_ammo" };
+            return this.t(map[slotType]) || slotType;
         },
 
         getItemFields(item) {
             if (!item) return [];
             const slotType = this.getItemSlotType(item);
+            if (slotType === "weapon") {
+                // Find the weapon's category slug
+                for (const slug of WEAPON_CATEGORY_SLUGS) {
+                    const items = this.categoryItems[slug] || [];
+                    if (items.some(i => i.id === item.id)) {
+                        const headers = this.categoryHeaders[slug] || [];
+                        return headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id");
+                    }
+                }
+                return [];
+            }
+            if (slotType === "ammo") {
+                const headers = this.categoryHeaders["ammo"] || [];
+                return headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id");
+            }
             const slugMap = { outfit: "outfits", helmet: "helmets", backpack: "belt-attachments", belt: "belt-attachments", artifact: "artefacts" };
             const slug = slugMap[slotType];
             if (!slug) return [];
@@ -3311,6 +3532,8 @@ const app = createApp({
             if (slotType === "outfit") compareItem = this.buildOutfit;
             else if (slotType === "helmet") compareItem = this.buildHelmet;
             else if (slotType === "backpack") compareItem = this.buildBackpack;
+            else if (slotType === "weapon") compareItem = this.buildWeapon1 || this.buildWeapon2;
+            else if (slotType === "ammo") compareItem = this.buildAmmo1 || this.buildAmmo2;
             if (compareItem && compareItem.id === item.id) compareItem = null;
             this._buildHoverCompareItem = compareItem;
 
@@ -3390,6 +3613,26 @@ const app = createApp({
                     this.buildInventory.push({ item: this.buildBackpack, slotType: "backpack" });
                 }
                 this.buildBackpack = item;
+            } else if (slotType === "weapon") {
+                if (!this.buildWeapon1) {
+                    this.buildWeapon1 = item;
+                } else if (!this.buildWeapon2) {
+                    this.buildWeapon2 = item;
+                } else {
+                    // Both full: swap weapon 1 to inventory
+                    this.buildInventory.push({ item: this.buildWeapon1, slotType: "weapon" });
+                    if (this.buildAmmo1) { this.buildAmmo1 = null; }
+                    this.buildWeapon1 = item;
+                }
+            } else if (slotType === "ammo") {
+                // Try to equip to first compatible weapon slot
+                if (this.buildWeapon1 && !this.buildAmmo1 && !this.isWeaponMelee(this.buildWeapon1) && this.getCompatibleAmmo(this.buildWeapon1).some(a => a.id === item.id)) {
+                    this.buildAmmo1 = item;
+                } else if (this.buildWeapon2 && !this.buildAmmo2 && !this.isWeaponMelee(this.buildWeapon2) && this.getCompatibleAmmo(this.buildWeapon2).some(a => a.id === item.id)) {
+                    this.buildAmmo2 = item;
+                } else {
+                    return; // Can't equip, do nothing
+                }
             }
 
             this.buildInventory.splice(idx, 1);
@@ -3419,6 +3662,7 @@ const app = createApp({
             else if (type === "backpack") item = this.buildBackpack;
             else if (type === "belt") item = this.buildBelts[idx];
             else if (type === "artifact") item = this.buildArtifacts[idx];
+            else if (type === "weapon") item = idx === 0 ? this.buildWeapon1 : this.buildWeapon2;
             if (!item) return;
             const payload = { source: "slot", slotType: type, itemId: item.id, slotIndex: idx };
             e.dataTransfer.setData("application/json", JSON.stringify(payload));
@@ -3479,6 +3723,11 @@ const app = createApp({
                     if (type === "outfit") this.buildOutfit = item;
                     else if (type === "helmet") this.buildHelmet = item;
                     else this.buildBackpack = item;
+                } else if (type === "weapon") {
+                    const current = idx === 0 ? this.buildWeapon1 : this.buildWeapon2;
+                    if (current) this.buildInventory.push({ item: current, slotType: "weapon" });
+                    if (idx === 0) { this.buildWeapon1 = item; this.buildAmmo1 = null; }
+                    else { this.buildWeapon2 = item; this.buildAmmo2 = null; }
                 } else {
                     // Belt/artifact: check capacity
                     if (this.buildBeltSlotUsed >= this.buildBeltSlotMax) return;
@@ -3487,12 +3736,17 @@ const app = createApp({
                 }
                 this.buildInventory.splice(payload.inventoryIndex, 1);
             } else if (payload.source === "slot") {
-                // Drag between slots of same type (swap for singular, no-op for multi to same)
-                if (type === "outfit" || type === "helmet" || type === "backpack") {
-                    // Same singular slot, no-op
-                } else {
-                    // Belt/artifact swap positions - no-op since they're in same pool
+                // Drag between slots of same type
+                if (type === "weapon" && payload.slotIndex !== idx) {
+                    // Swap weapons between slots
+                    const temp = this.buildWeapon1;
+                    this.buildWeapon1 = this.buildWeapon2;
+                    this.buildWeapon2 = temp;
+                    const tempAmmo = this.buildAmmo1;
+                    this.buildAmmo1 = this.buildAmmo2;
+                    this.buildAmmo2 = tempAmmo;
                 }
+                // Other same-type drags: no-op
             }
 
             this.buildDragState = null;
@@ -3580,6 +3834,12 @@ const app = createApp({
                 if (!item) return;
                 this.buildInventory.push({ item, slotType: "artifact" });
                 this.buildArtifacts.splice(payload.slotIndex, 1);
+            } else if (type === "weapon") {
+                item = payload.slotIndex === 0 ? this.buildWeapon1 : this.buildWeapon2;
+                if (!item) return;
+                this.buildInventory.push({ item, slotType: "weapon" });
+                if (payload.slotIndex === 0) { this.buildWeapon1 = null; this.buildAmmo1 = null; }
+                else { this.buildWeapon2 = null; this.buildAmmo2 = null; }
             }
 
             this.buildDragState = null;

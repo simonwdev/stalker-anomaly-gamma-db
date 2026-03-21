@@ -2847,7 +2847,7 @@ input.range-input {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 0.5rem 0.75rem;
+    padding: 0.3rem 0.75rem;
     margin-bottom: 1rem;
 }
 .build-player-faction {
@@ -3161,12 +3161,35 @@ input.range-input {
     border-color: #4ac45a;
 }
 
-.build-loadout-box {
+/* Loadout area: weapon columns flanking center loadout */
+.build-loadout-area {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.build-weapon-col {
+    flex: 0 0 9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.build-weapon-col .build-slot-group {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 4px;
-    margin-bottom: 1rem;
+    padding: 0.35rem 0.5rem 0.5rem;
 }
+.build-loadout-box {
+    flex: 1;
+    min-width: 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+.build-slot-weapon.filled { border-left: 3px solid #b85c5c; }
+.build-slot-ammo.filled { border-left: 3px solid #8b8b5e; min-height: 3rem; display: flex; align-items: center; }
+.build-slot-ammo .build-slot-name { white-space: normal; word-break: break-word; }
 /* Equipment Slots */
 .build-slots {
     display: flex;
@@ -3701,6 +3724,57 @@ input.range-input {
 .build-inv-backpack .build-inventory-item-type { background: rgba(107, 171, 91, 0.2); color: #6bab5b; }
 .build-inv-belt .build-inventory-item-type { background: rgba(200, 144, 80, 0.2); color: #c89050; }
 .build-inv-artifact .build-inventory-item-type { background: rgba(155, 111, 176, 0.2); color: #9b6fb0; }
+.build-inv-weapon .build-inventory-item-type { background: rgba(184, 92, 92, 0.2); color: #b85c5c; }
+.build-inv-ammo .build-inventory-item-type { background: rgba(139, 139, 94, 0.2); color: #8b8b5e; }
+
+/* Weapon stats panel */
+.build-stats-divider {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--border);
+    margin: 0.25rem 0;
+}
+.build-stats-divider ~ .build-tile-wrap {
+    border-left: none;
+    padding-left: 0;
+}
+.build-stats-section-label {
+    grid-column: 1 / -1;
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding-bottom: 0.15rem;
+}
+.build-weapon-toggle {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 4px;
+}
+.build-weapon-toggle-btn {
+    padding: 0.2rem 0.6rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+}
+.build-weapon-toggle-btn:hover {
+    background: rgba(255,255,255,0.06);
+}
+.build-weapon-toggle-btn.active {
+    background: rgba(255,255,255,0.08);
+    color: var(--text);
+    border-color: var(--accent-dim);
+}
+.build-weapon-toggle-with {
+    color: var(--text-secondary);
+    opacity: 0.5;
+    margin: 0 0.2em 0 0.3em;
+}
+
 .build-inventory-item-name {
     font-size: 0.7rem;
     color: var(--text);
@@ -3857,6 +3931,8 @@ input.range-input {
 .build-picker-type-backpack { color: #6bab5b; background: rgba(107, 171, 91, 0.12); }
 .build-picker-type-belt { color: #c89050; background: rgba(200, 144, 80, 0.12); }
 .build-picker-type-artifact { color: #9b6fb0; background: rgba(155, 111, 176, 0.12); }
+.build-picker-type-weapon { color: #b85c5c; background: rgba(184, 92, 92, 0.12); }
+.build-picker-type-ammo { color: #8b8b5e; background: rgba(139, 139, 94, 0.12); }
 
 /* Saved Builds (dropdown items) */
 .build-saved-list {
@@ -4023,6 +4099,13 @@ input.range-input {
     }
     .build-col-right .build-inventory {
         max-height: none;
+    }
+    .build-loadout-area {
+        flex-direction: column;
+    }
+    .build-weapon-col {
+        flex: none;
+        width: 100%;
     }
     .build-stats-body {
         grid-template-columns: 1fr;
