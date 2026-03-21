@@ -115,8 +115,11 @@
             return;
         }
 
-        // Mark as seen
-        localStorage.setItem("lastSeenReleaseDate", releases[0].date);
+        // Mark as seen (hash-based)
+        const text = JSON.stringify(releases[0]);
+        const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+        const hash = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 12);
+        localStorage.setItem("releaseNotesHash", hash);
 
         let html = "";
         for (const release of releases) {

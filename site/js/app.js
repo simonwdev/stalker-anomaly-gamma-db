@@ -3467,6 +3467,12 @@ const app = createApp({
             } catch (e) { /* quota */ }
         },
 
+        async releaseNotesHash(data) {
+            const text = JSON.stringify(data[0]);
+            const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+            return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 12);
+        },
+
         async copyBuildLink() {
             await this.copyToClipboard(window.location.href, "copyBuildLinkFeedback");
         },
@@ -4249,9 +4255,9 @@ const app = createApp({
             const rnRes = await fetch("data/release-notes.json");
             const rnData = await rnRes.json();
             if (rnData.length) {
-                const latest = rnData[0].date;
-                const seen = localStorage.getItem("lastSeenReleaseDate");
-                if (!seen || seen < latest) this.hasUnseenReleaseNotes = true;
+                const hash = await this.releaseNotesHash(rnData);
+                const seen = localStorage.getItem("releaseNotesHash") || localStorage.getItem("lastSeenReleaseDate");
+                if (!seen || seen !== hash) this.hasUnseenReleaseNotes = true;
             }
         } catch (e) { /* ignore */ }
     },
