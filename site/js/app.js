@@ -283,6 +283,7 @@ const app = createApp({
             categoryHeaders: {},
             categoryFuse: {},
             globalQuery: "",
+            searchFocused: false,
             globalResults: [],
             filterQuery: "",
             filterInput: "",

@@ -83,12 +83,18 @@
 
     <!-- Global search -->
     <div class="global-search" v-click-outside="clearGlobalQuery">
+        <span class="search-hint" v-show="!searchFocused && !globalQuery" @click="$refs.searchInput.focus()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Type <kbd>/</kbd> to search
+        </span>
         <input
+            ref="searchInput"
             type="text"
-            :placeholder="t('app_label_search_placeholder')"
             v-model="globalQuery"
             @input="debouncedGlobalSearch()"
             @keydown.escape.stop="globalQuery = ''"
+            @focus="searchFocused = true"
+            @blur="searchFocused = false"
         >
         <div class="search-dropdown" v-show="globalQuery.trim()">
             <a v-for="item in globalResults" :key="item.id" href="#" @click.prevent="globalQuery = ''; navigateToItem(item.id)">

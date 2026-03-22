@@ -309,6 +309,38 @@ button.header-link {
 .global-search input::placeholder {
     color: var(--text-secondary);
 }
+.search-hint {
+    position: absolute;
+    inset: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    cursor: text;
+    border-radius: 3px;
+}
+.search-hint svg {
+    flex-shrink: 0;
+}
+.search-hint kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    margin: 0 0.15rem;
+    padding: 0 0.35rem;
+    font-size: 0.75rem;
+    font-family: inherit;
+    line-height: 1;
+    color: var(--text-secondary);
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 .search-dropdown {
     position: absolute;
     top: 100%;
