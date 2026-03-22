@@ -1362,7 +1362,7 @@ const app = createApp({
             }
 
             if (slotType === "belt") {
-                const beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !BACKPACK_IDS.has(i.id));
+                const beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !isBackpack(i));
                 const artItems = this.categoryItems["artefacts"] || [];
                 let items = beltItems.concat(artItems);
                 if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
@@ -3475,7 +3475,7 @@ const app = createApp({
             this.buildPickerQuery = "";
             let items;
             if (slotType === "belt") {
-                const beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !BACKPACK_IDS.has(i.id));
+                const beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !isBackpack(i));
                 const artItems = this.categoryItems["artefacts"] || [];
                 items = beltItems.concat(artItems);
             } else if (slotType === "weapon") {
