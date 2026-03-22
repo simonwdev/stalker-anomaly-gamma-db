@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-23",
+    "entries": [
+      { "type": "added", "text": "GAMMA 0.9.5 mod pack (preview)." },
+      { "type": "added", "text": "Cross-pack stat comparison in the item modal - see what changed between pack versions." }
+    ]
+  },
+  {
     "date": "2026-03-22",
     "entries": [
       { "type": "added", "text": "Radar chart view in the Compare modal - visually compare pinned items across all stats." },
