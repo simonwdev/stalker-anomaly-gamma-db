@@ -1,34 +1,34 @@
-~, Faction, Name, Weight, Cost, Repair, Powered Exos, BR Class, Ballistic Res, Rupture Res, Burn Res, Electrical Res, Chemical Res, Radiation Res, Psychic Res, Impact Res, Explosive Res, Belt Slots, Maximum belt slots, Weight Carried, Movespeed
-army_outfit,Military,Military Service Outfit,12,8167,F,N,21,17%,5%,2%,3%,3%,2%,11%,9%,19%,1,1,10.800000190735,97%
-novice_outfit_camo,Unknown,Firearm Enthusiast's Jacket,8,11766,F,N,10,7%,7%,6%,6%,9%,3%,4%,8%,4%,2,2,15,106%
-bandit_novice_outfit,Bandit,Black Leather Jacket,3,7065,F,N,6,4%,7%,6%,7%,11%,4%,4%,11%,4%,1,1,15.60000038147,111%
-cs_light_outfit,Clear Sky,CS-2a Body Armor,9,40148,L,N,19,13%,9%,42%,19%,7%,16%,16%,26%,11%,2,3,12,101%
-nbc_dolg_outfit,Duty,PS5-Mt Suit,6,51662,L,N,23,16%,12%,13%,11%,21%,9%,5%,16%,11%,3,3,34,110%
-merc_fighter_outfit,Mercenary,Mercenary LC-F Suit,16,43872,L,N,30,21%,9%,6%,8%,6%,3%,16%,6%,25%,2,4,10.5,96%
-stalker_predator_outfit,Free Stalkers,"Predator" Stalker Suit,8,77990,L,N,21,14%,18%,6%,26%,16%,9%,6%,31%,16%,4,5,19.200000762939,106%
-redline_novice_outfit,Unknown,Redline Leather Jacket,5,12656,F,N,8,4%,7%,6%,7%,11%,5%,4%,11%,4%,2,2,10,112%
-stalker_salamander_outfit,Free Stalkers,"Salamander" Stalker Suit,8,62115,L,N,22,14%,18%,11%,36%,11%,9%,16%,18%,26%,3,4,15.60000038147,101%
-cs_nbc_outfit,Clear Sky,CS-2t Suit,7,67798,L,N,23,14%,8%,12%,13%,25%,11%,6%,21%,11%,3,4,34,109%
-bandit_nbc_outfit,Bandit,Load-bearing 'Sunset' Tactical Suit,4,90972,L,N,18,14%,9%,11%,11%,21%,8%,6%,21%,11%,3,5,44.200000762939,112%
-novice_outfit,Unknown,Leather Jacket,5,7290,F,N,8,4%,7%,8%,9%,13%,8%,6%,13%,6%,1,1,12,108%
-merc_scout_outfit,Mercenary,Mercenary LC-S Suit,12,47600,L,N,26,18%,9%,6%,8%,6%,5%,13%,6%,25%,2,4,18,100%
-merc_wolven_outfit,Mercenary,Mercenary STS-W Body Armor,9,77833,L,N,26,18%,14%,11%,46%,11%,5%,16%,16%,31%,3,5,9.75,101%
-travel_outfit,Free Stalkers,"Voyager" Stalker Suit,5,92174,L,N,15,10%,15%,16%,15%,25%,18%,11%,13%,6%,6,6,24,111%
-cs_light_novice_outfit,Clear Sky,CS-1 Body Armor,9,31058,F,N,17,7%,10%,31%,13%,5%,11%,9%,16%,11%,2,3,13,101%
-ghillie_outfit,Unknown,Ghillie Suit,5,67100,L,N,17,12%,20%,12%,13%,21%,7%,9%,8%,6%,4,5,14,110%
-trenchcoat_freedom_brown_outfit,Freedom,Heavy Freedom Overcoat,8,30447,F,N,15,9%,12%,11%,11%,21%,7%,5%,11%,6%,1,3,18,102%
-banditmerc_outfit,Bandit,Fenced LC Suit,7,35087,L,N,20,17%,10%,6%,6%,6%,4%,16%,6%,21%,2,3,18.200000762939,101%
-isg_lcs_camo_outfit,UNISG,UNISG LC-C Suit,12,53390,L,N,30,17%,9%,6%,6%,6%,4%,16%,4%,21%,3,5,12.60000038147,95%
-bandit_novice_outfit_alt,Bandit,Armored Leather Jacket,4,6458,F,N,13,16%,9%,3%,4%,6%,2%,5%,6%,8%,1,1,9.1000003814697,108%
-cs_novice_outfit,Clear Sky,Clear Sky Leather Jacket,5,6534,F,N,8,4%,7%,8%,8%,13%,6%,4%,11%,4%,1,1,12,108%
-nbc_merc_outfit,Mercenary,Load-bearing 'Twilight' Tactical Suit,7,47987,L,N,25,18%,8%,11%,13%,21%,7%,6%,21%,13%,3,3,25.5,109%
-nbc_outfit,Free Stalkers,Tactical Stalker Suit,6,89789,L,N,21,14%,10%,11%,11%,21%,11%,6%,25%,11%,4,5,40.799999237061,109%
-nbc_freedom_outfit,Freedom,Keeper of Freedom,7,84780,L,N,25,16%,7%,11%,11%,27%,9%,7%,21%,11%,3,5,34,108%
-stalker_autumn_outfit,Free Stalkers,"Autumn" Stalker Suit,8,55420,L,N,19,14%,12%,35%,15%,6%,18%,16%,31%,11%,3,4,14.39999961853,99%
-stalker_outfit,Free Stalkers,"Sunrise" Stalker Suit,8,59933,L,N,17,13%,12%,35%,15%,6%,15%,16%,31%,11%,3,4,24,101%
-trenchcoat_outfit,Unknown,Overcoat,8,20497,F,N,14,9%,14%,11%,11%,16%,7%,4%,11%,6%,2,2,18,103%
-dolg_novice_outfit,Duty,Duty Leather Jacket,4,7494,F,N,8,4%,14%,8%,7%,11%,5%,3%,8%,4%,1,1,12,109%
-dolg_red_outfit,Duty,PS5-M Hunter Suit,8,30570,L,N,23,16%,18%,8%,26%,16%,7%,5%,21%,16%,2,2,16,107%
-novice_outfit_tourist,Free Stalkers,Tourist’s Jacket,4,14116,F,N,7,4%,8%,6%,7%,11%,6%,4%,13%,4%,2,2,14.39999961853,108%
-monolith_nbc_outfit,Monolith,Tactical Monolith Suit,7,81756,L,N,23,18%,9%,11%,11%,21%,7%,8%,21%,11%,3,5,30.60000038147,108%
-svoboda_novice_outfit,Freedom,Freedom Leather Jacket,5,6581,F,N,9,4%,7%,6%,7%,14%,5%,5%,11%,4%,1,1,12,107%
+~, Ui_st_community, Pda_encyclopedia_name, St_prop_weight, St_upgr_cost, Ui_mm_repair, Ui_mcm_menu_exo, Ui_inv_ap_res, Ui_inv_outfit_fire_wound_protection, Ui_inv_outfit_wound_protection, Ui_inv_outfit_burn_protection, Ui_inv_outfit_shock_protection, Ui_inv_outfit_chemical_burn_protection, Ui_inv_outfit_radiation_protection, Ui_inv_outfit_telepatic_protection, Ui_inv_outfit_strike_protection, Ui_inv_outfit_explosion_protection, Ui_inv_outfit_artefact_count, St_data_export_outfit_artefact_count_max, Ui_inv_outfit_additional_weight, Ui_inv_outfit_speed
+army_outfit,army,army_outfit_name,12,8167,F,N,21,17%,5%,2%,3%,3%,2%,11%,9%,19%,1,1,10.800000190735,97%
+novice_outfit_camo,st_data_export_unknown,novice_outfit_camo_name,8,11766,F,N,10,7%,7%,6%,6%,9%,3%,4%,8%,4%,2,2,15,106%
+bandit_novice_outfit,bandit,bandit_novice_outfit_name,3,7065,F,N,6,4%,7%,6%,7%,11%,4%,4%,11%,4%,1,1,15.60000038147,111%
+cs_light_outfit,csky,csky_light_outfit_name,9,40148,L,N,19,13%,9%,42%,19%,7%,16%,16%,26%,11%,2,3,12,101%
+nbc_dolg_outfit,dolg,nbc_dolg_outfit_name,6,51662,L,N,23,16%,12%,13%,11%,21%,9%,5%,16%,11%,3,3,34,110%
+merc_fighter_outfit,killer,merc_fighter_outfit_name,16,43872,L,N,30,21%,9%,6%,8%,6%,3%,16%,6%,25%,2,4,10.5,96%
+stalker_predator_outfit,stalker,stalker_predator_outfit_name,8,77990,L,N,21,14%,18%,6%,26%,16%,9%,6%,31%,16%,4,5,19.200000762939,106%
+redline_novice_outfit,st_data_export_unknown,redline_novice_outfit_name,5,12656,F,N,8,4%,7%,6%,7%,11%,5%,4%,11%,4%,2,2,10,112%
+stalker_salamander_outfit,stalker,stalker_salamander_outfit_name,8,62115,L,N,22,14%,18%,11%,36%,11%,9%,16%,18%,26%,3,4,15.60000038147,101%
+cs_nbc_outfit,csky,cs_nbc_outfit_name,7,67798,L,N,23,14%,8%,12%,13%,25%,11%,6%,21%,11%,3,4,34,109%
+bandit_nbc_outfit,bandit,bandit_nbc_outfit_name,4,90972,L,N,18,14%,9%,11%,11%,21%,8%,6%,21%,11%,3,5,44.200000762939,112%
+novice_outfit,st_data_export_unknown,novice_outfit_name,5,7290,F,N,8,4%,7%,8%,9%,13%,8%,6%,13%,6%,1,1,12,108%
+merc_scout_outfit,killer,merc_scout_outfit_name,12,47600,L,N,26,18%,9%,6%,8%,6%,5%,13%,6%,25%,2,4,18,100%
+merc_wolven_outfit,killer,merc_wolven_outfit_name,9,77833,L,N,26,18%,14%,11%,46%,11%,5%,16%,16%,31%,3,5,9.75,101%
+travel_outfit,stalker,travel_outfit_name,5,92174,L,N,15,10%,15%,16%,15%,25%,18%,11%,13%,6%,6,6,24,111%
+cs_light_novice_outfit,csky,csky_light_novice_outfit_name,9,31058,F,N,17,7%,10%,31%,13%,5%,11%,9%,16%,11%,2,3,13,101%
+ghillie_outfit,st_data_export_unknown,ghillie_outfit_name,5,67100,L,N,17,12%,20%,12%,13%,21%,7%,9%,8%,6%,4,5,14,110%
+trenchcoat_freedom_brown_outfit,freedom,trenchcoat_freedom_brown_outfit_name,8,30447,F,N,15,9%,12%,11%,11%,21%,7%,5%,11%,6%,1,3,18,102%
+banditmerc_outfit,bandit,banditmerc_outfit_name,7,35087,L,N,20,17%,10%,6%,6%,6%,4%,16%,6%,21%,2,3,18.200000762939,101%
+isg_lcs_camo_outfit,isg,isg_lcs_camo_outfit_name,12,53390,L,N,30,17%,9%,6%,6%,6%,4%,16%,4%,21%,3,5,12.60000038147,95%
+bandit_novice_outfit_alt,bandit,bandit_novice_alt_outfit_name,4,6458,F,N,13,16%,9%,3%,4%,6%,2%,5%,6%,8%,1,1,9.1000003814697,108%
+cs_novice_outfit,csky,csky_novice_outfit_name,5,6534,F,N,8,4%,7%,8%,8%,13%,6%,4%,11%,4%,1,1,12,108%
+nbc_merc_outfit,killer,nbc_merc_outfit_name,7,47987,L,N,25,18%,8%,11%,13%,21%,7%,6%,21%,13%,3,3,25.5,109%
+nbc_outfit,stalker,nbc_outfit_name,6,89789,L,N,21,14%,10%,11%,11%,21%,11%,6%,25%,11%,4,5,40.799999237061,109%
+nbc_freedom_outfit,freedom,nbc_freedom_outfit_name,7,84780,L,N,25,16%,7%,11%,11%,27%,9%,7%,21%,11%,3,5,34,108%
+stalker_autumn_outfit,stalker,stalker_autumn_outfit_name,8,55420,L,N,19,14%,12%,35%,15%,6%,18%,16%,31%,11%,3,4,14.39999961853,99%
+stalker_outfit,stalker,stalker_outfit_name,8,59933,L,N,17,13%,12%,35%,15%,6%,15%,16%,31%,11%,3,4,24,101%
+trenchcoat_outfit,st_data_export_unknown,trenchcoat_outfit_name,8,20497,F,N,14,9%,14%,11%,11%,16%,7%,4%,11%,6%,2,2,18,103%
+dolg_novice_outfit,dolg,dolg_novice_outfit_name,4,7494,F,N,8,4%,14%,8%,7%,11%,5%,3%,8%,4%,1,1,12,109%
+dolg_red_outfit,dolg,dolg_red_outfit_name,8,30570,L,N,23,16%,18%,8%,26%,16%,7%,5%,21%,16%,2,2,16,107%
+novice_outfit_tourist,stalker,novice_outfit_tourist_name,4,14116,F,N,7,4%,8%,6%,7%,11%,6%,4%,13%,4%,2,2,14.39999961853,108%
+monolith_nbc_outfit,monolith,monolith_nbc_outfit_name,7,81756,L,N,23,18%,9%,11%,11%,21%,7%,8%,21%,11%,3,5,30.60000038147,108%
+svoboda_novice_outfit,freedom,svoboda_novice_outfit_name,5,6581,F,N,9,4%,7%,6%,7%,14%,5%,5%,11%,4%,1,1,12,107%

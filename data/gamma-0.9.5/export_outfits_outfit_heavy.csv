@@ -1,71 +1,71 @@
-~, Faction, Name, Weight, Cost, Repair, Powered Exos, BR Class, Ballistic Res, Rupture Res, Burn Res, Electrical Res, Chemical Res, Radiation Res, Psychic Res, Impact Res, Explosive Res, Belt Slots, Maximum belt slots, Weight Carried, Movespeed
-dolg_pantsir_outfit,Duty,PSZ-7p Shell Armor,22,78078,H,N,48,36%,29%,8%,6%,9%,4%,21%,8%,51%,2,3,42,104%
-hybrid_outfit,Unknown,Hybrid Armored Suit,28,126910,H,N,46,35%,26%,35%,45%,16%,29%,11%,41%,26%,3,5,28,101%
-freedom_exo_vineleaf_outfit,Freedom,Hero of Freedom,38,107536,H,N,64,45%,30%,21%,21%,21%,3%,25%,21%,36%,3,4,42,94%
-light_loner_outfit,Free Stalkers,Interceptor Body Armor,18,134285,H,N,31,26%,55%,6%,36%,21%,19%,6%,49%,16%,3,5,24,107%
-merc_combat_scientific_outfit,Mercenary,Mercenary Pathfinder,28,130095,H,N,51,40%,24%,35%,59%,16%,23%,11%,41%,31%,3,5,21,98%
-light_isg_outfit,UNISG,UNISG IBAz Suit,24,93184,H,N,41,30%,46%,6%,36%,21%,16%,6%,25%,16%,2,4,18,104%
-greh_trenchcoat_outfit,Sin,Sin Heavy Overcoat,21,101504,H,N,30,28%,20%,25%,26%,35%,24%,6%,26%,6%,5,5,24.799999237061,104%
-dolg_heavy_proto_exo_outfit,Duty,PSZ-9d Exoskeleton,45,176580,E,Y,55,42%,30%,8%,3%,9%,4%,25%,8%,61%,3,5,96,109%
-exo_dolg_outfit,Duty,PSZ-10d Duty Battlesuit,25,80520,H,N,51,38%,48%,47%,3%,16%,17%,21%,4%,36%,2,3,28,97%
-military_sky_outfit,Clear Sky,CS-4b Armored Suit,28,72114,H,N,52,35%,20%,6%,7%,11%,5%,26%,11%,51%,2,3,42,101%
-monolith_exolight_outfit,Monolith,Monolith Exosuit,35,78246,H,N,55,46%,34%,35%,3%,16%,9%,34%,6%,36%,2,3,45,92%
-exo_dolg_wood_outfit,Duty,PSZ-10l Forest Battlesuit,28,115444,H,N,53,40%,48%,34%,3%,16%,9%,21%,13%,36%,3,4,50,95%
-exo_dolg_red_outfit,Duty,PSZ-10d Venator Battlesuit,31,115995,H,N,50,35%,35%,52%,21%,25%,11%,29%,16%,31%,3,4,55,95%
-freedom_nosorog_outfit,Freedom,Champion of Freedom,85,174585,E,Y,69,46%,28%,45%,3%,14%,11%,43%,6%,41%,3,5,115,103%
-isg_proto_exo_outfit,UNISG,UNISG Tactical Exoskeleton,48,176841,H,Y,36,25%,23%,21%,13%,35%,16%,15%,9%,11%,4,7,86.400001525879,105%
-bandit_exolight_outfit,Bandit,Looted Exosuit,24,87336,H,N,44,42%,34%,35%,3%,16%,10%,26%,6%,36%,2,3,65,96%
-dolg_specops_red_outfit,Duty,PS5-B2 Veteran Battlesuit,21,109450,H,N,42,38%,49%,8%,41%,16%,7%,5%,32%,21%,2,4,28,104%
-exolight_outfit,Free Stalkers,Exosuit,31,109647,H,N,50,38%,36%,35%,3%,16%,13%,26%,7%,36%,3,4,60,93%
-cs_heavy_outfit,Clear Sky,CS-3b Body Armor,24,74933,H,N,36,31%,26%,48%,37%,13%,23%,41%,21%,21%,2,3,28,103%
-dolg_heavy_redline_outfit,Duty,PSZ-9kl Command Armor,25,102898,H,N,52,40%,27%,8%,6%,9%,4%,21%,8%,51%,3,4,42,102%
-stalker_proto_exo_outfit,Free Stalkers,"Sunrise" Exoskeleton,36,224759,H,Y,27,23%,27%,21%,13%,35%,19%,15%,18%,11%,5,7,115.19999694824,108%
-greh_exo_outfit,Sin,Vyraj Power Armor,70,183961,E,Y,56,42%,24%,41%,3%,11%,11%,31%,6%,39%,5,7,76.800003051758,101%
-light_freedom_outfit,Freedom,Defender of Freedom,20,97944,H,N,37,30%,40%,6%,36%,27%,16%,7%,41%,16%,2,4,20,106%
-svoboda_exo_outfit,Freedom,Paragon of Freedom,70,160395,E,Y,65,45%,27%,41%,3%,14%,11%,37%,6%,39%,3,5,96,102%
-svoboda_light_proto_exo_outfit,Freedom,Wind of Freedom Exoskeleton,40,200732,H,Y,33,25%,19%,21%,13%,46%,16%,18%,16%,11%,4,7,96,107%
-merc_exolight_outfit,Mercenary,Mercenary Exosuit,35,77213,H,N,61,46%,30%,35%,4%,16%,9%,26%,6%,43%,2,3,37.5,93%
-monolith_trenchcoat_outfit,Monolith,Monolith Overcoat,21,115159,H,N,32,33%,28%,25%,26%,35%,19%,8%,26%,6%,3,5,27.89999961853,105%
-isg_exo_outfit,UNISG,UNISG Exoskeleton,84,144300,E,Y,71,45%,30%,41%,3%,11%,11%,31%,4%,39%,3,5,86.400001525879,100%
-exo_wood_outfit,Unknown,Woodland Exosuit,35,78678,H,N,55,42%,34%,35%,3%,16%,11%,26%,6%,36%,2,3,50,93%
-military_exolight_outfit,Military,Military Stalker Exosuit,42,53636,H,N,61,50%,40%,29%,3%,13%,11%,21%,6%,43%,1,2,45,92%
-exo_dolg_urban_outfit,Duty,PSZ-10g Urban Battlesuit,40,98417,H,N,60,47%,45%,47%,3%,16%,17%,25%,4%,41%,2,3,75,93%
-merc_nighthunter_outfit,Mercenary,Mercenary STS-N Body Armor,23,73194,H,N,53,41%,24%,35%,33%,6%,9%,21%,11%,19%,2,3,20.25,103%
-renegade_exo_outfit,Renegade,Renegade Exoskeleton,70,102279,E,Y,65,49%,36%,41%,3%,11%,11%,31%,6%,39%,1,3,96,103%
-monolith_proto_exo_outfit,Monolith,X-18 Exoskeleton,40,190695,H,Y,30,28%,25%,21%,13%,35%,13%,19%,16%,11%,4,7,86.400001525879,107%
-ecolog_proto_exo_outfit,Ecologist,SSP-99M Exoskeleton,32,206010,H,Y,24,20%,27%,24%,15%,42%,19%,18%,18%,9%,5,7,96,108%
-isg_nosorog_outfit,UNISG,UNISG Nosorog,102,123927,E,Y,76,46%,32%,45%,3%,11%,11%,36%,4%,41%,2,4,103.5,101%
-light_dolg_outfit,Duty,IBAz Universal Protection Suit,18,109080,H,N,34,30%,60%,8%,36%,21%,16%,5%,32%,16%,2,4,20,108%
-dolg_nosorog_outfit,Duty,PSZ-10d Nosorog,76,189919,E,Y,63,46%,42%,59%,3%,11%,11%,29%,4%,41%,3,5,115,105%
-dolg_heavy_outfit,Duty,PSZ-9d Body Armor,25,77173,H,N,52,40%,27%,8%,6%,9%,4%,21%,8%,51%,2,3,42,102%
-ecolog_exo_outfit,Ecologist,Scientific Exoskeleton,56,192198,E,Y,47,35%,36%,48%,3%,13%,13%,37%,7%,31%,4,6,96,103%
-military_exo_outfit,Military,Military Stalker Exoskeleton,84,123260,E,Y,65,54%,40%,32%,3%,9%,11%,25%,6%,47%,2,4,86.400001525879,101%
-military_proto_exo_outfit,Military,Skat-9 Exoskeleton,60,132330,E,Y,61,50%,30%,4%,3%,7%,4%,25%,9%,73%,2,4,86.400001525879,106%
-isg_exolight_outfit,UNISG,UNISG Exosuit,42,74250,H,N,66,42%,30%,35%,3%,16%,11%,26%,4%,36%,2,3,45,90%
-bandit_exo_outfit,Bandit,Stolen Exoskeleton,49,155905,E,Y,47,45%,34%,41%,3%,11%,10%,31%,6%,39%,2,4,124.80000305176,106%
-dolg_exo_outfit,Duty,PSZ-10d Exoskeleton,63,174200,E,Y,59,45%,40%,52%,3%,11%,11%,25%,4%,39%,3,5,96,104%
-light_merc_outfit,Mercenary,Mercenary IBAz Suit,20,101650,H,N,37,33%,46%,6%,46%,21%,13%,6%,41%,19%,2,4,15,107%
-military_monolit_outfit,Monolith,Monolith Skat-9 Armored Suit,28,74310,H,N,52,44%,23%,6%,6%,9%,3%,34%,11%,51%,2,3,37.799999237061,100%
-military_freedom_outfit,Freedom,Liberated Skat-9 Armored Suit,28,74850,H,N,57,40%,18%,6%,6%,11%,4%,31%,11%,51%,2,3,42,100%
-military_merc_outfit,Mercenary,Mercenary Skat-9 Armored Suit,28,74159,H,N,57,44%,20%,6%,8%,9%,3%,26%,11%,61%,2,3,31.5,101%
-exo_merc_urban_outfit,Mercenary,Mercenary Urban Exosuit,45,87872,H,N,66,52%,34%,35%,4%,16%,13%,31%,6%,49%,2,3,56.25,92%
-cs_scientific_outfit_good,Clear Sky,CS-4a Pathfinder,28,129360,H,N,46,33%,24%,42%,54%,19%,35%,11%,41%,26%,3,5,28,98%
-monolith_nosorog_outfit,Monolith,Monolith Nosorog,85,170079,E,Y,63,51%,35%,45%,3%,11%,9%,47%,6%,41%,3,5,103.5,103%
-cs_stalker_proto_exo_outfit,Clear Sky,CS-2b Exoskeleton,40,172368,H,Y,30,23%,23%,24%,15%,42%,19%,15%,16%,11%,4,6,96,108%
-military_bandit_outfit,Bandit,Looted Skat-9 Armored Suit,19,81432,H,N,42,40%,23%,6%,6%,9%,4%,26%,11%,51%,2,3,54.599998474121,104%
-merc_exo_outfit,Mercenary,Mercenary Exoskeleton,70,119274,E,Y,65,49%,30%,41%,4%,11%,9%,31%,6%,47%,2,4,72,103%
-cs_exolight_outfit,Clear Sky,CS-5 Exosuit,35,103230,H,N,55,38%,30%,42%,3%,19%,13%,26%,6%,36%,3,4,50,93%
-dolg_proto_exo_outfit,Duty,PS5-M Exoskeleton,36,151238,H,Y,30,25%,29%,26%,13%,35%,16%,12%,13%,11%,4,5,96,109%
-merc_ace_outfit,Mercenary,Mercenary ACE Scientific Suit,26,130560,H,N,46,38%,24%,45%,59%,31%,27%,11%,26%,13%,4,6,21,97%
-monolith_exo_outfit,Monolith,Monolith Exoskeleton,70,156366,E,Y,59,49%,34%,41%,3%,11%,9%,40%,6%,39%,3,5,86.400001525879,102%
-exo_outfit,Free Stalkers,Exoskeleton,63,176027,E,Y,53,40%,36%,41%,3%,11%,13%,31%,7%,39%,3,5,115.19999694824,103%
-light_monolit_outfit,Monolith,Monolith IBAz Assault Suit,20,101336,H,N,34,33%,51%,6%,36%,21%,13%,8%,41%,16%,2,4,18,106%
-exo_merc_grass_outfit,Mercenary,Mercenary Grassland Exosuit,28,88368,H,N,56,41%,30%,21%,4%,21%,4%,21%,6%,35%,3,4,18.75,96%
-cs_exo_outfit,Clear Sky,CS-5 Exoskeleton,70,158105,E,Y,59,40%,30%,48%,3%,13%,13%,31%,6%,39%,3,5,96,103%
-svoboda_exolight_outfit,Freedom,Warrior of Freedom,35,78798,H,N,61,42%,27%,35%,3%,21%,11%,31%,6%,36%,2,3,50,92%
-light_voen_outfit,Military,Military Stalker IBAz Suit,24,78908,H,N,37,35%,60%,4%,29%,17%,16%,5%,36%,19%,1,3,18,105%
-army_nosorog_outfit,Military,Military Stalker Nosorog,102,130866,E,Y,69,56%,42%,37%,3%,9%,11%,29%,6%,49%,2,4,103.5,102%
-merc_nosorog_outfit,Mercenary,Mercenary Nosorog,85,160095,E,Y,69,51%,32%,45%,4%,11%,9%,36%,6%,49%,3,5,86.25,104%
-military_outfit,Military,Skat-9 Armored Suit,33,50549,H,N,57,47%,27%,4%,5%,7%,4%,21%,9%,61%,1,2,37.799999237061,99%
-exo_merc_wood_outfit,Mercenary,Mercenary Woodland Exosuit,32,104810,H,N,58,44%,35%,25%,4%,16%,7%,26%,16%,43%,3,4,37.5,94%
-dolg_exolight_outfit,Duty,PSZ-10d Duty Battlesuit,31,84671,H,N,55,42%,40%,47%,3%,16%,11%,21%,4%,36%,2,3,50,94%
+~, Ui_st_community, Pda_encyclopedia_name, St_prop_weight, St_upgr_cost, Ui_mm_repair, Ui_mcm_menu_exo, Ui_inv_ap_res, Ui_inv_outfit_fire_wound_protection, Ui_inv_outfit_wound_protection, Ui_inv_outfit_burn_protection, Ui_inv_outfit_shock_protection, Ui_inv_outfit_chemical_burn_protection, Ui_inv_outfit_radiation_protection, Ui_inv_outfit_telepatic_protection, Ui_inv_outfit_strike_protection, Ui_inv_outfit_explosion_protection, Ui_inv_outfit_artefact_count, St_data_export_outfit_artefact_count_max, Ui_inv_outfit_additional_weight, Ui_inv_outfit_speed
+dolg_pantsir_outfit,dolg,dolg_pantsir_outfit_name,22,78078,H,N,48,36%,29%,8%,6%,9%,4%,21%,8%,51%,2,3,42,104%
+hybrid_outfit,st_data_export_unknown,hybrid_outfit_name,28,126910,H,N,46,35%,26%,35%,45%,16%,29%,11%,41%,26%,3,5,28,101%
+freedom_exo_vineleaf_outfit,freedom,freedom_exo_vineleaf_outfit_name,38,107536,H,N,64,45%,30%,21%,21%,21%,3%,25%,21%,36%,3,4,42,94%
+light_loner_outfit,stalker,light_loner_outfit_name,18,134285,H,N,31,26%,55%,6%,36%,21%,19%,6%,49%,16%,3,5,24,107%
+merc_combat_scientific_outfit,killer,merc_combat_scientific_outfit_name,28,130095,H,N,51,40%,24%,35%,59%,16%,23%,11%,41%,31%,3,5,21,98%
+light_isg_outfit,isg,light_isg_outfit_name,24,93184,H,N,41,30%,46%,6%,36%,21%,16%,6%,25%,16%,2,4,18,104%
+greh_trenchcoat_outfit,greh,greh_trenchcoat_outfit_name,21,101504,H,N,30,28%,20%,25%,26%,35%,24%,6%,26%,6%,5,5,24.799999237061,104%
+dolg_heavy_proto_exo_outfit,dolg,dolg_heavy_proto_exo_outfit_name,45,176580,E,Y,55,42%,30%,8%,3%,9%,4%,25%,8%,61%,3,5,96,109%
+exo_dolg_outfit,dolg,exo_dolg_outfit_name,25,80520,H,N,51,38%,48%,47%,3%,16%,17%,21%,4%,36%,2,3,28,97%
+military_sky_outfit,csky,military_sky_outfit_name,28,72114,H,N,52,35%,20%,6%,7%,11%,5%,26%,11%,51%,2,3,42,101%
+monolith_exolight_outfit,monolith,monolith_exolight_outfit_name,35,78246,H,N,55,46%,34%,35%,3%,16%,9%,34%,6%,36%,2,3,45,92%
+exo_dolg_wood_outfit,dolg,exo_dolg_wood_outfit_name,28,115444,H,N,53,40%,48%,34%,3%,16%,9%,21%,13%,36%,3,4,50,95%
+exo_dolg_red_outfit,dolg,exo_dolg_red_outfit_name,31,115995,H,N,50,35%,35%,52%,21%,25%,11%,29%,16%,31%,3,4,55,95%
+freedom_nosorog_outfit,freedom,freedom_nosorog_outfit_name,85,174585,E,Y,69,46%,28%,45%,3%,14%,11%,43%,6%,41%,3,5,115,103%
+isg_proto_exo_outfit,isg,isg_proto_exo_outfit_name,48,176841,H,Y,36,25%,23%,21%,13%,35%,16%,15%,9%,11%,4,7,86.400001525879,105%
+bandit_exolight_outfit,bandit,bandit_exolight_outfit_name,24,87336,H,N,44,42%,34%,35%,3%,16%,10%,26%,6%,36%,2,3,65,96%
+dolg_specops_red_outfit,dolg,dolg_specops_red_outfit_name,21,109450,H,N,42,38%,49%,8%,41%,16%,7%,5%,32%,21%,2,4,28,104%
+exolight_outfit,stalker,exolight_outfit_name,31,109647,H,N,50,38%,36%,35%,3%,16%,13%,26%,7%,36%,3,4,60,93%
+cs_heavy_outfit,csky,csky_heavy_outfit_name,24,74933,H,N,36,31%,26%,48%,37%,13%,23%,41%,21%,21%,2,3,28,103%
+dolg_heavy_redline_outfit,dolg,dolg_heavy_redline_outfit_name,25,102898,H,N,52,40%,27%,8%,6%,9%,4%,21%,8%,51%,3,4,42,102%
+stalker_proto_exo_outfit,stalker,stalker_proto_exo_outfit_name,36,224759,H,Y,27,23%,27%,21%,13%,35%,19%,15%,18%,11%,5,7,115.19999694824,108%
+greh_exo_outfit,greh,greh_exo_outfit_name,70,183961,E,Y,56,42%,24%,41%,3%,11%,11%,31%,6%,39%,5,7,76.800003051758,101%
+light_freedom_outfit,freedom,light_freedom_outfit_name,20,97944,H,N,37,30%,40%,6%,36%,27%,16%,7%,41%,16%,2,4,20,106%
+svoboda_exo_outfit,freedom,svoboda_exo_outfit_name,70,160395,E,Y,65,45%,27%,41%,3%,14%,11%,37%,6%,39%,3,5,96,102%
+svoboda_light_proto_exo_outfit,freedom,svoboda_light_proto_exo_outfit_name,40,200732,H,Y,33,25%,19%,21%,13%,46%,16%,18%,16%,11%,4,7,96,107%
+merc_exolight_outfit,killer,merc_exolight_outfit_name,35,77213,H,N,61,46%,30%,35%,4%,16%,9%,26%,6%,43%,2,3,37.5,93%
+monolith_trenchcoat_outfit,monolith,monolith_trenchcoat_outfit_name,21,115159,H,N,32,33%,28%,25%,26%,35%,19%,8%,26%,6%,3,5,27.89999961853,105%
+isg_exo_outfit,isg,isg_exo_outfit_name,84,144300,E,Y,71,45%,30%,41%,3%,11%,11%,31%,4%,39%,3,5,86.400001525879,100%
+exo_wood_outfit,st_data_export_unknown,exo_wood_outfit_name,35,78678,H,N,55,42%,34%,35%,3%,16%,11%,26%,6%,36%,2,3,50,93%
+military_exolight_outfit,army,military_exolight_outfit_name,42,53636,H,N,61,50%,40%,29%,3%,13%,11%,21%,6%,43%,1,2,45,92%
+exo_dolg_urban_outfit,dolg,exo_dolg_urban_outfit_name,40,98417,H,N,60,47%,45%,47%,3%,16%,17%,25%,4%,41%,2,3,75,93%
+merc_nighthunter_outfit,killer,merc_nighthunter_outfit_name,23,73194,H,N,53,41%,24%,35%,33%,6%,9%,21%,11%,19%,2,3,20.25,103%
+renegade_exo_outfit,renegade,renegade_exo_outfit_name,70,102279,E,Y,65,49%,36%,41%,3%,11%,11%,31%,6%,39%,1,3,96,103%
+monolith_proto_exo_outfit,monolith,monolith_proto_exo_outfit_name,40,190695,H,Y,30,28%,25%,21%,13%,35%,13%,19%,16%,11%,4,7,86.400001525879,107%
+ecolog_proto_exo_outfit,ecolog,ecolog_proto_exo_outfit_name,32,206010,H,Y,24,20%,27%,24%,15%,42%,19%,18%,18%,9%,5,7,96,108%
+isg_nosorog_outfit,isg,isg_nosorog_outfit_name,102,123927,E,Y,76,46%,32%,45%,3%,11%,11%,36%,4%,41%,2,4,103.5,101%
+light_dolg_outfit,dolg,light_dolg_outfit_name,18,109080,H,N,34,30%,60%,8%,36%,21%,16%,5%,32%,16%,2,4,20,108%
+dolg_nosorog_outfit,dolg,dolg_nosorog_outfit_name,76,189919,E,Y,63,46%,42%,59%,3%,11%,11%,29%,4%,41%,3,5,115,105%
+dolg_heavy_outfit,dolg,dolg_heavy_outfit_name,25,77173,H,N,52,40%,27%,8%,6%,9%,4%,21%,8%,51%,2,3,42,102%
+ecolog_exo_outfit,ecolog,ecolog_exo_outfit_name,56,192198,E,Y,47,35%,36%,48%,3%,13%,13%,37%,7%,31%,4,6,96,103%
+military_exo_outfit,army,military_exo_outfit_name,84,123260,E,Y,65,54%,40%,32%,3%,9%,11%,25%,6%,47%,2,4,86.400001525879,101%
+military_proto_exo_outfit,army,military_proto_exo_outfit_name,60,132330,E,Y,61,50%,30%,4%,3%,7%,4%,25%,9%,73%,2,4,86.400001525879,106%
+isg_exolight_outfit,isg,isg_exolight_outfit_name,42,74250,H,N,66,42%,30%,35%,3%,16%,11%,26%,4%,36%,2,3,45,90%
+bandit_exo_outfit,bandit,bandit_exo_outfit_name,49,155905,E,Y,47,45%,34%,41%,3%,11%,10%,31%,6%,39%,2,4,124.80000305176,106%
+dolg_exo_outfit,dolg,dolg_exo_outfit_name,63,174200,E,Y,59,45%,40%,52%,3%,11%,11%,25%,4%,39%,3,5,96,104%
+light_merc_outfit,killer,light_merc_outfit_name,20,101650,H,N,37,33%,46%,6%,46%,21%,13%,6%,41%,19%,2,4,15,107%
+military_monolit_outfit,monolith,military_monolit_outfit_name,28,74310,H,N,52,44%,23%,6%,6%,9%,3%,34%,11%,51%,2,3,37.799999237061,100%
+military_freedom_outfit,freedom,military_freedom_outfit_name,28,74850,H,N,57,40%,18%,6%,6%,11%,4%,31%,11%,51%,2,3,42,100%
+military_merc_outfit,killer,military_merc_outfit_name,28,74159,H,N,57,44%,20%,6%,8%,9%,3%,26%,11%,61%,2,3,31.5,101%
+exo_merc_urban_outfit,killer,exo_merc_urban_outfit_name,45,87872,H,N,66,52%,34%,35%,4%,16%,13%,31%,6%,49%,2,3,56.25,92%
+cs_scientific_outfit_good,csky,cs_scientific_outfit_good_name,28,129360,H,N,46,33%,24%,42%,54%,19%,35%,11%,41%,26%,3,5,28,98%
+monolith_nosorog_outfit,monolith,monolith_nosorog_outfit_name,85,170079,E,Y,63,51%,35%,45%,3%,11%,9%,47%,6%,41%,3,5,103.5,103%
+cs_stalker_proto_exo_outfit,csky,cs_stalker_proto_exo_outfit_name,40,172368,H,Y,30,23%,23%,24%,15%,42%,19%,15%,16%,11%,4,6,96,108%
+military_bandit_outfit,bandit,military_bandit_outfit_name,19,81432,H,N,42,40%,23%,6%,6%,9%,4%,26%,11%,51%,2,3,54.599998474121,104%
+merc_exo_outfit,killer,merc_exo_outfit_name,70,119274,E,Y,65,49%,30%,41%,4%,11%,9%,31%,6%,47%,2,4,72,103%
+cs_exolight_outfit,csky,cs_exolight_outfit_name,35,103230,H,N,55,38%,30%,42%,3%,19%,13%,26%,6%,36%,3,4,50,93%
+dolg_proto_exo_outfit,dolg,dolg_proto_exo_outfit_name,36,151238,H,Y,30,25%,29%,26%,13%,35%,16%,12%,13%,11%,4,5,96,109%
+merc_ace_outfit,killer,ace_outfit_name,26,130560,H,N,46,38%,24%,45%,59%,31%,27%,11%,26%,13%,4,6,21,97%
+monolith_exo_outfit,monolith,monolith_exo_outfit_name,70,156366,E,Y,59,49%,34%,41%,3%,11%,9%,40%,6%,39%,3,5,86.400001525879,102%
+exo_outfit,stalker,exo_outfit_name,63,176027,E,Y,53,40%,36%,41%,3%,11%,13%,31%,7%,39%,3,5,115.19999694824,103%
+light_monolit_outfit,monolith,light_monolit_outfit_name,20,101336,H,N,34,33%,51%,6%,36%,21%,13%,8%,41%,16%,2,4,18,106%
+exo_merc_grass_outfit,killer,exo_merc_grass_outfit_name,28,88368,H,N,56,41%,30%,21%,4%,21%,4%,21%,6%,35%,3,4,18.75,96%
+cs_exo_outfit,csky,cs_exo_outfit_name,70,158105,E,Y,59,40%,30%,48%,3%,13%,13%,31%,6%,39%,3,5,96,103%
+svoboda_exolight_outfit,freedom,svoboda_exolight_outfit_name,35,78798,H,N,61,42%,27%,35%,3%,21%,11%,31%,6%,36%,2,3,50,92%
+light_voen_outfit,army,light_voen_outfit_name,24,78908,H,N,37,35%,60%,4%,29%,17%,16%,5%,36%,19%,1,3,18,105%
+army_nosorog_outfit,army,army_nosorog_outfit_name,102,130866,E,Y,69,56%,42%,37%,3%,9%,11%,29%,6%,49%,2,4,103.5,102%
+merc_nosorog_outfit,killer,merc_nosorog_outfit_name,85,160095,E,Y,69,51%,32%,45%,4%,11%,9%,36%,6%,49%,3,5,86.25,104%
+military_outfit,army,military_outfit_name,33,50549,H,N,57,47%,27%,4%,5%,7%,4%,21%,9%,61%,1,2,37.799999237061,99%
+exo_merc_wood_outfit,killer,exo_merc_wood_outfit_name,32,104810,H,N,58,44%,35%,25%,4%,16%,7%,26%,16%,43%,3,4,37.5,94%
+dolg_exolight_outfit,dolg,dolg_exolight_outfit_name,31,84671,H,N,55,42%,40%,47%,3%,16%,11%,21%,4%,36%,2,3,50,94%

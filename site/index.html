@@ -121,6 +121,9 @@
                 <button :class="{ active: buildPlannerActive }" @click="openBuildPlanner()">
                     <span class="cat-label">{{ t('app_cat_build_planner') }}</span>
                 </button>
+                <!-- <button v-if="packs.length > 1" :class="{ active: versionCompareActive }" @click="openVersionCompare()">
+                    <span class="cat-label">{{ t('app_cat_version_compare') }}</span>
+                </button> -->
             </div>
         </div>
         <div class="sidebar-group">
@@ -148,7 +151,7 @@
                 <button
                     v-for="cat in group.categories"
                     :key="cat"
-                    :class="{ active: activeCategory === cat && !favoritesViewActive && !recentViewActive && !buildPlannerActive }"
+                    :class="{ active: activeCategory === cat && !favoritesViewActive && !recentViewActive && !buildPlannerActive && !versionCompareActive }"
                     @click="selectCategory(cat)"
                 ><span class="cat-label">{{ tCat(cat) }}</span> <span v-if="categoryCounts[cat]" class="cat-count">{{ categoryCounts[cat] }}</span></button>
             </div>
@@ -166,7 +169,7 @@
             <p class="loading-text">{{ t('app_label_loading') }}</p>
         </div>
         <div v-show="!loading" class="content-inner">
-            <div class="filter-bar" v-show="!buildPlannerActive">
+            <div class="filter-bar" v-show="!buildPlannerActive && !versionCompareActive">
                 <div class="filter-input-group" v-click-outside="closeFilterPanel">
                     <i class="filter-input-icon" data-lucide="search" width="14" height="14"></i>
                     <input
@@ -459,6 +462,67 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Version Compare view -->
+            <div v-if="versionCompareActive" class="version-compare-view">
+                <div class="version-compare-header">
+                    <div class="version-compare-picker">
+                        <span class="version-compare-pack">{{ activePack.name }}</span>
+                        <span class="diff-arrow">▶</span>
+                        <div v-if="packs.length > 1" class="compare-wrap" v-click-outside="closeCompareMenu">
+                            <button class="version-compare-pack-btn" @click.stop="compareMenuOpen = !compareMenuOpen">
+                                {{ crossPackId ? crossPackName : t('app_label_select_pack') }}
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="compare-menu" v-show="compareMenuOpen" @click.stop>
+                                <button v-for="p in crossPackOptions" :key="p.id" class="sort-menu-item" :class="{ active: crossPackId === p.id }" @click="pickComparePack(p.id)">
+                                    <span class="sort-menu-check">{{ crossPackId === p.id ? '\u2713' : '' }}</span>
+                                    <span>{{ p.name }}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <template v-if="versionCompareResults.length">
+                        <div class="filter-input-group">
+                            <svg class="filter-input-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                            <input type="text" v-model="versionCompareFilter" :placeholder="t('app_label_filter_placeholder')" class="filter-input">
+                        </div>
+                        <span class="version-compare-count">{{ versionCompareTotal }} {{ t('app_label_changes') }}</span>
+                        <span class="version-compare-spacer"></span>
+                        <div class="utility-group">
+                            <button class="copy-link-btn" :class="{ copied: copyLinkFeedback }" @click="copyLink()" v-tooltip="copyLinkFeedback ? t('app_label_copied') : t('app_label_copy_link')">
+                                <svg v-if="copyLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                            </button>
+                            <button class="copy-link-btn" @click="exportVersionCompare()" v-tooltip="t('app_label_download')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            </button>
+                        </div>
+                    </template>
+                </div>
+
+                <p v-if="versionCompareLoading" class="loading">{{ t('app_label_loading') }}</p>
+                <p v-else-if="!crossPackId" class="cross-pack-no-changes">{{ t('app_label_select_pack_prompt') }}</p>
+                <p v-else-if="!versionCompareResults.length" class="cross-pack-no-changes">{{ t('app_label_no_changes') }}</p>
+
+                <template v-else>
+                    <div class="version-compare-list">
+                        <template v-for="group in filteredVersionCompareResults" :key="group.category">
+                            <div v-for="item in group.items" :key="item.id" class="version-compare-item" @click="navigateToItem(item.id)">
+                                <span class="version-compare-cat">{{ t(singularCategory(group.category)) || tCat(group.category) }}</span>
+                                <span class="version-compare-name">{{ item.name }}</span>
+                                <span class="version-compare-changes">
+                                    <span v-for="d in item.diffs.slice(0, 2)" :key="d.key" class="version-compare-stat">
+                                        <span class="version-compare-stat-label">{{ headerLabel(d.key) }}</span>
+                                        <span class="diff-old">{{ formatValue(d.key, d.oldVal) }}</span><span class="diff-arrow">▶</span><span class="diff-new" :class="d.type === 'higher' ? 'diff-up' : 'diff-down'">{{ formatValue(d.key, d.newVal) }}</span>
+                                    </span>
+                                    <span v-if="item.diffs.length > 2" class="version-compare-more">+{{ item.diffs.length - 2 }} more</span>
+                                </span>
+                            </div>
+                        </template>
+                    </div>
+                </template>
             </div>
 
             <!-- Build Planner view -->
@@ -950,7 +1014,7 @@
                 </div>
             </div>
 
-            <div class="table-wrap" v-show="viewMode === 'table' && !favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !buildPlannerActive">
+            <div class="table-wrap" v-show="viewMode === 'table' && !favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !buildPlannerActive && !versionCompareActive">
                 <table class="item-table">
                     <thead>
                     <tr>
@@ -1025,7 +1089,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="tile-grid" v-show="(viewMode === 'tiles' || favoritesViewActive || recentViewActive) && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !buildPlannerActive">
+            <div class="tile-grid" v-show="(viewMode === 'tiles' || favoritesViewActive || recentViewActive) && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !buildPlannerActive && !versionCompareActive">
                 <div v-for="item in sortedItems" :key="item.id" class="tile-card" :class="{ 'tile-card-compact': favoritesViewActive || recentViewActive }" @click="navigateToItem(item.id)">
                     <div class="tile-card-header">
                         <span class="fav-icon" :class="{ favorited: isFavorited(item.id) }" @click.stop="toggleFavorite(item.id)">{{ isFavorited(item.id) ? '\u2605' : '\u2606' }}</span>
@@ -1151,9 +1215,9 @@
 <div class="modal-backdrop" v-if="modalOpen" @click.self="closeModal()">
     <button class="modal-nav modal-nav-prev" @click="navigateModal(-1)" v-tooltip="'&#8592;'">&lsaquo;</button>
     <button class="modal-nav modal-nav-next" @click="navigateModal(1)" v-tooltip="'&#8594;'">&rsaquo;</button>
+    <button class="modal-close" @click="closeModal()">&times;</button>
     <Transition name="modal" appear>
     <div class="modal" v-if="modalOpen">
-        <button class="modal-close" @click="closeModal()">&times;</button>
         <img v-if="modalItem && modalItem.ui_st_community && factionIcon(modalItem.ui_st_community)"
              :src="'img/' + factionIcon(modalItem.ui_st_community)"
              :alt="modalItem.ui_st_community"
@@ -1165,22 +1229,45 @@
 
             <div v-if="modalItem && !modalLoading">
                 <div class="modal-title-row">
-                    <span class="fav-icon modal-fav-icon" :class="{ favorited: isFavorited(modalItem.id) }" @click="toggleFavorite(modalItem.id)" v-tooltip="isFavorited(modalItem.id) ? t('app_tooltip_remove_fav') : t('app_tooltip_add_fav')">{{ isFavorited(modalItem.id) ? '\u2605' : '\u2606' }}</span>
-                    <span class="pin-icon modal-pin-icon" :class="{ pinned: isPinned(modalItem.id), 'pin-disabled': !isPinned(modalItem.id) && pinnedIds.length >= 5 }" @click="togglePin(modalItem.id)" v-tooltip="isPinned(modalItem.id) ? t('app_tooltip_unpin') : t('app_tooltip_pin')">&#x1F4CC;</span>
                     <h1 class="modal-title">{{ tName(modalItem) }}</h1>
                 </div>
                 <div class="item-meta">
-                    <span class="cat-badge">{{ tCat(modalCategory) }}</span>
-                    <button class="copy-id-btn" :class="{ copied: copyIdFeedback }" @click="copyItemId(modalItem.id)" v-tooltip="copyIdFeedback ? t('app_label_copied') : t('app_tooltip_copy_id')">
-                        <span class="copy-id-text">{{ copyIdFeedback ? t('app_label_copied') : modalItem.id }}</span>
-                        <svg v-if="copyIdFeedback" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <svg v-else xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                    </button>
-                    <button class="copy-id-btn" :class="{ copied: copyModalLinkFeedback }" @click="copyModalLink()">
-                        <span class="copy-id-text">{{ copyModalLinkFeedback ? t('app_label_copied') : t('app_label_copy_link') }}</span>
-                        <svg v-if="copyModalLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        <svg v-else xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                    </button>
+                    <span class="cat-badge">{{ t(singularCategory(modalCategory)) || tCat(modalCategory) }}</span>
+                    <span class="item-id">{{ modalItem.id }}</span>
+                    <div class="utility-group">
+                        <button class="copy-link-btn" :class="{ favorited: isFavorited(modalItem.id) }" @click="toggleFavorite(modalItem.id)" v-tooltip="isFavorited(modalItem.id) ? t('app_tooltip_remove_fav') : t('app_tooltip_add_fav')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" :fill="isFavorited(modalItem.id) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </button>
+                        <button class="copy-link-btn" :class="{ pinned: isPinned(modalItem.id), 'pin-disabled': !isPinned(modalItem.id) && pinnedIds.length >= 5 }" @click="togglePin(modalItem.id)" v-tooltip="isPinned(modalItem.id) ? t('app_tooltip_unpin') : t('app_tooltip_pin')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" :fill="isPinned(modalItem.id) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>
+                        </button>
+                        <button class="copy-link-btn" :class="{ copied: copyIdFeedback }" @click="copyItemId(modalItem.id)" v-tooltip="copyIdFeedback ? t('app_label_copied') : t('app_tooltip_copy_id')">
+                            <svg v-if="copyIdFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                        <button class="copy-link-btn" :class="{ copied: copyModalLinkFeedback }" @click="copyModalLink()" v-tooltip="copyModalLinkFeedback ? t('app_label_copied') : t('app_label_copy_link')">
+                            <svg v-if="copyModalLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </button>
+                    </div>
+                    <div v-if="packs.length > 1" class="compare-wrap" v-click-outside="closeCompareMenu">
+                        <button class="copy-link-btn" :class="{ active: crossPackId }" @click.stop="compareMenuOpen = !compareMenuOpen" v-tooltip="t('app_label_compare_with')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg>
+                        </button>
+                        <div class="compare-menu" v-show="compareMenuOpen" @click.stop>
+                            <button v-for="p in crossPackOptions" :key="p.id" class="sort-menu-item" :class="{ active: crossPackId === p.id }" @click="pickComparePack(p.id)">
+                                <span class="sort-menu-check">{{ crossPackId === p.id ? '\u2713' : '' }}</span>
+                                <span>{{ p.name }}</span>
+                            </button>
+                            <template v-if="crossPackId">
+                                <div class="sort-menu-divider"></div>
+                                <button class="sort-menu-item" @click="pickComparePack(null)">
+                                    <span class="sort-menu-check"></span>
+                                    <span>{{ t('app_label_clear') }}</span>
+                                </button>
+                            </template>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="modal-badges" v-if="modalItem.ui_st_community || modalItem['st_data_export_has_perk'] === 'Y' || modalItem['st_data_export_is_junk'] === 'Y' || modalItem['st_data_export_can_be_crafted'] === 'Y' || modalItem['ui_mcm_menu_exo'] === 'Y' || modalItem['st_data_export_can_be_cooked'] === 'Y' || modalItem['st_data_export_used_in_cooking'] === 'Y' || modalItem['st_data_export_used_in_crafting'] === 'Y' || modalItem['st_data_export_cuts_thick_skin'] === 'Y' || modalItem.hasNpcWeaponDrop === false || isUnusedAmmo(modalItem, modalCategory)">
@@ -1197,36 +1284,57 @@
                     <span v-if="modalItem['st_data_export_cuts_thick_skin'] === 'Y'" class="badge-flag badge-thick-skin">{{ t('app_badge_thick_skin') }}</span>
                 </div>
 
-                <div class="stat-grid">
-                    <div v-for="row in modalStatRows" :key="row.key" :class="row.isSection ? 'stat-section' : 'stat-row'">
-                        <template v-if="row.isSection">
-                            <span>{{ headerLabel(row.key) }}</span>
-                        </template>
-                        <template v-else-if="row.key === 'ui_mm_repair' && row.value">
-                            <span class="stat-label">{{ headerLabel(row.key) }}</span>
-                            <span class="badge" :style="displayStyle(row.key, row.value)">{{ displayLabel(row.key, row.value) }}</span>
-                        </template>
-                        <template v-else-if="(row.key === 'ui_ammo_types' || row.key === 'st_data_export_ammo_types_alt') && row.value">
-                            <span class="stat-label">{{ headerLabel(row.key) }}</span>
-                            <span class="stat-value ammo-variants">
-                                <span v-for="v in caliberVariantObjects(row.value)" :key="v.id || v.name" class="badge-ammo" :class="{ clickable: v.id }" @click="v.id && navigateToItem(v.id)">{{ shortAmmoName(tName(v)) }}</span>
+                <p v-if="modalItem.st_data_export_description" class="modal-description">{{ t(modalItem.st_data_export_description).replaceAll('\\n', ' ').trim() }}</p>
+
+                <div class="drop-sources">
+                    <h2>{{ t('app_label_stats') }}</h2>
+                    <div class="stat-grid">
+                        <div v-for="row in modalStatRows" :key="row.key" :class="row.isSection ? 'stat-section' : 'stat-row'">
+                            <template v-if="row.isSection">
+                                <span>{{ headerLabel(row.key) }}</span>
+                            </template>
+                            <template v-else-if="row.key === 'ui_mm_repair' && row.value">
+                                <span class="stat-label">{{ headerLabel(row.key) }}</span>
+                                <span class="badge" :style="displayStyle(row.key, row.value)">{{ displayLabel(row.key, row.value) }}</span>
+                            </template>
+                            <template v-else-if="(row.key === 'ui_ammo_types' || row.key === 'st_data_export_ammo_types_alt') && row.value">
+                                <span class="stat-label">{{ headerLabel(row.key) }}</span>
+                                <span class="stat-value ammo-variants">
+                                    <span v-for="v in caliberVariantObjects(row.value)" :key="v.id || v.name" class="badge-ammo" :class="{ clickable: v.id }" @click="v.id && navigateToItem(v.id)">{{ shortAmmoName(tName(v)) }}</span>
+                                </span>
+                            </template>
+                            <template v-else>
+                                <span class="stat-label" v-tooltip="row.key === '_malfunction_chance' ? t('app_tooltip_malfunction') : ''">{{ headerLabel(row.key) }}<svg v-if="row.key === '_malfunction_chance'" class="info-hint" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
+                                <span class="stat-value" :class="modalStatClass(row.key, row.value)" :style="modalStatStyle(row.key, row.value)">{{ formatValue(row.key, row.value) }}</span>
+                            </template>
+                        </div>
+                    </div>
+                    <div v-if="modalHealGroups.length > 0" class="stat-grid modal-heal-grid">
+                        <div v-for="hg in modalHealGroups" :key="hg.label" class="stat-row modal-heal-row">
+                            <span class="stat-label">{{ t(hg.label) }}</span>
+                            <span class="heal-parts">
+                                <span v-for="(f, i) in hg.fields" :key="f" class="heal-part" :class="{ 'heal-active': parseInt(modalItem[f]) > 0 }">
+                                    {{ hg.abbr[i] }}<span class="heal-dots"><span v-for="d in healDots(modalItem[f]).filled" :key="'f'+d" class="dot filled">&#x2022;</span><span v-for="d in healDots(modalItem[f]).empty" :key="'e'+d" class="dot empty">&#x2022;</span></span>
+                                </span>
                             </span>
-                        </template>
-                        <template v-else>
-                            <span class="stat-label" v-tooltip="row.key === '_malfunction_chance' ? t('app_tooltip_malfunction') : ''">{{ headerLabel(row.key) }}<svg v-if="row.key === '_malfunction_chance'" class="info-hint" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
-                            <span class="stat-value" :class="modalStatClass(row.key, row.value)" :style="modalStatStyle(row.key, row.value)">{{ formatValue(row.key, row.value) }}</span>
-                        </template>
+                        </div>
                     </div>
                 </div>
-                <div v-if="modalHealGroups.length > 0" class="stat-grid modal-heal-grid">
-                    <div v-for="hg in modalHealGroups" :key="hg.label" class="stat-row modal-heal-row">
-                        <span class="stat-label">{{ t(hg.label) }}</span>
-                        <span class="heal-parts">
-                            <span v-for="(f, i) in hg.fields" :key="f" class="heal-part" :class="{ 'heal-active': parseInt(modalItem[f]) > 0 }">
-                                {{ hg.abbr[i] }}<span class="heal-dots"><span v-for="d in healDots(modalItem[f]).filled" :key="'f'+d" class="dot filled">&#x2022;</span><span v-for="d in healDots(modalItem[f]).empty" :key="'e'+d" class="dot empty">&#x2022;</span></span>
-                            </span>
-                        </span>
+
+                <!-- Cross-pack changes -->
+                <div v-if="crossPackId && crossPackItem" class="drop-sources">
+                    <h2>{{ t('app_label_changes_from') }} {{ crossPackName }}</h2>
+                    <div v-if="crossPackDiffs.length" class="stat-grid">
+                        <div v-for="row in crossPackDiffs" :key="'diff-'+row.key" class="stat-row">
+                            <span class="stat-label">{{ headerLabel(row.key) }}</span>
+                            <span class="stat-value diff-values"><span class="diff-old">{{ formatValue(row.key, row.otherValue) }}</span> <span class="diff-arrow">▶</span> <span class="diff-new" :class="row.diff.type === 'higher' ? 'diff-up' : 'diff-down'">{{ formatValue(row.key, row.value) }}</span></span>
+                        </div>
                     </div>
+                    <p v-else class="cross-pack-no-changes">{{ t('app_label_no_changes') }}</p>
+                </div>
+                <div v-else-if="crossPackId && crossPackNotFound" class="drop-sources">
+                    <h2>{{ t('app_label_changes_from') }} {{ crossPackName }}</h2>
+                    <p class="cross-pack-no-changes">{{ t('app_label_not_in_pack') }}</p>
                 </div>
 
                 <!-- Compatible Ammo (on weapon detail) -->

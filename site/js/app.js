@@ -41,7 +41,7 @@ const FILTER_DEFS = [
 const NAME_TAG_COLS = new Set(["st_data_export_has_perk", "st_data_export_is_junk", "st_data_export_can_be_crafted", "ui_mcm_menu_exo", "st_data_export_can_be_cooked", "st_data_export_used_in_cooking", "st_data_export_used_in_crafting", "st_data_export_cuts_thick_skin"]);
 const BADGE_COLS = new Set(["Type", "ui_mm_repair", "ui_ammo_types", "st_data_export_ammo_types_alt", "st_data_export_single_handed", ...NAME_TAG_COLS]);
 const MODAL_BADGE_KEYS = new Set(["st_data_export_has_perk", "st_data_export_is_junk", "st_data_export_can_be_crafted", "ui_mcm_menu_exo", "st_data_export_can_be_cooked", "st_data_export_used_in_cooking", "st_data_export_used_in_crafting", "st_data_export_cuts_thick_skin", "ui_ammo_types", "st_data_export_ammo_types_alt", "ui_st_community"]);
-const SKIP_KEYS = new Set(["id", "pda_encyclopedia_name", "hasNpcWeaponDrop", "hasStashDrop", "hasDisassemble"]);
+const SKIP_KEYS = new Set(["id", "pda_encyclopedia_name", "hasNpcWeaponDrop", "hasStashDrop", "hasDisassemble", "st_data_export_description"]);
 const MAX_PINS = 5;
 const BUILD_CODE_PREFIX = "BUILD-";
 const SLOT_TYPE_TO_NUM = { outfit: 1, helmet: 2, backpack: 3, belt: 4, artifact: 5, weapon: 6, sidearm: 7, grenade: 8, ammo: 9 };
@@ -364,11 +364,24 @@ const app = createApp({
             copyLinkFeedback: false,
             _restoringUrl: false,
 
+            // Cross-pack comparison
+            crossPackId: localStorage.getItem("crossPackId") || null,
+            crossPackItem: null,
+            crossPackHeaders: [],
+            crossPackLoading: false,
+            crossPackNotFound: false,
+            crossPackCache: {},
+            compareMenuOpen: false,
+
             // Build Planner state
             buildPlayerName: "Stalker",
             buildPlayerFaction: "stalker",
             buildFactionPickerOpen: false,
             buildPlannerActive: false,
+            versionCompareActive: false,
+            versionCompareLoading: false,
+            versionCompareResults: [],
+            versionCompareFilter: "",
             shortcutHelpOpen: false,
             _chordKey: null,
             _chordTimer: null,
@@ -549,6 +562,44 @@ const app = createApp({
                 }
             }
             return rows;
+        },
+
+        crossPackOptions() {
+            return this.packs.filter(p => p.id !== this.activePack.id);
+        },
+
+        crossPackName() {
+            if (!this.crossPackId) return "";
+            const p = this.packs.find(p => p.id === this.crossPackId);
+            return p ? p.name : this.crossPackId;
+        },
+
+        crossPackDiffs() {
+            if (!this.crossPackItem || !this.modalStatRows) return [];
+            return this.modalStatRows.filter(row => {
+                if (row.isSection) return false;
+                const otherVal = this.cellValue(this.crossPackItem, row.key);
+                const diff = this.computeStatDiff(row.key, row.value, otherVal);
+                if (!diff || diff.type === "same") return false;
+                row.diff = diff;
+                row.otherValue = otherVal;
+                return true;
+            });
+        },
+
+        versionCompareTotal() {
+            return this.versionCompareResults.reduce((sum, g) => sum + g.items.length, 0);
+        },
+
+        filteredVersionCompareResults() {
+            if (!this.versionCompareFilter) return this.versionCompareResults;
+            const q = this.versionCompareFilter.toLowerCase();
+            const groups = [];
+            for (const group of this.versionCompareResults) {
+                const items = group.items.filter(item => item.name.toLowerCase().includes(q));
+                if (items.length) groups.push({ ...group, items });
+            }
+            return groups;
         },
 
         modalHealGroups() {
@@ -1639,6 +1690,9 @@ const app = createApp({
             this.buildBelts = [];
             this.buildArtifacts = [];
             this.buildInventory = [];
+            this.crossPackId = null;
+            this.crossPackItem = null;
+            this.crossPackCache = {};
 
             // Save selection
             localStorage.setItem("selectedPack", this.activePack.id);
@@ -1863,6 +1917,8 @@ const app = createApp({
             this._ammoDecCache = {};
             this.copyIdFeedback = false;
             this.copyModalLinkFeedback = false;
+            this.crossPackItem = null;
+            this.crossPackNotFound = false;
             document.body.style.overflow = "hidden";
 
             try {
@@ -1902,6 +1958,7 @@ const app = createApp({
                 console.error("Failed to load item:", e);
             }
             this.modalLoading = false;
+            if (this.crossPackId) this.loadCrossPackItem(this.crossPackId);
         },
 
         async copyToClipboard(text, feedbackKey) {
@@ -1934,6 +1991,199 @@ const app = createApp({
             if (window.location.hash) {
                 history.pushState(null, "", window.location.pathname + window.location.search);
             }
+        },
+
+        async loadCrossPackItem(packId) {
+            if (!packId || !this.modalItem) {
+                this.crossPackItem = null;
+                this.crossPackHeaders = [];
+                this.crossPackNotFound = false;
+                return;
+            }
+            this.crossPackLoading = true;
+            this.crossPackNotFound = false;
+            this.crossPackItem = null;
+            try {
+                const basePath = `data/${packId}`;
+                const indexKey = `${packId}/_index`;
+                if (!this.crossPackCache[indexKey]) {
+                    const res = await fetch(`${basePath}/index.json`);
+                    if (!res.ok) throw new Error("Index not found");
+                    this.crossPackCache[indexKey] = await res.json();
+                }
+                const index = this.crossPackCache[indexKey];
+                const entry = index.find(i => i.id === this.modalItem.id);
+                if (!entry) { this.crossPackNotFound = true; this.crossPackLoading = false; return; }
+                const slug = categorySlug(entry.category);
+                const catKey = `${packId}/${slug}`;
+                if (!this.crossPackCache[catKey]) {
+                    const res = await fetch(`${basePath}/${slug}.json`);
+                    if (!res.ok) throw new Error("Category not found");
+                    this.crossPackCache[catKey] = await res.json();
+                }
+                const catData = this.crossPackCache[catKey];
+                this.crossPackHeaders = catData.headers;
+                this.crossPackItem = catData.items.find(i => i.id === this.modalItem.id) || null;
+                if (!this.crossPackItem) this.crossPackNotFound = true;
+            } catch (e) {
+                console.error("Cross-pack comparison load failed:", e);
+                this.crossPackNotFound = true;
+            }
+            this.crossPackLoading = false;
+        },
+
+        computeStatDiff(key, currentVal, otherVal) {
+            if (otherVal === undefined || otherVal === null || otherVal === "") return null;
+            if (currentVal === undefined || currentVal === null || currentVal === "") return null;
+            const curStr = String(currentVal);
+            const othStr = String(otherVal);
+            if (curStr === othStr) return { type: "same" };
+            const isPct = curStr.includes("%") || othStr.includes("%");
+            const curN = parseFloat(curStr.replace(/%$/, ""));
+            const othN = parseFloat(othStr.replace(/%$/, ""));
+            if (isNaN(curN) || isNaN(othN)) return { type: "changed" };
+            const delta = curN - othN;
+            if (delta === 0) return { type: "same" };
+            return { type: delta > 0 ? "higher" : "lower", delta, isPct };
+        },
+
+        formatDiffDelta(diff) {
+            if (!diff || diff.type === "same") return "";
+            if (diff.type === "changed") return "\u2260";
+            const arrow = diff.delta > 0 ? "\u25B2" : "\u25BC";
+            const val = parseFloat(Math.abs(diff.delta).toFixed(2));
+            return arrow + " " + val + (diff.isPct ? "%" : "");
+        },
+
+        diffClass(diff) {
+            if (!diff || diff.type === "same") return "";
+            if (diff.type === "changed") return "stat-diff-changed";
+            return diff.type === "higher" ? "stat-diff-up" : "stat-diff-down";
+        },
+
+        pickComparePack(id) {
+            this.crossPackId = id;
+            this.compareMenuOpen = false;
+        },
+
+        closeCompareMenu() {
+            this.compareMenuOpen = false;
+        },
+
+        exportVersionCompare() {
+            if (!this.versionCompareResults.length) return;
+            const rows = [["Category", "Item ID", "Item Name", "Field", "Old Value", "New Value"].join(",")];
+            for (const group of this.versionCompareResults) {
+                const cat = this.tCat(group.category);
+                for (const item of group.items) {
+                    for (const d of item.diffs) {
+                        const label = this.headerLabel(d.key);
+                        const oldVal = this.formatValue(d.key, d.oldVal);
+                        const newVal = this.formatValue(d.key, d.newVal);
+                        rows.push([cat, item.id, `"${item.name.replace(/"/g, '""')}"`, label, `"${oldVal}"`, `"${newVal}"`].join(","));
+                    }
+                }
+            }
+            const blob = new Blob([rows.join("\n")], { type: "text/csv" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `version-compare-${this.activePack.id}-vs-${this.crossPackId}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+        },
+
+        openVersionCompare() {
+            this.resetViewState();
+            this.versionCompareActive = true;
+            this.pushUrlState();
+            if (this.crossPackId) this.loadVersionCompareData();
+        },
+
+        async loadVersionCompareData() {
+            if (!this.crossPackId) { this.versionCompareResults = []; return; }
+            this.versionCompareLoading = true;
+            try {
+                const packId = this.crossPackId;
+                const basePath = `data/${packId}`;
+                const indexKey = `${packId}/_index`;
+                if (!this.crossPackCache[indexKey]) {
+                    const res = await fetch(`${basePath}/index.json`);
+                    this.crossPackCache[indexKey] = await res.json();
+                }
+                const otherIndex = this.crossPackCache[indexKey];
+                const otherById = Object.fromEntries(otherIndex.map(i => [i.id, i]));
+                const currentById = Object.fromEntries(this.index.map(i => [i.id, i]));
+
+                // Find all categories that have shared items
+                const categoryPairs = new Map();
+                for (const item of this.index) {
+                    if (otherById[item.id]) {
+                        const slug = categorySlug(item.category);
+                        if (!categoryPairs.has(slug)) categoryPairs.set(slug, item.category);
+                    }
+                }
+
+                // Load category data for both packs
+                const slugs = [...categoryPairs.keys()];
+                await Promise.all(slugs.map(async (slug) => {
+                    if (!this.categoryItems[slug]) {
+                        const res = await fetch(this.dataUrl(`${slug}.json`));
+                        const data = await res.json();
+                        this.categoryItems[slug] = data.items;
+                        this.categoryHeaders[slug] = data.headers;
+                    }
+                    const catKey = `${packId}/${slug}`;
+                    if (!this.crossPackCache[catKey]) {
+                        const res = await fetch(`${basePath}/${slug}.json`);
+                        if (res.ok) this.crossPackCache[catKey] = await res.json();
+                    }
+                }));
+
+                // Diff all shared items
+                const groups = [];
+                for (const [slug, category] of categoryPairs) {
+                    const catKey = `${packId}/${slug}`;
+                    const otherCat = this.crossPackCache[catKey];
+                    if (!otherCat || !this.categoryItems[slug]) continue;
+                    const otherItems = Object.fromEntries(otherCat.items.map(i => [i.id, i]));
+                    const headers = this.categoryHeaders[slug] || [];
+                    const changedItems = [];
+                    for (const item of this.categoryItems[slug]) {
+                        const other = otherItems[item.id];
+                        if (!other) continue;
+                        const diffs = [];
+                        for (const h of headers) {
+                            if (SKIP_KEYS.has(h) || MODAL_BADGE_KEYS.has(h)) continue;
+                            if (h === "name" || h === "displayName") continue;
+                            const curVal = item[h];
+                            const othVal = other[h];
+                            const diff = this.computeStatDiff(h, curVal, othVal);
+                            if (diff && diff.type !== "same") {
+                                diffs.push({ key: h, oldVal: othVal, newVal: curVal, type: diff.type });
+                            }
+                        }
+                        if (diffs.length > 0) {
+                            diffs.sort((a, b) => {
+                                const impactA = a.type === "changed" ? 0 : Math.abs(a.newVal && a.oldVal ? (parseFloat(String(a.newVal).replace("%","")) - parseFloat(String(a.oldVal).replace("%",""))) / (parseFloat(String(a.oldVal).replace("%","")) || 1) : 0);
+                                const impactB = b.type === "changed" ? 0 : Math.abs(b.newVal && b.oldVal ? (parseFloat(String(b.newVal).replace("%","")) - parseFloat(String(b.oldVal).replace("%",""))) / (parseFloat(String(b.oldVal).replace("%","")) || 1) : 0);
+                                return impactB - impactA;
+                            });
+                            changedItems.push({ id: item.id, name: this.tName(item), category, diffs });
+                        }
+                    }
+                    if (changedItems.length > 0) {
+                        changedItems.sort((a, b) => a.name.localeCompare(b.name));
+                        groups.push({ category, items: changedItems });
+                    }
+                }
+                groups.sort((a, b) => a.category.localeCompare(b.category));
+                this.versionCompareResults = groups;
+            } catch (e) {
+                console.error("Version compare load failed:", e);
+                this.versionCompareResults = [];
+            }
+            this.versionCompareLoading = false;
         },
 
         navigateModal(direction) {
@@ -2017,6 +2267,7 @@ const app = createApp({
 
         resetViewState() {
             this.buildPlannerActive = false;
+            this.versionCompareActive = false;
             this.favoritesViewActive = false;
             this.recentViewActive = false;
             this.showFavoritesOnly = false;
@@ -3214,7 +3465,10 @@ const app = createApp({
             } else {
                 // Clear build hash when not in build planner
                 if (url.hash.startsWith("#b/")) url.hash = "";
-                if (this.favoritesViewActive) {
+                if (this.versionCompareActive) {
+                    url.searchParams.set("cat", "version-compare");
+                    url.searchParams.delete("favonly");
+                } else if (this.favoritesViewActive) {
                     url.searchParams.set("cat", "favorites");
                     url.searchParams.delete("favonly");
                 } else if (this.recentViewActive) {
@@ -3291,6 +3545,10 @@ const app = createApp({
             if (params.get("cat") === "build-planner") {
                 // Will be handled after data loads
                 this._pendingBuildRestore = params;
+            } else if (params.get("cat") === "version-compare") {
+                this.versionCompareActive = true;
+                this.activeCategory = null;
+                if (this.crossPackId) this.loadVersionCompareData();
             } else if (params.get("cat") === "favorites") {
                 this.favoritesViewActive = true;
                 this.activeCategory = null;
@@ -3359,6 +3617,8 @@ const app = createApp({
                 this.closeBuildPicker();
             } else if (this.buildSavedDropdownOpen) {
                 this.buildSavedDropdownOpen = false;
+            } else if (this.compareMenuOpen) {
+                this.compareMenuOpen = false;
             } else if (this.sortMenuOpen) {
                 this.sortMenuOpen = false;
             } else if (this.downloadMenuOpen) {
@@ -4619,6 +4879,12 @@ const app = createApp({
     },
 
     watch: {
+        crossPackId(val) {
+            if (val) localStorage.setItem("crossPackId", val);
+            else localStorage.removeItem("crossPackId");
+            this.loadCrossPackItem(val);
+            if (this.versionCompareActive) this.loadVersionCompareData();
+        },
         compareViewMode(mode) {
             if (mode === "chart" && this.compareData.length > 0) {
                 this.$nextTick(() => this.renderCompareChart());

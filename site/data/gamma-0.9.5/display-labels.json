@@ -1,0 +1,13 @@
+{
+  "ui_mm_repair": {
+    "A": { "label": "A", "color": "#8a8a94" },
+    "B": { "label": "B", "color": "#7a9a56" },
+    "C": { "label": "C", "color": "#c0504a" },
+    "D": { "label": "D", "color": "#b8863e" },
+    "E": { "label": "app_repair_exo" },
+    "F": { "label": "app_repair_field" },
+    "H": { "label": "app_repair_heavy" },
+    "L": { "label": "app_repair_light" },
+    "M": { "label": "app_repair_medium" }
+  }
+}

@@ -1,59 +1,59 @@
-~, Faction, Name, Weight, Cost, Repair, Powered Exos, BR Class, Ballistic Res, Rupture Res, Burn Res, Electrical Res, Chemical Res, Radiation Res, Psychic Res, Impact Res, Explosive Res, Belt Slots, Maximum belt slots, Weight Carried, Movespeed
-merc_sunset_outfit,Mercenary,Mercenary LCz Suit,17,47723,M,N,34,23%,14%,35%,21%,6%,12%,16%,6%,7%,2,3,18,101%
-greh_armored_camo_outfit,Sin,Vyriy Flak Armor,17,83932,M,N,29,20%,12%,35%,15%,6%,15%,16%,6%,6%,4,6,19.200000762939,99%
-ecolog_outfit_blue,Ecologist,SSP-99M "Sapphire",5,137017,M,N,9,9%,7%,48%,97%,49%,47%,49%,61%,5%,4,6,15,101%
-isg_outfit,UNISG,UNISG Mk1 Tactical Body Armor,16,83283,M,N,40,23%,23%,6%,21%,11%,6%,6%,7%,16%,3,5,18,102%
-bandit_sun_outfit,Bandit,"Sunset" Tactical Suit,7,79046,M,N,23,18%,23%,21%,21%,46%,10%,6%,21%,11%,2,4,20.799999237061,110%
-dolg_scientific_red_outfit,Duty,PS5-9Md Light Scientific Suit,13,99450,M,N,28,17%,19%,59%,29%,25%,27%,11%,21%,11%,3,5,18,104%
-ecolog_guard_outfit,Ecologist,ISRIT Guard Jumpsuit,20,70952,M,N,29,23%,34%,6%,13%,13%,5%,25%,18%,21%,3,4,24,98%
-merc_scientific_outfit,Mercenary,Mercenary SEVA Suit,17,92625,M,N,33,21%,16%,41%,40%,21%,20%,16%,16%,13%,3,5,16.5,100%
-merc_sun_outfit,Mercenary,"Twilight" Tactical Suit,25,53949,M,N,40,31%,28%,6%,13%,11%,3%,21%,16%,31%,2,3,18,98%
-monolith_outfit,Monolith,Monolith X-18 Suit,25,72323,M,N,36,31%,30%,6%,11%,11%,3%,27%,16%,26%,2,4,21.60000038147,97%
-monolith_scientific_outfit,Monolith,Monolith Scientific Suit,17,91922,M,N,30,21%,18%,41%,30%,21%,20%,21%,16%,11%,3,5,19.799999237061,99%
-dolg_outfit,Duty,PS5-M Universal Protection Suit,12,55364,M,N,33,23%,29%,8%,21%,11%,6%,5%,8%,16%,3,3,20,106%
-isg_lcs_outfit,UNISG,UNISG LC Suit,33,43393,M,N,46,31%,14%,2%,3%,6%,7%,21%,4%,26%,2,3,27.89999961853,91%
-renegade_scientific_outfit,Renegade,Renegade SEVA Suit,17,78600,M,N,33,21%,20%,41%,30%,21%,25%,16%,16%,11%,2,4,22,100%
-renegademerc_outfit,Renegade,Renegade LC Suit,28,33088,M,N,42,33%,18%,2%,3%,6%,7%,21%,6%,26%,1,2,31,94%
-specops_bandit_outfit,Bandit,Deserter's B-5M Armored Suit,10,56779,M,N,24,19%,32%,6%,21%,11%,4%,6%,11%,16%,2,3,31.200000762939,106%
-specops_dolg_outfit,Duty,PS5-B Battle Armor,13,37596,M,N,30,19%,38%,8%,21%,11%,4%,5%,8%,16%,2,2,24,104%
-ecolog_outfit_white,Ecologist,SSP-99 "Diamond",5,137017,M,N,9,9%,7%,48%,49%,49%,47%,97%,61%,5%,4,6,15,101%
-nomad_outfit,Free Stalkers,"Nomad" Stalker Suit,20,100114,M,N,31,23%,28%,11%,11%,31%,13%,21%,18%,26%,4,5,31.200000762939,99%
-merc_jackal_outfit,Mercenary,Mercenary LTS-J Body Suit,22,58615,M,N,35,30%,12%,2%,4%,6%,7%,21%,6%,31%,3,4,25.5,95%
-merc_outfit,Mercenary,Mercenary LC Suit,28,45649,M,N,42,33%,14%,2%,4%,6%,5%,21%,6%,31%,2,3,23.25,94%
-merc_scientific_armored_outfit,Mercenary,Mercenary SEVA Body Armor,19,105419,M,N,37,31%,15%,31%,59%,16%,18%,11%,26%,13%,3,5,19.5,101%
-dolg_scientific_outfit,Duty,PS5-9Md Universal Scientific Suit,15,99763,M,N,30,19%,23%,52%,30%,21%,25%,13%,13%,11%,3,5,22,101%
-monolith_scientific_light_outfit,Monolith,Monolith Patchwork Science Suit,14,96460,M,N,27,18%,14%,35%,41%,25%,17%,17%,26%,6%,3,5,25.200000762939,103%
-dolg_scientific_wood_outfit,Duty,PS5-9Md Light Pathfinder,19,119572,M,N,32,21%,19%,47%,36%,31%,21%,17%,11%,16%,4,6,24,99%
-specops_outfit,Military,Berill-5M Armored Suit,18,36037,M,N,33,23%,38%,4%,17%,9%,4%,5%,9%,19%,1,2,21.60000038147,101%
-ecolog_outfit_green,Ecologist,SSP-99M Bodysuit,5,139744,M,N,9,10%,7%,61%,60%,61%,53%,61%,61%,5%,4,6,15,101%
-greh_ps5_outfit,Sin,Volos Flak Armor,14,59328,M,N,31,23%,18%,6%,21%,11%,6%,6%,11%,16%,4,4,16,103%
-svoboda_heavy_outfit_2,Freedom,Sentinel of Freedom,14,51168,M,N,36,23%,19%,6%,21%,14%,6%,7%,11%,16%,3,3,20,104%
-stalker_graphite_outfit,Free Stalkers,"Graphite" Stalker Suit,9,80015,M,N,26,17%,25%,21%,45%,31%,13%,6%,25%,11%,3,4,19.200000762939,107%
-stalker_drought_outfit,Free Stalkers,"Drought" Stalker Suit,9,80015,M,N,26,17%,25%,45%,21%,31%,13%,6%,25%,11%,3,4,19.200000762939,107%
-stalker_tigerstripe_outfit,Free Stalkers,"Tigerstripe" Stalker Suit,8,77237,M,N,23,14%,29%,21%,21%,31%,13%,6%,25%,11%,3,4,19.200000762939,109%
-svoboda_heavy_outfit,Freedom,Guardian of Freedom,15,51255,M,N,33,19%,27%,6%,21%,14%,4%,7%,11%,16%,3,3,24,102%
-merc_coyote_outfit,Mercenary,Mercenary MTS-C Body Suit,31,62915,M,N,44,38%,16%,2%,4%,6%,1%,23%,6%,37%,3,4,21.75,93%
-isg_camo_outfit,UNISG,UNISG Mk2 Tactical Body Armor,30,49847,M,N,43,28%,28%,6%,11%,11%,4%,21%,9%,26%,2,3,21.60000038147,95%
-stalker_bear_outfit,Free Stalkers,"Bear" Stalker Suit,13,75411,M,N,29,19%,26%,21%,21%,31%,13%,6%,25%,11%,3,4,19.200000762939,105%
-ecolog_outfit_red,Ecologist,SSP-99Ì "Ruby",5,137017,M,N,9,9%,7%,96%,49%,49%,47%,49%,61%,5%,4,6,15,101%
-svoboda_light_outfit,Freedom,Wind of Freedom,25,53399,M,N,40,28%,25%,6%,11%,14%,4%,25%,16%,26%,2,3,24,97%
-svoboda_scientific_outfit,Freedom,Watchman of Freedom,17,93555,M,N,33,19%,14%,41%,30%,27%,25%,19%,16%,11%,3,5,22,99%
-bandit_scientific_dark_outfit,Bandit,Patchwork Anomaly Suit,11,99421,M,N,24,19%,18%,41%,30%,21%,22%,16%,16%,11%,3,5,28.60000038147,103%
-bandit_scientific_outfit,Bandit,Looted SEVA Suit,13,112190,M,N,27,28%,18%,31%,45%,16%,21%,11%,26%,11%,3,5,33.799999237061,104%
-cs_medium_outfit,Clear Sky,CS-3a Body Armor,17,32623,M,N,31,19%,14%,42%,19%,7%,18%,16%,6%,6%,2,2,24,101%
-dolg_voin_outfit,Duty,PS6-V Warrior Suit,22,57395,M,N,36,28%,36%,8%,11%,11%,4%,17%,13%,26%,2,3,24,99%
-scientific_outfit,Free Stalkers,SEVA Bodysuit,15,116790,M,N,27,18%,20%,41%,30%,21%,30%,16%,18%,11%,4,6,26.39999961853,100%
-specops_merc_outfit,Mercenary,Mercenary B-5M Armored Suit,15,69216,M,N,33,21%,29%,6%,26%,11%,3%,6%,11%,19%,2,4,18,103%
-trenchcoat_dolg_brown_outfit,Duty,Heavy Duty Overcoat,10,37058,M,N,28,18%,27%,21%,15%,25%,9%,5%,16%,11%,2,2,22,106%
-trenchcoat_brown_outfit,Unknown,Heavy Brown Overcoat,12,34755,M,N,27,17%,25%,16%,15%,16%,9%,6%,31%,11%,2,2,22,105%
-isg_scientific_outfit,UNISG,UNISG SEVA Suit,20,87591,M,N,36,19%,16%,41%,30%,21%,25%,16%,9%,11%,3,5,19.799999237061,97%
-bandit_ps5_outfit,Bandit,Fenced PS5-M Universal Protection Suit,9,73138,M,N,26,23%,25%,6%,21%,11%,5%,6%,11%,16%,2,4,26,108%
-cs_stalker_outfit,Clear Sky,CS-2b Body Armor,11,55694,M,N,29,17%,20%,24%,25%,37%,17%,6%,21%,11%,2,3,16,107%
-wastelander_outfit,Free Stalkers,"Wastelander" Stalker Suit,11,107825,M,N,28,19%,18%,31%,15%,6%,22%,16%,7%,6%,5,6,28.799999237061,105%
-trenchcoat_green_outfit,Unknown,Heavy Green Overcoat,12,27195,M,N,25,14%,27%,16%,15%,35%,9%,6%,11%,11%,2,2,0,105%
-ecolog_outfit_orange,Ecologist,SSP-99 Bodysuit,5,151369,M,N,9,9%,7%,48%,49%,49%,71%,49%,61%,5%,5,7,15,101%
-cs_scientific_outfit,Clear Sky,CS-4a SEVA Suit,17,95750,M,N,30,18%,16%,48%,37%,25%,30%,16%,16%,11%,3,5,22,100%
-dolg_scout_outfit,Duty,PS5-R Scout Vest,9,75384,M,N,30,21%,27%,8%,21%,11%,8%,5%,8%,16%,2,4,24,108%
-isg_lcs_urban_outfit,UNISG,UNISG LC-UC Suit,20,46099,M,N,37,21%,14%,35%,15%,6%,15%,16%,4%,6%,2,3,21.60000038147,98%
-ecolog_outfit_yello,Ecologist,SSP-99 Topaz,5,137017,M,N,9,9%,7%,48%,49%,97%,47%,49%,61%,5%,4,6,15,101%
-greh_armored_outfit,Sin,Irij Flak Armor,28,65642,M,N,36,30%,12%,2%,3%,6%,7%,21%,6%,26%,4,5,24.799999237061,92%
+~, Ui_st_community, Pda_encyclopedia_name, St_prop_weight, St_upgr_cost, Ui_mm_repair, Ui_mcm_menu_exo, Ui_inv_ap_res, Ui_inv_outfit_fire_wound_protection, Ui_inv_outfit_wound_protection, Ui_inv_outfit_burn_protection, Ui_inv_outfit_shock_protection, Ui_inv_outfit_chemical_burn_protection, Ui_inv_outfit_radiation_protection, Ui_inv_outfit_telepatic_protection, Ui_inv_outfit_strike_protection, Ui_inv_outfit_explosion_protection, Ui_inv_outfit_artefact_count, St_data_export_outfit_artefact_count_max, Ui_inv_outfit_additional_weight, Ui_inv_outfit_speed
+merc_sunset_outfit,killer,merc_sunset_outfit_name,17,47723,M,N,34,23%,14%,35%,21%,6%,12%,16%,6%,7%,2,3,18,101%
+greh_armored_camo_outfit,greh,greh_armored_camo_outfit_name,17,83932,M,N,29,20%,12%,35%,15%,6%,15%,16%,6%,6%,4,6,19.200000762939,99%
+ecolog_outfit_blue,ecolog,st_ecologist_outfit_blue_name,5,137017,M,N,9,9%,7%,48%,97%,49%,47%,49%,61%,5%,4,6,15,101%
+isg_outfit,isg,isg_outfit_name,16,83283,M,N,40,23%,23%,6%,21%,11%,6%,6%,7%,16%,3,5,18,102%
+bandit_sun_outfit,bandit,bandit_sun_outfit_name,7,79046,M,N,23,18%,23%,21%,21%,46%,10%,6%,21%,11%,2,4,20.799999237061,110%
+dolg_scientific_red_outfit,dolg,dolg_scientific_red_outfit_name,13,99450,M,N,28,17%,19%,59%,29%,25%,27%,11%,21%,11%,3,5,18,104%
+ecolog_guard_outfit,ecolog,ecologist_guard_outfit_name,20,70952,M,N,29,23%,34%,6%,13%,13%,5%,25%,18%,21%,3,4,24,98%
+merc_scientific_outfit,killer,merc_scientific_outfit_name,17,92625,M,N,33,21%,16%,41%,40%,21%,20%,16%,16%,13%,3,5,16.5,100%
+merc_sun_outfit,killer,merc_sun_outfit_name,25,53949,M,N,40,31%,28%,6%,13%,11%,3%,21%,16%,31%,2,3,18,98%
+monolith_outfit,monolith,monolith_outfit_name,25,72323,M,N,36,31%,30%,6%,11%,11%,3%,27%,16%,26%,2,4,21.60000038147,97%
+monolith_scientific_outfit,monolith,monolith_scientific_outfit_name,17,91922,M,N,30,21%,18%,41%,30%,21%,20%,21%,16%,11%,3,5,19.799999237061,99%
+dolg_outfit,dolg,dolg_outfit_name,12,55364,M,N,33,23%,29%,8%,21%,11%,6%,5%,8%,16%,3,3,20,106%
+isg_lcs_outfit,isg,isg_lcs_outfit_name,33,43393,M,N,46,31%,14%,2%,3%,6%,7%,21%,4%,26%,2,3,27.89999961853,91%
+renegade_scientific_outfit,renegade,renegade_scientific_outfit_name,17,78600,M,N,33,21%,20%,41%,30%,21%,25%,16%,16%,11%,2,4,22,100%
+renegademerc_outfit,renegade,renegademerc_outfit_name,28,33088,M,N,42,33%,18%,2%,3%,6%,7%,21%,6%,26%,1,2,31,94%
+specops_bandit_outfit,bandit,specops_bandit_outfit_name,10,56779,M,N,24,19%,32%,6%,21%,11%,4%,6%,11%,16%,2,3,31.200000762939,106%
+specops_dolg_outfit,dolg,specops_dolg_outfit_name,13,37596,M,N,30,19%,38%,8%,21%,11%,4%,5%,8%,16%,2,2,24,104%
+ecolog_outfit_white,ecolog,st_ecologist_outfit_white_name,5,137017,M,N,9,9%,7%,48%,49%,49%,47%,97%,61%,5%,4,6,15,101%
+nomad_outfit,stalker,nomad_outfit_name,20,100114,M,N,31,23%,28%,11%,11%,31%,13%,21%,18%,26%,4,5,31.200000762939,99%
+merc_jackal_outfit,killer,merc_jackal_outfit_name,22,58615,M,N,35,30%,12%,2%,4%,6%,7%,21%,6%,31%,3,4,25.5,95%
+merc_outfit,killer,merc_outfit_name,28,45649,M,N,42,33%,14%,2%,4%,6%,5%,21%,6%,31%,2,3,23.25,94%
+merc_scientific_armored_outfit,killer,merc_scientific_armored_outfit_name,19,105419,M,N,37,31%,15%,31%,59%,16%,18%,11%,26%,13%,3,5,19.5,101%
+dolg_scientific_outfit,dolg,dolg_scientific_outfit_name,15,99763,M,N,30,19%,23%,52%,30%,21%,25%,13%,13%,11%,3,5,22,101%
+monolith_scientific_light_outfit,monolith,monolith_scientific_light_outfit_name,14,96460,M,N,27,18%,14%,35%,41%,25%,17%,17%,26%,6%,3,5,25.200000762939,103%
+dolg_scientific_wood_outfit,dolg,dolg_scientific_wood_outfit_name,19,119572,M,N,32,21%,19%,47%,36%,31%,21%,17%,11%,16%,4,6,24,99%
+specops_outfit,army,specops_outfit_name,18,36037,M,N,33,23%,38%,4%,17%,9%,4%,5%,9%,19%,1,2,21.60000038147,101%
+ecolog_outfit_green,ecolog,st_ecologist_outfit_grn_name,5,139744,M,N,9,10%,7%,61%,60%,61%,53%,61%,61%,5%,4,6,15,101%
+greh_ps5_outfit,greh,greh_ps5_outfit_name,14,59328,M,N,31,23%,18%,6%,21%,11%,6%,6%,11%,16%,4,4,16,103%
+svoboda_heavy_outfit_2,freedom,svoboda_heavy_outfit_2_name,14,51168,M,N,36,23%,19%,6%,21%,14%,6%,7%,11%,16%,3,3,20,104%
+stalker_graphite_outfit,stalker,stalker_graphite_outfit_name,9,80015,M,N,26,17%,25%,21%,45%,31%,13%,6%,25%,11%,3,4,19.200000762939,107%
+stalker_drought_outfit,stalker,stalker_drought_outfit_name,9,80015,M,N,26,17%,25%,45%,21%,31%,13%,6%,25%,11%,3,4,19.200000762939,107%
+stalker_tigerstripe_outfit,stalker,stalker_tigerstripe_outfit_name,8,77237,M,N,23,14%,29%,21%,21%,31%,13%,6%,25%,11%,3,4,19.200000762939,109%
+svoboda_heavy_outfit,freedom,svoboda_heavy_outfit_name,15,51255,M,N,33,19%,27%,6%,21%,14%,4%,7%,11%,16%,3,3,24,102%
+merc_coyote_outfit,killer,merc_coyote_outfit_name,31,62915,M,N,44,38%,16%,2%,4%,6%,1%,23%,6%,37%,3,4,21.75,93%
+isg_camo_outfit,isg,isg_merc_outfit_name,30,49847,M,N,43,28%,28%,6%,11%,11%,4%,21%,9%,26%,2,3,21.60000038147,95%
+stalker_bear_outfit,stalker,stalker_bear_outfit_name,13,75411,M,N,29,19%,26%,21%,21%,31%,13%,6%,25%,11%,3,4,19.200000762939,105%
+ecolog_outfit_red,ecolog,st_ecologist_outfit_red_name,5,137017,M,N,9,9%,7%,96%,49%,49%,47%,49%,61%,5%,4,6,15,101%
+svoboda_light_outfit,freedom,svoboda_light_outfit_name,25,53399,M,N,40,28%,25%,6%,11%,14%,4%,25%,16%,26%,2,3,24,97%
+svoboda_scientific_outfit,freedom,svoboda_scientific_outfit_name,17,93555,M,N,33,19%,14%,41%,30%,27%,25%,19%,16%,11%,3,5,22,99%
+bandit_scientific_dark_outfit,bandit,bandit_scientific_dark_outfit_name,11,99421,M,N,24,19%,18%,41%,30%,21%,22%,16%,16%,11%,3,5,28.60000038147,103%
+bandit_scientific_outfit,bandit,bandit_scientific_outfit_name,13,112190,M,N,27,28%,18%,31%,45%,16%,21%,11%,26%,11%,3,5,33.799999237061,104%
+cs_medium_outfit,csky,csky_medium_outfit_name,17,32623,M,N,31,19%,14%,42%,19%,7%,18%,16%,6%,6%,2,2,24,101%
+dolg_voin_outfit,dolg,dolg_voin_outfit_name,22,57395,M,N,36,28%,36%,8%,11%,11%,4%,17%,13%,26%,2,3,24,99%
+scientific_outfit,stalker,scientific_outfit_name,15,116790,M,N,27,18%,20%,41%,30%,21%,30%,16%,18%,11%,4,6,26.39999961853,100%
+specops_merc_outfit,killer,specops_merc_outfit_name,15,69216,M,N,33,21%,29%,6%,26%,11%,3%,6%,11%,19%,2,4,18,103%
+trenchcoat_dolg_brown_outfit,dolg,trenchcoat_dolg_brown_outfit_name,10,37058,M,N,28,18%,27%,21%,15%,25%,9%,5%,16%,11%,2,2,22,106%
+trenchcoat_brown_outfit,st_data_export_unknown,trenchcoat_brown_outfit_name,12,34755,M,N,27,17%,25%,16%,15%,16%,9%,6%,31%,11%,2,2,22,105%
+isg_scientific_outfit,isg,isg_scientific_outfit_name,20,87591,M,N,36,19%,16%,41%,30%,21%,25%,16%,9%,11%,3,5,19.799999237061,97%
+bandit_ps5_outfit,bandit,bandit_ps5_outfit_name,9,73138,M,N,26,23%,25%,6%,21%,11%,5%,6%,11%,16%,2,4,26,108%
+cs_stalker_outfit,csky,cs_stalker_outfit_name,11,55694,M,N,29,17%,20%,24%,25%,37%,17%,6%,21%,11%,2,3,16,107%
+wastelander_outfit,stalker,wastelander_outfit_name,11,107825,M,N,28,19%,18%,31%,15%,6%,22%,16%,7%,6%,5,6,28.799999237061,105%
+trenchcoat_green_outfit,st_data_export_unknown,trenchcoat_green_outfit_name,12,27195,M,N,25,14%,27%,16%,15%,35%,9%,6%,11%,11%,2,2,0,105%
+ecolog_outfit_orange,ecolog,st_ecologist_outfit_orange_name,5,151369,M,N,9,9%,7%,48%,49%,49%,71%,49%,61%,5%,5,7,15,101%
+cs_scientific_outfit,csky,cs_scientific_outfit_name,17,95750,M,N,30,18%,16%,48%,37%,25%,30%,16%,16%,11%,3,5,22,100%
+dolg_scout_outfit,dolg,dolg_scout_outfit_name,9,75384,M,N,30,21%,27%,8%,21%,11%,8%,5%,8%,16%,2,4,24,108%
+isg_lcs_urban_outfit,isg,isg_lcs_urban_outfit_name,20,46099,M,N,37,21%,14%,35%,15%,6%,15%,16%,4%,6%,2,3,21.60000038147,98%
+ecolog_outfit_yello,ecolog,st_ecologist_outfit_yello_name,5,137017,M,N,9,9%,7%,48%,49%,97%,47%,49%,61%,5%,4,6,15,101%
+greh_armored_outfit,greh,greh_armored_outfit_name,28,65642,M,N,36,30%,12%,2%,3%,6%,7%,21%,6%,26%,4,5,24.799999237061,92%

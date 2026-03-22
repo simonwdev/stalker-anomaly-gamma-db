@@ -15,15 +15,17 @@ st_data_export_post_heal_torso,Post-Heal Torso
 st_rank_novice,Rookie
 mutant_psysucker_meat,Psysucker Meat
 st_af_frames_name,Aluminium Frames
-st_data_export_bonus_mutant_part_chance,Bonus mutant part chance
+cs_stalker_outfit_name,CS-2b Body Armor
 st_wpn_brn180,BRN-180
 st_data_export_can_be_crafted,Can be crafted
-merc_coyote_outfit_name,Mercenary MTS-C Body Suit
+st_data_export_eat_health_change,Health change
 st_af_cristall_flower_name,Stone Flower
 ui_inv_outfit_additional_weight,%c[0,255,255,255]Weight Carried:
 st_powder_pistol,Pistol/Shotgun Propellant
+st_af_ah_r3_descr,An artifact containing mostly plant matter found only in the Dead Forest, south of Lab X-9. It is believed that the strong psy-fields it was subjugated to during its formation heavily influenced its shape and properties. Wearing one seems to boost vitality.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
 st_ration_ru,Russian IRP-B Combat Ration
 st_prt_w_p_trigger_1,Single-action Trigger Mechanism (Trigger)
+st_af_ah_s1_descr,An experimental and unstable artifact, created by artificial means. Where and under what circumstances it formed, is unknown. It seems to improve the natural healing process of the body via methods unknown to science.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
 st_wpn_pl15_pl15_scolaz,Lebedev PL-15 "Bearcat"
 mutant_heart_chimera,Chimera Heart
 st_wpn_fnx45_custom,FNX-45
@@ -41,7 +43,7 @@ st_army_bowler,Army Kettle
 mutant_lurker_eye,Lurker Eye
 st_wpn_mossberg590a1,Mossberg 590A1
 st_prt_w_p_barrel_6,9x18mm Barrel (enclosed) (Barrel)
-light_merc_outfit_name,Mercenary IBAz Suit
+trenchcoat_outfit_name,Overcoat
 ammo-5.56x45-fmj,5.56x45 mm FMJ rounds
 st_itm_mapkit_8,Anomaly Map (Garbage)
 st_prt_o_ballistic_4,Kevlar K129 Plates w/ Carbon-fiber Composite
@@ -67,7 +69,7 @@ st_af_tapeworm_name,Tapeworm
 st_wpn_sig550,SIG SG 550
 jupiter_underground,Jupiter Underground
 st_prt_o_retardant_1,Layered Fire Retardant Fabrics
-ammo-12x76-bull,12x76 Bull shells
+l10_red_forest,Red Forest
 st_wpn_glock,Glock 19
 monolith_outfit_name,Monolith X-18 Suit
 st_hide_pseudodog_name,Pseudodog Fur
@@ -78,7 +80,7 @@ st_wpn_sr25,SR-25
 st_kukri,Kukri
 mutant_pseudogigant_eye,Pseudogiant Eye
 ui_inv_outfit_wound_protection,%c[0,255,255,255]Rupture Res:
-st_prt_o_retardant_3,Grade-B RPVC Treated Fabrics
+st_af_blood_descr,A reddish formation of compressed fossilised plants, soil and animal debris. Can partially neutralise chemical poisons by absorbing them and reducing overall toxicity level in user's bloodstream. Quite widespread and not very effective as it makes chemical burns fester. It will catch fire when exposed to open flame or even spontaneously combust. \nAnother positive effect possessed by this artefact is that it accelerates clotting if worn close to the body. Although it is not recommended to keep this artefact in your possession for longer periods of time as blood clots can be hazardous to your health. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_af_cell_name,Cell
 stalker_proto_exo_outfit_name,"Sunrise" Exoskeleton
 st_af_fuzz_kolobok_name,Kolobok
@@ -87,12 +89,12 @@ st_sledge_hammer,Sledgehammer
 st_barrel_11,9mm Barrel [AS/PP] (Barrel)
 st_af_peas_name,Moon
 st_hide_chimera_name,Chimera Hide
-st_bolt_carrier_3,Sliding Bolt Carrier with Turning Bolt Lock [NATO] (Carrier)
+st_roubles,Roubles
 st_rank_ssu,SSU
 st_prt_o_retardant_9,Polymer Sheets (Mismuth-sulfate Coating)
-st_af_ah_s1,Aroth-8
+st_yadylin,Yadulin
 st_wpn_mp7,MP7
-st_freedom_manual_1_of_2_name,Interrogation Techniques: The Basics (Part 1 of 2)
+st_barrel_7,7.62mm Barrel [A|V] (Barrel)
 cs_scientific_outfit_good_name,CS-4a Pathfinder
 st_wpn_benelli_m1014,M1014
 merc_wolven_outfit_name,Mercenary STS-W Body Armor
@@ -103,11 +105,11 @@ st_wpn_ak74u_n1,AKS-74U
 st_drink_crow,Tea "The Beak"
 st_rank_sniper,Sniper squad
 st_wpn_kiparis,OTs-02 Kiparis
-Unknown,Unknown
-st_device_torch_nv_1_name,Headlamp w/ 1PN93-1 Night Vision
-csky_novice_outfit_name,Clear Sky Leather Jacket
+ui_inv_recoil,%c[pda_white]Recoil Control:
+st_device_torch_nv_3_name,Headlamp w/ Oracle Psi-stimulator
+st_detector4,Svarog Detector
 st_glucose,Large Glucose Shot
-st_prt_o_ballistic_17,Polyethylene Fiber Layers w/ Polycarbonate Inserts
+st_af_ice_name,Snowflake
 novice_outfit_camo_name,Firearm Enthusiast's Jacket
 st_flask,Flask (Clean Water)
 stalker_drought_outfit_name,"Drought" Stalker Suit
@@ -120,13 +122,13 @@ BR6,BR6
 st_wpn_scar_siber_m2,FN SCAR-H "Expert Operator"
 helm_spartan,Cz-M10 Spartan Helmet
 st_wpn_desert_eagle_nimble,Desert Eagle "Steppe Eagle"
-merc_nosorog_outfit_name,Mercenary Nosorog
-st_af_kislushka_name,Sourpuss
+st_detector3,Veles Detector
+st_meat_psysucker,Psysucker Goulash
 st_bolt_10,Rotating Locking Head [8 Locks] [¿] (Bolt)
 st_bolt_2,Rotating Locking Head [2 Locks] [P] (Bolt)
 mutant_burer_hand,Burer Hand
 st_data_export_disassemble_amount,Amount
-st_upgr_w_internal,Weapon Mechanism Upgrade Kit
+st_armor_repair_fa,Armor Repair Kit (Emergency)
 st_af_ah_e1,Souvenir
 st_data_export_stash_chance,Chance %
 st_recipe_drug_4,Drug Recipe #4
@@ -144,22 +146,26 @@ st_heavy_sewing_thread,Field Armor Toolkit
 st_wpn_ak12_m1,AK-12
 st_jgut_zhgut,Tourniquet
 scientific_outfit_name,SEVA Bodysuit
-st_wpn_bm16_full_alt_23,TOZ-34 "Bear"
+st_af_baloon_descr,A compound of several hollow organic formations, this artefact emits a gaseous substance that can neutralise chemical or toxic particles inside the body without harming it. Thus providing a a great level of toxic and chemical protection. \nIt also has a constant temperature regardless of its surroundings. This allows it to absorb heat from its vicinity and to create a little pocket around the user which prevents the flames from damaging the body. \nApart from that Bubble, however, possesses numerous negative properties. For example, it greatly amplifies the effects of psy-waves as well as fields produced by mutants and anomalies. This disadvantage is not to be taken lightly: some stalkers have reported that psy influence was so potent when in possession of a Bubble that they felt their heads cracking from the inside and the only thing they could do was scream in pain and run as far as they could. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+st_af_night_star_descr,This glowing artefact can generate a local directed low-gravity field. Widely used by stalkers along with Gravi, a similar artefact, to increase maximum load. \nDue to its beautiful inner core it is highly sought after by jewellers all over the world, however it is best to proceed with caution as unskilled treatment can cause the artefact to explode with power sufficient to level a small building. It is thus highly advised to perform the polishing by means of specialised machinery, which minimises the probability of explosion. Moreover, only the outer core of the artefact emits radiation. \nNightstar will also absorb toxic and chemical agents from the environment, which makes it a valuable artefact for artefact hunters, although the amount of toxicity absorbed is negligible. It is, however, relatively cheap and even stalkers with pretty tight budgets can afford it if opportunity to buy it arises. \nThat being said, Nightstar emits odour of burning flesh when in the closest proximity of heat source. Prolonged exposure may enhance its flammability and cause it to ignite. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_gas_tube_11,Gas Tube [PP] (Gas Tube)
 st_trigger_components_1,Single-mode Hammer Type Trigger (Trigger)
 st_af_cocoon_name,Cocoon
 st_data_export_heavy_attack_power,Heavy Attack Power
-dolg_pantsir_outfit_name,PSZ-7p Shell Armor
+BR2,BR2
 ui_inv_outfit_chemical_burn_protection,%c[0,255,255,255]Chemical Res:
 st_wpn_toz34_mark4_23,TOZ-34 "Chimera Hunter"
 st_kolbasa,Doctor's Sausage
 st_af_cooler_name,Body Cooler
 st_device_flashlight,Flashlight
+st_af_ah_o2_descr,An artefact created in fire anomalies consisting of mostly iron, bismuth, cadmium and nickel. If broken, the interior resembles an infinite fractal.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
 mutant_pseudogigant_hand,Pseudogiant Hand
 st_wpn_sig226_226sig_kit,SIG P226R Custom
+st_af_lighthouse_descr,The Beacon, or Lighthouse, is a yo-yo-shaped fibrous mass containing a very dense, continuously orbiting ball. If its user kills another being, they will be instantly teleported to the exact place where the victim's life ended.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_wpn_toz34_bull,TOZ-34 "Bull"
 mutant_flesh_meat,Flesh Meat
-st_jar,Plastic Jar
+st_af_eye_descr,This artefact, which resembles the human eye, considerably increases metabolism of the body, helping wounds heal quicker. Experienced stalkers say that Eye also brings luck. Irrespective of the validity of that statement, its positive effects are indeed quite potent. \nThis artefact soothes the pain and is extremely useful when treating wounds. \nWhen worn, it is known to slightly counter harmful effects of psy-anomalies or psy-waves of certain mutants. \nThese beneficial qualities, however, come at a price. This artefact is extremely dangerous when exposed to chemical anomalies as it amplifies their toxicity and increases their potency. It is hence highly recommended to keep the artefact in your backpack, never on the body, when exploring toxic areas unless you have a death wish. \nThe artefact is also known colloquially as "copper eye" as it conducts electricity and amplifies its dangerous effects in the same way as copper does. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+st_wpn_svu,OTs-03 SVU
 st_sewing_thread,Sewing Thread
 st_af_compass_name,Compass
 st_wpn_usp_tac45,HK USP Tactical .45 ACP
@@ -175,20 +181,23 @@ st_af_ball_name,Ball
 st_hide_controller_name,Controller Scalp
 banditmerc_outfit_name,Fenced LC Suit
 st_data_export_stash_item,Item
+st_af_tlf_lost_soul_descr,Although this artifact resembles a common Soul artifact, it possesses extraordinary properties. It provides greater telepathic protection and has no negative effects.
 st_wpn_fal_sa58_osw,SA-58 OSW
 st_axe,Hunting Axe
 st_wpn_rapide,Kimber Rapide .45 ACP
 st_prt_w_p_spring_2,9mm Recoil Spring Assembly [Russian] (Spring)
 st_af_dummy_glassbeads_name,Mama's Beads
-st_prt_o_retardant_15,Activated Carbon Cloth (ACC) Fabrics
+st_af_vyvert_descr,This bizarrely-shaped artefact appears in places with increased gravitational activity. \nAlthough it appears almost organic, it is actually more similar to coral. Due to its gravitational nature, It provides protection against physical impacts as it greatly reduces the friction caused by fast objects. \nActing as a kind of sponge that absorbs chemical and toxic elements as well, this artefact provides protection from external toxic agents as well as from chemical particles that have already made their way into the body. \nWrenced can generate a locally directed gravity field which increases its mass. For this reason, this artefact is heavy. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+st_af_dummy_battery_descr,\nThe artefact is quite popular in the Zone and is valued by its residents and visitors alike for its energizing properties, although it has an adverse effect on the body when used for prolonged periods of time. \nOne should take note, however, that this artefact hinders blood clotting and increases bleeding rate of open wounds. On the other hand, being a powerful resistor, it is well known for its ability to shield its user from lethal doses of electricity. \nBeing an artefact of electric nature, it is well known for its ability to shield its user from lethal doses of electricity. On the contrary, it should be noted that Battery absorbs heat and is able to convey it to other objects. \nThis artefact is also extremely light and very portable. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_af_grid_name,Titanium Grid
-st_prt_o_retardant_2,Layered Chemical/Shock Retardant Fabrics
+dolg_heavy_outfit_name,PSZ-9d Body Armor
+st_af_sponge_descr,Sponge has always been under debate among the Ecologists. Some suggest that this artefact is driven from basic form of organisms, while others believe its an advanced life form with self-awareness inherited from living creatures. \nDespite the theories surrounding the artefact, all can agree on one thing: it moves. The sponge sometimes tries to "grab" an object it touches. Putting it in a container might be a hard task, as if it wants to escape. \nThis artefact acts as a powerful resistor and will absorb even lethal doses of electricity. On the other hand, it will catch fire when exposed to open flame or even spontaneously combust. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_data_export_stash_type_rare,Rare
 st_wpn_grach,MP-443 Grach
-army_nosorog_outfit_name,Military Stalker Nosorog
+st_itm_mapkit_6,Anomaly Map (Jupiter)
 st_wpn_toz34,TOZ-34
 stalker_bear_outfit_name,"Bear" Stalker Suit
-st_gamma_recipe_basic_2,Electronics Handbook Vol. 1
+st_af_electra_flash_descr,This artefact is very similar in appearance to Moonlight and resembles a plasma globe or a plasma lamp. \nBeing a powerful resistor, it is well known for its ability to shield its user from lethal doses of electricity. \nWhen worn, it is known to slightly counter harmful effects of psy-anomalies or psy-waves of certain mutants. Flash acts as a powerful resistor and will absorb even lethal doses of electricity. \nHowever, it also hinders healing process, thus caution is advised especially when wounded or bleeding. This artefact is also extremely light and very portable. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_wpn_sr1mp_new,Serdyukov SR-1MP Gyurza 9x21 pistol
 trenchcoat_brown_outfit_name,Heavy Brown Overcoat
 ammo-9x19-ap,9x19 mm AP rounds
@@ -199,7 +208,7 @@ st_af_camelbak_up_name,Improved Camelbak
 ammo-7.62x51_ap,7.62x51 mm NATO AP rounds
 trenchcoat_green_outfit_name,Heavy Green Overcoat
 st_tushonka,Beef Tushonka
-st_data_export_used_in_cooking,Used in cooking
+mutant_fracture_hand,Fracture Hand
 st_wpn_raptr,RAPTR
 st_drug_antidot,Antidote
 st_wpn_tt33_custom,““-33 7.62x25 ““
@@ -208,10 +217,10 @@ st_knife_6x4,6h4 Bayonet
 ui_inv_satiety,%c[0,255,255,255]Satiety:
 merc_outfit_name,Mercenary LC Suit
 st_wpn_ppsh41,PPSh-41
-greh_exo_outfit_name,Vyraj Power Armor
+st_wpn_aug_a1,Steyr AUG A1
 st_prt_w_p_barrel_3,.45 Barrel (Barrel)
 st_salicidic_acid,Metamizole Ampoule
-st_monolith_prayer_3_of_3_name,Monolith Prayer (Part 3 of 3)
+st_monolith_prayer_1_of_3_name,Monolith Prayer (Part 1 of 3)
 ammo-338-lapua,.338 Lapua Magnum rounds
 mutant_boar_chop,Boar Chop
 st_wpn_scar_siber_black,FN SCAR-H "Black"
@@ -228,7 +237,7 @@ st_bolt_11,Supercharger with Hammer from a Double-barrel Shotgun [R] (Bolt)
 st_wpn_vityaznew,PP-19-01 Vityaz
 st_bolt_7,Rotating Locking Head [4 Locks] [AS] (Bolt)
 specops_merc_outfit_name,Mercenary B-5M Armored Suit
-mutant_krovosos_meat,Bloodsucker Meat
+st_wpn_dvl10,DVL-10 M2 Urbana
 st_wpn_sig220_n_u2p2g0r,SIG P220 "Stalker"
 st_rebirth,Axyltallisal "The Rebirth"
 specops_dolg_outfit_name,PS5-B Battle Armor
@@ -244,8 +253,9 @@ st_tea,Beard's Tea
 exo_outfit_name,Exoskeleton
 st_drug_coagulant,Vinca
 st_wpn_ks23_kaban,KS-23M Drozd
-ammo-12x76-dart,12x76 AP slugs
-st_e_syringe,Syringe
+st_welding_goggles,Welding Goggles
+st_data_export_description,st_data_export_description
+st_af_black_descr,Truly, an amazing thing. The Black Stone protects against broadly considered adversity but instead is slowly killing the owner. Some stalkers suspect the artefact is a shard of the Monolith.
 st_prt_w_p_trigger_3,Double-action (DA/SA) Trigger Mechanism (Trigger)
 st_prt_o_ballistic_6,Kevlar AP Plates w/ Reinforced Titanium Composite
 bandit_novice_alt_outfit_name,Armored Leather Jacket
@@ -256,7 +266,7 @@ st_upgr_o_magical,Suit Environmental Protection Upgrade Kit
 st_wpn_mk47,CMMG Mk47 Mutant
 st_drug_anabiotic,Anabiotics
 st_af_medusa_name,Jellyfish
-mutant_tusk_boar,Boar Fang
+st_stim_military,Military Stimpack
 ghillie_outfit_name,Ghillie Suit
 st_wpn_ak103,AK-103
 st_gas_tube_10,Ejector from Over-under Double-barrel Shotgun [R] (Gas Tube)
@@ -264,38 +274,40 @@ st_ground_coffee,Ground Coffee
 military_monolit_outfit_name,Monolith Skat-9 Armored Suit
 st_wpn_pp2000_oper,PP-2000 "Operator"
 st_data_export_jump_height,Jump height
-st_powder_mag,Large Rifle Propellant
+st_af_serofim_descr,An electrical artefact that generates a magnetic field. It is made up of several translucent, blue layers surrounding a bright center. If its bearer were to be suddenly killed, this artefact would take their place and allow the user to go on living.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_wpn_groza_guns_nimble,OTs-14 Groza "Storm"
-st_salmon,Smoked Salmon
-st_itm_sleepbag_name,Sleeping Bag (Full)
+st_af_medallion_descr,An artefact unique in that it appears almost man-made. It is a green ring with 4 lobes rotating around a central core. Sometimes, when the wearer of the Medal is injured, their injury will be completely transferred to another person nearby.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+st_af_kislushka_descr,A hollow spherical formation resembling a transparent parchment covered with a layer of film. Pleasant to the touch. This artefact will drastically speed up the process of blood clotting, though this will also lead to the user needing more food to replenish the energy that it takes.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_equ_milpack_name,Combat Backpack
 st_data_export_stash_map,Map
 st_itm_mapkit_5,Anomaly Map (Truck Cemetery)
 st_data_export_post_heal_head,Post-Heal Head
 st_compression_bag,Sleeping Bag (Empty)
 st_wpn_pl15_upgr,Upgraded Lebedev PL-15 9x19 pistol
-st_guitar_name,Guitar
+st_wpn_guns_groza,OC-14 Groza
 st_detector2,Bear Detector
 l11_hospital,Deserted Hospital
 l06_rostok,Wild Territory
 st_ui_number_of_uses,Uses
+st_af_repei_descr,A relatively common sight within gravitational anomalies, this artefact resembles the Thorn, an artefact not discovered in many years. While the Thorn caused bleeding to its user, the Thistle causes it to their enemies, impeding clotting and thinning blood.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_wpn_walther_p99_mod9,Walther P99 Custom
 st_af_skull_miser_name,Miser's Skull
-bandit_nbc_outfit_name,Load-bearing 'Sunset' Tactical Suit
+renegademerc_outfit_name,Renegade LC Suit
 light_isg_outfit_name,UNISG IBAz Suit
 st_barrel_1,18.5mm Barrel [R] (Barrel)
 exo_dolg_wood_outfit_name,PSZ-10l Forest Battlesuit
 st_gamma_recipe_advanced_1,Survival Guide Vol. 2
-ui_inv_outfit_fire_wound_protection,%c[0,255,255,255]Ballistic Res:
-svoboda_heavy_outfit_name,Guardian of Freedom
+st_medkit_science,Scientific Medkit
+merc_fighter_outfit_name,Mercenary LC-F Suit
 st_wpn_remington870,Remington 870
 ui_mcm_menu_exo,Powered Exos
 st_medkit_army,Army Medkit
 st_grenade_rgd5,RGD-5 Grenade
-freedom_nosorog_outfit_name,Champion of Freedom
+st_gas_tube_9,Ejector from Over-under Double-barrel Shotgun [R] (Gas Tube)
 st_prt_o_retardant_20,Insulating Fiberglass "Satin Weave" Fabrics
 st_knife_combat,M9 Bayonet
 st_af_ah_e2,Souvenir
+st_af_soul_descr,Soul is a unique organic artefact with properties just as unique: it secretes slimy goo that dramatically increases recovery rate of wounds. Thanks to its reasonable price and attractive appearance, this artefact is a valuable collector's item. \nApplying its gooey substance to wounds will soothes the pain and speeds up healing process. \It also reduces the effects of psy-waves and their damage to one's brain. But it should be known that Soul drains power from its user. The artefact does not have high density and thus is not very heavy. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_wpn_mk14,Mk 14 EBR
 st_af_vaselisk_name,Basilisk
 st_wpn_sv98_custom,SV98
@@ -303,11 +315,12 @@ st_af_chelust_name,Chain
 st_swiss,Swiss Knife
 st_wpn_akms,AKMS
 st_wpn_bm16_full,TOZ-66
+st_af_ah_f1_descr,A never-before-seen artifact with remarkable properties. It seems to be of organic origin and is very symmetrical; an unusual property for artifacts found in the Zone. It increases the structural and tensile strength of any material it comes in proximity with. Eerily, it seems to release barely audible and unintelligible whispers.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
 st_cuban_cigar,Cuban Cigar
 isg_exolight_outfit_name,UNISG Exosuit
 st_af_aam_name,Artefact Application Module (Empty)
 st_wpn_fn2000e_nimble,FN F2000 "Competitor"
-isg_lcs_camo_outfit_name,UNISG LC-C Suit
+st_af_cristall_descr,This artefact is formed in anomalous zones with intense thermal activity. Actively consumes excessive heat and remains cool at all times. \nIt will also protect the user against electrical currents. On the other hand, exposure to such environments makes the artefact increase the conductivity due to unknown as of now mechanism. For this reason, one is forced to weigh pros and cons of Crystal when in the vicinity of areas of high conductivity. \nThis artefact is also highly sought for by jewellers outside the Zone as its inner core is not radioactive and considered to be of exceptional beauty if polished and refined. Only the first 1 cm of its outer layer emits radiation. \nIt is, however, highly advised to proceed with caution when planning to bring the artefact to the market as prolonged exposure to even minimal amounts of radioactive materials can result in death of the user. Covered with very hard layer. Relatively heavy due to high density. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_af_black_name,Black Stone
 nbc_dolg_outfit_name,PS5-Mt Suit
 st_upgr_w_external,Weapon Body Upgrade Kit
@@ -326,8 +339,8 @@ ammo-og-7b,OG-7V warhead
 st_helm_exo_name,ExoHelmet
 st_wpn_g3sg1,G3SG1
 helm_ach7ex,ACH-7EX Headgear Set
-st_letter_military_log_name,Communication Log / MSRC Operation / 05.04.2014 18:36:21
-st_af_gimlet_name,Gimlet
+st_bolt_16,Drummer with Mainspring [PP] [NATO] (Bolt)
+st_wpn_m4_tac,M4A1 "Protector"
 nbc_freedom_outfit_name,Keeper of Freedom
 mutant_controller_hand,Controller Hand
 st_prt_o_retardant_16,Active Charcoal-treated Non-woven Fabrics
@@ -341,15 +354,16 @@ st_memoirs_2_of_2_name,A Stalker's Journal (Part 2 of 2)
 ammo-5.45x39-fmj,5.45x39 mm FMJ rounds
 st_wpn_beretta_px4,Beretta Px4 Storm
 st_wpn_ak105_shakal,AK-105 "Shakal"
-BR5,BR5
+st_af_fireball_descr,It is a spherical artefact made of red-coloured crystal, created in the Burner anomaly. \nIt has an unique property: it has a constant temperature of 75 degrees Fahrenheit/24 degrees Celsius, regardless of its surroundings. This allows it to absorb heat from its vicinity and to create a little pocket around the user which prevents the flames from damaging the body. \nA dangerous effect of this artefact is the fact that it will increase electrical conductivity, so the probability of electrocution while wearing this artefact is much higher, especially during storms and in the vicinity of electrical anomalies.It is quite heavy due to high density of crystal-like material. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 helm_ach7,ACH-7 Headgear Set
 st_itm_artefact_container_name,Artefact Container
 st_cigar2,Cigarettes (Soviet)
 st_recipe_drug_2,Drug Recipe #2
+st_af_ball_descr,A spherical artefact formed in electrical anomalies under unknown conditions. Very bouncy. If a person equips it and then kicks a mutant of the Zone, the artefact will smite the mutant, using its potential energy to send it flying.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_chocolate_p,Chocolate (Half-consumed)
 st_prt_o_ballistic_11,Kevlar K119 Plates
 st_prt_o_retardant_18,Insulating Constantan Inserts w/ Fiberglass Coating
-st_af_electra_sparkler_name,Sparkler
+st_helm_protective,SSP-99 Screen Helmet
 l10_limansk,Limansk
 st_af_sandstone_name,Sandstone
 st_bolt_6,Rotating Locking Head [2 Locks] [¿] (Bolt)
@@ -365,8 +379,8 @@ mutant_snork_leg,Snork Tendons
 light_loner_outfit_name,Interceptor Body Armor
 st_balon_gas,Gas Balloon
 st_prt_o_ballistic_7,Kevlar K119 Plates w/ Polycarbonate Inserts
-ammo-9x19-fmj,9x19 mm FMJ rounds
-st_af_elektron_name,Electron
+ammo-9x18-fmj,9x18 mm FMJ rounds
+st_detector9,RF Receiver
 st_af_monolith_name,Volat Emerald
 st_af_kevlar_up_name,Improved Kevlar Plates and Attachments
 st_beadspread,Bed Spread
@@ -375,12 +389,12 @@ st_drug_psy_blockade,Psy-block
 st_meat_boar,Boar Chops
 st_af_tlf_prometheus,Prometheus
 st_powder_poltergeist,'Diamond Powder'
-ammo-5.56x45-ss190,5.56x45 mm HP rounds
+ammo-7.62x54-7n1,7.62x54 mm 7N1 rounds
 renegade_scientific_outfit_name,Renegade SEVA Suit
 st_binocular_name,Binoculars
 st_wpn_pp2000n,PP-2000
 st_hide_flesh_name,Flesh Hide
-ammo-4.6x30-fmj,4.6x30 mm FMJ rounds
+merc_exolight_outfit_name,Mercenary Exosuit
 l03u_agr_underground,Agroprom Underground
 st_barrel_9,5.56mm Barrel [¿] (Barrel)
 monolith_nbc_outfit_name,Tactical Monolith Suit
@@ -412,19 +426,21 @@ st_prt_o_ballistic_20,Reinforced Carbon-fiber Layers
 ui_inv_effect_time,%c[0,255,255,255]Duration:
 ammo-9x19-pbp,9x19 mm HP rounds
 #1,#1
+st_af_gravi_descr,Gravi is formed from metallic substances exposed to prolonged gravitation. This makes it capable of sustaining an powerful anti-gravitational field, which causes it to have various properties, among others reducing weight of all objects in its close proximity. For a long time, the artefact was a mystery, and it was scientist Sakharov at Yantar who first discovered that Gravi creates a minute singularity field of anti-gravitational nature, the phenomenon which occurs in intervals of 30 minutes. \nA dangerous effect of this artefact is the fact that it will increase electrical conductivity, so the probability of electrocution while wearing this artefact is much higher, especially during storms and in the vicinity of electrical anomalies. \nAnother downside is that it will increase the negative effects of psy-waves and is a potent conductor. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_wpn_desert_eagle,Desert Eagle
 st_underwear,Old Underwear
 k02_trucks_cemetery,Truck Cemetery
 st_wpn_ash12,ShAK-12
 st_bolt_carrier_8,Choke from Double-barrel Shotgun [R] (Carrier)
 st_af_ah_r2,Mushroom
-dolg_scientific_red_outfit_name,PS5-9Md Light Scientific Suit
-cs_exo_outfit_name,CS-5 Exoskeleton
+merc_combat_scientific_outfit_name,Mercenary Pathfinder
+st_af_cocoon_descr,A lattice-like structure with a film covering the gaps, formed in gravitational anomalies. When equipped, it causes the skin to temporarily harden in response to physical trauma, impeding mobility but reducing harm.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_helm_tactic,Sphere-08 Helmet
 st_data_export_disassemble_item,Item
 st_wpn_remington700,Remington 700
-st_recipe_drug_3,Drug Recipe #3
+st_prt_i_wood,Wooden Parts
 merc_scout_outfit_name,Mercenary LC-S Suit
+st_af_compass_descr,A very rare artefact. It's been several years since one was found. \nIt can locate gaps in anomaly fields. It is believed that it can help one traverse the most complex anomaly fields completely unharmed. However, very few know how to handle it properly. \nThe Compass showed few unique properties under last experiments. It can interact to moving objects, causing some to completely disappear. Or perhaps teleport? \nIt also weakens the body by draining stamina and increasing bleeding rate constantly. But the biggest draw however, is the dangerous radiation output this artefact emits comparing to the artefact radiation scale. \nHolding this artefact near the body will cause death in matter of few minutes.
 st_prt_o_retardant_19,Insulating Fiberglass "Polyester" Fabrics
 monolith_scientific_light_outfit_name,Monolith Patchwork Science Suit
 st_breadold,Bread Loaf (Stale)
@@ -432,6 +448,7 @@ st_wpn_aps,APS Stechkin
 st_data_export_weapon_kind_rifle,Rifle
 labx8,Laboratory X8 (Outskirts)
 st_itm_ammokit,Gunsmithing Tools
+st_af_gold_fish_descr,Direct successor to and a superior version of Gravi artefact. As was the case with Gravi, it was scientist Sakharov at Yantar who discovered its unique properties after a massive blowout/emission hit the Zone. \nThanks to meticulous research that followed, it was established that this new artefact is produced when three Gravi artefacts interact and get sucked into one another's singularity fields. This phenomenon is extremely rare, due to which the artefact is highly valued. \nIt is rumoured within Ukrainian Spetsnaz circles that in the Zone there are agents from the Ministry of Defence of the Russian Federation whose sole objective is acquiring and transporting Goldfish to specialised laboratories located outside of the Zone. \nThe artefact creates a constant anti-gravitational singularity field which affects only its closest vicinity. However, some stalkers have been known to disappear for no apparent reason leaving only a Goldfish behind. \nBig downside, however, comes along with this powerful anti-gravitational field: the velocity of moving objects inside its radius will rapidly increase, causing dangerous impacts on surrounding objects, including the holder. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_bolt_17,Drummer with Mainspring [PP] [PPSh] (Bolt)
 st_data_export_first_aid_head,First-Aid head
 army,Military
@@ -449,6 +466,7 @@ st_cigarettes_lucky,Cigarettes (Lucky Strike)
 redline_novice_outfit_name,Redline Leather Jacket
 st_af_lobster_eyes_name,Lobster Eyes
 st_antibio_chlor,Chlortetracycline
+st_af_sandstone_descr,Formed in anomalies of extreme temperatures. Contains trace amounts of gold.\n \n %c[pda_white]PROPERTIES:\n
 st_wpn_vintorez_n1,VSS Vintorez
 st_prt_o_ballistic_8,Kevlar K119 Plates w/ Carbon-fiber Inserts
 st_wpn_mosin_k,Mosin Nagant
@@ -468,15 +486,15 @@ stalker,Free Stalkers
 st_rank_experienced,Experienced
 st_coffee_drink,UCC Cold Brew Coffee
 st_equ_smilpack_name,Travel Backpack
-st_flashlight_broken,Broken Flashlight
+svoboda_exolight_outfit_name,Warrior of Freedom
 st_af_black_spray_name,Black Spray
 st_wpn_hs2000,HS2000
-light_dolg_outfit_name,IBAz Universal Protection Suit
+st_prt_o_ballistic_12,Reinforced Kevlar K119 Plates
 bandit_scientific_dark_outfit_name,Patchwork Anomaly Suit
 st_data_export_has_perk,Has perk
 st_wpn_sig220_n,SIG P220
 ui_inv_outfit_telepatic_protection,%c[0,255,255,255]Psychic Res:
-st_wpn_vihrn,SR-3M Vikhr
+st_detector8,Anomalous Measurement Device
 st_data_export_weapon_degradation,W. Degradation
 st_wpn_sr2_veresk_sr2_upkit,SR-2M Veresk "Tactical"
 dolg_heavy_proto_exo_outfit_name,PSZ-9d Exoskeleton
@@ -488,25 +506,26 @@ k00_marsh,Great Swamps
 stalker_outfit_name,"Sunrise" Stalker Suit
 monolith_exo_outfit_name,Monolith Exoskeleton
 ammo_23_eco,Ecolog-23 cartridge
-st_addon_scope_e0t2,EOTech XPS3-0
+monolith_trenchcoat_outfit_name,Monolith Overcoat
 st_wpn_streetsweeper_aim,Armsel Protecta
 st_antiemetic,Etperazine
+st_af_elektron_descr,A room-temperature superconductor generated in electrical anomalies. When worn, an Electron will reroute excess electrical energy into nearby batteries, capacitors, and the like. It also allows this energy to be used physically by its user.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_wpn_glock_modern,Glock 19 "Hornet"
 st_porn,Terroraiser Magazine
 ui_st_community,Faction
 st_wpn_val_tac,AS Val
-monolith_nosorog_outfit_name,Monolith Nosorog
+gamma_shock_cap,Electrical Cap
 ammo-12.7x55-fmj,12.7x55mm STs-130 rounds
 st_bolt_3,Rotating Locking Head [2 Locks] [K] (Bolt)
 st_glue_e,Glue Tube "M17"
 st_hide_boar_name,Boar Pelt
 st_data_export_restore_radiation,Radiation restoration
-st_recipe_drug_1,Drug Recipe #1
+specops_bandit_outfit_name,Deserter's B-5M Armored Suit
 mutant_dog_meat,Dog Meat
 cs_scientific_outfit_name,CS-4a SEVA Suit
-st_addon_scope_razor_mag,UH-1 w/ Eotech 6x Magnifier
+st_ration_ukr,Ukrainian Combat Ration
 st_bolty,Bolt
-exo_dolg_outfit_name,PSZ-10d Duty Battlesuit
+st_af_atom_descr,A beautiful artefact that consists of four small, multicolored spheres orbiting a larger translucent center. It gives off a slight amount of heat and can convert small doses of radiation in the body into usable energy.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 ammo-11.43x23-fmj,.45 ACP FMJ rounds
 mutant_zombi_hand,Zombie Hand
 st_wpn_beretta_new,Beretta M9A3
@@ -517,16 +536,17 @@ st_ecologist_outfit_white_name,SSP-99 "Diamond"
 l08u_brainlab,Laboratory X16 (Yantar)
 st_wpn_m60,M60
 st_wpn_fnp45,FNP-45
-st_gamma_recipe_basic_3,Fundamentals of Guns and Armors Upgrades Vol. 1
+st_af_kogot_descr,A beautiful glass-like formation from electrical anomalies. Contrary to its delicate appearance, it imbues its user with a primal bloodlust, strengthening them in hand-to-hand combat. \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_wpn_ak5c_bas_5c_tik,AK 5C "ISG Special"
 st_af_ear_name,Heart
-stalker_predator_outfit_name,"Predator" Stalker Suit
+st_af_iam_name,Improvised Application Module (Empty)
 st_barrel_3,18.5mm Barrel [K] (Barrel)
 st_gamma_recipe_expert_4,The Art of Artefacts Fusion Vol. 3
-st_jewelry_box,Decorated Jewellery Box
+st_gas_tube_7,Gas Tube [P] (Gas Tube)
 ui_inv_outfit_radiation_protection,%c[0,255,255,255]Radiation Res:
 st_wpn_dvl10_m1,DVL-10 M1 Saboteur
-isg_proto_exo_outfit_name,UNISG Tactical Exoskeleton
+st_af_fire_descr,This artefact forms in areas of high thermal activity. Produces powerful infrared emissions which intensify metabolic processes, healing wounds before its bearer's very eyes. \nIts healing capabilities are even stronger than in case of the Eye as stalkers in possession of this artefact are said to have survived being wounded by chimeras. Thanks to that, it has earned the reputation of a miraculous artefact. \nMany stalkers owe it their lives, and most veteran mutant hunters carry it in case they run into danger. However, it shares not only positive but also negative properties of its cousin: entering a psy-field with this artefact on the belt is suicide. It will absorb psy energy and emitting it at a considerable rate. \nAlso, it is highly advised to proceed with caution when planning to bring the artefact to the market as prolonged exposure to even minimal amounts of radioactive materials can result in death of the user. \nIt can also be used as a reusable medkit of sorts since it heals wounds very quickly. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+st_wpn_toz34_obrez,TOZ-34 (Sawn-off)
 trenchcoat_freedom_brown_outfit_name,Heavy Freedom Overcoat
 st_rank_expert,Expert
 st_rank_rg6,RG6 squad
@@ -538,27 +558,30 @@ st_wpn_scar_siber_m2_custom,FN SCAR-H "Specialist Operator"
 ammo-m209,M203 grenade
 gamma_telepatic_cap,Psychic Cap
 st_equ_smallpack_name,Camping Backpack
-st_wpn_ithacam37_extmag,Ithaca M37 Defense
+st_af_ah_g2_descr,A lump of shriveled clay and organic debris. Separation of individual lumps of material seems impossible, due to the presence of some unknown and incredibly strong binding agent. Gives off a slightly disorienting effect that is known to cause headaches.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
 st_wpn_fn2000_custom,FN F2000
 pripyat,Outskirts
 st_prt_o_retardant_10,Polymer Sheets (Barium-sulfate Coating)
 st_mre,MRE
 st_af_ah_r3,Mushroom
-ammo-12x76-zhekan,12x76 slug shells
+st_af_oasis_heart_descr,This artefact was found at the centre of the legendary Oasis. It appears that the Heart is a crystallised plant, which has acquired the healing properties of the Oasis. \nNot only it dramatically increases recovery rate of wounds and healing process, but also provides the body with strong source of energy. It is a true miracle. \nThat being said, the Oasis is very sensitive to outer sources of energy and surrounding environment. For this reason, interacting with anomaly fields will bring death to the holder. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+l12u_sarcofag,Sarcophagus
 st_wpn_remington700_archangel,Remington 700 "Archangel"
 st_hide_lurker_name,Lurker Hide
 st_prt_w_p_barrel_2,9x19mm Barrel (Barrel)
 st_wpn_ak74_pmc,AK-74 "PMC"
 ecolog_proto_exo_outfit_name,SSP-99M Exoskeleton
-dolg_proto_exo_outfit_name,PS5-M Exoskeleton
+cs_nbc_outfit_name,CS-2t Suit
+st_af_bracelet_descr,Bracelet is formed from common species of bryophytes plants under high exposure to radioactive and chemical anomalies, which explains its organic nature. \nIt provides substantial protection against all types of acids by gradually increasing their pH to the level of water (pH of 7). \nWhen worn, the artefact is also known to slightly counter the harmful effects of psy-anomalies or psy-waves of some mutants. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_bottle_metal,Vodka
 st_gamma_recipe_advanced_3,Fundamentals of Guns and Armors Upgrades Vol. 2
 st_ecologist_outfit_blue_name,SSP-99M "Sapphire"
 st_cigar1,Cigarettes (Soviet)
-bandit_novice_outfit_name,Black Leather Jacket
+st_prt_i_paper,Paper Sheets
 st_wpn_ak101,AK-101
 ammo-5.7x28-ss195,5.7x28 mm SS195 rounds
 zaton,Zaton
+st_af_spaika_descr,A gravitational artefact that resembles a Meat Chunk and a Jellyfish fused together. If its bearer makes continues hits with a weapon, they will become increasingly more effective. If the user misses, however, it will shock their nervous system.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_data_export_disassemble_result,Result
 mutant_part_controller_brain_tissue,Controller Brain Tissue
 st_wpn_aks,AKS-47
@@ -575,11 +598,11 @@ st_wpn_ak,AK-47
 st_data_export_stash_ecos,Allowed Ecos
 st_wpn_spas12_new,SPAS-12
 st_af_fire_loop_name,Knot
-st_gamma_recipe_basic_1,Survival Guide Vol. 1
+st_af_kogot_name,Claw
 st_prt_o_ballistic_9,Grade-B Polyethylene Plates w/ Expanded Carrier
 st_af_vyvert_name,Wrenched
 st_af_sponge_name,Sponge
-st_itm_tent_name,Camping Tent (Full)
+st_af_dummy_dummy_descr,Shell is composed of two disk of bluish colour connected by semitransparent material of unknown nature. \nThis strange artefact was considered devoid of any useful properties by many scientists for a long time. Only recently has it been discovered that it is indeed quite beneficial. \nWhen the artefact comes into contact with the body, it will make one feel rejuvenated and thus it increases stamina recovery. This effect has in case of some stalkers induced hyperactivity. One downside of this artefact, however, is that it reduces the number of platelets in blood, thus increasing bleeding rate. \nIt provides a considerable level of psy protection and absorbs electromagnetic interference, acting as a grounding material. \nIt will catch fire when exposed to open flame or even spontaneously combust. Caution must be taken when approaching heat sources with this artefact. \nShell is extremely light and very portable. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 helm_m50,M50z Gas Mask
 mutant_lurker_meat,Lurker Meat
 l04u_labx18,Laboratory X18 (Dark Valley)
@@ -593,132 +616,197 @@ st_prt_w_p_spring_6,Recoil Spring Assembly (R1 DE 6") (Spring)
 st_wpn_mp153,MP-153
 st_wpn_toz106,TOZ-106
 wastelander_outfit_name,"Wastelander" Stalker Suit
-csky,Clear Sky
-st_addon_scope_razor,Razor AMG UH-1 Gen. II
+st_tetanus,Fentanyl
+st_prt_o_retardant_6,PVC/Carbon-fiber Fabrics
 st_data_export_weapon_kind_explosive,Explosive
 freedom_exo_vineleaf_outfit_name,Hero of Freedom
 greh,Sin
 st_wpn_saiga12s,Saiga-12
-ammo-gauss,Batteries
+mutant_snork_hand,Snork Hand
 st_bread,Bread Loaf
 merc_exo_outfit_name,Mercenary Exoskeleton
 st_prt_o_ballistic_13,Polyethylene Lightweight Armor Plates
+ui_ammo_types,Ammo:
+ui_inv_reli,%c[pda_white]Reliability:
+ui_ammo_count,%c[0,255,255,255]Mag. Size:
+st_wpn_bm16_full_alt,TOZ-66
+ui_inv_handling,%c[0,255,255,255]Handling:
+st_data_export_single_handed,Single-handed
 st_af_generator_name,Generator
 st_wpn_udp9,UDP-9 Carbine
+st_wpn_xm8,XM8
 st_wpn_ak74m_n,AK-74M
+st_wpn_admin,CAR-15 "Administrator"
 bandit_ps5_outfit_name,Fenced PS5-M Universal Protection Suit
+st_wpn_wa2000,Walther WA 2000
+st_wpn_vsk94,VSK-94
+st_wpn_vintorez_m2,VSS Vintorez "Venal"
 st_raisins,Raisins
-st_itms_campfire_name,Firewood
+st_wpn_vintorez_m1,VSS Vintorez "Savant"
+st_wpn_usp_tac,USP Match "Overwatch"
+st_wpn_mk23,HK MK23
+pda_encyclopedia_name,Name
+st_af_gravi_name,Gravi
+st_wpn_tt33_custom_upgr,Mangun's ““-33 7.62x25 ““
 ammo-7.92x33_fmj,7.92x57 mm FMJ rounds
+st_wpn_glock17,Glock 17
 st_af_moh_name,Moss
 st_memoirs_1_of_2_name,A Stalker's Journal (Part 1 of 2)
+military_exolight_outfit_name,Military Stalker Exosuit
 st_wpn_howa20,Howa Type 20
+st_wpn_toz34_mark4,TOZ-34 "Bison"
 dolg_nosorog_outfit_name,PSZ-10d Nosorog
+st_wpn_toz34_decor,TOZ-34
+st_wpn_toz34_custom,TOZ-34
 st_brewed_coffee,Brewed Coffee
-st_shovel_old,Old Metal Shovel
-st_bolt_carrier_11,Longitudinal-a Sliding Free Bolt Carrier [PP] (Carrier)
+st_wpn_svu_nimble,OTs-03A SVU-A
+dolg_red_outfit_name,PS5-M Hunter Suit
+st_wpn_p90,FN P90
 st_prt_w_p_barrel_7,.357 Barrel (Barrel)
 l12_stancia_2,Chernobyl NPP (North)
+st_rank_any,Any
 st_wpn_ak5c_bas,AK 5C
-st_gamma_recipe_advanced_2,Electronics Handbook Vol. 2
+st_prt_i_textolite,Textolite Base
+st_wpn_svt40_modern,SVT-40
+st_wpn_svt40,SVT-40
+st_wpn_rpk74,RPK-74
+st_wpn_sr1mp_las,Serdyukov SR-1MP Gyurza 9x21 pistol
 st_radio2,Radio (Broken)
+st_wpn_sr1mp_upgr,Upgraded SR-1MP Gyurza 9x21 pistol
+st_wpn_sks_tac,SKS Tactical
 gamma_burn_cap,Burn Cap
 st_meat_snork,Cooked Snork Hand
+st_wpn_sks_modern,SKS
+st_wpn_scar_siber_m1_black,FN SCAR-H "Tactical Black"
+st_wpn_scar_siber_m1,FN SCAR-H "Tactical"
 st_af_serofim_name,Seraphim
 st_itm_mapkit_2,Anomaly Map (Yantar)
 st_wpn_steyr_scout,Steyr Scout 5.56
 st_meat_dog,Dog Chops
 st_wpn_toz106_m1,TOZ-106
+mutant_brain_burer,Burer Brain
 st_wpn_sv98,SV98
 st_exolight_repair_kit,Armor Repair Kit (Heavy Armor)
 ammo-5.45x39-ap,5.45x39 mm AP rounds
 exo_dolg_red_outfit_name,PSZ-10d Venator Battlesuit
 st_metalcan_powder,Powder Can
-st_trigger_components_6,Trigger Mechanism with Hammer [R] (Trigger)
+st_wpn_remington700_mod_x_gen3,Remington 700 "MOD X Gen.3"
+st_prt_o_fabrics_2,Synthetic Cloth Sheets
+bandit_novice_outfit_name,Black Leather Jacket
+st_hide_bloodsucker_name,Bloodsucker Skin
+st_wpn_pmm_bas,Makarov PMM
+st_af_monolith_descr,The origins of artefacts such as this one are a mystery, as they are rarely found outside the northernmost parts of the Zone. \nThis unique artefact projects a non-contact field that inhibits nearbly anomalous phenomena. This grants the wearer a notable level of protection against most of the Zone's environmental hazards. It is also one of the few active artefacts that can be safely handled without lead containers. However, when you hold it your flesh feels dry and flaky, your bones hard and stiff, the ligaments in your joints squeaky and brittle. Thick armour or great supernatural vitality would be needed by anyone intending to wear this artefact into battle.
 st_data_export_first_aid_arm,First-Aid arm
 st_wpn_car15,CAR-15
+st_wpn_pm_bas_custom,Makarov PM Custom
 novice_outfit_tourist_name,Touristís Jacket
-stalker_salamander_outfit_name,"Salamander" Stalker Suit
+st_wpn_pm_bas_actor,Makarov PM "Mythic"
+st_af_fire_loop_descr,Created within a thermal anomaly. It has a bizarre tetrahedral appearance. Only rumors of disappearances, betrayal, and death surround this hellish artefact.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+st_wpn_pm_bas,Makarov PM
+st_wpn_pkm_zenit_siber,PKM "Zenit"
+cs_exo_outfit_name,CS-5 Exoskeleton
 st_prt_o_fabrics_3,Durable Textiles
 exo_wood_outfit_name,Woodland Exosuit
+st_wpn_mp133,MP-133
+st_wpn_m82,Barrett M82
+st_wpn_m79,M79
+st_wpn_m4,M4
 st_af_ah_h1,Sponge
 st_wpn_bm16,TOZ-66 (Sawn-off)
+st_wpn_m24_new,M24 SWS
 zombied,Zombified
+st_wpn_m16a2,M16A2
+st_wpn_m16,M16A4
 mutant_flesh_eye,Flesh Eye
+svoboda_heavy_outfit_name,Guardian of Freedom
+st_prt_w_p_spring_4,9mm Recoil Spring Assembly [Western] (Spring)
+st_af_electra_sparkler_descr,This artefact has the appearance of translucent spider webs. Just as proteinaceous spider silk, it is sticky and has properties of glue. \nIt can be found most commonly in or near electro anomalies and it seems to have absorbed their certain characteristics: it is able to smooth fluctuations in electric field density and acts as a weak resistor, protecting the wearer from electricity and reducing its damaging effects. \nOn the other hand, it should be noted that the presence of this artefact increases the corrosiveness of acids, leading to accelerated deterioration of equipment and higher damage to tissues of any living organism. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_helm_metro,"Apocalypse" Helmet
+st_wpn_l85_m1,L85A2
+st_wpn_ks23_kaban_kab_up,KS-23M Drozd "Boar"
 st_gas_tube_6,Gas Tube [A|V] [NATO] (Gas Tube)
+st_rank_legend,Legend
 st_prt_i_capacitors,Pack of Capacitors
 st_monolithian_thoughts_name,Monolithian's Journal
 ammo-7.62x54_7n14,7.62x54 mm 7N14 rounds
+st_wpn_korth,Korth Custom 4
+dolg_scientific_wood_outfit_name,PS5-9Md Light Pathfinder
+st_knife_hunting,Hunting Knife
+st_wpn_hk417,HK417
 st_rank_veteran,Veteran
+st_wpn_hk416,HK416
 st_af_baloon_name,Bubble
 st_wpn_toz34_obrez_decor,TOZ-34 (Sawn-off)
 st_wpn_abakan_n,AN-94
 st_data_export_restore_bleeding_max,Total wound healing
 isg_exo_outfit_name,UNISG Exoskeleton
 st_addon_scope_e0t2_mag,Eotech XPS3 w/ Eotech 3x Magnifier
+ui_inv_ap_res,%c[pda_white]BR Class:
 st_wpn_walther_p99,Walther P99
 st_wpn_glock17_m1,Glock 17 "Bruder"
-st_protein,Protein Bar
-st_radio,Broken Radio
+st_wpn_g43,Gewehr 43
+st_prt_o_retardant_11,Aluminized Layers of Retardant Fabrics
+st_wpn_kriss,KRISS Vector
+st_wpn_g36nimble_rwap,G36C "Merc"
+greh_armored_outfit_name,Irij Flak Armor
 st_af_oasis_heart_name,Heart of the Oasis
-ui_ammo_types,Ammo:
-ui_inv_recoil,%c[pda_white]Recoil Control:
-ui_inv_reli,%c[pda_white]Reliability:
-ui_ammo_count,%c[0,255,255,255]Mag. Size:
+st_wpn_fort500,Fort-500
+st_wpn_fn2000_camo,FN F2000
+st_wpn_famas3,FAMAS F1
+st_wpn_fal,FN FAL
 st_wpn_m4_ru556,Ruger SR-556
 st_gamma_recipe_expert_3,Fundamentals of Guns and Armors Upgrades Vol. 3
 st_synthrope,Synthetic Ropes
 st_wpn_remington700_magpul_pro,Remington 700 "Magpul PRO"
 monolith_exolight_outfit_name,Monolith Exosuit
-st_wpn_pmm_bas,Makarov PMM
-st_wpn_admin,CAR-15 "Administrator"
-ui_inv_handling,%c[0,255,255,255]Handling:
-st_data_export_single_handed,Single-handed
+st_af_zhelch_descr,An ellipsoid artefact with interesting psi properties. At first, its user will feel calm and relaxed, but as time passes, they will lose their mind. This state of madness is completely reversible, and the user will return to normal after the artefact is removed.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+MDR,Desert Tech MDR 5.56x45
+st_af_lobster_eyes_descr,As the name suggests, this artefact has the shape of two eggs fused together. The outer surface is very thick, the high density of its formation might be the reason behind its deep colour. \nThis artefact offers slightly more psy-protection than its cousin, Stone Flower. It resonates under the influence of psy-waves to some degree and absorbs the dangerous effect. \nAnother positive property is the ability to consume excessive heat while remaining cool at all times. \nDue to its density of the surface, the Lobster Eyes is quite heavy. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+st_wpn_bm16_full_alt_23,TOZ-34 "Bear"
 l10_radar,Radar
-st_wpn_xm8,XM8
+st_af_ah_e2_descr,A shard of Silica Quartz formed exclusively in electro anomalies. It is remarkably pure, ranging from 99.5% to 99.9% purity and is known to provide the wearer with a feeling of youthfulness.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
 ui_inv_rate_of_fire,%c[0,255,255,255]Fire Rate:
-st_wpn_wa2000,Walther WA 2000
-st_wpn_vsk94,VSK-94
-st_wpn_vintorez_m2,VSS Vintorez "Venal"
+st_wpn_bm16_alt,TOZ-66 (Sawn-off)
+ui_mm_repair,Repair
+st_wpn_aug_a3_bas,Steyr AUG A3
 st_drug_radioprotector,Radioprotectant
 st_itm_mapkit_3,Anomaly Map (Red Forest)
-st_wpn_vintorez_m1,VSS Vintorez "Savant"
+st_af_geliy_name,Helium
 st_af_dummy_dummy_name,Shell
 st_hide_psysucker_name,Psysucker Skin
-st_wpn_usp_tac,USP Match "Overwatch"
+st_prt_o_retardant_12,Aluminized Fiberglass Fabrics
 ammo_23x75_barrikada,"Barrikada" 23x75mm
 st_af_surge_up_name,Improved Surge Regenerator
-st_wpn_mk23,HK MK23
-st_wpn_sig220_n_upg220,SIG P220 "XXX"
-st_wpn_tt33_custom_upgr,Mangun's ““-33 7.62x25 ““
+st_wpn_shak12,ShAK-12
+BR5,BR5
+st_wpn_aps_bas_apsabigo,APS Stechkin
 st_wpn_m4a1_siber,M4A1
-st_cigar3,Camel Yellow cigarettes
-st_wpn_toz34_mark4,TOZ-34 "Bison"
-st_bolt_carrier_2,Sliding Bolt Carrier with Turning Bolt Lock [R] (Carrier)
-st_wpn_toz34_decor,TOZ-34
-st_wpn_toz34_custom,TOZ-34
-st_wpn_svu_nimble,OTs-03A SVU-A
-st_stalker_letter_2_of_2_name,Memoir (Part 2 of 2)
-st_wpn_g36nimble_rwap,G36C "Merc"
-st_leatherman_tool,Multitool
+st_wpn_aps_bas,APS Stechkin
+st_af_black_angel_descr,This artefact resembles a luminous clump of roots. When undisturbed, it will begin to release pure water vapor. When a person uses it, there is a small chance that any harm or pain inflicted upon them will instead be inflicted upon the attacker.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+st_upgr_w_optical,Optical Scope Upgrade Kit
+st_wpn_am17,AM-17
+st_wpn_akms_bas,AKMS
+st_wpn_akm_bas,AKM
+st_wpn_aek971,AEK-971
+st_wpn_akm,AKM
+st_af_tlf_prometheus_descr,A unique artifact that was born in the Greek Fire after the stalker of the legend with the same name has been slain. It gives the user immense resistance to heat and makes the wounds heal faster.
 st_af_cristall_name,Crystal
-st_wpn_svt40_modern,SVT-40
-st_wpn_svt40,SVT-40
-st_wpn_sr1mp_las,Serdyukov SR-1MP Gyurza 9x21 pistol
-st_wpn_sr1mp_upgr,Upgraded SR-1MP Gyurza 9x21 pistol
-st_wpn_sks_tac,SKS Tactical
-st_wpn_sks_modern,SKS
+st_wpn_ak74_n,AK-74
+st_wpn_ak5c_isg,AK 5C "ISG"
+st_bolt_9,Rotating Locking Head [7 Locks] [¿] (Bolt)
+st_wpn_ak103_camo,AK-103
+hunter_gar_trader_name,Butcher
+yan_st_sakharov_name,Professor Sakharov
 st_mine_name,PFM-1 Scatterable Anti-personnel Mine
-st_wpn_scar_siber_m1_black,FN SCAR-H "Tactical Black"
+st_data_export_pelts_quality_max,Maximum pelts quality
 ui_st_rank,Rank
-st_wpn_scar_siber_m1,FN SCAR-H "Tactical"
+st_data_export_light_attack_power,Light Attack Power
 st_data_export_eat_alcohol,Alcohol
 st_rank_gauss,Gauss squad
-st_wpn_rpk74,RPK-74
+ui_inv_outfit_speed,%c[pda_white]Movespeed:
 st_barrel_10,7.62mm Barrel [P] (Barrel)
-ammo-9x18-fmj,9x18 mm FMJ rounds
-st_wpn_remington700_mod_x_gen3,Remington 700 "MOD X Gen.3"
+st_data_export_outfit_artefact_count_max,Maximum belt slots
+ui_inv_outfit_artefact_count,%c[0,255,255,255]Belt Slots:
 st_data_export_falloff,Falloff
 l12u_control_monolith,Monolith Control Center
 st_itm_backpack_name,Backpack
@@ -726,233 +814,233 @@ lttz_ll_wpn_gauss_quest_name,"Item π62"
 st_sausage,Smoked Sausage
 st_bolt_carrier_4,Sliding Bolt Carrier with a Locking Bias (Carrier)
 bandit_exo_outfit_name,Stolen Exoskeleton
-st_wpn_p90,FN P90
+st_af_grapes_descr,An amber-like mass with a slight yellow-green hue. Its user will feel more satisfied and healthier after eating.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_wpn_aug_a3_custom_bas,Steyr AUG A3 Commando
-st_ecologist_report_2_of_3_name,Walking Dead Findings Field Report 39B rev. 2 (Part 2 of 3)
-st_hide_pseudogiant_name,Pseudogiant Hide
-st_wpn_pm_bas_custom,Makarov PM Custom
-st_wpn_pm_bas_actor,Makarov PM "Mythic"
+st_af_bat_descr,A bewildering, but unmistakable sight in the Zone. Consisting of two glowing, purple, bat-like "wings" apparently shielding an internal orb. When placed against another artefact, the Bat transmutes it into a more powerful similar artefact. The Bat is destroyed in the process, seemingly converted into pure energy.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+ammo-7.62x39_ap,7.62x39 mm M43 rounds
+st_mutant_part_crow_beak,Mutated Crow Beak
+st_tomahawk,Gerber Tomahawk
 st_af_fireball_name,Fireball
 st_medkit,AI-2 Medkit
 st_wpn_umirotvoritel,Unidentified Weapon
-st_wpn_pm_bas,Makarov PM
+isg,UNISG
 helm_ranger,GP-10z Ranger Gas Mask
-st_wpn_pkm_zenit_siber,PKM "Zenit"
+st_af_full_empty_descr,Similar to Empty, this artefact consist of two disks of organic formation connected by a unique gravitational field in between. However, the said field in Full Empty is extraordinary: all atoms entering the centre, regardless of their nature, become interactive under the unknown effects of the field. Thus releasing photons (light emitting). \nScientists usually refer to it as the "galaxy effect", which gives the artefact an exceptional orbit of light. \nThe density increment of surrounding air caused by moving is higher comparing to Empty. Because of this, the artefact will greatly hinder its holder's movement. \nBeing superior artefact to Empty, the protection against physical impacts is remarkable. Some claims that Full Empty is capable of stopping 9mm bullets fired at point blank. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_wpn_ithacam37,Ithaca M37 Riot
-st_wpn_amb17,AMB-17
+ammo_23x75_shrapnel,"Shrapnel-25" 23x75mm
 st_wpn_rpk,RPK
-st_wpn_mp133,MP-133
+ace_outfit_name,Mercenary ACE Scientific Suit
 jupiter,Jupiter
-st_wpn_m82,Barrett M82
-st_wpn_m79,M79
+st_helm_rp_bala,Balaclava
+st_af_vaselisk_descr,If you found this. something has gone horribly wrong.\n \n %c[pda_white]PROPERTIES:\n
 st_af_bracelet_name,Bracelet
-st_wpn_m4,M4
-st_wpn_m24_new,M24 SWS
+st_helm_bandana,Bandana
+st_grenade_thermite,Thermite Grenade
 st_mint,Altoids
 st_wpn_toz194,TOZ-194
-st_wpn_m16a2,M16A2
-st_wpn_m16,M16A4
+st_wpn_ak105_swamp,AK-105 "Swamp Thing"
+st_gamma_recipe_basic_2,Electronics Handbook Vol. 1
 st_wpn_vintorez_isg,RD-939
-st_wpn_pb_new,Silenced Pistol PB 9x18
-st_wpn_guns_groza,OC-14 Groza
-st_wpn_l85_m1,L85A2
-st_wpn_ks23_kaban_kab_up,KS-23M Drozd "Boar"
-st_wpn_g43,Gewehr 43
+st_wpn_rpg7,RPG-7
+st_data_export_weapon_kind_unknown,Unknown
+svoboda_heavy_outfit_2_name,Sentinel of Freedom
+st_af_signet_descr,The Signet, or Amulet, appears to be a simple stone several precise holes bored through it. Some Stalkers believe it brings good luck. In reality, it provides its user with a greater sense of well-being and allows the body to heal wounds faster when near a fire.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+st_wpn_sig220_n_upg220,SIG P220 "XXX"
 mutant_psevdodog_tail,Pseudodog Tail
 merc_nighthunter_outfit_name,Mercenary STS-N Body Armor
 exo_dolg_urban_outfit_name,PSZ-10g Urban Battlesuit
-st_wpn_korth,Korth Custom 4
-military_exo_outfit_name,Military Stalker Exoskeleton
-st_wpn_hk417,HK417
-st_wpn_hk416,HK416
-st_wpn_glock17,Glock 17
+st_grenade_f1,F1 Grenade
+st_af_generator_descr,Generates weak electric currents and a small electromagnetic field. When its bearer is exerting energy, the Generator will capture some of that energy and disperse it to nearby batteries.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+st_data_export_weapon_kind_pistol,Pistol
+st_data_export_weapon_kind_smg,SMG
+st_af_ring_descr,A very small artefact of electric nature. Difficult to spot. Consists of two ring-shaped materials of organic nature, hence the given name. When the Ring spins, it never stops spinning, defying the first law of thermodynamics. Scientists suggest that this artefact inherits gravitational properties from Vortex anomalies. \nThe outer ring has a high-conductivity. It absorbs electrical current from relative sources then ground it in the inner ring. Despite the basic function, the mechanism behind the disappearance of electrical power inside the second ring is still unknown. \nOn the other side, the Ring is flammable. Prolonged exposure may enhance its flammability and cause it to ignite. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_wpn_ks23_ecolog,KS-23 Eco
 st_af_fire_name,Flame
 st_wpn_svu_alt,OTs-03 SVU
-dolg_voin_outfit_name,PS6-V Warrior Suit
-st_wpn_fort500,Fort-500
-st_wpn_fn2000_camo,FN F2000
-st_wpn_famas3,FAMAS F1
+st_rank_professional,Professional
+st_rank_trainee,Trainee
+st_prt_i_scrap,Metallic Scrap
+st_ui_dbg_spawn_type,Item Type
 st_af_dummy_battery_name,Battery
 st_wpn_vz61,Skorpion vz.68
-st_rank_trainee,Trainee
-MDR,Desert Tech MDR 5.56x45
+st_data_export_unknown,Unknown
+renegade,Renegade
 csky_light_novice_outfit_name,CS-1 Body Armor
-~,~
+military_exo_outfit_name,Military Stalker Exoskeleton
 svoboda_novice_outfit_name,Freedom Leather Jacket
-ammo-7.62x51_fmj,7.62x51 mm NATO ball rounds
-st_wpn_bm16_full_alt,TOZ-66
+monolith,Monolith
+killer,Mercenary
 st_af_full_empty_name,Full Empty
 st_upgr_cost,Cost
 st_knifebf4,OTs-4 Combat Knife
-st_wpn_bm16_alt,TOZ-66 (Sawn-off)
-st_wpn_aug_a3_bas,Steyr AUG A3
+ecolog,Ecologist
+csky,Clear Sky
 st_prt_o_ballistic_14,Polyethylene Armor Plates (Improvised)
-st_af_grapes_name,Grapes
-st_itm_mapkit_9,Anomaly Map (Agroprom)
+bandit,Bandit
+st_prt_o_retardant_7,Insulating Magnesium Grid Inserts
 csky_light_outfit_name,CS-2a Body Armor
 exolight_outfit_name,Exosuit
-ammo-9x18-ap,9x18 mm AP rounds
+st_tomato,Canned Tomatoes
 st_rope,Rope
 dolg_scientific_outfit_name,PS5-9Md Universal Scientific Suit
-st_wpn_shak12,ShAK-12
+merc_nosorog_outfit_name,Mercenary Nosorog
 st_joint,Cannabis Joint
-st_af_soul_name,Soul
-st_wpn_aps_bas_apsabigo,APS Stechkin
-st_wpn_aps_bas,APS Stechkin
-st_wpn_am17,AM-17
-st_wpn_akms_bas,AKMS
+army_nosorog_outfit_name,Military Stalker Nosorog
+freedom_nosorog_outfit_name,Champion of Freedom
+monolith_nosorog_outfit_name,Monolith Nosorog
+st_trigger_components_6,Trigger Mechanism with Hammer [R] (Trigger)
+st_addon_scope_razor,Razor AMG UH-1 Gen. II
 st_broken_detector,Broken Detector
-st_wpn_akm_bas,AKM
+st_addon_scope_razor_mag,UH-1 w/ Eotech 6x Magnifier
 st_wpn_pkm_siber,PKM
-st_wpn_akm,AKM
+st_meat_flesh,Flesh Bacon
 svoboda_light_outfit_name,Wind of Freedom
-st_wpn_ak74_n,AK-74
-mutant_lurker_tail,Lurker Tail
-st_wpn_ak5c_isg,AK 5C "ISG"
+st_shovel_old,Old Metal Shovel
+nbc_outfit_name,Tactical Stalker Suit
+st_addon_scope_mag,Eotech Magnifier
 ammo-7.62x25-ps,7.62x25 mm Pst rounds
-st_wpn_ak74u_tac,AKS-74U "Tactician"
+st_gamma_recipe_expert_2,Electronics Handbook Vol. 3
 st_af_grid_up_name,Improved Titanium Grid
-st_wpn_ak103_camo,AK-103
+st_recipe_drug_3,Drug Recipe #3
 st_af_electra_moonlight_name,Moonlight
-hunter_gar_trader_name,Butcher
-yan_st_sakharov_name,Professor Sakharov
+st_recipe_drug_1,Drug Recipe #1
+st_af_fuzz_kolobok_descr,A relatively rare artefact forming in chemical areas, Kolobok is highly valued for its ability to heal most kinds of wounds and stop bleeding in a matter of minutes. \nFor unknown reasons, scientists are spreading rumours among stalkers that the artefact modifies bearer's genetic code, which is unproven and should be regarded as conscious attempt at monopolizing the supply of the artefact by the scientific community. This does not, however, mean that it is completely harmless. \nOne drawback of this artefact is the fact that it will interact to radioactive particles, so it is best to avoid radiation fields when in possession of the artefact, especially since its negative effects are not balanced with positive ones. It will also reduce energy recovery, which is the result of its sharp needle-like appendages. The needles cause small and quickly healing wounds which bring constant pain and itch, thus reducing stamina. \nThis artefact also weakens protection against heat and acids due to its high flammability. \nLightweight and not too much of a burden to carry around. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_wpn_sig226,SIG P226R
 st_af_ring_name,Ring
-st_data_export_pelts_quality_max,Maximum pelts quality
-st_data_export_light_attack_power,Light Attack Power
+st_gamma_recipe_basic_4,The Art of Artefacts Fusion Vol. 1
+st_gamma_recipe_basic_3,Fundamentals of Guns and Armors Upgrades Vol. 1
 st_wpn_m45a1,Colt M45A1 .45 ACP
-ui_inv_outfit_speed,%c[pda_white]Movespeed:
+st_gamma_recipe_basic_1,Survival Guide Vol. 1
 renegade_exo_outfit_name,Renegade Exoskeleton
-st_data_export_outfit_artefact_count_max,Maximum belt slots
-ui_inv_outfit_artefact_count,%c[0,255,255,255]Belt Slots:
+BR3,BR3
+st_gamma_recipe_advanced_2,Electronics Handbook Vol. 2
 st_barrel_8,5.45mm Barrel [¿] (Barrel)
-ui_inv_ap_res,%c[pda_white]BR Class:
-ui_mm_repair,Repair
-st_barrel_7,7.62mm Barrel [A|V] (Barrel)
-st_mutant_part_crow_beak,Mutated Crow Beak
+st_meinkampf,Mein Kampf
+st_af_signet_name,Signet
+st_stalker_letter_2_of_2_name,Memoir (Part 2 of 2)
+st_stalker_letter_1_of_2_name,Memoir (Part 1 of 2)
 st_af_aac_name,Artefact Application Container (Empty)
 st_prop_restore_health,Health restoration
-st_tomahawk,Gerber Tomahawk
+st_monolith_prayer_3_of_3_name,Monolith Prayer (Part 3 of 3)
 gamma_explosion_cap,Explosion Cap
-st_wpn_toz34_obrez,TOZ-34 (Sawn-off)
-st_knife_hunting,Hunting Knife
+st_monolith_prayer_2_of_3_name,Monolith Prayer (Part 2 of 3)
+st_letter_military_log_name,Communication Log / MSRC Operation / 05.04.2014 18:36:21
 merc_scientific_outfit_name,Mercenary SEVA Suit
-st_wpn_sr2_veresk,SR-2M Veresk
-st_af_ah_r1,Mushroom
-st_helm_rp_bala,Balaclava
+st_marijuana,Marijuana
+st_freedom_manual_1_of_2_name,Interrogation Techniques: The Basics (Part 1 of 2)
+st_ecologist_report_3_of_3_name,Walking Dead Findings Field Report 39B rev. 2 (part 3 of 3)
 st_wpn_fn57,FN Five-seveN
 st_mirror,Telescopic Mirror
-st_data_export_first_aid_leg,First-Aid leg
+st_ecologist_report_2_of_3_name,Walking Dead Findings Field Report 39B rev. 2 (Part 2 of 3)
 st_batteries,Battery Pack
-st_meinkampf,Mein Kampf
+st_ecologist_outfit_orange_name,SSP-99 Bodysuit
 st_wpn_mp5sd,MP5SD6
-st_helm_bandana,Bandana
+st_ecologist_report_1_of_3_name,Walking Dead Findings Field Report 39B rev. 2 (Part 1 of 3)
 st_wpn_ithacam37_trench,Ithaca M37 Trenchgun
 merc_jackal_outfit_name,Mercenary LTS-J Body Suit
 dolg_heavy_redline_outfit_name,PSZ-9kl Command Armor
 st_upgr_o_utility,Suit Utility Upgrade Kit
-st_grenade_thermite,Thermite Grenade
-st_wpn_ak105_swamp,AK-105 "Swamp Thing"
-st_wpn_rpg7,RPG-7
+st_af_star_phantom_name,Phantom Star
+st_itm_tent_name,Camping Tent (Full)
+st_itm_sleepbag_name,Sleeping Bag (Full)
 st_prt_w_p_spring_3,.45 Recoil Spring Assembly (Spring)
-st_data_export_weapon_kind_unknown,Unknown
-st_wpn_sks_molot,SKS Molot
+st_itm_mapkit_9,Anomaly Map (Agroprom)
+st_itm_mapkit_7,Anomaly Map (Zaton)
 ui_inv_outfit_power_restore,%c[0,255,255,255]Stamina Recovery:
 st_wpn_ump45,UMP45
-st_grenade_f1,F1 Grenade
-st_wpn_akm_alfa,AK Alfa
-st_data_export_weapon_kind_pistol,Pistol
-st_data_export_weapon_kind_smg,SMG
+st_itm_mapkit_1,Anomaly Map (Army Warehouses)
+st_itms_campfire_name,Firewood
+st_gun_oil_ru,Gun Oil "Rusak"
+st_af_skull_miser_descr,The remains of a human head, disfigured and fossilized by the Zone. The teeth appear to be made of a pure crystal stone. If its bearer kills another person, their money may be duplicated.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_survival_kit,Survival Kit
-st_prt_i_wood,Wooden Parts
-st_rank_legend,Legend
-st_rank_any,Any
+st_guitar_name,Guitar
+st_glue_b,Glue Tube "Zviezda"
+st_powder_mag,Large Rifle Propellant
 mutant_chimera_claw,Chimera Claw
-st_rank_professional,Professional
+dolg_voin_outfit_name,PS6-V Warrior Suit
 st_gas_tube_5,Gas Tube [A|V] [R] (Gas Tube)
-st_wpn_fal,FN FAL
+st_af_black_spray_descr,Being a rare artefact, little is known about its properties and origins. \nBlack Spray shares a similar shape to other sapphire-like artefacts. However, the organic nature of the stem (which shares similar properties to Pin artefacts) suggests that its formed from vascular plants under exposure to dangerous psy-fields and electromagnetic waves. \nAnother unique property is the ability to delay the transmission of light that enters it. The said mysterious mechanism is applied to psy-waves surrounding the artefact as well. For this particular reason, Black Spray significantly neutralises psy interferences in a large radius. \nThese beneficial properties, however, come at a price. This artefact is extremely dangerous when exposed in toxic environments as it amplifies their effect and increases their potency. When exploring toxic areas, it is hence highly recommended to keep the artefact in your backpack. \nDue to the beautiful blue aura it emits, it is highly sought after by jewellers all over the world. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_wpn_ks23,KS-23
 st_af_ah_h2,Sponge
 st_rank_blackops,Blackops squad
-st_prt_o_retardant_12,Aluminized Fiberglass Fabrics
-st_vodka_quality,Vodka (Stolichnaya)
-st_ui_dbg_spawn_type,Item Type
+st_bolt_14,Rotating Locking Head [¿/PP] (Bolt)
+st_af_geliy_descr,A product of electrical anomalies. It gives off a gaseous substance. If you found this. something has gone horribly wrong.\n \n %c[pda_white]PROPERTIES:\n
+st_addon_scope_e0t2,EOTech XPS3-0
 st_steel_wool,Steel Wool
 st_shovel_mili,Old Field Shovel
 st_wpn_winchester1873,Winchester Model 1873
 l13u_warlab,Monolith War Lab
 st_data_export_power_restore_max,Total stamina recovery
-st_data_export_unknown,Unknown
+st_device_torch_nv_2_name,Headlamp w/ PN21KL Night Vision
 csky_medium_outfit_name,CS-3a Body Armor
 stalker_tigerstripe_outfit_name,"Tigerstripe" Stalker Suit
-renegade,Renegade
-monolith,Monolith
-killer,Mercenary
-isg,UNISG
+st_device_torch_nv_1_name,Headlamp w/ 1PN93-1 Night Vision
+csky_novice_outfit_name,Clear Sky Leather Jacket
+ammo-9x39-pab9,9x39 mm SP-5 rounds
+st_af_sun_descr,A rare specimen generating an inexhaustible source of light. It allows a form of solar photosynthesis in its wearer.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_beans,Baked Beans
 st_sleepingpills,Sleeping Pills
-st_detector8,Anomalous Measurement Device
+st_af_mincer_meat_descr,This artefact has soft, porous, skin-like texture and is said to be able to compress. It resembles and acts like a sponge in this regard, but reveals its special characteristics only when exposed to certain external conditions. \nFirstly, to carry the sponge metaphor further, the pores on its surface are known to absorb small amounts of toxicity from environment. \nSecondly, the artefact slightly amplifies the damaging effects of psy-fields to living organisms by absorbing psy energy and emitting it at a small rate. \nThirdly, Meat Chunk is also known to be a conductor of electricity much like the skin of a living creature. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_prt_o_ballistic_15,Carbon Nanotube Layers w/ Kevlar-49 Fabrics
-monolith_trenchcoat_outfit_name,Monolith Overcoat
-st_monolith_prayer_2_of_3_name,Monolith Prayer (Part 2 of 3)
-st_monolith_prayer_1_of_3_name,Monolith Prayer (Part 1 of 3)
-st_wpn_mp5,MP5A3
 st_stim_scientic,Scientific Stimpack
+isg_proto_exo_outfit_name,UNISG Tactical Exoskeleton
+ammo-7.62x25-p,7.62x25 mm LRNPC rounds
+st_wpn_mp5,MP5A3
+st_equ_touristpack_name,Tourist Backpack
 st_barrel_5,7.92mm Barrel [V] (Barrel)
-st_roubles,Roubles
-st_gamma_recipe_expert_2,Electronics Handbook Vol. 3
+ammo-4.6x30-fmj,4.6x30 mm FMJ rounds
+st_wpn_k98,Karabiner 98k
 ammo-11.43x23-hydro,.45 ACP Hydra-shock HP rounds
 st_letter_mercenary_name,Mercenary's Note
-exo_merc_grass_outfit_name,Mercenary Grassland Exosuit
+st_af_itcher_name,Itcher
 st_knife_needle,NR-40 Scout Knife
-st_prt_o_ballistic_1,Kevlar K129 Plates w/ Reinforced Ceramic Inserts
-dolg_scientific_wood_outfit_name,PS5-9Md Light Pathfinder
+ammo_20x70_buck,20x70 buckshot round
+st_af_spaika_name,Spike
 st_wpn_l85_m2,L85A2
-st_marijuana,Marijuana
-st_af_star_phantom_name,Phantom Star
-st_adrenalin,Epinephrine Shot
-st_detector9,RF Receiver
-st_af_kogot_name,Claw
-st_bolt_carrier_9,Choke from Double-barrel Shotgun [R] (Carrier)
-cs_nbc_outfit_name,CS-2t Suit
+st_af_ah_o1_descr,An artefact created in fire anomalies consisting of mostly iron, bismuth, cadmium and nickel. If broken, the interior resembles an infinite fractal.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
+ammo-12x70-buck_self,Home-made 12x70 shot shells
+st_chili,Chili Beans
 isg_merc_outfit_name,UNISG Mk2 Tactical Body Armor
-l12_stancia,Chernobyl NPP (South)
 st_barrel_12,7.62mm Barrel [PP] (Barrel)
+st_bolt_carrier_9,Choke from Double-barrel Shotgun [R] (Carrier)
+st_af_ah_r4,Mushroom
+army_outfit_name,Military Service Outfit
+l12_stancia,Chernobyl NPP (South)
+st_wpn_akm_alfa,AK Alfa
 bandit_scientific_outfit_name,Looted SEVA Suit
-bandit_sun_outfit_name,"Sunset" Tactical Suit
-st_af_fountain_name,Fountain
+st_wpn_ak74u_tac,AKS-74U "Tactician"
+st_wpn_ak74,AK-74N
 st_prop_restore_bleeding,Wound healing
 st_walkie,Broken Walkie Talkie
-st_wpn_svu,OTs-03 SVU
-st_data_export_used_in_crafting,Used in crafting
-st_data_export_projectiles,Projectiles
+#4,#4
+mutant_cat_tail,Cat Tail
+mutant_chimera_cogot,Chimera Horn
 st_bolt_12,Hammers from a Hammer-type Double-barrel Shotgun [R] (Bolt)
 st_wpn_aug_thales,Thales EF88
-st_prt_i_textolite,Textolite Base
-st_data_export_stash_type_common,Common
-BR2,BR2
-ammo-9x39-pab9,9x39 mm SP-5 rounds
 mutant_psysucker_hand,Psysucker Hand
-st_prt_i_scrap,Metallic Scrap
+mutant_cat_thyroid,Cat Thyroid
+st_wpn_ace52,Galil ACE-52
+st_af_glass_descr,Firefly interacts with fields unknown to science, considerably speeding up regeneration of tissue and organs in living beings, as well as normalizing metabolic processes. \nThis artefact can literally get a badly wounded stalker back on his feet in a matter of minutes. On the other hand, Firefly can spontaneously combust when exposed to potent radioactive sources. \nA big downside to this artefact is that it weakens the body and reduce the number of platelets in blood during heal process, thus increasing bleeding rate. \nIt seems to drain stamina and decrease stamina recovery greatly as well. Some of those who used Firefly for its healing purposes have reported that they couldn't walk for hours afterwards. \nUnfortunately, Firefly is extremely rare. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+st_af_cell_descr,A porous sphere with a star-like formation spinning in the center. Originates in gravitational anomalies. If the user of this artefact were to be hit with a fast-moving object, the Cell would instantly atomize some of its mass, protecting its bearer, but resulting in minor radiation exposure.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+ammo-7.62x51_fmj,7.62x51 mm NATO ball rounds
 ui_inv_outfit_burn_protection,%c[0,255,255,255]Burn Res:
 ammo-5.56x45-ap,5.56x45 mm AP rounds
-st_af_atom_name,Atom
-st_wpn_saiga12s_m1,Saiga-12
+st_af_pin_descr,A small artefact formed by thermal anomalies in the Zone under extreme temperatures. The look of this artefact suggests that it was an organ of a vascular plant. Further studies showed that other organic tissues are fused deep inside. \nThe stem doesn't hold any useful properties. On the contrary, the small pins reduce temperature of user's body and cool all objects in their vicinity. \nThis artefact offers a slight psy-protection as it will resonate under the influence of psy-waves. On the other hand, it is not recommended to approach chemical and acid anomalies when in possession of the artefact as it will increase the adverse effects of acids and toxins in user's bloodstream. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+st_upgr_o_physical,Suit Armor Upgrade Kit
 st_bandage,Bandage
-st_trigger_components_5,Double-fire Mode Trigger Mechanism with Firing Pin (Trigger)
-st_trigger_components_3,Triple-fire Hammer Type Trigger (Trigger)
-mutant_snork_hand,Snork Hand
-st_af_itcher_name,Itcher
+st_barrel_4,7.62mm Barrel [V] (Barrel)
+st_af_ah_r5,Mushroom
 st_device_torch_name,Headlamp
-st_addon_scope_mag,Eotech Magnifier
+mutant_tusk_boar,Boar Fang
+st_af_peas_descr,The Moon, or Pea Pod artefact, is a crescent-shaped, dimly-glowing mass. Within the rubbery outer cover, three pearlescent orbs with unique crystalline structures are visible. Users of this artefact report their circadian rhythm rapidly and completely inverting.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+st_wpn_colt1911_n,Colt M1911A1 .45 ACP
 st_af_black_angel_name,Black Angel
 st_wpn_rg6,RG-6 Grenade Launcher
-ammo-7.62x54-7n1,7.62x54 mm 7N1 rounds
 st_af_bat_name,Bat
+st_af_gold_fish_name,Goldfish
 isg_lcs_outfit_name,UNISG LC Suit
-st_gun_oil_ru,Gun Oil "Rusak"
-ammo-7.62x39_fmj,7.62x39 mm FMJ rounds
+BR7,BR7
+st_flashlight_broken,Broken Flashlight
 st_wpn_lar_grizzly,L.A.R. Grizzly Win Mag .357
 isg_nosorog_outfit_name,UNISG Nosorog
 travel_outfit_name,"Voyager" Stalker Suit
@@ -960,281 +1048,281 @@ st_helm_respirator_gp5,GP-5 Gas Mask
 st_boots,Old Leather Boots
 st_helm_cloth_mask,Cloth Mask
 st_wpn_fort17,Fort-17
-st_tomato,Canned Tomatoes
+military_outfit_name,Skat-9 Armored Suit
 st_bolt_carrier_1,Sliding Bolt Carrier with Turning Bolt Lock [R] (Carrier)
-st_wpn_k98,Karabiner 98k
-st_chili,Chili Beans
+st_af_soul_name,Soul
+dolg_pantsir_outfit_name,PSZ-7p Shell Armor
 ammo-9x18-pmm,9x18 mm HP rounds
 st_wpn_m98b,Barrett M98B
 cs_stalker_proto_exo_outfit_name,CS-2b Exoskeleton
 st_data_export_weapon_kind_shotgun,Shotgun
 st_wpn_val,AS Val
-military_outfit_name,Skat-9 Armored Suit
-ammo-12x70-buck_self,Home-made 12x70 shot shells
-st_bolt_14,Rotating Locking Head [¿/PP] (Bolt)
-cs_exolight_outfit_name,CS-5 Exosuit
 st_wpn_rpd,RPD
-st_af_zhelch_name,Scar
-st_af_tlf_lost_soul,Lost Soul
+st_af_star_phantom_descr,A purple, plasma-like substance encased in a transparent, pulsating shell. When activated, it sends the user into a ghost-like state for a short period - completely imperceptible, but unable to interact with the world.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+st_af_ice_descr,Also colloquially known as "Radioactive Snowflake". At first glance, this artefact resembles a white Kolobok. \nThanks to its unique properties, the artefact can significantly increase the bearer's muscle tone, thus greatly improving stamina recovery. Due to its high radioactivity, stalkers in possession of it are sometimes jokingly referred to as "Radioactive Snowflakes". \nWhen faced with the decision whether to carry it on the belt during a mission, you have to carefully weigh its pros and cons: does it pay to have greater endurance and high protection against electricity at the cost of being constantly exposed to its deadly radiation? Even if you are determined to take it with you, it should be noted that it is not to be used on long excursions to the Zone. \nSnowflake, however, holds a big downside: it interacts with surrounding energy sources by absorbing and amplifying their effects. For this reason, approaching heat sources, toxic areas and psy-fields while holding this artefact is a suicide. \nIt is as light as a snowflake and very easy to carry around. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+cs_exolight_outfit_name,CS-5 Exosuit
+st_meat_pseudodog,Pseudodog Chops
+st_af_empty_name,Empty
+st_bolt_carrier_3,Sliding Bolt Carrier with Turning Bolt Lock [NATO] (Carrier)
 st_wpn_pb_bas_custom,PB
-mutant_cat_tail,Cat Tail
+st_data_export_post_heal_arm,Post-Heal Arm
 st_helm_m40,M40 Gas Mask
 y04_pole,Meadow
 st_energy_drink,Energy Drink
 st_pda_3_name,PDA v3.1 with KilTrakô
-st_data_export_limb_duration,Limb duration
-#4,#4
-merc_combat_scientific_outfit_name,Mercenary Pathfinder
+st_cigar3,Camel Yellow cigarettes
+dolg_scientific_red_outfit_name,PS5-9Md Light Scientific Suit
+pda_encyclopedia_tier,Tier
 st_grooming,Grooming Kit
 st_meat_chimera,Chimera Goulash
 st_wpn_ks23_23_up,KS-23 Shortie
 st_data_export_post_heal_leg,Post-Heal Leg
-bandit,Bandit
-st_hide_bloodsucker_name,Bloodsucker Skin
-mutant_chimera_cogot,Chimera Horn
-dolg_novice_outfit_name,Duty Leather Jacket
-st_ecologist_report_3_of_3_name,Walking Dead Findings Field Report 39B rev. 2 (part 3 of 3)
-military_sky_outfit_name,CS-4b Armored Suit
+merc_scientific_armored_outfit_name,Mercenary SEVA Body Armor
+ammo-9x19-fmj,9x19 mm FMJ rounds
+st_af_ah_g1_descr,A lump of shriveled clay and organic debris. Separation of individual lumps of material seems impossible, due to the presence of some unknown and incredibly strong binding agent.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
 ammo_9x21_sp10,9x21 mm SP10
+st_analgetic,Diclofenac Sodium
+military_sky_outfit_name,CS-4b Armored Suit
+dolg_proto_exo_outfit_name,PS5-M Exoskeleton
 st_pda_1_name,PDA
-st_upgr_o_physical,Suit Armor Upgrade Kit
-mutant_cat_claw,Cat Claw
 st_hand_rolling_tobacco,Hand-rolling Tobacco
-mutant_boar_leg,Boar Leg
-svoboda_exolight_outfit_name,Warrior of Freedom
-mutant_cat_thyroid,Cat Thyroid
+st_bolt_carrier_10,Sliding Bolt Carrier with Turning Bolt Lock [NATO] (Carrier)
+st_af_kislushka_name,Sourpuss
+st_prt_o_retardant_3,Grade-B RPVC Treated Fabrics
+st_prt_o_retardant_2,Layered Chemical/Shock Retardant Fabrics
+bandit_sun_outfit_name,"Sunset" Tactical Suit
 st_wpn_ppsh41_camo,PPSh-41
 st_af_ah_f1,Talking Stone
-st_gamma_recipe_basic_4,The Art of Artefacts Fusion Vol. 1
+st_pda_2_name,PDA v2.0 KilTrakô
 hybrid_outfit_name,Hybrid Armored Suit
 st_wpn_aug_a1_custom_bas,Steyr AUG A1
 st_wpn_svds_pmc,SVDS "Retribution"
-ammo-7.62x25-p,7.62x25 mm LRNPC rounds
-st_medkit_science,Scientific Medkit
-st_prt_o_ballistic_3,Kevlar K129 Plates w/ Polycarbonate Composite
-army_outfit_name,Military Service Outfit
+st_data_export_bonus_mutant_part_chance,Bonus mutant part chance
 st_gas_tube_4,Gas Tube [AS/PP] (Gas Tube)
+st_prt_o_ballistic_3,Kevlar K129 Plates w/ Polycarbonate Composite
+st_prt_o_ballistic_5,Kevlar AP Steel Plates
+st_af_ah_r1,Mushroom
 st_exo_repair_kit,Armor Repair Kit (Exoskeleton)
 st_wpn_g36new,G36
-st_gas_tube_9,Ejector from Over-under Double-barrel Shotgun [R] (Gas Tube)
-st_welding_goggles,Welding Goggles
-st_helm_respirator,Refitted PBF Gas Mask Kit
+st_akvatab,Ibuprofen
+st_af_tlf_lost_soul,Lost Soul
+isg_scientific_outfit_name,UNISG SEVA Suit
 ammo-12x70-buck,12x70 buckshot shells
-st_bolt_carrier_7,Lever-type Bolt Carrier with Locking Wedge (Carrier)
-ace_outfit_name,Mercenary ACE Scientific Suit
-greh_armored_outfit_name,Irij Flak Armor
+st_prt_o_ballistic_1,Kevlar K129 Plates w/ Reinforced Ceramic Inserts
+st_af_dummy_glassbeads_descr,Shaped like a DNA helix, Mama's Beads are created in the Burner anomaly. One of their most characteristic features is that they constantly pulsate, generating emissions beneficial to the human body. These emissions increase the metabolism of any living creature, accelerating coagulation and healing of wounds.The mechanism behind the effects of this artefact is still unknown. \nMama's Beads also possess potent protective qualities: they are able to shield the body and objects from extreme heat. \nOn the other hand, it should be noted that the presence of this artefact increases electrical conductivity, so the probability of electrocution while wearing this artefact is much higher, especially during storms and in the vicinity of electrical anomalies. \nThe weight is also quite high for such a small artefact, which leads to a conclusion that is of high density. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+st_af_tapeworm_descr,While its structure seems impossibly fragile, this artefact, made of pure quartz, is actually quite resilient. If its user is attacked, the artefact will temporarily paralyze the threat.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 l11_pripyat,Pripyat
-st_af_ah_r4,Mushroom
+st_porn2,Atmosfear Magazine
 st_geiger_dead,Geiger Counter
 st_prt_o_retardant_13,PBI-blended Fabrics
-ammo_23x75_shrapnel,"Shrapnel-25" 23x75mm
-pda_encyclopedia_name,Name
+ammo-5.56x45-ss190,5.56x45 mm HP rounds
+st_data_export_projectiles,Projectiles
 st_af_pin_name,Pin
-st_af_signet_name,Signet
-st_af_ice_name,Snowflake
+st_af_death_lamp_descr,"Big, red and cursed." \nThis is how the locals prefer to describe the Death Lamp, while some refer to it as the "Seed of Satan". Many traders believe the rumours surrounding the artefact, thus refusing to buy it. Little is known about its origins, and nothing of value has been discovered so far. \nDeath Lamp was first discovered few years ago by a group of three experienced stalkers. Shortly after delivering the artefact to the Ecologists in Yantar, two of them found dead with a horrific expression on their faces. Nothing is known about the fate of the third stalker. \nFollowing the accident, members of the science team who studied the artefact had reported having nightmare disorder in the days to follow. \nApart from the mysterious effects, the artefact drains vitality and willpower from the user, often on such a scale that it induces dizziness and in extreme cases causes the user to faint. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+military_proto_exo_outfit_name,Skat-9 Exoskeleton
 st_wpn_cz75,CZ-75
-greh_armored_camo_outfit_name,Vyriy Flak Armor
+military_freedom_outfit_name,Liberated Skat-9 Armored Suit
 st_wpn_toz34_obrez_custom,TOZ-34 (Sawn-off)
 st_mineral_water,Mineral Water
-ammo_vog_30,VOG-30 Grenade
-st_af_kevlar_name,Kevlar Plates and Attachments
-military_merc_outfit_name,Mercenary Skat-9 Armored Suit
-st_wpn_aug_a1,Steyr AUG A1
+st_af_medallion_name,Medal
+st_af_fountain_name,Fountain
+st_af_ah_e1_descr,A shard of Silica Quartz formed exclusively in electro anomalies. It is remarkably pure, ranging from 99.5% to 99.9% purity and is known to provide the wearer with a feeling of youthfulness.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
+st_prt_o_retardant_14,PBI-blended Fabrics w/ Polyester Treatment
 st_wpn_aug_a3,Steyr AUG A3
-st_stim_military,Military Stimpack
-st_data_export_ammo_box_size,Box size
-st_data_export_post_heal_arm,Post-Heal Arm
-st_yadylin,Yadulin
-st_prt_o_ballistic_2,Kevlar Protera Plates w/ Reinforced Ceramic Inserts
-st_af_ah_o2,Magnet
-cs_stalker_outfit_name,CS-2b Body Armor
-st_wpn_kriss,KRISS Vector
+st_data_export_can_be_cooked,Can be cooked
+st_af_ah_h2_descr,A lump of shriveled clay and organic debris. Separation of individual lumps of material seems impossible, due to the presence of some unknown and incredibly strong binding agent. The gravitational properties of the artefact seem to have effects similar to that of hemophilia.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
+st_af_ah_h1_descr,A lump of shriveled clay and organic debris. Separation of individual lumps of material seems impossible, due to the presence of some unknown and incredibly strong binding agent. The gravitational properties of the artefact seem to have effects similar to that of hemophilia.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
+st_af_ah_r2_descr,An artifact containing mostly plant matter found only in the Dead Forest, south of Lab X-9. It is believed that the strong psy-fields it was subjugated to during its formation heavily influenced its shape and properties. Wearing one seems to boost vitality.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
+ui_inv_outfit_fire_wound_protection,%c[0,255,255,255]Ballistic Res:
+st_leatherman_tool,Multitool
+st_af_electra_sparkler_name,Sparkler
+st_vodka_quality,Vodka (Stolichnaya)
 st_hide_burer_name,Burer Skin
-BR3,BR3
-ui_inv_accuracy,%c[0,255,255,255]Accuracy:
-ecolog,Ecologist
+st_af_ah_r5_descr,An artifact containing mostly plant matter found only in the Dead Forest, south of Lab X-9. It is believed that the strong psy-fields it was subjugated to during its formation heavily influenced its shape and properties. Wearing one seems to boost vitality.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
+st_af_eye_name,Eye
+st_af_atom_name,Atom
 st_glucose_s,Glucose Shot
-st_ecologist_outfit_orange_name,SSP-99 Bodysuit
-st_af_gold_fish_name,Goldfish
-ammo_20x70_buck,20x70 buckshot round
-military_freedom_outfit_name,Liberated Skat-9 Armored Suit
-mutant_brain_burer,Burer Brain
+st_helm_respirator,Refitted PBF Gas Mask Kit
+st_af_ah_o2,Magnet
+st_data_export_stash_type_common,Common
+greh_armored_camo_outfit_name,Vyriy Flak Armor
+st_af_ah_r4_descr,An artifact containing mostly plant matter found only in the Dead Forest, south of Lab X-9. It is believed that the strong psy-fields it was subjugated to during its formation heavily influenced its shape and properties. Wearing one seems to boost vitality.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
 dolg_exolight_outfit_name,PSZ-10d Duty Battlesuit
-ui_inv_bspeed,%c[pda_white]Muzzle Velocity:
+mutant_lurker_tail,Lurker Tail
 helm_ppm88,PPM-88 Gas Mask
-st_data_export_eat_health_change,Health change
-merc_exolight_outfit_name,Mercenary Exosuit
-merc_fighter_outfit_name,Mercenary LC-F Suit
-merc_sunset_outfit_name,Mercenary LCz Suit
+st_ecologist_outfit_yello_name,SSP-99 Topaz
+st_ecologist_outfit_red_name,SSP-99Ã "Ruby"
+st_ecologist_outfit_grn_name,SSP-99M Bodysuit
+mutant_krovosos_meat,Bloodsucker Meat
 st_wpn_9a91,9A-91
 st_vodka,Vodka (Nemiroff)
-military_bandit_outfit_name,Looted Skat-9 Armored Suit
-st_wpn_gauss_bas,Gauss Rifle
+ui_inv_bspeed,%c[pda_white]Muzzle Velocity:
+st_wpn_svd,SVD
 st_wpn_ithacam37_sawnoff,Ithaca M37 (Sawn-off)
 st_powder_rifle,Small Rifle Propellant
-military_exolight_outfit_name,Military Stalker Exosuit
+st_e_syringe,Syringe
 st_bolt_4,Rotating Locking Head [2 Locks] [V] (Bolt)
 ammo-9x39-ap,9x39 mm SP-6 rounds
 st_prop_weight,Weight
-military_proto_exo_outfit_name,Skat-9 Exoskeleton
-isg_outfit_name,UNISG Mk1 Tactical Body Armor
+exo_dolg_outfit_name,PSZ-10d Duty Battlesuit
+exo_merc_grass_outfit_name,Mercenary Grassland Exosuit
 st_af_cooler_up_name,Improved Body Cooler
-st_ecologist_outfit_red_name,SSP-99Ã "Ruby"
-nbc_outfit_name,Tactical Stalker Suit
-st_porn2,Atmosfear Magazine
+st_af_elektron_name,Electron
+st_gloves,Old Leather Gloves
+st_af_itcher_descr,A formation of thermal nature. The Itcher consists of two separated layers. The surface is a hard, dense metamorphic rock with deep scars covering the entire body. Completely inactive and doesn't hold any noticeable properties. On the other hand, the soft, yellow glowing core is from unknown organic nature. It actively consumes excessive heat and remains cool at all times. \nHowever, it is not recommended to approach chemical and acid anomalies when in possession of the artefact as it will increase the adverse effects of acids and toxins in user's bloodstream. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 st_wpn_g3,G3A3
 st_wpn_saiga12s_m2,Saiga-12 Tactical
-st_gloves,Old Leather Gloves
+ui_inv_accuracy,%c[0,255,255,255]Accuracy:
 st_af_repei_name,Thistle
 st_gamma_recipe_advanced_4,The Art of Artefacts Fusion Vol. 2
 st_vodka2,Vodka (Putinka)
-st_af_eye_name,Eye
-st_ied,IED (Chemical)
-st_prt_o_ballistic_18,Reinforced Polyethylene Fiber Layers
+st_af_electra_moonlight_descr,This unique electrostatic artefact can resonate under the influence of psy-waves. Stalkers have learned to fine-tune the artefact so that it resonates in opposite phase to the main source of emissions, thus significantly neutralizing their effects. This orb of considerable beauty also increases electrical protection by reducing conductivity in the body when exposed to high levels of electricity. \nIt should be noted that Moonlight will catch fire when exposed to open flame or even spontaneously combust. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+st_af_gimlet_descr,The bowl-shaped petals of the artefact release a powerful gaseous stimulant resulting in a positive change in human hormones. If you found this, something has gone horribly wrong.\n \n %c[pda_white]PROPERTIES:\n
+mutant_boar_leg,Boar Leg
+isg_lcs_camo_outfit_name,UNISG LC-C Suit
 st_wpn_mp9,Brugger & Thomet MP9
-st_helm_protective,SSP-99 Screen Helmet
 st_wpn_ak104_alfa,AK-104 "Alpha"
-st_analgetic,Diclofenac Sodium
-st_prt_o_ballistic_5,Kevlar AP Steel Plates
-merc_scientific_armored_outfit_name,Mercenary SEVA Body Armor
+isg_outfit_name,UNISG Mk1 Tactical Body Armor
+st_af_moh_descr,Sometimes resembling an ëItcherí artefact, and sometimes breaking down into a more nebulous form, this electrical artefact gives off a small but noticeable charge, similar to touching one's tongue to both terminals of a battery. When equipped, the user will be imbued with certain strengths upon consuming raw meat.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+light_dolg_outfit_name,IBAz Universal Protection Suit
 st_wpn_ar15_freedom,AR-15 HERA
 st_wpn_remington700_lapua700,Remington 700 "Deer Hunter"
+st_data_export_ammo_box_size,Box size
 ammo_12.7x55_ap,12.7x55 mm STs-130 VPS rounds
-st_prt_o_fabrics_2,Synthetic Cloth Sheets
-st_prt_o_retardant_11,Aluminized Layers of Retardant Fabrics
+light_merc_outfit_name,Mercenary IBAz Suit
 st_sewing_kit_a,Sewing Kit (Advanced)
-st_prt_o_retardant_14,PBI-blended Fabrics w/ Polyester Treatment
+merc_coyote_outfit_name,Mercenary MTS-C Body Suit
 mutant_dog_heart,Dog Heart
 st_hide_psy_dog_name,Psy-dog Fur
-st_af_geliy_name,Helium
+st_af_zhelch_name,Scar
+merc_sunset_outfit_name,Mercenary LCz Suit
 st_data_export_restore_radiation_max,Total radiation restoration
-ammo-357-hp,.357 HP rounds
 st_wpn_sr2_m1,SR-2M Veresk
 l04_darkvalley,Dark Valley
-BR7,BR7
-st_ecologist_outfit_grn_name,SSP-99M Bodysuit
-st_prt_o_retardant_5,PVC/Rubber Coated Fabrics
-st_prt_o_retardant_7,Insulating Magnesium Grid Inserts
+military_bandit_outfit_name,Looted Skat-9 Armored Suit
+st_af_gimlet_name,Gimlet
+st_af_empty_descr,Two disks of organic formation (commonly lipids, cellulose and lignin) with nothing but empty space in between. This is due to a unique gravitation field formed in the centre that stabilise the distance between the disks. \nAny attempt to press the disks together, or pull them apart will fail due to rapid positive/negative changes in the gravitational field. As if the artefact reacts to any physical power that breaks its balance. \nBecause of this mechanism, moving with an Empty is a hard task. As the gravitational field increases the density of surrounding air and slows the body down. \nThe real usefulness of this effect comes to the ability to reduce friction, thus obtaining great protection against physical impacts. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+ammo-357-hp,.357 HP rounds
 k01_darkscape,Darkscape
-st_af_ah_r5,Mushroom
-st_barrel_4,7.62mm Barrel [V] (Barrel)
+military_merc_outfit_name,Mercenary Skat-9 Armored Suit
+st_data_export_used_in_crafting,Used in crafting
 ammo-gauss_cardan,Home-made batteries
-st_akvatab,Ibuprofen
+st_jewelry_box,Decorated Jewellery Box
 st_af_ah_g1,Easy
-st_ecologist_outfit_yello_name,SSP-99 Topaz
+ammo-7.62x39_fmj,7.62x39 mm FMJ rounds
 st_letter_stalker_letter_3_name,Letter to Nikolai
-st_bolt_16,Drummer with Mainspring [PP] [NATO] (Bolt)
+st_data_export_limb_duration,Limb duration
 st_itm_mapkit_4,Anomaly Map (Dead City)
 st_bolt_15,Drummer with Mainspring [PP] (Bolt)
-st_bolt_8,Rotating Locking Head [6 Locks] [¿] (Bolt)
-st_bolt_9,Rotating Locking Head [7 Locks] [¿] (Bolt)
+st_af_dragon_eye_descr,Found near fire anomalies, with the appearance of a reptile's eye. If its bearer kills another being, there is a small chance that it will cause its body to violently detonate.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+st_af_chelust_descr,A loop of tiny, glowing disks that generate a gravitational field disproportionately larger than their actual mass, leading to the artefact being effectively quite heavy. This artefact seems to be tied to a group of cultists in the Zone known as Sin, improving their health when they equip it.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_wpn_sig550_custom,SIG SG 550
 st_data_export_first_aid_torso,First-Aid torso
 st_af_freon_up_name,Improved Freon Emission Module
 st_data_export_sleepiness,Sleepiness
-st_gas_tube_7,Gas Tube [P] (Gas Tube)
-st_data_export_can_be_cooked,Can be cooked
+st_prt_o_ballistic_17,Polyethylene Fiber Layers w/ Polycarbonate Inserts
+st_prt_o_ballistic_18,Reinforced Polyethylene Fiber Layers
 st_data_export_impulse,Impulse
 st_prt_o_retardant_8,Insulating Reinforced Magnesium-oxide Grid
 st_wpn_oc33_new,OTs-33 "Pernach"
 dolg_exo_outfit_name,PSZ-10d Exoskeleton
 st_prt_w_p_barrel_5,7.62mm Barrel (Barrel)
 st_matches,Firestarter Set
-renegademerc_outfit_name,Renegade LC Suit
-st_meat_pseudodog,Pseudodog Chops
-st_af_empty_name,Empty
-st_bolt_carrier_10,Sliding Bolt Carrier with Turning Bolt Lock [NATO] (Carrier)
-svoboda_scientific_outfit_name,Watchman of Freedom
-svoboda_exo_outfit_name,Paragon of Freedom
+st_prt_o_retardant_15,Activated Carbon Cloth (ACC) Fabrics
+ammo-9x18-ap,9x18 mm AP rounds
+st_hide_pseudogiant_name,Pseudogiant Hide
+bandit_nbc_outfit_name,Load-bearing 'Sunset' Tactical Suit
+st_adrenalin,Epinephrine Shot
+ammo_vog_30,VOG-30 Grenade
 ecologist_guard_outfit_name,ISRIT Guard Jumpsuit
-svoboda_heavy_outfit_2_name,Sentinel of Freedom
+svoboda_scientific_outfit_name,Watchman of Freedom
 novice_outfit_name,Leather Jacket
-trenchcoat_outfit_name,Overcoat
+st_prt_o_ballistic_2,Kevlar Protera Plates w/ Reinforced Ceramic Inserts
 st_data_export_is_backpack,Is backpack
-st_upgr_w_optical,Optical Scope Upgrade Kit
-pda_encyclopedia_tier,Tier
-st_wpn_adar2_15,ADAR 2-15
-st_wpn_ak105,AK-105
-st_glue_b,Glue Tube "Zviezda"
-st_wpn_ak74,AK-74N
-st_meat_flesh,Flesh Bacon
+st_wpn_saiga12s_m1,Saiga-12
+dolg_novice_outfit_name,Duty Leather Jacket
+ammo-12x76-bull,12x76 Bull shells
+st_salmon,Smoked Salmon
+st_wpn_sks_molot,SKS Molot
+st_bolt_8,Rotating Locking Head [6 Locks] [¿] (Bolt)
+st_af_fonar_descr,An artefact with the appearance of a melting pyramid of ice; formed in electrical anomalies. Equipping it causes the artefact to "show" its wearer the location of valuables, using both visible light and RF waves.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 st_wpn_ak105_sp,AK-105 "Specialist"
 ammo-7.62x54-r,7.62x54 mm PP rounds
 st_data_export_weapon_kind_sniper,Sniper Rifle
 st_solvent,Cleaning Solvent "Hoppe's No. 9"
 st_meat_bloodsucker,Bloodsucker Goulash
-st_wpn_colt1911_n,Colt M1911A1 .45 ACP
+st_data_export_used_in_cooking,Used in cooking
 monolith_scientific_outfit_name,Monolith Scientific Suit
-st_wpn_dvl10,DVL-10 M2 Urbana
+~,~
 st_wpn_steyr_scout_big,Steyr Scout 7.62
-st_meat_psysucker,Psysucker Goulash
+st_af_grapes_name,Grapes
 st_tobacco,Russian Tobacco
-ammo-7.62x39_ap,7.62x39 mm M43 rounds
+st_prt_o_retardant_5,PVC/Rubber Coated Fabrics
 st_wpn_l85_m3,L85A2 "Tactical"
-st_wpn_ace52,Galil ACE-52
-st_prt_i_paper,Paper Sheets
-stalker_autumn_outfit_name,"Autumn" Stalker Suit
+ammo-12x76-dart,12x76 AP slugs
+st_trigger_components_3,Triple-fire Hammer Type Trigger (Trigger)
+st_trigger_components_5,Double-fire Mode Trigger Mechanism with Firing Pin (Trigger)
 st_data_export_from,from
 st_prt_o_ballistic_16,Carbon Nanotube Layers w/ Kevlar-29 Fabrics (Reinforced)
-st_wpn_aek971,AEK-971
+st_af_ah_s1,Aroth-8
 st_bolt_13,Rotating Locking Head [2 Locks] [¿] [NATO] (Bolt)
 mutant_tushkano_head,Tushkano Head
-st_wpn_l96a1m,AWSM
-st_wpn_m4_tac,M4A1 "Protector"
+stalker_autumn_outfit_name,"Autumn" Stalker Suit
+stalker_salamander_outfit_name,"Salamander" Stalker Suit
 st_wpn_streetsweeper_nimble,Armsel Protecta Custom
-mutant_fracture_hand,Fracture Hand
+svoboda_exo_outfit_name,Paragon of Freedom
 st_wpn_l96a1,L96A1
 st_wpn_vssk,VSSK Vykhlop
-st_af_medallion_name,Medal
-st_itm_mapkit_6,Anomaly Map (Jupiter)
+st_af_cristall_flower_descr,This artefact resembles melted cheese interspersed with sapphire-like stones. Only yellow outer shell of the artefact appears to give off radiation and by careful processing it is possible to extract the non-radioactive blue parts for jewellery and other industrial purposes. This is due to the fact that if cleaned properly and polished, sapphire comparison becomes much more explicit: the stones are as hard and durable as this beautiful gem. This quality of theirs and their appearance make them perfect gemstones and jewellers all over the world strive to have them in stock. \nThe usefulness of the artefact, however, is not limited to its industrial applications. There is scientific evidence suggesting that sapphire-like stones effectively protect from psy-waves, whereas the outer shell slightly increases resistance to toxicity. \nHowever, it can cause objects in its vicinity to heat up and in extreme cases to ignite along with the artefact. For this reason, it is safe to conclude that it absorbs heat and is able to convey it to other objects. \nDue to its density the weight of artefact has increased beyond normal standards, and thus it is one of the heaviest anomalous creations in the Zone. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
+st_bolt_carrier_2,Sliding Bolt Carrier with Turning Bolt Lock [R] (Carrier)
 mutant_tushkano_meat,Tushkano Meat
-dolg_heavy_outfit_name,PSZ-9d Body Armor
+greh_exo_outfit_name,Vyraj Power Armor
 st_helm_battle,Sphere M12 Helmet
 ammo-5.7x28-ss190,5.7x28 SS190 rounds
-st_wpn_scar_siber,FN SCAR-H
+st_wpn_adar2_15,ADAR 2-15
 st_wpn_rsh12_shorty,RSh-12 Shorty 12.7x55mm
-st_wpn_pm_new,Makarov PM Pistol 9x18
-st_prt_i_copper,Copper Wire
-st_wpn_svd,SVD
+st_radio,Broken Radio
+st_protein,Protein Bar
+st_wpn_ak105,AK-105
 st_tactical_knife,Monolith Blade
 st_barrel_2,18.5mm Barrel [R] (Barrel)
-dolg_red_outfit_name,PS5-M Hunter Suit
+st_af_ear_descr,Artefact with a bizarre shape. Within its core, a small structure shaped like a human body is visible. It grants the user an indomitable will to live, allowing survival and recovery from otherwise fatal injuries or blood loss.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
 gamma_strike_cap,Impact Cap
-st_af_gravi_name,Gravi
-st_prt_w_p_spring_4,9mm Recoil Spring Assembly [Western] (Spring)
 st_conserva,Canned Tuna
+st_wpn_amb17,AMB-17
+st_wpn_pm_new,Makarov PM Pistol 9x18
 st_trigger_components_4,Single-fire Mode Trigger Mechanism with Firing Pin (Trigger)
-l12u_sarcofag,Sarcophagus
-st_af_spaika_name,Spike
-l10_red_forest,Red Forest
-st_prt_o_retardant_6,PVC/Carbon-fiber Fabrics
-st_tetanus,Fentanyl
-st_equ_touristpack_name,Tourist Backpack
-st_af_iam_name,Improvised Application Module (Empty)
-st_armor_repair_fa,Armor Repair Kit (Emergency)
+st_data_export_first_aid_leg,First-Aid leg
+st_prt_i_copper,Copper Wire
+mutant_cat_claw,Cat Claw
+st_wpn_vihrn,SR-3M Vikhr
+st_bolt_carrier_11,Longitudinal-a Sliding Free Bolt Carrier [PP] (Carrier)
+st_wpn_gauss_bas,Gauss Rifle
+st_bolt_carrier_7,Lever-type Bolt Carrier with Locking Wedge (Carrier)
+st_wpn_ithacam37_extmag,Ithaca M37 Defense
 st_af_death_lamp_name,Death Lamp
-st_detector3,Veles Detector
+st_jar,Plastic Jar
 st_corn,Canned Corn
-st_detector4,Svarog Detector
-st_prt_o_ballistic_12,Reinforced Kevlar K119 Plates
-ammo-7.62x54-ap,7.62x54 mm AP rounds
-st_pda_2_name,PDA v2.0 KilTrakô
-st_device_torch_nv_2_name,Headlamp w/ PN21KL Night Vision
-st_device_torch_nv_3_name,Headlamp w/ Oracle Psi-stimulator
+st_wpn_l96a1m,AWSM
+ammo-gauss,Batteries
+st_ied,IED (Chemical)
+st_af_ah_r1_descr,An artifact containing mostly plant matter found only in the Dead Forest, south of Lab X-9. It is believed that the strong psy-fields it was subjugated to during its formation heavily influenced its shape and properties. Wearing one seems to boost vitality.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Artefact\n
+st_wpn_pb_new,Silenced Pistol PB 9x18
+st_af_kevlar_name,Kevlar Plates and Attachments
 greh_trenchcoat_outfit_name,Sin Heavy Overcoat
 st_lead_box_name,st_lead_box_name
-st_itm_mapkit_1,Anomaly Map (Army Warehouses)
-isg_scientific_outfit_name,UNISG SEVA Suit
+st_upgr_w_internal,Weapon Mechanism Upgrade Kit
+st_af_medusa_descr,Very common in the Zone. This gravitational artefact is able to slightly shield the body and objects from physical impacts. \nIt will slightly protect its user against extreme heat produced respectively by fire anomalies. \nThis artefact is quite heavy as the gravitational field seems to increase mass. Another downside to this artefact is that it will increase the negative effects of psy-waves and is a potent conductor. \n\n%c[0,209,172,56] Does NOT degrade over time.\n
 monolith_proto_exo_outfit_name,X-18 Exoskeleton
-st_itm_mapkit_7,Anomaly Map (Zaton)
+ammo-7.62x54-ap,7.62x54 mm AP rounds
 st_bolt_1,Dropping-block Breech [R] (Bolt)
-st_ecologist_report_1_of_3_name,Walking Dead Findings Field Report 39B rev. 2 (Part 1 of 3)
+st_wpn_sr2_veresk,SR-2M Veresk
 st_wpn_ppsh41_new,PPSh-41
 st_caffeine,Caffeine Tablets
 st_wpn_akm_isg,RD 706 "ISG"
-st_stalker_letter_1_of_2_name,Memoir (Part 1 of 2)
-st_ration_ukr,Ukrainian Combat Ration
-specops_bandit_outfit_name,Deserter's B-5M Armored Suit
-gamma_shock_cap,Electrical Cap
+ammo-12x76-zhekan,12x76 slug shells
+stalker_predator_outfit_name,"Predator" Stalker Suit
+st_af_fountain_descr,An artefact of presumably gravitational nature with a bizarre shape. Under a microscope, the surface of the item appears to be fractal, having unimaginably complex microstructures all the way to the atomic level. If equipped, it will replenish a small portion of any money lost.\n \n %c[pda_white]PROPERTIES:\n %c[d_cyan] ï %c[pda_white] Perk Artefact\n \n
+st_wpn_scar_siber,FN SCAR-H
 st_meat_tushkano,Rat Skewers
 st_prt_o_fabrics_1,Cloth Sheets

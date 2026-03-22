@@ -1,37 +1,37 @@
-~, Name, #1, Amount, #2, Amount, #3, Amount, #4, Amount
-af_dummy_battery,Battery,Generator,x1,Cat Tail,x1,Dog Liver,x1,nil,
-af_black_spray,Black Spray,Shell,x1,Sponge,x1,Controller Brain Tissue,x2,Burer Hand,x3
-af_bracelet,Bracelet,Stone Blood,x1,Bloodsucker Meat,x1,nil,,nil,
-af_baloon,Bubble,Bracelet,x1,Crystal,x1,Chimera Horn,x4,nil,
-af_compass,Compass,Full Empty,x1,Black Spray,x1,Controller Brain Tissue,x4,Chimera Heart,x4
-af_cristall,Crystal,Mama's Beads,x1,Pseudodog Fang,x1,Zombie Hand,x2,nil,
-af_empty,Empty,Jellyfish,x1,Pseudodog Fang,x1,Snork Mask,x1,nil,
-af_eye,Eye,Stone Blood,x1,Lurker Eye,x2,Flesh Eye,x1,nil,
-af_fireball,Fireball,Crystal,x1,Lobster Eyes,x1,Pseudogiant Eye,x3,nil,
-af_glass,Firefly,Kolobok,x1,Chimera Meat,x4,nil,,nil,
-af_fire,Flame,Pin,x1,Eye,x1,Chimera Claw,x2,Chimera Horn,x3
-af_electra_flash,Flash,Ring,x1,Moonlight,x1,Controller Hand,x3,nil,
-af_full_empty,Full Empty,Empty,x1,Wrenched,x1,Pseudogiant Hand,x4,nil,
-af_gold_fish,Goldfish,Gravi,x1,Burer Hand,x3,Controller Hand,x1,Chimera Claw,x2
-af_gravi,Gravi,Nightstar,x1,Snork Hand,x1,Zombie Hand,x1,Fracture Hand,x1
-af_oasis_heart,Heart of the Oasis,Snowflake,x1,Firefly,x1,Bloodsucker Heart,x6,Chimera Heart,x4
-af_itcher,Itcher,Scar,x1,Cat Thyroid,x1,Dog Heart,x1,nil,
-af_medusa,Jellyfish,Spike,x1,Dog Tail,x2,Cat Claw,x2,nil,
-af_fire_loop,Knot,Flame,x1,Fireball,x1,Chimera Heart,x6,Controller Hand,x6
-af_fuzz_kolobok,Kolobok,Soul,x1,Bloodsucker Meat,x1,nil,,nil,
-af_lobster_eyes,Lobster Eyes,Stone Flower,x1,Flesh Eye,x2,nil,,nil,
-af_dummy_glassbeads,Mama's Beads,Sun,x1,Cat Tail,x1,Boar Fang,x1,nil,
-af_mincer_meat,Meat Chunk,Miser's Skull,x1,Flesh Meat,x1,Dog Meat,x1,nil,
-af_electra_moonlight,Moonlight,Battery,x1,Psysucker Hand,x1,Pseudodog Tail,x1,nil,
-af_night_star,Nightstar,Signet,x1,Boar Leg,x1,Dog Liver,x1,nil,
-af_pin,Pin,Itcher,x1,Snork Tendons,x1,Boar Leg,x2,nil,
-af_ring,Ring,Sparkler,x1,Lurker Tail,x1,Bloodsucker Meat,x1,nil,
-af_dummy_dummy,Shell,Battery,x1,Burer Brain,x1,nil,,nil,
-af_ice,Snowflake,Ring,x1,Bloodsucker Jaw,x2,Chimera Claw,x2,Controller Brain Tissue,x1
-af_soul,Soul,Heart,x1,Dog Meat,x3,nil,,nil,
-af_electra_sparkler,Sparkler,Lamp,x1,Cat Thyroid,x1,Cat Claw,x1,nil,
-af_sponge,Sponge,Itcher,x1,Snork Mask,x1,Boar Fang,x1,nil,
-af_blood,Stone Blood,Sandstone,x1,Pseudodog Meat,x1,Zombie Hand,x1,nil,
-af_cristall_flower,Stone Flower,Black Angel,x1,Dog Heart,x1,Snork Tendons,x1,nil,
-af_monolith,Volat Emerald,Flash,x1,Bubble,x1,Pseudogiant Hand,x4,Pseudogiant Eye,x4
-af_vyvert,Wrenched,Meat Chunk,x1,Lurker Tail,x2,Fracture Hand,x1,nil,
+~, Pda_encyclopedia_name, #1, St_data_export_disassemble_amount, #2, St_data_export_disassemble_amount, #3, St_data_export_disassemble_amount, #4, St_data_export_disassemble_amount
+af_baloon,st_af_baloon_name,st_af_bracelet_name,x1,st_af_cristall_name,x1,mutant_chimera_cogot,x4,nil,
+af_black_spray,st_af_black_spray_name,st_af_dummy_dummy_name,x1,st_af_sponge_name,x1,mutant_part_controller_brain_tissue,x2,mutant_burer_hand,x3
+af_blood,st_af_blood_name,st_af_sandstone_name,x1,mutant_psevdodog_meat,x1,mutant_zombi_hand,x1,nil,
+af_bracelet,st_af_bracelet_name,st_af_blood_name,x1,mutant_krovosos_meat,x1,nil,,nil,
+af_compass,st_af_compass_name,st_af_full_empty_name,x1,st_af_black_spray_name,x1,mutant_part_controller_brain_tissue,x4,mutant_heart_chimera,x4
+af_cristall_flower,st_af_cristall_flower_name,st_af_black_angel_name,x1,mutant_dog_heart,x1,mutant_snork_leg,x1,nil,
+af_cristall,st_af_cristall_name,st_af_dummy_glassbeads_name,x1,mutant_fang_psevdodog,x1,mutant_zombi_hand,x2,nil,
+af_dummy_battery,st_af_dummy_battery_name,st_af_generator_name,x1,mutant_cat_tail,x1,mutant_dog_liver,x1,nil,
+af_dummy_dummy,st_af_dummy_dummy_name,st_af_dummy_battery_name,x1,mutant_brain_burer,x1,nil,,nil,
+af_dummy_glassbeads,st_af_dummy_glassbeads_name,st_af_sun_name,x1,mutant_cat_tail,x1,mutant_tusk_boar,x1,nil,
+af_electra_flash,st_af_electra_flash_name,st_af_ring_name,x1,st_af_electra_moonlight_name,x1,mutant_controller_hand,x3,nil,
+af_electra_moonlight,st_af_electra_moonlight_name,st_af_dummy_battery_name,x1,mutant_psysucker_hand,x1,mutant_psevdodog_tail,x1,nil,
+af_electra_sparkler,st_af_electra_sparkler_name,st_af_fonar_name,x1,mutant_cat_thyroid,x1,mutant_cat_claw,x1,nil,
+af_empty,st_af_empty_name,st_af_medusa_name,x1,mutant_fang_psevdodog,x1,mutant_snork_mask,x1,nil,
+af_eye,st_af_eye_name,st_af_blood_name,x1,mutant_lurker_eye,x2,mutant_flesh_eye,x1,nil,
+af_fire_loop,st_af_fire_loop_name,st_af_fire_name,x1,st_af_fireball_name,x1,mutant_heart_chimera,x6,mutant_controller_hand,x6
+af_fire,st_af_fire_name,st_af_pin_name,x1,st_af_eye_name,x1,mutant_chimera_claw,x2,mutant_chimera_cogot,x3
+af_fireball,st_af_fireball_name,st_af_cristall_name,x1,st_af_lobster_eyes_name,x1,mutant_pseudogigant_eye,x3,nil,
+af_full_empty,st_af_full_empty_name,st_af_empty_name,x1,st_af_vyvert_name,x1,mutant_pseudogigant_hand,x4,nil,
+af_fuzz_kolobok,st_af_fuzz_kolobok_name,st_af_soul_name,x1,mutant_krovosos_meat,x1,nil,,nil,
+af_glass,st_af_glass_name,st_af_fuzz_kolobok_name,x1,mutant_chimera_meat,x4,nil,,nil,
+af_gold_fish,st_af_gold_fish_name,st_af_gravi_name,x1,mutant_burer_hand,x3,mutant_controller_hand,x1,mutant_chimera_claw,x2
+af_gravi,st_af_gravi_name,st_af_night_star_name,x1,mutant_snork_hand,x1,mutant_zombi_hand,x1,mutant_fracture_hand,x1
+af_ice,st_af_ice_name,st_af_ring_name,x1,mutant_krovosos_jaw,x2,mutant_chimera_claw,x2,mutant_part_controller_brain_tissue,x1
+af_itcher,st_af_itcher_name,st_af_zhelch_name,x1,mutant_cat_thyroid,x1,mutant_dog_heart,x1,nil,
+af_lobster_eyes,st_af_lobster_eyes_name,st_af_cristall_flower_name,x1,mutant_flesh_eye,x2,nil,,nil,
+af_medusa,st_af_medusa_name,st_af_spaika_name,x1,mutant_dog_tail,x2,mutant_cat_claw,x2,nil,
+af_mincer_meat,st_af_mincer_meat_name,st_af_skull_miser_name,x1,mutant_flesh_meat,x1,mutant_dog_meat,x1,nil,
+af_monolith,st_af_monolith_name,st_af_electra_flash_name,x1,st_af_baloon_name,x1,mutant_pseudogigant_hand,x4,mutant_pseudogigant_eye,x4
+af_night_star,st_af_night_star_name,st_af_signet_name,x1,mutant_boar_leg,x1,mutant_dog_liver,x1,nil,
+af_oasis_heart,st_af_oasis_heart_name,st_af_ice_name,x1,st_af_glass_name,x1,mutant_heart_bloodsucker,x6,mutant_heart_chimera,x4
+af_pin,st_af_pin_name,st_af_itcher_name,x1,mutant_snork_leg,x1,mutant_boar_leg,x2,nil,
+af_ring,st_af_ring_name,st_af_electra_sparkler_name,x1,mutant_lurker_tail,x1,mutant_krovosos_meat,x1,nil,
+af_soul,st_af_soul_name,st_af_ear_name,x1,mutant_dog_meat,x3,nil,,nil,
+af_sponge,st_af_sponge_name,st_af_itcher_name,x1,mutant_snork_mask,x1,mutant_tusk_boar,x1,nil,
+af_vyvert,st_af_vyvert_name,st_af_mincer_meat_name,x1,mutant_lurker_tail,x2,mutant_fracture_hand,x1,nil,

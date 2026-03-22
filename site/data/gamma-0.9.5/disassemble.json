@@ -1,1806 +1,1806 @@
 {
-  "letter_memoirs_1_of_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "letter_memoirs_2_of_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "medkit": [
-    {
-      "name": "Syringe",
-      "amount": "x2"
-    },
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    },
-    {
-      "name": "Textolite Base",
-      "amount": "x1"
-    }
-  ],
-  "af_frames": [
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Carbon Nanotube Layers w/ Kevlar-49 Fabrics",
-      "amount": "x1"
-    }
-  ],
-  "detector_anomaly": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "itm_mapkit_9": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x3"
-    }
-  ],
-  "itm_mapkit_1": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x3"
-    }
-  ],
-  "itm_mapkit_4": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x3"
-    }
-  ],
-  "itm_mapkit_8": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x3"
-    }
-  ],
-  "itm_mapkit_6": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x3"
-    }
-  ],
-  "itm_mapkit_3": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x3"
-    }
-  ],
-  "itm_mapkit_5": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x3"
-    }
-  ],
-  "itm_mapkit_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x3"
-    }
-  ],
-  "itm_mapkit_7": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x3"
-    }
-  ],
-  "armor_repair_fa": [
-    {
-      "name": "Duct Tape",
-      "amount": "x2"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Textolite Base",
-      "amount": "x1"
-    }
-  ],
-  "exo_repair_kit": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x3"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    }
-  ],
-  "heavy_repair_kit": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    }
-  ],
-  "army_bowler": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "medkit_army": [
-    {
-      "name": "Plastic Film",
-      "amount": "x2"
-    },
-    {
-      "name": "Bandage",
-      "amount": "x1"
-    },
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    },
-    {
-      "name": "Textolite Base",
-      "amount": "x1"
-    }
-  ],
-  "af_aac": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "af_aam": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x3"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x3"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x2"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "porn2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "rebirth": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    }
-  ],
-  "itm_backpack": [
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Synthetic Cloth Sheets",
-      "amount": "x1"
-    }
-  ],
-  "beans": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "ball_hammer": [
-    {
-      "name": "Wooden Parts",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "bandage": [
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    }
-  ],
-  "detector_advanced": [
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x3"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x3"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    }
-  ],
-  "beadspread": [
-    {
-      "name": "Cloth Sheets",
-      "amount": "x1"
-    },
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    }
-  ],
-  "tushonka": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "wpn_binoc_inv": [
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    }
-  ],
-  "wpn_binoc": [
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    }
-  ],
-  "af_cooler": [
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Insulating Magnesium Grid Inserts",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "broken_detector": [
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    }
-  ],
-  "flashlight_broken": [
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    }
-  ],
-  "headlamp": [
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x1"
-    }
-  ],
-  "radio": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x1"
-    }
-  ],
-  "walkie": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x1"
-    }
-  ],
-  "af_camelbak": [
-    {
-      "name": "Grade-B Polyethylene Plates w/ Expanded Carrier",
-      "amount": "x1"
-    },
-    {
-      "name": "Polyethylene Lightweight Armor Plates",
-      "amount": "x1"
-    },
-    {
-      "name": "PBI-blended Fabrics",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "equ_small_pack": [
-    {
-      "name": "Cloth Sheets",
-      "amount": "x1"
-    },
-    {
-      "name": "Synthetic Cloth Sheets",
-      "amount": "x1"
-    },
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    }
-  ],
-  "itm_tent": [
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x3"
-    },
-    {
-      "name": "Durable Textiles",
-      "amount": "x2"
-    }
-  ],
-  "corn": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "tomato": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "conserva": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "af_plates": [
-    {
-      "name": "Grade-B Polyethylene Plates w/ Expanded Carrier",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Polyethylene Lightweight Armor Plates",
-      "amount": "x1"
-    }
-  ],
-  "chili": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "solvent": [
-    {
-      "name": "Textolite Base",
-      "amount": "x1"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Plastic Jar",
-      "amount": "x1"
-    }
-  ],
-  "equ_military_pack": [
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x3"
-    },
-    {
-      "name": "Synthetic Cloth Sheets",
-      "amount": "x2"
-    },
-    {
-      "name": "Durable Textiles",
-      "amount": "x2"
-    }
-  ],
-  "letter_military_log": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "analgetic": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    }
-  ],
-  "recipe_drug_1": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_drug_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_drug_3": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_drug_4": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "detector_simple": [
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    }
-  ],
-  "recipe_basic_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_advanced_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_expert_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
   "e0t2_magd": [
     {
-      "name": "Eotech Magnifier",
+      "name": "st_addon_scope_mag",
       "amount": "x1"
     },
     {
-      "name": "EOTech XPS3-0",
-      "amount": "x1"
-    }
-  ],
-  "adrenalin": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    }
-  ],
-  "prt_o_support_1": [
-    {
-      "name": "Fasteners",
-      "amount": "x2"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    }
-  ],
-  "tetanus": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    }
-  ],
-  "cooking": [
-    {
-      "name": "Plastic Film",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    }
-  ],
-  "cutlery": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "itm_campfire": [
-    {
-      "name": "Wooden Parts",
-      "amount": "x2"
-    }
-  ],
-  "device_flashlight": [
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    }
-  ],
-  "af_freon": [
-    {
-      "name": "Plastic Film",
-      "amount": "x1"
-    },
-    {
-      "name": "PVC/Rubber Coated Fabrics",
-      "amount": "x1"
-    },
-    {
-      "name": "Layered Fire Retardant Fabrics",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "recipe_basic_3": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_advanced_3": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_expert_3": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "explo_balon_gas": [
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "fieldcooker": [
-    {
-      "name": "Fasteners",
-      "amount": "x3"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x3"
-    }
-  ],
-  "detector_geiger": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "glucose_s": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    }
-  ],
-  "glue_e": [
-    {
-      "name": "Textolite Base",
-      "amount": "x1"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Plastic Jar",
-      "amount": "x1"
-    }
-  ],
-  "glue_a": [
-    {
-      "name": "Textolite Base",
-      "amount": "x1"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Plastic Jar",
-      "amount": "x1"
-    }
-  ],
-  "glue_b": [
-    {
-      "name": "Textolite Base",
-      "amount": "x1"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Plastic Jar",
-      "amount": "x1"
-    }
-  ],
-  "guitar_a": [
-    {
-      "name": "Wooden Parts",
-      "amount": "x4"
-    }
-  ],
-  "gun_oil_ru": [
-    {
-      "name": "Textolite Base",
-      "amount": "x1"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Plastic Jar",
-      "amount": "x1"
-    }
-  ],
-  "device_torch_dummy": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    }
-  ],
-  "device_torch_nv_1": [
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    }
-  ],
-  "device_torch_nv_3": [
-    {
-      "name": "Box of Transistors",
-      "amount": "x3"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    }
-  ],
-  "device_torch_nv_2": [
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    }
-  ],
-  "drug_booster": [
-    {
-      "name": "Plastic Jar",
-      "amount": "x1"
-    }
-  ],
-  "kit_hunt": [
-    {
-      "name": "Durable Textiles",
-      "amount": "x2"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x2"
-    },
-    {
-      "name": "Swiss Knife",
-      "amount": "x1"
-    }
-  ],
-  "ied_new": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    }
-  ],
-  "ied_rpg_new": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    }
-  ],
-  "af_frames_up": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x2"
-    },
-    {
-      "name": "Carbon Nanotube Layers w/ Kevlar-49 Fabrics",
-      "amount": "x1"
-    },
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    }
-  ],
-  "af_cooler_up": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x2"
-    },
-    {
-      "name": "Insulating Magnesium Grid Inserts",
-      "amount": "x1"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    }
-  ],
-  "af_camelbak_up": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    },
-    {
-      "name": "Polyethylene Lightweight Armor Plates",
-      "amount": "x1"
-    },
-    {
-      "name": "PBI-blended Fabrics",
-      "amount": "x1"
-    },
-    {
-      "name": "Grade-B Polyethylene Plates w/ Expanded Carrier",
-      "amount": "x1"
-    }
-  ],
-  "af_plates_up": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x2"
-    },
-    {
-      "name": "Polyethylene Lightweight Armor Plates",
-      "amount": "x1"
-    },
-    {
-      "name": "Grade-B Polyethylene Plates w/ Expanded Carrier",
-      "amount": "x1"
-    }
-  ],
-  "af_freon_up": [
-    {
-      "name": "Plastic Film",
-      "amount": "x2"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    },
-    {
-      "name": "Layered Fire Retardant Fabrics",
-      "amount": "x1"
-    },
-    {
-      "name": "PVC/Rubber Coated Fabrics",
-      "amount": "x1"
-    }
-  ],
-  "af_kevlar_up": [
-    {
-      "name": "Kevlar AP Steel Plates",
-      "amount": "x2"
-    },
-    {
-      "name": "Kevlar K119 Plates w/ Polycarbonate Inserts",
-      "amount": "x2"
-    },
-    {
-      "name": "Kevlar K129 Plates w/ Reinforced Ceramic Inserts",
-      "amount": "x1"
-    },
-    {
-      "name": "Kevlar K129 Plates w/ Polycarbonate Composite",
-      "amount": "x1"
-    }
-  ],
-  "af_surge_up": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x2"
-    },
-    {
-      "name": "Insulating Constantan Inserts",
-      "amount": "x1"
-    }
-  ],
-  "af_grid_up": [
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x2"
-    },
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Kevlar AP Steel Plates",
-      "amount": "x1"
-    }
-  ],
-  "af_iam": [
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    }
-  ],
-  "stimpack": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    },
-    {
-      "name": "Plastic Film",
-      "amount": "x1"
-    }
-  ],
-  "grease": [
-    {
-      "name": "Plastic Jar",
-      "amount": "x1"
-    }
-  ],
-  "letter_freedom_manual_2_of_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "letter_freedom_manual_1_of_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "af_kevlar": [
-    {
-      "name": "Kevlar AP Steel Plates",
-      "amount": "x1"
-    },
-    {
-      "name": "Kevlar K129 Plates w/ Polycarbonate Composite",
-      "amount": "x1"
-    },
-    {
-      "name": "Kevlar K129 Plates w/ Reinforced Ceramic Inserts",
-      "amount": "x1"
-    },
-    {
-      "name": "Kevlar K119 Plates w/ Polycarbonate Inserts",
-      "amount": "x1"
-    }
-  ],
-  "glucose": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    }
-  ],
-  "letter_letter_to_outside": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "letter_stalker_letter_3": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "meinkampf": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "letter_stalker_letter_1_of_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "letter_stalker_letter_2_of_2": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "letter_mercenary": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "salicidic_acid": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    }
-  ],
-  "letter_military_stalker": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "stimpack_army": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    },
-    {
-      "name": "Plastic Film",
-      "amount": "x1"
-    }
-  ],
-  "letter_monolith_prayer_1_of_3": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "letter_monolith_prayer_2_of_3": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "letter_monolith_prayer_3_of_3": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "letter_monolithian_thoughts": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "morphine": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    }
-  ],
-  "shovel_mili": [
-    {
-      "name": "Wooden Parts",
-      "amount": "x2"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    }
-  ],
-  "boots": [
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    }
-  ],
-  "gloves": [
-    {
-      "name": "Cloth Sheets",
-      "amount": "x1"
-    },
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    }
-  ],
-  "shovel_old": [
-    {
-      "name": "Wooden Parts",
-      "amount": "x2"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x2"
-    }
-  ],
-  "underwear": [
-    {
-      "name": "Synthetic Cloth Sheets",
-      "amount": "x1"
-    }
-  ],
-  "itm_pda_uncommon": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    }
-  ],
-  "itm_pda_common": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    }
-  ],
-  "device_pda_1": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    }
-  ],
-  "itm_pda_rare": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    }
-  ],
-  "device_pda_2": [
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x3"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    }
-  ],
-  "device_pda_3": [
-    {
-      "name": "Box of Transistors",
-      "amount": "x4"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    }
-  ],
-  "mine_new": [
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "explo_metalcan_powder": [
-    {
-      "name": "Pistol/Shotgun Propellant",
-      "amount": "x3"
-    },
-    {
-      "name": "Small Rifle Propellant",
-      "amount": "x3"
-    },
-    {
-      "name": "Large Rifle Propellant",
-      "amount": "x2"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "detector_radio": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    }
-  ],
-  "radio2": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Copper Wire",
-      "amount": "x1"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x1"
-    }
-  ],
-  "medkit_scientic": [
-    {
-      "name": "Syringe",
-      "amount": "x2"
-    },
-    {
-      "name": "Plastic Film",
-      "amount": "x2"
-    },
-    {
-      "name": "Bandage",
-      "amount": "x1"
-    },
-    {
-      "name": "Textolite Base",
-      "amount": "x1"
-    }
-  ],
-  "stimpack_scientic": [
-    {
-      "name": "Syringe",
-      "amount": "x2"
-    },
-    {
-      "name": "Plastic Film",
-      "amount": "x1"
-    }
-  ],
-  "compression_bag": [
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    }
-  ],
-  "itm_sleepbag": [
-    {
-      "name": "Durable Textiles",
-      "amount": "x2"
-    },
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x2"
-    }
-  ],
-  "af_surge": [
-    {
-      "name": "Insulating Constantan Inserts",
-      "amount": "x1"
-    },
-    {
-      "name": "Box of Resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "recipe_basic_1": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_advanced_1": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_expert_1": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "survival_kit": [
-    {
-      "name": "Syringe",
-      "amount": "x1"
-    },
-    {
-      "name": "Plastic Film",
-      "amount": "x1"
-    },
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    },
-    {
-      "name": "Textolite Base",
-      "amount": "x1"
-    },
-    {
-      "name": "Army Medkit",
-      "amount": "x1"
-    },
-    {
-      "name": "Bandage",
-      "amount": "x1"
-    }
-  ],
-  "detector_scientific": [
-    {
-      "name": "Box of Resistors",
-      "amount": "x4"
-    },
-    {
-      "name": "Pack of Capacitors",
-      "amount": "x4"
-    },
-    {
-      "name": "Box of Transistors",
-      "amount": "x4"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    }
-  ],
-  "synthrope": [
-    {
-      "name": "Rope",
-      "amount": "x2"
-    }
-  ],
-  "tarpaulin": [
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x1"
-    }
-  ],
-  "mirror": [
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "porn": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_basic_4": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_advanced_4": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "recipe_expert_4": [
-    {
-      "name": "Paper Sheets",
-      "amount": "x1"
-    }
-  ],
-  "af_grid": [
-    {
-      "name": "Kevlar AP Steel Plates",
-      "amount": "x1"
-    },
-    {
-      "name": "Durable Textiles",
-      "amount": "x1"
-    },
-    {
-      "name": "Fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "Metallic Scrap",
-      "amount": "x1"
-    }
-  ],
-  "equ_tourist_pack": [
-    {
-      "name": "Cloth Sheets",
-      "amount": "x3"
-    },
-    {
-      "name": "Durable Textiles",
-      "amount": "x3"
-    },
-    {
-      "name": "Synthetic Cloth Sheets",
-      "amount": "x2"
-    }
-  ],
-  "jgut": [
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x2"
-    },
-    {
-      "name": "Bandage",
-      "amount": "x1"
-    }
-  ],
-  "equ_small_military_pack": [
-    {
-      "name": "Mil-Spec Textiles",
-      "amount": "x2"
-    },
-    {
-      "name": "Synthetic Cloth Sheets",
-      "amount": "x1"
-    },
-    {
-      "name": "Durable Textiles",
+      "name": "st_addon_scope_e0t2",
       "amount": "x1"
     }
   ],
   "uh1_magd": [
     {
-      "name": "Eotech Magnifier",
+      "name": "st_addon_scope_mag",
       "amount": "x1"
     },
     {
-      "name": "Razor AMG UH-1 Gen. II",
+      "name": "st_addon_scope_razor",
+      "amount": "x1"
+    }
+  ],
+  "adrenalin": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    }
+  ],
+  "af_aac": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "af_aam": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "af_camelbak": [
+    {
+      "name": "st_prt_o_ballistic_9",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_13",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_13",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "af_camelbak_up": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_ballistic_13",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_13",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_9",
+      "amount": "x1"
+    }
+  ],
+  "af_cooler": [
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_7",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "af_cooler_up": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_retardant_7",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    }
+  ],
+  "af_frames": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_15",
+      "amount": "x1"
+    }
+  ],
+  "af_frames_up": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_ballistic_15",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "af_freon": [
+    {
+      "name": "st_prt_i_plastic",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_5",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_1",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "af_freon_up": [
+    {
+      "name": "st_prt_i_plastic",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_retardant_1",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_5",
+      "amount": "x1"
+    }
+  ],
+  "af_grid": [
+    {
+      "name": "st_prt_o_ballistic_5",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "af_grid_up": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_5",
+      "amount": "x1"
+    }
+  ],
+  "af_iam": [
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    }
+  ],
+  "af_kevlar": [
+    {
+      "name": "st_prt_o_ballistic_5",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_1",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_7",
+      "amount": "x1"
+    }
+  ],
+  "af_kevlar_up": [
+    {
+      "name": "st_prt_o_ballistic_5",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_ballistic_7",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_ballistic_1",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_3",
+      "amount": "x1"
+    }
+  ],
+  "af_plates": [
+    {
+      "name": "st_prt_o_ballistic_9",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_13",
+      "amount": "x1"
+    }
+  ],
+  "af_plates_up": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_ballistic_13",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_9",
+      "amount": "x1"
+    }
+  ],
+  "af_surge": [
+    {
+      "name": "st_prt_o_retardant_17",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "af_surge_up": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_retardant_17",
+      "amount": "x1"
+    }
+  ],
+  "analgetic": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    }
+  ],
+  "armor_repair_fa": [
+    {
+      "name": "st_duct_tape",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_textolite",
+      "amount": "x1"
+    }
+  ],
+  "army_bowler": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "ball_hammer": [
+    {
+      "name": "st_prt_i_wood",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "explo_balon_gas": [
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "bandage": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "beadspread": [
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "beans": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "wpn_binoc_inv": [
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    }
+  ],
+  "wpn_binoc": [
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    }
+  ],
+  "boots": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    }
+  ],
+  "broken_detector": [
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    }
+  ],
+  "chili": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "compression_bag": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    }
+  ],
+  "conserva": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "cooking": [
+    {
+      "name": "st_prt_i_plastic",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "corn": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "cutlery": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "detector_simple": [
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    }
+  ],
+  "detector_advanced": [
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
       "amount": "x1"
     }
   ],
   "detector_elite": [
     {
-      "name": "Box of Transistors",
+      "name": "st_prt_i_transistors",
       "amount": "x4"
     },
     {
-      "name": "Pack of Capacitors",
+      "name": "st_prt_i_capacitors",
       "amount": "x2"
     },
     {
-      "name": "Box of Resistors",
+      "name": "st_prt_i_resistors",
       "amount": "x2"
     },
     {
-      "name": "Metallic Scrap",
+      "name": "st_prt_i_scrap",
       "amount": "x1"
     },
     {
-      "name": "Fasteners",
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "detector_scientific": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "detector_anomaly": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "detector_radio": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "device_flashlight": [
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    }
+  ],
+  "device_torch_dummy": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    }
+  ],
+  "device_torch_nv_1": [
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    }
+  ],
+  "device_torch_nv_2": [
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    }
+  ],
+  "device_torch_nv_3": [
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    }
+  ],
+  "drug_booster": [
+    {
+      "name": "st_jar",
       "amount": "x1"
     }
   ],
   "letter_ecologist_report_1_of_3": [
     {
-      "name": "Paper Sheets",
+      "name": "st_prt_i_paper",
       "amount": "x3"
     }
   ],
   "letter_ecologist_report_2_of_3": [
     {
-      "name": "Paper Sheets",
+      "name": "st_prt_i_paper",
       "amount": "x3"
     }
   ],
   "letter_ecologist_report_3_of_3": [
     {
-      "name": "Paper Sheets",
+      "name": "st_prt_i_paper",
       "amount": "x3"
+    }
+  ],
+  "equ_military_pack": [
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x2"
+    }
+  ],
+  "equ_small_pack": [
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "equ_small_military_pack": [
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "equ_tourist_pack": [
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x2"
+    }
+  ],
+  "exo_repair_kit": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "heavy_repair_kit": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "fieldcooker": [
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x3"
+    }
+  ],
+  "flashlight_broken": [
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    }
+  ],
+  "letter_freedom_manual_2_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_freedom_manual_1_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_advanced_1": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_advanced_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_advanced_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_advanced_4": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_basic_1": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_basic_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_basic_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_basic_4": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_expert_1": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_expert_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_expert_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_expert_4": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "detector_geiger": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "gloves": [
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "glucose": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    }
+  ],
+  "glucose_s": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    }
+  ],
+  "glue_a": [
+    {
+      "name": "st_prt_i_textolite",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    },
+    {
+      "name": "st_jar",
+      "amount": "x1"
+    }
+  ],
+  "glue_b": [
+    {
+      "name": "st_prt_i_textolite",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    },
+    {
+      "name": "st_jar",
+      "amount": "x1"
+    }
+  ],
+  "glue_e": [
+    {
+      "name": "st_prt_i_textolite",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    },
+    {
+      "name": "st_jar",
+      "amount": "x1"
+    }
+  ],
+  "grease": [
+    {
+      "name": "st_jar",
+      "amount": "x1"
+    }
+  ],
+  "guitar_a": [
+    {
+      "name": "st_prt_i_wood",
+      "amount": "x4"
+    }
+  ],
+  "gun_oil_ru": [
+    {
+      "name": "st_prt_i_textolite",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    },
+    {
+      "name": "st_jar",
+      "amount": "x1"
     }
   ],
   "hand_watch": [
     {
-      "name": "Fasteners",
+      "name": "st_prt_i_fasteners",
       "amount": "x1"
     },
     {
-      "name": "Metallic Scrap",
+      "name": "st_prt_i_scrap",
       "amount": "x1"
     }
   ],
-  "yadylin": [
+  "headlamp": [
     {
-      "name": "Plastic Jar",
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    }
+  ],
+  "ied_new": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    }
+  ],
+  "ied_rpg_new": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    }
+  ],
+  "itm_backpack": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    }
+  ],
+  "itm_mapkit_1": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "itm_mapkit_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "itm_mapkit_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "itm_mapkit_4": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "itm_mapkit_5": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "itm_mapkit_6": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "itm_mapkit_7": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "itm_mapkit_8": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "itm_mapkit_9": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "itm_sleepbag": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x2"
+    }
+  ],
+  "itm_tent": [
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x2"
+    }
+  ],
+  "itm_campfire": [
+    {
+      "name": "st_prt_i_wood",
+      "amount": "x2"
+    }
+  ],
+  "jgut": [
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x2"
+    },
+    {
+      "name": "st_bandage",
+      "amount": "x1"
+    }
+  ],
+  "kit_hunt": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x2"
+    },
+    {
+      "name": "st_swiss",
       "amount": "x1"
     }
   ],
   "lead_box": [
     {
-      "name": "Fasteners",
+      "name": "st_prt_i_fasteners",
       "amount": "x2"
     },
     {
-      "name": "Metallic Scrap",
+      "name": "st_prt_i_scrap",
       "amount": "x2"
+    }
+  ],
+  "letter_mercenary": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_military_log": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_military_stalker": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_stalker_letter_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_letter_to_outside": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "medkit": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_textolite",
+      "amount": "x1"
+    }
+  ],
+  "medkit_army": [
+    {
+      "name": "st_prt_i_plastic",
+      "amount": "x2"
+    },
+    {
+      "name": "st_bandage",
+      "amount": "x1"
+    },
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_textolite",
+      "amount": "x1"
+    }
+  ],
+  "medkit_scientic": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_plastic",
+      "amount": "x2"
+    },
+    {
+      "name": "st_bandage",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_textolite",
+      "amount": "x1"
+    }
+  ],
+  "meinkampf": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_memoirs_1_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_memoirs_2_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "explo_metalcan_powder": [
+    {
+      "name": "st_powder_pistol",
+      "amount": "x3"
+    },
+    {
+      "name": "st_powder_rifle",
+      "amount": "x3"
+    },
+    {
+      "name": "st_powder_mag",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "mine_new": [
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "mirror": [
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "letter_monolith_prayer_1_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_monolith_prayer_2_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_monolith_prayer_3_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_monolithian_thoughts": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "morphine": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    }
+  ],
+  "device_pda_1": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "device_pda_2": [
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "device_pda_3": [
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "itm_pda_rare": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    }
+  ],
+  "itm_pda_common": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    }
+  ],
+  "itm_pda_uncommon": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    }
+  ],
+  "porn": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "porn2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "prt_o_support_1": [
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    }
+  ],
+  "radio": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    }
+  ],
+  "radio2": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    }
+  ],
+  "rebirth": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    }
+  ],
+  "recipe_drug_1": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_drug_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_drug_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "recipe_drug_4": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "salicidic_acid": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    }
+  ],
+  "shovel_mili": [
+    {
+      "name": "st_prt_i_wood",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    }
+  ],
+  "shovel_old": [
+    {
+      "name": "st_prt_i_wood",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    }
+  ],
+  "solvent": [
+    {
+      "name": "st_prt_i_textolite",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    },
+    {
+      "name": "st_jar",
+      "amount": "x1"
+    }
+  ],
+  "letter_stalker_letter_1_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_stalker_letter_2_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "stimpack": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_plastic",
+      "amount": "x1"
+    }
+  ],
+  "stimpack_army": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_plastic",
+      "amount": "x1"
+    }
+  ],
+  "stimpack_scientic": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_plastic",
+      "amount": "x1"
+    }
+  ],
+  "survival_kit": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_plastic",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_textolite",
+      "amount": "x1"
+    },
+    {
+      "name": "st_medkit_army",
+      "amount": "x1"
+    },
+    {
+      "name": "st_bandage",
+      "amount": "x1"
+    }
+  ],
+  "synthrope": [
+    {
+      "name": "st_rope",
+      "amount": "x2"
+    }
+  ],
+  "tarpaulin": [
+    {
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x1"
+    }
+  ],
+  "tetanus": [
+    {
+      "name": "st_e_syringe",
+      "amount": "x1"
+    }
+  ],
+  "tomato": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "tushonka": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "underwear": [
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    }
+  ],
+  "walkie": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    }
+  ],
+  "yadylin": [
+    {
+      "name": "st_jar",
+      "amount": "x1"
     }
   ]
 }
