@@ -331,7 +331,7 @@
             </div>
             <div class="active-filters" v-if="activeFilterChips.length > 0">
                 <span v-for="(chip, idx) in activeFilterChips" :key="idx" class="active-filter-chip">
-                    <span class="active-filter-label">{{ chip.label }}<template v-if="chip.display">: {{ chip.display }}</template></span>
+                    <span class="active-filter-label">{{ t(chip.label) }}<template v-if="chip.display">: {{ chip.display }}</template></span>
                     <button class="active-filter-remove" @click="removeFilter(chip)">&times;</button>
                 </span>
                 <a href="#" class="filter-clear-inline" @click.prevent="clearAllFilters()">{{ t('app_label_clear_all') }}</a>

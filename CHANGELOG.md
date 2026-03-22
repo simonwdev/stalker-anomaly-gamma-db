@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Keyboard shortcuts for common actions like search, view toggling, and item navigation
 - Sidebar can now be collapsed on desktop for more screen space
 
+### Fixed
+
+- Filter chip labels now display translated text instead of raw translation keys
+
 ### Changed
 
 - Global search now shows item IDs to distinguish items with the same name
