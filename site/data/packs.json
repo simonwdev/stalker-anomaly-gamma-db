@@ -9,6 +9,16 @@
         { "url": "https://www.stalkergamma.com/", "icon": "globe", "label": "Website" },
         { "url": "https://github.com/Grokitach/Stalker_GAMMA", "icon": "github", "label": "GitHub" }
       ]
+    },
+    {
+      "id": "anomaly-1.5.3",
+      "name": "Anomaly 1.5.3",
+      "status": "preview",
+      "baseCarryWeight": 33,
+      "links": [
+        { "url": "https://discord.com/invite/c4RuJNs", "icon": "discord", "label": "Discord" },
+        { "url": "https://anomalymod.com/", "icon": "globe", "label": "Website" }
+      ]
     }
   ],
   "default": "gamma-0.9.4"

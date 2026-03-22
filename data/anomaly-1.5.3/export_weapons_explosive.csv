@@ -1,0 +1,4 @@
+~, Pda_encyclopedia_name, St_prop_weight, St_upgr_cost, Ui_mm_repair, St_data_export_single_handed, Ui_inv_accuracy, Ui_inv_handling, Ui_inv_damage, Ui_inv_rate_of_fire, Ui_ammo_count, Ui_inv_wrange, Ui_inv_bspeed, Ui_inv_reli, Ui_inv_recoil, Ui_ammo_types, St_data_export_ammo_types_alt
+wpn_rpg7,st_wpn_rpg7,6.3,29800,N/A,N,0%,0%,2,0.2,1,0,0,0%,0,"ammo-og-7b";"ammo-og-7b";"ammo-og-7b",
+wpn_m79,st_wpn_m79,2.7,26840,N/A,N,0%,0%,0.53333334128062,0.2,1,0,0,0%,0,"ammo-m209";"ammo-m209";"ammo-m209",
+wpn_rg-6,st_wpn_rg6,6.2,38850,N/A,N,0%,0%,0.5,0.115,6,0,0,0%,0,"ammo-vog-25";"ammo-vog-25";"ammo-vog-25",

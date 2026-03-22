@@ -47,14 +47,17 @@
     <div class="header-brand">
         <img src="img/logo.png" alt="S.T.A.L.K.E.R. Anomaly" class="site-logo">
         <div class="header-title-group">
-            <div class="header-pack-label">{{ activePack?.name || 'GAMMA' }}</div>
+            <div class="header-pack-label">{{ activePack?.name || 'GAMMA' }}<span v-if="activePack?.status" class="pack-status-badge">{{ activePack.status }}</span></div>
             <h1>{{ t('app_label_database') }}</h1>
         </div>
     </div>
-    <div class="pack-selector" v-if="packs.length > 1">
-        <select v-model="activePack" @change="switchPack()">
-            <option v-for="p in packs" :key="p.id" :value="p">{{ p.name }}</option>
-        </select>
+    <div class="pack-wrap" v-if="packs.length > 1" v-click-outside="() => packOpen = false">
+        <button class="pack-btn" @click.stop="packOpen = !packOpen">{{ activePack?.name }}<svg class="pack-chevron" :class="{ open: packOpen }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="pack-menu" v-show="packOpen">
+            <button v-for="p in packs" :key="p.id" class="pack-menu-item" :class="{ active: activePack?.id === p.id }" @click="activePack = p; packOpen = false; switchPack()">
+                {{ p.name }}<span v-if="p.status" class="pack-status-badge">{{ p.status }}</span>
+            </button>
+        </div>
     </div>
     <div class="header-links" v-if="activePack?.links">
         <a v-for="link in activePack.links" :key="link.url" :href="link.url" target="_blank" rel="noopener" class="header-link" v-tooltip="t('app_link_' + link.icon.replace('globe', 'website')) + ' ' + activePack?.name">

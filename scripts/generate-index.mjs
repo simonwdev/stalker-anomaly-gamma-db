@@ -37,6 +37,7 @@ const SKIP_FILES = new Set([
   "item_drop_locations.csv",
   "export_artefact_recipes.csv",
   "export_stash_drop_rates.csv",
+  "item_chance_in_stash.csv",
   "en_us.csv",
   "ru_ru.csv",
 ]);

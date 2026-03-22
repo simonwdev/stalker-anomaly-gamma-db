@@ -1,0 +1,22 @@
+~, Pda_encyclopedia_name, St_prop_weight, St_upgr_cost, Ui_inv_outfit_fire_wound_protection, Ui_inv_outfit_wound_protection, Ui_inv_outfit_burn_protection, Ui_inv_outfit_shock_protection, Ui_inv_outfit_chemical_burn_protection, Ui_inv_outfit_radiation_protection, Ui_inv_outfit_telepatic_protection, Ui_inv_outfit_strike_protection, Ui_inv_outfit_explosion_protection
+helm_ach7ex,helm_ach7ex,3,17500,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_rp_bala,st_helm_rp_bala,0,550,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_m50,helm_m50,2,20700,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_hardhat_snag,st_helm_hardhat,2,15820,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_respirator_gp5,st_helm_respirator_gp5,1,10120,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_respirator,st_helm_respirator,1,6120,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_hardhat,st_helm_hardhat,2,10640,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_cloth_mask,st_helm_cloth_mask,0,450,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_bandana,st_helm_bandana,0,230,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_respirator_old,st_helm_respirator,2,7120,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_spartan,helm_spartan,5,37000,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_battle,st_helm_battle,4,27520,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_resp,st_helm_resp,1,4220,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_exo,st_helm_exo_name,5,30520,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_ach7,helm_ach7,3,13700,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_metro,st_helm_metro,6,33440,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_m40,st_helm_m40,2,15920,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_tactic,st_helm_tactic,4,22440,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_ranger,helm_ranger,2,24300,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_ppm88,helm_ppm88,2,18500,0%,0%,0%,0%,0%,0%,0%,0%,0%
+helm_protective,st_helm_protective,6,17720,0%,0%,0%,0%,0%,0%,0%,0%,0%

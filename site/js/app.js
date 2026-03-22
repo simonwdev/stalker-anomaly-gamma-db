@@ -69,7 +69,7 @@ const RANGE_EXCLUDE = new Set([
     ...SKIP_KEYS, ...NAME_TAG_COLS, ...HEAL_FIELDS, ...BADGE_COLS,
     "name", "displayName", "ui_st_community",
 ]);
-const TILE_HIDE = new Set(["st_upgr_cost", "pda_encyclopedia_name", "name", "pda_encyclopedia_tier", "ui_st_rank", "Type", "st_data_export_has_perk", "st_data_export_is_junk", "st_data_export_can_be_crafted", "ui_mcm_menu_exo", "st_data_export_can_be_cooked", "st_data_export_used_in_cooking", "st_data_export_used_in_crafting", "st_data_export_cuts_thick_skin", ...HEAL_FIELDS]);
+const TILE_HIDE = new Set(["st_upgr_cost", "pda_encyclopedia_name", "name", "pda_encyclopedia_tier", "ui_st_rank", "Type", "st_data_export_has_perk", "st_data_export_is_junk", "st_data_export_is_backpack", "st_data_export_can_be_crafted", "ui_mcm_menu_exo", "st_data_export_can_be_cooked", "st_data_export_used_in_cooking", "st_data_export_used_in_crafting", "st_data_export_cuts_thick_skin", "st_data_export_restore_health_max", "st_data_export_restore_bleeding_max", "st_data_export_restore_radiation_max", "st_data_export_power_restore_max", ...HEAL_FIELDS]);
 
 const UNITS = {
     "st_prop_weight": "unit_kg",
@@ -268,6 +268,7 @@ const app = createApp({
             packs: [],
             activePack: null,
             packLoading: false,
+            packOpen: false,
 
             // Localisation
             locale: "en",
@@ -3122,6 +3123,11 @@ const app = createApp({
                 return val;
             }
             const unit = this.tUnit(h);
+            if (!isNaN(n) && n !== Math.floor(n)) {
+                const display = parseFloat(n.toFixed(1));
+                if (unit && !isPct) return `${display} ${unit}`;
+                return isPct ? `${display}%` : String(display);
+            }
             if (unit && !isPct && n !== 0) return `${val} ${unit}`;
             return val;
         },
