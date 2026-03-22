@@ -5,7 +5,9 @@
       { "type": "added", "text": "Radar chart view in the Compare modal - visually compare pinned items across all stats." },
       { "type": "added", "text": "Weapon Chart in the build planner - overlay your equipped weapons on a radar chart to compare stats at a glance." },
       { "type": "added", "text": "Bonus belt slots for tracking outfit upgrades." },
-      { "type": "added", "text": "Shareable build codes - copy a short code or link to share your full loadout and inventory." }
+      { "type": "added", "text": "Shareable build codes - copy a short code or link to share your full loadout and inventory." },
+      { "type": "added", "text": "Keyboard shortcuts for common actions like search, view toggling, and item navigation." },
+      { "type": "added", "text": "Sidebar can now be collapsed on desktop for more screen space." }
     ]
   },
   {

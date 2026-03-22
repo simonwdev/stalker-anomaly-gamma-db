@@ -161,6 +161,27 @@ const CATEGORY_GROUPS = [
     { name: "app_group_crafting", categories: [CAT.CRAFTING_TREES, CAT.MATERIALS, CAT.MUTANT_PARTS] },
 ];
 
+const KEYS = {
+    SEARCH: '/',
+    SEARCH_MOD: 'k',
+    ESCAPE: 'Escape',
+    TOGGLE_VIEW: 'v',
+    TOGGLE_SIDEBAR: 's',
+    COMPARE: 'c',
+    HELP: '?',
+    FILTERS: 'F',
+    PREV_CATEGORY: '[',
+    NEXT_CATEGORY: ']',
+    FAVORITE: 'f',
+    PIN: 'p',
+    PREV_ITEM: 'ArrowLeft',
+    NEXT_ITEM: 'ArrowRight',
+    CLEAR_FILTERS: 'x',
+    CHORD_GO: 'g',
+    CHORD_BUILD: 'b',
+};
+const CHORD_TIMEOUT = 500;
+
 function buildStatRows(item, headers) {
     if (!item || !headers.length) return [];
     const rows = [];
@@ -313,6 +334,7 @@ const app = createApp({
             // Settings menu
             settingsOpen: false,
             sidebarOpen: false,
+            sidebarCollapsed: false,
             hideNoDrop: true,
             hideUnusedAmmo: true,
 
@@ -343,6 +365,9 @@ const app = createApp({
             buildPlayerFaction: "stalker",
             buildFactionPickerOpen: false,
             buildPlannerActive: false,
+            shortcutHelpOpen: false,
+            _chordKey: null,
+            _chordTimer: null,
             hasUnseenReleaseNotes: false,
             buildOutfit: null,
             buildHelmet: null,
@@ -3317,7 +3342,9 @@ const app = createApp({
         },
 
         handleEscape() {
-            if (this.buildSaveModalOpen) {
+            if (this.shortcutHelpOpen) {
+                this.shortcutHelpOpen = false;
+            } else if (this.buildSaveModalOpen) {
                 this.buildSaveModalOpen = false;
             } else if (this.buildPickerOpen) {
                 this.closeBuildPicker();
@@ -3340,6 +3367,18 @@ const app = createApp({
 
         toggleSidebar() { this.sidebarOpen = !this.sidebarOpen; },
         closeSidebar() { this.sidebarOpen = false; },
+        toggleSidebarCollapse() {
+            this.sidebarCollapsed = !this.sidebarCollapsed;
+            try { localStorage.setItem("sidebarCollapsed", this.sidebarCollapsed ? "1" : ""); } catch (e) { /* quota or private mode */ }
+        },
+
+        navigateCategory(direction) {
+            const allCats = this.groupedCategories.flatMap(g => g.categories);
+            if (!allCats.length) return;
+            const idx = this.activeCategory ? allCats.indexOf(this.activeCategory) : -1;
+            const newIdx = idx < 0 ? 0 : (idx + direction + allCats.length) % allCats.length;
+            this.selectCategory(allCats[newIdx]);
+        },
 
         clearGlobalQuery() {
             this.globalQuery = "";
@@ -4636,9 +4675,79 @@ const app = createApp({
 
     async mounted() {
         window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') this.handleEscape();
-            if (e.key === 'ArrowLeft') this.navigateModal(-1);
-            if (e.key === 'ArrowRight') this.navigateModal(1);
+            const inInput = e.target.matches('input, textarea, select, [contenteditable]');
+
+            // Ctrl+K / Cmd+K: focus search (works even in inputs)
+            if ((e.ctrlKey || e.metaKey) && e.key === KEYS.SEARCH_MOD) {
+                e.preventDefault();
+                const input = document.querySelector('.global-search input');
+                if (input) input.focus();
+                return;
+            }
+
+            // Escape: always active
+            if (e.key === KEYS.ESCAPE) {
+                if (inInput && e.target.closest('.global-search')) return; // handled by Vue
+                this.handleEscape();
+                return;
+            }
+
+            // Skip single-key shortcuts when typing in an input
+            if (inInput) return;
+
+            // Modal-context shortcuts
+            if (this.modalOpen && this.modalItem) {
+                if (e.key === KEYS.PREV_ITEM) { this.navigateModal(-1); return; }
+                if (e.key === KEYS.NEXT_ITEM) { this.navigateModal(1); return; }
+                if (e.key === KEYS.FAVORITE) { this.toggleFavorite(this.modalItem.id); return; }
+                if (e.key === KEYS.PIN) { this.togglePin(this.modalItem.id); return; }
+                return;
+            }
+
+            // Chord handling: G then B = build planner
+            if (this._chordKey === KEYS.CHORD_GO) {
+                this._chordKey = null;
+                clearTimeout(this._chordTimer);
+                if (e.key === KEYS.CHORD_BUILD) {
+                    this.openBuildPlanner();
+                    return;
+                }
+            }
+
+            if (e.key === KEYS.CHORD_GO) {
+                this._chordKey = KEYS.CHORD_GO;
+                this._chordTimer = setTimeout(() => { this._chordKey = null; }, CHORD_TIMEOUT);
+                return;
+            }
+
+            // Global single-key shortcuts
+            if (e.key === KEYS.SEARCH) {
+                e.preventDefault();
+                const input = document.querySelector('.global-search input');
+                if (input) input.focus();
+                return;
+            }
+            if (e.key === KEYS.TOGGLE_VIEW && !this.buildPlannerActive) {
+                this.setViewMode(this.viewMode === 'tiles' ? 'table' : 'tiles');
+                return;
+            }
+            if (e.key === KEYS.TOGGLE_SIDEBAR) { this.toggleSidebarCollapse(); return; }
+            if (e.key === KEYS.COMPARE && this.pinnedIds.length) { this.openCompare(); return; }
+            if (e.key === KEYS.HELP) { this.shortcutHelpOpen = true; return; }
+            if (e.key === KEYS.FILTERS && e.shiftKey) {
+                if (!this.buildPlannerActive) this.toggleFilterPanel();
+                return;
+            }
+            if (e.key === KEYS.CLEAR_FILTERS && !this.buildPlannerActive) {
+                this.clearAllFilters();
+                this.filterQuery = "";
+                this.filterInput = "";
+                return;
+            }
+            if (e.key === KEYS.PREV_CATEGORY || e.key === KEYS.NEXT_CATEGORY) {
+                this.navigateCategory(e.key === KEYS.PREV_CATEGORY ? -1 : 1);
+                return;
+            }
         });
 
         // 1. Load pack manifest
@@ -4695,7 +4804,12 @@ const app = createApp({
         this.loadFavorites();
         this.loadRecent();
 
-        // 5a. Restore view mode from localStorage
+        // 5a. Restore sidebar collapsed state
+        try {
+            this.sidebarCollapsed = !!localStorage.getItem("sidebarCollapsed");
+        } catch (e) { /* ignore */ }
+
+        // 5b. Restore view mode from localStorage
         try {
             const savedView = localStorage.getItem("viewMode");
             if (savedView === "table" || savedView === "tiles") this.viewMode = savedView;

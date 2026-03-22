@@ -41,7 +41,7 @@
 </div>
 <div id="app" @keydown.escape.window="handleEscape()">
 <header class="site-header" v-show="translations">
-    <button class="hamburger-btn" @click="toggleSidebar()" :class="{ active: sidebarOpen }">
+    <button class="hamburger-btn" @click="sidebarCollapsed ? toggleSidebarCollapse() : toggleSidebar()" :class="{ active: sidebarOpen, 'show-desktop': sidebarCollapsed }">
         <span></span><span></span><span></span>
     </button>
     <div class="header-brand">
@@ -73,6 +73,9 @@
             </button>
         </div>
     </div>
+    <button class="header-link shortcut-help-btn" @click="shortcutHelpOpen = true" v-tooltip="t('app_shortcuts_title')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h4"/><path d="M14 8h4"/><path d="M6 12h3"/><path d="M15 12h3"/><path d="M10 12h4"/><path d="M8 16h8"/></svg>
+    </button>
     <a href="release-notes/" class="release-notes-btn header-link" v-tooltip="t('app_release_notes')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>
         <span v-if="hasUnseenReleaseNotes" class="release-notes-badge"></span>
@@ -97,7 +100,7 @@
     </div>
 </header>
 
-<div class="layout">
+<div class="layout" :class="{ 'sidebar-collapsed': sidebarCollapsed }">
     <aside class="sidebar" :class="{ open: sidebarOpen }" v-show="translations">
         <div class="sidebar-group">
             <div class="sidebar-group-label">{{ t('app_group_tools') }}</div>
@@ -126,6 +129,9 @@
                 @click="selectCategory(cat)"
             ><span class="cat-label">{{ tCat(cat) }}</span> <span v-if="categoryCounts[cat]" class="cat-count">{{ categoryCounts[cat] }}</span></button>
         </div>
+        <button class="sidebar-collapse-btn" @click="toggleSidebarCollapse()" v-tooltip="t('app_shortcuts_toggle_sidebar')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="11 17 6 12 11 7"/><polyline points="18 17 13 12 18 7"/></svg>
+        </button>
     </aside>
     <div class="sidebar-backdrop" v-show="sidebarOpen" @click="closeSidebar()"></div>
 
@@ -1359,6 +1365,50 @@
                     <span class="build-picker-item-weight">{{ formatValue('st_prop_weight', item['st_prop_weight']) }}</span>
                 </div>
                 <div v-if="buildPickerItems.length === 0" class="build-picker-empty">{{ t('app_label_no_results') }}</div>
+            </div>
+        </div>
+    </div>
+    </Transition>
+</div>
+</Transition>
+
+<!-- Keyboard Shortcuts Help -->
+<Transition name="fade">
+<div class="modal-backdrop" v-if="shortcutHelpOpen" @click.self="shortcutHelpOpen = false" style="z-index: 220;">
+    <Transition name="modal" appear>
+    <div class="modal shortcut-modal" v-if="shortcutHelpOpen">
+        <button class="modal-close" @click="shortcutHelpOpen = false">&times;</button>
+        <div class="modal-body">
+            <h2 class="shortcut-modal-title">{{ t('app_shortcuts_title') }}</h2>
+            <div class="shortcut-columns">
+                <div class="shortcut-group">
+                    <h3>{{ t('app_shortcuts_group_global') }}</h3>
+                    <dl class="shortcut-list">
+                        <div class="shortcut-row"><dt><kbd>/</kbd> <kbd>Ctrl</kbd><kbd>K</kbd></dt><dd>{{ t('app_shortcuts_search') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>S</kbd></dt><dd>{{ t('app_shortcuts_toggle_sidebar') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>V</kbd></dt><dd>{{ t('app_shortcuts_toggle_view') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>Shift</kbd><kbd>F</kbd></dt><dd>{{ t('app_shortcuts_toggle_filters') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>C</kbd></dt><dd>{{ t('app_shortcuts_compare') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>X</kbd></dt><dd>{{ t('app_shortcuts_clear_filters') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>G</kbd> {{ t('app_shortcuts_then') }} <kbd>B</kbd></dt><dd>{{ t('app_shortcuts_build_planner') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>Shift</kbd><kbd>/</kbd></dt><dd>{{ t('app_shortcuts_show_help') }}</dd></div>
+                    </dl>
+                </div>
+                <div class="shortcut-group">
+                    <h3>{{ t('app_shortcuts_group_browsing') }}</h3>
+                    <dl class="shortcut-list">
+                        <div class="shortcut-row"><dt><kbd>[</kbd></dt><dd>{{ t('app_shortcuts_prev_category') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>]</kbd></dt><dd>{{ t('app_shortcuts_next_category') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>Esc</kbd></dt><dd>{{ t('app_shortcuts_close') }}</dd></div>
+                    </dl>
+                    <h3>{{ t('app_shortcuts_group_item_modal') }}</h3>
+                    <dl class="shortcut-list">
+                        <div class="shortcut-row"><dt><kbd>&larr;</kbd></dt><dd>{{ t('app_shortcuts_prev_item') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>&rarr;</kbd></dt><dd>{{ t('app_shortcuts_next_item') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>F</kbd></dt><dd>{{ t('app_shortcuts_favorite') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>P</kbd></dt><dd>{{ t('app_shortcuts_pin') }}</dd></div>
+                    </dl>
+                </div>
             </div>
         </div>
     </div>
