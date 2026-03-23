@@ -43,9 +43,8 @@ const BADGE_COLS = new Set(["Type", "ui_mm_repair", "ui_ammo_types", "st_data_ex
 const MODAL_BADGE_KEYS = new Set(["st_data_export_has_perk", "st_data_export_is_junk", "st_data_export_can_be_crafted", "ui_mcm_menu_exo", "st_data_export_can_be_cooked", "st_data_export_used_in_cooking", "st_data_export_used_in_crafting", "st_data_export_cuts_thick_skin", "ui_ammo_types", "st_data_export_ammo_types_alt", "ui_st_community"]);
 const SKIP_KEYS = new Set(["id", "pda_encyclopedia_name", "hasNpcWeaponDrop", "hasStashDrop", "hasDisassemble", "st_data_export_description"]);
 const MAX_PINS = 5;
-const BUILD_CODE_PREFIX = "BUILD-";
-const SLOT_TYPE_TO_NUM = { outfit: 1, helmet: 2, backpack: 3, belt: 4, artifact: 5, weapon: 6, sidearm: 7, grenade: 8, ammo: 9 };
-const NUM_TO_SLOT_TYPE = { 1: "outfit", 2: "helmet", 3: "backpack", 4: "belt", 5: "artifact", 6: "weapon", 7: "sidearm", 8: "grenade", 9: "ammo" };
+const BUILD_HASH_PREFIX = "build/";
+
 const LOWER_IS_BETTER = new Set(["st_data_export_weapon_degradation"]);
 const HIGHER_IS_WORSE = new Set(["st_prop_weight", "st_upgr_cost", "_cost_per_round", "_malfunction_chance"]);
 const NO_HIGHLIGHT = new Set(["ui_ammo_types", "st_data_export_ammo_types_alt", "ui_mm_repair"]);
@@ -417,8 +416,7 @@ const app = createApp({
             copyBuildCodeFeedback: false,
             buildImportCode: "",
             buildImportError: "",
-            buildDictionary: null,
-            buildDictionaryReverse: null,
+            buildSharing: false,
 
             // Item hover popover
             buildHoverItem: null,
@@ -1600,24 +1598,14 @@ const app = createApp({
                     const mRes = await fetch(`${this.dataBasePath}/manifest.json`, { cache: "no-cache" });
                     this.fileManifest = mRes.ok ? await mRes.json() : {};
                 } catch { this.fileManifest = {}; }
-                const [indexRes, catRes, trRes, dlRes, dictRes] = await Promise.all([
+                const [indexRes, catRes, trRes, dlRes] = await Promise.all([
                     fetch(this.dataUrl("index.json")),
                     fetch(this.dataUrl("categories.json")),
                     fetch(this.dataUrl("translations.json")),
                     fetch(this.dataUrl("display-labels.json")),
-                    fetch(this.dataUrl("dictionary.json")),
                 ]);
                 try { this.translations = trRes.ok ? await trRes.json() : null; } catch { this.translations = null; }
                 try { this.displayLabels = dlRes.ok ? await dlRes.json() : {}; } catch { this.displayLabels = {}; }
-                try {
-                    if (dictRes.ok) {
-                        this.buildDictionary = await dictRes.json();
-                        this.buildDictionaryReverse = {};
-                        for (const [id, idx] of Object.entries(this.buildDictionary)) {
-                            this.buildDictionaryReverse[idx] = id;
-                        }
-                    }
-                } catch { this.buildDictionary = null; this.buildDictionaryReverse = null; }
                 this.index = await indexRes.json();
                 this.categories = catRes.ok
                     ? await catRes.json()
@@ -3465,12 +3453,9 @@ const app = createApp({
             if (this.buildPlannerActive) {
                 url.searchParams.set("cat", "build-planner");
                 url.searchParams.delete("favonly");
-                // Build code goes in hash fragment
-                const code = this.encodeBuildCode();
-                url.hash = code ? `b/${code}` : "";
             } else {
-                // Clear build hash when not in build planner
-                if (url.hash.startsWith("#b/")) url.hash = "";
+                // Clear share hash when leaving build planner
+                if (url.hash.startsWith("#" + BUILD_HASH_PREFIX) || url.hash.startsWith("#b/")) url.hash = "";
                 if (this.versionCompareActive) {
                     url.searchParams.set("cat", "version-compare");
                     url.searchParams.delete("favonly");
@@ -4140,130 +4125,95 @@ const app = createApp({
             return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 12);
         },
 
-        encodeBuildCode() {
-            if (!this.buildDictionary) return null;
-            const dict = this.buildDictionary;
-            const lookup = (item) => item && dict[item.id] !== undefined ? dict[item.id] : null;
-
-            // Fixed slot order: outfit, helmet, backpack, weapon1, weapon2, sidearm, grenade, ammo1, ammo2, ammoSidearm
-            // Then variable-length arrays: belts, artifacts, inventory
-            const singles = [
-                lookup(this.buildOutfit),
-                lookup(this.buildHelmet),
-                lookup(this.buildBackpack),
-                lookup(this.buildWeaponPrimary),
-                lookup(this.buildWeaponSecondary),
-                lookup(this.buildWeaponSidearm),
-                lookup(this.buildWeaponGrenade),
-                lookup(this.buildAmmoPrimary),
-                lookup(this.buildAmmoSecondary),
-                lookup(this.buildAmmoSidearm),
-            ];
-            const beltIndices = this.buildBelts.map(b => dict[b.id]).filter(v => v !== undefined);
-            const artIndices = this.buildArtifacts.map(a => dict[a.id]).filter(v => v !== undefined);
-            const invEntries = this.buildInventory
-                .filter(e => dict[e.item.id] !== undefined)
-                .map(e => ({ idx: dict[e.item.id], slotType: SLOT_TYPE_TO_NUM[e.slotType] || 0 }));
-
-            // Number array: [beltCount, artCount, invCount, ...singles, ...belts, ...artifacts, ...inv pairs]
-            const nums = [beltIndices.length, artIndices.length, invEntries.length];
-            for (const s of singles) {
-                nums.push(s !== null ? s + 1 : 0);
-            }
-            nums.push(...beltIndices.map(v => v + 1));
-            nums.push(...artIndices.map(v => v + 1));
-            for (const e of invEntries) {
-                nums.push(e.idx + 1, e.slotType);
-            }
-
-            const sqids = new Sqids({ minLength: 6 });
-            return sqids.encode(nums);
-        },
-
-        decodeBuildCode(code) {
-            if (!this.buildDictionaryReverse) return null;
-            const rev = this.buildDictionaryReverse;
-            const sqids = new Sqids({ minLength: 6 });
-            let nums;
-            try {
-                nums = sqids.decode(code);
-            } catch { return null; }
-            if (!nums || nums.length < 3) return null;
-
-            const beltCount = nums[0];
-            const artCount = nums[1];
-            const invCount = nums[2];
-            const toId = (n) => n > 0 ? (rev[n - 1] || null) : null;
-
-            const data = {
-                outfit: toId(nums[3]),
-                helmet: toId(nums[4]),
-                backpack: toId(nums[5]),
-                weapon1: toId(nums[6]),
-                weapon2: toId(nums[7]),
-                sidearm: toId(nums[8]),
-                grenade: toId(nums[9]),
-                ammo1: toId(nums[10]),
-                ammo2: toId(nums[11]),
-                ammoSidearm: toId(nums[12]),
-                belts: [],
-                artifacts: [],
-                inventory: [],
-                beltBonus: 0,
+        getBuildShareData() {
+            return {
+                outfit: this.buildOutfit?.id || null,
+                helmet: this.buildHelmet?.id || null,
+                backpack: this.buildBackpack?.id || null,
+                belts: this.buildBelts.map(b => b.id),
+                artifacts: this.buildArtifacts.map(a => a.id),
+                weapon1: this.buildWeaponPrimary?.id || null,
+                weapon2: this.buildWeaponSecondary?.id || null,
+                sidearm: this.buildWeaponSidearm?.id || null,
+                grenade: this.buildWeaponGrenade?.id || null,
+                ammo1: this.buildAmmoPrimary?.id || null,
+                ammo2: this.buildAmmoSecondary?.id || null,
+                ammoSidearm: this.buildAmmoSidearm?.id || null,
+                beltBonus: this.buildBeltSlotBonus || 0,
+                inventory: this.buildInventory.map(e => ({ id: e.item.id, slotType: e.slotType })),
             };
-
-            let pos = 13;
-            for (let i = 0; i < beltCount && pos < nums.length; i++, pos++) {
-                const id = toId(nums[pos]);
-                if (id) data.belts.push(id);
-            }
-            for (let i = 0; i < artCount && pos < nums.length; i++, pos++) {
-                const id = toId(nums[pos]);
-                if (id) data.artifacts.push(id);
-            }
-            for (let i = 0; i < invCount && pos + 1 < nums.length; i++, pos += 2) {
-                const id = toId(nums[pos]);
-                const slotType = NUM_TO_SLOT_TYPE[nums[pos + 1]] || "weapon";
-                if (id) data.inventory.push({ id, slotType });
-            }
-
-            return data;
         },
 
-        buildCodeUrl() {
-            const code = this.encodeBuildCode();
-            if (!code) return window.location.href;
-            const url = new URL(window.location);
-            url.hash = `b/${code}`;
-            return url.toString();
+        async shareBuild() {
+            const data = this.getBuildShareData();
+            data.pack = this.activePack?.id || null;
+            const res = await fetch("/api/build", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+            if (!res.ok) throw new Error("Failed to share build");
+            const { code } = await res.json();
+            return code;
+        },
+
+        async loadSharedBuild(code) {
+            const res = await fetch(`/api/build/${encodeURIComponent(code)}`);
+            if (!res.ok) return null;
+            return await res.json();
         },
 
         async copyBuildLink() {
-            await this.copyToClipboard(this.buildCodeUrl(), "copyBuildLinkFeedback");
+            this.buildSharing = true;
+            try {
+                const code = await this.shareBuild();
+                const url = new URL(window.location.origin + window.location.pathname);
+                url.hash = BUILD_HASH_PREFIX + code;
+                await this.copyToClipboard(url.toString(), "copyBuildLinkFeedback");
+            } catch {
+                this.buildImportError = this.t("app_build_share_error") || "Failed to create share link";
+            } finally {
+                this.buildSharing = false;
+            }
         },
 
         async copyBuildCode() {
-            const code = this.encodeBuildCode();
-            if (code) {
-                await this.copyToClipboard(BUILD_CODE_PREFIX + code, "copyBuildCodeFeedback");
+            this.buildSharing = true;
+            try {
+                const code = await this.shareBuild();
+                await this.copyToClipboard(code, "copyBuildCodeFeedback");
+            } catch {
+                this.buildImportError = this.t("app_build_share_error") || "Failed to create share code";
+            } finally {
+                this.buildSharing = false;
             }
         },
 
-        importBuildFromCode() {
+        async importBuildFromCode() {
             let code = this.buildImportCode.trim();
             if (!code) return;
-            // Strip prefix if present
-            if (code.startsWith(BUILD_CODE_PREFIX)) code = code.slice(BUILD_CODE_PREFIX.length);
-            const data = this.decodeBuildCode(code);
-            if (!data) {
+            // Extract code from URL if pasted
+            try {
+                const url = new URL(code);
+                if (url.hash.startsWith("#" + BUILD_HASH_PREFIX)) code = url.hash.slice(1 + BUILD_HASH_PREFIX.length);
+            } catch { /* not a URL, use as-is */ }
+
+            this.buildSharing = true;
+            try {
+                const data = await this.loadSharedBuild(code);
+                if (!data) {
+                    this.buildImportError = this.t("app_build_import_error") || "Invalid build code";
+                    return;
+                }
+                this.buildImportError = "";
+                this.buildImportCode = "";
+                this.restoreBuildFromIds(data);
+                this.saveBuildToStorage();
+            } catch {
                 this.buildImportError = this.t("app_build_import_error") || "Invalid build code";
-                return;
+            } finally {
+                this.buildSharing = false;
             }
-            this.buildImportError = "";
-            this.buildImportCode = "";
-            this.restoreBuildFromIds(data);
-            this.saveBuildToStorage();
-            this.pushUrlState();
         },
 
         // Legacy URL param support for backwards compatibility with old shared links
@@ -5166,11 +5116,11 @@ const app = createApp({
         this._restoringUrl = false;
         this.pushUrlState();
 
-        // 6c. Restore build planner from hash code or legacy URL params
-        const buildHash = initialHash.startsWith("#b/") ? initialHash.slice(3) : null;
-        if (buildHash) {
+        // 6c. Restore build planner from shared hash or legacy URL params
+        const shareHash = initialHash.startsWith("#" + BUILD_HASH_PREFIX) ? initialHash.slice(1 + BUILD_HASH_PREFIX.length) : null;
+        if (shareHash) {
             await this.openBuildPlanner();
-            const data = this.decodeBuildCode(buildHash);
+            const data = await this.loadSharedBuild(shareHash);
             if (data) {
                 this.restoreBuildFromIds(data);
                 this.saveBuildToStorage();
@@ -5184,14 +5134,13 @@ const app = createApp({
         }
 
         // 7. Handle hash-based item/build navigation
-        if (!buildHash && initialHash.length > 1) {
+        if (!shareHash && initialHash.length > 1 && !initialHash.startsWith("#" + BUILD_HASH_PREFIX)) {
             this.openItem(initialHash.slice(1));
         }
-        window.addEventListener("hashchange", () => {
+        window.addEventListener("hashchange", async () => {
             const hash = window.location.hash.slice(1);
-            if (hash.startsWith("b/")) {
-                // Build code hash — decode and restore
-                const data = this.decodeBuildCode(hash.slice(2));
+            if (hash.startsWith(BUILD_HASH_PREFIX)) {
+                const data = await this.loadSharedBuild(hash.slice(BUILD_HASH_PREFIX.length));
                 if (data) {
                     if (!this.buildPlannerActive) this.openBuildPlanner();
                     this.restoreBuildFromIds(data);
