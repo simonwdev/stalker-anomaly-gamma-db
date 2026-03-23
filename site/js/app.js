@@ -273,6 +273,7 @@ const app = createApp({
             locale: "en",
             localeOpen: false,
             translations: null,
+            appTranslations: null,
             fileManifest: {},
 
             index: [],
@@ -1437,9 +1438,14 @@ const app = createApp({
 
     methods: {
         t(key) {
-            if (!this.translations || !key) return key;
+            if (!key) return key;
             const k = key.toLowerCase();
-            return this.translations[this.locale]?.[k] ?? this.translations.en?.[k] ?? key;
+            const app = this.appTranslations;
+            return this.translations?.[this.locale]?.[k]
+                ?? this.translations?.en?.[k]
+                ?? app?.[this.locale]?.[k]
+                ?? app?.en?.[k]
+                ?? key;
         },
 
         tCat(name) {
@@ -5031,7 +5037,13 @@ const app = createApp({
             }
         });
 
-        // 1. Load pack manifest
+        // 1. Load app translations (pack-independent UI strings)
+        try {
+            const appTrRes = await fetch("data/app_translations.json");
+            if (appTrRes.ok) this.appTranslations = await appTrRes.json();
+        } catch { /* ignore */ }
+
+        // 2. Load pack manifest
         try {
             const packRes = await fetch("data/packs.json");
             const manifest = await packRes.json();

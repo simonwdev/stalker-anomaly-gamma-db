@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from "fs";
+import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, cpSync } from "fs";
 import { join } from "path";
 import { createHash } from "crypto";
 
@@ -817,16 +817,12 @@ if (existsSync(suppPath)) {
   const count = Object.keys(supp.en || {}).length;
   console.log(`Merged ${count} supplementary translations from ${suppPath}`);
 }
+// Copy app translations to site/data/ (loaded separately by frontend)
 const appPath = join(CSV_DIR, "..", "app_translations.json");
 if (existsSync(appPath)) {
-  const app = JSON.parse(readFileSync(appPath, "utf-8"));
-  for (const locale of translations.locales) {
-    if (app[locale]) {
-      Object.assign(translations[locale], app[locale]);
-    }
-  }
-  const count = Object.keys(app.en || {}).length;
-  console.log(`Merged ${count} app translations from ${appPath}`);
+  const appOut = join(OUT_DIR, "..", "app_translations.json");
+  cpSync(appPath, appOut);
+  console.log(`Copied app translations to ${appOut}`);
 }
 const translationsOut = join(OUT_DIR, "translations.json");
 writeFileSync(translationsOut, JSON.stringify(translations, null, 2));
