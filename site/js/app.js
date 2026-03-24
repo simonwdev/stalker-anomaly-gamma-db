@@ -1540,6 +1540,11 @@ const app = createApp({
             return `${this.dataBasePath}/${filename}${v ? '?v=' + v : ''}`;
         },
 
+        isVirtualCategoryAvailable(cat) {
+            if (cat === CAT.TOOLKIT_RATES) return !!this.fileManifest["toolkit-rates.json"];
+            return true;
+        },
+
         async fetchJsonCached(cacheKey, filename) {
             if (this[cacheKey] !== null) return this[cacheKey];
             try {
@@ -1650,7 +1655,7 @@ const app = createApp({
                 this.groupedCategories = CATEGORY_GROUPS
                     .map((g) => ({
                         name: g.name,
-                        categories: g.categories.filter((c) => catSet.has(c) || VIRTUAL_CATEGORIES.has(c)),
+                        categories: g.categories.filter((c) => catSet.has(c) || (VIRTUAL_CATEGORIES.has(c) && this.isVirtualCategoryAvailable(c))),
                     }))
                     .filter((g) => g.categories.length > 0);
                 this.rebuildGlobalFuse();
