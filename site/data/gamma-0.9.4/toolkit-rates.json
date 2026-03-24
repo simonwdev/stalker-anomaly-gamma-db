@@ -1,0 +1,374 @@
+{
+  "toolTypes": [
+    "Basic Tools",
+    "Advanced Tools",
+    "Expert Tools",
+    "Drug-making Kit",
+    "Gunsmithing Tools"
+  ],
+  "maps": [
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "rates": {
+        "Basic Tools": 18,
+        "Advanced Tools": 47,
+        "Expert Tools": 20,
+        "Drug-making Kit": 7,
+        "Gunsmithing Tools": 7
+      }
+    },
+    {
+      "id": "jupiter_underground",
+      "name": "Jupiter Underground",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 80,
+        "Expert Tools": 20,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "k00_marsh",
+      "name": "Great Swamps",
+      "rates": {
+        "Basic Tools": 40,
+        "Advanced Tools": 0,
+        "Expert Tools": 0,
+        "Drug-making Kit": 30,
+        "Gunsmithing Tools": 30
+      }
+    },
+    {
+      "id": "k01_darkscape",
+      "name": "Darkscape",
+      "rates": {
+        "Basic Tools": 48,
+        "Advanced Tools": 6,
+        "Expert Tools": 0,
+        "Drug-making Kit": 23,
+        "Gunsmithing Tools": 23
+      }
+    },
+    {
+      "id": "k02_trucks_cemetery",
+      "name": "Truck Cemetery",
+      "rates": {
+        "Basic Tools": 27,
+        "Advanced Tools": 51,
+        "Expert Tools": 0,
+        "Drug-making Kit": 11,
+        "Gunsmithing Tools": 11
+      }
+    },
+    {
+      "id": "l01_escape",
+      "name": "Cordon",
+      "rates": {
+        "Basic Tools": 40,
+        "Advanced Tools": 0,
+        "Expert Tools": 0,
+        "Drug-making Kit": 30,
+        "Gunsmithing Tools": 30
+      }
+    },
+    {
+      "id": "l02_garbage",
+      "name": "Garbage",
+      "rates": {
+        "Basic Tools": 43,
+        "Advanced Tools": 5,
+        "Expert Tools": 0,
+        "Drug-making Kit": 26,
+        "Gunsmithing Tools": 26
+      }
+    },
+    {
+      "id": "l03_agroprom",
+      "name": "Agroprom",
+      "rates": {
+        "Basic Tools": 48,
+        "Advanced Tools": 9,
+        "Expert Tools": 0,
+        "Drug-making Kit": 22,
+        "Gunsmithing Tools": 22
+      }
+    },
+    {
+      "id": "l03u_agr_underground",
+      "name": "Agroprom Underground",
+      "rates": {
+        "Basic Tools": 15,
+        "Advanced Tools": 39,
+        "Expert Tools": 33,
+        "Drug-making Kit": 6,
+        "Gunsmithing Tools": 6
+      }
+    },
+    {
+      "id": "l04_darkvalley",
+      "name": "Dark Valley",
+      "rates": {
+        "Basic Tools": 49,
+        "Advanced Tools": 5,
+        "Expert Tools": 0,
+        "Drug-making Kit": 23,
+        "Gunsmithing Tools": 23
+      }
+    },
+    {
+      "id": "l04u_labx18",
+      "name": "Laboratory X18 (Dark Valley)",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 50,
+        "Expert Tools": 50,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "l05_bar",
+      "name": "Rostok",
+      "rates": {
+        "Basic Tools": 42,
+        "Advanced Tools": 0,
+        "Expert Tools": 0,
+        "Drug-making Kit": 29,
+        "Gunsmithing Tools": 29
+      }
+    },
+    {
+      "id": "l06_rostok",
+      "name": "Wild Territory",
+      "rates": {
+        "Basic Tools": 40,
+        "Advanced Tools": 25,
+        "Expert Tools": 0,
+        "Drug-making Kit": 18,
+        "Gunsmithing Tools": 18
+      }
+    },
+    {
+      "id": "l07_military",
+      "name": "Army Warehouses",
+      "rates": {
+        "Basic Tools": 27,
+        "Advanced Tools": 51,
+        "Expert Tools": 0,
+        "Drug-making Kit": 11,
+        "Gunsmithing Tools": 11
+      }
+    },
+    {
+      "id": "l08_yantar",
+      "name": "Yantar",
+      "rates": {
+        "Basic Tools": 34,
+        "Advanced Tools": 37,
+        "Expert Tools": 0,
+        "Drug-making Kit": 14,
+        "Gunsmithing Tools": 14
+      }
+    },
+    {
+      "id": "l08u_brainlab",
+      "name": "Laboratory X16 (Yantar)",
+      "rates": {
+        "Basic Tools": 15,
+        "Advanced Tools": 39,
+        "Expert Tools": 33,
+        "Drug-making Kit": 6,
+        "Gunsmithing Tools": 6
+      }
+    },
+    {
+      "id": "l09_deadcity",
+      "name": "Dead City",
+      "rates": {
+        "Basic Tools": 48,
+        "Advanced Tools": 9,
+        "Expert Tools": 0,
+        "Drug-making Kit": 22,
+        "Gunsmithing Tools": 22
+      }
+    },
+    {
+      "id": "l10_limansk",
+      "name": "Limansk",
+      "rates": {
+        "Basic Tools": 17,
+        "Advanced Tools": 57,
+        "Expert Tools": 13,
+        "Drug-making Kit": 7,
+        "Gunsmithing Tools": 7
+      }
+    },
+    {
+      "id": "l10_radar",
+      "name": "Radar",
+      "rates": {
+        "Basic Tools": 5,
+        "Advanced Tools": 91,
+        "Expert Tools": 0,
+        "Drug-making Kit": 2,
+        "Gunsmithing Tools": 2
+      }
+    },
+    {
+      "id": "l10_red_forest",
+      "name": "Red Forest",
+      "rates": {
+        "Basic Tools": 5,
+        "Advanced Tools": 82,
+        "Expert Tools": 10,
+        "Drug-making Kit": 2,
+        "Gunsmithing Tools": 2
+      }
+    },
+    {
+      "id": "l10u_bunker",
+      "name": "Laboratory X19 (Radar)",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 50,
+        "Expert Tools": 50,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "l11_hospital",
+      "name": "Deserted Hospital",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 50,
+        "Expert Tools": 50,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "l11_pripyat",
+      "name": "Pripyat",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 50,
+        "Expert Tools": 50,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "l12_stancia",
+      "name": "Chernobyl NPP (South)",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 38,
+        "Expert Tools": 63,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "l12_stancia_2",
+      "name": "Chernobyl NPP (North)",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 43,
+        "Expert Tools": 57,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "l12u_control_monolith",
+      "name": "Monolith Control Center",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 20,
+        "Expert Tools": 80,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "l12u_sarcofag",
+      "name": "Sarcophagus",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 20,
+        "Expert Tools": 80,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "l13_generators",
+      "name": "Generators",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 30,
+        "Expert Tools": 70,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "l13u_warlab",
+      "name": "Monolith War Lab",
+      "rates": {
+        "Basic Tools": 0,
+        "Advanced Tools": 20,
+        "Expert Tools": 80,
+        "Drug-making Kit": 0,
+        "Gunsmithing Tools": 0
+      }
+    },
+    {
+      "id": "labx8",
+      "name": "Laboratory X8 (Outskirts)",
+      "rates": {
+        "Basic Tools": 15,
+        "Advanced Tools": 39,
+        "Expert Tools": 33,
+        "Drug-making Kit": 6,
+        "Gunsmithing Tools": 6
+      }
+    },
+    {
+      "id": "pripyat",
+      "name": "Outskirts",
+      "rates": {
+        "Basic Tools": 6,
+        "Advanced Tools": 40,
+        "Expert Tools": 50,
+        "Drug-making Kit": 2,
+        "Gunsmithing Tools": 2
+      }
+    },
+    {
+      "id": "y04_pole",
+      "name": "Meadow",
+      "rates": {
+        "Basic Tools": 25,
+        "Advanced Tools": 0,
+        "Expert Tools": 0,
+        "Drug-making Kit": 38,
+        "Gunsmithing Tools": 38
+      }
+    },
+    {
+      "id": "zaton",
+      "name": "Zaton",
+      "rates": {
+        "Basic Tools": 18,
+        "Advanced Tools": 47,
+        "Expert Tools": 20,
+        "Drug-making Kit": 7,
+        "Gunsmithing Tools": 7
+      }
+    }
+  ]
+}

@@ -2082,7 +2082,12 @@
     "st_data_export_damage_mult": "Damage Multiplier",
     "_malfunction_chance": "Malf. Chance/Shot",
     "app_tooltip_reliability": "Higher reliability means less wear per shot, reducing the chance of a malfunction.",
-    "app_tooltip_malfunction": "Chance of a malfunction on each shot. When one happens, a random part breaks and takes 5–12% damage regardless of weapon type or condition."
+    "app_tooltip_malfunction": "Chance of a malfunction on each shot. When one happens, a random part breaks and takes 5–12% damage regardless of weapon type or condition.",
+    "basic tools": "Basic Tools",
+    "advanced tools": "Advanced Tools",
+    "expert tools": "Expert Tools",
+    "drug-making kit": "Drug-making Kit",
+    "gunsmithing tools": "Gunsmithing Tools"
   },
   "ru": {
     "ammo-vog-25": "Граната ВОГ-25",
@@ -4163,6 +4168,11 @@
     "st_data_export_damage_mult": "Множитель урона",
     "_malfunction_chance": "Шанс полом./выстр.",
     "app_tooltip_reliability": "Чем выше надёжность, тем меньше износ за выстрел и ниже шанс осечки.",
-    "app_tooltip_malfunction": "Шанс осечки при каждом выстреле. При срабатывании случайная деталь получает от 5% до 12% урона, независимо от типа оружия или состояния."
+    "app_tooltip_malfunction": "Шанс осечки при каждом выстреле. При срабатывании случайная деталь получает от 5% до 12% урона, независимо от типа оружия или состояния.",
+    "basic tools": "Базовые инструменты",
+    "advanced tools": "Продвинутые инструменты",
+    "expert tools": "Экспертные инструменты",
+    "drug-making kit": "Набор для изготовления препаратов",
+    "gunsmithing tools": "Оружейные инструменты"
   }
 }

@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-03-24",
+    "entries": [
+      { "type": "added", "text": "Toolkit Rates - see the drop chances for Basic, Advanced, Expert, Drug-making, and Gunsmithing tools across every map at a glance." }
+    ]
+  },
+  {
     "date": "2026-03-23",
     "entries": [
       { "type": "added", "text": "GAMMA 0.9.5 mod pack (preview)." },

@@ -112,6 +112,7 @@ const CAT = {
     FOOD: "Food", MEDICINE: "Medicine",
     CRAFTING_TREES: "Crafting Trees", MATERIALS: "Materials",
     MUTANT_PARTS: "Mutant Parts", RECIPES: "Recipes",
+    TOOLKIT_RATES: "Toolkit Rates",
 };
 
 const BUILD_SLOT_CATEGORIES = { outfit: CAT.OUTFITS, helmet: CAT.HELMETS, belt: CAT.BELT_ATTACHMENTS, artifact: CAT.ARTEFACTS, backpack: CAT.BELT_ATTACHMENTS };
@@ -147,17 +148,18 @@ const CATEGORY_KEYS = {
     [CAT.FOOD]: "app_cat_food", [CAT.MEDICINE]: "app_cat_medicine", [CAT.ARTEFACTS]: "app_cat_artefacts",
     [CAT.CRAFTING_TREES]: "app_cat_crafting_trees", [CAT.MATERIALS]: "app_cat_materials",
     [CAT.MUTANT_PARTS]: "app_cat_mutant_parts", [CAT.RECIPES]: "app_cat_recipes",
+    [CAT.TOOLKIT_RATES]: "app_cat_toolkit_rates",
 };
 const WEAPON_CATEGORIES = [CAT.PISTOLS, CAT.SMGS, CAT.SHOTGUNS, CAT.RIFLES, CAT.SNIPERS, CAT.LAUNCHERS, CAT.MELEE];
 const WEAPON_CATEGORY_SLUGS = WEAPON_CATEGORIES.map(c => categorySlug(c));
-const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING_TREES]);
+const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING_TREES, CAT.TOOLKIT_RATES]);
 
 const CATEGORY_GROUPS = [
     { name: "app_group_weapons", categories: [CAT.ALL_WEAPONS, ...WEAPON_CATEGORIES] },
     { name: "app_group_ammo_explosives", categories: [CAT.AMMO, CAT.EXPLOSIVES] },
     { name: "app_group_equipment", categories: [CAT.OUTFITS, CAT.HELMETS, CAT.BELT_ATTACHMENTS, CAT.ARTEFACTS, CAT.OUTFIT_EXCHANGE] },
     { name: "app_group_consumables", categories: [CAT.FOOD, CAT.MEDICINE] },
-    { name: "app_group_crafting", categories: [CAT.CRAFTING_TREES, CAT.MATERIALS, CAT.MUTANT_PARTS] },
+    { name: "app_group_crafting", categories: [CAT.CRAFTING_TREES, CAT.MATERIALS, CAT.MUTANT_PARTS, CAT.TOOLKIT_RATES] },
 ];
 
 const KEYS = {
@@ -320,6 +322,9 @@ const app = createApp({
             // Outfit exchange
             outfitExchange: null,
             exchangeFactionFilter: null,
+            toolkitRates: null,
+            toolkitSortCol: null,
+            toolkitSortAsc: false,
 
             // Caches
             calibersCache: null,
@@ -670,6 +675,29 @@ const app = createApp({
 
         isCraftingTrees() {
             return this.activeCategory === CAT.CRAFTING_TREES;
+        },
+
+        isToolkitRates() {
+            return this.activeCategory === CAT.TOOLKIT_RATES;
+        },
+
+        toolkitRatesSorted() {
+            if (!this.toolkitRates) return [];
+            let maps = [...this.toolkitRates.maps];
+            if (this.filterQuery.trim()) {
+                const q = this.filterQuery.toLowerCase();
+                maps = maps.filter(m => this.t(m.id).toLowerCase().includes(q));
+            }
+            const col = this.toolkitSortCol;
+            if (col) {
+                maps.sort((a, b) => {
+                    const av = col === '_name' ? this.t(a.id) : (a.rates[col] || 0);
+                    const bv = col === '_name' ? this.t(b.id) : (b.rates[col] || 0);
+                    const cmp = typeof av === 'string' ? av.localeCompare(bv) : av - bv;
+                    return this.toolkitSortAsc ? cmp : -cmp;
+                });
+            }
+            return maps;
         },
 
         filteredCraftingTrees() {
@@ -1861,6 +1889,21 @@ const app = createApp({
                 return;
             }
 
+            if (cat === CAT.TOOLKIT_RATES) {
+                if (!this.toolkitRates) {
+                    this.startContentLoading();
+                    try {
+                        const res = await fetch(this.dataUrl("toolkit-rates.json"));
+                        this.toolkitRates = res.ok ? await res.json() : null;
+                    } catch (e) {
+                        console.error("Failed to load toolkit rates:", e);
+                        this.toolkitRates = null;
+                    }
+                    await this.stopContentLoading();
+                }
+                return;
+            }
+
             if (cat === CAT.CRAFTING_TREES) {
                 if (this.craftingTrees.length === 0) {
                     this.startContentLoading();
@@ -2809,6 +2852,7 @@ const app = createApp({
 
         downloadData(format) {
             this.downloadMenuOpen = false;
+            if (this.isToolkitRates) return this.downloadToolkitRates(format);
             const cols = this.buildExportColumns();
             const rows = this.sortedItems;
 
@@ -2851,6 +2895,40 @@ const app = createApp({
             const pack = (this.activePack?.id || 'data').replace(/\s+/g, '_').toLowerCase();
             const filename = `${cat}_${pack}_${rows.length}.${ext}`;
 
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        },
+
+        downloadToolkitRates(format) {
+            const maps = this.toolkitRatesSorted;
+            const types = this.toolkitRates.toolTypes;
+            const pack = (this.activePack?.id || 'data').replace(/\s+/g, '_').toLowerCase();
+            const filename = `toolkit_rates_${pack}_${maps.length}.${format}`;
+            let blob;
+            if (format === 'csv') {
+                const escapeCSV = (val) => {
+                    const s = String(val);
+                    return (s.includes(',') || s.includes('"') || s.includes('\n')) ? '"' + s.replace(/"/g, '""') + '"' : s;
+                };
+                const header = [this.t('app_label_map'), ...types.map(t => this.t(t))].map(escapeCSV).join(',');
+                const lines = maps.map(m =>
+                    [escapeCSV(this.t(m.id)), ...types.map(t => m.rates[t] ? m.rates[t] + '%' : '0%')].join(',')
+                );
+                blob = new Blob([header + '\n' + lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+            } else {
+                const data = maps.map(m => {
+                    const obj = { [this.t('app_label_map')]: this.t(m.id) };
+                    for (const t of types) obj[this.t(t)] = m.rates[t] ? m.rates[t] + '%' : '0%';
+                    return obj;
+                });
+                blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json;charset=utf-8;' });
+            }
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
@@ -3606,6 +3684,26 @@ const app = createApp({
                 this.sortAsc = true;
             }
             this.pushUrlState();
+        },
+
+        toggleToolkitSort(col) {
+            if (this.toolkitSortCol === col) {
+                this.toolkitSortAsc = !this.toolkitSortAsc;
+            } else {
+                this.toolkitSortCol = col;
+                this.toolkitSortAsc = col === '_name';
+            }
+        },
+
+        toolkitSortIcon(col) {
+            if (this.toolkitSortCol !== col) return "";
+            return this.toolkitSortAsc ? " \u25B2" : " \u25BC";
+        },
+
+        toolkitHeatBg(value) {
+            if (!value) return "";
+            const intensity = Math.min(value / 100, 1) * 0.45;
+            return `background: rgba(76, 175, 80, ${intensity})`;
         },
 
         sortIcon(col) {

@@ -37,6 +37,7 @@ const SKIP_FILES = new Set([
   "item_drop_locations.csv",
   "export_artefact_recipes.csv",
   "export_stash_drop_rates.csv",
+  "export_toolkit_map_rates.csv",
   "item_chance_in_stash.csv",
   "en_us.csv",
   "ru_ru.csv",
@@ -566,6 +567,39 @@ try {
 } catch (e) {
   if (e.code !== "ENOENT") throw e;
   console.log("No outfit exchange CSV found, skipping outfit-exchange.json");
+}
+
+// Generate toolkit-rates.json from export_toolkit_map_rates.csv
+const TOOLKIT_RATES_FILE = join(CSV_DIR, "export_toolkit_map_rates.csv");
+try {
+  const trText = readFileSync(TOOLKIT_RATES_FILE, "utf-8");
+  const trLines = trText.split(/\r?\n/).filter((l) => l.length > 0);
+  if (trLines.length > 1) {
+    const headerCols = parseCsvLine(trLines[0]);
+    const toolTypes = headerCols.slice(2).map((h) => h.trim()).filter(Boolean);
+
+    const maps = [];
+    for (let i = 1; i < trLines.length; i++) {
+      const cols = parseCsvLine(trLines[i]);
+      const id = cols[0]?.trim();
+      const name = cols[1]?.trim();
+      if (!id || !name) continue;
+
+      const rates = {};
+      for (let j = 0; j < toolTypes.length; j++) {
+        const val = cols[j + 2]?.trim().replace("%", "") || "0";
+        rates[toolTypes[j]] = parseFloat(val);
+      }
+      maps.push({ id, name, rates });
+    }
+
+    const trOut = join(OUT_DIR, "toolkit-rates.json");
+    writeFileSync(trOut, JSON.stringify({ toolTypes, maps }, null, 2));
+    console.log(`Wrote ${maps.length} toolkit rate entries to ${trOut}`);
+  }
+} catch (e) {
+  if (e.code !== "ENOENT") throw e;
+  console.log("No toolkit map rates CSV found, skipping toolkit-rates.json");
 }
 
 // Inject AP value into ammo items before writing category files

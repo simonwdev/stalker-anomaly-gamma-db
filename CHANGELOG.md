@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## 2026-03-24
 
+### Added
+
+- Toolkit Rates page showing stash tool drop chances per map with sortable heatmap table, search filtering, and CSV/JSON export
+
 ### Changed
 
 - Translation CSV decoding now uses Node.js TextDecoder instead of external iconv, working cross-platform without extra tools

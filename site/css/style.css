@@ -2274,6 +2274,60 @@ input.range-input {
     color: var(--text-secondary);
 }
 
+/* Toolkit rates heatmap table */
+.toolkit-rates-view {
+    padding: 0;
+    overflow-x: auto;
+    min-width: 0;
+}
+.toolkit-rates-table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+    font-size: 0.7rem;
+}
+.toolkit-rates-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.toolkit-rates-table th {
+    background: var(--card);
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.03em;
+    padding: 0.4rem 0.6rem;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+.toolkit-rates-table th:hover {
+    color: var(--text);
+}
+.toolkit-rates-table td {
+    padding: 0.3rem 0.6rem;
+    border-bottom: 1px solid var(--border);
+}
+.toolkit-rates-table tbody tr:hover {
+    background: var(--card-raised);
+}
+.toolkit-map-col {
+    text-align: left;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.toolkit-rate-col {
+    text-align: right;
+    font-family: var(--mono);
+    color: var(--text);
+}
+.toolkit-rates-table td.toolkit-rate-col {
+    transition: background 0.15s;
+}
+
 /* Pin column */
 .pin-col-header {
     width: 1.2rem;

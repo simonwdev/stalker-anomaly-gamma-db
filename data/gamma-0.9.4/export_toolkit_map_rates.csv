@@ -1,0 +1,34 @@
+~,Map,Basic Tools,Advanced Tools,Expert Tools,Drug-making Kit,Gunsmithing Tools
+jupiter,Jupiter,18%,47%,20%,7%,7%
+jupiter_underground,Jupiter Underground,0%,80%,20%,0%,0%
+k00_marsh,Great Swamps,40%,0%,0%,30%,30%
+k01_darkscape,Darkscape,48%,6%,0%,23%,23%
+k02_trucks_cemetery,Truck Cemetery,27%,51%,0%,11%,11%
+l01_escape,Cordon,40%,0%,0%,30%,30%
+l02_garbage,Garbage,43%,5%,0%,26%,26%
+l03_agroprom,Agroprom,48%,9%,0%,22%,22%
+l03u_agr_underground,Agroprom Underground,15%,39%,33%,6%,6%
+l04_darkvalley,Dark Valley,49%,5%,0%,23%,23%
+l04u_labx18,Laboratory X18 (Dark Valley),0%,50%,50%,0%,0%
+l05_bar,Rostok,42%,0%,0%,29%,29%
+l06_rostok,Wild Territory,40%,25%,0%,18%,18%
+l07_military,Army Warehouses,27%,51%,0%,11%,11%
+l08_yantar,Yantar,34%,37%,0%,14%,14%
+l08u_brainlab,Laboratory X16 (Yantar),15%,39%,33%,6%,6%
+l09_deadcity,Dead City,48%,9%,0%,22%,22%
+l10_limansk,Limansk,17%,57%,13%,7%,7%
+l10_radar,Radar,5%,91%,0%,2%,2%
+l10_red_forest,Red Forest,5%,82%,10%,2%,2%
+l10u_bunker,Laboratory X19 (Radar),0%,50%,50%,0%,0%
+l11_hospital,Deserted Hospital,0%,50%,50%,0%,0%
+l11_pripyat,Pripyat,0%,50%,50%,0%,0%
+l12_stancia,Chernobyl NPP (South),0%,38%,63%,0%,0%
+l12_stancia_2,Chernobyl NPP (North),0%,43%,57%,0%,0%
+l12u_control_monolith,Monolith Control Center,0%,20%,80%,0%,0%
+l12u_sarcofag,Sarcophagus,0%,20%,80%,0%,0%
+l13_generators,Generators,0%,30%,70%,0%,0%
+l13u_warlab,Monolith War Lab,0%,20%,80%,0%,0%
+labx8,Laboratory X8 (Outskirts),15%,39%,33%,6%,6%
+pripyat,Outskirts,6%,40%,50%,2%,2%
+y04_pole,Meadow,25%,0%,0%,38%,38%
+zaton,Zaton,18%,47%,20%,7%,7%
