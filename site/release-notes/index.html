@@ -107,7 +107,7 @@
 (async () => {
     const container = document.getElementById("rn-content");
     try {
-        const res = await fetch("../data/release-notes.json");
+        const res = await fetch("../data/release-notes.json", { cache: "no-cache" });
         const releases = await res.json();
 
         if (!releases.length) {

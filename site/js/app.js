@@ -5280,7 +5280,7 @@ const app = createApp({
 
         // 8. Check for unseen release notes
         try {
-            const rnRes = await fetch("data/release-notes.json");
+            const rnRes = await fetch("data/release-notes.json", { cache: "no-cache" });
             const rnData = await rnRes.json();
             if (rnData.length) {
                 const hash = await this.releaseNotesHash(rnData);

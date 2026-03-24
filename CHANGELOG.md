@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Resist cap calculation in build planner now correctly sums cap bonuses from all equipped items and adds them to the 65% base cap, instead of using only the highest single cap value as the total belt/artifact allowance
 - Belt attachments now contribute to BR Class (armor points) in the build planner - waiting on `ui_inv_ap_res` column in `export_belt_attachments.csv` data
 - Toolkit Rates category no longer shows in sidebar when the pack has no toolkit rates data
+- Release notes no longer require a hard refresh to show new entries
 
 ### Changed
 
