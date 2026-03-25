@@ -4359,10 +4359,44 @@ const app = createApp({
         },
 
         // Inventory methods
+        resolveInventoryItem(item, slotType) {
+            if (!item || !item.id) return null;
+
+            const bySlotType = {
+                outfit: ["outfits"],
+                helmet: ["helmets"],
+                backpack: ["belt-attachments"],
+                belt: ["belt-attachments"],
+                artifact: ["artefacts"],
+                weapon: PRIMARY_WEAPON_SLUGS,
+                sidearm: SIDEARM_SLUGS,
+                grenade: [GRENADE_SLUG],
+                ammo: ["ammo"],
+            };
+
+            const findBySlugs = (slugs) => {
+                for (const slug of slugs || []) {
+                    const match = (this.categoryItems[slug] || []).find(i => i.id === item.id);
+                    if (match) return match;
+                }
+                return null;
+            };
+
+            const hinted = findBySlugs(bySlotType[slotType] || []);
+            if (hinted) return hinted;
+
+            const inferredSlot = this.getItemSlotType(item);
+            const inferred = findBySlugs(bySlotType[inferredSlot] || []);
+            return inferred || item;
+        },
+
         addToInventory(item, slotType) {
-            if (!item) return;
-            if (this.buildInventory.some(e => e.item.id === item.id)) return;
-            this.buildInventory.push({ item, slotType });
+            const resolvedItem = this.resolveInventoryItem(item, slotType);
+            if (!resolvedItem) return;
+            const resolvedSlotType = slotType || this.getItemSlotType(resolvedItem);
+            if (!resolvedSlotType) return;
+            if (this.buildInventory.some(e => e.item.id === resolvedItem.id)) return;
+            this.buildInventory.push({ item: resolvedItem, slotType: resolvedSlotType });
         },
 
         getItemSlotType(item) {
