@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## 2026-03-25
 
+### Changed
+
+- Belt slots now use the outfit's max upgraded slot count directly, removing the manual +/- bonus buttons
+- Outfit slot in build planner shows both default and max belt slot counts
+
 ### Fixed
 
 - Build sharing now works for items with hyphens in their IDs (e.g. OG-7B, VOG-25 ammo)

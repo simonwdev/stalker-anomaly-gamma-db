@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-03-25",
+    "entries": [
+      { "type": "changed", "text": "Belt slots now automatically use the fully upgraded slot count for each outfit - no more manual +/- adjustments needed." },
+      { "type": "fixed", "text": "Build sharing now works for all ammo types, including OG-7B and VOG-25 variants." }
+    ]
+  },
+  {
     "date": "2026-03-24",
     "entries": [
       { "type": "added", "text": "Toolkit Rates - see the drop chances for Basic, Advanced, Expert, Drug-making, and Gunsmithing tools across every map at a glance." },
