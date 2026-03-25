@@ -1,7 +1,6 @@
 # TODO
 
 ## Build Planner
-- [ ] Confirm belt slot behavior: build planner uses `st_data_export_outfit_artefact_count_max` (max upgraded slots) - verify with Grok whether it should use base `ui_inv_outfit_artefact_count` instead
 
 ## Weapon Attachments
 - [ ] Data pipeline for attachments and cross-reference to allowed weapons

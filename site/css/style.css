@@ -137,6 +137,9 @@ a:hover {
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
+.header-pack-label .pack-status-badge {
+    margin-left: 0.4rem;
+}
 .site-header h1 {
     font-size: 0.6rem;
     color: var(--text-secondary);
@@ -3887,8 +3890,7 @@ kbd {
     gap: 0.35rem;
 }
 .build-slot-row > .build-slot {
-    flex: 1 1 calc(16.666% - 0.3rem);
-    max-width: calc(16.666% - 0.3rem);
+    flex: 1 1 calc(20% - 0.3rem);
     min-width: 0;
 }
 .build-slot {
@@ -4876,6 +4878,9 @@ kbd {
     }
     .build-slot-name {
         max-width: 100%;
+    }
+    .build-slot-row > .build-slot {
+        flex-basis: calc(50% - 0.3rem);
     }
     .build-toolbar-actions {
         flex-wrap: wrap;

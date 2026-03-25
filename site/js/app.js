@@ -397,7 +397,6 @@ const app = createApp({
             buildBackpack: null,
             buildBelts: [],
             buildArtifacts: [],
-            buildBeltSlotBonus: 0,
             buildWeaponPrimary: null,
             buildWeaponSecondary: null,
             buildWeaponSidearm: null,
@@ -1104,8 +1103,7 @@ const app = createApp({
 
         buildBeltSlotMax() {
             if (!this.buildOutfit) return 0;
-            const base = parseInt(this.buildOutfit["st_data_export_outfit_artefact_count_max"]) || 0;
-            return Math.min(base + this.buildBeltSlotBonus, 6);
+            return parseInt(this.buildOutfit["st_data_export_outfit_artefact_count_max"]) || 0;
         },
 
         buildBeltSlotUsed() {
@@ -4023,7 +4021,6 @@ const app = createApp({
             this.buildAmmoPrimary = null;
             this.buildAmmoSecondary = null;
             this.buildAmmoSidearm = null;
-            this.buildBeltSlotBonus = 0;
             this.buildActiveWeaponTab = "primary";
             this.setWeaponCompareSlot("primary");
             this.buildExpandedStats = {};
@@ -4106,7 +4103,6 @@ const app = createApp({
                 ammo1: this.buildAmmoPrimary?.id || null,
                 ammo2: this.buildAmmoSecondary?.id || null,
                 ammoSidearm: this.buildAmmoSidearm?.id || null,
-                beltBonus: this.buildBeltSlotBonus || 0,
             };
             try {
                 localStorage.setItem(this.getBuildStorageKey(), JSON.stringify(data));
@@ -4148,7 +4144,6 @@ const app = createApp({
             this.buildAmmoPrimary = findItem(data.ammo1, "ammo");
             this.buildAmmoSecondary = findItem(data.ammo2, "ammo");
             this.buildAmmoSidearm = findItem(data.ammoSidearm, "ammo");
-            this.buildBeltSlotBonus = parseInt(data.beltBonus) || 0;
             // Restore inventory if present
             if (data.inventory && data.inventory.length) {
                 const findAny = (id) => {
@@ -4201,7 +4196,6 @@ const app = createApp({
                 ammo1: this.buildAmmoPrimary?.id || null,
                 ammo2: this.buildAmmoSecondary?.id || null,
                 ammoSidearm: this.buildAmmoSidearm?.id || null,
-                beltBonus: this.buildBeltSlotBonus || 0,
                 timestamp: Date.now(),
             };
             // Replace if same name exists
@@ -4256,7 +4250,6 @@ const app = createApp({
                 ammo1: this.buildAmmoPrimary?.id || null,
                 ammo2: this.buildAmmoSecondary?.id || null,
                 ammoSidearm: this.buildAmmoSidearm?.id || null,
-                beltBonus: this.buildBeltSlotBonus || 0,
                 inventory: this.buildInventory.map(e => ({ id: e.item.id, slotType: e.slotType })),
             };
         },
@@ -4282,12 +4275,15 @@ const app = createApp({
 
         async copyBuildLink() {
             this.buildSharing = true;
+            const minDelay = new Promise(r => setTimeout(r, 2000));
             try {
                 const code = await this.shareBuild();
+                await minDelay;
                 const url = new URL(window.location.origin + window.location.pathname);
                 url.hash = BUILD_HASH_PREFIX + code;
                 await this.copyToClipboard(url.toString(), "copyBuildLinkFeedback");
             } catch {
+                await minDelay;
                 this.showToast(this.t("app_build_share_error"));
             } finally {
                 this.buildSharing = false;
@@ -4296,10 +4292,13 @@ const app = createApp({
 
         async copyBuildCode() {
             this.buildSharing = true;
+            const minDelay = new Promise(r => setTimeout(r, 2000));
             try {
                 const code = await this.shareBuild();
+                await minDelay;
                 await this.copyToClipboard(code, "copyBuildCodeFeedback");
             } catch {
+                await minDelay;
                 this.showToast(this.t("app_build_share_error"));
             } finally {
                 this.buildSharing = false;
@@ -4350,7 +4349,6 @@ const app = createApp({
                 ammo1: params.get("ap") || params.get("a1") || null,
                 ammo2: params.get("as") || params.get("a2") || null,
                 ammoSidearm: params.get("asi") || null,
-                beltBonus: parseInt(params.get("bsb")) || 0,
             };
             if (data.outfit || data.helmet || data.backpack || data.belts.length || data.artifacts.length || data.weapon1 || data.weapon2 || data.sidearm || data.grenade) {
                 this.restoreBuildFromIds(data);
@@ -4359,10 +4357,44 @@ const app = createApp({
         },
 
         // Inventory methods
+        resolveInventoryItem(item, slotType) {
+            if (!item || !item.id) return null;
+
+            const bySlotType = {
+                outfit: ["outfits"],
+                helmet: ["helmets"],
+                backpack: ["belt-attachments"],
+                belt: ["belt-attachments"],
+                artifact: ["artefacts"],
+                weapon: PRIMARY_WEAPON_SLUGS,
+                sidearm: SIDEARM_SLUGS,
+                grenade: [GRENADE_SLUG],
+                ammo: ["ammo"],
+            };
+
+            const findBySlugs = (slugs) => {
+                for (const slug of slugs || []) {
+                    const match = (this.categoryItems[slug] || []).find(i => i.id === item.id);
+                    if (match) return match;
+                }
+                return null;
+            };
+
+            const hinted = findBySlugs(bySlotType[slotType] || []);
+            if (hinted) return hinted;
+
+            const inferredSlot = this.getItemSlotType(item);
+            const inferred = findBySlugs(bySlotType[inferredSlot] || []);
+            return inferred || item;
+        },
+
         addToInventory(item, slotType) {
-            if (!item) return;
-            if (this.buildInventory.some(e => e.item.id === item.id)) return;
-            this.buildInventory.push({ item, slotType });
+            const resolvedItem = this.resolveInventoryItem(item, slotType);
+            if (!resolvedItem) return;
+            const resolvedSlotType = slotType || this.getItemSlotType(resolvedItem);
+            if (!resolvedSlotType) return;
+            if (this.buildInventory.some(e => e.item.id === resolvedItem.id)) return;
+            this.buildInventory.push({ item: resolvedItem, slotType: resolvedSlotType });
         },
 
         getItemSlotType(item) {
@@ -5007,13 +5039,6 @@ const app = createApp({
         },
         exchangeFactionFilter() {
             if (!this._restoringUrl) this.pushUrlState();
-        },
-        buildBeltSlotBonus() {
-            while (this.buildBeltSlotUsed > this.buildBeltSlotMax) {
-                if (this.buildArtifacts.length > 0) this.addToInventory(this.buildArtifacts.pop(), "artifact");
-                else if (this.buildBelts.length > 0) this.addToInventory(this.buildBelts.pop(), "belt");
-                else break;
-            }
         },
         buildRadarVisible(visible) {
             if (visible) {

@@ -40,7 +40,7 @@ const ARRAY_SLOTS = ["belts", "artifacts"];
 const VALID_SLOT_TYPES = new Set(["outfit", "helmet", "backpack", "belt", "artifact", "weapon", "sidearm", "grenade", "ammo"]);
 const ALLOWED_KEYS = new Set([...SINGLE_SLOTS, ...ARRAY_SLOTS, "inventory", "beltBonus", "pack"]);
 const MAX_ARRAY_LENGTH = 10;
-const ID_PATTERN = /^[a-z0-9_.]{2,40}$/;
+const ID_PATTERN = /^[a-z0-9_.\-]{2,40}$/;
 
 function validateBuild(body) {
     // Reject unknown keys

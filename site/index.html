@@ -619,12 +619,14 @@
                             <i data-lucide="trash-2" width="16" height="16"></i>
                         </button>
                         <button class="build-header-icon" :class="{ copied: copyBuildLinkFeedback }" :disabled="buildSharing" v-tooltip="copyBuildLinkFeedback ? t('app_label_copied') : t('app_label_copy_link')" @click="copyBuildLink()">
-                            <i v-show="!copyBuildLinkFeedback" data-lucide="link" width="16" height="16"></i>
-                            <svg v-show="copyBuildLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span v-if="buildSharing && !copyBuildLinkFeedback" class="loading-spinner loading-spinner-sm"></span>
+                            <span v-else-if="copyBuildLinkFeedback"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span v-else><i data-lucide="link" width="16" height="16"></i></span>
                         </button>
                         <button class="build-header-icon" :class="{ copied: copyBuildCodeFeedback }" :disabled="buildSharing" v-tooltip="copyBuildCodeFeedback ? t('app_label_copied') : (t('app_build_copy_code') || 'Copy Code')" @click="copyBuildCode()">
-                            <i v-show="!copyBuildCodeFeedback" data-lucide="hash" width="16" height="16"></i>
-                            <svg v-show="copyBuildCodeFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span v-if="buildSharing && !copyBuildCodeFeedback" class="loading-spinner loading-spinner-sm"></span>
+                            <span v-else-if="copyBuildCodeFeedback"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span v-else><i data-lucide="hash" width="16" height="16"></i></span>
                         </button>
                         <div class="build-import-inline">
                             <input class="build-import-input" v-model="buildImportCode" :placeholder="t('app_build_import_placeholder') || 'Paste build code'" @keydown.enter="importBuildFromCode()" spellcheck="false">
@@ -643,8 +645,6 @@
                     <div class="build-loadout-header">
                         <h3 class="build-stats-title" style="margin-bottom:0">{{ t('app_build_loadout') || 'Loadout' }}</h3>
                         <div class="build-loadout-header-actions">
-                            <button v-if="buildOutfit && buildBeltSlotBonus > 0" class="build-expand-all-btn" @click="buildBeltSlotBonus = Math.max(0, buildBeltSlotBonus - 1)"><i data-lucide="minus" width="10" height="10"></i> {{ t('app_build_remove_slot') }}</button>
-                            <button v-if="buildOutfit && buildBeltSlotMax < 6" class="build-expand-all-btn" @click="buildBeltSlotBonus++"><i data-lucide="plus" width="10" height="10"></i> {{ t('app_build_add_slot') }}</button>
                             <button class="build-expand-all-btn" @click="buildLoadoutCollapsed = !buildLoadoutCollapsed">{{ buildLoadoutCollapsed ? t('app_build_show_loadout') : t('app_build_hide_loadout') }}</button>
                         </div>
                     </div>
@@ -672,7 +672,7 @@
                             <div class="build-slot-label">{{ t('app_type_outfit') }}</div>
                             <div v-if="buildOutfit" class="build-slot filled build-slot-outfit" :class="{ 'drag-over': buildDragState && buildDragState.targetSlot === 'outfit' }" @click="openBuildPicker('outfit')" draggable="true" @dragstart="onSlotDragStart($event, 'outfit')" @dragover.prevent="onSlotDragOver($event, 'outfit')" @dragleave="onSlotDragLeave()" @drop.prevent="onSlotDrop($event, 'outfit')" @dragend="onDragEnd()" @mouseenter="showBuildHover(buildOutfit, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">
                                 <span class="build-slot-name">{{ tName(buildOutfit) }}</span>
-                                <span class="build-slot-meta">{{ formatValue('st_prop_weight', buildOutfit['st_prop_weight']) }} &middot; {{ t('app_build_slots') }}: {{ buildOutfit['st_data_export_outfit_artefact_count_max'] || '0' }}</span>
+                                <span class="build-slot-meta">{{ formatValue('st_prop_weight', buildOutfit['st_prop_weight']) }} &middot; {{ t('app_build_slots') }}: {{ buildOutfit['ui_inv_outfit_artefact_count'] || '0' }} &middot; {{ t('app_build_slots_max') }}: {{ buildOutfit['st_data_export_outfit_artefact_count_max'] || '0' }}</span>
                                 <button class="build-slot-remove" @click.stop="removeBuildSlot('outfit')">&times;</button>
                             </div>
                             <div v-else class="build-slot empty" :class="{ 'drag-over': buildDragState && buildDragState.targetSlot === 'outfit' }" @click="openBuildPicker('outfit')" @dragover.prevent="onSlotDragOver($event, 'outfit')" @dragleave="onSlotDragLeave()" @drop.prevent="onSlotDrop($event, 'outfit')">
@@ -695,7 +695,7 @@
 
                         <!-- Belt Slots (always show 5) -->
                         <div class="build-slot-group build-slot-group-multi">
-                            <div class="build-slot-label">{{ t('app_build_belt_slots') }} <span class="build-slot-counter">{{ buildBeltSlotUsed }}/{{ buildOutfit ? buildBeltSlotMax - buildBeltSlotBonus : 0 }}<template v-if="buildBeltSlotBonus > 0"> + {{ buildBeltSlotBonus }}</template></span></div>
+                            <div class="build-slot-label">{{ t('app_build_belt_slots') }} <span class="build-slot-counter">{{ buildBeltSlotUsed }}/{{ buildBeltSlotMax }}</span></div>
                             <div class="build-slot-row" :class="{ 'drag-over': buildDragState && buildDragState.targetSlot === 'beltarea' }" @dragover.prevent="onBeltAreaDragOver($event)" @dragleave="onSlotDragLeave()" @drop.prevent="onBeltAreaDrop($event)">
                                 <template v-for="(slot, i) in buildBeltSlots" :key="i">
                                     <div v-if="slot.state === 'filled'" class="build-slot filled build-slot-sm" :class="slot.type === 'belt' ? 'build-slot-belt' : 'build-slot-artifact'" @click="openBuildPicker(slot.type, slot.index)" draggable="true" @dragstart="onSlotDragStart($event, slot.type, slot.index)" @dragend="onDragEnd()" @mouseenter="showBuildHover(slot.item, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">
