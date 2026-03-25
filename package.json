@@ -2,7 +2,8 @@
   "name": "gamma-tools",
   "private": true,
   "scripts": {
-    "dev": "five-server site --port=3000",
+    "start": "npm run dev",
+    "dev": "five-server site --watch=site --port=3000",
     "dev:api": "wrangler pages dev ./site --kv BUILDS --port=3001",
     "release": "node scripts/release.mjs",
     "deploy": "node scripts/deploy.mjs",
