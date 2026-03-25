@@ -90,6 +90,7 @@
     "unit_msv_per_s": "mSv/s",
     "unit_msv": "mSv",
     "unit_s": "s",
+    "st_prop_weight": "Poids",
     "ui_inv_wrange": "Portée maximale",
     "ui_inv_bspeed": "Vitesse initiale",
     "ui_inv_recoil": "Contrôle du recul",
