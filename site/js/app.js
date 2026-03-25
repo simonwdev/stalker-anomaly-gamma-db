@@ -134,6 +134,7 @@ const SIDEARM_SLUGS = ["pistols", "melee"];
 const GRENADE_SLUG = "explosives";
 const SLOT_COLORS = { outfit: "#5b8abd", helmet: "#5ba8a0", backpack: "#6bab5b", belt: "#c89050", artifact: "#9b6fb0", weapon: "#b85c5c", sidearm: "#b85c5c", grenade: "#7a6e50", ammo: "#8b8b5e" };
 
+const LOCALES = [{id:"en",label:"English"},{id:"ru",label:"Русский"},{id:"fr",label:"Français"}];
 const CHART_COLORS = ["#c8a84e", "#5b8abd", "#b85c5c", "#5ba8a0", "#9b6fb0"];
 
 const SINGULAR_TYPE = { [CAT.PISTOLS]: "app_type_pistol", [CAT.SMGS]: "app_type_smg", [CAT.SHOTGUNS]: "app_type_shotgun", [CAT.RIFLES]: "app_type_rifle", [CAT.SNIPERS]: "app_type_sniper", [CAT.LAUNCHERS]: "app_type_launcher", [CAT.MELEE]: "app_cat_melee" };
@@ -273,6 +274,7 @@ const app = createApp({
             packOpen: false,
 
             // Localisation
+            LOCALES,
             locale: "en",
             localeOpen: false,
             translations: null,
@@ -5220,7 +5222,7 @@ const app = createApp({
         try {
             const urlLang = new URLSearchParams(window.location.search).get("lang");
             const locale = urlLang || localStorage.getItem("locale");
-            if (locale === "en" || locale === "ru") this.locale = locale;
+            if (LOCALES.some(l => l.id === locale)) this.locale = locale;
         } catch (e) { /* ignore */ }
 
         // 4. Load pack data (save initial state for later restoration)
