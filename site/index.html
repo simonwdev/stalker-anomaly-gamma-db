@@ -155,7 +155,7 @@
                     :key="cat"
                     :class="{ active: activeCategory === cat && !favoritesViewActive && !recentViewActive && !buildPlannerActive && !versionCompareActive }"
                     @click="selectCategory(cat)"
-                ><span class="cat-label">{{ tCat(cat) }}</span> <span v-if="categoryCounts[cat]" class="cat-count">{{ categoryCounts[cat] }}</span></button>
+                ><span class="cat-label" :title="tCat(cat)">{{ tCat(cat) }}</span> <span v-if="categoryCounts[cat]" class="cat-count">{{ categoryCounts[cat] }}</span></button>
             </div>
         </div>
         </div>
