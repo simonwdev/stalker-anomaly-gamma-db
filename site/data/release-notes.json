@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-03-25",
+    "entries": [
+      { "type": "added", "text": "French translations for app UI - item stats and names still display in English." }
+    ]
+  },
+  {
     "date": "2026-03-24",
     "entries": [
       { "type": "added", "text": "Toolkit Rates - see the drop chances for Basic, Advanced, Expert, Drug-making, and Gunsmithing tools across every map at a glance." },
