@@ -2,7 +2,7 @@
   {
     "date": "2026-03-26",
     "entries": [
-      { "type": "added", "text": "Item icons now appear in the item detail modal and build planner hover previews.", "credits": [{ "name": "SaloEater", "role": "contribution" }, { "name": "Evincars", "role": "contribution" }] },
+      { "type": "added", "text": "Item icons now appear in the item detail modal and build planner hover previews.", "credits": [{ "name": "SaloEater", "role": "code" }, { "name": "Evincars", "role": "code" }] },
       { "type": "added", "text": "Flag filters like Powered Exo and Craftable now support both Yes and No options, so you can exclude items that match.", "credits": [{ "name": "AboveTheChemist", "role": "suggestion" }] },
       { "type": "added", "text": "Alt ammo toggle on the ammo type filter - include weapons that can be converted to a particular caliber alongside those that natively fire it.", "credits": [{ "name": "AboveTheChemist", "role": "suggestion" }] }
     ]
