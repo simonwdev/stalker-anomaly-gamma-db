@@ -19,6 +19,8 @@
     <meta property="og:image:alt" content="S.T.A.L.K.E.R. GAMMA Database logo">
     <meta name="twitter:card" content="summary_large_image">
 
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.13"></script>
     <link rel="stylesheet" href="../css/style.css">
     <style>
         body {
@@ -91,6 +93,37 @@
             color: #60a5fa;
             background: rgba(96, 165, 250, 0.1);
         }
+        .rn-text {
+            flex: 1;
+        }
+        .rn-credits {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.4rem;
+            margin-top: 0.3rem;
+        }
+        .rn-credit {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.6rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            white-space: nowrap;
+            cursor: default;
+        }
+        .rn-credit-suggestion {
+            color: #c4b5fd;
+            background: rgba(196, 181, 253, 0.1);
+        }
+        .rn-credit-bug {
+            color: #fca5a5;
+            background: rgba(252, 165, 165, 0.1);
+        }
+        .rn-credit-code {
+            color: #6ee7b7;
+            background: rgba(110, 231, 183, 0.1);
+        }
         .rn-empty {
             color: var(--text-secondary);
             font-size: 0.75rem;
@@ -126,13 +159,69 @@
             const d = new Date(release.date + "T00:00:00");
             const formatted = d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
             html += `<h2 class="rn-date">${formatted}</h2>`;
+            const roleIcons = { suggestion: "\uD83D\uDCA1", bug: "\uD83D\uDC1B", code: "\uD83D\uDD27" };
+            const roleLabels = { suggestion: "Suggested by", bug: "Reported by", code: "Contributed by" };
             for (const entry of release.entries) {
                 const badgeClass = "rn-badge-" + entry.type;
                 const label = entry.type.charAt(0).toUpperCase() + entry.type.slice(1);
-                html += `<div class="rn-entry"><span class="rn-badge ${badgeClass}">${label}</span><span>${entry.text}</span></div>`;
+                let credits = "";
+                if (entry.credits) {
+                    credits = '<div class="rn-credits">';
+                    for (const c of entry.credits) {
+                        const icon = roleIcons[c.role] || "";
+                        const tip = (roleLabels[c.role] || "Thanks") + " " + c.name;
+                        credits += `<span class="rn-credit rn-credit-${c.role}" data-tooltip="${tip}">${icon} ${c.name}</span>`;
+                    }
+                    credits += '</div>';
+                }
+                html += `<div class="rn-entry"><span class="rn-badge ${badgeClass}">${label}</span><span class="rn-text">${entry.text}${credits}</span></div>`;
             }
         }
         container.innerHTML = html;
+
+        // Floating UI tooltips for credit chips
+        for (const el of container.querySelectorAll("[data-tooltip]")) {
+            const tip = document.createElement("div");
+            tip.className = "tooltip";
+            tip.textContent = el.dataset.tooltip;
+            const arrow = document.createElement("div");
+            arrow.className = "tooltip-arrow";
+            tip.appendChild(arrow);
+            document.body.appendChild(tip);
+
+            function update() {
+                FloatingUIDOM.computePosition(el, tip, {
+                    placement: "top",
+                    middleware: [
+                        FloatingUIDOM.offset(6),
+                        FloatingUIDOM.flip(),
+                        FloatingUIDOM.shift({ padding: 8 }),
+                        FloatingUIDOM.arrow({ element: arrow }),
+                    ],
+                }).then(({ x, y, placement, middlewareData }) => {
+                    Object.assign(tip.style, { left: x + "px", top: y + "px" });
+                    const side = { top: "bottom", right: "left", bottom: "top", left: "right" }[placement.split("-")[0]];
+                    if (middlewareData.arrow) {
+                        const { x: ax, y: ay } = middlewareData.arrow;
+                        Object.assign(arrow.style, {
+                            left: ax != null ? ax + "px" : "",
+                            top: ay != null ? ay + "px" : "",
+                            [side]: "-4px",
+                        });
+                    }
+                });
+            }
+
+            let cleanup = null;
+            el.addEventListener("mouseenter", () => {
+                tip.classList.add("visible");
+                cleanup = FloatingUIDOM.autoUpdate(el, tip, update);
+            });
+            el.addEventListener("mouseleave", () => {
+                tip.classList.remove("visible");
+                if (cleanup) { cleanup(); cleanup = null; }
+            });
+        }
     } catch (e) {
         container.innerHTML = '<p class="rn-empty">Failed to load release notes.</p>';
         console.error("Failed to load release notes:", e);
