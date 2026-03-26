@@ -41,6 +41,7 @@ const SKIP_FILES = new Set([
   "item_chance_in_stash.csv",
   "en_us.csv",
   "ru_ru.csv",
+  "fr_fr.csv",
 ]);
 
 // Category and name-column overrides per filename pattern
@@ -161,8 +162,8 @@ const parseCsvLine = packConfig.csvStyle === "rfc4180" ? parseCsvLineRfc4180 : p
 
 function loadTranslations(packDir) {
   const encodingOverrides = packConfig.encoding || {};
-  const translations = { locales: ["en", "ru"], en: {}, ru: {} };
-  for (const [file, locale] of [["en_us.csv", "en"], ["ru_ru.csv", "ru"]]) {
+  const translations = { locales: ["en", "ru", "fr"], en: {}, ru: {}, fr: {} };
+  for (const [file, locale] of [["en_us.csv", "en"], ["ru_ru.csv", "ru"], ["fr_fr.csv", "fr"]]) {
     const filepath = join(packDir, file);
     if (!existsSync(filepath)) {
       console.warn(`Translation file not found: ${filepath}`);
@@ -869,7 +870,7 @@ if (existsSync(appPath)) {
 }
 const translationsOut = join(OUT_DIR, "translations.json");
 writeFileSync(translationsOut, JSON.stringify(translations, null, 2));
-console.log(`Wrote translations (${Object.keys(translations.en).length} en, ${Object.keys(translations.ru).length} ru) to ${translationsOut}`);
+console.log(`Wrote translations (${Object.keys(translations.en).length} en, ${Object.keys(translations.ru).length} ru, ${Object.keys(translations.fr).length} fr) to ${translationsOut}`);
 
 // Generate manifest.json with content hashes for cache busting
 const manifest = {};
