@@ -12,7 +12,7 @@
       { "type": "changed", "text": "Belt slots now automatically use the fully upgraded slot count for each outfit - no more manual +/- adjustments needed." },
       { "type": "fixed", "text": "Build sharing now works for all ammo types, including OG-7B and VOG-25 variants." },
       { "type": "fixed", "text": "Adding favourites to build planner inventory now correctly updates stats.", "credits": [{ "name": "Evincars", "role": "code" }] },
-      { "type": "added", "text": "French translations for app UI - item stats and names still display in English.", "credits": [{ "name": "equi-web", "role": "code" }] }
+      { "type": "added", "text": "French translations for item names, descriptions, and app UI.", "credits": [{ "name": "equi-web", "role": "code" }] }
     ]
   },
   {
