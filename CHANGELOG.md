@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 2026-03-26
+
+### Added
+
+- Yes/No toggle for all flag filters, allowing items to be excluded by flags like Powered Exo, Craftable, and others
+
 ## 2026-03-25
 
 ### Added

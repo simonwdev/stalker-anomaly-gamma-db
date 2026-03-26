@@ -991,8 +991,8 @@ const app = createApp({
                 }
                 const def = FILTER_DEFS.find(d => d.key === key);
                 if (!def) continue;
-                if (def.type === "flag" && val === true) {
-                    chips.push({ key, label: def.label, value: null, type: "flag" });
+                if (def.type === "flag" && (val === true || val === false)) {
+                    chips.push({ key, label: def.label, value: val, display: val ? this.t("app_label_yes") : this.t("app_label_no"), type: "flag" });
                 } else if (Array.isArray(val)) {
                     for (const v of val) {
                         const display = this.filterValueLabel(def, v);
@@ -2965,6 +2965,8 @@ const app = createApp({
                     }
                     if (def.type === "flag" && val === true) {
                         if (item[key] !== "Y") return false;
+                    } else if (def.type === "flag" && val === false) {
+                        if (item[key] === "Y") return false;
                     } else if (def.type === "has-effect" && Array.isArray(val) && val.length > 0) {
                         for (const field of val) {
                             if (!isNonZero(item[field])) return false;
@@ -2999,11 +3001,11 @@ const app = createApp({
             this.pushUrlState();
         },
 
-        toggleFlagFilter(key) {
-            if (this.activeFilters[key] === true) {
+        toggleFlagFilter(key, value) {
+            if (this.activeFilters[key] === value) {
                 delete this.activeFilters[key];
             } else {
-                this.activeFilters[key] = true;
+                this.activeFilters[key] = value;
             }
             this.pushUrlState();
         },
@@ -3598,6 +3600,8 @@ const app = createApp({
             for (const [key, val] of Object.entries(this.activeFilters)) {
                 if (val === true) {
                     url.searchParams.append("f", key);
+                } else if (val === false) {
+                    url.searchParams.append("f", "!" + key);
                 } else if (Array.isArray(val) && val.length === 2 && (typeof val[0] === "number" || val[0] === null)) {
                     if (val[0] !== null || val[1] !== null) {
                         url.searchParams.append("f", key + ":" + (val[0] ?? "") + "~" + (val[1] ?? ""));
@@ -3659,7 +3663,11 @@ const app = createApp({
             for (const f of fs) {
                 const colonIdx = f.indexOf(":");
                 if (colonIdx === -1) {
-                    this.activeFilters[f] = true;
+                    if (f.startsWith("!")) {
+                        this.activeFilters[f.slice(1)] = false;
+                    } else {
+                        this.activeFilters[f] = true;
+                    }
                 } else {
                     const key = f.slice(0, colonIdx);
                     const valPart = f.slice(colonIdx + 1);

@@ -216,8 +216,13 @@
                                     <button
                                         class="filter-chip"
                                         :class="{ active: activeFilters[def.key] === true }"
-                                        @click="toggleFlagFilter(def.key)"
+                                        @click="toggleFlagFilter(def.key, true)"
                                     >{{ t('app_label_yes') }}</button>
+                                    <button
+                                        class="filter-chip"
+                                        :class="{ active: activeFilters[def.key] === false }"
+                                        @click="toggleFlagFilter(def.key, false)"
+                                    >{{ t('app_label_no') }}</button>
                                 </div>
                             </div>
                         </template>

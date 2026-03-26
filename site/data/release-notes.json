@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-03-26",
+    "entries": [
+      { "type": "added", "text": "Flag filters like Powered Exo and Craftable now support both Yes and No options, so you can exclude items that match. Thanks AboveTheChemist!" }
+    ]
+  },
+  {
     "date": "2026-03-25",
     "entries": [
       { "type": "changed", "text": "Belt slots now automatically use the fully upgraded slot count for each outfit - no more manual +/- adjustments needed." },
