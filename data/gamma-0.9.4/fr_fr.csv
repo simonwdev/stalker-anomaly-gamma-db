@@ -148,7 +148,7 @@ mutant_krovosos_meat_description,"Viande découpée sur une Sangsue abattue, sa 
 st_wpn_pl15_new_descr,"A Russian self-loading pistol chambered in 9x19mm, developed by a team of designers from the Kalashnikov concern under the leadership of Dmitry Lebedev for the needs of Russian law enforcement agencies. \n \n %c[ui_gray_2]Features: \n %c[d_green] • %c[ui_gray_2] PL-15 9x19 112mm threaded barrel. \n %c[d_green] • %c[ui_gray_2] Hexagon modular SP-9 sound suppressor. \n \n"
 st_af_mincer_meat_name,Morceau de Viande
 st_wpn_ak12_m1,AK-12
-st_data_export_light_attack_power,Light Attack Power
+st_data_export_light_attack_power,Puissance d’attaque légère
 st_af_night_star_descr,"Cet artefact lumineux génère un champ local de faible gravité. Largement utilisé par les stalkers avec le Gravi, un artefact similaire, pour augmenter la charge maximale. \nSon noyau interne magnifique attire les bijoutiers du monde entier. Mais il faut être prudent : une mauvaise manipulation peut faire exploser l'artefact avec assez de puissance pour raser un petit bâtiment. Il est donc fortement conseillé d'utiliser des appareils spécialisés pour le polissage, minimisant le risque d'explosion. Seule la partie externe de l'artefact émet des radiations. \nL'Étoile phosphorescente absorbe aussi les toxines et agents chimiques de l'environnement, ce qui en fait un objet apprécié des chasseurs d'artefacts ; cela dit, la quantité absorbée reste négligeable. Elle est néanmoins assez bon marché, accessible même aux stalkers les plus modestes lorsqu'ils en trouvent. \nÀ noter que l'Étoile de Nuit dégage une odeur de chair brûlée près d'une source de chaleur. Une exposition prolongée peut accroître son inflammabilité et la faire s'enflammer. \n \n%c[0,209,172,56] Ne se dégrade PAS avec le temps.\n"
 st_gas_tube_11,Tuyau à gaz [PP] (Tuyau à gaz)
 st_data_export_hitzone_limbs,Limbs Mult
@@ -1008,7 +1008,7 @@ st_pda_mil_name,PDA (Militaire)
 st_wpn_vz61_freedom,Skorpion vz.61 (Liberté camouflage)
 st_hand_rolling_tobacco_descr,"Tabac à rouler précieux, importé de l'Ouest. Sans additifs, pour apprécier le goût pur de la feuille de tabac.\n \n %c[ui_gray_3]PROPRIÉTÉS :\n %c[d_blue] @ %c[ui_gray_2] stimulant\n %c[d_red] @ %c[ui_gray_2] usage lent (rouler)\n %c[d_blue] @ %c[ui_gray_2] effet anti-alcool puissant\n %c[d_blue] @ %c[ui_gray_2] haute qualité\n"
 st_coffee_drink_descr,"Café UCC Cold Brew frais, prêt à boire, pour un regain d'endurance rafraîchissant sans aucune préparation. Apprécié pour sa praticité et son effet revitalisant.\n \n %c[pda_white]PROPRIÉTÉS :\n %c[d_cyan] @ %c[pda_white] Boisson\n %c[d_green] @ %c[pda_white] Stimulant\n %c[d_green] @ %c[pda_white] Effet anti-alcool\n"
-st_data_export_ammo_types_alt,Alt. ammo
+st_data_export_ammo_types_alt,Munitions alternatives
 military_bandit_outfit_name,Armure blindée Skat-9 pillée
 ammo-7.92x33_ap,Cartouches 7.92x57 mm AP
 st_af_fonar_name,Lampe
@@ -1135,7 +1135,7 @@ chimera_scan_device_name,Scanner d'ondes cérébrales
 st_af_baloon_descr,"Composé de plusieurs formations organiques creuses, cet artefact émet un gaz capable de neutraliser les particules toxiques ou chimiques dans l'organisme sans l'endommager. Il procure ainsi une excellente protection contre les toxines et produits chimiques. \nIl garde aussi une température constante, peu importe l'environnement. Cela lui permet d'absorber la chaleur autour de l'utilisateur et de former une zone protectrice contre les flammes. \nCependant, la Bulle possède de nombreux effets négatifs. Par exemple, elle amplifie considérablement l'influence des ondes psy et des champs produits par les mutants et anomalies. Ce désavantage est loin d'être négligeable : certains stalkers ont rapporté qu'avec une Bulle, l'influence psy était si forte qu'ils avaient l'impression que leur tête allait éclater de l'intérieur, ne pouvant que hurler de douleur et fuir aussi loin que possible. \n \n%c[0,209,172,56] Ne se dégrade PAS avec le temps.\n"
 st_wpn_bm16_full_alt_23,"TOZ-66 ""Chimera Hunter"""
 st_af_cocoon_name,Cocon
-st_data_export_heavy_attack_power,Heavy Attack Power
+st_data_export_heavy_attack_power,Puissance d’attaque lourde
 st_marijuana_descr,"Cannabis cultivé soi-même. Le fumer est une distraction populaire, surtout chez les gars de la Liberté ayant gardé la Barrière. Les sachets de marijuana s'achètent çà et là dans la Zone. Certains pensent que la drogue aide à garder l'équilibre mental.\n \n %c[ui_gray_3]PROPRIÉTÉS :\n %c[d_blue] @ %c[ui_gray_2] améliore le moral et la protection mentale contre les horreurs de la Zone\n %c[d_blue] @ %c[ui_gray_2] effet puissant d'élimination des vertiges\n"
 ammo-11.43x23-fmj_descr,"La munition à balle blindée (Full Metal Jacket) calibre .45 a rencontré un grand succès depuis un siècle grâce à ses performances balistiques et à une charge propulsive relativement faible. En conséquence, la balle de cette munition est assez lente mais très précise, offrant une puissance d'arrêt considérable.\n \n%c[ui_gray_2] - %c[ui_gray_2] Pouvoir de pénétration d'armure (PA) : %c[ui_gray_1]BR2 (19) \n%c[ui_gray_2] - %c[ui_gray_2] Puissance d'arrêt nominale (DMG) : %c[ui_gray_1]25"
 novice_outfit_tourist_description,"%c[ui_gray_1]Un anorak en cuir chaud avec sac à dos intégré, porté sur un pull à col roulé douillet, rentré dans un jean solide et des bottes de randonnée. On dirait que l'ancien propriétaire était un vrai amateur de randonnée. La sélection des matériaux et la répartition du poids la rendent plus utile que la plupart des vestes en cuir, mais elle reste inadaptée à toute activité autre qu'une promenade tranquille à la périphérie de la Zone.\n \n"
@@ -1315,7 +1315,7 @@ st_grenade_launcher_scar,Lance-grenades sous canon FN40GL
 st_placeable_merc_outfit,Tenue de mercenaire (lot)
 st_grenade_launcher_monolit,"Lance-grenades sous canon ""Straj"""
 st_prop_restore_bleeding,Cicatrisation
-ui_mm_repair,Réparer
+ui_mm_repair,Réparation
 st_placeable_workshop,Atelier portable
 vodnik_notes_name,Notes de Vodnik
 stalker_salamander_outfit_description,"%c[ui_gray_1]Une tenue assemblée à la main dans la Zone, conçue pour la survie par les artisans locaux. Pensée pour les stalkers adeptes d'observation et d'exploration : offre une protection dans la moyenne lors des combats (qu'on peut éviter) ou contre les anomalies (qu'on peut repérer), mais une défense exceptionnelle contre les radiations. Idéale pour qui reste vigilant et veut surtout se protéger du Tueur invisible. Ironiquement, malgré son nom ""Salamandre"", elle dissipe très mal la chaleur. Comme toutes les tenues stalkers, elle reste abordable et aisément améliorée.\n \n"
@@ -1620,7 +1620,7 @@ st_jup_b10_notes_03_name,st_jup_b10_notes_03_name
 bandit_nbc_outfit_description,"%c[ui_gray_1]Une combinaison ""Sunset"" utilisée par les bandits, dotée d'un gilet tactique à poches. Protection faible contre balistique et anomalies, mais c'est une solution fiable et économique pour les récupérateurs sans moyens.\n \n"
 st_jup_b10_notes_02_name,st_jup_b10_notes_02_name
 st_jup_b10_notes_01_name,st_jup_b10_notes_01_name
-st_data_export_single_handed,Single-handed
+st_data_export_single_handed,À une main
 st_placeable_rug,Tapis
 jup_a9_way_info,jup_a9_way_info
 jup_a9_power_info,jup_a9_power_info
@@ -1743,7 +1743,7 @@ st_prt_o_retardant_17,Inserts isolants en constantan
 st_grenade_thermite_descr,"Grenade incendiaire (ou thermite) produisant une chaleur intense (2 200°C) par réaction chimique entre de l'aluminium pulvérisé et de l'oxyde de fer, générant un flot de fer fondu et d'oxyde d'aluminium. Contient 600 à 800 grammes de thermite.\n \n %c[d_purple] @ %c[ui_gray_2] Puissance explosive : %c[ui_gray_1]moyenne (dégâts thermiques)\n %c[d_purple] @ %c[ui_gray_2] Rayon d'explosion : %c[ui_gray_1]4.6 m\n %c[d_purple] @ %c[ui_gray_2] Rayon des fragments : %c[ui_gray_1]aucun\n %c[d_purple] @ %c[ui_gray_2] Nombre moyen d'éclats : %c[ui_gray_1]aucun\n %c[d_purple] @ %c[ui_gray_2] Retard à l'explosion : %c[ui_gray_1]-4 secondes"
 st_wpn_pkp_siber,PKP Pecheneg
 st_placeable_toilet,Toilettes
-st_data_export_pelts_quality_max,Maximum pelts quality
+st_data_export_pelts_quality_max,Qualité maximale des peaux
 st_placeable_suit,Présentoir SSP-99M
 st_placeable_stretcher,Brancard
 st_af_itcher_af_iam_name,IAM avec Gratteur
@@ -1771,7 +1771,7 @@ st_placeable_poster5,Affiche 5
 st_bolt_carrier_3,Culasse mobile à verrou tournant [OTAN] (Culasse)
 st_placeable_poster2,Affiche 2
 st_wpn_streetsweeper,Armsel Protecta
-st_data_export_pelts_quality_min,Minimum pelts quality
+st_data_export_pelts_quality_min,Qualité minimale des peaux
 st_addon_scope_specterDR,SpecterDR
 st_gamma_recipe_advanced_2,Manuel d'Électronique Vol.2
 st_placeable_notes_writing_book,Journal personnel
