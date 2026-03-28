@@ -3370,6 +3370,260 @@ input.range-input {
     margin-left: auto;
 }
 
+.crafting-graph-modal {
+    max-width: min(1300px, calc(100vw - 5rem));
+}
+.crafting-graph-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.85rem;
+    min-height: 0;
+    overflow: hidden;
+}
+.crafting-graph-modal-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding-right: 2.6rem;
+}
+.crafting-graph-title {
+    font-size: 1rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+.crafting-graph-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+.crafting-graph-search {
+    min-width: 13rem;
+    flex: 1;
+    padding: 0.35rem 0.5rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 0.72rem;
+    outline: none;
+}
+.crafting-graph-search:focus {
+    border-color: var(--accent);
+}
+.crafting-graph-list {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.01);
+    overflow: auto;
+    min-height: 0;
+    padding: 0.45rem;
+}
+.crafting-graph-collapsible {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #141414;
+}
+.crafting-graph-collapsible + .crafting-graph-collapsible {
+    margin-top: 0.45rem;
+}
+.crafting-graph-collapsible-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    padding: 0.45rem 0.6rem;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.74rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.crafting-graph-collapsible-head:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+.crafting-graph-caret {
+    color: var(--accent);
+    width: 0.75rem;
+    flex-shrink: 0;
+    text-align: center;
+}
+.crafting-graph-collapsible-name {
+    font-weight: 600;
+}
+.crafting-graph-body {
+    padding: 0.65rem;
+    overflow: auto;
+}
+.crafting-graph-layout {
+    display: grid;
+    grid-template-columns: minmax(12.5rem, 18rem) minmax(15rem, 1fr);
+    gap: 0.85rem;
+    align-items: start;
+}
+.crafting-graph-root-wrap {
+    display: flex;
+    align-items: stretch;
+}
+.crafting-graph-ingredients-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.crafting-graph-ingredient-row {
+    display: flex;
+    align-items: stretch;
+    min-height: 6.5rem;
+}
+.crafting-graph-connector {
+    width: 1.2rem;
+    min-width: 1.2rem;
+    position: relative;
+}
+.crafting-graph-connector::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    border-top: 1px solid #3c3c3c;
+}
+.crafting-graph-node {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    width: 100%;
+    border: 1px solid #3b3b3b;
+    border-radius: 3px;
+    background: #171717;
+    padding: 0.45rem;
+    min-height: 6.5rem;
+}
+.crafting-graph-node.clickable {
+    cursor: pointer;
+}
+.crafting-graph-node.clickable:hover {
+    border-color: var(--accent-dim);
+    background: #1a1a1a;
+}
+.crafting-graph-node-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+}
+.crafting-graph-node-img {
+    width: 3.05rem;
+    height: 3.05rem;
+    object-fit: contain;
+    border: 1px solid #343434;
+    border-radius: 3px;
+    background: #0f0f0f;
+    padding: 0.15rem;
+    flex-shrink: 0;
+}
+.crafting-graph-node-text {
+    min-width: 0;
+}
+.crafting-graph-node-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.3;
+}
+.crafting-graph-node-amount {
+    margin-top: 0.1rem;
+    font-size: 0.62rem;
+    color: var(--text-secondary);
+}
+.crafting-graph-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+.crafting-graph-stat {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.08rem 0.35rem;
+    font-size: 0.58rem;
+    line-height: 1.25;
+    background: #121212;
+    color: #bdbdbd;
+}
+.crafting-graph-stat.stat-positive {
+    border-color: #2f6c37;
+    color: #8fd397;
+}
+.crafting-graph-stat.stat-negative {
+    border-color: #8e3f3a;
+    color: #f08b84;
+}
+.crafting-graph-tooltip {
+    position: absolute;
+    top: calc(100% + 0.32rem);
+    left: 0;
+    z-index: 45;
+    width: min(22rem, 88vw);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #232323;
+    padding: 0.45rem;
+    box-shadow: 0 16px 26px rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transform: translateY(3px);
+    pointer-events: none;
+    transition: opacity 0.12s ease, transform 0.12s ease;
+}
+.crafting-graph-node:hover .crafting-graph-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+.crafting-graph-tooltip-title {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+.crafting-graph-tooltip-img {
+    width: 3.55rem;
+    height: 3.55rem;
+    object-fit: contain;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    background: #111;
+    margin-top: 0.35rem;
+    padding: 0.16rem;
+}
+.crafting-graph-tooltip-desc {
+    margin-top: 0.35rem;
+    color: #cecece;
+    font-size: 0.62rem;
+    line-height: 1.35;
+}
+.crafting-graph-tooltip-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 0.35rem;
+}
+
+@media (max-width: 1100px) {
+    .crafting-graph-layout {
+        grid-template-columns: 1fr;
+    }
+    .crafting-graph-connector {
+        display: none;
+    }
+    .crafting-graph-ingredient-row {
+        min-height: 0;
+    }
+}
+
 /* Ammo comparison table */
 .ammo-table-wrap {
     overflow-x: auto;

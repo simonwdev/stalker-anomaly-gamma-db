@@ -180,6 +180,7 @@
 
             <CraftingTreesView
                 :is-crafting-trees="isCraftingTrees"
+                :all-crafting-trees="craftingTrees"
                 :filtered-crafting-trees="filteredCraftingTrees"
                 :crafting-tree-expand-all="craftingTreeExpandAll"
                 :crafting-tree-expanded="craftingTreeExpanded"
