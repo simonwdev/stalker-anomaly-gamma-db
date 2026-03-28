@@ -4827,7 +4827,15 @@ export const appDefinition = {
                 const rawAmmoInv = [];
                 const rawAmmoStash = [];
 
-                for (const item of result.items) {
+                // Sort items so equipped items (equipSlot > 0) come first, ordered by slot.
+                // This ensures equipped weapons fill loadout slots before ruck weapons.
+                const sortedItems = [...result.items].sort((a, b) => {
+                    const aSlot = a.equipSlot > 0 ? a.equipSlot : 999;
+                    const bSlot = b.equipSlot > 0 ? b.equipSlot : 999;
+                    return aSlot - bSlot;
+                });
+
+                for (const item of sortedItems) {
                     const cat = catMap[item.sectionName];
                     const slug = cat ? categorySlug(cat) : "";
                     if (cat === "Outfits") {
