@@ -38,74 +38,28 @@
     </div>
 </div>
 
-<header class="site-header" v-show="translations">
-    <button class="hamburger-btn" @click="sidebarCollapsed ? toggleSidebarCollapse() : toggleSidebar()" :class="{ active: sidebarOpen, 'show-desktop': sidebarCollapsed }">
-        <span></span><span></span><span></span>
-    </button>
-    <div class="header-brand">
-        <img src="/img/logo.png" alt="S.T.A.L.K.E.R. Anomaly" class="site-logo">
-        <div class="header-title-group">
-            <div class="header-pack-label">{{ activePack?.name || 'GAMMA' }}<span v-if="activePack?.status" class="pack-status-badge" :style="activePack.statusColor ? { color: activePack.statusColor, background: activePack.statusColor + '26' } : {}">{{ activePack.status }}</span></div>
-            <h1>{{ t('app_label_database') }}</h1>
-        </div>
-    </div>
-    <div class="pack-wrap" v-if="packs.length > 1" v-click-outside="() => packOpen = false">
-        <button class="pack-btn" @click.stop="packOpen = !packOpen">{{ activePack?.name }}<svg class="pack-chevron" :class="{ open: packOpen }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="pack-menu" v-show="packOpen">
-            <button v-for="p in packs" :key="p.id" class="pack-menu-item" :class="{ active: activePack?.id === p.id }" @click="activePack = p; packOpen = false; switchPack()">
-                {{ p.name }}<span v-if="p.status" class="pack-status-badge" :style="p.statusColor ? { color: p.statusColor, background: p.statusColor + '26' } : {}">{{ p.status }}</span>
-            </button>
-        </div>
-    </div>
-    <div class="header-links" v-if="activePack?.links">
-        <a v-for="link in activePack.links" :key="link.url" :href="link.url" target="_blank" rel="noopener" class="header-link" v-tooltip="t('app_link_' + link.icon.replace('globe', 'website')) + ' ' + activePack?.name">
-            <svg v-if="link.icon === 'discord'" width="20" height="20" viewBox="0 0 71 55" fill="currentColor"><path d="M60.1 4.9A58.5 58.5 0 0045.4.2a.2.2 0 00-.2.1 40.8 40.8 0 00-1.8 3.7 54 54 0 00-16.2 0A37.4 37.4 0 0025.4.3a.2.2 0 00-.2-.1A58.4 58.4 0 0010.5 4.9a.2.2 0 00-.1.1C1.5 18.7-.9 32.2.3 45.5v.2a58.9 58.9 0 0017.7 9 .2.2 0 00.3-.1 42.1 42.1 0 003.6-5.9.2.2 0 00-.1-.3 38.8 38.8 0 01-5.5-2.7.2.2 0 01 0-.4l1.1-.9a.2.2 0 01.2 0 42 42 0 0035.6 0 .2.2 0 01.2 0l1.1.9a.2.2 0 010 .4 36.4 36.4 0 01-5.5 2.7.2.2 0 00-.1.3 47.2 47.2 0 003.6 5.9.2.2 0 00.3.1 58.7 58.7 0 0017.7-9 .2.2 0 00.1-.2c1.4-15.1-2.4-28.2-10.1-39.8a.2.2 0 00-.1-.1zM23.7 37.3c-3.4 0-6.3-3.2-6.3-7s2.8-7 6.3-7 6.4 3.1 6.3 7-2.8 7-6.3 7zm23.2 0c-3.4 0-6.3-3.2-6.3-7s2.8-7 6.3-7 6.4 3.1 6.3 7-2.8 7-6.3 7z"/></svg>
-            <svg v-else-if="link.icon === 'github'" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            <i v-else :data-lucide="link.icon" width="20" height="20"></i>
-        </a>
-    </div>
-    <span class="header-divider"></span>
-    <div class="locale-wrap" v-click-outside="() => localeOpen = false">
-        <button class="locale-btn" @click.stop="localeOpen = !localeOpen">{{ locale.toUpperCase() }}<svg class="locale-chevron" :class="{ open: localeOpen }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="locale-menu" v-show="localeOpen" ref="localeMenu">
-            <button v-for="l in LOCALES" :key="l.id" class="locale-menu-item" :class="{ active: locale === l.id }" @click="locale = l.id; localeOpen = false; onLocaleChange()">
-                <span class="locale-menu-code">{{ l.id.toUpperCase() }}</span>
-                <span class="locale-menu-label">{{ l.label }}</span>
-            </button>
-        </div>
-    </div>
-    <button class="header-link shortcut-help-btn" @click="shortcutHelpOpen = true" v-tooltip="t('app_shortcuts_title')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h4"/><path d="M14 8h4"/><path d="M6 12h3"/><path d="M15 12h3"/><path d="M10 12h4"/><path d="M8 16h8"/></svg>
-    </button>
-    <a href="release-notes/" class="release-notes-btn header-link" v-tooltip="t('app_release_notes')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>
-        <span v-if="hasUnseenReleaseNotes" class="release-notes-badge"></span>
-    </a>
-
-    <!-- Global search -->
-    <div class="global-search" v-click-outside="clearGlobalQuery">
-        <span class="search-hint" v-show="!searchFocused && !globalQuery" @click="$refs.searchInput.focus()">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            Type <kbd>/</kbd> to search
-        </span>
-        <input
-            ref="searchInput"
-            type="text"
-            v-model="globalQuery"
-            @input="debouncedGlobalSearch()"
-            @keydown.escape.stop="if (globalQuery.trim()) lastGlobalQuery = globalQuery; globalQuery = ''"
-            @focus="searchFocused = true"
-            @blur="searchFocused = false"
-        >
-        <div class="search-dropdown" v-show="globalQuery.trim()">
-            <a v-for="item in globalResults" :key="item.id" href="#" @click.prevent="lastGlobalQuery = globalQuery; globalQuery = ''; navigateToItem(item.id)">
-                <span>{{ tName(item) }}<template v-if="!tName(item).includes('[')"> <small class="search-id-hint">[{{ item.id }}]</small></template></span>
-                <span class="search-cat-badge">{{ tCat(item.category) }}</span>
-            </a>
-            <p v-show="globalResults.length === 0 && globalQuery.trim()" class="no-results">{{ t('app_label_no_results') }}</p>
-        </div>
-    </div>
-</header>
+<HeaderBar
+    :translations="translations"
+    :active-pack="activePack"
+    :packs="packs"
+    :locale="locale"
+    :LOCALES="LOCALES"
+    :global-query="globalQuery"
+    :global-results="globalResults"
+    :has-unseen-release-notes="hasUnseenReleaseNotes"
+    :sidebar-collapsed="sidebarCollapsed"
+    :sidebar-open="sidebarOpen"
+    @toggle-sidebar-collapse="toggleSidebarCollapse()"
+    @toggle-sidebar="toggleSidebar()"
+    @switch-pack="(p) => { activePack = p; switchPack() }"
+    @change-locale="(id) => { locale = id; onLocaleChange() }"
+    @open-shortcut-help="shortcutHelpOpen = true"
+    @clear-global-query="clearGlobalQuery()"
+    @update:global-query="(v) => globalQuery = v"
+    @search="debouncedGlobalSearch()"
+    @escape-search="if (globalQuery.trim()) lastGlobalQuery = globalQuery; globalQuery = ''"
+    @select-search-result="(id) => { lastGlobalQuery = globalQuery; globalQuery = ''; navigateToItem(id) }"
+/>
 
 <div class="layout" :class="{ 'sidebar-collapsed': sidebarCollapsed }">
     <aside class="sidebar" :class="{ open: sidebarOpen }" v-show="translations">
@@ -1856,16 +1810,29 @@
 </div>
 </Transition>
 
-<footer class="site-footer">
-    <span class="footer-left"><a href="acknowledgements/" class="footer-link"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#e25555" stroke="#e25555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="footer-label">Acknowledgements</span></a> <a href="contact/" class="footer-link"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="footer-label">Contact</span></a></span>
-    <span class="footer-center"><span class="footer-credit-full">&copy; 2026 Created by sw, with data by SaloEater.</span><span class="footer-credit-short">&copy; 2026 sw &amp; SaloEater</span></span>
-    <a href="https://github.com/simonwdev/stalker-anomaly-gamma-db" target="_blank" rel="noopener" class="footer-right"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -2px; margin-right: 3px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg><span class="footer-label">Source</span></a>
-</footer>
+<FooterBar />
 
 </div>
 </template>
 
 <script>
 import { appDefinition } from "../js/app.js";
-export default appDefinition;
+import FooterBar from "./components/FooterBar.vue";
+import HeaderBar from "./components/HeaderBar.vue";
+
+export default {
+  ...appDefinition,
+  components: {
+    ...appDefinition.components,
+    FooterBar,
+    HeaderBar,
+  },
+  provide() {
+    return {
+      t: this.t,
+      tName: this.tName,
+      tCat: this.tCat,
+    };
+  },
+};
 </script>
