@@ -102,7 +102,7 @@ a:hover {
     transform: rotate(45deg);
 }
 .tooltip.tooltip-ammo-card {
-    max-width: 340px;
+    max-width: 360px;
     padding: 0.4rem;
 }
 .ammo-tooltip {
@@ -118,13 +118,14 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.35rem 0.55rem;
-    min-height: 52px;
+    padding: 0.45rem 0.65rem;
+    min-height: 70px;
     box-sizing: border-box;
 }
 .ammo-tooltip-image {
     max-width: 100%;
-    max-height: 66px;
+    min-height: 70px;
+    max-height: 70px;
     object-fit: contain;
     display: block;
 }
