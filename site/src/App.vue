@@ -512,299 +512,53 @@
     @pick-compare-pack="pickComparePack"
 />
 
-<!-- Build Save Name modal -->
-<Transition name="fade">
-<div class="modal-backdrop" v-if="buildSaveModalOpen" @click.self="buildSaveModalOpen = false" style="z-index: 210;">
-    <Transition name="modal" appear>
-    <div class="modal build-save-modal" v-if="buildSaveModalOpen">
-        <button class="modal-close" @click="buildSaveModalOpen = false">&times;</button>
-        <div class="modal-body">
-            <h2 class="build-picker-title">{{ t('app_build_save') }}</h2>
-            <div class="build-save-form">
-                <input type="text" v-model="buildSaveName" :placeholder="t('app_build_name_placeholder')" class="build-save-input" ref="buildSaveInput" @keydown.enter="saveCurrentBuild()">
-                <button class="build-toolbar-btn" @click="saveCurrentBuild()" :disabled="!buildSaveName.trim()">{{ t('app_build_save') }}</button>
-            </div>
-        </div>
-    </div>
-    </Transition>
-</div>
-</Transition>
+<BuildSaveModal
+    :open="buildSaveModalOpen"
+    :build-save-name="buildSaveName"
+    @close="buildSaveModalOpen = false"
+    @update:build-save-name="(v) => buildSaveName = v"
+    @save="saveCurrentBuild()"
+/>
 
-<!-- Save Import modal -->
-<Transition name="fade">
-<div class="modal-backdrop" v-if="saveImportModalOpen" @click.self="closeSaveImport()" style="z-index: 215;">
-    <Transition name="modal" appear>
-    <div class="modal save-import-modal" v-if="saveImportModalOpen">
-        <div class="save-import-header">
-            <h2 class="build-picker-title" style="margin:0">{{ t('app_save_import_title') || 'Import Save File' }}</h2>
-            <button class="save-import-close" @click="closeSaveImport()">&times;</button>
-        </div>
-        <div class="modal-body">
+<SaveImportModal
+    :open="saveImportModalOpen"
+    :save-import-parsing="saveImportParsing"
+    :save-import-error="saveImportError"
+    :save-import-preview="saveImportPreview"
+    :save-import-file-name="saveImportFileName"
+    :save-import-include-stash="saveImportIncludeStash"
+    :save-import-include-ammo="saveImportIncludeAmmo"
+    @close="closeSaveImport()"
+    @update:save-import-include-stash="(v) => saveImportIncludeStash = v"
+    @update:save-import-include-ammo="(v) => saveImportIncludeAmmo = v"
+    @handle-drop="handleSaveImportDrop($event)"
+    @handle-file="handleSaveImportFile($event)"
+    @retry-import="saveImportError = ''; saveImportPreview = null"
+    @confirm-import="confirmSaveImport()"
+    @save-import-hover="saveImportHover"
+    @move-build-hover="moveBuildHover($event)"
+    @hide-build-hover="hideBuildHover()"
+/>
 
-            <!-- Drop zone -->
-            <div v-if="!saveImportPreview && !saveImportParsing && !saveImportError" class="save-import-dropzone" :class="{ 'save-import-dragover': saveImportDragOver }" @dragover.prevent="saveImportDragOver = true" @dragleave.prevent="saveImportDragOver = false" @drop.prevent="handleSaveImportDrop($event)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="save-import-icon"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 18v-6"/><path d="m9 15 3-3 3 3"/></svg>
-                <p class="save-import-dropzone-label">{{ t('app_save_import_drop') || 'Drop save files here' }}</p>
-                <label class="save-import-browse-btn build-toolbar-btn">
-                    {{ t('app_save_import_browse') || 'Browse' }}
-                    <input type="file" accept=".scop,.scoc" multiple @change="handleSaveImportFile($event)" style="display:none">
-                </label>
-                <p class="save-import-hint">{{ t('app_save_import_hint') || 'Select .scop and .scoc files for full loadout detection' }}</p>
-            </div>
+<BuildPickerModal
+    :open="buildPickerOpen"
+    :build-picker-slot="buildPickerSlot"
+    :build-picker-slot-label="buildPickerSlotLabel"
+    :build-picker-query="buildPickerQuery"
+    :build-picker-items="buildPickerItems"
+    :build-picker-ammo-weapon="buildPickerAmmoWeapon"
+    @close="closeBuildPicker()"
+    @update:build-picker-query="(v) => buildPickerQuery = v"
+    @select-item="selectBuildItem($event)"
+    @show-build-hover="showBuildHover"
+    @move-build-hover="moveBuildHover($event)"
+    @hide-build-hover="hideBuildHover()"
+/>
 
-            <!-- Loading -->
-            <div v-if="saveImportParsing" class="save-import-loading">
-                <span class="loading-spinner"></span>
-                <p>{{ t('app_save_import_parsing') || 'Parsing save file...' }}</p>
-            </div>
-
-            <!-- Error -->
-            <div v-if="saveImportError" class="save-import-error-box">
-                <p class="save-import-error-msg">{{ saveImportError }}</p>
-                <button class="build-toolbar-btn" @click="saveImportError = ''; saveImportPreview = null">{{ t('app_save_import_retry') || 'Try Again' }}</button>
-            </div>
-
-            <!-- Preview -->
-            <div v-if="saveImportPreview && !saveImportParsing" class="save-import-preview">
-                <div class="save-import-summary">
-                    <span class="save-import-filename">{{ saveImportFileName }}</span>
-                    <span class="save-import-stats">{{ saveImportPreview.totalItems }} {{ t('app_save_import_items_found') || 'items found' }}<span v-if="saveImportPreview.stashCount"> &middot; {{ saveImportPreview.stashCount }} in stash</span><span v-if="saveImportPreview.skipped.length"> &middot; {{ saveImportPreview.skipped.length }} {{ t('app_save_import_skipped') || 'consumables/materials skipped' }}</span></span>
-                </div>
-
-                <div v-if="saveImportPreview.missingSCOC" class="save-import-warning">
-                    {{ t('app_save_import_warn_missing_scoc') || 'Only .scop file provided — add the .scoc file for accurate equipped item detection' }}
-                </div>
-
-                <!-- Global options -->
-                <div class="save-import-options">
-                    <label class="save-import-stash-toggle"><input type="checkbox" v-model="saveImportIncludeAmmo"> {{ t('app_save_import_include_ammo') || 'Include ammo' }}</label>
-                    <label class="save-import-stash-toggle"><input type="checkbox" v-model="saveImportIncludeStash"> {{ t('app_save_import_include_stash') || 'Include stash' }}</label>
-                </div>
-
-                <div class="save-import-columns">
-                <!-- Left column: Loadout + Inventory -->
-                <div class="save-import-col">
-                    <p class="save-import-section-label">{{ t('app_build_loadout') || 'Loadout' }}</p>
-                    <div class="save-import-slots">
-                        <div class="save-import-slot" v-if="saveImportPreview.outfit">
-                            <span class="save-import-slot-label">{{ t('app_cat_outfits') || 'Outfit' }}</span>
-                            <span class="save-import-slot-items"><span class="save-import-slot-item" @mouseenter="saveImportHover(saveImportPreview.outfit, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(saveImportPreview.outfit) }}</span></span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.helmet">
-                            <span class="save-import-slot-label">{{ t('app_cat_helmets') || 'Helmet' }}</span>
-                            <span class="save-import-slot-items"><span class="save-import-slot-item" @mouseenter="saveImportHover(saveImportPreview.helmet, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(saveImportPreview.helmet) }}</span></span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.backpack">
-                            <span class="save-import-slot-label">{{ t('app_type_backpack') || 'Backpack' }}</span>
-                            <span class="save-import-slot-items"><span class="save-import-slot-item" @mouseenter="saveImportHover(saveImportPreview.backpack, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(saveImportPreview.backpack) }}</span></span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.artifacts.length">
-                            <span class="save-import-slot-label">{{ t('app_cat_artefacts') || 'Artefacts' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.artifacts" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.belts.length">
-                            <span class="save-import-slot-label">{{ t('app_cat_belt_attachments') || 'Belt' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.belts" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.weapons.length">
-                            <span class="save-import-slot-label">{{ t('app_group_weapons') || 'Weapons' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.weapons" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.sidearms.length">
-                            <span class="save-import-slot-label">{{ t('app_build_sidearm') || 'Sidearm' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.sidearms" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.grenades.length">
-                            <span class="save-import-slot-label">{{ t('app_cat_explosives') || 'Grenades' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.grenades" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Carried inventory (not equipped) -->
-                    <template v-if="saveImportPreview.inventory.artifacts.length || saveImportPreview.inventory.belts.length || saveImportPreview.inventory.weapons.length || saveImportPreview.inventory.sidearms.length || saveImportPreview.inventory.grenades.length || saveImportPreview.inventory.outfits.length || saveImportPreview.inventory.helmets.length || (saveImportIncludeAmmo && saveImportPreview.ammo.length)">
-                        <p class="save-import-section-label">{{ t('app_save_import_inventory') || 'Inventory' }}</p>
-                        <div class="save-import-slots">
-                            <div class="save-import-slot" v-if="saveImportPreview.inventory.artifacts.length">
-                                <span class="save-import-slot-label">{{ t('app_cat_artefacts') || 'Artefacts' }}</span>
-                                <span class="save-import-slot-items">
-                                    <span v-for="(id, i) in saveImportPreview.inventory.artifacts" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                                </span>
-                            </div>
-                            <div class="save-import-slot" v-if="saveImportPreview.inventory.belts.length">
-                                <span class="save-import-slot-label">{{ t('app_cat_belt_attachments') || 'Belt' }}</span>
-                                <span class="save-import-slot-items">
-                                    <span v-for="(id, i) in saveImportPreview.inventory.belts" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                                </span>
-                            </div>
-                            <div class="save-import-slot" v-if="saveImportPreview.inventory.weapons.length || saveImportPreview.inventory.sidearms.length">
-                                <span class="save-import-slot-label">{{ t('app_group_weapons') || 'Weapons' }}</span>
-                                <span class="save-import-slot-items">
-                                    <span v-for="(id, i) in [...saveImportPreview.inventory.weapons, ...saveImportPreview.inventory.sidearms]" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                                </span>
-                            </div>
-                            <div class="save-import-slot" v-if="saveImportPreview.inventory.outfits.length">
-                                <span class="save-import-slot-label">{{ t('app_cat_outfits') || 'Outfits' }}</span>
-                                <span class="save-import-slot-items">
-                                    <span v-for="(id, i) in saveImportPreview.inventory.outfits" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                                </span>
-                            </div>
-                            <div class="save-import-slot" v-if="saveImportPreview.inventory.helmets.length">
-                                <span class="save-import-slot-label">{{ t('app_cat_helmets') || 'Helmets' }}</span>
-                                <span class="save-import-slot-items">
-                                    <span v-for="(id, i) in saveImportPreview.inventory.helmets" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                                </span>
-                            </div>
-                            <div class="save-import-slot" v-if="saveImportIncludeAmmo && saveImportPreview.ammo.length">
-                                <span class="save-import-slot-label">{{ t('app_cat_ammo') || 'Ammo' }}</span>
-                                <span class="save-import-slot-items">
-                                    <span v-for="(id, i) in saveImportPreview.ammo" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                                </span>
-                            </div>
-                        </div>
-                    </template>
-                </div>
-
-                <!-- Right column: Stash -->
-                <div class="save-import-col" v-if="saveImportIncludeStash && saveImportPreview.stash && (saveImportPreview.stash.weapons.length || saveImportPreview.stash.sidearms.length || saveImportPreview.stash.grenades.length || saveImportPreview.stash.helmets.length || saveImportPreview.stash.outfits.length || saveImportPreview.stash.belts.length || saveImportPreview.stash.artifacts.length || (saveImportIncludeAmmo && saveImportPreview.stash.ammo.length))">
-                    <p class="save-import-section-label">{{ t('app_save_import_stash') || 'Stash' }}</p>
-                    <div class="save-import-slots">
-                        <div class="save-import-slot" v-if="saveImportPreview.stash.outfits.length">
-                            <span class="save-import-slot-label">{{ t('app_cat_outfits') || 'Outfits' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.stash.outfits" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.stash.helmets.length">
-                            <span class="save-import-slot-label">{{ t('app_cat_helmets') || 'Helmets' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.stash.helmets" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.stash.belts.length">
-                            <span class="save-import-slot-label">{{ t('app_cat_belt_attachments') || 'Belt' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.stash.belts" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.stash.artifacts.length">
-                            <span class="save-import-slot-label">{{ t('app_cat_artefacts') || 'Artefacts' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.stash.artifacts" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.stash.weapons.length || saveImportPreview.stash.sidearms.length">
-                            <span class="save-import-slot-label">{{ t('app_group_weapons') || 'Weapons' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in [...saveImportPreview.stash.weapons, ...saveImportPreview.stash.sidearms]" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportPreview.stash.grenades.length">
-                            <span class="save-import-slot-label">{{ t('app_cat_explosives') || 'Grenades' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.stash.grenades" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                        <div class="save-import-slot" v-if="saveImportIncludeAmmo && saveImportPreview.stash.ammo.length">
-                            <span class="save-import-slot-label">{{ t('app_cat_ammo') || 'Ammo' }}</span>
-                            <span class="save-import-slot-items">
-                                <span v-for="(id, i) in saveImportPreview.stash.ammo" :key="i" class="save-import-slot-item" @mouseenter="saveImportHover(id, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">{{ saveImportItemName(id) }}</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-
-                <div class="save-import-actions">
-                    <button class="build-toolbar-btn save-import-cancel" @click="closeSaveImport()">Cancel</button>
-                    <button class="build-toolbar-btn save-import-confirm" @click="confirmSaveImport()">{{ t('app_save_import_load') || 'Load Build' }}</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    </Transition>
-</div>
-</Transition>
-
-<!-- Build Picker modal -->
-<Transition name="fade">
-<div class="modal-backdrop" v-if="buildPickerOpen" @click.self="closeBuildPicker()" style="z-index: 210;">
-    <Transition name="modal" appear>
-    <div class="modal build-picker-modal" v-if="buildPickerOpen">
-        <button class="modal-close" @click="closeBuildPicker()">&times;</button>
-        <div class="modal-body">
-            <h2 class="build-picker-title">{{ t('app_build_select') }} {{ buildPickerSlot ? buildPickerSlotLabel : '' }}</h2>
-            <div class="build-picker-search">
-                <svg class="filter-input-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                <input type="text" v-model="buildPickerQuery" :placeholder="t('app_label_filter_placeholder')" class="build-picker-input" ref="buildPickerInput">
-            </div>
-            <div class="build-picker-list">
-                <div v-for="item in buildPickerItems" :key="item.id" class="build-picker-item" @click="selectBuildItem(item)" @mouseenter="showBuildHover(item, $event)" @mousemove="moveBuildHover($event)" @mouseleave="hideBuildHover()">
-                    <span class="build-picker-item-name">{{ tItemName(item) }}</span>
-                    <span v-if="buildPickerSlot && buildPickerSlot.type === 'ammo' && isAltAmmo(buildPickerAmmoWeapon, item)" class="badge-ammo badge-ammo-alt ammo-alt-tag">{{ t('app_badge_alt') }}</span>
-                    <span v-if="buildPickerSlot && (buildPickerSlot.type === 'inventory' || buildPickerSlot.type === 'belt' || buildPickerSlot.type === 'weapon' || buildPickerSlot.type === 'sidearm')" class="build-picker-item-type" :class="'build-picker-type-' + getItemSlotType(item)">{{ getItemCategoryLabel(item) }}</span>
-                    <span class="build-picker-item-weight">{{ formatValue('st_prop_weight', item['st_prop_weight']) }}</span>
-                </div>
-                <div v-if="buildPickerItems.length === 0" class="build-picker-empty">{{ t('app_label_no_results') }}</div>
-            </div>
-        </div>
-    </div>
-    </Transition>
-</div>
-</Transition>
-
-<!-- Keyboard Shortcuts Help -->
-<Transition name="fade">
-<div class="modal-backdrop" v-if="shortcutHelpOpen" @click.self="shortcutHelpOpen = false" style="z-index: 220;">
-    <Transition name="modal" appear>
-    <div class="modal shortcut-modal" v-if="shortcutHelpOpen">
-        <button class="modal-close" @click="shortcutHelpOpen = false">&times;</button>
-        <div class="modal-body">
-            <h2 class="shortcut-modal-title">{{ t('app_shortcuts_title') }}</h2>
-            <div class="shortcut-columns">
-                <div class="shortcut-group">
-                    <h3>{{ t('app_shortcuts_group_global') }}</h3>
-                    <dl class="shortcut-list">
-                        <div class="shortcut-row"><dt><kbd>/</kbd> <kbd>Ctrl</kbd><kbd>K</kbd></dt><dd>{{ t('app_shortcuts_search') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>S</kbd></dt><dd>{{ t('app_shortcuts_toggle_sidebar') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>V</kbd></dt><dd>{{ t('app_shortcuts_toggle_view') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>Shift</kbd><kbd>F</kbd></dt><dd>{{ t('app_shortcuts_toggle_filters') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>C</kbd></dt><dd>{{ t('app_shortcuts_compare') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>X</kbd></dt><dd>{{ t('app_shortcuts_clear_filters') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>G</kbd> {{ t('app_shortcuts_then') }} <kbd>B</kbd></dt><dd>{{ t('app_shortcuts_build_planner') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>Shift</kbd><kbd>/</kbd></dt><dd>{{ t('app_shortcuts_show_help') }}</dd></div>
-                    </dl>
-                </div>
-                <div class="shortcut-group">
-                    <h3>{{ t('app_shortcuts_group_browsing') }}</h3>
-                    <dl class="shortcut-list">
-                        <div class="shortcut-row"><dt><kbd>[</kbd></dt><dd>{{ t('app_shortcuts_prev_category') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>]</kbd></dt><dd>{{ t('app_shortcuts_next_category') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>Esc</kbd></dt><dd>{{ t('app_shortcuts_close') }}</dd></div>
-                    </dl>
-                    <h3>{{ t('app_shortcuts_group_item_modal') }}</h3>
-                    <dl class="shortcut-list">
-                        <div class="shortcut-row"><dt><kbd>&larr;</kbd></dt><dd>{{ t('app_shortcuts_prev_item') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>&rarr;</kbd></dt><dd>{{ t('app_shortcuts_next_item') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>F</kbd></dt><dd>{{ t('app_shortcuts_favorite') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>P</kbd></dt><dd>{{ t('app_shortcuts_pin') }}</dd></div>
-                    </dl>
-                </div>
-            </div>
-        </div>
-    </div>
-    </Transition>
-</div>
-</Transition>
+<ShortcutHelpModal
+    :open="shortcutHelpOpen"
+    @close="shortcutHelpOpen = false"
+/>
 
 <FooterBar />
 
@@ -822,12 +576,18 @@ import ItemGrid from "./components/ItemGrid.vue";
 import ItemDetailModal from "./components/ItemDetailModal.vue";
 import BuildPlanner from "./components/BuildPlanner.vue";
 import ComparePanel from "./components/ComparePanel.vue";
+import BuildSaveModal from "./components/modals/BuildSaveModal.vue";
+import SaveImportModal from "./components/modals/SaveImportModal.vue";
+import BuildPickerModal from "./components/modals/BuildPickerModal.vue";
+import ShortcutHelpModal from "./components/modals/ShortcutHelpModal.vue";
 
 export default {
   ...appDefinition,
   components: {
     ...appDefinition.components,
     BuildPlanner,
+    BuildPickerModal,
+    BuildSaveModal,
     ComparePanel,
     FilterBar,
     FooterBar,
@@ -835,6 +595,8 @@ export default {
     ItemGrid,
     ItemTable,
     ItemDetailModal,
+    SaveImportModal,
+    ShortcutHelpModal,
     SidebarNav,
   },
   provide() {
@@ -882,6 +644,9 @@ export default {
       buildHoverDiff: this.buildHoverDiff,
       buildHoverCompareFields: this.buildHoverCompareFields,
       isWeaponMelee: this.isWeaponMelee,
+      isAltAmmo: this.isAltAmmo,
+      getItemSlotType: this.getItemSlotType,
+      saveImportItemName: this.saveImportItemName,
     };
   },
 };

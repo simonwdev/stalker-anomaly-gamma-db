@@ -4055,10 +4055,6 @@ export const appDefinition = {
             });
             this.buildPickerOpen = true;
             document.body.style.overflow = "hidden";
-            this.$nextTick(() => {
-                const input = this.$refs.buildPickerInput;
-                if (input) input.focus();
-            });
         },
 
         closeBuildPicker() {
@@ -5146,10 +5142,6 @@ export const appDefinition = {
             });
             this.buildPickerOpen = true;
             document.body.style.overflow = "hidden";
-            this.$nextTick(() => {
-                const input = this.$refs.buildPickerInput;
-                if (input) input.focus();
-            });
         },
 
         inventorySlotTypeLabel(slotType) {
@@ -5682,12 +5674,6 @@ export const appDefinition = {
         buildSaveModalOpen(open) {
             if (open) {
                 this.buildSaveName = this.buildPlayerName || "";
-                this.$nextTick(() => {
-                    setTimeout(() => {
-                        const input = this.$refs.buildSaveInput;
-                        if (input) { input.focus(); input.select(); }
-                    }, 50);
-                });
             }
         },
     },
