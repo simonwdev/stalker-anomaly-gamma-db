@@ -52,7 +52,7 @@ const ScopParser = (() => {
 
         let decompressed;
         try {
-            decompressed = LZO1X.decompress(compressed, uncompressedSize);
+            decompressed = globalThis.LZO1X.decompress(compressed, uncompressedSize);
         } catch (e) {
             throw new Error("Failed to decompress save file — it may be corrupted");
         }
@@ -264,3 +264,4 @@ const ScopParser = (() => {
 })();
 
 if (typeof module !== "undefined" && module.exports) module.exports = ScopParser;
+globalThis.ScopParser = ScopParser;

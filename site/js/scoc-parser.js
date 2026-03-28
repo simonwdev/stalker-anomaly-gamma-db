@@ -115,3 +115,4 @@ const ScocParser = (() => {
 })();
 
 if (typeof module !== "undefined" && module.exports) module.exports = ScocParser;
+globalThis.ScocParser = ScocParser;

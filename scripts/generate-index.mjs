@@ -17,7 +17,7 @@ if (!pack) {
 }
 
 const CSV_DIR = join(import.meta.dirname, "..", "data", pack);
-const OUT_DIR = join(import.meta.dirname, "..", "site", "data", pack);
+const OUT_DIR = join(import.meta.dirname, "..", "site", "public", "data", pack);
 const OUT_FILE = join(OUT_DIR, "index.json");
 
 if (!existsSync(CSV_DIR)) {

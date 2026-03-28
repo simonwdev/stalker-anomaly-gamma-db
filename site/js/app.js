@@ -1,3 +1,5 @@
+import '../src/globals.js';
+
 const EFFECT_FIELDS = new Set([
     "st_prop_restore_health", "st_prop_restore_bleeding", "st_data_export_restore_radiation", "ui_inv_outfit_power_restore",
     "st_data_export_eat_health_change", "st_itm_desc_eat_sleepiness", "st_itm_desc_eat_thirst", "st_data_export_eat_alcohol", "ui_inv_satiety",
@@ -288,9 +290,7 @@ function debounce(fn, ms) {
     };
 }
 
-const { createApp } = Vue;
-
-const app = createApp({
+export const appDefinition = {
     data() {
         return {
             // Pack state
@@ -6074,10 +6074,10 @@ const app = createApp({
             }
         } catch (e) { /* ignore */ }
     },
-});
+};
 
 // Tooltip directive (Floating UI)
-app.directive("tooltip", {
+export const tooltipDirective = {
     mounted(el, binding) {
         const tip = document.createElement("div");
         tip.className = "tooltip";
@@ -6165,10 +6165,10 @@ app.directive("tooltip", {
         el._tooltipHide();
         el._tooltip.remove();
     },
-});
+};
 
 // Click-outside directive
-app.directive("click-outside", {
+export const clickOutsideDirective = {
     mounted(el, binding) {
         el._clickOutside = (e) => {
             if (!el.contains(e.target)) {
@@ -6180,6 +6180,4 @@ app.directive("click-outside", {
     unmounted(el) {
         document.removeEventListener("click", el._clickOutside);
     },
-});
-
-app.mount("#app");
+};

@@ -1,8 +1,8 @@
 import { readFileSync, readdirSync, unlinkSync, existsSync } from "fs";
 import { join } from "path";
 
-const SITE_DATA = join(import.meta.dirname, "..", "site", "data");
-const ICONS_DIR = join(import.meta.dirname, "..", "site", "img", "icons");
+const SITE_DATA = join(import.meta.dirname, "..", "site", "public", "data");
+const ICONS_DIR = join(import.meta.dirname, "..", "site", "public", "img", "icons");
 
 const dryRun = process.argv.includes("--dry-run");
 

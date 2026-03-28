@@ -179,3 +179,4 @@ const LZO1X = (() => {
 })();
 
 if (typeof module !== "undefined" && module.exports) module.exports = LZO1X;
+globalThis.LZO1X = LZO1X;
