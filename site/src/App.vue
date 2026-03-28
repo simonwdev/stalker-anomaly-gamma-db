@@ -527,6 +527,7 @@ export default {
       ammoArrow: this.ammoArrow,
       isAmmoBest: this.isAmmoBest,
       findItemByName: this.findItemByName,
+      findFullItemByName: this.findFullItemByName,
       modalStatClass: this.modalStatClass,
       modalStatStyle: this.modalStatStyle,
       compareValueClass: this.compareValueClass,

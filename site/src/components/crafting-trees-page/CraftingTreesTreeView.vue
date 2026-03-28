@@ -113,7 +113,7 @@ const GRAPH_LABEL_OVERRIDES = {
 
 export default {
     name: "CraftingTreesTreeView",
-    inject: ["t", "findItemByName", "getItemFields", "headerLabel", "formatValue"],
+    inject: ["t", "findItemByName", "findFullItemByName", "headerLabel", "formatValue"],
     props: {
         allCraftingTrees: { type: Array, default: () => [] },
         filteredCraftingTrees: { type: Array, default: () => [] },
@@ -130,8 +130,8 @@ export default {
         dialogFilteredTrees() {
             const source = this.filteredCraftingTrees;
             const filtered = source.filter((tree) => {
-                const item = this.resolveNodeItem(tree);
-                return item && item.category === "Artefacts";
+                const indexEntry = this.findItemByName(tree.name || "");
+                return indexEntry && indexEntry.category === "Artefacts";
             });
             return filtered.slice(0, 36);
         },
@@ -201,7 +201,7 @@ export default {
         },
 
         resolveNodeItem(node) {
-            return this.findItemByName(node?.name || "");
+            return this.findFullItemByName(node?.name || "");
         },
 
         openNode(item) {
@@ -215,12 +215,20 @@ export default {
                 "id", "name", "displayName", "pda_encyclopedia_name", "category",
                 "hasNpcWeaponDrop", "hasStashDrop", "hasDisassemble",
                 "st_data_export_description", "localeName", "displayLabel",
+                "st_data_export_is_junk", "st_data_export_has_perk",
+                "st_data_export_can_be_crafted", "st_data_export_used_in_crafting",
+                "st_data_export_can_be_cooked", "st_data_export_used_in_cooking",
+                "st_data_export_cuts_thick_skin", "st_data_export_is_backpack",
+                "st_data_export_single_handed", "ui_mcm_menu_exo",
+                "ui_st_rank",
             ]);
             const stats = [];
             for (const key in item) {
                 if (SKIP.has(key)) continue;
                 const raw = item[key];
                 if (this.isEmptyPropValue(raw)) continue;
+                // Skip string flag values like "Y"/"N"
+                if (raw === "Y" || raw === "N") continue;
                 stats.push({
                     key,
                     label: this.graphStatLabel(key),

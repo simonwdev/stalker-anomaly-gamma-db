@@ -1632,6 +1632,14 @@ export const appDefinition = {
             return this.index.find(i => i.name === name || i.displayName === name || i.pda_encyclopedia_name === name);
         },
 
+        findFullItemByName(name) {
+            for (const items of Object.values(this.categoryItems)) {
+                const match = items.find(i => i.name === name || i.displayName === name || i.pda_encyclopedia_name === name);
+                if (match) return match;
+            }
+            return null;
+        },
+
         async loadItemById(id) {
             const indexRes = await fetch(this.dataUrl("index.json"));
             const index = await indexRes.json();
@@ -1964,16 +1972,41 @@ export const appDefinition = {
             }
 
             if (cat === CAT.CRAFTING_TREES) {
-                if (this.craftingTrees.length === 0) {
-                    this.startContentLoading();
-                    try {
+                this.startContentLoading();
+                try {
+                    if (this.craftingTrees.length === 0) {
                         const recipesData = await this.fetchRecipes();
                         this.buildCraftingTreeData(recipesData);
-                    } catch (e) {
-                        console.error("Failed to load crafting trees:", e);
                     }
-                    await this.stopContentLoading();
+                    // Ensure artefacts + ingredient categories are loaded so tree view can show full item stats
+                    const slugsToLoad = [
+                        categorySlug(CAT.ARTEFACTS),
+                        categorySlug(CAT.MUTANT_PARTS),
+                        categorySlug(CAT.MATERIALS),
+                    ];
+                    const fetches = slugsToLoad
+                        .filter(s => !this.categoryItems[s])
+                        .map(async (s) => {
+                            try {
+                                const res = await fetch(this.dataUrl(`${s}.json`));
+                                if (!res.ok) return;
+                                const data = await res.json();
+                                for (const item of data.items) {
+                                    item.localeName = this.tName(item);
+                                }
+                                this.categoryItems[s] = data.items;
+                                this.categoryHeaders[s] = data.headers;
+                                this.categoryFuse[s] = new Fuse(data.items, {
+                                    keys: ["displayName", "pda_encyclopedia_name", "localeName", "id"],
+                                    threshold: 0.35,
+                                });
+                            } catch { /* ignore missing categories */ }
+                        });
+                    await Promise.all(fetches);
+                } catch (e) {
+                    console.error("Failed to load crafting trees:", e);
                 }
+                await this.stopContentLoading();
                 this.craftingTreeExpandAll = false;
                 this.craftingTreeExpanded = new Set();
                 return;
