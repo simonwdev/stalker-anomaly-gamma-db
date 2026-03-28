@@ -859,55 +859,18 @@
                 @toggle-pin="togglePin"
                 @toggle-sort="toggleSort"
             />
-            <div class="tile-grid" v-show="(viewMode === 'tiles' || favoritesViewActive || recentViewActive) && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates && !buildPlannerActive && !versionCompareActive">
-                <div v-for="item in sortedItems" :key="item.id" class="tile-card" :class="{ 'tile-card-compact': favoritesViewActive || recentViewActive }" @click="navigateToItem(item.id)">
-                    <div class="tile-card-header">
-                        <span class="fav-icon" :class="{ favorited: isFavorited(item.id) }" @click.stop="toggleFavorite(item.id)">{{ isFavorited(item.id) ? '\u2605' : '\u2606' }}</span>
-                        <span class="pin-icon" :class="{ pinned: isPinned(item.id), 'pin-disabled': !isPinned(item.id) && pinnedIds.length >= 5 }" @click.stop="togglePin(item.id)">&#x1F4CC;</span>
-                        <a href="#" @click.prevent.stop="navigateToItem(item.id)" class="tile-card-name">{{ tItemName(item) }}</a>
-                        <span v-if="item.hasNpcWeaponDrop === false" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
-                        <span v-if="isUnusedAmmo(item)" class="badge-unused" v-tooltip="t('app_tooltip_unused_ammo')">{{ t('app_badge_unused') }}</span>
-                        <span v-if="item.Type" class="badge-flag badge-type">{{ t(singularType(item.Type)) }}</span>
-                        <span v-if="item['st_data_export_has_perk'] === 'Y'" class="badge-flag badge-perk">{{ t('app_badge_perk') }}</span>
-                        <span v-if="item['st_data_export_is_junk'] === 'Y'" class="badge-flag badge-junk">{{ t('app_badge_junk') }}</span>
-                        <span v-if="item['st_data_export_can_be_crafted'] === 'Y'" class="badge-flag badge-craftable">{{ t('app_badge_craftable') }}</span>
-                        <span v-if="item['ui_mcm_menu_exo'] === 'Y'" class="badge-flag badge-powered">{{ t('app_badge_powered') }}</span>
-                        <span v-if="item['st_data_export_can_be_cooked'] === 'Y'" class="badge-flag badge-cookable">{{ t('app_badge_cookable') }}</span>
-                        <span v-if="item['st_data_export_used_in_cooking'] === 'Y'" class="badge-flag badge-ingredient">{{ t('app_badge_ingredient') }}</span>
-                        <span v-if="item['st_data_export_used_in_crafting'] === 'Y'" class="badge-flag badge-craft-mat">{{ t('app_badge_craft_mat') }}</span>
-                        <span v-if="item['st_data_export_cuts_thick_skin'] === 'Y'" class="badge-flag badge-thick-skin">{{ t('app_badge_thick_skin') }}</span>
-                        <span v-if="(favoritesViewActive || recentViewActive) && item.category" class="badge-flag badge-category">{{ t(singularCategory(item.category)) }}</span>
-                    </div>
-                    <div class="tile-card-stats" v-show="tileFields.length > 0">
-                        <div v-for="field in tileFields" :key="field" class="tile-stat-row">
-                            <span class="stat-label" v-tooltip="field === '_malfunction_chance' ? t('app_tooltip_malfunction') : ''">{{ headerLabel(field) }}<svg v-if="field === '_malfunction_chance'" class="info-hint" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
-                            <template v-if="field === 'ui_mm_repair'">
-                                <span class="badge" :style="displayStyle(field, item[field])">{{ displayLabel(field, item[field]) }}</span>
-                            </template>
-                            <template v-else-if="field === 'ui_ammo_types' || field === 'st_data_export_ammo_types_alt'">
-                                <span v-if="item[field]" class="tile-ammo-list">
-                                    <span v-for="a in item[field].split(';')" :key="a" :class="field === 'st_data_export_ammo_types_alt' ? 'badge-ammo badge-ammo-alt clickable' : 'badge-ammo clickable'" v-tooltip="ammoTooltipPayload(a.trim())" @click.stop="openAmmoFromCaliber(a.trim())">{{ caliberName(a.trim()) }}</span>
-                                </span>
-                                <span v-else class="stat-value">--</span>
-                            </template>
-                            <template v-else-if="field === 'ui_st_community'">
-                                <span v-if="item[field]" class="badge-flag" :style="factionColor(item[field]) ? { color: factionColor(item[field]), background: 'rgba(' + parseInt(factionColor(item[field]).slice(1,3),16) + ',' + parseInt(factionColor(item[field]).slice(3,5),16) + ',' + parseInt(factionColor(item[field]).slice(5,7),16) + ',0.18)' } : null">{{ t(item[field]).toUpperCase() }}</span>
-                            </template>
-                            <template v-else>
-                                <span class="stat-value" :class="statClass(field, cellValue(item, field))" :style="statStyle(field, cellValue(item, field))">{{ formatValue(field, cellValue(item, field)) }}</span>
-                            </template>
-                        </div>
-                    </div>
-                    <div v-for="hg in tileHealGroups" :key="hg.label" class="tile-stat-row">
-                        <span class="stat-label">{{ t(hg.label) }}</span>
-                        <span class="heal-parts">
-                            <span v-for="(f, i) in hg.fields" :key="f" class="heal-part" :class="{ 'heal-active': parseInt(item[f]) > 0 }">
-                                {{ hg.abbr[i] }}<span class="heal-dots"><span v-for="d in healDots(item[f]).filled" :key="'f'+d" class="dot filled">&#x2022;</span><span v-for="d in healDots(item[f]).empty" :key="'e'+d" class="dot empty">&#x2022;</span></span>
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
+            <ItemGrid
+                v-show="(viewMode === 'tiles' || favoritesViewActive || recentViewActive) && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates && !buildPlannerActive && !versionCompareActive"
+                :items="sortedItems"
+                :tile-fields="tileFields"
+                :tile-heal-groups="tileHealGroups"
+                :favorite-ids="favoriteIds"
+                :pinned-ids="pinnedIds"
+                :compact="favoritesViewActive || recentViewActive"
+                @navigate-to-item="navigateToItem"
+                @toggle-favorite="toggleFavorite"
+                @toggle-pin="togglePin"
+            />
         </div>
     </main>
 </div>
@@ -1555,6 +1518,7 @@ import FooterBar from "./components/FooterBar.vue";
 import HeaderBar from "./components/HeaderBar.vue";
 import SidebarNav from "./components/SidebarNav.vue";
 import ItemTable from "./components/ItemTable.vue";
+import ItemGrid from "./components/ItemGrid.vue";
 
 export default {
   ...appDefinition,
@@ -1563,8 +1527,9 @@ export default {
     FilterBar,
     FooterBar,
     HeaderBar,
-    SidebarNav,
+    ItemGrid,
     ItemTable,
+    SidebarNav,
   },
   provide() {
     return {
@@ -1589,6 +1554,7 @@ export default {
       factionColor: this.factionColor,
       isUnusedAmmo: this.isUnusedAmmo,
       openAmmoFromCaliber: this.openAmmoFromCaliber,
+      singularCategory: this.singularCategory,
     };
   },
 };
