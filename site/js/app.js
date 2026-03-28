@@ -2457,7 +2457,7 @@ export const appDefinition = {
         },
 
         renderCompareChart() {
-            const canvas = this.$refs.compareChartCanvas;
+            const canvas = this.$refs.comparePanel ? this.$refs.comparePanel.getChartCanvas() : this.$refs.compareChartCanvas;
             if (!canvas || this.compareData.length === 0) return;
             if (this._compareChart) { this._compareChart.destroy(); this._compareChart = null; }
 

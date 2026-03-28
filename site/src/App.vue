@@ -875,73 +875,21 @@
     </main>
 </div>
 
-<!-- Compare bar -->
-<Transition name="slide-up">
-<div class="compare-bar" v-show="pinnedIds.length > 0">
-    <LucideScale class="compare-bar-icon" />
-    <div class="compare-bar-chips">
-        <span v-for="p in pinnedItems" :key="p.id" class="compare-chip">
-          <span class="compare-chip-name">{{ p.displayName }}</span>
-          <span class="compare-chip-cat">{{ tCatSingular(p.category) }}</span>
-          <button class="compare-chip-remove" @click="togglePin(p.id)">&times;</button>
-        </span>
-    </div>
-    <div class="compare-bar-actions">
-        <button class="compare-btn" :disabled="pinnedIds.length < 2" @click="openCompare()">{{ t('app_label_compare') }} ({{ pinnedIds.length }})</button>
-        <button class="compare-clear-btn" @click="clearPins()">{{ t('app_label_clear') }}</button>
-    </div>
-</div>
-</Transition>
-
-<!-- Compare modal -->
-<Transition name="fade">
-<div class="modal-backdrop" v-if="compareOpen" @click.self="closeCompare()" style="z-index: 200;">
-    <Transition name="modal" appear>
-    <div class="modal compare-modal" v-if="compareOpen">
-        <button class="modal-close" @click="closeCompare()">&times;</button>
-        <div class="compare-header">
-            <h2 class="compare-title">{{ t('app_label_compare_items') }}</h2>
-            <div class="compare-view-toggle" v-if="compareData.length > 0">
-                <button :class="{ active: compareViewMode === 'table' }" @click="compareViewMode = 'table'">Table</button>
-                <button :class="{ active: compareViewMode === 'chart' }" @click="compareViewMode = 'chart'">Chart</button>
-            </div>
-        </div>
-        <div class="compare-content">
-            <template v-if="compareData.length === 0">
-                <p class="loading">{{ t('app_label_loading_compare') }}</p>
-            </template>
-            <template v-else>
-                <div v-show="compareViewMode === 'chart'" class="compare-chart-wrap">
-                    <canvas ref="compareChartCanvas"></canvas>
-                </div>
-                <div class="compare-table-wrap" v-show="compareViewMode === 'table'">
-                    <table class="compare-table">
-                        <thead>
-                        <tr>
-                            <th class="compare-label-col">{{ t('app_label_stat') }}</th>
-                            <th v-for="entry in compareData" :key="entry.item.id" class="compare-item-col">
-                                <span class="compare-item-name">{{ tName(entry.item) }}</span>
-                                <span class="compare-item-cat">{{ tCat(entry.category) }}</span>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr v-for="row in compareStatRows" :key="row.label">
-                            <td class="compare-label">{{ headerLabel(row.label) }}</td>
-                            <td v-for="(val, idx) in row.values" :key="idx" class="compare-value" :class="compareValueClass(row, idx)">
-                                <span class="compare-icon">{{ compareValueIcon(row, idx) }}</span>
-                                <span>{{ formatValue(row.label, val) }}</span>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </template>
-        </div>
-    </div>
-    </Transition>
-</div>
-</Transition>
+<!-- Compare bar + modal -->
+<ComparePanel
+    ref="comparePanel"
+    :pinned-ids="pinnedIds"
+    :pinned-items="pinnedItems"
+    :compare-open="compareOpen"
+    :compare-data="compareData"
+    :compare-stat-rows="compareStatRows"
+    :compare-view-mode="compareViewMode"
+    @toggle-pin="togglePin"
+    @open-compare="openCompare()"
+    @clear-pins="clearPins()"
+    @close-compare="closeCompare()"
+    @update:compare-view-mode="(v) => compareViewMode = v"
+/>
 
 <!-- Item detail modal -->
 <ItemDetailModal
@@ -1291,11 +1239,13 @@ import SidebarNav from "./components/SidebarNav.vue";
 import ItemTable from "./components/ItemTable.vue";
 import ItemGrid from "./components/ItemGrid.vue";
 import ItemDetailModal from "./components/ItemDetailModal.vue";
+import ComparePanel from "./components/ComparePanel.vue";
 
 export default {
   ...appDefinition,
   components: {
     ...appDefinition.components,
+    ComparePanel,
     FilterBar,
     FooterBar,
     HeaderBar,
@@ -1337,6 +1287,9 @@ export default {
       findItemByName: this.findItemByName,
       modalStatClass: this.modalStatClass,
       modalStatStyle: this.modalStatStyle,
+      compareValueClass: this.compareValueClass,
+      compareValueIcon: this.compareValueIcon,
+      tCatSingular: this.tCatSingular,
     };
   },
 };
