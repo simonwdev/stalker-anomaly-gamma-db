@@ -288,19 +288,6 @@ function loadCategoryFilters(packId, slug) {
     } catch (e) { return null; }
 }
 
-function saveVersionCompareFilters(packId, state) {
-    try {
-        localStorage.setItem(`vcFilters:${packId}`, JSON.stringify(state));
-    } catch (e) { /* quota or private mode */ }
-}
-
-function loadVersionCompareFilters(packId) {
-    try {
-        const raw = localStorage.getItem(`vcFilters:${packId}`);
-        return raw ? JSON.parse(raw) : null;
-    } catch (e) { return null; }
-}
-
 function debounce(fn, ms) {
     let timer;
     return function (...args) {
@@ -1783,6 +1770,8 @@ export const appDefinition = {
                     const urlCat = pathParsed.cat || new URLSearchParams(window.location.search).get("cat");
                     if (urlCat === "build-planner" || pathParsed.buildPlanner) {
                         // Defer to mounted handler
+                    } else if (urlCat === "version-compare" || pathParsed.versionCompare) {
+                        // Defer to restoreUrlState
                     } else if (urlCat === "favorites" || pathParsed.favorites) {
                         this.favoritesViewActive = true;
                         this.activeCategory = null;
@@ -2285,24 +2274,6 @@ export const appDefinition = {
             this.versionCompareCategoryFilter = [];
         },
 
-        _saveVersionCompareFilters() {
-            if (!this.activePack) return;
-            saveVersionCompareFilters(this.activePack.id, {
-                filter: this.versionCompareFilter,
-                propertyFilter: this.versionComparePropertyFilter,
-                categoryFilter: this.versionCompareCategoryFilter,
-            });
-        },
-
-        _restoreVersionCompareFilters() {
-            if (!this.activePack) return;
-            const saved = loadVersionCompareFilters(this.activePack.id);
-            if (saved) {
-                this.versionCompareFilter = saved.filter || "";
-                this.versionComparePropertyFilter = saved.propertyFilter || [];
-                this.versionCompareCategoryFilter = saved.categoryFilter || [];
-            }
-        },
 
         closeCompareMenu() {
             // compareMenuOpen is now local state in child components
@@ -2334,7 +2305,6 @@ export const appDefinition = {
         openVersionCompare() {
             this.resetViewState();
             this.versionCompareActive = true;
-            this._restoreVersionCompareFilters();
             this.pushUrlState(true);
             if (this.crossPackId) this.loadVersionCompareData();
         },
@@ -2521,6 +2491,9 @@ export const appDefinition = {
             this.sortCol = "pda_encyclopedia_name";
             this.sortAsc = true;
             this.activeFilters = {};
+            this.versionCompareFilter = "";
+            this.versionComparePropertyFilter = [];
+            this.versionCompareCategoryFilter = [];
             if (this.$refs.filterBar) this.$refs.filterBar.closeFilterPanel();
             this.sidebarOpen = false;
         },
@@ -3901,6 +3874,22 @@ export const appDefinition = {
             } else {
                 url.searchParams.delete("faction");
             }
+            // Version compare filters
+            if (this.versionCompareFilter) {
+                url.searchParams.set("vcq", this.versionCompareFilter);
+            } else {
+                url.searchParams.delete("vcq");
+            }
+            if (this.versionComparePropertyFilter.length) {
+                url.searchParams.set("vcp", this.versionComparePropertyFilter.join(","));
+            } else {
+                url.searchParams.delete("vcp");
+            }
+            if (this.versionCompareCategoryFilter.length) {
+                url.searchParams.set("vcc", this.versionCompareCategoryFilter.join(","));
+            } else {
+                url.searchParams.delete("vcc");
+            }
             if (this.locale) {
                 url.searchParams.set("lang", this.locale);
             }
@@ -3934,7 +3923,12 @@ export const appDefinition = {
             } else if (parsed.versionCompare || legacyCat === "version-compare") {
                 this.versionCompareActive = true;
                 this.activeCategory = null;
-                this._restoreVersionCompareFilters();
+                const vcq = params.get("vcq");
+                if (vcq) this.versionCompareFilter = vcq;
+                const vcp = params.get("vcp");
+                if (vcp) this.versionComparePropertyFilter = vcp.split(",");
+                const vcc = params.get("vcc");
+                if (vcc) this.versionCompareCategoryFilter = vcc.split(",");
                 if (this.crossPackId) this.loadVersionCompareData();
             } else if (parsed.favorites || legacyCat === "favorites") {
                 this.favoritesViewActive = true;
@@ -5777,9 +5771,9 @@ export const appDefinition = {
             this.loadCrossPackItem(val);
             if (this.versionCompareActive) this.loadVersionCompareData();
         },
-        versionCompareFilter() { this._saveVersionCompareFilters(); },
-        versionComparePropertyFilter() { this._saveVersionCompareFilters(); },
-        versionCompareCategoryFilter() { this._saveVersionCompareFilters(); },
+        versionCompareFilter() { if (this.versionCompareActive) this.pushUrlState(); },
+        versionComparePropertyFilter() { if (this.versionCompareActive) this.pushUrlState(); },
+        versionCompareCategoryFilter() { if (this.versionCompareActive) this.pushUrlState(); },
         compareViewMode(mode) {
             if (mode === "chart" && this.compareData.length > 0) {
                 this.$nextTick(() => this.renderCompareChart());
@@ -6101,7 +6095,6 @@ export const appDefinition = {
                 if (!this.versionCompareActive) {
                     this.resetViewState();
                     this.versionCompareActive = true;
-                    this._restoreVersionCompareFilters();
                     if (this.crossPackId) this.loadVersionCompareData();
                 }
             } else if (parsed.cat) {
