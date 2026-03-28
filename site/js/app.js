@@ -5800,15 +5800,11 @@ export const appDefinition = {
             // Global single-key shortcuts
             if (e.key === KEYS.SEARCH) {
                 e.preventDefault();
-                const input = document.querySelector('.global-search input');
-                if (input) {
-                    if (!this.globalQuery && this.lastGlobalQuery) {
-                        this.globalQuery = this.lastGlobalQuery;
-                        this.globalSearch();
-                    }
-                    input.focus();
-                    this.$nextTick(() => input.select());
+                if (!this.globalQuery && this.lastGlobalQuery) {
+                    this.globalQuery = this.lastGlobalQuery;
+                    this.globalSearch();
                 }
+                this.$refs.headerBar?.focusSearch();
                 return;
             }
             if (e.key === KEYS.TOGGLE_VIEW && !this.buildPlannerActive) {

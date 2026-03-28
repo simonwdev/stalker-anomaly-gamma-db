@@ -85,33 +85,35 @@
 
             <!-- Mobile: overflow menu -->
             <div class="build-overflow-dropdown build-actions-mobile" v-click-outside="() => overflowOpen = false">
-                <button class="build-header-icon" @click="overflowOpen = !overflowOpen">
+                <button class="build-header-icon" ref="overflowBtn" @click="toggleOverflow()">
                     <LucideEllipsisVertical :size="16" />
                 </button>
-                <div v-if="overflowOpen" class="build-overflow-menu">
-                    <button class="build-overflow-item" :class="{ copied: copyBuildLinkFeedback }" :disabled="buildSharing" @click="$emit('copyBuildLink')">
-                        <LucideLink :size="14" />
-                        <span>{{ copyBuildLinkFeedback ? t('app_label_copied') : t('app_label_copy_link') }}</span>
-                    </button>
-                    <button class="build-overflow-item" :class="{ copied: copyBuildCodeFeedback }" :disabled="buildSharing" @click="$emit('copyBuildCode')">
-                        <LucideHash :size="14" />
-                        <span>{{ copyBuildCodeFeedback ? t('app_label_copied') : (t('app_build_copy_code') || 'Copy Code') }}</span>
-                    </button>
-                    <div class="build-overflow-divider"></div>
-                    <button class="build-overflow-item save-import-btn" @click="$emit('openSaveImport'); overflowOpen = false">
-                        <LucideFileUp :size="14" />
-                        <span>{{ t('app_save_import_title') || 'Import Save File' }}</span>
-                    </button>
-                    <button class="build-overflow-item" @click="$emit('openImportCode'); overflowOpen = false">
-                        <LucideDownload :size="14" />
-                        <span>{{ t('app_build_import_code') || 'Import Code' }}</span>
-                    </button>
-                    <div class="build-overflow-divider"></div>
-                    <button class="build-overflow-item build-overflow-item-danger" @click="$emit('clearBuild'); overflowOpen = false">
-                        <LucideTrash2 :size="14" />
-                        <span>{{ t('app_build_clear') }}</span>
-                    </button>
-                </div>
+                <Teleport to="body">
+                    <div v-if="overflowOpen" class="build-overflow-menu" :style="overflowStyle">
+                        <button class="build-overflow-item" :class="{ copied: copyBuildLinkFeedback }" :disabled="buildSharing" @click="$emit('copyBuildLink')">
+                            <LucideLink :size="14" />
+                            <span>{{ copyBuildLinkFeedback ? t('app_label_copied') : t('app_label_copy_link') }}</span>
+                        </button>
+                        <button class="build-overflow-item" :class="{ copied: copyBuildCodeFeedback }" :disabled="buildSharing" @click="$emit('copyBuildCode')">
+                            <LucideHash :size="14" />
+                            <span>{{ copyBuildCodeFeedback ? t('app_label_copied') : (t('app_build_copy_code') || 'Copy Code') }}</span>
+                        </button>
+                        <div class="build-overflow-divider"></div>
+                        <button class="build-overflow-item save-import-btn" @click="$emit('openSaveImport'); overflowOpen = false">
+                            <LucideFileUp :size="14" />
+                            <span>{{ t('app_save_import_title') || 'Import Save File' }}</span>
+                        </button>
+                        <button class="build-overflow-item" @click="$emit('openImportCode'); overflowOpen = false">
+                            <LucideDownload :size="14" />
+                            <span>{{ t('app_build_import_code') || 'Import Code' }}</span>
+                        </button>
+                        <div class="build-overflow-divider"></div>
+                        <button class="build-overflow-item build-overflow-item-danger" @click="$emit('clearBuild'); overflowOpen = false">
+                            <LucideTrash2 :size="14" />
+                            <span>{{ t('app_build_clear') }}</span>
+                        </button>
+                    </div>
+                </Teleport>
             </div>
         </div>
     </div>
@@ -671,11 +673,26 @@ export default {
             factionPickerOpen: false,
             savedDropdownOpen: false,
             overflowOpen: false,
+            overflowStyle: {},
         };
     },
     methods: {
         getRadarCanvas() {
             return this.$refs.buildWeaponRadarCanvas;
+        },
+        toggleOverflow() {
+            this.overflowOpen = !this.overflowOpen;
+            if (this.overflowOpen) {
+                const btn = this.$refs.overflowBtn;
+                if (btn) {
+                    const rect = btn.getBoundingClientRect();
+                    this.overflowStyle = {
+                        position: 'fixed',
+                        top: rect.bottom + 4 + 'px',
+                        right: (window.innerWidth - rect.right) + 'px',
+                    };
+                }
+            }
         },
     },
 };
@@ -761,9 +778,6 @@ export default {
     position: relative;
 }
 .build-overflow-menu {
-    position: absolute;
-    top: calc(100% + 4px);
-    right: 0;
     min-width: 11rem;
     background: var(--card);
     border: 1px solid var(--border);

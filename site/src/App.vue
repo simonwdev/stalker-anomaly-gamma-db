@@ -39,6 +39,7 @@
 </div>
 
 <HeaderBar
+    ref="headerBar"
     :translations="translations"
     :active-pack="activePack"
     :packs="packs"
