@@ -1,5 +1,5 @@
 <template>
-<div id="app" @keydown.escape.window="handleEscape()">
+<div id="app" @keydown.window.escape="handleEscape()">
 <transition name="toast-fade">
     <div v-if="toastMessage" class="toast" :class="'toast--' + toastType" @click="toastMessage = ''">{{ toastMessage }}</div>
 </transition>
@@ -57,7 +57,7 @@
     @clear-global-query="clearGlobalQuery()"
     @update:global-query="(v) => globalQuery = v"
     @search="debouncedGlobalSearch()"
-    @escape-search="if (globalQuery.trim()) lastGlobalQuery = globalQuery; globalQuery = ''"
+    @escape-search="() => { if (globalQuery.trim()) lastGlobalQuery = globalQuery; globalQuery = '' }"
     @select-search-result="(id) => { lastGlobalQuery = globalQuery; globalQuery = ''; navigateToItem(id) }"
 />
 
