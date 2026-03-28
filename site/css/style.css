@@ -3585,12 +3585,7 @@ input.range-input {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem;
-}
-.crafting-graph-stats-outside {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    padding: 0.1rem 0.15rem 0;
+    margin-top: 0.1rem;
 }
 .crafting-graph-stat {
     display: inline-flex;
@@ -3610,53 +3605,6 @@ input.range-input {
 .crafting-graph-stat.stat-negative {
     border-color: #8e3f3a;
     color: #f08b84;
-}
-.crafting-graph-tooltip {
-    position: absolute;
-    top: calc(100% + 0.32rem);
-    left: 0;
-    z-index: 45;
-    width: min(22rem, 88vw);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: #232323;
-    padding: 0.45rem;
-    box-shadow: 0 16px 26px rgba(0, 0, 0, 0.45);
-    opacity: 0;
-    transform: translateY(3px);
-    pointer-events: none;
-    transition: opacity 0.12s ease, transform 0.12s ease;
-}
-.crafting-graph-node:hover .crafting-graph-tooltip {
-    opacity: 1;
-    transform: translateY(0);
-}
-.crafting-graph-tooltip-title {
-    font-size: 0.68rem;
-    font-weight: 700;
-    color: var(--accent);
-}
-.crafting-graph-tooltip-img {
-    width: 3.55rem;
-    height: 3.55rem;
-    object-fit: contain;
-    border: 1px solid #3a3a3a;
-    border-radius: 4px;
-    background: #111;
-    margin-top: 0.35rem;
-    padding: 0.16rem;
-}
-.crafting-graph-tooltip-desc {
-    margin-top: 0.35rem;
-    color: #cecece;
-    font-size: 0.62rem;
-    line-height: 1.35;
-}
-.crafting-graph-tooltip-stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    margin-top: 0.35rem;
 }
 
 @media (max-width: 1100px) {

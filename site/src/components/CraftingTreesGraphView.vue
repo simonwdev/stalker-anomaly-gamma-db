@@ -50,35 +50,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div v-if="resolveNodeItem(tree)" class="crafting-graph-tooltip">
-                                    <div class="crafting-graph-tooltip-title">{{ t(tree.name) }}</div>
-                                    <img
-                                        v-if="hasNodeImage(resolveNodeItem(tree))"
-                                        class="crafting-graph-tooltip-img"
-                                        :src="itemImageUrl(resolveNodeItem(tree))"
-                                        :alt="t(tree.name)"
-                                        @error="onNodeImageError(resolveNodeItem(tree))"
-                                    >
-                                    <div v-if="nodeDescription(resolveNodeItem(tree))" class="crafting-graph-tooltip-desc">
-                                        {{ nodeDescription(resolveNodeItem(tree)) }}
-                                    </div>
-                                    <div class="crafting-graph-tooltip-stats" v-if="nodeStats(resolveNodeItem(tree)).length">
-                                        <span
-                                            v-for="stat in nodeStats(resolveNodeItem(tree))"
-                                            :key="`tip-${resolveNodeItem(tree).id}-${stat.key}`"
-                                            class="crafting-graph-stat"
-                                            :class="stat.signClass"
-                                        >{{ stat.label }}: {{ stat.value }}</span>
-                                    </div>
+                                <div class="crafting-graph-stats" v-if="resolveNodeItem(tree) && nodeStats(resolveNodeItem(tree)).length">
+                                    <span
+                                        v-for="stat in nodeStats(resolveNodeItem(tree))"
+                                        :key="`${resolveNodeItem(tree).id}-${stat.key}`"
+                                        class="crafting-graph-stat"
+                                        :class="stat.signClass"
+                                    >{{ stat.label }}: {{ stat.value }}</span>
                                 </div>
-                            </div>
-                            <div class="crafting-graph-stats-outside" v-if="resolveNodeItem(tree) && nodeStats(resolveNodeItem(tree)).length">
-                                <span
-                                    v-for="stat in nodeStats(resolveNodeItem(tree))"
-                                    :key="`${resolveNodeItem(tree).id}-${stat.key}`"
-                                    class="crafting-graph-stat"
-                                    :class="stat.signClass"
-                                >{{ stat.label }}: {{ stat.value }}</span>
                             </div>
                         </div>
                     </div>
@@ -112,35 +91,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div v-if="resolveNodeItem(child)" class="crafting-graph-tooltip">
-                                        <div class="crafting-graph-tooltip-title">{{ t(child.name) }}</div>
-                                        <img
-                                            v-if="hasNodeImage(resolveNodeItem(child))"
-                                            class="crafting-graph-tooltip-img"
-                                            :src="itemImageUrl(resolveNodeItem(child))"
-                                            :alt="t(child.name)"
-                                            @error="onNodeImageError(resolveNodeItem(child))"
-                                        >
-                                        <div v-if="nodeDescription(resolveNodeItem(child))" class="crafting-graph-tooltip-desc">
-                                            {{ nodeDescription(resolveNodeItem(child)) }}
-                                        </div>
-                                        <div class="crafting-graph-tooltip-stats" v-if="nodeStats(resolveNodeItem(child)).length">
-                                            <span
-                                                v-for="stat in nodeStats(resolveNodeItem(child))"
-                                                :key="`tip-${resolveNodeItem(child).id}-${stat.key}`"
-                                                class="crafting-graph-stat"
-                                                :class="stat.signClass"
-                                            >{{ stat.label }}: {{ stat.value }}</span>
-                                        </div>
+                                    <div class="crafting-graph-stats" v-if="resolveNodeItem(child) && nodeStats(resolveNodeItem(child)).length">
+                                        <span
+                                            v-for="stat in nodeStats(resolveNodeItem(child))"
+                                            :key="`${resolveNodeItem(child).id}-${stat.key}`"
+                                            class="crafting-graph-stat"
+                                            :class="stat.signClass"
+                                        >{{ stat.label }}: {{ stat.value }}</span>
                                     </div>
-                                </div>
-                                <div class="crafting-graph-stats-outside" v-if="resolveNodeItem(child) && nodeStats(resolveNodeItem(child)).length">
-                                    <span
-                                        v-for="stat in nodeStats(resolveNodeItem(child))"
-                                        :key="`${resolveNodeItem(child).id}-${stat.key}`"
-                                        class="crafting-graph-stat"
-                                        :class="stat.signClass"
-                                    >{{ stat.label }}: {{ stat.value }}</span>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +153,7 @@ const GRAPH_LABEL_OVERRIDES = {
 
 export default {
     name: "CraftingTreesGraphView",
-    inject: ["t", "findItemByName", "getItemFields", "headerLabel", "formatValue", "parseDescription"],
+    inject: ["t", "findItemByName", "getItemFields", "headerLabel", "formatValue"],
     props: {
         allCraftingTrees: { type: Array, default: () => [] },
         filteredCraftingTrees: { type: Array, default: () => [] },
@@ -298,11 +256,6 @@ export default {
             return stats;
         },
 
-        nodeDescription(item) {
-            if (!item) return "";
-            const parsed = this.parseDescription(item);
-            return parsed?.text || "";
-        },
 
         itemImageUrl(item) {
             if (!item?.id) return "";
