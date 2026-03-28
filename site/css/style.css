@@ -3533,9 +3533,11 @@ input.range-input {
 .crafting-graph-ingredient-row::before {
     content: "";
     position: absolute;
-    left: 0;
+    /* extend left all the way to the spine (which is at left:0 of .crafting-graph-right,
+       but this row is inside .crafting-graph-ingredients-wrap which is offset by padding-left:1.6rem) */
+    left: -1.6rem;
     top: 50%;
-    width: 1.4rem;
+    width: calc(1.6rem + 1.4rem);
     height: 2px;
     background: linear-gradient(to right, #c8a84e, #5b8abd);
     transform: translateY(-50%);
