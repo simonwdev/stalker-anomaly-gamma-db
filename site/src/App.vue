@@ -357,6 +357,8 @@
     :modal-item-drop-locations="modalItemDropLocations"
     :modal-item-drop-types="modalItemDropTypes"
     :modal-item-drop-has-restricted-ecos="modalItemDropHasRestrictedEcos"
+    :modal-stash-chance-entries="modalStashChanceEntries"
+    :modal-stash-chance-has-restricted-ecos="modalStashChanceHasRestrictedEcos"
     :modal-ammo-variants="modalAmmoVariants"
     :modal-ammo-stat-keys="modalAmmoStatKeys"
     :modal-recipe="modalRecipe"

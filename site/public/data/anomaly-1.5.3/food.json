@@ -59,7 +59,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_flesh [a]",
       "hasDisassemble": false
     },
@@ -91,7 +91,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_chocolate_p",
       "hasDisassemble": false
     },
@@ -123,7 +123,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_chili",
       "hasDisassemble": true
     },
@@ -155,7 +155,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_bottle_metal",
       "hasDisassemble": false
     },
@@ -187,7 +187,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "mutant_boar_chop",
       "hasDisassemble": false
     },
@@ -219,7 +219,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_tushkano [a]",
       "hasDisassemble": false
     },
@@ -251,7 +251,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_protein",
       "hasDisassemble": false
     },
@@ -259,7 +259,7 @@
       "id": "joint",
       "pda_encyclopedia_name": "st_joint",
       "st_data_export_description": "st_joint_descr",
-      "st_prop_weight": "0.00",
+      "st_prop_weight": "0",
       "st_upgr_cost": "380",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "1.94%",
@@ -283,7 +283,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "9",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_joint",
       "hasDisassemble": false
     },
@@ -291,7 +291,7 @@
       "id": "cigar1",
       "pda_encyclopedia_name": "st_cigar1",
       "st_data_export_description": "st_cigar1_descr",
-      "st_prop_weight": "0.00",
+      "st_prop_weight": "0",
       "st_upgr_cost": "2506",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "-0.56%",
@@ -315,7 +315,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_cigar1",
       "hasDisassemble": false
     },
@@ -347,7 +347,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_pseudodog [b]",
       "hasDisassemble": false
     },
@@ -379,7 +379,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_vodka_quality",
       "hasDisassemble": false
     },
@@ -411,7 +411,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "mutant_psysucker_meat",
       "hasDisassemble": false
     },
@@ -443,7 +443,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_lurker [b]",
       "hasDisassemble": false
     },
@@ -475,7 +475,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_conserva",
       "hasDisassemble": true
     },
@@ -507,7 +507,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "mutant_chimera_meat",
       "hasDisassemble": false
     },
@@ -539,7 +539,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_beer",
       "hasDisassemble": false
     },
@@ -571,7 +571,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_nuts",
       "hasDisassemble": false
     },
@@ -603,7 +603,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_flask",
       "hasDisassemble": false
     },
@@ -635,7 +635,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_bloodsucker [default]",
       "hasDisassemble": false
     },
@@ -667,7 +667,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "mutant_dog_meat",
       "hasDisassemble": false
     },
@@ -699,7 +699,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "34%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_snork [a]",
       "hasDisassemble": false
     },
@@ -731,7 +731,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "mutant_flesh_meat",
       "hasDisassemble": false
     },
@@ -763,7 +763,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_mre",
       "hasDisassemble": false
     },
@@ -795,7 +795,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_lurker [default]",
       "hasDisassemble": false
     },
@@ -827,7 +827,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_chimera [b]",
       "hasDisassemble": false
     },
@@ -859,7 +859,7 @@
       "ui_inv_outfit_radiation_protection": "3",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_pseudodog [a]",
       "hasDisassemble": false
     },
@@ -891,7 +891,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "24",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_marijuana",
       "hasDisassemble": false
     },
@@ -923,7 +923,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_cigarettes_lucky",
       "hasDisassemble": false
     },
@@ -955,7 +955,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_raisins",
       "hasDisassemble": false
     },
@@ -987,7 +987,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_water_drink",
       "hasDisassemble": false
     },
@@ -1019,7 +1019,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_corn",
       "hasDisassemble": true
     },
@@ -1051,7 +1051,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_cuban_cigar",
       "hasDisassemble": false
     },
@@ -1083,7 +1083,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_tomato",
       "hasDisassemble": true
     },
@@ -1115,7 +1115,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_chocolate",
       "hasDisassemble": false
     },
@@ -1147,7 +1147,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "mutant_lurker_meat",
       "hasDisassemble": false
     },
@@ -1179,7 +1179,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_beans",
       "hasDisassemble": true
     },
@@ -1211,7 +1211,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_dog [a]",
       "hasDisassemble": false
     },
@@ -1243,7 +1243,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_hand_rolling_tobacco",
       "hasDisassemble": false
     },
@@ -1275,7 +1275,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_mint",
       "hasDisassemble": false
     },
@@ -1307,7 +1307,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_cigarettes_russian",
       "hasDisassemble": false
     },
@@ -1339,7 +1339,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_vodka2",
       "hasDisassemble": false
     },
@@ -1371,7 +1371,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_bloodsucker [b]",
       "hasDisassemble": false
     },
@@ -1403,7 +1403,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_psysucker [b]",
       "hasDisassemble": false
     },
@@ -1467,7 +1467,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "mutant_psevdodog_meat",
       "hasDisassemble": false
     },
@@ -1499,7 +1499,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_vodka",
       "hasDisassemble": false
     },
@@ -1531,7 +1531,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_tushonka",
       "hasDisassemble": true
     },
@@ -1563,7 +1563,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_bloodsucker [a]",
       "hasDisassemble": false
     },
@@ -1595,7 +1595,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_flesh [b]",
       "hasDisassemble": false
     },
@@ -1627,7 +1627,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_tobacco",
       "hasDisassemble": false
     },
@@ -1659,7 +1659,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_pseudodog [default]",
       "hasDisassemble": false
     },
@@ -1691,7 +1691,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_tea",
       "hasDisassemble": false
     },
@@ -1723,7 +1723,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_kolbasa",
       "hasDisassemble": false
     },
@@ -1755,7 +1755,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "mutant_snork_hand",
       "hasDisassemble": false
     },
@@ -1787,7 +1787,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_sausage",
       "hasDisassemble": false
     },
@@ -1819,7 +1819,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_tushkano [b]",
       "hasDisassemble": false
     },
@@ -1851,7 +1851,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_psysucker [default]",
       "hasDisassemble": false
     },
@@ -1883,7 +1883,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_flesh [default]",
       "hasDisassemble": false
     },
@@ -1915,7 +1915,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_salmon",
       "hasDisassemble": false
     },
@@ -1947,7 +1947,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_ration_ukr",
       "hasDisassemble": false
     },
@@ -1979,7 +1979,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_snork [default]",
       "hasDisassemble": false
     },
@@ -2011,7 +2011,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_ration_ru",
       "hasDisassemble": false
     },
@@ -2043,7 +2043,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "mutant_tushkano_meat",
       "hasDisassemble": false
     },
@@ -2107,7 +2107,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_dog [b]",
       "hasDisassemble": false
     },
@@ -2139,7 +2139,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_tushkano [default]",
       "hasDisassemble": false
     },
@@ -2171,7 +2171,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_cigar3",
       "hasDisassemble": false
     },
@@ -2203,7 +2203,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_breadold",
       "hasDisassemble": false
     },
@@ -2267,7 +2267,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_cigarettes",
       "hasDisassemble": false
     },
@@ -2299,7 +2299,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_chimera [default]",
       "hasDisassemble": false
     },
@@ -2331,7 +2331,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_cigar2",
       "hasDisassemble": false
     },
@@ -2363,7 +2363,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_bread",
       "hasDisassemble": false
     },
@@ -2395,7 +2395,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_dog [default]",
       "hasDisassemble": false
     },
@@ -2427,7 +2427,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_snork [b]",
       "hasDisassemble": false
     },
@@ -2459,7 +2459,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_drink_crow",
       "hasDisassemble": false
     },
@@ -2491,7 +2491,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_boar [default]",
       "hasDisassemble": false
     },
@@ -2523,7 +2523,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "mutant_krovosos_meat",
       "hasDisassemble": false
     },
@@ -2555,7 +2555,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "8",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_psysucker [a]",
       "hasDisassemble": false
     },
@@ -2587,7 +2587,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_lurker [a]",
       "hasDisassemble": false
     },
@@ -2619,7 +2619,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_meat_boar [b]",
       "hasDisassemble": false
     },
@@ -2651,7 +2651,7 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "0.00",
+      "ui_inv_outfit_additional_weight": "0",
       "displayName": "st_mineral_water",
       "hasDisassemble": false
     }

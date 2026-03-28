@@ -785,7 +785,7 @@
     {
       "id": "artefact_container",
       "pda_encyclopedia_name": "st_itm_artefact_container_name",
-      "st_prop_weight": "5.00",
+      "st_prop_weight": "5",
       "st_upgr_cost": "5000",
       "pda_encyclopedia_tier": "0",
       "st_data_export_is_backpack": "Y",

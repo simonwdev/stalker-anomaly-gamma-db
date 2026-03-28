@@ -162,7 +162,7 @@
       "id": "wpn_mp5_nimble",
       "pda_encyclopedia_name": "st_wpn_mp5_nimble",
       "st_data_export_description": "st_wpn_mp5_nimble_descr",
-      "st_prop_weight": "3.00",
+      "st_prop_weight": "3",
       "st_upgr_cost": "28950",
       "ui_mm_repair": "A",
       "st_data_export_single_handed": "N",

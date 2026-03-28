@@ -542,7 +542,7 @@
       "id": "wpn_mp133",
       "pda_encyclopedia_name": "st_wpn_mp133",
       "st_data_export_description": "st_wpn_mp133_descr",
-      "st_prop_weight": "3.00",
+      "st_prop_weight": "3",
       "st_upgr_cost": "19960",
       "ui_mm_repair": "B",
       "st_data_export_single_handed": "N",
