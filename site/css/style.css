@@ -3579,20 +3579,39 @@ input.range-input {
 }
 .crafting-graph-stats {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    margin-top: 0.1rem;
+    flex-direction: column;
+    gap: 0.16rem;
+    margin-top: 0.2rem;
+    list-style: none;
+    padding: 0;
+    min-width: 0;
 }
 .crafting-graph-stat {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
     border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 0.08rem 0.35rem;
-    font-size: 0.58rem;
+    border-radius: 3px;
+    padding: 0.1rem 0.28rem;
+    font-size: 0.56rem;
     line-height: 1.25;
     background: #121212;
     color: #bdbdbd;
+    min-width: 0;
+}
+.crafting-graph-stat-label {
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+.crafting-graph-stat-value {
+    color: var(--text);
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 .crafting-graph-stat.stat-positive {
     border-color: #2f6c37;
@@ -3600,6 +3619,12 @@ input.range-input {
 }
 .crafting-graph-stat.stat-negative {
     border-color: #8e3f3a;
+    color: #f08b84;
+}
+.crafting-graph-stat.stat-positive .crafting-graph-stat-value {
+    color: #8fd397;
+}
+.crafting-graph-stat.stat-negative .crafting-graph-stat-value {
     color: #f08b84;
 }
 

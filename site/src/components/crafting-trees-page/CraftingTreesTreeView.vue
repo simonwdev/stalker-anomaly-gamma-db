@@ -31,14 +31,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="crafting-graph-stats" v-if="resolveNodeItem(tree) && nodeStats(resolveNodeItem(tree)).length">
-                                    <span
+                                <ul class="crafting-graph-stats" v-if="resolveNodeItem(tree) && nodeStats(resolveNodeItem(tree)).length">
+                                    <li
                                         v-for="stat in nodeStats(resolveNodeItem(tree))"
                                         :key="`${resolveNodeItem(tree).id}-${stat.key}`"
                                         class="crafting-graph-stat"
                                         :class="stat.signClass"
-                                    >{{ stat.label }}: {{ stat.value }}</span>
-                                </div>
+                                    >
+                                        <span class="crafting-graph-stat-label">{{ stat.label }}</span>
+                                        <span class="crafting-graph-stat-value">{{ stat.value }}</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -72,14 +75,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="crafting-graph-stats" v-if="resolveNodeItem(child) && nodeStats(resolveNodeItem(child)).length">
-                                        <span
+                                    <ul class="crafting-graph-stats" v-if="resolveNodeItem(child) && nodeStats(resolveNodeItem(child)).length">
+                                        <li
                                             v-for="stat in nodeStats(resolveNodeItem(child))"
                                             :key="`${resolveNodeItem(child).id}-${stat.key}`"
                                             class="crafting-graph-stat"
                                             :class="stat.signClass"
-                                        >{{ stat.label }}: {{ stat.value }}</span>
-                                    </div>
+                                        >
+                                            <span class="crafting-graph-stat-label">{{ stat.label }}</span>
+                                            <span class="crafting-graph-stat-value">{{ stat.value }}</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -92,33 +98,6 @@
 </template>
 
 <script>
-const GRAPH_STAT_PRIORITY = [
-    "ui_inv_outfit_chemical_burn_protection",
-    "ui_inv_outfit_radiation_protection",
-    "ui_inv_outfit_burn_protection",
-    "ui_inv_outfit_fire_wound_protection",
-    "ui_inv_outfit_wound_protection",
-    "ui_inv_outfit_shock_protection",
-    "ui_inv_outfit_telepatic_protection",
-    "ui_inv_outfit_strike_protection",
-    "ui_inv_outfit_explosion_protection",
-    "gamma_chemical_burn_cap",
-    "gamma_fire_wound_cap",
-    "gamma_wound_cap",
-    "gamma_burn_cap",
-    "gamma_shock_cap",
-    "gamma_telepatic_cap",
-    "gamma_strike_cap",
-    "gamma_explosion_cap",
-    "st_prop_restore_health",
-    "st_prop_restore_bleeding",
-    "st_data_export_restore_radiation",
-    "ui_inv_outfit_power_restore",
-    "ui_inv_satiety",
-    "pda_encyclopedia_tier",
-    "st_upgr_cost",
-];
-
 const GRAPH_LABEL_OVERRIDES = {
     pda_encyclopedia_tier: "Tier",
     st_upgr_cost: "Cost",
@@ -172,6 +151,17 @@ export default {
         },
     },
     methods: {
+        isEmptyPropValue(rawValue) {
+            if (rawValue === null || rawValue === undefined) return true;
+            if (typeof rawValue === "number") return rawValue === 0;
+            const text = String(rawValue).trim();
+            if (!text || text === "--") return true;
+            if (text === "0" || text === "0%") return true;
+            const parsed = parseFloat(text.replace(/%/g, "").replace(/,/g, "."));
+            if (!Number.isNaN(parsed) && parsed === 0) return true;
+            return false;
+        },
+
         graphStatLabel(key) {
             return GRAPH_LABEL_OVERRIDES[key] || this.headerLabel(key);
         },
@@ -221,22 +211,31 @@ export default {
 
         nodeStats(item) {
             if (!item) return [];
-            const baseFields = this.getItemFields(item);
-            const fields = [...new Set([...GRAPH_STAT_PRIORITY, ...baseFields])];
+            const SKIP = new Set([
+                "id", "name", "displayName", "pda_encyclopedia_name", "category",
+                "hasNpcWeaponDrop", "hasStashDrop", "hasDisassemble",
+                "st_data_export_description", "localeName", "displayLabel",
+            ]);
             const stats = [];
-            for (const key of fields) {
-                if (!(key in item)) continue;
+            for (const key in item) {
+                if (SKIP.has(key)) continue;
                 const raw = item[key];
-                const num = this.parseNumeric(raw);
-                if (num === null || num === 0) continue;
+                if (this.isEmptyPropValue(raw)) continue;
                 stats.push({
                     key,
                     label: this.graphStatLabel(key),
                     value: this.formatValue(key, raw),
-                    signClass: num > 0 ? "stat-positive" : "stat-negative",
+                    signClass: this.getStatSignClass(key, raw),
                 });
             }
+            stats.sort((a, b) => a.label.localeCompare(b.label));
             return stats;
+        },
+
+        getStatSignClass(key, rawValue) {
+            const num = this.parseNumeric(rawValue);
+            if (num === null) return "";
+            return num > 0 ? "stat-positive" : num < 0 ? "stat-negative" : "";
         },
 
 
