@@ -90,235 +90,62 @@
             <p class="loading-text">{{ t('app_label_loading') }}</p>
         </div>
         <div v-show="!loading" class="content-inner">
-            <div class="filter-bar" v-show="!buildPlannerActive && !versionCompareActive">
-                <div class="filter-input-group" v-click-outside="closeFilterPanel">
-                    <LucideSearch class="filter-input-icon" :size="14" />
-                    <input
-                        type="text"
-                        :placeholder="t('app_label_filter_placeholder')"
-                        v-model="filterInput"
-                    >
-                    <button v-if="filterInput" class="filter-input-clear" @click="filterInput = ''; filterQuery = '';">&times;</button>
-                    <button v-if="availableFilters.length > 0" class="filter-btn" @click.stop="toggleFilterPanel()" v-tooltip="t('app_label_filters')">
-                        <LucideSlidersHorizontal :size="14" />
-                        <span v-if="activeFilterCount > 0" class="filter-badge">{{ activeFilterCount }}</span>
-                    </button>
-                    <div class="filter-panel" v-show="filterPanelOpen" @click.stop>
-                        <div class="filter-panel-header">
-                            <span>{{ t('app_label_filters') }}</span>
-                            <a v-if="activeFilterCount > 0" href="#" class="filter-clear" @click.prevent="clearAllFilters()">{{ t('app_label_clear_all') }}</a>
-                            <button class="filter-panel-close" @click="filterPanelOpen = false">&times;</button>
-                        </div>
-                        <template v-for="def in availableFilters" :key="def.key">
-                            <div v-if="def.type !== 'range'" class="filter-group">
-                                <div class="filter-group-label">{{ t(def.label) }}</div>
-                                <div v-if="def.type === 'discrete'" class="filter-chips">
-                                    <button
-                                        v-if="def.key === 'ui_ammo_types'"
-                                        class="filter-chip filter-chip-alt"
-                                        :class="{ active: includeAltAmmo }"
-                                        @click="includeAltAmmo = !includeAltAmmo; pushUrlState()"
-                                    >{{ t('app_filter_include_alt_ammo') }}</button>
-                                    <button
-                                        v-for="v in def.values"
-                                        :key="v"
-                                        class="filter-chip"
-                                        :class="{ active: isDiscreteActive(def.key, v) }"
-                                        :style="filterChipStyle(def.key, v)"
-                                        @click="toggleDiscreteFilter(def.key, v)"
-                                    >{{ filterValueLabel(def, v) }}</button>
-                                </div>
-                                <div v-else-if="def.type === 'has-effect'" class="filter-chips">
-                                    <button
-                                        v-for="v in def.values"
-                                        :key="v"
-                                        class="filter-chip"
-                                        :class="{ active: isDiscreteActive(def.key, v) }"
-                                        @click="toggleDiscreteFilter(def.key, v)"
-                                    >{{ t(v) }}</button>
-                                </div>
-                                <div v-else-if="def.type === 'flag'" class="filter-chips">
-                                    <button
-                                        class="filter-chip"
-                                        :class="{ active: activeFilters[def.key] === true }"
-                                        @click="toggleFlagFilter(def.key, true)"
-                                    >{{ t('app_label_yes') }}</button>
-                                    <button
-                                        class="filter-chip"
-                                        :class="{ active: activeFilters[def.key] === false }"
-                                        @click="toggleFlagFilter(def.key, false)"
-                                    >{{ t('app_label_no') }}</button>
-                                </div>
-                            </div>
-                        </template>
-                        <div v-if="rangeFilters.length > 0" class="range-filters-grid">
-                            <div class="range-filters-col">
-                                <div v-for="def in rangeFiltersLeft" :key="def.key" class="range-filter-cell">
-                                    <div class="filter-group-label">{{ t(def.label) }}</div>
-                                    <div class="range-inputs">
-                                        <div class="range-input-wrap">
-                                            <input type="number" class="range-input"
-                                                   :placeholder="def.dataMin" :step="def.step"
-                                                   :value="activeFilters[def.key]?.[0] ?? ''"
-                                                   @input="setRangeMin(def.key, $event.target.value)">
-                                            <div class="range-spinners">
-                                                <button class="range-spin-btn" tabindex="-1" @click="stepRange(def.key, 'min', 1)">&#x25B2;</button>
-                                                <button class="range-spin-btn" tabindex="-1" @click="stepRange(def.key, 'min', -1)">&#x25BC;</button>
-                                            </div>
-                                        </div>
-                                        <span class="range-sep">&ndash;</span>
-                                        <div class="range-input-wrap">
-                                            <input type="number" class="range-input"
-                                                   :placeholder="def.dataMax" :step="def.step"
-                                                   :value="activeFilters[def.key]?.[1] ?? ''"
-                                                   @input="setRangeMax(def.key, $event.target.value)">
-                                            <div class="range-spinners">
-                                                <button class="range-spin-btn" tabindex="-1" @click="stepRange(def.key, 'max', 1)">&#x25B2;</button>
-                                                <button class="range-spin-btn" tabindex="-1" @click="stepRange(def.key, 'max', -1)">&#x25BC;</button>
-                                            </div>
-                                        </div>
-                                        <span class="range-unit">{{ def.unit || '' }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="range-filters-divider"></div>
-                            <div class="range-filters-col">
-                                <div v-for="def in rangeFiltersRight" :key="def.key" class="range-filter-cell">
-                                    <div class="filter-group-label">{{ t(def.label) }}</div>
-                                    <div class="range-inputs">
-                                        <div class="range-input-wrap">
-                                            <input type="number" class="range-input"
-                                                   :placeholder="def.dataMin" :step="def.step"
-                                                   :value="activeFilters[def.key]?.[0] ?? ''"
-                                                   @input="setRangeMin(def.key, $event.target.value)">
-                                            <div class="range-spinners">
-                                                <button class="range-spin-btn" tabindex="-1" @click="stepRange(def.key, 'min', 1)">&#x25B2;</button>
-                                                <button class="range-spin-btn" tabindex="-1" @click="stepRange(def.key, 'min', -1)">&#x25BC;</button>
-                                            </div>
-                                        </div>
-                                        <span class="range-sep">&ndash;</span>
-                                        <div class="range-input-wrap">
-                                            <input type="number" class="range-input"
-                                                   :placeholder="def.dataMax" :step="def.step"
-                                                   :value="activeFilters[def.key]?.[1] ?? ''"
-                                                   @input="setRangeMax(def.key, $event.target.value)">
-                                            <div class="range-spinners">
-                                                <button class="range-spin-btn" tabindex="-1" @click="stepRange(def.key, 'max', 1)">&#x25B2;</button>
-                                                <button class="range-spin-btn" tabindex="-1" @click="stepRange(def.key, 'max', -1)">&#x25BC;</button>
-                                            </div>
-                                        </div>
-                                        <span class="range-unit">{{ def.unit || '' }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="filter-panel-backdrop" v-show="filterPanelOpen" @click="closeFilterPanel()"></div>
-                <div class="sort-wrap" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates" v-click-outside="closeSortMenu">
-                    <button class="sort-btn" @click.stop="sortMenuOpen = !sortMenuOpen" v-tooltip="t('app_label_sort')">
-                        <LucideArrowUpDown :size="14" />
-                        <span class="sort-btn-label">{{ headerLabel(sortCol) }}</span>
-                        <span class="sort-btn-dir">{{ sortAsc ? '\u25B2' : '\u25BC' }}</span>
-                    </button>
-                    <div class="sort-menu" v-show="sortMenuOpen" @click.stop>
-                        <div class="sort-menu-header">{{ t('app_label_sort_by') }}</div>
-                        <button
-                            v-for="h in sortableFields"
-                            :key="h"
-                            class="sort-menu-item"
-                            :class="{ active: sortCol === h }"
-                            @click="pickSort(h)"
-                        >
-                            <span class="sort-menu-check">{{ sortCol === h ? '\u2713' : '' }}</span>
-                            <span>{{ headerLabel(h) }}</span>
-                        </button>
-                        <div class="sort-menu-divider"></div>
-                        <button class="sort-menu-item" @click="sortAsc = !sortAsc; pushUrlState()">
-                            <span class="sort-menu-check">{{ sortAsc ? '\u25B2' : '\u25BC' }}</span>
-                            <span>{{ sortAsc ? 'Ascending' : 'Descending' }}</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="sort-wrap" v-show="isToolkitRates" v-click-outside="closeSortMenu">
-                    <button class="sort-btn" @click.stop="sortMenuOpen = !sortMenuOpen" v-tooltip="t('app_label_sort')">
-                        <LucideArrowUpDown :size="14" />
-                        <span class="sort-btn-label">{{ toolkitSortCol === '_name' ? t('app_label_map') : (toolkitSortCol ? t(toolkitSortCol) : t('app_label_sort')) }}</span>
-                        <span class="sort-btn-dir">{{ toolkitSortAsc ? '\u25B2' : '\u25BC' }}</span>
-                    </button>
-                    <div class="sort-menu" v-show="sortMenuOpen" @click.stop>
-                        <div class="sort-menu-header">{{ t('app_label_sort_by') }}</div>
-                        <button class="sort-menu-item" :class="{ active: toolkitSortCol === '_name' }" @click="toggleToolkitSort('_name'); sortMenuOpen = false">
-                            <span class="sort-menu-check">{{ toolkitSortCol === '_name' ? '\u2713' : '' }}</span>
-                            <span>{{ t('app_label_map') }}</span>
-                        </button>
-                        <button v-for="tt in (toolkitRates ? toolkitRates.toolTypes : [])" :key="tt" class="sort-menu-item" :class="{ active: toolkitSortCol === tt }" @click="toggleToolkitSort(tt); sortMenuOpen = false">
-                            <span class="sort-menu-check">{{ toolkitSortCol === tt ? '\u2713' : '' }}</span>
-                            <span>{{ t(tt) }}</span>
-                        </button>
-                        <div class="sort-menu-divider"></div>
-                        <button class="sort-menu-item" @click="toolkitSortAsc = !toolkitSortAsc">
-                            <span class="sort-menu-check">{{ toolkitSortAsc ? '\u25B2' : '\u25BC' }}</span>
-                            <span>{{ toolkitSortAsc ? 'Ascending' : 'Descending' }}</span>
-                        </button>
-                    </div>
-                </div>
-                <button v-if="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCraftingTrees && favoriteIds.length > 0"
-                        class="fav-filter-btn" :class="{ active: showFavoritesOnly }"
-                        @click="showFavoritesOnly = !showFavoritesOnly; pushUrlState()"
-                        v-tooltip="showFavoritesOnly ? t('app_tooltip_showing_favs') : t('app_tooltip_show_favs')">
-                    <span class="fav-filter-star">&#9733;</span>
-                </button>
-                <span class="item-count" v-if="!isOutfitExchange && !isCraftingTrees">{{ sortedItems.length }} {{ t('app_label_items') }}</span>
-                <span class="item-count" v-if="isOutfitExchange && outfitExchange">{{ filteredExchanges.length }} {{ t('app_label_exchanges') }}</span>
-                <div class="view-toggle" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates">
-                    <button :class="{ active: viewMode === 'table' }" @click="setViewMode('table')" v-tooltip="t('app_label_table_view')">
-                        <LucideList :size="16" />
-                    </button>
-                    <button :class="{ active: viewMode === 'tiles' }" @click="setViewMode('tiles')" v-tooltip="t('app_label_tile_view')">
-                        <LucideLayoutGrid :size="16" />
-                    </button>
-                </div>
-                <div class="utility-group">
-                    <button class="copy-link-btn" :class="{ copied: copyLinkFeedback }" @click="copyLink()" v-tooltip="copyLinkFeedback ? t('app_label_copied') : t('app_label_copy_link_view')">
-                        <LucideLink v-show="!copyLinkFeedback" :size="16" />
-                        <svg v-show="copyLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    </button>
-                    <div class="download-wrap" v-show="(!isOutfitExchange && !isMaterialsCategory && !isCraftingTrees) || isToolkitRates"
-                         v-click-outside="closeDownloadMenu">
-                        <button class="download-btn" @click.stop="downloadMenuOpen = !downloadMenuOpen" v-tooltip="t('app_label_download')">
-                            <LucideDownload :size="16" />
-                        </button>
-                        <div class="download-menu" v-show="downloadMenuOpen">
-                            <button class="download-menu-item" @click="downloadData('csv')">{{ t('app_label_download_csv') }}</button>
-                            <button class="download-menu-item" @click="downloadData('json')">{{ t('app_label_download_json') }}</button>
-                        </div>
-                    </div>
-                    <div class="settings-wrap" v-show="!isToolkitRates" v-click-outside="closeSettings">
-                        <button class="settings-btn" @click.stop="settingsOpen = !settingsOpen" v-tooltip="t('app_label_settings')">
-                            <LucideSettings :size="16" />
-                        </button>
-                        <div class="settings-menu" v-show="settingsOpen">
-                            <div class="settings-header">{{ t('app_label_display') }}</div>
-                            <div class="settings-item" @click.stop="toggleHideNoDrop()">
-                                <span class="toggle-switch" :class="{ on: hideNoDrop }"><span class="toggle-knob"></span></span>
-                                <span>{{ t('app_label_hide_no_drop') }}</span>
-                            </div>
-                            <div class="settings-item" @click.stop="toggleHideUnusedAmmo()">
-                                <span class="toggle-switch" :class="{ on: hideUnusedAmmo }"><span class="toggle-knob"></span></span>
-                                <span>{{ t('app_label_hide_unused_ammo') }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="active-filters" v-if="activeFilterChips.length > 0">
-                <span v-for="(chip, idx) in activeFilterChips" :key="idx" class="active-filter-chip">
-                    <span class="active-filter-label">{{ t(chip.label) }}<template v-if="chip.display">: {{ chip.display }}</template></span>
-                    <button class="active-filter-remove" @click="removeFilter(chip)">&times;</button>
-                </span>
-                <a href="#" class="filter-clear-inline" @click.prevent="clearAllFilters()">{{ t('app_label_clear_all') }}</a>
-            </div>
+            <FilterBar
+                ref="filterBar"
+                :filter-input="filterInput"
+                :filter-query="filterQuery"
+                :available-filters="availableFilters"
+                :range-filters="rangeFilters"
+                :range-filters-left="rangeFiltersLeft"
+                :range-filters-right="rangeFiltersRight"
+                :active-filters="activeFilters"
+                :active-filter-count="activeFilterCount"
+                :active-filter-chips="activeFilterChips"
+                :include-alt-ammo="includeAltAmmo"
+                :sort-col="sortCol"
+                :sort-asc="sortAsc"
+                :sortable-fields="sortableFields"
+                :view-mode="viewMode"
+                :sorted-items="sortedItems"
+                :favorite-ids="favoriteIds"
+                :show-favorites-only="showFavoritesOnly"
+                :copy-link-feedback="copyLinkFeedback"
+                :favorites-view-active="favoritesViewActive"
+                :recent-view-active="recentViewActive"
+                :is-outfit-exchange="isOutfitExchange"
+                :is-materials-category="isMaterialsCategory"
+                :is-crafting-trees="isCraftingTrees"
+                :is-toolkit-rates="isToolkitRates"
+                :outfit-exchange="outfitExchange"
+                :filtered-exchanges="filteredExchanges"
+                :hide-no-drop="hideNoDrop"
+                :hide-unused-ammo="hideUnusedAmmo"
+                :toolkit-rates="toolkitRates"
+                :toolkit-sort-col="toolkitSortCol"
+                :toolkit-sort-asc="toolkitSortAsc"
+                :build-planner-active="buildPlannerActive"
+                :version-compare-active="versionCompareActive"
+                @update:filter-input="filterInput = $event"
+                @clear-filter-input="filterInput = ''; filterQuery = ''"
+                @clear-all-filters="clearAllFilters()"
+                @toggle-discrete-filter="(key, val) => toggleDiscreteFilter(key, val)"
+                @toggle-flag-filter="(key, val) => toggleFlagFilter(key, val)"
+                @set-range-min="(key, val) => setRangeMin(key, val)"
+                @set-range-max="(key, val) => setRangeMax(key, val)"
+                @step-range="(key, bound, delta) => stepRange(key, bound, delta)"
+                @remove-filter="(chip) => removeFilter(chip)"
+                @toggle-include-alt-ammo="includeAltAmmo = !includeAltAmmo; pushUrlState()"
+                @pick-sort="(col) => { sortCol = col; pushUrlState() }"
+                @toggle-sort-dir="sortAsc = !sortAsc; pushUrlState()"
+                @toggle-toolkit-sort="(col) => toggleToolkitSort(col)"
+                @toggle-toolkit-sort-dir="toolkitSortAsc = !toolkitSortAsc"
+                @toggle-show-favorites-only="showFavoritesOnly = !showFavoritesOnly; pushUrlState()"
+                @set-view-mode="(mode) => setViewMode(mode)"
+                @copy-link="copyLink()"
+                @download-data="(format) => downloadData(format)"
+                @toggle-hide-no-drop="toggleHideNoDrop()"
+                @toggle-hide-unused-ammo="toggleHideUnusedAmmo()"
+            />
             <div v-if="favoritesViewActive && favoriteIds.length === 0" class="favorites-empty">
                 <p>{{ t('app_label_no_favorites_1') }} <span class="fav-icon-inline">&#9734;</span> {{ t('app_label_no_favorites_2') }}</p>
             </div>
@@ -1786,6 +1613,7 @@
 
 <script>
 import { appDefinition } from "../js/app.js";
+import FilterBar from "./components/FilterBar.vue";
 import FooterBar from "./components/FooterBar.vue";
 import HeaderBar from "./components/HeaderBar.vue";
 import SidebarNav from "./components/SidebarNav.vue";
@@ -1794,6 +1622,7 @@ export default {
   ...appDefinition,
   components: {
     ...appDefinition.components,
+    FilterBar,
     FooterBar,
     HeaderBar,
     SidebarNav,
@@ -1803,6 +1632,10 @@ export default {
       t: this.t,
       tName: this.tName,
       tCat: this.tCat,
+      headerLabel: this.headerLabel,
+      filterChipStyle: this.filterChipStyle,
+      filterValueLabel: this.filterValueLabel,
+      isDiscreteActive: this.isDiscreteActive,
     };
   },
 };

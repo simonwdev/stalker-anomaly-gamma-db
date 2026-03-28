@@ -1858,7 +1858,7 @@ export const appDefinition = {
             this.exchangeFactionFilter = null;
             this.activeFilters = {};
             this.includeAltAmmo = false;
-            this.filterPanelOpen = false;
+            if (this.$refs.filterBar) this.$refs.filterBar.closeFilterPanel();
             this.sidebarOpen = false;
 
             // Restore saved filters for the new category
@@ -2396,7 +2396,7 @@ export const appDefinition = {
             this.sortCol = "pda_encyclopedia_name";
             this.sortAsc = true;
             this.activeFilters = {};
-            this.filterPanelOpen = false;
+            if (this.$refs.filterBar) this.$refs.filterBar.closeFilterPanel();
             this.sidebarOpen = false;
         },
 
@@ -2828,78 +2828,26 @@ export const appDefinition = {
         },
 
         closeSettings() {
-            this.settingsOpen = false;
+            if (this.$refs.filterBar) this.$refs.filterBar.closeSettings();
         },
         closeSortMenu() {
-            this.sortMenuOpen = false;
+            if (this.$refs.filterBar) this.$refs.filterBar.closeSortMenu();
         },
         pickSort(col) {
             this.sortCol = col;
-            this.sortMenuOpen = false;
             this.pushUrlState();
         },
 
         closeFilterPanel() {
-            this.filterPanelOpen = false;
-            if (this._filterPanelCleanup) {
-                this._filterPanelCleanup();
-                this._filterPanelCleanup = null;
-            }
-            // Clear Floating UI inline styles and fullscreen class
-            const panel = document.querySelector('.filter-panel');
-            if (panel) {
-                panel.style.left = ''; panel.style.top = '';
-                panel.classList.remove('filter-panel-fullscreen');
-            }
-            document.body.classList.remove('filter-fullscreen-active');
+            if (this.$refs.filterBar) this.$refs.filterBar.closeFilterPanel();
         },
 
         toggleFilterPanel() {
-            if (this.filterPanelOpen) {
-                this.closeFilterPanel();
-                return;
-            }
-            this.filterPanelOpen = true;
-            this.$nextTick(() => {
-                const btn = document.querySelector('.filter-btn');
-                const panel = document.querySelector('.filter-panel');
-                if (!btn || !panel) return;
-                // Use full-screen overlay on mobile or when panel won't fit as dropdown
-                const isMobile = window.matchMedia('(max-width: 768px)').matches;
-                const contentWidth = document.querySelector('.filter-bar')?.offsetWidth || window.innerWidth;
-                if (isMobile || contentWidth < 600) {
-                    panel.classList.add('filter-panel-fullscreen');
-                    document.body.classList.add('filter-fullscreen-active');
-                    return;
-                }
-                panel.classList.remove('filter-panel-fullscreen');
-                document.body.classList.remove('filter-fullscreen-active');
-                this._filterPanelCleanup = FloatingUIDOM.autoUpdate(btn, panel, () => {
-                    FloatingUIDOM.computePosition(btn, panel, {
-                        strategy: 'fixed',
-                        placement: 'bottom-start',
-                        middleware: [
-                            FloatingUIDOM.offset(6),
-                            FloatingUIDOM.flip(),
-                            FloatingUIDOM.shift({
-                                padding: 8,
-                                crossAxis: false,
-                                boundary: {
-                                    x: 0, y: 0,
-                                    width: window.innerWidth,
-                                    height: window.innerHeight,
-                                },
-                            }),
-                        ],
-                    }).then(({ x, y }) => {
-                        Object.assign(panel.style, { position: 'fixed', left: `${x}px`, top: `${y}px` });
-                    });
-                });
-            });
+            if (this.$refs.filterBar) this.$refs.filterBar.toggleFilterPanel();
         },
 
         closeDownloadMenu() {
-            this.downloadMenuOpen = false;
+            if (this.$refs.filterBar) this.$refs.filterBar.closeDownloadMenu();
         },
 
         buildExportColumns() {
@@ -2919,7 +2867,6 @@ export const appDefinition = {
         },
 
         downloadData(format) {
-            this.downloadMenuOpen = false;
             if (this.isToolkitRates) return this.downloadToolkitRates(format);
             const cols = this.buildExportColumns();
             const rows = this.sortedItems;
@@ -3962,14 +3909,10 @@ export const appDefinition = {
                 this.buildSavedDropdownOpen = false;
             } else if (this.compareMenuOpen) {
                 this.compareMenuOpen = false;
-            } else if (this.sortMenuOpen) {
-                this.sortMenuOpen = false;
-            } else if (this.downloadMenuOpen) {
-                this.downloadMenuOpen = false;
+            } else if (this.$refs.filterBar && this.$refs.filterBar.hasOpenPanel()) {
+                this.$refs.filterBar.closeAllPanels();
             } else if (this.sidebarOpen) {
                 this.sidebarOpen = false;
-            } else if (this.filterPanelOpen) {
-                this.filterPanelOpen = false;
             } else if (this.compareOpen) {
                 this.closeCompare();
             } else if (this.modalOpen) {
