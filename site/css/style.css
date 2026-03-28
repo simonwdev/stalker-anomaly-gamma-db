@@ -4125,6 +4125,14 @@ kbd {
     font-size: 0.75rem;
     margin: 0;
 }
+.save-import-warning {
+    background: rgba(255, 183, 77, 0.12);
+    border: 1px solid rgba(255, 183, 77, 0.35);
+    color: #ffb74d;
+    font-size: 0.72rem;
+    padding: 0.4rem 0.65rem;
+    border-radius: 4px;
+}
 .save-import-preview {
     display: flex;
     flex-direction: column;

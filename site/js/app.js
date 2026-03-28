@@ -4770,6 +4770,7 @@ const app = createApp({
                     if (compatibleAmmo.has(id)) addUnique(preview.stash.ammo, id);
                 }
 
+                preview.missingSCOC = !scocFile;
                 this.saveImportPreview = preview;
             } catch (e) {
                 this.saveImportError = e.message || "Failed to parse save file";

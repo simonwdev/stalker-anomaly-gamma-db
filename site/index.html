@@ -1626,6 +1626,10 @@
                     <span class="save-import-stats">{{ saveImportPreview.totalItems }} {{ t('app_save_import_items_found') || 'items found' }}<span v-if="saveImportPreview.stashCount"> &middot; {{ saveImportPreview.stashCount }} in stash</span><span v-if="saveImportPreview.skipped.length"> &middot; {{ saveImportPreview.skipped.length }} {{ t('app_save_import_skipped') || 'consumables/materials skipped' }}</span></span>
                 </div>
 
+                <div v-if="saveImportPreview.missingSCOC" class="save-import-warning">
+                    {{ t('app_save_import_warn_missing_scoc') || 'Only .scop file provided — add the .scoc file for accurate equipped item detection' }}
+                </div>
+
                 <!-- Global options -->
                 <div class="save-import-options">
                     <label class="save-import-stash-toggle"><input type="checkbox" v-model="saveImportIncludeAmmo"> {{ t('app_save_import_include_ammo') || 'Include ammo' }}</label>
