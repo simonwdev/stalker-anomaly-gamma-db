@@ -10,6 +10,9 @@
             <button :class="{ active: buildPlannerActive }" @click="$emit('openBuildPlanner')">
                 <span class="cat-label">{{ t('app_cat_build_planner') }}</span>
             </button>
+            <button :class="{ active: versionCompareActive }" @click="$emit('openVersionCompare')">
+                <span class="cat-label">{{ t('app_cat_version_compare') }}</span>
+            </button>
         </div>
     </div>
     <div class="sidebar-group">
@@ -66,7 +69,7 @@ export default {
         recentViewActive: { type: Boolean, default: false },
     },
     emits: [
-        'toggleGroup', 'openBuildPlanner', 'selectFavorites', 'selectRecent',
+        'toggleGroup', 'openBuildPlanner', 'openVersionCompare', 'selectFavorites', 'selectRecent',
         'selectCategory', 'toggleSidebarCollapse',
     ],
     inject: ['t', 'tCat'],

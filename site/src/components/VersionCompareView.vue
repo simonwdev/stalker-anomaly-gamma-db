@@ -22,7 +22,47 @@
                     <svg class="filter-input-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                     <input type="text" :value="versionCompareFilter" @input="$emit('update:versionCompareFilter', $event.target.value)" :placeholder="t('app_label_filter_placeholder')" class="filter-input">
                 </div>
-                <span class="version-compare-count">{{ versionCompareTotal }} {{ t('app_label_changes') }}</span>
+                <div v-if="categoryKeys.length > 1" class="compare-wrap" v-click-outside="closeCategoryMenu">
+                    <button class="version-compare-pack-btn" @click.stop="categoryMenuOpen = !categoryMenuOpen">
+                        {{ categoryFilter.length ? categoryFilter.length + ' ' + t('app_label_categories') : t('app_label_all_categories') }}
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="compare-menu version-compare-property-menu" v-show="categoryMenuOpen" @click.stop>
+                        <div class="sort-menu-header">{{ t('app_label_filter_by_category') }}</div>
+                        <button v-if="categoryFilter.length" class="sort-menu-item" @click="$emit('update:categoryFilter', [])">
+                            <span class="sort-menu-check"></span>
+                            <span>{{ t('app_label_clear') }}</span>
+                        </button>
+                        <div class="sort-menu-divider"></div>
+                        <div class="version-compare-property-list">
+                            <button v-for="cat in categoryKeys" :key="cat" class="sort-menu-item" :class="{ active: categoryFilter.includes(cat) }" @click="toggleCategory(cat)">
+                                <span class="sort-menu-check">{{ categoryFilter.includes(cat) ? '\u2713' : '' }}</span>
+                                <span>{{ t(singularCategory(cat)) || tCat(cat) }}</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div v-if="propertyKeys.length" class="compare-wrap" v-click-outside="closePropertyMenu">
+                    <button class="version-compare-pack-btn" @click.stop="propertyMenuOpen = !propertyMenuOpen">
+                        {{ propertyFilter.length ? propertyFilter.length + ' ' + t('app_label_properties') : t('app_label_all_properties') }}
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="compare-menu version-compare-property-menu" v-show="propertyMenuOpen" @click.stop>
+                        <div class="sort-menu-header">{{ t('app_label_filter_by_property') }}</div>
+                        <button v-if="propertyFilter.length" class="sort-menu-item" @click="$emit('update:propertyFilter', [])">
+                            <span class="sort-menu-check"></span>
+                            <span>{{ t('app_label_clear') }}</span>
+                        </button>
+                        <div class="sort-menu-divider"></div>
+                        <div class="version-compare-property-list">
+                            <button v-for="key in propertyKeys" :key="key" class="sort-menu-item" :class="{ active: propertyFilter.includes(key) }" @click="toggleProperty(key)">
+                                <span class="sort-menu-check">{{ propertyFilter.includes(key) ? '\u2713' : '' }}</span>
+                                <span>{{ headerLabel(key) }}</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <span class="version-compare-count">{{ filteredTotal }} {{ t('app_label_changes') }}</span>
                 <span class="version-compare-spacer"></span>
                 <div class="utility-group">
                     <button class="copy-link-btn" :class="{ copied: copyLinkFeedback }" @click="$emit('copyLink')" v-tooltip="copyLinkFeedback ? t('app_label_copied') : t('app_label_copy_link')">
@@ -76,17 +116,54 @@ export default {
         versionCompareTotal: { type: Number, default: 0 },
         versionCompareLoading: { type: Boolean, default: false },
         versionCompareFilter: { type: String, default: "" },
+        propertyKeys: { type: Array, default: () => [] },
+        propertyFilter: { type: Array, default: () => [] },
+        categoryKeys: { type: Array, default: () => [] },
+        categoryFilter: { type: Array, default: () => [] },
         copyLinkFeedback: { type: Boolean, default: false },
     },
-    emits: ["update:versionCompareFilter", "pickComparePack", "copyLink", "exportVersionCompare", "navigateToItem"],
+    emits: ["update:versionCompareFilter", "update:propertyFilter", "update:categoryFilter", "pickComparePack", "copyLink", "exportVersionCompare", "navigateToItem"],
     data() {
         return {
             compareMenuOpen: false,
+            propertyMenuOpen: false,
+            categoryMenuOpen: false,
         };
+    },
+    computed: {
+        filteredTotal() {
+            return this.filteredVersionCompareResults.reduce((sum, g) => sum + g.items.length, 0);
+        },
     },
     methods: {
         closeCompareMenu() {
             this.compareMenuOpen = false;
+        },
+        closePropertyMenu() {
+            this.propertyMenuOpen = false;
+        },
+        closeCategoryMenu() {
+            this.categoryMenuOpen = false;
+        },
+        toggleCategory(cat) {
+            const current = [...this.categoryFilter];
+            const idx = current.indexOf(cat);
+            if (idx >= 0) {
+                current.splice(idx, 1);
+            } else {
+                current.push(cat);
+            }
+            this.$emit('update:categoryFilter', current);
+        },
+        toggleProperty(key) {
+            const current = [...this.propertyFilter];
+            const idx = current.indexOf(key);
+            if (idx >= 0) {
+                current.splice(idx, 1);
+            } else {
+                current.push(key);
+            }
+            this.$emit('update:propertyFilter', current);
         },
     },
 };

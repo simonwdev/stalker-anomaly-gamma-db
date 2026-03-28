@@ -288,6 +288,19 @@ function loadCategoryFilters(packId, slug) {
     } catch (e) { return null; }
 }
 
+function saveVersionCompareFilters(packId, state) {
+    try {
+        localStorage.setItem(`vcFilters:${packId}`, JSON.stringify(state));
+    } catch (e) { /* quota or private mode */ }
+}
+
+function loadVersionCompareFilters(packId) {
+    try {
+        const raw = localStorage.getItem(`vcFilters:${packId}`);
+        return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+}
+
 function debounce(fn, ms) {
     let timer;
     return function (...args) {
@@ -415,6 +428,8 @@ export const appDefinition = {
             versionCompareLoading: false,
             versionCompareResults: [],
             versionCompareFilter: "",
+            versionComparePropertyFilter: [],
+            versionCompareCategoryFilter: [],
             shortcutHelpOpen: false,
             quickNavOpen: false,
             _chordKey: null,
@@ -658,12 +673,37 @@ export const appDefinition = {
             return this.versionCompareResults.reduce((sum, g) => sum + g.items.length, 0);
         },
 
+        versionComparePropertyKeys() {
+            const keys = new Set();
+            for (const group of this.versionCompareResults) {
+                for (const item of group.items) {
+                    for (const d of item.diffs) keys.add(d.key);
+                }
+            }
+            return [...keys].sort((a, b) => this.headerLabel(a).localeCompare(this.headerLabel(b)));
+        },
+
+        versionCompareCategoryKeys() {
+            return this.versionCompareResults.map(g => g.category).sort((a, b) => {
+                const aLabel = this.t(this.singularCategory(a)) || this.tCat(a);
+                const bLabel = this.t(this.singularCategory(b)) || this.tCat(b);
+                return aLabel.localeCompare(bLabel);
+            });
+        },
+
         filteredVersionCompareResults() {
-            if (!this.versionCompareFilter) return this.versionCompareResults;
-            const q = this.versionCompareFilter.toLowerCase();
+            const q = this.versionCompareFilter ? this.versionCompareFilter.toLowerCase() : "";
+            const propFilter = this.versionComparePropertyFilter;
+            const catFilter = this.versionCompareCategoryFilter;
+            if (!q && !propFilter.length && !catFilter.length) return this.versionCompareResults;
             const groups = [];
             for (const group of this.versionCompareResults) {
-                const items = group.items.filter(item => item.name.toLowerCase().includes(q));
+                if (catFilter.length && !catFilter.includes(group.category)) continue;
+                const items = group.items.filter(item => {
+                    if (q && !item.name.toLowerCase().includes(q)) return false;
+                    if (propFilter.length && !item.diffs.some(d => propFilter.includes(d.key))) return false;
+                    return true;
+                });
                 if (items.length) groups.push({ ...group, items });
             }
             return groups;
@@ -2240,6 +2280,28 @@ export const appDefinition = {
 
         pickComparePack(id) {
             this.crossPackId = id;
+            this.versionCompareFilter = "";
+            this.versionComparePropertyFilter = [];
+            this.versionCompareCategoryFilter = [];
+        },
+
+        _saveVersionCompareFilters() {
+            if (!this.activePack) return;
+            saveVersionCompareFilters(this.activePack.id, {
+                filter: this.versionCompareFilter,
+                propertyFilter: this.versionComparePropertyFilter,
+                categoryFilter: this.versionCompareCategoryFilter,
+            });
+        },
+
+        _restoreVersionCompareFilters() {
+            if (!this.activePack) return;
+            const saved = loadVersionCompareFilters(this.activePack.id);
+            if (saved) {
+                this.versionCompareFilter = saved.filter || "";
+                this.versionComparePropertyFilter = saved.propertyFilter || [];
+                this.versionCompareCategoryFilter = saved.categoryFilter || [];
+            }
         },
 
         closeCompareMenu() {
@@ -2272,12 +2334,13 @@ export const appDefinition = {
         openVersionCompare() {
             this.resetViewState();
             this.versionCompareActive = true;
+            this._restoreVersionCompareFilters();
             this.pushUrlState(true);
             if (this.crossPackId) this.loadVersionCompareData();
         },
 
         async loadVersionCompareData() {
-            if (!this.crossPackId) { this.versionCompareResults = []; return; }
+            if (!this.crossPackId) { this.versionCompareResults = []; this.versionComparePropertyFilter = []; this.versionCompareCategoryFilter = []; this.versionCompareFilter = ""; return; }
             this.versionCompareLoading = true;
             try {
                 const packId = this.crossPackId;
@@ -2364,7 +2427,12 @@ export const appDefinition = {
 
         navigateModal(direction) {
             if (!this.modalOpen || !this.modalItem || this.modalLoading) return;
-            const items = this.sortedItems;
+            let items;
+            if (this.versionCompareActive) {
+                items = this.filteredVersionCompareResults.flatMap(g => g.items);
+            } else {
+                items = this.sortedItems;
+            }
             if (!items.length) return;
             const idx = items.findIndex(i => i.id === this.modalItem.id);
             if (idx < 0) return;
@@ -3866,6 +3934,7 @@ export const appDefinition = {
             } else if (parsed.versionCompare || legacyCat === "version-compare") {
                 this.versionCompareActive = true;
                 this.activeCategory = null;
+                this._restoreVersionCompareFilters();
                 if (this.crossPackId) this.loadVersionCompareData();
             } else if (parsed.favorites || legacyCat === "favorites") {
                 this.favoritesViewActive = true;
@@ -5708,6 +5777,9 @@ export const appDefinition = {
             this.loadCrossPackItem(val);
             if (this.versionCompareActive) this.loadVersionCompareData();
         },
+        versionCompareFilter() { this._saveVersionCompareFilters(); },
+        versionComparePropertyFilter() { this._saveVersionCompareFilters(); },
+        versionCompareCategoryFilter() { this._saveVersionCompareFilters(); },
         compareViewMode(mode) {
             if (mode === "chart" && this.compareData.length > 0) {
                 this.$nextTick(() => this.renderCompareChart());
@@ -6026,9 +6098,12 @@ export const appDefinition = {
                 this.resetViewState();
                 this.recentViewActive = true;
             } else if (parsed.versionCompare) {
-                this.resetViewState();
-                this.versionCompareActive = true;
-                if (this.crossPackId) this.loadVersionCompareData();
+                if (!this.versionCompareActive) {
+                    this.resetViewState();
+                    this.versionCompareActive = true;
+                    this._restoreVersionCompareFilters();
+                    if (this.crossPackId) this.loadVersionCompareData();
+                }
             } else if (parsed.cat) {
                 const match = this.categories.find(c => categorySlug(c) === parsed.cat) || [...VIRTUAL_CATEGORIES].find(c => categorySlug(c) === parsed.cat);
                 if (match) await this.selectCategory(match);

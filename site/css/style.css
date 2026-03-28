@@ -2058,7 +2058,8 @@ input.range-input {
 
 /* Version Compare */
 .version-compare-view {
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     flex: 1;
     min-height: 0;
     padding-right: 1rem;
@@ -2067,7 +2068,8 @@ input.range-input {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    flex-shrink: 0;
 }
 .version-compare-header h2 {
     font-size: 1.25rem;
@@ -2108,6 +2110,15 @@ input.range-input {
 .version-compare-spacer {
     flex: 1;
 }
+.version-compare-property-menu {
+    max-height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+.version-compare-property-list {
+    overflow-y: auto;
+    flex: 1;
+}
 .version-compare-item-count {
     color: var(--text-secondary);
     font-size: 0.75rem;
@@ -2117,6 +2128,9 @@ input.range-input {
 .version-compare-list {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
 }
 .version-compare-item {
     display: flex;
