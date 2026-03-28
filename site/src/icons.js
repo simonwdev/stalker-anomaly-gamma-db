@@ -5,6 +5,7 @@
  * Replaces the old lucide.createIcons() DOM-scanning approach.
  */
 import {
+  ArrowLeft,
   ArrowUpDown,
   Bookmark,
   Download,
@@ -26,6 +27,7 @@ import {
 } from 'lucide-vue-next';
 
 export const lucideIcons = {
+  LucideArrowLeft: ArrowLeft,
   LucideArrowUpDown: ArrowUpDown,
   LucideBookmark: Bookmark,
   LucideDownload: Download,
@@ -47,6 +49,7 @@ export const lucideIcons = {
 
 /** Map from kebab-case icon name to component (for dynamic icon lookup) */
 export const iconMap = {
+  'arrow-left': ArrowLeft,
   'arrow-up-down': ArrowUpDown,
   'bookmark': Bookmark,
   'download': Download,

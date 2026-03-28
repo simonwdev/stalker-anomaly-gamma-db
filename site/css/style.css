@@ -3370,23 +3370,36 @@ input.range-input {
     margin-left: auto;
 }
 
-.crafting-graph-modal {
-    max-width: min(1300px, calc(100vw - 5rem));
-}
-.crafting-graph-modal-body {
+.crafting-graph-view {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
-    padding: 0.85rem;
+    padding: 0.25rem 0;
+    flex: 1;
     min-height: 0;
-    overflow: hidden;
 }
-.crafting-graph-modal-toolbar {
+.crafting-graph-toolbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 0.5rem;
-    padding-right: 2.6rem;
+}
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.icon-btn:hover {
+    color: var(--text);
+    border-color: var(--accent-dim);
+    background: rgba(255, 255, 255, 0.05);
 }
 .crafting-graph-title {
     font-size: 1rem;
@@ -3414,6 +3427,7 @@ input.range-input {
     border-color: var(--accent);
 }
 .crafting-graph-list {
+    flex: 1;
     border: 1px solid var(--border);
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.01);
@@ -3468,6 +3482,12 @@ input.range-input {
 .crafting-graph-root-wrap {
     display: flex;
     align-items: stretch;
+}
+.crafting-graph-node-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    width: 100%;
 }
 .crafting-graph-ingredients-wrap {
     display: flex;
@@ -3536,14 +3556,41 @@ input.range-input {
     line-height: 1.3;
 }
 .crafting-graph-node-amount {
-    margin-top: 0.1rem;
-    font-size: 0.62rem;
+    margin-top: 0.15rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.crafting-graph-amount-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     color: var(--text-secondary);
+}
+.crafting-graph-amount-value {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.6rem;
+    padding: 0.08rem 0.35rem;
+    border-radius: 4px;
+    border: 1px solid #a8883f;
+    background: rgba(200, 168, 78, 0.2);
+    color: #f3d98f;
+    font-size: 0.72rem;
+    font-weight: 800;
+    line-height: 1.1;
 }
 .crafting-graph-stats {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem;
+}
+.crafting-graph-stats-outside {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.1rem 0.15rem 0;
 }
 .crafting-graph-stat {
     display: inline-flex;
