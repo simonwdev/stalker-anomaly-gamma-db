@@ -3504,22 +3504,43 @@ input.range-input {
     transform: translateY(-50%);
     border-radius: 2px;
 }
-/* Vertical spine: full stretch height of the right column */
-.crafting-graph-right::after {
+.crafting-graph-ingredients-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 0 0 auto;
+    position: relative;
+}
+/* Vertical spine: drawn on the ingredients-wrap, full height then clipped by first/last child */
+.crafting-graph-ingredients-wrap::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: -1.6rem;
     top: 0;
     bottom: 0;
     width: 2px;
     background: linear-gradient(to bottom, #c8a84e 0%, #5b8abd 100%);
     border-radius: 2px;
 }
-.crafting-graph-ingredients-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    flex: 0 0 auto;
+/* Clip spine above first branch midpoint */
+.crafting-graph-ingredient-row:first-child::after {
+    content: "";
+    position: absolute;
+    left: -1.7rem;
+    top: -1px;
+    width: 4px;
+    height: calc(50%);
+    background: #141414;
+}
+/* Clip spine below last branch midpoint */
+.crafting-graph-ingredient-row:last-child::after {
+    content: "";
+    position: absolute;
+    left: -1.7rem;
+    top: 50%;
+    width: 4px;
+    height: calc(50% + 1px);
+    background: #141414;
 }
 .crafting-graph-ingredient-row {
     display: flex;
