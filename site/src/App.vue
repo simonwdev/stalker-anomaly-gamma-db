@@ -178,7 +178,7 @@
                 @navigate-to-item="navigateToItem"
             />
 
-            <CraftingTreesView
+            <CraftingTreesPage
                 :is-crafting-trees="isCraftingTrees"
                 :all-crafting-trees="craftingTrees"
                 :filtered-crafting-trees="filteredCraftingTrees"
@@ -460,7 +460,7 @@ import ItemDetailModal from "./components/ItemDetailModal.vue";
 import { defineAsyncComponent } from 'vue';
 const BuildPlanner = defineAsyncComponent(() => import('./components/BuildPlanner.vue'));
 import ComparePanel from "./components/ComparePanel.vue";
-import CraftingTreesView from "./components/CraftingTreesView.vue";
+import CraftingTreesPage from "./components/crafting-trees-page/CraftingTreesPage.vue";
 import MaterialsView from "./components/MaterialsView.vue";
 import OutfitExchangeView from "./components/OutfitExchangeView.vue";
 import ToolkitRatesView from "./components/ToolkitRatesView.vue";
@@ -480,7 +480,7 @@ export default {
     BuildPickerModal,
     BuildSaveModal,
     ComparePanel,
-    CraftingTreesView,
+    CraftingTreesPage,
     FilterBar,
     FooterBar,
     HeaderBar,

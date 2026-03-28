@@ -3,8 +3,8 @@
         <div class="crafting-trees-toolbar">
             <button class="filter-chip" :class="{ active: !graphViewOpen }" @click="graphViewOpen = false">Tile view</button>
             <button class="filter-chip" :class="{ active: graphViewOpen }" @click="graphViewOpen = true">Tree view</button>
-            <button v-if="!graphViewOpen" class="filter-chip" @click="craftingTreeExpandAll ? $emit('collapseAllTrees') : $emit('expandAllTrees')">
-                {{ craftingTreeExpandAll ? t('app_label_collapse_all') : t('app_label_expand_all') }}
+            <button class="filter-chip crafting-expand-toggle-btn" @click="toggleExpandCollapse()">
+                {{ currentExpandLabel }}
             </button>
             <span class="item-count">{{ filteredCraftingTrees.length }} {{ t('app_label_recipes') }}</span>
         </div>
@@ -39,22 +39,23 @@
             </div>
         </div>
 
-        <CraftingTreesGraphView
+        <CraftingTreesTreeView
             v-else
             :all-crafting-trees="allCraftingTrees"
             :filtered-crafting-trees="filteredCraftingTrees"
+            :expand-all="treeViewExpandAll"
             @navigate-to-item="(id) => $emit('navigateToItem', id)"
         />
     </div>
 </template>
 
 <script>
-import CraftingTreesGraphView from "./CraftingTreesGraphView.vue";
+import CraftingTreesTreeView from "./CraftingTreesTreeView.vue";
 
 export default {
-    name: "CraftingTreesView",
+    name: "CraftingTreesPage",
     components: {
-        CraftingTreesGraphView,
+        CraftingTreesTreeView,
     },
     inject: ["t", "findItemByName"],
     props: {
@@ -68,9 +69,27 @@ export default {
     data() {
         return {
             graphViewOpen: false,
+            treeViewExpandAll: true,
         };
     },
+    computed: {
+        currentExpandLabel() {
+            if (this.graphViewOpen) {
+                return this.treeViewExpandAll ? this.t("app_label_collapse_all") : this.t("app_label_expand_all");
+            }
+            return this.craftingTreeExpandAll ? this.t("app_label_collapse_all") : this.t("app_label_expand_all");
+        },
+    },
     methods: {
+        toggleExpandCollapse() {
+            if (this.graphViewOpen) {
+                this.treeViewExpandAll = !this.treeViewExpandAll;
+                return;
+            }
+            if (this.craftingTreeExpandAll) this.$emit("collapseAllTrees");
+            else this.$emit("expandAllTrees");
+        },
+
         flattenTree(tree) {
             const rows = [];
             const walk = (node, depth, parentPath) => {
@@ -104,3 +123,4 @@ export default {
     },
 };
 </script>
+

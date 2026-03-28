@@ -3326,6 +3326,16 @@ input.range-input {
     gap: 0.75rem;
     padding: 0.25rem 0;
 }
+.crafting-expand-toggle-btn {
+    border-color: #5f7fa8;
+    background: rgba(95, 127, 168, 0.2);
+    color: #a9cbf6;
+}
+.crafting-expand-toggle-btn:hover {
+    border-color: #7e9fca;
+    background: rgba(95, 127, 168, 0.32);
+    color: #c2dcff;
+}
 .crafting-tree-card .tile-card-header {
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.35rem;

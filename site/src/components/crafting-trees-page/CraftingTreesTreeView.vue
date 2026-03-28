@@ -1,15 +1,5 @@
 <template>
 <div class="crafting-graph-view">
-    <div class="crafting-graph-toolbar">
-        <h2 class="crafting-graph-title">Crafting Trees</h2>
-        <span class="item-count">{{ dialogFilteredTrees.length }} {{ t('app_label_recipes') }}</span>
-    </div>
-
-    <div class="crafting-graph-controls">
-        <button class="filter-chip" type="button" @click="expandAllGraphTrees">{{ t('app_label_expand_all') }}</button>
-        <button class="filter-chip" type="button" @click="collapseAllGraphTrees">{{ t('app_label_collapse_all') }}</button>
-    </div>
-
     <div class="crafting-graph-list">
         <div v-for="tree in dialogFilteredTrees" :key="`graph-${tree.id}`" class="crafting-graph-collapsible">
             <button class="crafting-graph-collapsible-head" type="button" @click="toggleGraphTree(tree.id)">
@@ -143,11 +133,12 @@ const GRAPH_LABEL_OVERRIDES = {
 };
 
 export default {
-    name: "CraftingTreesGraphView",
+    name: "CraftingTreesTreeView",
     inject: ["t", "findItemByName", "getItemFields", "headerLabel", "formatValue"],
     props: {
         allCraftingTrees: { type: Array, default: () => [] },
         filteredCraftingTrees: { type: Array, default: () => [] },
+        expandAll: { type: Boolean, default: true },
     },
     emits: ["navigateToItem"],
     data() {
@@ -166,8 +157,19 @@ export default {
             return filtered.slice(0, 36);
         },
     },
-    mounted() {
-        this.expandAllGraphTrees();
+    watch: {
+        expandAll: {
+            immediate: true,
+            handler(next) {
+                if (next) this.expandAllGraphTrees();
+                else this.collapseAllGraphTrees();
+            },
+        },
+        dialogFilteredTrees() {
+            if (this.expandAll) {
+                this.expandAllGraphTrees();
+            }
+        },
     },
     methods: {
         graphStatLabel(key) {
@@ -255,5 +257,6 @@ export default {
     },
 };
 </script>
+
 
 
