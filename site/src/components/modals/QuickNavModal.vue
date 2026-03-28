@@ -9,7 +9,7 @@
                 ref="searchInput"
                 type="text"
                 v-model="query"
-                :placeholder="t('app_quick_nav_placeholder')"
+                placeholder="Search..."
                 class="quick-nav-input"
                 @keydown.escape.stop="$emit('close')"
                 @keydown.up.prevent="moveUp"

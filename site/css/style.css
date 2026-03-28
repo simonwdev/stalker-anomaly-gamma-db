@@ -4043,6 +4043,22 @@ input.range-input {
     color: var(--text);
     text-align: right;
 }
+.shortcut-row--highlight {
+    background: rgba(200, 168, 78, 0.08);
+    border-radius: 4px;
+    margin: 0 -0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+.shortcut-row--highlight dt,
+.shortcut-row--highlight dd {
+    color: var(--accent);
+}
+.shortcut-row--highlight kbd {
+    color: var(--accent);
+    background: rgba(200, 168, 78, 0.15);
+    border-color: rgba(200, 168, 78, 0.35);
+}
 kbd {
     display: inline-block;
     padding: 0.15rem 0.4rem;
