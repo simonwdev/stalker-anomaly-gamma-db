@@ -101,6 +101,89 @@ a:hover {
     border-left: 1px solid var(--border);
     transform: rotate(45deg);
 }
+.tooltip.tooltip-ammo-card {
+    max-width: 340px;
+    padding: 0.4rem;
+}
+.ammo-tooltip {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+.ammo-tooltip-image-wrap {
+    width: 100%;
+    background: #141a1f;
+    border-radius: 6px;
+    border: 1px solid #3d464e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.55rem;
+    min-height: 52px;
+    box-sizing: border-box;
+}
+.ammo-tooltip-image {
+    max-width: 100%;
+    max-height: 66px;
+    object-fit: contain;
+    display: block;
+}
+.ammo-tooltip-body {
+    min-width: 0;
+}
+.ammo-tooltip-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #d8e3ea;
+    line-height: 1.2;
+}
+.ammo-tooltip-desc {
+    margin-top: 0.15rem;
+    color: #c8c8c8;
+    font-size: 0.6rem;
+    line-height: 1.35;
+}
+.ammo-tooltip-highlights {
+    margin-top: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+.ammo-tooltip-chip {
+    display: inline-block;
+    border: 1px solid #3d444d;
+    border-radius: 3px;
+    background: #1c2228;
+    color: #d4dade;
+    font-size: 0.62rem;
+    line-height: 1.2;
+    padding: 0.12rem 0.4rem;
+    font-weight: 600;
+}
+.ammo-tooltip-chip-br {
+    border-color: #5f7fa8;
+    background: rgba(95, 127, 168, 0.2);
+    color: #a9cbf6;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+.ammo-tooltip-chip-dmg {
+    border-color: #a66f47;
+    background: rgba(166, 111, 71, 0.2);
+    color: #ffc9a6;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+.ammo-tooltip-chip-acc {
+    border-color: #4a7a55;
+    background: rgba(74, 122, 85, 0.2);
+    color: #9ed6aa;
+}
+.ammo-tooltip-chip-cost {
+    border-color: #7a6a2a;
+    background: rgba(122, 106, 42, 0.2);
+    color: #e8d48a;
+}
 
 /* Header */
 .site-header {
@@ -772,6 +855,11 @@ a.tile-card-name:hover {
 }
 .tile-ammo-list .badge-ammo {
     white-space: nowrap;
+}
+.table-ammo-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
 }
 .tile-stat-row .badge,
 .tile-stat-row .badge-ammo,

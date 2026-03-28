@@ -3173,6 +3173,15 @@ const app = createApp({
             window.location.hash = id;
         },
 
+        openAmmoFromCaliber(caliberId) {
+            const cal = (caliberId || "").trim();
+            if (!cal) return;
+            const entry = this.calibers[cal];
+            const firstVariant = entry?.variants?.[0];
+            if (!firstVariant?.id) return;
+            this.navigateToItem(firstVariant.id);
+        },
+
         headerLabel(h) {
             if (!h) return "";
             if (h === "_heal") return this.t("app_heal_heals");
@@ -3520,6 +3529,139 @@ const app = createApp({
 
         shortAmmoName(name) {
             return name.replace(/\s*rounds$/i, "").replace(/^Патроны\s*/i, "").replace(/\s*мм\b/i, "").replace(/\s*mm\b/i, "").replace(/\bPst\b/, "PST");
+        },
+
+        escapeHtml(text) {
+            return String(text ?? "").replace(/[&<>"']/g, (ch) => ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;",
+            }[ch]));
+        },
+
+        ammoItemById(id) {
+            if (!id) return null;
+            const ammoItems = this.categoryItems["ammo"] || [];
+            return ammoItems.find(i => i.id === id) || null;
+        },
+
+        ammoDescriptionText(variant) {
+            if (!variant) return "";
+            const ammoItem = this.ammoItemById(variant.id);
+            if (ammoItem) {
+                const parsed = this.parseDescription(ammoItem);
+                if (parsed?.text) return parsed.text;
+            }
+            const key = variant.name ? `${variant.name}_descr` : "";
+            if (!key) return "";
+            const raw = this.t(key);
+            if (!raw || raw === key) return "";
+            return raw.split(/\\n\\s*\\n/)[0].replace(/\\n/g, " ").trim();
+        },
+
+        ammoImageUrl(variant) {
+            if (variant?.id) return `img/icons/${variant.id}.png`;
+            return "img/icons/unknown.png";
+        },
+
+        ammoDescEnRaw(variant, ammoItem) {
+            // Returns raw EN description string (with literal \n sequences) for the given ammo.
+            const descKey = (
+                ammoItem?.st_data_export_description
+                ?? (variant?.name ? `${variant.name}_descr` : "")
+            ).toLowerCase();
+            if (!descKey) return "";
+            return this.translations?.en?.[descKey] ?? "";
+        },
+
+        ammoNominalDmg(variant, ammoItem) {
+            // Parse "Nominal stopping power (DMG): <value>" from the EN description.
+            // Always use EN so the number matches the authoritative game text.
+            const raw = this.ammoDescEnRaw(variant, ammoItem);
+            if (!raw) return null;
+            // Handle occasional double-colon typos in source CSVs
+            const m = raw.match(/\(DMG\)\s*:+\s*([^\n\\]+)/i);
+            if (!m) return null;
+            return m[1].trim() || null;
+        },
+
+        ammoNominalAp(variant, ammoItem) {
+            // Parse "Armor penetration power (AP): <text>" from the EN description.
+            // apClass in calibers.json can be wrong; description is the authoritative source.
+            const raw = this.ammoDescEnRaw(variant, ammoItem);
+            if (!raw) return null;
+            const m = raw.match(/\(AP\)\s*:+\s*([^\n\\]+)/i);
+            if (!m) return null;
+            return m[1].trim() || null;
+        },
+
+        ammoDamageDisplay(variant, ammoItem) {
+            const fromDesc = this.ammoNominalDmg(variant, ammoItem);
+            if (fromDesc) return fromDesc;
+            // Fallback: ammo multiplier × 100 (less accurate but better than nothing)
+            const raw = variant?.ui_inv_damage ?? ammoItem?.ui_inv_damage;
+            const n = parseFloat(raw);
+            if (isNaN(n)) return "--";
+            if (n <= 3) return String(Math.round(n * 100));
+            return String(Math.round(n));
+        },
+
+        ammoBrDisplay(variant, ammoItem) {
+            const fromDesc = this.ammoNominalAp(variant, ammoItem);
+            if (fromDesc) return fromDesc;
+            // Fallback to structured data (may have wrong apClass for some rounds)
+            const apClass = variant?.apClass;
+            const apValue = variant?.apValue ?? ammoItem?.st_data_export_ap;
+            if (apClass != null && apValue != null) return `BR${apClass} (${apValue})`;
+            if (apValue != null) return `AP (${apValue})`;
+            return "--";
+        },
+
+        ammoCostPerRound(variant, ammoItem) {
+            const totalCost = parseFloat(variant?.st_upgr_cost ?? ammoItem?.st_upgr_cost ?? "");
+            const boxSize = parseFloat(ammoItem?.st_data_export_ammo_box_size ?? "");
+            if (isNaN(totalCost)) return null;
+            if (!isNaN(boxSize) && boxSize > 0) return String(Math.round(totalCost / boxSize));
+            return String(Math.round(totalCost));
+        },
+
+        ammoTooltipPayload(caliberId) {
+            const cal = (caliberId || "").trim();
+            if (!cal) return "";
+            const entry = this.calibers[cal];
+            if (!entry || !entry.variants?.length) return this.caliberName(cal);
+            const variant = entry.variants[0];
+            const ammoItem = this.ammoItemById(variant.id);
+            const title = this.escapeHtml(this.shortAmmoName(this.t(entry.name || cal)));
+            const desc = this.escapeHtml(this.ammoDescriptionText(variant));
+            const br = this.escapeHtml(this.ammoBrDisplay(variant, ammoItem));
+            const dmg = this.escapeHtml(this.ammoDamageDisplay(variant, ammoItem));
+            const img = this.escapeHtml(this.ammoImageUrl(variant));
+            const acc = variant?.ui_inv_accuracy ?? ammoItem?.ui_inv_accuracy ?? null;
+            const cpr = this.ammoCostPerRound(variant, ammoItem);
+
+            const chips = [
+                `<span class='ammo-tooltip-chip ammo-tooltip-chip-br'>${br}</span>`,
+                `<span class='ammo-tooltip-chip ammo-tooltip-chip-dmg'>DMG ${dmg}</span>`,
+            ];
+            if (acc != null) chips.push(`<span class='ammo-tooltip-chip ammo-tooltip-chip-acc'>Accuracy ${this.escapeHtml(String(acc))}</span>`);
+            if (cpr != null) chips.push(`<span class='ammo-tooltip-chip ammo-tooltip-chip-cost'>Cost/Round ${this.escapeHtml(cpr)} ₽</span>`);
+
+            return {
+                className: "tooltip-ammo-card",
+                html: [
+                    "<div class='ammo-tooltip'>",
+                    `  <div class='ammo-tooltip-image-wrap'><img class='ammo-tooltip-image' src='${img}' alt='${title}' onerror="this.parentNode.style.display='none'"></div>`,
+                    "  <div class='ammo-tooltip-body'>",
+                    `    <div class='ammo-tooltip-title'>${title}</div>`,
+                    `    <div class='ammo-tooltip-desc'>${desc || "--"}</div>`,
+                    `    <div class='ammo-tooltip-highlights'>${chips.join("")}</div>`,
+                    "  </div>",
+                    "</div>",
+                ].join(""),
+            };
         },
 
         caliberName(val) {
@@ -5349,12 +5491,35 @@ app.directive("tooltip", {
     mounted(el, binding) {
         const tip = document.createElement("div");
         tip.className = "tooltip";
-        tip.textContent = binding.value;
+        const content = document.createElement("div");
+        content.className = "tooltip-content";
+        tip.appendChild(content);
 
         const arrow = document.createElement("div");
         arrow.className = "tooltip-arrow";
         tip.appendChild(arrow);
         document.body.appendChild(tip);
+
+        const setContent = (value) => {
+            const wasVisible = tip.classList.contains("visible");
+            tip.className = "tooltip";
+            if (wasVisible) tip.classList.add("visible");
+            if (value && typeof value === "object") {
+                if (value.className) {
+                    for (const cls of String(value.className).split(/\s+/)) {
+                        if (cls) tip.classList.add(cls);
+                    }
+                }
+                if (value.html != null) {
+                    content.innerHTML = String(value.html);
+                } else {
+                    content.textContent = value.text == null ? "" : String(value.text);
+                }
+                return;
+            }
+            content.textContent = value == null ? "" : String(value);
+        };
+        setContent(binding.value);
 
         function update() {
             FloatingUIDOM.computePosition(el, tip, {
@@ -5382,7 +5547,7 @@ app.directive("tooltip", {
         let cleanup = null;
 
         el._tooltipShow = () => {
-            if (!tip.firstChild.textContent) return;
+            if (!content.textContent && !content.innerHTML.trim()) return;
             tip.classList.add("visible");
             cleanup = FloatingUIDOM.autoUpdate(el, tip, update);
         };
@@ -5397,9 +5562,10 @@ app.directive("tooltip", {
         el.addEventListener("blur", el._tooltipHide);
 
         el._tooltip = tip;
+        el._tooltipSetContent = setContent;
     },
     updated(el, binding) {
-        if (el._tooltip) el._tooltip.firstChild.textContent = binding.value;
+        if (el._tooltip && el._tooltipSetContent) el._tooltipSetContent(binding.value);
     },
     unmounted(el) {
         el.removeEventListener("mouseenter", el._tooltipShow);
