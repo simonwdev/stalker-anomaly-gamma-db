@@ -1,9 +1,6 @@
 <template>
 <div class="crafting-graph-view">
     <div class="crafting-graph-toolbar">
-        <button class="icon-btn" type="button" @click="$emit('close')" title="Back to Tiles">
-            <LucideArrowLeft :size="16" />
-        </button>
         <h2 class="crafting-graph-title">Crafting Trees</h2>
         <span class="item-count">{{ dialogFilteredTrees.length }} {{ t('app_label_recipes') }}</span>
     </div>
@@ -11,12 +8,6 @@
     <div class="crafting-graph-controls">
         <button class="filter-chip" type="button" @click="expandAllGraphTrees">{{ t('app_label_expand_all') }}</button>
         <button class="filter-chip" type="button" @click="collapseAllGraphTrees">{{ t('app_label_collapse_all') }}</button>
-        <input
-            v-model.trim="dialogSearch"
-            class="crafting-graph-search"
-            type="text"
-            :placeholder="t('app_label_filter_placeholder')"
-        >
     </div>
 
     <div class="crafting-graph-list">
@@ -158,31 +149,21 @@ export default {
         allCraftingTrees: { type: Array, default: () => [] },
         filteredCraftingTrees: { type: Array, default: () => [] },
     },
-    emits: ["close", "navigateToItem"],
+    emits: ["navigateToItem"],
     data() {
         return {
-            dialogSearch: "",
             graphExpandedIds: new Set(),
             imageLoadFailed: {},
         };
     },
     computed: {
-        artefactTrees() {
-            const source = this.allCraftingTrees.length ? this.allCraftingTrees : this.filteredCraftingTrees;
+        dialogFilteredTrees() {
+            const source = this.filteredCraftingTrees;
             const filtered = source.filter((tree) => {
                 const item = this.resolveNodeItem(tree);
                 return item && item.category === "Artefacts";
             });
             return filtered.slice(0, 36);
-        },
-
-        dialogFilteredTrees() {
-            if (!this.dialogSearch) return this.artefactTrees;
-            const q = this.dialogSearch.toLowerCase();
-            return this.artefactTrees.filter((tree) => {
-                if (this.t(tree.name).toLowerCase().includes(q)) return true;
-                return (tree.children || []).some((child) => this.t(child.name).toLowerCase().includes(q));
-            });
         },
     },
     mounted() {

@@ -1,10 +1,11 @@
 <template>
     <div v-if="isCraftingTrees" class="crafting-trees-view">
-        <div v-if="!graphViewOpen" class="crafting-trees-toolbar">
-            <button class="filter-chip" @click="craftingTreeExpandAll ? $emit('collapseAllTrees') : $emit('expandAllTrees')">
+        <div class="crafting-trees-toolbar">
+            <button class="filter-chip" :class="{ active: !graphViewOpen }" @click="graphViewOpen = false">Tile view</button>
+            <button class="filter-chip" :class="{ active: graphViewOpen }" @click="graphViewOpen = true">Tree view</button>
+            <button v-if="!graphViewOpen" class="filter-chip" @click="craftingTreeExpandAll ? $emit('collapseAllTrees') : $emit('expandAllTrees')">
                 {{ craftingTreeExpandAll ? t('app_label_collapse_all') : t('app_label_expand_all') }}
             </button>
-            <button class="filter-chip" @click="graphViewOpen = true">Graph Trees</button>
             <span class="item-count">{{ filteredCraftingTrees.length }} {{ t('app_label_recipes') }}</span>
         </div>
 
@@ -42,7 +43,6 @@
             v-else
             :all-crafting-trees="allCraftingTrees"
             :filtered-crafting-trees="filteredCraftingTrees"
-            @close="graphViewOpen = false"
             @navigate-to-item="(id) => $emit('navigateToItem', id)"
         />
     </div>

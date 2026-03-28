@@ -3412,20 +3412,6 @@ input.range-input {
     flex-wrap: wrap;
     gap: 0.4rem;
 }
-.crafting-graph-search {
-    min-width: 13rem;
-    flex: 1;
-    padding: 0.35rem 0.5rem;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--text);
-    font-size: 0.72rem;
-    outline: none;
-}
-.crafting-graph-search:focus {
-    border-color: var(--accent);
-}
 .crafting-graph-list {
     flex: 1;
     border: 1px solid var(--border);
