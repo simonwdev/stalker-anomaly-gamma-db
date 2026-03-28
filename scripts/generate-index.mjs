@@ -34,7 +34,7 @@ const SKIP_FILES = new Set([
   "export_outfit_exchange.csv",
   "export_weapon_drop_sources.csv",
   "export_items_list.csv",
-  "item_drop_locations.csv",
+  "export_item_drop_locations.csv",
   "export_artefact_recipes.csv",
   "export_stash_drop_rates.csv",
   "export_toolkit_map_rates.csv",
@@ -431,8 +431,8 @@ index.sort((a, b) => a.displayName.localeCompare(b.displayName));
 writeFileSync(OUT_FILE, JSON.stringify(index, null, 2));
 console.log(`\nWrote ${index.length} items to ${OUT_FILE}`);
 
-// Generate item-drops.json from item_drop_locations.csv
-const ITEM_DROPS_FILE = join(CSV_DIR, "item_drop_locations.csv");
+// Generate item-drops.json from export_item_drop_locations.csv
+const ITEM_DROPS_FILE = join(CSV_DIR, "export_item_drop_locations.csv");
 try {
   const idlText = readFileSync(ITEM_DROPS_FILE, "utf-8");
   const idlLines = idlText.split(/\r?\n/).filter((l) => l.length > 0);
