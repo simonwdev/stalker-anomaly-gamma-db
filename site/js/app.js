@@ -1846,6 +1846,8 @@ export const appDefinition = {
                 });
             }
 
+            const previousCategory = this.activeCategory;
+
             this.buildPlannerActive = false;
             this.favoritesViewActive = false;
             this.recentViewActive = false;
@@ -2007,8 +2009,12 @@ export const appDefinition = {
                     console.error("Failed to load crafting trees:", e);
                 }
                 await this.stopContentLoading();
-                this.craftingTreeExpandAll = false;
-                this.craftingTreeExpanded = new Set();
+                // Only reset expansion state when navigating TO crafting trees from another page.
+                // If we're already on crafting trees (e.g. returning from a modal), preserve the state.
+                if (previousCategory !== CAT.CRAFTING_TREES) {
+                    this.craftingTreeExpandAll = false;
+                    this.craftingTreeExpanded = new Set();
+                }
                 return;
             }
 
