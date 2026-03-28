@@ -244,8 +244,8 @@ function categorySlug(category) {
 }
 
 function buildPathUrl(state) {
-    if (state.buildPlanner) return "/build-planner";
-    if (state.versionCompare) return "/version-compare";
+    if (state.buildPlanner && state.pack) return `/db/${state.pack}/build-planner`;
+    if (state.versionCompare && state.pack) return `/db/${state.pack}/version-compare`;
     if (state.favorites && state.pack) return `/db/${state.pack}/favorites`;
     if (state.recent && state.pack) return `/db/${state.pack}/recent`;
     if (state.cat && state.pack) {
@@ -257,12 +257,15 @@ function buildPathUrl(state) {
 function parsePathUrl(pathname) {
     const result = { pack: null, cat: null, buildPlanner: false, favorites: false, recent: false, versionCompare: false };
     const path = pathname.replace(/\/+$/, "") || "/";
+    // Legacy non-pack-scoped paths
     if (path === "/build-planner") { result.buildPlanner = true; return result; }
     if (path === "/version-compare") { result.versionCompare = true; return result; }
     const m = path.match(/^\/db\/([^/]+)(?:\/([^/]+))?$/);
     if (m) {
         result.pack = m[1];
-        if (m[2] === "favorites") result.favorites = true;
+        if (m[2] === "build-planner") result.buildPlanner = true;
+        else if (m[2] === "version-compare") result.versionCompare = true;
+        else if (m[2] === "favorites") result.favorites = true;
         else if (m[2] === "recent") result.recent = true;
         else if (m[2]) result.cat = m[2];
     }
