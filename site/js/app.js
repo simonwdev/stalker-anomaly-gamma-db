@@ -5,7 +5,6 @@ const EFFECT_FIELDS = new Set([
     "st_data_export_eat_health_change", "st_itm_desc_eat_sleepiness", "st_itm_desc_eat_thirst", "st_data_export_eat_alcohol", "ui_inv_satiety",
     "ui_inv_outfit_fire_wound_protection", "ui_inv_outfit_wound_protection", "ui_inv_outfit_burn_protection", "ui_inv_outfit_shock_protection", "ui_inv_outfit_chemical_burn_protection",
     "ui_inv_outfit_radiation_protection", "ui_inv_outfit_telepatic_protection", "ui_inv_outfit_strike_protection", "ui_inv_outfit_explosion_protection",
-    "ui_inv_outfit_durability_physical", "ui_inv_outfit_durability_anomaly",
 ]);
 
 
@@ -57,7 +56,6 @@ const BIPOLAR = new Set([
     "ui_inv_outfit_explosion_protection", "st_prop_restore_health", "st_prop_restore_bleeding",
     "ui_inv_outfit_power_restore", "st_data_export_eat_health_change", "st_data_export_jump_height",
     "st_itm_desc_eat_sleepiness", "st_itm_desc_eat_thirst", "st_data_export_eat_alcohol", "ui_inv_satiety",
-    "ui_inv_outfit_durability_physical", "ui_inv_outfit_durability_anomaly"
 ]);
 const POSITIVE_IS_GOOD = new Set([
     "ui_inv_accuracy", "ui_inv_handling", "ui_inv_reli",
@@ -92,7 +90,6 @@ const PROTECTION_FIELDS = [
     "ui_inv_outfit_fire_wound_protection", "ui_inv_outfit_wound_protection", "ui_inv_outfit_burn_protection",
     "ui_inv_outfit_shock_protection", "ui_inv_outfit_chemical_burn_protection", "ui_inv_outfit_radiation_protection",
     "ui_inv_outfit_telepatic_protection", "ui_inv_outfit_strike_protection", "ui_inv_outfit_explosion_protection",
-    "ui_inv_outfit_durability_physical", "ui_inv_outfit_durability_anomaly",
 ];
 const RESTORATION_FIELDS = [
     "st_prop_restore_health", "st_prop_restore_bleeding", "st_data_export_restore_radiation", "ui_inv_outfit_power_restore",
