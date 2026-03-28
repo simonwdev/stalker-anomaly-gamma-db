@@ -789,6 +789,20 @@ button.header-link {
     padding-bottom: 1rem;
     align-content: start;
 }
+/* Infinite scroll */
+.infinite-scroll-sentinel {
+    grid-column: 1 / -1;
+    height: 1px;
+    width: 100%;
+    pointer-events: none;
+}
+.tile-empty {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
 .tile-card {
     background: var(--card);
     border: 1px solid var(--border);

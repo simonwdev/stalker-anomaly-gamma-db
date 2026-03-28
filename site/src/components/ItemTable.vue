@@ -16,7 +16,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="item in items" :key="item.id" @click="$emit('navigateToItem', item.id)" class="clickable-row">
+        <tr v-for="item in visibleItems" :key="item.id" @click="$emit('navigateToItem', item.id)" class="clickable-row">
             <td class="fav-col" @click.stop="$emit('toggleFavorite', item.id)">
                 <span class="fav-icon" :class="{ favorited: isFavorited(item.id) }">{{ isFavorited(item.id) ? '\u2605' : '\u2606' }}</span>
             </td>
@@ -75,12 +75,16 @@
         </tr>
         </tbody>
     </table>
+    <div ref="infiniteScrollSentinel" class="infinite-scroll-sentinel"></div>
 </div>
 </template>
 
 <script>
+import { infiniteScrollMixin } from '../infiniteScrollMixin.js';
+
 export default {
   name: "ItemTable",
+  mixins: [infiniteScrollMixin],
   inject: [
     "t",
     "tItemName",
