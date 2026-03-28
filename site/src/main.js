@@ -8,8 +8,10 @@ import '../js/scoc-parser.js';
 
 // App definition + directives (globals.js is imported transitively by app.js)
 import { tooltipDirective, clickOutsideDirective } from '../js/app.js';
+import { registerLucideIcons } from './icons.js';
 
 const app = createApp(App);
 app.directive('tooltip', tooltipDirective);
 app.directive('click-outside', clickOutsideDirective);
+registerLucideIcons(app);
 app.mount('#app');

@@ -5755,10 +5755,6 @@ export const appDefinition = {
         this.debouncedFilterInput = debounce(() => { this.filterQuery = this.filterInput; }, 200);
     },
 
-    updated() {
-        this.$nextTick(() => lucide.createIcons());
-    },
-
     async mounted() {
         window.addEventListener('keydown', (e) => {
             const inInput = e.target.matches('input, textarea, select, [contenteditable]');
@@ -6054,8 +6050,6 @@ export const appDefinition = {
             this.restoreUrlState(window.location.search, window.location.pathname);
             this._restoringUrl = false;
         });
-
-        this.$nextTick(() => lucide.createIcons());
 
         // Reposition callout on resize/scroll
         this._repositionCallout = () => { if (this.calloutActive) this.positionCallout(); };

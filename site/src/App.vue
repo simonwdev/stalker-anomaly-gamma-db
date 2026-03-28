@@ -62,57 +62,26 @@
 />
 
 <div class="layout" :class="{ 'sidebar-collapsed': sidebarCollapsed }">
-    <aside class="sidebar" :class="{ open: sidebarOpen }" v-show="translations">
-        <div class="sidebar-scroll">
-        <div class="sidebar-group">
-            <div class="sidebar-group-label" @click="toggleGroup('tools')">
-                <svg class="sidebar-chevron" :class="{ collapsed: collapsedGroups['tools'] }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                {{ t('app_group_tools') }}
-            </div>
-            <div class="sidebar-group-items" v-show="!collapsedGroups['tools']">
-                <button :class="{ active: buildPlannerActive }" @click="openBuildPlanner()">
-                    <span class="cat-label">{{ t('app_cat_build_planner') }}</span>
-                </button>
-                <!-- <button v-if="packs.length > 1" :class="{ active: versionCompareActive }" @click="openVersionCompare()">
-                    <span class="cat-label">{{ t('app_cat_version_compare') }}</span>
-                </button> -->
-            </div>
-        </div>
-        <div class="sidebar-group">
-            <div class="sidebar-group-label" @click="toggleGroup('saved')">
-                <svg class="sidebar-chevron" :class="{ collapsed: collapsedGroups['saved'] }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                {{ t('app_group_saved') }}
-            </div>
-            <div class="sidebar-group-items" v-show="!collapsedGroups['saved']">
-                <button :class="{ active: favoritesViewActive }" @click="selectFavorites()">
-                    <span class="cat-label">{{ t('app_cat_favorites') }}</span>
-                    <span v-if="favoriteIds.length" class="cat-count">{{ favoriteIds.length }}</span>
-                </button>
-                <button :class="{ active: recentViewActive }" @click="selectRecent()">
-                    <span class="cat-label">{{ t('app_cat_recent') }}</span>
-                    <span v-if="recentIds.length" class="cat-count">{{ recentIds.length }}</span>
-                </button>
-            </div>
-        </div>
-        <div v-for="group in groupedCategories" :key="group.name" class="sidebar-group">
-            <div class="sidebar-group-label" @click="toggleGroup(group.name)">
-                <svg class="sidebar-chevron" :class="{ collapsed: collapsedGroups[group.name] }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                {{ t(group.name) }}
-            </div>
-            <div class="sidebar-group-items" v-show="!collapsedGroups[group.name]">
-                <button
-                    v-for="cat in group.categories"
-                    :key="cat"
-                    :class="{ active: activeCategory === cat && !favoritesViewActive && !recentViewActive && !buildPlannerActive && !versionCompareActive }"
-                    @click="selectCategory(cat)"
-                ><span class="cat-label" :title="tCat(cat)">{{ tCat(cat) }}</span> <span v-if="categoryCounts[cat]" class="cat-count">{{ categoryCounts[cat] }}</span></button>
-            </div>
-        </div>
-        </div>
-        <button class="sidebar-collapse-btn" @click="toggleSidebarCollapse()" v-tooltip="t('app_shortcuts_toggle_sidebar')">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="11 17 6 12 11 7"/><polyline points="18 17 13 12 18 7"/></svg>
-        </button>
-    </aside>
+    <SidebarNav
+        :translations="translations"
+        :sidebar-open="sidebarOpen"
+        :collapsed-groups="collapsedGroups"
+        :grouped-categories="groupedCategories"
+        :active-category="activeCategory"
+        :category-counts="categoryCounts"
+        :favorite-ids="favoriteIds"
+        :recent-ids="recentIds"
+        :build-planner-active="buildPlannerActive"
+        :version-compare-active="versionCompareActive"
+        :favorites-view-active="favoritesViewActive"
+        :recent-view-active="recentViewActive"
+        @toggle-group="toggleGroup"
+        @open-build-planner="openBuildPlanner()"
+        @select-favorites="selectFavorites()"
+        @select-recent="selectRecent()"
+        @select-category="selectCategory"
+        @toggle-sidebar-collapse="toggleSidebarCollapse()"
+    />
     <div class="sidebar-backdrop" v-show="sidebarOpen" @click="closeSidebar()"></div>
 
     <main class="content">
@@ -123,7 +92,7 @@
         <div v-show="!loading" class="content-inner">
             <div class="filter-bar" v-show="!buildPlannerActive && !versionCompareActive">
                 <div class="filter-input-group" v-click-outside="closeFilterPanel">
-                    <i class="filter-input-icon" data-lucide="search" width="14" height="14"></i>
+                    <LucideSearch class="filter-input-icon" :size="14" />
                     <input
                         type="text"
                         :placeholder="t('app_label_filter_placeholder')"
@@ -131,7 +100,7 @@
                     >
                     <button v-if="filterInput" class="filter-input-clear" @click="filterInput = ''; filterQuery = '';">&times;</button>
                     <button v-if="availableFilters.length > 0" class="filter-btn" @click.stop="toggleFilterPanel()" v-tooltip="t('app_label_filters')">
-                        <i data-lucide="sliders-horizontal" width="14" height="14"></i>
+                        <LucideSlidersHorizontal :size="14" />
                         <span v-if="activeFilterCount > 0" class="filter-badge">{{ activeFilterCount }}</span>
                     </button>
                     <div class="filter-panel" v-show="filterPanelOpen" @click.stop>
@@ -248,7 +217,7 @@
                 <div class="filter-panel-backdrop" v-show="filterPanelOpen" @click="closeFilterPanel()"></div>
                 <div class="sort-wrap" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates" v-click-outside="closeSortMenu">
                     <button class="sort-btn" @click.stop="sortMenuOpen = !sortMenuOpen" v-tooltip="t('app_label_sort')">
-                        <i data-lucide="arrow-up-down" width="14" height="14"></i>
+                        <LucideArrowUpDown :size="14" />
                         <span class="sort-btn-label">{{ headerLabel(sortCol) }}</span>
                         <span class="sort-btn-dir">{{ sortAsc ? '\u25B2' : '\u25BC' }}</span>
                     </button>
@@ -273,7 +242,7 @@
                 </div>
                 <div class="sort-wrap" v-show="isToolkitRates" v-click-outside="closeSortMenu">
                     <button class="sort-btn" @click.stop="sortMenuOpen = !sortMenuOpen" v-tooltip="t('app_label_sort')">
-                        <i data-lucide="arrow-up-down" width="14" height="14"></i>
+                        <LucideArrowUpDown :size="14" />
                         <span class="sort-btn-label">{{ toolkitSortCol === '_name' ? t('app_label_map') : (toolkitSortCol ? t(toolkitSortCol) : t('app_label_sort')) }}</span>
                         <span class="sort-btn-dir">{{ toolkitSortAsc ? '\u25B2' : '\u25BC' }}</span>
                     </button>
@@ -304,21 +273,21 @@
                 <span class="item-count" v-if="isOutfitExchange && outfitExchange">{{ filteredExchanges.length }} {{ t('app_label_exchanges') }}</span>
                 <div class="view-toggle" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates">
                     <button :class="{ active: viewMode === 'table' }" @click="setViewMode('table')" v-tooltip="t('app_label_table_view')">
-                        <i data-lucide="list" width="16" height="16"></i>
+                        <LucideList :size="16" />
                     </button>
                     <button :class="{ active: viewMode === 'tiles' }" @click="setViewMode('tiles')" v-tooltip="t('app_label_tile_view')">
-                        <i data-lucide="layout-grid" width="16" height="16"></i>
+                        <LucideLayoutGrid :size="16" />
                     </button>
                 </div>
                 <div class="utility-group">
                     <button class="copy-link-btn" :class="{ copied: copyLinkFeedback }" @click="copyLink()" v-tooltip="copyLinkFeedback ? t('app_label_copied') : t('app_label_copy_link_view')">
-                        <i v-show="!copyLinkFeedback" data-lucide="link" width="16" height="16"></i>
+                        <LucideLink v-show="!copyLinkFeedback" :size="16" />
                         <svg v-show="copyLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     </button>
                     <div class="download-wrap" v-show="(!isOutfitExchange && !isMaterialsCategory && !isCraftingTrees) || isToolkitRates"
                          v-click-outside="closeDownloadMenu">
                         <button class="download-btn" @click.stop="downloadMenuOpen = !downloadMenuOpen" v-tooltip="t('app_label_download')">
-                            <i data-lucide="download" width="16" height="16"></i>
+                            <LucideDownload :size="16" />
                         </button>
                         <div class="download-menu" v-show="downloadMenuOpen">
                             <button class="download-menu-item" @click="downloadData('csv')">{{ t('app_label_download_csv') }}</button>
@@ -327,7 +296,7 @@
                     </div>
                     <div class="settings-wrap" v-show="!isToolkitRates" v-click-outside="closeSettings">
                         <button class="settings-btn" @click.stop="settingsOpen = !settingsOpen" v-tooltip="t('app_label_settings')">
-                            <i data-lucide="settings" width="16" height="16"></i>
+                            <LucideSettings :size="16" />
                         </button>
                         <div class="settings-menu" v-show="settingsOpen">
                             <div class="settings-header">{{ t('app_label_display') }}</div>
@@ -559,11 +528,11 @@
                     </div>
                     <div class="build-header-actions">
                         <button class="build-header-icon save-import-btn" v-tooltip="t('app_save_import_title') || 'Import Save File'" @click="openSaveImport()">
-                            <i data-lucide="file-up" width="16" height="16"></i>
+                            <LucideFileUp :size="16" />
                         </button>
                         <div class="build-saved-dropdown" v-click-outside="() => buildSavedDropdownOpen = false">
                             <button class="build-header-icon" v-tooltip="t('app_build_saved_builds')" @click="buildSavedDropdownOpen = !buildSavedDropdownOpen">
-                                <i data-lucide="bookmark" width="16" height="16"></i>
+                                <LucideBookmark :size="16" />
                                 <span v-if="buildSavedBuilds.length" class="build-header-badge">{{ buildSavedBuilds.length }}</span>
                             </button>
                             <div v-if="buildSavedDropdownOpen" class="build-saved-menu">
@@ -577,25 +546,25 @@
                             </div>
                         </div>
                         <button class="build-header-icon" v-tooltip="t('app_build_save')" @click="buildSaveModalOpen = true">
-                            <i data-lucide="save" width="16" height="16"></i>
+                            <LucideSave :size="16" />
                         </button>
                         <button class="build-header-icon" v-tooltip="t('app_build_clear')" @click="clearBuild()">
-                            <i data-lucide="trash-2" width="16" height="16"></i>
+                            <LucideTrash2 :size="16" />
                         </button>
                         <button class="build-header-icon" :class="{ copied: copyBuildLinkFeedback }" :disabled="buildSharing" v-tooltip="copyBuildLinkFeedback ? t('app_label_copied') : t('app_label_copy_link')" @click="copyBuildLink()">
                             <span v-if="buildSharing && !copyBuildLinkFeedback" class="loading-spinner loading-spinner-sm"></span>
                             <span v-else-if="copyBuildLinkFeedback"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                            <span v-else><i data-lucide="link" width="16" height="16"></i></span>
+                            <span v-else><LucideLink :size="16" /></span>
                         </button>
                         <button class="build-header-icon" :class="{ copied: copyBuildCodeFeedback }" :disabled="buildSharing" v-tooltip="copyBuildCodeFeedback ? t('app_label_copied') : (t('app_build_copy_code') || 'Copy Code')" @click="copyBuildCode()">
                             <span v-if="buildSharing && !copyBuildCodeFeedback" class="loading-spinner loading-spinner-sm"></span>
                             <span v-else-if="copyBuildCodeFeedback"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                            <span v-else><i data-lucide="hash" width="16" height="16"></i></span>
+                            <span v-else><LucideHash :size="16" /></span>
                         </button>
                         <div class="build-import-inline">
                             <input class="build-import-input" v-model="buildImportCode" :placeholder="t('app_build_import_placeholder') || 'Paste build code'" @keydown.enter="importBuildFromCode()" spellcheck="false">
                             <button class="build-header-icon" v-tooltip="t('app_build_import') || 'Import'" @click="importBuildFromCode()" :disabled="!buildImportCode.trim()">
-                                <i data-lucide="download" width="16" height="16"></i>
+                                <LucideDownload :size="16" />
                             </button>
                             <span v-if="buildImportError" class="build-import-error">{{ buildImportError }}</span>
                         </div>
@@ -935,10 +904,10 @@
                         <div class="build-inventory-header">
                             <h3 class="build-stats-title" style="margin-bottom:0">{{ t('app_build_inventory') }} <span v-if="buildInventory.length" class="build-slot-counter">({{ buildInventory.length }})</span></h3>
                             <div class="build-stats-header-actions">
-                                <button class="build-expand-all-btn" @click="openInventoryPicker()"><i data-lucide="plus" width="10" height="10"></i> {{ t('app_build_add_to_inventory') }}</button>
-                                <button class="build-expand-all-btn" @click="addFavoritesToInventory()" :disabled="!favoriteIds.length"><i data-lucide="star" width="10" height="10"></i> {{ t('app_build_add_favourites') }}</button>
-                                <button v-if="buildInventory.length > 0" class="build-expand-all-btn" @click="buildInventory = []; saveInventoryToStorage()"><i data-lucide="trash-2" width="10" height="10"></i> {{ t('app_build_clear_inventory') }}</button>
-                                <button v-if="buildInventory.length > 1" class="build-expand-all-btn" :class="{ active: buildInventorySort !== 'none' }" @click="cycleInventorySort()"><i data-lucide="arrow-up-down" width="10" height="10"></i><span v-if="buildInventorySort !== 'none'"> {{ buildInventorySortLabel }}</span></button>
+                                <button class="build-expand-all-btn" @click="openInventoryPicker()"><LucidePlus :size="10" /> {{ t('app_build_add_to_inventory') }}</button>
+                                <button class="build-expand-all-btn" @click="addFavoritesToInventory()" :disabled="!favoriteIds.length"><LucideStar :size="10" /> {{ t('app_build_add_favourites') }}</button>
+                                <button v-if="buildInventory.length > 0" class="build-expand-all-btn" @click="buildInventory = []; saveInventoryToStorage()"><LucideTrash2 :size="10" /> {{ t('app_build_clear_inventory') }}</button>
+                                <button v-if="buildInventory.length > 1" class="build-expand-all-btn" :class="{ active: buildInventorySort !== 'none' }" @click="cycleInventorySort()"><LucideArrowUpDown :size="10" /><span v-if="buildInventorySort !== 'none'"> {{ buildInventorySortLabel }}</span></button>
                             </div>
                         </div>
                         <div v-if="weaponCompareSlotCount > 1" class="build-compare-toggle">
@@ -1182,7 +1151,7 @@
 <!-- Compare bar -->
 <Transition name="slide-up">
 <div class="compare-bar" v-show="pinnedIds.length > 0">
-    <i data-lucide="scale" class="compare-bar-icon"></i>
+    <LucideScale class="compare-bar-icon" />
     <div class="compare-bar-chips">
         <span v-for="p in pinnedItems" :key="p.id" class="compare-chip">
           <span class="compare-chip-name">{{ p.displayName }}</span>
@@ -1819,6 +1788,7 @@
 import { appDefinition } from "../js/app.js";
 import FooterBar from "./components/FooterBar.vue";
 import HeaderBar from "./components/HeaderBar.vue";
+import SidebarNav from "./components/SidebarNav.vue";
 
 export default {
   ...appDefinition,
@@ -1826,6 +1796,7 @@ export default {
     ...appDefinition.components,
     FooterBar,
     HeaderBar,
+    SidebarNav,
   },
   provide() {
     return {
