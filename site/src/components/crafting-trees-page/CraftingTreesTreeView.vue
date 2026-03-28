@@ -48,18 +48,13 @@
 
                     <!-- Connector + ingredients column -->
                     <div v-if="tree.children && tree.children.length" class="crafting-graph-right">
-                        <!-- Vertical spine line -->
-                        <div class="crafting-graph-spine" aria-hidden="true"></div>
-
-                        <!-- Ingredient nodes -->
+                        <!-- Ingredient nodes (vertical spine + horizontal branches drawn via CSS ::before/::after) -->
                         <div class="crafting-graph-ingredients-wrap">
                             <div
                                 v-for="(child, idx) in tree.children"
                                 :key="`${tree.id}-${child.name}-${idx}`"
                                 class="crafting-graph-ingredient-row"
                             >
-                                <!-- Horizontal branch line -->
-                                <div class="crafting-graph-branch" aria-hidden="true"></div>
                                 <div
                                     class="crafting-graph-node crafting-graph-node--ingredient"
                                     :class="{ clickable: !!resolveNodeItem(child) }"

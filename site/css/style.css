@@ -3472,68 +3472,74 @@ input.range-input {
 .crafting-graph-layout {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 0;
 }
 .crafting-graph-root-wrap {
-    flex: 0 0 auto;
+    flex: 0 0 17rem;
     width: 17rem;
-    align-self: stretch;
-    display: flex;
-    align-items: center;
+    align-self: center;
 }
-/* Right column: spine + ingredients together */
+/* Right column: contains horizontal root→spine bridge + vertical spine + ingredient rows */
 .crafting-graph-right {
+    flex: 0 0 auto;
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    flex: 0 0 auto;
-    min-width: 0;
-}
-/* Vertical spine: connects centre of root to all ingredient branches */
-.crafting-graph-spine {
-    width: 1.5rem;
-    flex-shrink: 0;
     position: relative;
-    align-self: stretch;
+    /* left margin = gap between root and spine */
+    margin-left: 1.5rem;
+    /* left padding = room for vertical spine drawn via ::after */
+    padding-left: 1.6rem;
 }
-.crafting-graph-spine::before {
+/* Horizontal bridge: root right-edge → spine (at vertical centre of this column) */
+.crafting-graph-right::before {
     content: "";
     position: absolute;
-    left: 50%;
-    top: calc(50% - 0.35rem);   /* align with first node mid */
-    bottom: calc(50% - 0.35rem);
-    transform: translateX(-50%);
+    left: -1.5rem;
+    top: 50%;
+    width: 1.5rem;
+    height: 2px;
+    background: #c8a84e;
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+/* Vertical spine: full stretch height of the right column */
+.crafting-graph-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
     width: 2px;
     background: linear-gradient(to bottom, #c8a84e 0%, #5b8abd 100%);
     border-radius: 2px;
 }
-/* When only 1 child: spine is just the horizontal stub */
 .crafting-graph-ingredients-wrap {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+    flex: 0 0 auto;
 }
 .crafting-graph-ingredient-row {
     display: flex;
     flex-direction: row;
     align-items: center;
-    min-height: 0;
-}
-/* Horizontal branch from spine to each ingredient node */
-.crafting-graph-branch {
-    width: 1.4rem;
-    flex-shrink: 0;
     position: relative;
-    align-self: center;
+    /* left padding = room for horizontal branch drawn via ::before */
+    padding-left: 1.4rem;
+}
+/* Horizontal branch: spine → ingredient node */
+.crafting-graph-ingredient-row::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.4rem;
     height: 2px;
     background: linear-gradient(to right, #c8a84e, #5b8abd);
+    transform: translateY(-50%);
     border-radius: 2px;
-}
-/* Vertical spine: stretch to cover first→last row midpoints */
-.crafting-graph-ingredients-wrap .crafting-graph-ingredient-row:first-child .crafting-graph-branch::before,
-.crafting-graph-ingredients-wrap .crafting-graph-ingredient-row:last-child .crafting-graph-branch::before {
-    content: none;
 }
 .crafting-graph-node {
     position: relative;
@@ -3662,18 +3668,16 @@ input.range-input {
 @media (max-width: 1100px) {
     .crafting-graph-layout {
         flex-direction: column;
+        align-items: flex-start;
     }
     .crafting-graph-root-wrap {
         width: 100%;
     }
     .crafting-graph-right {
-        flex-direction: column;
-        padding-left: 1rem;
+        margin-left: 1rem;
+        padding-left: 1.2rem;
     }
-    .crafting-graph-spine {
-        display: none;
-    }
-    .crafting-graph-branch {
+    .crafting-graph-right::before {
         display: none;
     }
     .crafting-graph-node--ingredient {
