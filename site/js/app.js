@@ -184,6 +184,7 @@ const KEYS = {
     CLEAR_FILTERS: 'x',
     CHORD_GO: 'g',
     CHORD_BUILD: 'b',
+    QUICK_NAV: '.',
 };
 const CHORD_TIMEOUT = 500;
 
@@ -411,6 +412,7 @@ export const appDefinition = {
             versionCompareResults: [],
             versionCompareFilter: "",
             shortcutHelpOpen: false,
+            quickNavOpen: false,
             _chordKey: null,
             _chordTimer: null,
             hasUnseenReleaseNotes: false,
@@ -3925,7 +3927,9 @@ export const appDefinition = {
         },
 
         handleEscape() {
-            if (this.calloutActive) {
+            if (this.quickNavOpen) {
+                this.quickNavOpen = false;
+            } else if (this.calloutActive) {
                 this.dismissCallout();
             } else if (this.whatsNewVisible) {
                 this.dismissWhatsNew();
@@ -5738,6 +5742,13 @@ export const appDefinition = {
                     input.focus();
                     this.$nextTick(() => input.select());
                 }
+                return;
+            }
+
+            // Ctrl+. / Cmd+.: open quick navigation
+            if ((e.ctrlKey || e.metaKey) && e.key === KEYS.QUICK_NAV) {
+                e.preventDefault();
+                this.quickNavOpen = !this.quickNavOpen;
                 return;
             }
 

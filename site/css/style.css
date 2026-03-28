@@ -3896,6 +3896,103 @@ input.range-input {
 
 /* Vue transitions */
 
+/* Quick Navigation Modal */
+.quick-nav-modal {
+    max-width: 26rem;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+}
+.quick-nav-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+.quick-nav-search-icon {
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+.quick-nav-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+.quick-nav-input::placeholder {
+    color: var(--text-secondary);
+}
+.quick-nav-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 0.25rem 0;
+}
+.quick-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.4rem 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--text);
+    transition: background 0.1s;
+}
+.quick-nav-item:hover,
+.quick-nav-item.active {
+    background: var(--border);
+}
+.quick-nav-item.active {
+    color: var(--accent);
+}
+.quick-nav-item-label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.quick-nav-item-group {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+.quick-nav-item.active .quick-nav-item-group {
+    color: var(--accent);
+    opacity: 0.7;
+}
+.quick-nav-empty {
+    padding: 0.75rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+.quick-nav-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.4rem 0.75rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+.quick-nav-footer kbd {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.3rem;
+}
+
 /* Keyboard Shortcuts Modal */
 .shortcut-modal {
     max-width: 40rem;

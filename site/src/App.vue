@@ -443,6 +443,19 @@
     @close="shortcutHelpOpen = false"
 />
 
+<QuickNavModal
+    :open="quickNavOpen"
+    :groupedCategories="groupedCategories"
+    :categoryCounts="categoryCounts"
+    :favoriteIds="favoriteIds"
+    :recentIds="recentIds"
+    @close="quickNavOpen = false"
+    @select-category="selectCategory"
+    @select-favorites="selectFavorites()"
+    @select-recent="selectRecent()"
+    @open-build-planner="openBuildPlanner()"
+/>
+
 <FooterBar />
 
 </div>
@@ -469,6 +482,7 @@ import BuildImportCodeModal from "./components/modals/BuildImportCodeModal.vue";
 import BuildSaveModal from "./components/modals/BuildSaveModal.vue";
 import SaveImportModal from "./components/modals/SaveImportModal.vue";
 import BuildPickerModal from "./components/modals/BuildPickerModal.vue";
+import QuickNavModal from "./components/modals/QuickNavModal.vue";
 import ShortcutHelpModal from "./components/modals/ShortcutHelpModal.vue";
 
 export default {
@@ -489,6 +503,7 @@ export default {
     ItemDetailModal,
     MaterialsView,
     OutfitExchangeView,
+    QuickNavModal,
     SaveImportModal,
     ShortcutHelpModal,
     SidebarNav,
