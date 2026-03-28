@@ -3150,13 +3150,13 @@ input.range-input {
     /* Content: reduce padding */
     .content { padding: 0.75rem 0 0 0.75rem; }
 
-    /* Filter bar: wrap into rows */
+    /* Filter bar: two rows — search, then controls */
     .filter-bar { flex-wrap: wrap; gap: 0.5rem; padding-right: 0.75rem; }
-    .filter-input-group { flex: 1 1 auto; max-width: none; min-width: 0; order: 1; }
-    .sort-wrap { order: 3; flex: 1 1 auto; }
-    .filter-bar .item-count { order: 4; white-space: nowrap; }
-    .view-toggle { order: 5; margin-left: 0; }
-    .utility-group { order: 6; }
+    .filter-input-group { flex: 1 1 100%; max-width: none; min-width: 0; order: 1; }
+    .sort-wrap { order: 2; }
+    .filter-bar .item-count { display: none; }
+    .view-toggle { order: 3; margin-left: auto; }
+    .utility-group { order: 4; }
 
     /* Tile grid: single-column on small screens */
     .tile-grid {
