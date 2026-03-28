@@ -11,8 +11,8 @@
                 <div class="shortcut-group">
                     <h3>{{ t('app_shortcuts_group_global') }}</h3>
                     <dl class="shortcut-list">
-                        <div class="shortcut-row shortcut-row--highlight"><dt><kbd>Ctrl</kbd><kbd>.</kbd></dt><dd>{{ t('app_shortcuts_quick_nav') }}</dd></div>
-                        <div class="shortcut-row"><dt><kbd>/</kbd> <kbd>Ctrl</kbd><kbd>K</kbd></dt><dd>{{ t('app_shortcuts_search') }}</dd></div>
+                        <div class="shortcut-row shortcut-row--highlight"><dt><kbd>Ctrl</kbd><kbd>K</kbd></dt><dd>{{ t('app_shortcuts_quick_nav') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>/</kbd></dt><dd>{{ t('app_shortcuts_search') }}</dd></div>
                         <div class="shortcut-row"><dt><kbd>S</kbd></dt><dd>{{ t('app_shortcuts_toggle_sidebar') }}</dd></div>
                         <div class="shortcut-row"><dt><kbd>V</kbd></dt><dd>{{ t('app_shortcuts_toggle_view') }}</dd></div>
                         <div class="shortcut-row"><dt><kbd>Shift</kbd><kbd>F</kbd></dt><dd>{{ t('app_shortcuts_toggle_filters') }}</dd></div>

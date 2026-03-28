@@ -168,7 +168,6 @@ const CATEGORY_GROUPS = [
 
 const KEYS = {
     SEARCH: '/',
-    SEARCH_MOD: 'k',
     ESCAPE: 'Escape',
     TOGGLE_VIEW: 'v',
     TOGGLE_SIDEBAR: 's',
@@ -184,7 +183,7 @@ const KEYS = {
     CLEAR_FILTERS: 'x',
     CHORD_GO: 'g',
     CHORD_BUILD: 'b',
-    QUICK_NAV: '.',
+    QUICK_NAV: 'k',
 };
 const CHORD_TIMEOUT = 500;
 
@@ -5730,22 +5729,7 @@ export const appDefinition = {
         window.addEventListener('keydown', (e) => {
             const inInput = e.target.matches('input, textarea, select, [contenteditable]');
 
-            // Ctrl+K / Cmd+K: focus search (works even in inputs)
-            if ((e.ctrlKey || e.metaKey) && e.key === KEYS.SEARCH_MOD) {
-                e.preventDefault();
-                const input = document.querySelector('.global-search input');
-                if (input) {
-                    if (!this.globalQuery && this.lastGlobalQuery) {
-                        this.globalQuery = this.lastGlobalQuery;
-                        this.globalSearch();
-                    }
-                    input.focus();
-                    this.$nextTick(() => input.select());
-                }
-                return;
-            }
-
-            // Ctrl+. / Cmd+.: open quick navigation
+            // Ctrl+K / Cmd+K: open quick navigation
             if ((e.ctrlKey || e.metaKey) && e.key === KEYS.QUICK_NAV) {
                 e.preventDefault();
                 this.quickNavOpen = !this.quickNavOpen;
