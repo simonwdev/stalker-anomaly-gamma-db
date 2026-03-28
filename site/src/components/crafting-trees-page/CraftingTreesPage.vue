@@ -12,7 +12,14 @@
         <div v-if="!graphViewOpen" class="tile-grid">
             <div v-for="tree in filteredCraftingTrees" :key="tree.id" class="tile-card crafting-tree-card">
                 <div class="tile-card-header">
-                    <a href="#" @click.prevent.stop="$emit('navigateToItem', tree.id)" class="tile-card-name">{{ t(tree.name) }}</a>
+                    <a
+                        href="#"
+                        @click.prevent.stop="$emit('navigateToItem', tree.id)"
+                        class="tile-card-name"
+                        @mouseenter="showHover(tree.name, $event)"
+                        @mousemove="moveHover($event)"
+                        @mouseleave="hideHover()"
+                    >{{ t(tree.name) }}</a>
                 </div>
                 <div class="crafting-tree-body">
                     <div
@@ -28,7 +35,13 @@
                         >{{ row.isExpanded ? '\u25BC' : '\u25B6' }}</span>
                         <span v-else class="tree-leaf-dot">&bull;</span>
                         <template v-if="row.itemRef">
-                            <a href="#" @click.prevent.stop="$emit('navigateToItem', row.itemRef.id)">{{ t(row.name) }}</a>
+                            <a
+                                href="#"
+                                @click.prevent.stop="$emit('navigateToItem', row.itemRef.id)"
+                                @mouseenter="showHover(row.name, $event)"
+                                @mousemove="moveHover($event)"
+                                @mouseleave="hideHover()"
+                            >{{ t(row.name) }}</a>
                         </template>
                         <template v-else>
                             <span class="tree-raw">{{ t(row.name) }}</span>
@@ -46,18 +59,60 @@
             :expand-all="treeViewExpandAll"
             @navigate-to-item="(id) => $emit('navigateToItem', id)"
         />
+
+        <!-- Hover tooltip -->
+        <Teleport to="body">
+            <div
+                v-if="hoverItem"
+                class="build-hover-popover"
+                :style="hoverPos"
+            >
+                <div class="tile-card build-hover-tile">
+                    <div class="tile-card-header">
+                        <span class="tile-card-name">{{ tItemName(hoverItem) }}</span>
+                    </div>
+                    <div class="tile-card-stats">
+                        <div
+                            v-for="field in hoverFields"
+                            :key="field"
+                            class="tile-stat-row"
+                        >
+                            <span class="stat-label">{{ headerLabel(field) }}</span>
+                            <span
+                                class="stat-value"
+                                :class="statClass(field, cellValue(hoverItem, field))"
+                            >{{ formatValue(field, cellValue(hoverItem, field)) }}</span>
+                        </div>
+                    </div>
+                    <div class="build-hover-desc">
+                        <img
+                            v-if="hoverItem.id"
+                            class="build-hover-icon"
+                            :src="'img/icons/' + hoverItem.id + '.png'"
+                            alt=""
+                            @error="$event.target.style.display = 'none'"
+                        >
+                    </div>
+                </div>
+            </div>
+        </Teleport>
     </div>
 </template>
 
 <script>
 import CraftingTreesTreeView from "./CraftingTreesTreeView.vue";
 
+const HOVER_SKIP = new Set([
+    "id", "name", "displayName", "pda_encyclopedia_name", "category", "localeName",
+    "hasNpcWeaponDrop", "hasStashDrop", "hasDisassemble", "st_data_export_description",
+    "st_data_export_is_junk", "st_data_export_has_perk", "st_data_export_can_be_crafted",
+    "st_data_export_used_in_crafting",
+]);
+
 export default {
     name: "CraftingTreesPage",
-    components: {
-        CraftingTreesTreeView,
-    },
-    inject: ["t", "findItemByName"],
+    components: { CraftingTreesTreeView },
+    inject: ["t", "findItemByName", "findFullItemByName", "tItemName", "headerLabel", "formatValue", "cellValue", "statClass", "getItemFields"],
     props: {
         isCraftingTrees: Boolean,
         allCraftingTrees: { type: Array, default: () => [] },
@@ -70,6 +125,9 @@ export default {
         return {
             graphViewOpen: false,
             treeViewExpandAll: true,
+            hoverItem: null,
+            hoverPos: {},
+            _hoverTimeout: null,
         };
     },
     computed: {
@@ -78,6 +136,12 @@ export default {
                 return this.treeViewExpandAll ? this.t("app_label_collapse_all") : this.t("app_label_expand_all");
             }
             return this.craftingTreeExpandAll ? this.t("app_label_collapse_all") : this.t("app_label_expand_all");
+        },
+        hoverFields() {
+            if (!this.hoverItem) return [];
+            return this.getItemFields(this.hoverItem).filter(
+                (f) => !HOVER_SKIP.has(f) && this.cellValue(this.hoverItem, f) !== null && this.cellValue(this.hoverItem, f) !== "" && this.cellValue(this.hoverItem, f) !== "0" && this.cellValue(this.hoverItem, f) !== "0%"
+            );
         },
     },
     methods: {
@@ -88,6 +152,34 @@ export default {
             }
             if (this.craftingTreeExpandAll) this.$emit("collapseAllTrees");
             else this.$emit("expandAllTrees");
+        },
+
+        showHover(name, event) {
+            clearTimeout(this._hoverTimeout);
+            const item = this.findFullItemByName(name);
+            if (!item) return;
+            this._hoverTimeout = setTimeout(() => {
+                this.hoverItem = item;
+                this._positionHover(event.clientX, event.clientY);
+            }, 220);
+        },
+
+        moveHover(event) {
+            if (!this.hoverItem) return;
+            this._positionHover(event.clientX, event.clientY);
+        },
+
+        hideHover() {
+            clearTimeout(this._hoverTimeout);
+            this.hoverItem = null;
+        },
+
+        _positionHover(x, y) {
+            const offset = 14;
+            const pw = 260;
+            const left = x + offset + pw > window.innerWidth ? x - pw - offset : x + offset;
+            const top = Math.min(y + offset, window.innerHeight - 32);
+            this.hoverPos = { position: "fixed", top: top + "px", left: left + "px", zIndex: 400 };
         },
 
         flattenTree(tree) {
