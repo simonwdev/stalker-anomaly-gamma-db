@@ -3,7 +3,14 @@
     <div ref="mapContainer" class="map-container"></div>
     <div class="maps-banner">
       <LucideInfo :size="14" />
-      {{ t('app_maps_wip_banner') }}
+      <span class="maps-banner-text">{{ t('app_maps_wip_banner') }}</span>
+      <a href="https://discord.com/channels/912320241713958912/1484195028891861022" target="_blank" rel="noopener" class="maps-banner-link">
+        <LucideMessageCircle :size="12" />
+        {{ t('app_maps_discord_link') }}
+      </a>
+      <a href="https://discord.gg/stalker-gamma" target="_blank" rel="noopener" class="maps-banner-link">
+        {{ t('app_maps_discord_join') }}
+      </a>
     </div>
   </div>
 </template>
@@ -37,7 +44,9 @@ export default defineComponent({
     async function initMap() {
       if (!mapContainer.value) return;
 
-      const metaRes = await fetch('/tiles/metadata.json');
+      const TILES_BASE = 'https://tiles.stalker-anomaly-db.com';
+
+      const metaRes = await fetch(`${TILES_BASE}/metadata.json`);
       const meta: TileMetadata = await metaRes.json();
 
       const { scaledWidth: imgW, scaledHeight: imgH, maxZoom, baseMaxZoom, tileSize } = meta;
@@ -61,7 +70,7 @@ export default defineComponent({
       map.options.maxBoundsViscosity = 0.8;
 
       // Base layer: upscales zoom 7 tiles as fallback at zoom 8
-      L.tileLayer('/tiles/{z}/{x}/{y}.' + meta.format, {
+      L.tileLayer(`${TILES_BASE}/{z}/{x}/{y}.${meta.format}`, {
         tileSize,
         maxZoom,
         maxNativeZoom: maxZoom - 1,
@@ -72,7 +81,7 @@ export default defineComponent({
       }).addTo(map);
 
       // Detail layer: crisp zoom 8 per-level tiles where they exist
-      L.tileLayer('/tiles/{z}/{x}/{y}.' + meta.format, {
+      L.tileLayer(`${TILES_BASE}/{z}/{x}/{y}.${meta.format}`, {
         tileSize,
         maxZoom,
         minZoom: maxZoom,
@@ -113,6 +122,7 @@ export default defineComponent({
   flex: 1;
   min-height: 0;
   overflow: hidden;
+  z-index: 0;
 }
 
 .maps-banner {
@@ -131,14 +141,45 @@ export default defineComponent({
   border-radius: 6px;
   color: var(--text-secondary);
   font-size: 0.75rem;
-  pointer-events: none;
   white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .maps-banner-text {
+    display: none;
+  }
+  .maps-banner-link:first-of-type {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.maps-banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid rgba(200, 168, 78, 0.25);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.maps-banner-link:hover {
+  text-decoration: underline;
 }
 
 .map-container {
   position: absolute;
   inset: 0;
   background: #000;
+}
+
+@media (max-width: 768px) {
+  .maps-view {
+    min-height: calc(100vh - 6rem);
+  }
 }
 </style>
 

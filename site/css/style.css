@@ -747,6 +747,9 @@ button.header-link {
     min-height: 0;
     transition: padding-left 0.2s ease;
 }
+.content.content-maps {
+    padding: 0;
+}
 .content-inner {
     display: flex;
     flex-direction: column;
@@ -3071,6 +3074,7 @@ input.range-input {
     .site-logo { display: none; }
     .header-pack-label { font-size: 0.8rem; }
     .header-desktop-items { display: none !important; }
+    .nav-bar.header-desktop-items { display: flex !important; }
     .header-mobile-items { display: flex; }
     .header-search-btn { margin-left: auto; }
 
@@ -3078,7 +3082,7 @@ input.range-input {
     .whats-new-banner { left: 0.75rem; right: 0.75rem; width: auto; max-width: none; }
 
     /* Layout: single column, sidebar out of flow */
-    .layout { grid-template-columns: 1fr; grid-template-rows: 1fr; }
+    .layout, .layout.sidebar-hidden, .layout.sidebar-collapsed { grid-template-columns: 1fr; grid-template-rows: 1fr; }
 
     /* Sidebar: fixed drawer from left */
     .sidebar {

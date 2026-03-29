@@ -52,7 +52,7 @@
             <LucideHammer :size="16" />
             <span>{{ t('app_cat_build_planner') }}</span>
         </button>
-        <button class="header-drawer-item" :class="{ active: mapsActive }" @click="$emit('openMaps'); overflowOpen = false">
+        <button class="header-drawer-item maps-nav-btn" :class="{ active: mapsActive }" @click="$emit('openMaps'); overflowOpen = false">
             <LucideMap :size="16" />
             <span>{{ t('app_nav_maps') }}</span>
         </button>
@@ -175,7 +175,7 @@
         <LucideHammer :size="14" />
         {{ t('app_cat_build_planner') }}
     </button>
-    <button class="nav-bar-item" :class="{ active: mapsActive }" @click="$emit('openMaps')">
+    <button class="nav-bar-item maps-nav-btn" :class="{ active: mapsActive }" @click="$emit('openMaps')">
         <LucideMap :size="14" />
         {{ t('app_nav_maps') }}
     </button>

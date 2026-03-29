@@ -91,7 +91,7 @@
     />
     <div class="sidebar-backdrop" v-show="sidebarOpen" @click="closeSidebar()"></div>
 
-    <main class="content">
+    <main class="content" :class="{ 'content-maps': mapsActive }">
         <MapsView v-if="mapsActive" />
         <div v-show="showContentSpinner && !mapsActive" class="loading-screen">
             <div class="loading-spinner"></div>
