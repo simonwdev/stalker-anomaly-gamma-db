@@ -789,6 +789,20 @@ button.header-link {
     padding-bottom: 1rem;
     align-content: start;
 }
+/* Infinite scroll */
+.infinite-scroll-sentinel {
+    grid-column: 1 / -1;
+    height: 1px;
+    width: 100%;
+    pointer-events: none;
+}
+.tile-empty {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
 .tile-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -3326,6 +3340,16 @@ input.range-input {
     gap: 0.75rem;
     padding: 0.25rem 0;
 }
+.crafting-expand-toggle-btn {
+    border-color: #5f7fa8;
+    background: rgba(95, 127, 168, 0.2);
+    color: #a9cbf6;
+}
+.crafting-expand-toggle-btn:hover {
+    border-color: #7e9fca;
+    background: rgba(95, 127, 168, 0.32);
+    color: #c2dcff;
+}
 .crafting-tree-card .tile-card-header {
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.35rem;
@@ -3368,6 +3392,334 @@ input.range-input {
 }
 .tree-row .recipe-ing-amount {
     margin-left: auto;
+}
+
+.crafting-graph-view {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.25rem 0;
+    flex: 1;
+    min-height: 0;
+}
+.crafting-graph-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.icon-btn:hover {
+    color: var(--text);
+    border-color: var(--accent-dim);
+    background: rgba(255, 255, 255, 0.05);
+}
+.crafting-graph-title {
+    font-size: 1rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+.crafting-graph-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+.crafting-graph-list {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.01);
+    overflow: auto;
+    min-height: 0;
+    padding: 0.45rem;
+}
+.crafting-graph-collapsible {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #141414;
+}
+.crafting-graph-collapsible + .crafting-graph-collapsible {
+    margin-top: 0.45rem;
+}
+.crafting-graph-collapsible-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    padding: 0.45rem 0.6rem;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.74rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.crafting-graph-collapsible-head:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+.crafting-graph-caret {
+    color: var(--accent);
+    width: 0.75rem;
+    flex-shrink: 0;
+    text-align: center;
+}
+.crafting-graph-collapsible-name {
+    font-weight: 600;
+}
+.crafting-graph-body {
+    padding: 0.65rem;
+    overflow: auto;
+}
+.crafting-graph-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+}
+.crafting-graph-root-wrap {
+    flex: 0 0 17rem;
+    width: 17rem;
+    align-self: center;
+}
+/* Right column: contains horizontal root→spine bridge + vertical spine + ingredient rows */
+.crafting-graph-right {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    /* left margin = gap between root and spine */
+    margin-left: 1.5rem;
+    /* left padding = room for vertical spine drawn via ::after */
+    padding-left: 1.6rem;
+}
+/* Horizontal bridge: root right-edge → spine (at vertical centre of this column) */
+.crafting-graph-right::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    width: 1.5rem;
+    height: 2px;
+    background: #c8a84e;
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+.crafting-graph-ingredients-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 0 0 auto;
+    position: relative;
+}
+/* Vertical spine: drawn on the ingredients-wrap, full height then clipped by first/last child */
+.crafting-graph-ingredients-wrap::before {
+    content: "";
+    position: absolute;
+    left: -1.6rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #c8a84e 0%, #5b8abd 100%);
+    border-radius: 2px;
+}
+/* Clip spine above first branch midpoint */
+.crafting-graph-ingredient-row:first-child::after {
+    content: "";
+    position: absolute;
+    left: -1.7rem;
+    top: -1px;
+    width: 4px;
+    height: calc(50%);
+    background: #141414;
+}
+/* Clip spine below last branch midpoint */
+.crafting-graph-ingredient-row:last-child::after {
+    content: "";
+    position: absolute;
+    left: -1.7rem;
+    top: 50%;
+    width: 4px;
+    height: calc(50% + 1px);
+    background: #141414;
+}
+.crafting-graph-ingredient-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    /* left padding = room for horizontal branch drawn via ::before */
+    padding-left: 1.4rem;
+}
+/* Horizontal branch: spine → ingredient node */
+.crafting-graph-ingredient-row::before {
+    content: "";
+    position: absolute;
+    /* extend left all the way to the spine (which is at left:0 of .crafting-graph-right,
+       but this row is inside .crafting-graph-ingredients-wrap which is offset by padding-left:1.6rem) */
+    left: -1.6rem;
+    top: 50%;
+    width: calc(1.6rem + 1.4rem);
+    height: 2px;
+    background: linear-gradient(to right, #c8a84e, #5b8abd);
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+.crafting-graph-node {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    border: 1px solid #3b3b3b;
+    border-radius: 3px;
+    background: #171717;
+    padding: 0.45rem;
+}
+.crafting-graph-node--root {
+    width: 100%;
+}
+.crafting-graph-node--ingredient {
+    width: 15rem;
+}
+.crafting-graph-node.clickable {
+    cursor: pointer;
+}
+.crafting-graph-node.clickable:hover {
+    border-color: var(--accent-dim);
+    background: #1a1a1a;
+}
+.crafting-graph-node-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+}
+.crafting-graph-node-img {
+    width: 3.05rem;
+    height: 3.05rem;
+    object-fit: contain;
+    border: 1px solid #343434;
+    border-radius: 3px;
+    background: #0f0f0f;
+    padding: 0.15rem;
+    flex-shrink: 0;
+}
+.crafting-graph-node-text {
+    min-width: 0;
+}
+.crafting-graph-node-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.3;
+}
+.crafting-graph-node-amount {
+    margin-top: 0.15rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.crafting-graph-amount-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+.crafting-graph-amount-value {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.6rem;
+    padding: 0.08rem 0.35rem;
+    border-radius: 4px;
+    border: 1px solid #a8883f;
+    background: rgba(200, 168, 78, 0.2);
+    color: #f3d98f;
+    font-size: 0.72rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+.crafting-graph-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.16rem;
+    margin-top: 0.2rem;
+    list-style: none;
+    padding: 0;
+    min-width: 0;
+}
+.crafting-graph-stat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.1rem 0.28rem;
+    font-size: 0.56rem;
+    line-height: 1.25;
+    background: #121212;
+    color: #bdbdbd;
+    min-width: 0;
+}
+.crafting-graph-stat-label {
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+.crafting-graph-stat-value {
+    color: var(--text);
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.crafting-graph-stat.stat-positive {
+    border-color: #2f6c37;
+    color: #8fd397;
+}
+.crafting-graph-stat.stat-negative {
+    border-color: #8e3f3a;
+    color: #f08b84;
+}
+.crafting-graph-stat.stat-positive .crafting-graph-stat-value {
+    color: #8fd397;
+}
+.crafting-graph-stat.stat-negative .crafting-graph-stat-value {
+    color: #f08b84;
+}
+
+@media (max-width: 1100px) {
+    .crafting-graph-layout {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .crafting-graph-root-wrap {
+        width: 100%;
+    }
+    .crafting-graph-right {
+        margin-left: 1rem;
+        padding-left: 1.2rem;
+    }
+    .crafting-graph-right::before {
+        display: none;
+    }
+    .crafting-graph-node--ingredient {
+        width: 100%;
+    }
 }
 
 /* Ammo comparison table */
@@ -3558,6 +3910,103 @@ input.range-input {
 
 /* Vue transitions */
 
+/* Quick Navigation Modal */
+.quick-nav-modal {
+    max-width: 26rem;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+}
+.quick-nav-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+.quick-nav-search-icon {
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+.quick-nav-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+.quick-nav-input::placeholder {
+    color: var(--text-secondary);
+}
+.quick-nav-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 0.25rem 0;
+}
+.quick-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.4rem 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--text);
+    transition: background 0.1s;
+}
+.quick-nav-item:hover,
+.quick-nav-item.active {
+    background: var(--border);
+}
+.quick-nav-item.active {
+    color: var(--accent);
+}
+.quick-nav-item-label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.quick-nav-item-group {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+.quick-nav-item.active .quick-nav-item-group {
+    color: var(--accent);
+    opacity: 0.7;
+}
+.quick-nav-empty {
+    padding: 0.75rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+.quick-nav-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.4rem 0.75rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+.quick-nav-footer kbd {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.3rem;
+}
+
 /* Keyboard Shortcuts Modal */
 .shortcut-modal {
     max-width: 40rem;
@@ -3607,6 +4056,22 @@ input.range-input {
     font-size: 0.82rem;
     color: var(--text);
     text-align: right;
+}
+.shortcut-row--highlight {
+    background: rgba(200, 168, 78, 0.08);
+    border-radius: 4px;
+    margin: 0 -0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+.shortcut-row--highlight dt,
+.shortcut-row--highlight dd {
+    color: var(--accent);
+}
+.shortcut-row--highlight kbd {
+    color: var(--accent);
+    background: rgba(200, 168, 78, 0.15);
+    border-color: rgba(200, 168, 78, 0.35);
 }
 kbd {
     display: inline-block;

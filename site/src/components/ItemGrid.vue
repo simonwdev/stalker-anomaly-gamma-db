@@ -1,6 +1,6 @@
 <template>
 <div class="tile-grid">
-    <div v-for="item in items" :key="item.id" class="tile-card" :class="{ 'tile-card-compact': compact }" @click="$emit('navigateToItem', item.id)">
+    <div v-for="item in visibleItems" :key="item.id" class="tile-card" :class="{ 'tile-card-compact': compact }" @click="$emit('navigateToItem', item.id)">
         <div class="tile-card-header">
             <span class="fav-icon" :class="{ favorited: isFavorited(item.id) }" @click.stop="$emit('toggleFavorite', item.id)">{{ isFavorited(item.id) ? '\u2605' : '\u2606' }}</span>
             <span class="pin-icon" :class="{ pinned: isPinned(item.id), 'pin-disabled': !isPinned(item.id) && pinnedIds.length >= 5 }" @click.stop="$emit('togglePin', item.id)">&#x1F4CC;</span>
@@ -47,11 +47,16 @@
             </span>
         </div>
     </div>
+    <div v-if="items.length === 0" class="tile-empty">{{ t('app_label_no_results') }}</div>
+    <div ref="infiniteScrollSentinel" class="infinite-scroll-sentinel"></div>
 </div>
 </template>
 
 <script>
+import { infiniteScrollMixin } from '../infiniteScrollMixin.js';
+
 export default {
+    mixins: [infiniteScrollMixin],
     props: {
         items: { type: Array, default: () => [] },
         tileFields: { type: Array, default: () => [] },

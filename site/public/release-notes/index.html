@@ -112,6 +112,14 @@
             white-space: nowrap;
             cursor: default;
         }
+        .rn-credit-link {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .rn-credit-link:hover {
+            text-decoration: underline;
+        }
         .rn-credit-suggestion {
             color: #c4b5fd;
             background: rgba(196, 181, 253, 0.1);
@@ -166,11 +174,19 @@
                 const label = entry.type.charAt(0).toUpperCase() + entry.type.slice(1);
                 let credits = "";
                 if (entry.credits) {
+                    const githubUrls = {
+                        "Evincars": "https://github.com/Evincars",
+                        "SaloEater": "https://github.com/SaloEater",
+                    };
                     credits = '<div class="rn-credits">';
                     for (const c of entry.credits) {
                         const icon = roleIcons[c.role] || "";
                         const tip = (roleLabels[c.role] || "Thanks") + " " + c.name;
-                        credits += `<span class="rn-credit rn-credit-${c.role}" data-tooltip="${tip}">${icon} ${c.name}</span>`;
+                        const url = githubUrls[c.name];
+                        const nameHtml = url
+                            ? `<a class="rn-credit-link" href="${url}" target="_blank" rel="noopener noreferrer">${c.name}</a>`
+                            : c.name;
+                        credits += `<span class="rn-credit rn-credit-${c.role}" data-tooltip="${tip}">${icon} ${nameHtml}</span>`;
                     }
                     credits += '</div>';
                 }

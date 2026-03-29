@@ -1,5 +1,5 @@
 <template>
-<div id="app" @keydown.escape.window="handleEscape()">
+<div id="app" @keydown.window.escape="handleEscape()">
 <transition name="toast-fade">
     <div v-if="toastMessage" class="toast" :class="'toast--' + toastType" @click="toastMessage = ''">{{ toastMessage }}</div>
 </transition>
@@ -57,7 +57,7 @@
     @clear-global-query="clearGlobalQuery()"
     @update:global-query="(v) => globalQuery = v"
     @search="debouncedGlobalSearch()"
-    @escape-search="if (globalQuery.trim()) lastGlobalQuery = globalQuery; globalQuery = ''"
+    @escape-search="() => { if (globalQuery.trim()) lastGlobalQuery = globalQuery; globalQuery = '' }"
     @select-search-result="(id) => { lastGlobalQuery = globalQuery; globalQuery = ''; navigateToItem(id) }"
 />
 
@@ -178,8 +178,9 @@
                 @navigate-to-item="navigateToItem"
             />
 
-            <CraftingTreesView
+            <CraftingTreesTileView
                 :is-crafting-trees="isCraftingTrees"
+                :all-crafting-trees="craftingTrees"
                 :filtered-crafting-trees="filteredCraftingTrees"
                 :crafting-tree-expand-all="craftingTreeExpandAll"
                 :crafting-tree-expanded="craftingTreeExpanded"
@@ -442,6 +443,19 @@
     @close="shortcutHelpOpen = false"
 />
 
+<QuickNavModal
+    :open="quickNavOpen"
+    :groupedCategories="groupedCategories"
+    :categoryCounts="categoryCounts"
+    :favoriteIds="favoriteIds"
+    :recentIds="recentIds"
+    @close="quickNavOpen = false"
+    @select-category="selectCategory"
+    @select-favorites="selectFavorites()"
+    @select-recent="selectRecent()"
+    @open-build-planner="openBuildPlanner()"
+/>
+
 <FooterBar />
 
 </div>
@@ -459,7 +473,7 @@ import ItemDetailModal from "./components/ItemDetailModal.vue";
 import { defineAsyncComponent } from 'vue';
 const BuildPlanner = defineAsyncComponent(() => import('./components/BuildPlanner.vue'));
 import ComparePanel from "./components/ComparePanel.vue";
-import CraftingTreesView from "./components/CraftingTreesView.vue";
+import CraftingTreesTileView from "./components/crafting-trees-page/CraftingTreesTileView.vue";
 import MaterialsView from "./components/MaterialsView.vue";
 import OutfitExchangeView from "./components/OutfitExchangeView.vue";
 import ToolkitRatesView from "./components/ToolkitRatesView.vue";
@@ -468,6 +482,7 @@ import BuildImportCodeModal from "./components/modals/BuildImportCodeModal.vue";
 import BuildSaveModal from "./components/modals/BuildSaveModal.vue";
 import SaveImportModal from "./components/modals/SaveImportModal.vue";
 import BuildPickerModal from "./components/modals/BuildPickerModal.vue";
+import QuickNavModal from "./components/modals/QuickNavModal.vue";
 import ShortcutHelpModal from "./components/modals/ShortcutHelpModal.vue";
 
 export default {
@@ -479,7 +494,7 @@ export default {
     BuildPickerModal,
     BuildSaveModal,
     ComparePanel,
-    CraftingTreesView,
+    CraftingTreesTileView,
     FilterBar,
     FooterBar,
     HeaderBar,
@@ -488,6 +503,7 @@ export default {
     ItemDetailModal,
     MaterialsView,
     OutfitExchangeView,
+    QuickNavModal,
     SaveImportModal,
     ShortcutHelpModal,
     SidebarNav,
@@ -526,6 +542,7 @@ export default {
       ammoArrow: this.ammoArrow,
       isAmmoBest: this.isAmmoBest,
       findItemByName: this.findItemByName,
+      findFullItemByName: this.findFullItemByName,
       modalStatClass: this.modalStatClass,
       modalStatStyle: this.modalStatStyle,
       compareValueClass: this.compareValueClass,

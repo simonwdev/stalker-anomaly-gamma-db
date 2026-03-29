@@ -168,7 +168,6 @@ const CATEGORY_GROUPS = [
 
 const KEYS = {
     SEARCH: '/',
-    SEARCH_MOD: 'k',
     ESCAPE: 'Escape',
     TOGGLE_VIEW: 'v',
     TOGGLE_SIDEBAR: 's',
@@ -184,6 +183,7 @@ const KEYS = {
     CLEAR_FILTERS: 'x',
     CHORD_GO: 'g',
     CHORD_BUILD: 'b',
+    QUICK_NAV: 'k',
 };
 const CHORD_TIMEOUT = 500;
 
@@ -411,6 +411,7 @@ export const appDefinition = {
             versionCompareResults: [],
             versionCompareFilter: "",
             shortcutHelpOpen: false,
+            quickNavOpen: false,
             _chordKey: null,
             _chordTimer: null,
             hasUnseenReleaseNotes: false,
@@ -1632,6 +1633,14 @@ export const appDefinition = {
             return this.index.find(i => i.name === name || i.displayName === name || i.pda_encyclopedia_name === name);
         },
 
+        findFullItemByName(name) {
+            for (const items of Object.values(this.categoryItems)) {
+                const match = items.find(i => i.name === name || i.displayName === name || i.pda_encyclopedia_name === name);
+                if (match) return match;
+            }
+            return null;
+        },
+
         async loadItemById(id) {
             const indexRes = await fetch(this.dataUrl("index.json"));
             const index = await indexRes.json();
@@ -1838,6 +1847,8 @@ export const appDefinition = {
                 });
             }
 
+            const previousCategory = this.activeCategory;
+
             this.buildPlannerActive = false;
             this.favoritesViewActive = false;
             this.recentViewActive = false;
@@ -1964,18 +1975,47 @@ export const appDefinition = {
             }
 
             if (cat === CAT.CRAFTING_TREES) {
-                if (this.craftingTrees.length === 0) {
-                    this.startContentLoading();
-                    try {
+                this.startContentLoading();
+                try {
+                    if (this.craftingTrees.length === 0) {
                         const recipesData = await this.fetchRecipes();
                         this.buildCraftingTreeData(recipesData);
-                    } catch (e) {
-                        console.error("Failed to load crafting trees:", e);
                     }
-                    await this.stopContentLoading();
+                    // Ensure artefacts + ingredient categories are loaded so tree view can show full item stats
+                    const slugsToLoad = [
+                        categorySlug(CAT.ARTEFACTS),
+                        categorySlug(CAT.MUTANT_PARTS),
+                        categorySlug(CAT.MATERIALS),
+                    ];
+                    const fetches = slugsToLoad
+                        .filter(s => !this.categoryItems[s])
+                        .map(async (s) => {
+                            try {
+                                const res = await fetch(this.dataUrl(`${s}.json`));
+                                if (!res.ok) return;
+                                const data = await res.json();
+                                for (const item of data.items) {
+                                    item.localeName = this.tName(item);
+                                }
+                                this.categoryItems[s] = data.items;
+                                this.categoryHeaders[s] = data.headers;
+                                this.categoryFuse[s] = new Fuse(data.items, {
+                                    keys: ["displayName", "pda_encyclopedia_name", "localeName", "id"],
+                                    threshold: 0.35,
+                                });
+                            } catch { /* ignore missing categories */ }
+                        });
+                    await Promise.all(fetches);
+                } catch (e) {
+                    console.error("Failed to load crafting trees:", e);
                 }
-                this.craftingTreeExpandAll = false;
-                this.craftingTreeExpanded = new Set();
+                await this.stopContentLoading();
+                // Only reset expansion state when navigating TO crafting trees from another page.
+                // If we're already on crafting trees (e.g. returning from a modal), preserve the state.
+                if (previousCategory !== CAT.CRAFTING_TREES) {
+                    this.craftingTreeExpandAll = false;
+                    this.craftingTreeExpanded = new Set();
+                }
                 return;
             }
 
@@ -3886,7 +3926,9 @@ export const appDefinition = {
         },
 
         handleEscape() {
-            if (this.calloutActive) {
+            if (this.quickNavOpen) {
+                this.quickNavOpen = false;
+            } else if (this.calloutActive) {
                 this.dismissCallout();
             } else if (this.whatsNewVisible) {
                 this.dismissWhatsNew();
@@ -5687,18 +5729,10 @@ export const appDefinition = {
         window.addEventListener('keydown', (e) => {
             const inInput = e.target.matches('input, textarea, select, [contenteditable]');
 
-            // Ctrl+K / Cmd+K: focus search (works even in inputs)
-            if ((e.ctrlKey || e.metaKey) && e.key === KEYS.SEARCH_MOD) {
+            // Ctrl+K / Cmd+K: open quick navigation
+            if ((e.ctrlKey || e.metaKey) && e.key === KEYS.QUICK_NAV) {
                 e.preventDefault();
-                const input = document.querySelector('.global-search input');
-                if (input) {
-                    if (!this.globalQuery && this.lastGlobalQuery) {
-                        this.globalQuery = this.lastGlobalQuery;
-                        this.globalSearch();
-                    }
-                    input.focus();
-                    this.$nextTick(() => input.select());
-                }
+                this.quickNavOpen = !this.quickNavOpen;
                 return;
             }
 

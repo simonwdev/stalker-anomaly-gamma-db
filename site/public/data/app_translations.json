@@ -242,6 +242,7 @@
     "app_shortcuts_toggle_filters": "Toggle filter panel",
     "app_shortcuts_build_planner": "Go to Build Planner",
     "app_shortcuts_show_help": "Show keyboard shortcuts",
+    "app_shortcuts_quick_nav": "Quick page navigation",
     "app_shortcuts_prev_category": "Previous category",
     "app_shortcuts_next_category": "Next category",
     "app_shortcuts_compare": "Open compare",
@@ -260,7 +261,11 @@
     "app_callout_save_import_title": "Import Save File",
     "app_callout_save_import_desc": "Load your S.T.A.L.K.E.R. save file to automatically populate your build planner with your current loadout.",
     "app_callout_cross_pack_title": "Compare Across Packs",
-    "app_callout_cross_pack_desc": "See how this item's stats changed between different mod pack versions."
+    "app_callout_cross_pack_desc": "See how this item's stats changed between different mod pack versions.",
+    "app_quick_nav_placeholder": "Go to page…",
+    "app_quick_nav_hint_navigate": "navigate",
+    "app_quick_nav_hint_select": "select",
+    "app_quick_nav_hint_close": "close"
   },
   "ru": {
     "app_group_saved": "Сохранённые",
@@ -505,6 +510,7 @@
     "app_shortcuts_toggle_filters": "Показать / скрыть фильтры",
     "app_shortcuts_build_planner": "Перейти к сборке",
     "app_shortcuts_show_help": "Показать горячие клавиши",
+    "app_shortcuts_quick_nav": "Быстрая навигация по страницам",
     "app_shortcuts_prev_category": "Предыдущая категория",
     "app_shortcuts_next_category": "Следующая категория",
     "app_shortcuts_compare": "Открыть сравнение",
@@ -523,7 +529,11 @@
     "app_callout_save_import_title": "Импорт сохранения",
     "app_callout_save_import_desc": "Загрузите файл сохранения S.T.A.L.K.E.R., чтобы автоматически заполнить планировщик билда вашим текущим снаряжением.",
     "app_callout_cross_pack_title": "Сравнение между паками",
-    "app_callout_cross_pack_desc": "Посмотрите, как изменились характеристики этого предмета в разных версиях мод-пака."
+    "app_callout_cross_pack_desc": "Посмотрите, как изменились характеристики этого предмета в разных версиях мод-пака.",
+    "app_quick_nav_placeholder": "Перейти на страницу…",
+    "app_quick_nav_hint_navigate": "навигация",
+    "app_quick_nav_hint_select": "выбрать",
+    "app_quick_nav_hint_close": "закрыть"
   },
   "fr": {
     "app_group_saved": "Enregistré",
@@ -767,6 +777,7 @@
     "app_shortcuts_toggle_filters": "Afficher/masquer les filtres",
     "app_shortcuts_build_planner": "Aller au planificateur de build",
     "app_shortcuts_show_help": "Afficher les raccourcis clavier",
+    "app_shortcuts_quick_nav": "Navigation rapide entre les pages",
     "app_shortcuts_prev_category": "Catégorie précédente",
     "app_shortcuts_next_category": "Catégorie suivante",
     "app_shortcuts_compare": "Ouvrir la comparaison",
@@ -785,6 +796,10 @@
     "app_callout_save_import_title": "Importer une sauvegarde",
     "app_callout_save_import_desc": "Chargez votre fichier de sauvegarde S.T.A.L.K.E.R. pour remplir automatiquement le planificateur de build avec votre équipement actuel.",
     "app_callout_cross_pack_title": "Comparer entre packs",
-    "app_callout_cross_pack_desc": "Voyez comment les statistiques de cet objet ont changé entre les différentes versions du mod pack."
+    "app_callout_cross_pack_desc": "Voyez comment les statistiques de cet objet ont changé entre les différentes versions du mod pack.",
+    "app_quick_nav_placeholder": "Aller à la page…",
+    "app_quick_nav_hint_navigate": "naviguer",
+    "app_quick_nav_hint_select": "sélectionner",
+    "app_quick_nav_hint_close": "fermer"
   }
 }
