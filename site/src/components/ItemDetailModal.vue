@@ -10,32 +10,9 @@
             <p v-show="modalLoading" class="loading">{{ t('app_label_loading') }}</p>
 
             <div v-if="modalItem && !modalLoading">
-                <!-- Header: image left, title/meta/toolbar right -->
+                <!-- Header -->
                 <div class="modal-header-layout" :key="'hdr-' + modalItem.id">
-                    <!-- Item image with ammo-tooltip-style background -->
-                    <div class="modal-item-img-box"
-                         @click="$event.currentTarget.classList.remove('no-icon')"
-                    >
-                        <img
-                            class="modal-item-img"
-                            :src="'img/icons/' + modalItem.id + '.png'"
-                            :alt="tName(modalItem)"
-                            @error="$event.target.style.display='none'; $event.target.parentElement.classList.add('no-icon')"
-                        />
-                        <img
-                            v-if="modalItem.ui_st_community && factionIcon(modalItem.ui_st_community)"
-                            :src="'img/' + factionIcon(modalItem.ui_st_community)"
-                            :alt="modalItem.ui_st_community"
-                            class="modal-item-faction-badge"
-                            v-tooltip="t(modalItem.ui_st_community)"
-                        />
-                        <div class="modal-item-img-placeholder">
-                            <svg viewBox="0 0 80 36" xmlns="http://www.w3.org/2000/svg" class="item-icon-placeholder-x"><line x1="4" y1="4" x2="76" y2="32" stroke="currentColor" stroke-width="1.5"/><line x1="76" y1="4" x2="4" y2="32" stroke="currentColor" stroke-width="1.5"/></svg>
-                            <span class="item-icon-placeholder-text">{{ t('app_label_no_image') }}</span>
-                        </div>
-                    </div>
-
-                    <!-- Title + meta + toolbar -->
+                    <!-- Column 1: title + meta + toolbar -->
                     <div class="modal-header-content">
                         <div class="modal-title-row">
                             <h1 class="modal-title">{{ tName(modalItem) }}</h1>
@@ -83,6 +60,29 @@
                             </div>
                         </div>
                     </div><!-- /modal-header-content -->
+
+                    <!-- Column 2: item image -->
+                    <div class="modal-item-img-box"
+                         @click="$event.currentTarget.classList.remove('no-icon')"
+                    >
+                        <img
+                            class="modal-item-img"
+                            :src="'img/icons/' + modalItem.id + '.png'"
+                            :alt="tName(modalItem)"
+                            @error="$event.target.style.display='none'; $event.target.parentElement.classList.add('no-icon')"
+                        />
+                        <img
+                            v-if="modalItem.ui_st_community && factionIcon(modalItem.ui_st_community)"
+                            :src="'img/' + factionIcon(modalItem.ui_st_community)"
+                            :alt="modalItem.ui_st_community"
+                            class="modal-item-faction-badge"
+                            v-tooltip="t(modalItem.ui_st_community)"
+                        />
+                        <div class="modal-item-img-placeholder">
+                            <svg viewBox="0 0 80 36" xmlns="http://www.w3.org/2000/svg" class="item-icon-placeholder-x"><line x1="4" y1="4" x2="76" y2="32" stroke="currentColor" stroke-width="1.5"/><line x1="76" y1="4" x2="4" y2="32" stroke="currentColor" stroke-width="1.5"/></svg>
+                            <span class="item-icon-placeholder-text">{{ t('app_label_no_image') }}</span>
+                        </div>
+                    </div>
                 </div><!-- /modal-header-layout -->
 
                 <div class="modal-badges" v-if="modalItem['st_data_export_has_perk'] === 'Y' || modalItem['st_data_export_is_junk'] === 'Y' || modalItem['st_data_export_can_be_crafted'] === 'Y' || modalItem['ui_mcm_menu_exo'] === 'Y' || modalItem['st_data_export_can_be_cooked'] === 'Y' || modalItem['st_data_export_used_in_cooking'] === 'Y' || modalItem['st_data_export_used_in_crafting'] === 'Y' || modalItem['st_data_export_cuts_thick_skin'] === 'Y' || modalItem.hasNpcWeaponDrop === false || isUnusedAmmo(modalItem, modalCategory)">

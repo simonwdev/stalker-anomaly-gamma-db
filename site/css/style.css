@@ -2267,10 +2267,10 @@ input.range-input {
 .modal-body::-webkit-scrollbar-thumb:hover {
     background: var(--text-secondary);
 }
-/* Modal header: image-left / title-right layout */
+/* Modal header: two columns — left: title+meta+toolbar, right: image */
 .modal-header-layout {
     display: flex;
-    gap: 1.1rem;
+    gap: 1.5rem;
     align-items: flex-start;
     margin-bottom: 0.6rem;
     animation: fade-in 0.25s ease;
@@ -2283,19 +2283,18 @@ input.range-input {
     background: #141a1f;
     border: 1px solid #3d464e;
     border-radius: 6px;
-    padding: 0.55rem 0.85rem;
-    min-width: 130px;
-    min-height: 90px;
+    padding: 0.4rem 0.7rem;
+    min-width: 100px;
+    min-height: 68px;
     display: flex;
     align-items: center;
     justify-content: center;
-    align-self: flex-start;
     overflow: hidden;
 }
 .modal-item-img {
-    max-width: 200px;
-    min-height: 90px;
-    max-height: 90px;
+    max-width: 160px;
+    min-height: 68px;
+    max-height: 68px;
     object-fit: contain;
     display: block;
 }
@@ -2323,8 +2322,8 @@ input.range-input {
     display: flex;
 }
 .modal-item-img-box .item-icon-placeholder-x {
-    width: 80px;
-    height: 36px;
+    width: 60px;
+    height: 28px;
 }
 .modal-item-img-box .item-icon-placeholder-text {
     font-size: 0.6rem;
@@ -2332,28 +2331,18 @@ input.range-input {
     letter-spacing: 0.05em;
 }
 
-.modal-item-img-box {
-    margin-top: 11px;
-}
-
-/* Header content (title, meta, toolbar) takes remaining space */
+/* Header content — natural width so image sits right next to it */
 .modal-header-content {
-    flex: 1;
     min-width: 0;
 }
 
-/* Collapse to stacked on very small screens */
+/* Collapse image below content on very small screens */
 @media (max-width: 500px) {
     .modal-header-layout {
         flex-direction: column;
     }
     .modal-item-img-box {
-        width: 100%;
-        min-width: unset;
-    }
-    .modal-item-img {
-        max-width: 100%;
-        max-height: 80px;
+        display: none;
     }
 }
 
@@ -2362,6 +2351,7 @@ input.range-input {
     align-items: center;
     gap: 0.5rem;
 }
+
 .modal-pin-icon {
     font-size: 1.1rem;
     flex-shrink: 0;
