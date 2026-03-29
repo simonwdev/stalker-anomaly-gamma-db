@@ -4611,6 +4611,8 @@ export const appDefinition = {
                 this.openBuildPlanner();
             } else if (entry.action === "craftingTrees") {
                 this.selectCategory(CAT.CRAFTING_TREES);
+            } else if (entry.action === "maps") {
+                this.openMaps();
             }
         },
 
