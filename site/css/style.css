@@ -193,7 +193,7 @@ a:hover {
     padding: 0.5rem 1.5rem 0.5rem 0.75rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     flex-shrink: 0;
 }
 .header-brand {
@@ -201,6 +201,7 @@ a:hover {
     align-items: center;
     gap: 0.75rem;
     flex-shrink: 0;
+    position: relative;
 }
 .site-logo {
     height: 2.5rem;
@@ -224,6 +225,30 @@ a:hover {
 .header-pack-label .pack-status-badge {
     margin-left: 0.4rem;
 }
+.header-pack-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    color: var(--accent);
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    line-height: inherit;
+    transition: opacity 0.15s;
+}
+.header-pack-switcher:hover .pack-chevron {
+    opacity: 0.7;
+}
+.header-pack-switcher .pack-chevron {
+    opacity: 0.4;
+    flex-shrink: 0;
+}
 .site-header h1 {
     font-size: 0.6rem;
     color: var(--text-secondary);
@@ -233,31 +258,6 @@ a:hover {
 }
 
 /* Pack selector */
-.pack-wrap {
-    position: relative;
-    flex-shrink: 0;
-}
-.pack-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    height: 2rem;
-    padding: 0 0.5rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: transparent;
-    color: var(--text-secondary);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    cursor: pointer;
-    transition: border-color 0.15s, color 0.15s, background 0.15s;
-}
-.pack-btn:hover {
-    color: var(--text);
-    border-color: var(--accent-dim);
-    background: rgba(255, 255, 255, 0.05);
-}
 .pack-chevron {
     transition: transform 0.15s;
     opacity: 0.5;
@@ -268,7 +268,7 @@ a:hover {
 .pack-menu {
     position: absolute;
     top: calc(100% + 0.35rem);
-    right: 0;
+    left: 0;
     background: #1e1e1e;
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -388,7 +388,12 @@ a:hover {
     width: 1px;
     height: 1.4rem;
     background: var(--border);
-    margin: 0 0.35rem;
+    flex-shrink: 0;
+}
+.header-utils {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     flex-shrink: 0;
 }
 
@@ -396,8 +401,17 @@ a:hover {
 .header-links {
     display: flex;
     align-items: center;
-    gap: 0.15rem;
     flex-shrink: 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.header-links .header-link {
+    border: none;
+    border-radius: 0;
+}
+.header-links .header-link + .header-link {
+    border-left: 1px solid var(--border);
 }
 .header-link {
     display: flex;
@@ -432,14 +446,13 @@ button.header-link {
 .header-mobile-items { display: none; }
 @media (max-width: 1100px) {
     .header-desktop-items.header-links,
-    .header-desktop-items.header-divider,
-    .header-desktop-items.shortcut-help-btn,
-    .header-desktop-items.release-notes-btn { display: none !important; }
+    .header-utils .shortcut-help-btn,
+    .header-utils .release-notes-btn { display: none !important; }
     .header-mobile-items { display: flex; }
     .header-search-btn { display: none; }
 }
 @media (max-width: 900px) {
-    .header-desktop-items.locale-wrap { display: none !important; }
+    .header-utils.header-desktop-items { display: none !important; }
     .global-search.header-desktop-items { display: none !important; }
     .header-search-btn { display: flex; margin-left: auto; }
 }
@@ -3010,7 +3023,6 @@ input.range-input {
     .site-header { padding: 0.5rem 0.75rem; gap: 0.5rem; }
     .site-logo { display: none; }
     .header-pack-label { font-size: 0.8rem; }
-    .header-pack-desktop { display: none; }
     .header-desktop-items { display: none !important; }
     .header-mobile-items { display: flex; }
     .header-search-btn { margin-left: auto; }
@@ -3940,6 +3952,7 @@ input.range-input {
 /* Keyboard Shortcuts Modal */
 .shortcut-modal {
     max-width: 40rem;
+    height: auto;
 }
 .shortcut-modal-title {
     font-size: 1.15rem;

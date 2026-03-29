@@ -3,17 +3,18 @@
     <button class="hamburger-btn" @click="sidebarCollapsed ? $emit('toggleSidebarCollapse') : $emit('toggleSidebar')" :class="{ active: sidebarOpen, 'show-desktop': sidebarCollapsed }">
         <span></span><span></span><span></span>
     </button>
-    <div class="header-brand">
+    <div class="header-brand" v-click-outside="() => packOpen = false">
         <img src="/img/logo.png" alt="S.T.A.L.K.E.R. Anomaly" class="site-logo">
         <div class="header-title-group">
-            <div class="header-pack-label">{{ activePack?.name || 'GAMMA' }}<span v-if="activePack?.status" class="pack-status-badge" :style="activePack.statusColor ? { color: activePack.statusColor, background: activePack.statusColor + '26' } : {}">{{ activePack.status }}</span></div>
+            <button v-if="packs.length > 1" class="header-pack-label header-pack-switcher" @click.stop="packOpen = !packOpen">
+                {{ activePack?.name || 'GAMMA' }}<span v-if="activePack?.status" class="pack-status-badge" :style="activePack.statusColor ? { color: activePack.statusColor, background: activePack.statusColor + '26' } : {}">{{ activePack.status }}</span>
+                <svg class="pack-chevron" :class="{ open: packOpen }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div v-else class="header-pack-label">{{ activePack?.name || 'GAMMA' }}</div>
             <h1>{{ t('app_label_database') }}</h1>
         </div>
-    </div>
-    <div class="pack-wrap header-pack-desktop" v-if="packs.length > 1" v-click-outside="() => packOpen = false">
-        <button class="pack-btn" @click.stop="packOpen = !packOpen">{{ activePack?.name }}<svg class="pack-chevron" :class="{ open: packOpen }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
         <div class="pack-menu" v-show="packOpen">
-            <button v-for="p in packs" :key="p.id" class="pack-menu-item" :class="{ active: activePack?.id === p.id }" @click="$emit('switchPack', p); packOpen = false">
+            <button v-for="p in sortedPacks" :key="p.id" class="pack-menu-item" :class="{ active: activePack?.id === p.id }" @click="$emit('switchPack', p); packOpen = false">
                 {{ p.name }}<span v-if="p.status" class="pack-status-badge" :style="p.statusColor ? { color: p.statusColor, background: p.statusColor + '26' } : {}">{{ p.status }}</span>
             </button>
         </div>
@@ -26,23 +27,6 @@
             <component v-else :is="iconMap[link.icon]" :size="20" />
         </a>
     </div>
-    <span class="header-divider header-desktop-items"></span>
-    <div class="locale-wrap header-desktop-items" v-click-outside="() => localeOpen = false">
-        <button class="locale-btn" @click.stop="localeOpen = !localeOpen">{{ locale.toUpperCase() }}<svg class="locale-chevron" :class="{ open: localeOpen }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="locale-menu" v-show="localeOpen">
-            <button v-for="l in LOCALES" :key="l.id" class="locale-menu-item" :class="{ active: locale === l.id }" @click="$emit('changeLocale', l.id); localeOpen = false">
-                <span class="locale-menu-code">{{ l.id.toUpperCase() }}</span>
-                <span class="locale-menu-label">{{ l.label }}</span>
-            </button>
-        </div>
-    </div>
-    <button class="header-link shortcut-help-btn header-desktop-items" @click="$emit('openShortcutHelp')" v-tooltip="t('app_shortcuts_title')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h4"/><path d="M14 8h4"/><path d="M6 12h3"/><path d="M15 12h3"/><path d="M10 12h4"/><path d="M8 16h8"/></svg>
-    </button>
-    <a href="release-notes/" class="release-notes-btn header-link header-desktop-items" v-tooltip="t('app_release_notes')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>
-        <span v-if="hasUnseenReleaseNotes" class="release-notes-badge"></span>
-    </a>
 
     <!-- Mobile: overflow menu -->
     <button class="header-link header-mobile-items" @click="overflowOpen = !overflowOpen">
@@ -62,7 +46,7 @@
         </div>
         <template v-if="packs.length > 1">
             <div class="header-drawer-label">{{ t('app_drawer_pack') || 'Pack' }}</div>
-            <button class="header-drawer-item" v-for="p in packs" :key="p.id" :class="{ active: activePack?.id === p.id }" @click="$emit('switchPack', p); overflowOpen = false">
+            <button class="header-drawer-item" v-for="p in sortedPacks" :key="p.id" :class="{ active: activePack?.id === p.id }" @click="$emit('switchPack', p); overflowOpen = false">
                 <span>{{ p.name }}</span>
                 <span v-if="p.status" class="pack-status-badge" :style="p.statusColor ? { color: p.statusColor, background: p.statusColor + '26' } : {}">{{ p.status }}</span>
             </button>
@@ -120,6 +104,25 @@
             <p v-show="globalResults.length === 0 && globalQuery.trim()" class="no-results">{{ t('app_label_no_results') }}</p>
         </div>
     </div>
+    <div class="header-utils header-desktop-items">
+        <span class="header-divider"></span>
+        <div class="locale-wrap" v-click-outside="() => localeOpen = false">
+            <button class="locale-btn" @click.stop="localeOpen = !localeOpen">{{ locale.toUpperCase() }}<svg class="locale-chevron" :class="{ open: localeOpen }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="locale-menu" v-show="localeOpen">
+                <button v-for="l in LOCALES" :key="l.id" class="locale-menu-item" :class="{ active: locale === l.id }" @click="$emit('changeLocale', l.id); localeOpen = false">
+                    <span class="locale-menu-code">{{ l.id.toUpperCase() }}</span>
+                    <span class="locale-menu-label">{{ l.label }}</span>
+                </button>
+            </div>
+        </div>
+        <button class="header-link shortcut-help-btn" @click="$emit('openShortcutHelp')" v-tooltip="t('app_shortcuts_title')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h4"/><path d="M14 8h4"/><path d="M6 12h3"/><path d="M15 12h3"/><path d="M10 12h4"/><path d="M8 16h8"/></svg>
+        </button>
+        <a href="release-notes/" class="release-notes-btn header-link" v-tooltip="t('app_release_notes')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>
+            <span v-if="hasUnseenReleaseNotes" class="release-notes-badge"></span>
+        </a>
+    </div>
 
     <!-- Mobile: search icon button -->
     <button class="header-link header-mobile-items header-search-btn" @click="mobileSearchOpen = true">
@@ -174,6 +177,11 @@ export default {
         'update:globalQuery', 'search', 'escapeSearch', 'selectSearchResult',
     ],
     inject: ['t', 'tName', 'tCat'],
+    computed: {
+        sortedPacks() {
+            return [...this.packs].sort((a, b) => a.name.localeCompare(b.name));
+        },
+    },
     data() {
         return {
             packOpen: false,
