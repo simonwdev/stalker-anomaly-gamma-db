@@ -190,10 +190,10 @@ a:hover {
 .site-header {
     background: #141414;
     border-bottom: 1px solid var(--border);
-    padding: 0.5rem 1.5rem 0.5rem 0.75rem;
+    padding: 0.3rem 1.5rem 0.3rem 0.75rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     flex-shrink: 0;
 }
 .header-brand {
@@ -201,9 +201,10 @@ a:hover {
     align-items: center;
     gap: 0.75rem;
     flex-shrink: 0;
+    position: relative;
 }
 .site-logo {
-    height: 2.5rem;
+    height: 2.2rem;
     width: auto;
     flex-shrink: 0;
     opacity: 0.75;
@@ -224,6 +225,30 @@ a:hover {
 .header-pack-label .pack-status-badge {
     margin-left: 0.4rem;
 }
+.header-pack-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    color: var(--accent);
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    line-height: inherit;
+    transition: opacity 0.15s;
+}
+.header-pack-switcher:hover .pack-chevron {
+    opacity: 0.7;
+}
+.header-pack-switcher .pack-chevron {
+    opacity: 0.4;
+    flex-shrink: 0;
+}
 .site-header h1 {
     font-size: 0.6rem;
     color: var(--text-secondary);
@@ -232,32 +257,40 @@ a:hover {
     text-transform: uppercase;
 }
 
-/* Pack selector */
-.pack-wrap {
-    position: relative;
+/* Nav bar (link bar below header) */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: #141414;
+    border-bottom: 1px solid var(--border);
+    padding: 0 0.75rem;
     flex-shrink: 0;
 }
-.pack-btn {
+.nav-bar-item {
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
-    height: 2rem;
-    padding: 0 0.5rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: transparent;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
     color: var(--text-secondary);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
+    font-size: 0.75rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: border-color 0.15s, color 0.15s, background 0.15s;
+    transition: color 0.15s, border-color 0.15s;
+    white-space: nowrap;
 }
-.pack-btn:hover {
+.nav-bar-item:hover {
     color: var(--text);
-    border-color: var(--accent-dim);
-    background: rgba(255, 255, 255, 0.05);
 }
+.nav-bar-item.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* Pack selector */
 .pack-chevron {
     transition: transform 0.15s;
     opacity: 0.5;
@@ -268,7 +301,7 @@ a:hover {
 .pack-menu {
     position: absolute;
     top: calc(100% + 0.35rem);
-    right: 0;
+    left: 0;
     background: #1e1e1e;
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -388,7 +421,12 @@ a:hover {
     width: 1px;
     height: 1.4rem;
     background: var(--border);
-    margin: 0 0.35rem;
+    flex-shrink: 0;
+}
+.header-utils {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     flex-shrink: 0;
 }
 
@@ -396,8 +434,17 @@ a:hover {
 .header-links {
     display: flex;
     align-items: center;
-    gap: 0.15rem;
     flex-shrink: 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.header-links .header-link {
+    border: none;
+    border-radius: 0;
+}
+.header-links .header-link + .header-link {
+    border-left: 1px solid var(--border);
 }
 .header-link {
     display: flex;
@@ -424,6 +471,23 @@ button.header-link {
     cursor: pointer;
     padding: 0;
     font: inherit;
+}
+
+/* Header drawer + mobile search styles are in HeaderBar.vue <style> block */
+
+/* Responsive: header overflow toggle */
+.header-mobile-items { display: none; }
+@media (max-width: 1100px) {
+    .header-desktop-items.header-links,
+    .header-utils .shortcut-help-btn,
+    .header-utils .release-notes-btn { display: none !important; }
+    .header-mobile-items { display: flex; }
+    .header-search-btn { display: none; }
+}
+@media (max-width: 900px) {
+    .header-utils.header-desktop-items { display: none !important; }
+    .global-search.header-desktop-items { display: none !important; }
+    .header-search-btn { display: flex; margin-left: auto; }
 }
 
 /* Global search */
@@ -533,7 +597,7 @@ button.header-link {
 /* Layout */
 .layout {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 220px 1fr;
     flex: 1;
     min-height: 0;
     overflow: hidden;
@@ -651,6 +715,20 @@ button.header-link {
 .layout.sidebar-collapsed .content {
     padding-left: 0.75rem;
 }
+
+/* Hide sidebar for tool views (Build Planner, Version Compare) */
+.layout.sidebar-hidden {
+    grid-template-columns: 0px 1fr;
+}
+.layout.sidebar-hidden .sidebar {
+    border-right: none;
+    overflow: hidden;
+    visibility: hidden;
+}
+.layout.sidebar-hidden .content {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
 .hamburger-btn.show-desktop {
     display: flex;
 }
@@ -668,6 +746,9 @@ button.header-link {
     flex-direction: column;
     min-height: 0;
     transition: padding-left 0.2s ease;
+}
+.content.content-maps {
+    padding: 0;
 }
 .content-inner {
     display: flex;
@@ -776,6 +857,15 @@ button.header-link {
     border-color: var(--accent-dim);
     background: rgba(200, 168, 78, 0.08);
     z-index: 2;
+}
+.view-toggle-label {
+    font-size: 0.75rem;
+    font-family: inherit;
+}
+.view-toggle button:has(.view-toggle-label) {
+    width: auto;
+    padding: 0 0.5rem;
+    gap: 0.3rem;
 }
 
 /* Tile grid */
@@ -888,6 +978,7 @@ a.tile-card-name:hover {
     justify-content: space-between;
     align-items: center;
     gap: 0.25rem;
+    min-width: 0;
 }
 .tile-stat-row .stat-label {
     color: var(--text-secondary);
@@ -896,13 +987,15 @@ a.tile-card-name:hover {
     letter-spacing: 0.03em;
     min-width: 0;
     white-space: nowrap;
-    flex-shrink: 0;
-    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .tile-stat-row .stat-value {
     font-family: var(--mono);
     font-size: 0.7rem;
     text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 .stat-positive {
     color: #6ec87a;
@@ -2035,123 +2128,6 @@ input.range-input {
     background: rgba(208, 122, 110, 0.15);
 }
 
-/* Version Compare */
-.version-compare-view {
-    overflow-y: auto;
-    flex: 1;
-    min-height: 0;
-    padding-right: 1rem;
-}
-.version-compare-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-}
-.version-compare-header h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0;
-}
-.version-compare-picker {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-}
-.version-compare-pack {
-    color: var(--text-secondary);
-}
-.version-compare-pack-btn {
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: var(--text);
-    border-radius: 4px;
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
-    font-family: inherit;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    transition: border-color 0.15s;
-}
-.version-compare-pack-btn:hover {
-    border-color: var(--accent-dim);
-}
-.version-compare-count {
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    white-space: nowrap;
-}
-.version-compare-spacer {
-    flex: 1;
-}
-.version-compare-item-count {
-    color: var(--text-secondary);
-    font-size: 0.75rem;
-    white-space: nowrap;
-    margin-left: auto;
-}
-.version-compare-list {
-    display: flex;
-    flex-direction: column;
-}
-.version-compare-item {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    padding: 0.4rem 0.5rem;
-    border-bottom: 1px solid var(--border);
-    cursor: pointer;
-    transition: background 0.1s;
-}
-.version-compare-item:hover {
-    background: var(--card);
-}
-.version-compare-item:last-child {
-    border-bottom: none;
-}
-.version-compare-cat {
-    font-size: 0.7rem;
-    color: var(--text-secondary);
-    min-width: 6rem;
-    flex-shrink: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-}
-.version-compare-name {
-    font-size: 0.8rem;
-    white-space: nowrap;
-    min-width: 12rem;
-    flex-shrink: 0;
-    color: var(--accent);
-}
-.version-compare-changes {
-    display: flex;
-    gap: 0.5rem 1rem;
-    font-size: 0.75rem;
-    font-family: var(--mono);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    min-width: 0;
-}
-.version-compare-stat {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 0.25rem;
-}
-.version-compare-stat-label {
-    color: var(--text-secondary);
-    margin-right: 0.15rem;
-}
-.version-compare-more {
-    color: var(--text-secondary);
-    font-style: italic;
-    font-family: inherit;
-}
-
 /* Legacy stat table (item.html standalone) */
 .stat-table {
     width: 100%;
@@ -3093,14 +3069,20 @@ input.range-input {
     /* Hamburger visible */
     .hamburger-btn { display: flex; }
 
-    /* Header: compact + search wraps to own row */
-    .site-header { padding: 0.5rem 0.75rem; gap: 0.5rem; flex-wrap: wrap; }
-    .site-logo { height: 2rem; }
+    /* Header: compact */
+    .site-header { padding: 0.5rem 0.75rem; gap: 0.5rem; }
+    .site-logo { display: none; }
     .header-pack-label { font-size: 0.8rem; }
-    .global-search { order: 10; flex: 1 1 100%; max-width: none; margin-left: 0; }
+    .header-desktop-items { display: none !important; }
+    .nav-bar.header-desktop-items { display: flex !important; }
+    .header-mobile-items { display: flex; }
+    .header-search-btn { margin-left: auto; }
+
+    /* What's New banner: center horizontally */
+    .whats-new-banner { left: 0.75rem; right: 0.75rem; width: auto; max-width: none; }
 
     /* Layout: single column, sidebar out of flow */
-    .layout { grid-template-columns: 1fr; grid-template-rows: 1fr; }
+    .layout, .layout.sidebar-hidden, .layout.sidebar-collapsed { grid-template-columns: 1fr; grid-template-rows: 1fr; }
 
     /* Sidebar: fixed drawer from left */
     .sidebar {
@@ -3123,17 +3105,17 @@ input.range-input {
     /* Content: reduce padding */
     .content { padding: 0.75rem 0 0 0.75rem; }
 
-    /* Filter bar: wrap into rows */
+    /* Filter bar: two rows — search, then controls */
     .filter-bar { flex-wrap: wrap; gap: 0.5rem; padding-right: 0.75rem; }
-    .filter-input-group { flex: 1 1 auto; max-width: none; min-width: 0; order: 1; }
-    .sort-wrap { order: 3; flex: 1 1 auto; }
-    .filter-bar .item-count { order: 4; white-space: nowrap; }
-    .view-toggle { order: 5; margin-left: 0; }
-    .utility-group { order: 6; }
+    .filter-input-group { flex: 1 1 100%; max-width: none; min-width: 0; order: 1; }
+    .sort-wrap { order: 2; }
+    .filter-bar .item-count { display: none; }
+    .view-toggle { order: 3; margin-left: auto; }
+    .utility-group { order: 4; }
 
     /* Tile grid: single-column on small screens */
     .tile-grid {
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+        grid-template-columns: 1fr;
         padding-right: 0.75rem;
     }
 
@@ -3340,15 +3322,26 @@ input.range-input {
     gap: 0.75rem;
     padding: 0.25rem 0;
 }
+.crafting-trees-toolbar .view-toggle {
+    margin-left: 0;
+}
 .crafting-expand-toggle-btn {
-    border-color: #5f7fa8;
-    background: rgba(95, 127, 168, 0.2);
-    color: #a9cbf6;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    height: 1.75rem;
+    padding: 0 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.15s, border-color 0.15s;
 }
 .crafting-expand-toggle-btn:hover {
-    border-color: #7e9fca;
-    background: rgba(95, 127, 168, 0.32);
-    color: #c2dcff;
+    color: var(--text);
+    border-color: var(--accent-dim);
 }
 .crafting-tree-card .tile-card-header {
     border-bottom: 1px solid var(--border);
@@ -4010,6 +4003,7 @@ input.range-input {
 /* Keyboard Shortcuts Modal */
 .shortcut-modal {
     max-width: 40rem;
+    height: auto;
 }
 .shortcut-modal-title {
     font-size: 1.15rem;
@@ -4301,10 +4295,13 @@ kbd {
 /* Build header toolbar styles are in BuildPlanner.vue <style> block */
 
 .build-planner {
-    padding: 0 1.5rem 0.5rem 0;
+    padding: 0 0.75rem 0.5rem 0;
     overflow-y: auto;
     flex: 1;
     min-height: 0;
+}
+@media (max-width: 768px) {
+    .build-planner { padding-right: 0.75rem; }
 }
 .build-columns {
     display: grid;
@@ -6029,6 +6026,7 @@ kbd {
         bottom: 0.5rem;
         left: 0.5rem;
         width: auto;
+        max-width: none;
     }
     .callout-popover {
         width: 240px;

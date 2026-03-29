@@ -5,6 +5,7 @@ const EFFECT_FIELDS = new Set([
     "st_data_export_eat_health_change", "st_itm_desc_eat_sleepiness", "st_itm_desc_eat_thirst", "st_data_export_eat_alcohol", "ui_inv_satiety",
     "ui_inv_outfit_fire_wound_protection", "ui_inv_outfit_wound_protection", "ui_inv_outfit_burn_protection", "ui_inv_outfit_shock_protection", "ui_inv_outfit_chemical_burn_protection",
     "ui_inv_outfit_radiation_protection", "ui_inv_outfit_telepatic_protection", "ui_inv_outfit_strike_protection", "ui_inv_outfit_explosion_protection",
+    "ui_inv_outfit_durability_physical", "ui_inv_outfit_durability_anomaly",
 ]);
 
 
@@ -56,6 +57,7 @@ const BIPOLAR = new Set([
     "ui_inv_outfit_explosion_protection", "st_prop_restore_health", "st_prop_restore_bleeding",
     "ui_inv_outfit_power_restore", "st_data_export_eat_health_change", "st_data_export_jump_height",
     "st_itm_desc_eat_sleepiness", "st_itm_desc_eat_thirst", "st_data_export_eat_alcohol", "ui_inv_satiety",
+    "ui_inv_outfit_durability_physical", "ui_inv_outfit_durability_anomaly"
 ]);
 const POSITIVE_IS_GOOD = new Set([
     "ui_inv_accuracy", "ui_inv_handling", "ui_inv_reli",
@@ -90,6 +92,7 @@ const PROTECTION_FIELDS = [
     "ui_inv_outfit_fire_wound_protection", "ui_inv_outfit_wound_protection", "ui_inv_outfit_burn_protection",
     "ui_inv_outfit_shock_protection", "ui_inv_outfit_chemical_burn_protection", "ui_inv_outfit_radiation_protection",
     "ui_inv_outfit_telepatic_protection", "ui_inv_outfit_strike_protection", "ui_inv_outfit_explosion_protection",
+    "ui_inv_outfit_durability_physical", "ui_inv_outfit_durability_anomaly",
 ];
 const RESTORATION_FIELDS = [
     "st_prop_restore_health", "st_prop_restore_bleeding", "st_data_export_restore_radiation", "ui_inv_outfit_power_restore",
@@ -245,6 +248,7 @@ function categorySlug(category) {
 
 function buildPathUrl(state) {
     if (state.buildPlanner && state.pack) return `/db/${state.pack}/build-planner`;
+    if (state.maps && state.pack) return `/db/${state.pack}/maps`;
     if (state.versionCompare && state.pack) return `/db/${state.pack}/version-compare`;
     if (state.favorites && state.pack) return `/db/${state.pack}/favorites`;
     if (state.recent && state.pack) return `/db/${state.pack}/recent`;
@@ -255,7 +259,7 @@ function buildPathUrl(state) {
 }
 
 function parsePathUrl(pathname) {
-    const result = { pack: null, cat: null, buildPlanner: false, favorites: false, recent: false, versionCompare: false };
+    const result = { pack: null, cat: null, buildPlanner: false, maps: false, favorites: false, recent: false, versionCompare: false };
     const path = pathname.replace(/\/+$/, "") || "/";
     // Legacy non-pack-scoped paths
     if (path === "/build-planner") { result.buildPlanner = true; return result; }
@@ -264,6 +268,7 @@ function parsePathUrl(pathname) {
     if (m) {
         result.pack = m[1];
         if (m[2] === "build-planner") result.buildPlanner = true;
+        else if (m[2] === "maps") result.maps = true;
         else if (m[2] === "version-compare") result.versionCompare = true;
         else if (m[2] === "favorites") result.favorites = true;
         else if (m[2] === "recent") result.recent = true;
@@ -325,7 +330,7 @@ export const appDefinition = {
             showContentSpinner: false,
             _spinnerTimer: null,
             _spinnerShownAt: null,
-            sortCol: null,
+            sortCol: "pda_encyclopedia_name",
             sortAsc: true,
             viewMode: "tiles",
 
@@ -359,6 +364,7 @@ export const appDefinition = {
             calibersCache: null,
             dropsCache: null,
             itemDropsCache: null,
+            stashChanceCache: null,
             recipesCache: null,
             disassembleCache: null,
             ammoWeaponsCache: null,
@@ -385,6 +391,7 @@ export const appDefinition = {
             modalHeaders: [],
             modalDrops: null,
             modalItemDrops: null,
+            modalStashChance: null,
             modalRecipeData: null,
             modalDisassemble: null,
             modalAmmoWeapons: null,
@@ -406,10 +413,13 @@ export const appDefinition = {
             buildPlayerName: "Stalker",
             buildPlayerFaction: "stalker",
             buildPlannerActive: false,
+            mapsActive: false,
             versionCompareActive: false,
             versionCompareLoading: false,
             versionCompareResults: [],
             versionCompareFilter: "",
+            versionComparePropertyFilter: [],
+            versionCompareCategoryFilter: [],
             shortcutHelpOpen: false,
             quickNavOpen: false,
             _chordKey: null,
@@ -653,12 +663,37 @@ export const appDefinition = {
             return this.versionCompareResults.reduce((sum, g) => sum + g.items.length, 0);
         },
 
+        versionComparePropertyKeys() {
+            const keys = new Set();
+            for (const group of this.versionCompareResults) {
+                for (const item of group.items) {
+                    for (const d of item.diffs) keys.add(d.key);
+                }
+            }
+            return [...keys].sort((a, b) => this.headerLabel(a).localeCompare(this.headerLabel(b)));
+        },
+
+        versionCompareCategoryKeys() {
+            return this.versionCompareResults.map(g => g.category).sort((a, b) => {
+                const aLabel = this.t(this.singularCategory(a)) || this.tCat(a);
+                const bLabel = this.t(this.singularCategory(b)) || this.tCat(b);
+                return aLabel.localeCompare(bLabel);
+            });
+        },
+
         filteredVersionCompareResults() {
-            if (!this.versionCompareFilter) return this.versionCompareResults;
-            const q = this.versionCompareFilter.toLowerCase();
+            const q = this.versionCompareFilter ? this.versionCompareFilter.toLowerCase() : "";
+            const propFilter = this.versionComparePropertyFilter;
+            const catFilter = this.versionCompareCategoryFilter;
+            if (!q && !propFilter.length && !catFilter.length) return this.versionCompareResults;
             const groups = [];
             for (const group of this.versionCompareResults) {
-                const items = group.items.filter(item => item.name.toLowerCase().includes(q));
+                if (catFilter.length && !catFilter.includes(group.category)) continue;
+                const items = group.items.filter(item => {
+                    if (q && !item.name.toLowerCase().includes(q)) return false;
+                    if (propFilter.length && !item.diffs.some(d => propFilter.includes(d.key))) return false;
+                    return true;
+                });
                 if (items.length) groups.push({ ...group, items });
             }
             return groups;
@@ -714,6 +749,19 @@ export const appDefinition = {
                 if (max > 0) best[type] = max;
             }
             return best;
+        },
+
+        modalStashChanceEntries() {
+            if (!this.modalStashChance) return [];
+            return Object.entries(this.modalStashChance).map(([type, data]) => ({ type, ...data }));
+        },
+
+        modalStashChanceHasRestrictedEcos() {
+            if (!this.modalStashChance) return false;
+            const full = [1, 2, 3];
+            return Object.values(this.modalStashChance).some(
+                ({ ecos }) => ecos.length !== 3 || !full.every((v, i) => ecos[i] === v)
+            );
         },
 
         isOutfitExchange() {
@@ -1617,6 +1665,10 @@ export const appDefinition = {
             return this.fetchJsonCached("itemDropsCache", "item-drops.json");
         },
 
+        fetchStashChance() {
+            return this.fetchJsonCached("stashChanceCache", "item-stash-chance.json");
+        },
+
         fetchRecipes() {
             return this.fetchJsonCached("recipesCache", "recipes.json");
         },
@@ -1721,6 +1773,11 @@ export const appDefinition = {
                     const urlCat = pathParsed.cat || new URLSearchParams(window.location.search).get("cat");
                     if (urlCat === "build-planner" || pathParsed.buildPlanner) {
                         // Defer to mounted handler
+                    } else if (urlCat === "maps" || pathParsed.maps) {
+                        this.mapsActive = true;
+                        this.activeCategory = null;
+                    } else if (urlCat === "version-compare" || pathParsed.versionCompare) {
+                        // Defer to restoreUrlState
                     } else if (urlCat === "favorites" || pathParsed.favorites) {
                         this.favoritesViewActive = true;
                         this.activeCategory = null;
@@ -1763,6 +1820,7 @@ export const appDefinition = {
             this.calibersCache = null;
             this.dropsCache = null;
             this.itemDropsCache = null;
+            this.stashChanceCache = null;
             this.recipesCache = null;
             this.disassembleCache = null;
             this.ammoWeaponsCache = null;
@@ -1850,6 +1908,8 @@ export const appDefinition = {
             const previousCategory = this.activeCategory;
 
             this.buildPlannerActive = false;
+            this.mapsActive = false;
+            this.versionCompareActive = false;
             this.favoritesViewActive = false;
             this.recentViewActive = false;
             this.showFavoritesOnly = false;
@@ -2055,6 +2115,7 @@ export const appDefinition = {
             this.modalItem = null;
             this.modalDrops = null;
             this.modalItemDrops = null;
+            this.modalStashChance = null;
             this.modalRecipeData = null;
             this.modalDisassemble = null;
             this.modalAmmoWeapons = null;
@@ -2086,15 +2147,17 @@ export const appDefinition = {
                 this.modalHeaders = this.categoryHeaders[slug];
                 this.modalItem = this.categoryItems[slug].find((i) => i.id === id);
 
-                const [drops, itemDrops, recipeData, disassemble, ammoWeapons] = await Promise.all([
+                const [drops, itemDrops, stashChance, recipeData, disassemble, ammoWeapons] = await Promise.all([
                     this.fetchDrops(),
                     this.fetchItemDrops(),
+                    this.fetchStashChance(),
                     this.fetchRecipes(),
                     this.fetchDisassemble(),
                     this.fetchAmmoWeapons(),
                 ]);
                 this.modalDrops = drops[id] || null;
                 this.modalItemDrops = itemDrops[id] || null;
+                this.modalStashChance = stashChance[id] || null;
                 this.modalRecipeData = recipeData;
                 this.modalDisassemble = disassemble[id] || null;
                 this.modalAmmoWeapons = ammoWeapons[id] || null;
@@ -2214,7 +2277,11 @@ export const appDefinition = {
 
         pickComparePack(id) {
             this.crossPackId = id;
+            this.versionCompareFilter = "";
+            this.versionComparePropertyFilter = [];
+            this.versionCompareCategoryFilter = [];
         },
+
 
         closeCompareMenu() {
             // compareMenuOpen is now local state in child components
@@ -2251,7 +2318,7 @@ export const appDefinition = {
         },
 
         async loadVersionCompareData() {
-            if (!this.crossPackId) { this.versionCompareResults = []; return; }
+            if (!this.crossPackId) { this.versionCompareResults = []; this.versionComparePropertyFilter = []; this.versionCompareCategoryFilter = []; this.versionCompareFilter = ""; return; }
             this.versionCompareLoading = true;
             try {
                 const packId = this.crossPackId;
@@ -2338,7 +2405,12 @@ export const appDefinition = {
 
         navigateModal(direction) {
             if (!this.modalOpen || !this.modalItem || this.modalLoading) return;
-            const items = this.sortedItems;
+            let items;
+            if (this.versionCompareActive) {
+                items = this.filteredVersionCompareResults.flatMap(g => g.items);
+            } else {
+                items = this.sortedItems;
+            }
             if (!items.length) return;
             const idx = items.findIndex(i => i.id === this.modalItem.id);
             if (idx < 0) return;
@@ -2417,6 +2489,7 @@ export const appDefinition = {
 
         resetViewState() {
             this.buildPlannerActive = false;
+            this.mapsActive = false;
             this.versionCompareActive = false;
             this.favoritesViewActive = false;
             this.recentViewActive = false;
@@ -2427,8 +2500,22 @@ export const appDefinition = {
             this.sortCol = "pda_encyclopedia_name";
             this.sortAsc = true;
             this.activeFilters = {};
+            this.versionCompareFilter = "";
+            this.versionComparePropertyFilter = [];
+            this.versionCompareCategoryFilter = [];
             if (this.$refs.filterBar) this.$refs.filterBar.closeFilterPanel();
             this.sidebarOpen = false;
+        },
+
+        openItemDb() {
+            const cat = this.activeCategory || (this.groupedCategories.length && this.groupedCategories[0].categories[0]);
+            if (cat) this.selectCategory(cat);
+        },
+
+        openMaps() {
+            this.resetViewState();
+            this.mapsActive = true;
+            this.pushUrlState(true);
         },
 
         selectFavorites() {
@@ -3747,6 +3834,7 @@ export const appDefinition = {
                 pack: this.activePack?.id,
                 cat: this.activeCategory,
                 buildPlanner: this.buildPlannerActive,
+                maps: this.mapsActive,
                 favorites: this.favoritesViewActive,
                 recent: this.recentViewActive,
                 versionCompare: this.versionCompareActive,
@@ -3807,6 +3895,22 @@ export const appDefinition = {
             } else {
                 url.searchParams.delete("faction");
             }
+            // Version compare filters
+            if (this.versionCompareFilter) {
+                url.searchParams.set("vcq", this.versionCompareFilter);
+            } else {
+                url.searchParams.delete("vcq");
+            }
+            if (this.versionComparePropertyFilter.length) {
+                url.searchParams.set("vcp", this.versionComparePropertyFilter.join(","));
+            } else {
+                url.searchParams.delete("vcp");
+            }
+            if (this.versionCompareCategoryFilter.length) {
+                url.searchParams.set("vcc", this.versionCompareCategoryFilter.join(","));
+            } else {
+                url.searchParams.delete("vcc");
+            }
             if (this.locale) {
                 url.searchParams.set("lang", this.locale);
             }
@@ -3837,9 +3941,18 @@ export const appDefinition = {
             if (parsed.buildPlanner || legacyCat === "build-planner") {
                 // Will be handled after data loads
                 this._pendingBuildRestore = params;
+            } else if (parsed.maps || legacyCat === "maps") {
+                this.mapsActive = true;
+                this.activeCategory = null;
             } else if (parsed.versionCompare || legacyCat === "version-compare") {
                 this.versionCompareActive = true;
                 this.activeCategory = null;
+                const vcq = params.get("vcq");
+                if (vcq) this.versionCompareFilter = vcq;
+                const vcp = params.get("vcp");
+                if (vcp) this.versionComparePropertyFilter = vcp.split(",");
+                const vcc = params.get("vcc");
+                if (vcc) this.versionCompareCategoryFilter = vcc.split(",");
                 if (this.crossPackId) this.loadVersionCompareData();
             } else if (parsed.favorites || legacyCat === "favorites") {
                 this.favoritesViewActive = true;
@@ -4218,6 +4331,8 @@ export const appDefinition = {
         },
 
         clearBuild() {
+            this.buildPlayerName = "Stalker";
+            this.buildPlayerFaction = "stalker";
             this.buildOutfit = null;
             this.buildHelmet = null;
             this.buildBackpack = null;
@@ -4300,6 +4415,8 @@ export const appDefinition = {
 
         saveBuildToStorage() {
             const data = {
+                playerName: this.buildPlayerName,
+                playerFaction: this.buildPlayerFaction,
                 outfit: this.buildOutfit?.id || null,
                 helmet: this.buildHelmet?.id || null,
                 backpack: this.buildBackpack?.id || null,
@@ -4341,6 +4458,8 @@ export const appDefinition = {
                 }
                 return null;
             };
+            if (data.playerName) this.buildPlayerName = data.playerName;
+            if (data.playerFaction) this.buildPlayerFaction = data.playerFaction;
             this.buildOutfit = findItem(data.outfit, "outfits");
             this.buildHelmet = findItem(data.helmet, "helmets");
             this.buildBackpack = findItem(data.backpack, "belt-attachments");
@@ -4487,9 +4606,13 @@ export const appDefinition = {
 
         whatsNewAction(entry) {
             if (!entry.action) return;
+            this.whatsNewVisible = false;
             if (entry.action === "buildPlanner") {
-                this.whatsNewVisible = false;
                 this.openBuildPlanner();
+            } else if (entry.action === "craftingTrees") {
+                this.selectCategory(CAT.CRAFTING_TREES);
+            } else if (entry.action === "maps") {
+                this.openMaps();
             }
         },
 
@@ -4801,7 +4924,15 @@ export const appDefinition = {
                 const rawAmmoInv = [];
                 const rawAmmoStash = [];
 
-                for (const item of result.items) {
+                // Sort items so equipped items (equipSlot > 0) come first, ordered by slot.
+                // This ensures equipped weapons fill loadout slots before ruck weapons.
+                const sortedItems = [...result.items].sort((a, b) => {
+                    const aSlot = a.equipSlot > 0 ? a.equipSlot : 999;
+                    const bSlot = b.equipSlot > 0 ? b.equipSlot : 999;
+                    return aSlot - bSlot;
+                });
+
+                for (const item of sortedItems) {
                     const cat = catMap[item.sectionName];
                     const slug = cat ? categorySlug(cat) : "";
                     if (cat === "Outfits") {
@@ -5674,6 +5805,9 @@ export const appDefinition = {
             this.loadCrossPackItem(val);
             if (this.versionCompareActive) this.loadVersionCompareData();
         },
+        versionCompareFilter() { if (this.versionCompareActive) this.pushUrlState(); },
+        versionComparePropertyFilter() { if (this.versionCompareActive) this.pushUrlState(); },
+        versionCompareCategoryFilter() { if (this.versionCompareActive) this.pushUrlState(); },
         compareViewMode(mode) {
             if (mode === "chart" && this.compareData.length > 0) {
                 this.$nextTick(() => this.renderCompareChart());
@@ -5708,9 +5842,11 @@ export const appDefinition = {
         },
         buildPlayerName() {
             if (this.buildPlannerActive && !this._restoringUrl) this.debouncedPushUrl();
+            this.saveBuildToStorage();
         },
         buildPlayerFaction() {
             if (this.buildPlannerActive && !this._restoringUrl) this.pushUrlState();
+            this.saveBuildToStorage();
         },
         buildSaveModalOpen(open) {
             if (open) {
@@ -5774,15 +5910,11 @@ export const appDefinition = {
             // Global single-key shortcuts
             if (e.key === KEYS.SEARCH) {
                 e.preventDefault();
-                const input = document.querySelector('.global-search input');
-                if (input) {
-                    if (!this.globalQuery && this.lastGlobalQuery) {
-                        this.globalQuery = this.lastGlobalQuery;
-                        this.globalSearch();
-                    }
-                    input.focus();
-                    this.$nextTick(() => input.select());
+                if (!this.globalQuery && this.lastGlobalQuery) {
+                    this.globalQuery = this.lastGlobalQuery;
+                    this.globalSearch();
                 }
+                this.$refs.headerBar?.focusSearch();
                 return;
             }
             if (e.key === KEYS.TOGGLE_VIEW && !this.buildPlannerActive) {
@@ -5996,9 +6128,11 @@ export const appDefinition = {
                 this.resetViewState();
                 this.recentViewActive = true;
             } else if (parsed.versionCompare) {
-                this.resetViewState();
-                this.versionCompareActive = true;
-                if (this.crossPackId) this.loadVersionCompareData();
+                if (!this.versionCompareActive) {
+                    this.resetViewState();
+                    this.versionCompareActive = true;
+                    if (this.crossPackId) this.loadVersionCompareData();
+                }
             } else if (parsed.cat) {
                 const match = this.categories.find(c => categorySlug(c) === parsed.cat) || [...VIRTUAL_CATEGORIES].find(c => categorySlug(c) === parsed.cat);
                 if (match) await this.selectCategory(match);

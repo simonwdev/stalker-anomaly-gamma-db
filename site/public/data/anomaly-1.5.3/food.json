@@ -3,6 +3,7 @@
   "headers": [
     "id",
     "pda_encyclopedia_name",
+    "st_data_export_description",
     "st_prop_weight",
     "st_upgr_cost",
     "pda_encyclopedia_tier",
@@ -33,7 +34,8 @@
     {
       "id": "meat_flesh_a",
       "pda_encyclopedia_name": "st_meat_flesh",
-      "st_prop_weight": "0.182",
+      "st_data_export_description": "st_meat_flesh_descr",
+      "st_prop_weight": "0.18",
       "st_upgr_cost": "3150",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "0.4%",
@@ -64,7 +66,8 @@
     {
       "id": "chocolate_p",
       "pda_encyclopedia_name": "st_chocolate_p",
-      "st_prop_weight": "0.115",
+      "st_data_export_description": "st_chocolate_p_descr",
+      "st_prop_weight": "0.12",
       "st_upgr_cost": "1000",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.01%",
@@ -95,6 +98,7 @@
     {
       "id": "chili",
       "pda_encyclopedia_name": "st_chili",
+      "st_data_export_description": "st_chili_descr",
       "st_prop_weight": "0.34",
       "st_upgr_cost": "757",
       "pda_encyclopedia_tier": "2",
@@ -126,6 +130,7 @@
     {
       "id": "bottle_metal",
       "pda_encyclopedia_name": "st_bottle_metal",
+      "st_data_export_description": "st_bottle_metal_descr",
       "st_prop_weight": "1.42",
       "st_upgr_cost": "1264",
       "pda_encyclopedia_tier": "1",
@@ -157,7 +162,8 @@
     {
       "id": "mutant_part_boar_chop",
       "pda_encyclopedia_name": "mutant_boar_chop",
-      "st_prop_weight": "0.195",
+      "st_data_export_description": "mutant_boar_chop_description",
+      "st_prop_weight": "0.20",
       "st_upgr_cost": "669",
       "pda_encyclopedia_tier": "0",
       "st_data_export_sleepiness": "0.14%",
@@ -188,7 +194,8 @@
     {
       "id": "meat_tushkano_a",
       "pda_encyclopedia_name": "st_meat_tushkano",
-      "st_prop_weight": "0.034",
+      "st_data_export_description": "st_meat_tushkano_descr",
+      "st_prop_weight": "0.03",
       "st_upgr_cost": "822",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.07%",
@@ -219,7 +226,8 @@
     {
       "id": "protein",
       "pda_encyclopedia_name": "st_protein",
-      "st_prop_weight": "0.085",
+      "st_data_export_description": "st_protein_descr",
+      "st_prop_weight": "0.09",
       "st_upgr_cost": "1000",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "0.02%",
@@ -250,7 +258,8 @@
     {
       "id": "joint",
       "pda_encyclopedia_name": "st_joint",
-      "st_prop_weight": "0.001",
+      "st_data_export_description": "st_joint_descr",
+      "st_prop_weight": "0",
       "st_upgr_cost": "380",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "1.94%",
@@ -281,7 +290,8 @@
     {
       "id": "cigar1",
       "pda_encyclopedia_name": "st_cigar1",
-      "st_prop_weight": "0.004",
+      "st_data_export_description": "st_cigar1_descr",
+      "st_prop_weight": "0",
       "st_upgr_cost": "2506",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "-0.56%",
@@ -312,7 +322,8 @@
     {
       "id": "meat_pseudodog_b",
       "pda_encyclopedia_name": "st_meat_pseudodog",
-      "st_prop_weight": "0.092",
+      "st_data_export_description": "st_meat_pseudodog_descr",
+      "st_prop_weight": "0.09",
       "st_upgr_cost": "1202",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.18%",
@@ -343,7 +354,8 @@
     {
       "id": "vodka_quality",
       "pda_encyclopedia_name": "st_vodka_quality",
-      "st_prop_weight": "1.454",
+      "st_data_export_description": "st_vodka_quality_descr",
+      "st_prop_weight": "1.45",
       "st_upgr_cost": "2663",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.78%",
@@ -374,7 +386,8 @@
     {
       "id": "mutant_part_psysucker_meat",
       "pda_encyclopedia_name": "mutant_psysucker_meat",
-      "st_prop_weight": "0.175",
+      "st_data_export_description": "mutant_psysucker_meat_description",
+      "st_prop_weight": "0.17",
       "st_upgr_cost": "1100",
       "pda_encyclopedia_tier": "0",
       "st_data_export_sleepiness": "0.16%",
@@ -405,7 +418,8 @@
     {
       "id": "meat_lurker_b",
       "pda_encyclopedia_name": "st_meat_lurker",
-      "st_prop_weight": "0.2",
+      "st_data_export_description": "st_meat_lurker_descr",
+      "st_prop_weight": "0.20",
       "st_upgr_cost": "2803",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "0.55%",
@@ -436,6 +450,7 @@
     {
       "id": "conserva",
       "pda_encyclopedia_name": "st_conserva",
+      "st_data_export_description": "st_conserva_descr",
       "st_prop_weight": "0.17",
       "st_upgr_cost": "620",
       "pda_encyclopedia_tier": "2",
@@ -467,6 +482,7 @@
     {
       "id": "mutant_part_chimera_meat",
       "pda_encyclopedia_name": "mutant_chimera_meat",
+      "st_data_export_description": "mutant_chimera_meat_description",
       "st_prop_weight": "0.26",
       "st_upgr_cost": "1408",
       "pda_encyclopedia_tier": "0",
@@ -498,6 +514,7 @@
     {
       "id": "beer",
       "pda_encyclopedia_name": "st_beer",
+      "st_data_export_description": "st_beer_descr",
       "st_prop_weight": "0.71",
       "st_upgr_cost": "1349",
       "pda_encyclopedia_tier": "1",
@@ -529,6 +546,7 @@
     {
       "id": "nuts",
       "pda_encyclopedia_name": "st_nuts",
+      "st_data_export_description": "st_nuts_descr",
       "st_prop_weight": "0.11",
       "st_upgr_cost": "1283",
       "pda_encyclopedia_tier": "3",
@@ -560,6 +578,7 @@
     {
       "id": "flask",
       "pda_encyclopedia_name": "st_flask",
+      "st_data_export_description": "st_flask_descr",
       "st_prop_weight": "1.33",
       "st_upgr_cost": "658",
       "pda_encyclopedia_tier": "1",
@@ -591,7 +610,8 @@
     {
       "id": "meat_bloodsucker",
       "pda_encyclopedia_name": "st_meat_bloodsucker",
-      "st_prop_weight": "0.173",
+      "st_data_export_description": "st_meat_bloodsucker_descr",
+      "st_prop_weight": "0.17",
       "st_upgr_cost": "1422",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "0.15%",
@@ -622,7 +642,8 @@
     {
       "id": "mutant_part_dog_meat",
       "pda_encyclopedia_name": "mutant_dog_meat",
-      "st_prop_weight": "0.073",
+      "st_data_export_description": "mutant_dog_meat_description",
+      "st_prop_weight": "0.07",
       "st_upgr_cost": "209",
       "pda_encyclopedia_tier": "0",
       "st_data_export_sleepiness": "0.04%",
@@ -653,7 +674,8 @@
     {
       "id": "meat_snork_a",
       "pda_encyclopedia_name": "st_meat_snork",
-      "st_prop_weight": "0.063",
+      "st_data_export_description": "st_meat_snork_descr",
+      "st_prop_weight": "0.06",
       "st_upgr_cost": "2966",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.11%",
@@ -684,7 +706,8 @@
     {
       "id": "mutant_part_flesh_meat",
       "pda_encyclopedia_name": "mutant_flesh_meat",
-      "st_prop_weight": "0.163",
+      "st_data_export_description": "mutant_flesh_meat_description",
+      "st_prop_weight": "0.16",
       "st_upgr_cost": "504",
       "pda_encyclopedia_tier": "0",
       "st_data_export_sleepiness": "0.11%",
@@ -715,6 +738,7 @@
     {
       "id": "mre",
       "pda_encyclopedia_name": "st_mre",
+      "st_data_export_description": "st_mre_descr",
       "st_prop_weight": "0.69",
       "st_upgr_cost": "3200",
       "pda_encyclopedia_tier": "4",
@@ -746,7 +770,8 @@
     {
       "id": "meat_lurker",
       "pda_encyclopedia_name": "st_meat_lurker",
-      "st_prop_weight": "0.2",
+      "st_data_export_description": "st_meat_lurker_descr",
+      "st_prop_weight": "0.20",
       "st_upgr_cost": "2203",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "0.21%",
@@ -777,7 +802,8 @@
     {
       "id": "meat_chimera_b",
       "pda_encyclopedia_name": "st_meat_chimera",
-      "st_prop_weight": "0.251",
+      "st_data_export_description": "st_meat_chimera_descr",
+      "st_prop_weight": "0.25",
       "st_upgr_cost": "3103",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "0.55%",
@@ -808,7 +834,8 @@
     {
       "id": "meat_pseudodog_a",
       "pda_encyclopedia_name": "st_meat_pseudodog",
-      "st_prop_weight": "0.092",
+      "st_data_export_description": "st_meat_pseudodog_descr",
+      "st_prop_weight": "0.09",
       "st_upgr_cost": "2502",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "0.18%",
@@ -839,7 +866,8 @@
     {
       "id": "marijuana",
       "pda_encyclopedia_name": "st_marijuana",
-      "st_prop_weight": "0.032",
+      "st_data_export_description": "st_marijuana_descr",
+      "st_prop_weight": "0.03",
       "st_upgr_cost": "1040",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "13.83%",
@@ -870,7 +898,8 @@
     {
       "id": "cigarettes_lucky",
       "pda_encyclopedia_name": "st_cigarettes_lucky",
-      "st_prop_weight": "0.005",
+      "st_data_export_description": "st_cigarettes_lucky_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "1663",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "-0.37%",
@@ -901,6 +930,7 @@
     {
       "id": "raisins",
       "pda_encyclopedia_name": "st_raisins",
+      "st_data_export_description": "st_raisins_descr",
       "st_prop_weight": "0.05",
       "st_upgr_cost": "520",
       "pda_encyclopedia_tier": "1",
@@ -932,6 +962,7 @@
     {
       "id": "water_drink",
       "pda_encyclopedia_name": "st_water_drink",
+      "st_data_export_description": "st_water_drink_descr",
       "st_prop_weight": "0.38",
       "st_upgr_cost": "613",
       "pda_encyclopedia_tier": "1",
@@ -963,6 +994,7 @@
     {
       "id": "corn",
       "pda_encyclopedia_name": "st_corn",
+      "st_data_export_description": "st_corn_descr",
       "st_prop_weight": "0.34",
       "st_upgr_cost": "650",
       "pda_encyclopedia_tier": "2",
@@ -994,7 +1026,8 @@
     {
       "id": "cigar",
       "pda_encyclopedia_name": "st_cuban_cigar",
-      "st_prop_weight": "0.011",
+      "st_data_export_description": "st_cuban_cigar_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "1898",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "-0.31%",
@@ -1025,6 +1058,7 @@
     {
       "id": "tomato",
       "pda_encyclopedia_name": "st_tomato",
+      "st_data_export_description": "st_tomato_descr",
       "st_prop_weight": "0.31",
       "st_upgr_cost": "576",
       "pda_encyclopedia_tier": "2",
@@ -1056,6 +1090,7 @@
     {
       "id": "chocolate",
       "pda_encyclopedia_name": "st_chocolate",
+      "st_data_export_description": "st_chocolate_descr",
       "st_prop_weight": "0.22",
       "st_upgr_cost": "1980",
       "pda_encyclopedia_tier": "3",
@@ -1087,6 +1122,7 @@
     {
       "id": "mutant_part_lurker_meat",
       "pda_encyclopedia_name": "mutant_lurker_meat",
+      "st_data_export_description": "mutant_lurker_meat_description",
       "st_prop_weight": "0.26",
       "st_upgr_cost": "1408",
       "pda_encyclopedia_tier": "0",
@@ -1118,6 +1154,7 @@
     {
       "id": "beans",
       "pda_encyclopedia_name": "st_beans",
+      "st_data_export_description": "st_beans_descr",
       "st_prop_weight": "0.34",
       "st_upgr_cost": "895",
       "pda_encyclopedia_tier": "2",
@@ -1149,7 +1186,8 @@
     {
       "id": "meat_dog_a",
       "pda_encyclopedia_name": "st_meat_dog",
-      "st_prop_weight": "0.139",
+      "st_data_export_description": "st_meat_dog_descr",
+      "st_prop_weight": "0.14",
       "st_upgr_cost": "1244",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.12%",
@@ -1180,7 +1218,8 @@
     {
       "id": "hand_rolling_tobacco",
       "pda_encyclopedia_name": "st_hand_rolling_tobacco",
-      "st_prop_weight": "0.005",
+      "st_data_export_description": "st_hand_rolling_tobacco_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "2801",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "-1.21%",
@@ -1211,7 +1250,8 @@
     {
       "id": "mint",
       "pda_encyclopedia_name": "st_mint",
-      "st_prop_weight": "0.036",
+      "st_data_export_description": "st_mint_descr",
+      "st_prop_weight": "0.04",
       "st_upgr_cost": "250",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "-0.16%",
@@ -1242,7 +1282,8 @@
     {
       "id": "cigarettes_russian",
       "pda_encyclopedia_name": "st_cigarettes_russian",
-      "st_prop_weight": "0.005",
+      "st_data_export_description": "st_cigarettes_russian_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "1208",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "-0.43%",
@@ -1273,7 +1314,8 @@
     {
       "id": "vodka2",
       "pda_encyclopedia_name": "st_vodka2",
-      "st_prop_weight": "1.454",
+      "st_data_export_description": "st_vodka2_descr",
+      "st_prop_weight": "1.45",
       "st_upgr_cost": "1516",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "0.63%",
@@ -1304,7 +1346,8 @@
     {
       "id": "meat_bloodsucker_b",
       "pda_encyclopedia_name": "st_meat_bloodsucker",
-      "st_prop_weight": "0.173",
+      "st_data_export_description": "st_meat_bloodsucker_descr",
+      "st_prop_weight": "0.17",
       "st_upgr_cost": "1922",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "0.26%",
@@ -1335,6 +1378,7 @@
     {
       "id": "meat_psysucker_b",
       "pda_encyclopedia_name": "st_meat_psysucker",
+      "st_data_export_description": "st_meat_psysucker_descr",
       "st_prop_weight": "0.16",
       "st_upgr_cost": "2400",
       "pda_encyclopedia_tier": "3",
@@ -1366,7 +1410,8 @@
     {
       "id": "meat_chimera_a",
       "pda_encyclopedia_name": "st_meat_chimera",
-      "st_prop_weight": "0.251",
+      "st_data_export_description": "st_meat_chimera_descr",
+      "st_prop_weight": "0.25",
       "st_upgr_cost": "5303",
       "pda_encyclopedia_tier": "5",
       "st_data_export_sleepiness": "0.55%",
@@ -1390,14 +1435,15 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "6.067",
+      "ui_inv_outfit_additional_weight": "6.07",
       "displayName": "st_meat_chimera [a]",
       "hasDisassemble": false
     },
     {
       "id": "mutant_part_psevdodog_meat",
       "pda_encyclopedia_name": "mutant_psevdodog_meat",
-      "st_prop_weight": "0.161",
+      "st_data_export_description": "mutant_psevdodog_meat_description",
+      "st_prop_weight": "0.16",
       "st_upgr_cost": "529",
       "pda_encyclopedia_tier": "0",
       "st_data_export_sleepiness": "0.05%",
@@ -1428,7 +1474,8 @@
     {
       "id": "vodka",
       "pda_encyclopedia_name": "st_vodka",
-      "st_prop_weight": "1.454",
+      "st_data_export_description": "st_vodka_descr",
+      "st_prop_weight": "1.45",
       "st_upgr_cost": "946",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "0.45%",
@@ -1459,7 +1506,8 @@
     {
       "id": "tushonka",
       "pda_encyclopedia_name": "st_tushonka",
-      "st_prop_weight": "0.338",
+      "st_data_export_description": "st_tushonka_descr",
+      "st_prop_weight": "0.34",
       "st_upgr_cost": "990",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "0.06%",
@@ -1490,7 +1538,8 @@
     {
       "id": "meat_bloodsucker_a",
       "pda_encyclopedia_name": "st_meat_bloodsucker",
-      "st_prop_weight": "0.173",
+      "st_data_export_description": "st_meat_bloodsucker_descr",
+      "st_prop_weight": "0.17",
       "st_upgr_cost": "3722",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "0.26%",
@@ -1521,7 +1570,8 @@
     {
       "id": "meat_flesh_b",
       "pda_encyclopedia_name": "st_meat_flesh",
-      "st_prop_weight": "0.182",
+      "st_data_export_description": "st_meat_flesh_descr",
+      "st_prop_weight": "0.18",
       "st_upgr_cost": "1550",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.4%",
@@ -1552,7 +1602,8 @@
     {
       "id": "tobacco",
       "pda_encyclopedia_name": "st_tobacco",
-      "st_prop_weight": "0.106",
+      "st_data_export_description": "st_tobacco_descr",
+      "st_prop_weight": "0.11",
       "st_upgr_cost": "3268",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "-0.88%",
@@ -1583,7 +1634,8 @@
     {
       "id": "meat_pseudodog",
       "pda_encyclopedia_name": "st_meat_pseudodog",
-      "st_prop_weight": "0.092",
+      "st_data_export_description": "st_meat_pseudodog_descr",
+      "st_prop_weight": "0.09",
       "st_upgr_cost": "802",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.1%",
@@ -1614,7 +1666,8 @@
     {
       "id": "tea",
       "pda_encyclopedia_name": "st_tea",
-      "st_prop_weight": "1.035",
+      "st_data_export_description": "st_tea_descr",
+      "st_prop_weight": "1.03",
       "st_upgr_cost": "4473",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "-1.2%",
@@ -1645,7 +1698,8 @@
     {
       "id": "kolbasa",
       "pda_encyclopedia_name": "st_kolbasa",
-      "st_prop_weight": "0.328",
+      "st_data_export_description": "st_kolbasa_descr",
+      "st_prop_weight": "0.33",
       "st_upgr_cost": "874",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "0.22%",
@@ -1676,7 +1730,8 @@
     {
       "id": "mutant_part_snork_hand",
       "pda_encyclopedia_name": "mutant_snork_hand",
-      "st_prop_weight": "0.063",
+      "st_data_export_description": "mutant_snork_hand_description",
+      "st_prop_weight": "0.06",
       "st_upgr_cost": "452",
       "pda_encyclopedia_tier": "0",
       "st_data_export_sleepiness": "0.04%",
@@ -1707,7 +1762,8 @@
     {
       "id": "sausage",
       "pda_encyclopedia_name": "st_sausage",
-      "st_prop_weight": "0.109",
+      "st_data_export_description": "st_sausage_descr",
+      "st_prop_weight": "0.11",
       "st_upgr_cost": "657",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.04%",
@@ -1738,7 +1794,8 @@
     {
       "id": "meat_tushkano_b",
       "pda_encyclopedia_name": "st_meat_tushkano",
-      "st_prop_weight": "0.034",
+      "st_data_export_description": "st_meat_tushkano_descr",
+      "st_prop_weight": "0.03",
       "st_upgr_cost": "622",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "0.07%",
@@ -1769,6 +1826,7 @@
     {
       "id": "meat_psysucker",
       "pda_encyclopedia_name": "st_meat_psysucker",
+      "st_data_export_description": "st_meat_psysucker_descr",
       "st_prop_weight": "0.16",
       "st_upgr_cost": "1700",
       "pda_encyclopedia_tier": "3",
@@ -1800,7 +1858,8 @@
     {
       "id": "meat_flesh",
       "pda_encyclopedia_name": "st_meat_flesh",
-      "st_prop_weight": "0.182",
+      "st_data_export_description": "st_meat_flesh_descr",
+      "st_prop_weight": "0.18",
       "st_upgr_cost": "950",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.17%",
@@ -1831,7 +1890,8 @@
     {
       "id": "salmon",
       "pda_encyclopedia_name": "st_salmon",
-      "st_prop_weight": "0.104",
+      "st_data_export_description": "st_salmon_descr",
+      "st_prop_weight": "0.10",
       "st_upgr_cost": "500",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "0.01%",
@@ -1862,7 +1922,8 @@
     {
       "id": "ration_ukr",
       "pda_encyclopedia_name": "st_ration_ukr",
-      "st_prop_weight": "1.922",
+      "st_data_export_description": "st_ration_ukr_descr",
+      "st_prop_weight": "1.92",
       "st_upgr_cost": "7300",
       "pda_encyclopedia_tier": "5",
       "st_data_export_sleepiness": "0.04%",
@@ -1893,7 +1954,8 @@
     {
       "id": "meat_snork",
       "pda_encyclopedia_name": "st_meat_snork",
-      "st_prop_weight": "0.063",
+      "st_data_export_description": "st_meat_snork_descr",
+      "st_prop_weight": "0.06",
       "st_upgr_cost": "866",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "0.05%",
@@ -1924,6 +1986,7 @@
     {
       "id": "ration_ru",
       "pda_encyclopedia_name": "st_ration_ru",
+      "st_data_export_description": "st_ration_ru_descr",
       "st_prop_weight": "1.41",
       "st_upgr_cost": "8000",
       "pda_encyclopedia_tier": "5",
@@ -1955,7 +2018,8 @@
     {
       "id": "mutant_part_tushkano_meat",
       "pda_encyclopedia_name": "mutant_tushkano_meat",
-      "st_prop_weight": "0.043",
+      "st_data_export_description": "mutant_tushkano_meat_description",
+      "st_prop_weight": "0.04",
       "st_upgr_cost": "166",
       "pda_encyclopedia_tier": "0",
       "st_data_export_sleepiness": "0.25%",
@@ -1986,7 +2050,8 @@
     {
       "id": "meat_boar_a",
       "pda_encyclopedia_name": "st_meat_boar",
-      "st_prop_weight": "0.193",
+      "st_data_export_description": "st_meat_boar_descr",
+      "st_prop_weight": "0.19",
       "st_upgr_cost": "3534",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "0.2%",
@@ -2010,14 +2075,15 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "4.067",
+      "ui_inv_outfit_additional_weight": "4.07",
       "displayName": "st_meat_boar [a]",
       "hasDisassemble": false
     },
     {
       "id": "meat_dog_b",
       "pda_encyclopedia_name": "st_meat_dog",
-      "st_prop_weight": "0.139",
+      "st_data_export_description": "st_meat_dog_descr",
+      "st_prop_weight": "0.14",
       "st_upgr_cost": "844",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "0.12%",
@@ -2048,7 +2114,8 @@
     {
       "id": "meat_tushkano",
       "pda_encyclopedia_name": "st_meat_tushkano",
-      "st_prop_weight": "0.034",
+      "st_data_export_description": "st_meat_tushkano_descr",
+      "st_prop_weight": "0.03",
       "st_upgr_cost": "322",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "0.04%",
@@ -2079,7 +2146,8 @@
     {
       "id": "cigar3",
       "pda_encyclopedia_name": "st_cigar3",
-      "st_prop_weight": "0.005",
+      "st_data_export_description": "st_cigar3_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "3581",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "-0.85%",
@@ -2110,6 +2178,7 @@
     {
       "id": "breadold",
       "pda_encyclopedia_name": "st_breadold",
+      "st_data_export_description": "st_breadold_descr",
       "st_prop_weight": "0.19",
       "st_upgr_cost": "500",
       "pda_encyclopedia_tier": "1",
@@ -2141,6 +2210,7 @@
     {
       "id": "energy_drink",
       "pda_encyclopedia_name": "st_energy_drink",
+      "st_data_export_description": "st_energy_drink_descr",
       "st_prop_weight": "0.33",
       "st_upgr_cost": "610",
       "pda_encyclopedia_tier": "1",
@@ -2165,14 +2235,15 @@
       "ui_inv_outfit_radiation_protection": "0",
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
-      "ui_inv_outfit_additional_weight": "1.554",
+      "ui_inv_outfit_additional_weight": "1.55",
       "displayName": "st_energy_drink",
       "hasDisassemble": false
     },
     {
       "id": "cigarettes",
       "pda_encyclopedia_name": "st_cigarettes",
-      "st_prop_weight": "0.005",
+      "st_data_export_description": "st_cigarettes_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "1402",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "-0.41%",
@@ -2203,7 +2274,8 @@
     {
       "id": "meat_chimera",
       "pda_encyclopedia_name": "st_meat_chimera",
-      "st_prop_weight": "0.251",
+      "st_data_export_description": "st_meat_chimera_descr",
+      "st_prop_weight": "0.25",
       "st_upgr_cost": "2203",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "0.21%",
@@ -2234,7 +2306,8 @@
     {
       "id": "cigar2",
       "pda_encyclopedia_name": "st_cigar2",
-      "st_prop_weight": "0.005",
+      "st_data_export_description": "st_cigar2_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "3092",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "-0.69%",
@@ -2265,6 +2338,7 @@
     {
       "id": "bread",
       "pda_encyclopedia_name": "st_bread",
+      "st_data_export_description": "st_bread_descr",
       "st_prop_weight": "0.19",
       "st_upgr_cost": "600",
       "pda_encyclopedia_tier": "2",
@@ -2296,7 +2370,8 @@
     {
       "id": "meat_dog",
       "pda_encyclopedia_name": "st_meat_dog",
-      "st_prop_weight": "0.139",
+      "st_data_export_description": "st_meat_dog_descr",
+      "st_prop_weight": "0.14",
       "st_upgr_cost": "644",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "0.08%",
@@ -2327,7 +2402,8 @@
     {
       "id": "meat_snork_b",
       "pda_encyclopedia_name": "st_meat_snork",
-      "st_prop_weight": "0.063",
+      "st_data_export_description": "st_meat_snork_descr",
+      "st_prop_weight": "0.06",
       "st_upgr_cost": "1366",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "0.11%",
@@ -2358,7 +2434,8 @@
     {
       "id": "drink_crow",
       "pda_encyclopedia_name": "st_drink_crow",
-      "st_prop_weight": "0.223",
+      "st_data_export_description": "st_drink_crow_descr",
+      "st_prop_weight": "0.22",
       "st_upgr_cost": "5660",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "-4.53%",
@@ -2389,7 +2466,8 @@
     {
       "id": "meat_boar",
       "pda_encyclopedia_name": "st_meat_boar",
-      "st_prop_weight": "0.193",
+      "st_data_export_description": "st_meat_boar_descr",
+      "st_prop_weight": "0.19",
       "st_upgr_cost": "1034",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.14%",
@@ -2420,7 +2498,8 @@
     {
       "id": "mutant_part_krovosos_meat",
       "pda_encyclopedia_name": "mutant_krovosos_meat",
-      "st_prop_weight": "0.175",
+      "st_data_export_description": "mutant_krovosos_meat_description",
+      "st_prop_weight": "0.17",
       "st_upgr_cost": "917",
       "pda_encyclopedia_tier": "0",
       "st_data_export_sleepiness": "0.16%",
@@ -2451,6 +2530,7 @@
     {
       "id": "meat_psysucker_a",
       "pda_encyclopedia_name": "st_meat_psysucker",
+      "st_data_export_description": "st_meat_psysucker_descr",
       "st_prop_weight": "0.16",
       "st_upgr_cost": "3600",
       "pda_encyclopedia_tier": "4",
@@ -2482,7 +2562,8 @@
     {
       "id": "meat_lurker_a",
       "pda_encyclopedia_name": "st_meat_lurker",
-      "st_prop_weight": "0.2",
+      "st_data_export_description": "st_meat_lurker_descr",
+      "st_prop_weight": "0.20",
       "st_upgr_cost": "4103",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "0.55%",
@@ -2513,7 +2594,8 @@
     {
       "id": "meat_boar_b",
       "pda_encyclopedia_name": "st_meat_boar",
-      "st_prop_weight": "0.193",
+      "st_data_export_description": "st_meat_boar_descr",
+      "st_prop_weight": "0.19",
       "st_upgr_cost": "1734",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0.2%",
@@ -2544,7 +2626,8 @@
     {
       "id": "mineral_water",
       "pda_encyclopedia_name": "st_mineral_water",
-      "st_prop_weight": "1.035",
+      "st_data_export_description": "st_mineral_water_descr",
+      "st_prop_weight": "1.03",
       "st_upgr_cost": "1719",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "-0.94%",

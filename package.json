@@ -13,7 +13,11 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
+    "@aws-sdk/client-s3": "^3.1019.0",
     "@vitejs/plugin-vue": "^6.0.5",
+    "decode-dxt": "^1.0.1",
+    "parse-dds": "^1.2.1",
+    "sharp": "^0.34.5",
     "typescript": "^6.0.2",
     "vite": "^8.0.3",
     "vue-tsc": "^3.2.6",
@@ -24,6 +28,7 @@
     "@floating-ui/dom": "^1.7.6",
     "chart.js": "^4.5.1",
     "fuse.js": "^7.1.0",
+    "leaflet": "^1.9.4",
     "lucide-vue-next": "^1.0.0",
     "vue": "^3.5.31"
   }

@@ -120,13 +120,23 @@ const ScopParser = (() => {
             }
         }
 
-        // Resolve section name: strip addon suffixes (e.g. wpn_sks_b_wpn_addon_scope_pu -> wpn_sks_b)
+        // Resolve section name: strip addon suffixes to find known base item.
+        // Handles both vanilla (_wpn_addon_*) and GAMMA-style (_p1x42, etc.) suffixes.
         function resolveSection(name) {
             if (knownIds.has(name)) return name;
+            // Try _wpn_addon_ split first (most specific)
             const addonIdx = name.indexOf("_wpn_addon_");
             if (addonIdx > 0) {
                 const base = name.substring(0, addonIdx);
                 if (knownIds.has(base)) return base;
+            }
+            // Progressively strip trailing _segment parts to find longest known base
+            let end = name.length;
+            while (true) {
+                end = name.lastIndexOf("_", end - 1);
+                if (end <= 0) break;
+                const candidate = name.substring(0, end);
+                if (knownIds.has(candidate)) return candidate;
             }
             return null;
         }
@@ -138,9 +148,9 @@ const ScopParser = (() => {
         for (const spawn of allSpawns) {
             const resolved = resolveSection(spawn.sectionName);
             if (spawn.parentId === ACTOR_ID && spawn.id !== ACTOR_ID && resolved) {
-                items.push({ sectionName: resolved, id: spawn.id, ammoTypeIndex: spawn.ammoTypeIndex });
+                items.push({ sectionName: resolved, id: spawn.id, ammoTypeIndex: spawn.ammoTypeIndex, equipSlot: spawn.equipSlot });
             } else if (stashIds.has(spawn.parentId) && resolved) {
-                stashItems.push({ sectionName: resolved, id: spawn.id, ammoTypeIndex: spawn.ammoTypeIndex });
+                stashItems.push({ sectionName: resolved, id: spawn.id, ammoTypeIndex: spawn.ammoTypeIndex, equipSlot: spawn.equipSlot });
             }
         }
 
@@ -185,7 +195,7 @@ const ScopParser = (() => {
             // u16 ID_Parent
             const parentId = readU16(data, p); p += 2;
 
-            const result = { sectionName, id, parentId, ammoTypeIndex: -1 };
+            const result = { sectionName, id, parentId, ammoTypeIndex: -1, equipSlot: -1 };
 
             // Try to extract weapon ammo_type from STATE_Write data
             // Skip: ID_Phantom(2) + s_flags(2) + SPAWN_VERSION(2) + m_gameType(2) + script_server_object_version(2)
@@ -193,6 +203,18 @@ const ScopParser = (() => {
             // client_data_size + client_data
             if (p + 2 > end) return result;
             const cdSize = readU16(data, p); p += 2;
+            // Extract equip slot from client_data byte 1:
+            // high nibble = inventory slot (0=ruck, 2=weapon1, 3=weapon2, etc.)
+            // low nibble: 1=equipped in slot, 3=in ruck
+            if (cdSize >= 2) {
+                const slotByte = data[p + 1];
+                const slot = (slotByte >> 4) & 0x0F;
+                const state = slotByte & 0x0F;
+                if (slot > 0 && state === 1) {
+                    result.equipSlot = slot;
+                }
+                // state 3 or slot 0 → item is in the ruck (equipSlot stays -1)
+            }
             p += cdSize;
             // m_tSpawnID
             p += 2;

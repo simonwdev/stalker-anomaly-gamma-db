@@ -1,10 +1,23 @@
 [
   {
+    "date": "2026-03-29",
+    "entries": [
+      { "type": "added", "text": "Interactive map - explore the Zone with a zoomable, multi-resolution map. Click Maps in the tab bar to try it out.", "highlight": true, "summaryKey": "app_whats_new_maps", "action": "maps", "callout": { "selector": ".maps-nav-btn", "titleKey": "app_callout_maps_title", "descKey": "app_callout_maps_desc" } },
+      { "type": "added", "text": "Artifact crafting trees - see every recipe chain at a glance.", "highlight": true, "summaryKey": "app_whats_new_crafting_trees", "action": "craftingTrees", "callout": { "selector": ".crafting-tree-view-btn", "titleKey": "app_callout_crafting_trees_title", "descKey": "app_callout_crafting_trees_desc" }, "credits": [{ "name": "Evincars", "role": "code" }] },
+      { "type": "added", "text": "Grim Raid Addon 2.4 mod pack with full item data, icons, and drop locations.", "credits": [{ "name": "SaloEater", "role": "code" }] },
+      { "type": "added", "text": "Stash drop chances for Anomaly 1.5.3 items.", "credits": [{ "name": "SaloEater", "role": "code" }] },
+      { "type": "changed", "text": "Responsive layout improvements - header, filter bar, and version compare toolbar now collapse gracefully on tablet and mobile." },
+      { "type": "changed", "text": "Version compare filter selections now persist in the URL, so filtered views can be shared or bookmarked." },
+      { "type": "fixed", "text": "Save file import now correctly resolves weapons with GAMMA-style addon suffixes and assigns loadout slots based on equipped state." }
+    ]
+  },
+  {
     "date": "2026-03-28",
     "entries": [
       { "type": "added", "text": "Save file import in the build planner - drag and drop your .scop and .scoc save files to auto-populate your loadout, inventory, and stash.", "highlight": true, "summaryKey": "app_whats_new_save_import", "action": "buildPlanner", "callout": { "selector": ".save-import-btn", "titleKey": "app_callout_save_import_title", "descKey": "app_callout_save_import_desc" } },
       { "type": "added", "text": "Ammo tooltips on weapon caliber badges - hover any ammo type on a gun to see an image, armor penetration, damage, accuracy, and cost per round.", "credits": [{ "name": "Evincars", "role": "code" }] },
-      { "type": "added", "text": "Clicking an ammo badge on a weapon now navigates directly to that ammo item.", "credits": [{ "name": "Evincars", "role": "code" }] }
+      { "type": "added", "text": "Clicking an ammo badge on a weapon now navigates directly to that ammo item.", "credits": [{ "name": "Evincars", "role": "code" }] },
+      { "type": "added", "text": "Version Compare page - accessible from the sidebar, with category and property filters to drill into specific balance changes between pack versions.", "callout": { "selector": ".version-compare-nav-btn", "titleKey": "app_callout_version_compare_title", "descKey": "app_callout_version_compare_desc" } }
     ]
   },
   {

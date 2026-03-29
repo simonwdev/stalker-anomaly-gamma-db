@@ -1,4 +1,4 @@
-~, Pda_encyclopedia_name, St_prop_weight, St_upgr_cost, Ui_mm_repair, St_data_export_single_handed, Ui_inv_accuracy, Ui_inv_handling, Ui_inv_damage, Ui_inv_rate_of_fire, Ui_ammo_count, Ui_inv_wrange, Ui_inv_bspeed, Ui_inv_reli, Ui_inv_recoil, Ui_ammo_types, St_data_export_ammo_types_alt
-wpn_rpg7,st_wpn_rpg7,6.3,29800,N/A,N,0%,0%,2,0.2,1,0,0,0%,0,"ammo-og-7b";"ammo-og-7b";"ammo-og-7b",
-wpn_m79,st_wpn_m79,2.7,26840,N/A,N,0%,0%,0.53333334128062,0.2,1,0,0,0%,0,"ammo-m209";"ammo-m209";"ammo-m209",
-wpn_rg-6,st_wpn_rg6,6.2,38850,N/A,N,0%,0%,0.5,0.115,6,0,0,0%,0,"ammo-vog-25";"ammo-vog-25";"ammo-vog-25",
+~,pda_encyclopedia_name,st_data_export_description,st_prop_weight,st_upgr_cost,ui_mm_repair,st_data_export_single_handed,ui_inv_accuracy,ui_inv_handling,ui_inv_damage,ui_inv_rate_of_fire,ui_ammo_count,ui_ammo_types,st_data_export_ammo_types_alt,st_data_export_hit_power
+wpn_rpg7,st_wpn_rpg7,st_wpn_rpg7_descr,6.30,29800,N/A,N,77%,70%,200,20,1,ammo-og-7b;ammo-og-7b;ammo-og-7b,,3
+wpn_m79,st_wpn_m79,st_wpn_m79_descr,2.70,26840,N/A,N,49%,77%,53,20,1,ammo-m209;ammo-m209;ammo-m209,,0.8
+wpn_rg-6,st_wpn_rg6,st_wpn_rg6_descr,6.20,38850,N/A,N,49%,77%,50,11,6,ammo-vog-25;ammo-vog-25;ammo-vog-25,,0.75

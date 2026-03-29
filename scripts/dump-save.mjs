@@ -51,6 +51,14 @@ function resolveBase(section) {
         const base = section.substring(0, idx);
         if (knownIds.has(base)) return base;
     }
+    // Progressively strip trailing _segment parts to find longest known base
+    let end = section.length;
+    while (true) {
+        end = section.lastIndexOf("_", end - 1);
+        if (end <= 0) break;
+        const candidate = section.substring(0, end);
+        if (knownIds.has(candidate)) return candidate;
+    }
     return section;
 }
 

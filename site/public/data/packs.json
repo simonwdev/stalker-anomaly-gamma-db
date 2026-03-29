@@ -32,6 +32,14 @@
         { "url": "https://discord.com/invite/c4RuJNs", "icon": "discord", "label": "Discord" },
         { "url": "https://anomalymod.com/", "icon": "globe", "label": "Website" }
       ]
+    },
+    {
+      "id": "gra-2.4",
+      "name": "Grim Raid 2.4",
+      "baseCarryWeight": 33,
+      "links": [
+        { "url": "https://discord.gg/Bgwax9zwJ", "icon": "discord", "label": "Discord" }
+      ]
     }
   ],
   "default": "gamma-0.9.4"

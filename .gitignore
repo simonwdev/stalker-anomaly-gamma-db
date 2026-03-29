@@ -3,6 +3,10 @@
 release.zip
 tmpclaude-*
 
+# Map tiles (served from R2)
+site/public/tiles/
+High_Resolution_PDA_Maps/
+
 # Logs
 logs
 *.log

@@ -34,11 +34,12 @@ const SKIP_FILES = new Set([
   "export_outfit_exchange.csv",
   "export_weapon_drop_sources.csv",
   "export_items_list.csv",
-  "item_drop_locations.csv",
+  "export_item_drop_locations.csv",
   "export_artefact_recipes.csv",
   "export_stash_drop_rates.csv",
   "export_toolkit_map_rates.csv",
   "item_chance_in_stash.csv",
+  "export_item_chance_in_stash.csv",
   "en_us.csv",
   "ru_ru.csv",
   "fr_fr.csv",
@@ -431,8 +432,8 @@ index.sort((a, b) => a.displayName.localeCompare(b.displayName));
 writeFileSync(OUT_FILE, JSON.stringify(index, null, 2));
 console.log(`\nWrote ${index.length} items to ${OUT_FILE}`);
 
-// Generate item-drops.json from item_drop_locations.csv
-const ITEM_DROPS_FILE = join(CSV_DIR, "item_drop_locations.csv");
+// Generate item-drops.json from export_item_drop_locations.csv
+const ITEM_DROPS_FILE = join(CSV_DIR, "export_item_drop_locations.csv");
 try {
   const idlText = readFileSync(ITEM_DROPS_FILE, "utf-8");
   const idlLines = idlText.split(/\r?\n/).filter((l) => l.length > 0);
@@ -487,6 +488,37 @@ try {
 } catch (e) {
   if (e.code !== "ENOENT") throw e;
   console.log("No item drop locations CSV found, skipping item-drops.json");
+}
+
+// Generate item-stash-chance.json from export_item_chance_in_stash.csv
+const STASH_CHANCE_FILE = join(CSV_DIR, "export_item_chance_in_stash.csv");
+try {
+  const scText = readFileSync(STASH_CHANCE_FILE, "utf-8");
+  const scLines = scText.split(/\r?\n/).filter((l) => l.length > 0);
+  if (scLines.length > 1) {
+    const stashChance = {};
+    // Row 0 is header (starts with ~), data starts at row 1
+    for (let i = 1; i < scLines.length; i++) {
+      const cols = parseCsvLine(scLines[i]);
+      const id = cols[0]?.trim();
+      const type = cols[2]?.trim();
+      const chanceStr = cols[3]?.trim().replace("%", "") || "0";
+      const ecosStr = cols[4]?.trim() || "";
+      if (!id || !type) continue;
+      const ecos = ecosStr
+        .split("/")
+        .map((s) => parseInt(s.trim(), 10))
+        .filter((n) => !isNaN(n));
+      if (!stashChance[id]) stashChance[id] = {};
+      stashChance[id][type] = { chance: parseFloat(chanceStr), ecos };
+    }
+    const stashChanceOut = join(OUT_DIR, "item-stash-chance.json");
+    writeFileSync(stashChanceOut, JSON.stringify(stashChance, null, 2));
+    console.log(`Wrote ${Object.keys(stashChance).length} stash chance entries to ${stashChanceOut}`);
+  }
+} catch (e) {
+  if (e.code !== "ENOENT") throw e;
+  console.log("No item stash chance CSV found, skipping item-stash-chance.json");
 }
 
 // Generate disassemble.json from export_disassemble_table.csv

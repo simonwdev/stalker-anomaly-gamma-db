@@ -3,6 +3,7 @@
   "headers": [
     "id",
     "pda_encyclopedia_name",
+    "st_data_export_description",
     "st_prop_weight",
     "st_upgr_cost",
     "pda_encyclopedia_tier",
@@ -41,7 +42,8 @@
     {
       "id": "stimpack_scientic",
       "pda_encyclopedia_name": "st_stim_scientic",
-      "st_prop_weight": "0.1",
+      "st_data_export_description": "st_stim_scientic_descr",
+      "st_prop_weight": "0.10",
       "st_upgr_cost": "6000",
       "pda_encyclopedia_tier": "5",
       "st_data_export_sleepiness": "1%",
@@ -77,7 +79,8 @@
     {
       "id": "adrenalin",
       "pda_encyclopedia_name": "st_adrenalin",
-      "st_prop_weight": "0.052",
+      "st_data_export_description": "st_adrenalin_descr",
+      "st_prop_weight": "0.05",
       "st_upgr_cost": "12240",
       "pda_encyclopedia_tier": "5",
       "st_data_export_sleepiness": "-3%",
@@ -104,7 +107,7 @@
       "st_data_export_restore_radiation_max": "0",
       "ui_inv_outfit_power_restore": "6.29%",
       "st_data_export_power_restore_max": "13737%",
-      "ui_inv_outfit_additional_weight": "11.147",
+      "ui_inv_outfit_additional_weight": "11.15",
       "st_data_export_used_in_crafting": "N",
       "st_data_export_can_be_crafted": "Y",
       "displayName": "st_adrenalin",
@@ -113,6 +116,7 @@
     {
       "id": "antibio_sulfad",
       "pda_encyclopedia_name": "st_antibio_sulfad",
+      "st_data_export_description": "st_antibio_sulfad_descr",
       "st_prop_weight": "0.04",
       "st_upgr_cost": "935",
       "pda_encyclopedia_tier": "3",
@@ -149,7 +153,8 @@
     {
       "id": "drug_radioprotector",
       "pda_encyclopedia_name": "st_drug_radioprotector",
-      "st_prop_weight": "0.009",
+      "st_data_export_description": "st_drug_radioprotector_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "1720",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "1%",
@@ -185,6 +190,7 @@
     {
       "id": "antibio_chlor",
       "pda_encyclopedia_name": "st_antibio_chlor",
+      "st_data_export_description": "st_antibio_chlor_descr",
       "st_prop_weight": "0.04",
       "st_upgr_cost": "521",
       "pda_encyclopedia_tier": "2",
@@ -221,6 +227,7 @@
     {
       "id": "antiemetic",
       "pda_encyclopedia_name": "st_antiemetic",
+      "st_data_export_description": "st_antiemetic_descr",
       "st_prop_weight": "0.04",
       "st_upgr_cost": "680",
       "pda_encyclopedia_tier": "4",
@@ -257,6 +264,7 @@
     {
       "id": "drug_antidot",
       "pda_encyclopedia_name": "st_drug_antidot",
+      "st_data_export_description": "st_drug_antidot_descr",
       "st_prop_weight": "0.01",
       "st_upgr_cost": "3360",
       "pda_encyclopedia_tier": "4",
@@ -293,7 +301,8 @@
     {
       "id": "drug_coagulant",
       "pda_encyclopedia_name": "st_drug_coagulant",
-      "st_prop_weight": "0.011",
+      "st_data_export_description": "st_drug_coagulant_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "3350",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "0%",
@@ -329,7 +338,8 @@
     {
       "id": "cocaine",
       "pda_encyclopedia_name": "st_cocaine",
-      "st_prop_weight": "0.011",
+      "st_data_export_description": "st_cocaine_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "4542",
       "pda_encyclopedia_tier": "5",
       "st_data_export_sleepiness": "-2%",
@@ -356,7 +366,7 @@
       "st_data_export_restore_radiation_max": "0",
       "ui_inv_outfit_power_restore": "4.42%",
       "st_data_export_power_restore_max": "7266%",
-      "ui_inv_outfit_additional_weight": "6.329",
+      "ui_inv_outfit_additional_weight": "6.33",
       "st_data_export_used_in_crafting": "N",
       "st_data_export_can_be_crafted": "Y",
       "displayName": "st_cocaine",
@@ -365,6 +375,7 @@
     {
       "id": "drug_booster",
       "pda_encyclopedia_name": "st_drug_booster",
+      "st_data_export_description": "st_drug_booster_descr",
       "st_prop_weight": "0.18",
       "st_upgr_cost": "2382",
       "pda_encyclopedia_tier": "3",
@@ -392,7 +403,7 @@
       "st_data_export_restore_radiation_max": "0",
       "ui_inv_outfit_power_restore": "2.8%",
       "st_data_export_power_restore_max": "1534%",
-      "ui_inv_outfit_additional_weight": "3.067",
+      "ui_inv_outfit_additional_weight": "3.07",
       "st_data_export_used_in_crafting": "Y",
       "st_data_export_can_be_crafted": "Y",
       "displayName": "st_drug_booster",
@@ -401,7 +412,8 @@
     {
       "id": "akvatab",
       "pda_encyclopedia_name": "st_akvatab",
-      "st_prop_weight": "0.007",
+      "st_data_export_description": "st_akvatab_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "4524",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "-1%",
@@ -437,7 +449,8 @@
     {
       "id": "drug_sleepingpills",
       "pda_encyclopedia_name": "st_sleepingpills",
-      "st_prop_weight": "0.011",
+      "st_data_export_description": "st_sleepingpills_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "2100",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "30%",
@@ -473,7 +486,8 @@
     {
       "id": "glucose_s",
       "pda_encyclopedia_name": "st_glucose_s",
-      "st_prop_weight": "0.0134",
+      "st_data_export_description": "st_glucose_s_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "1440",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "2%",
@@ -509,6 +523,7 @@
     {
       "id": "antirad",
       "pda_encyclopedia_name": "st_antirad",
+      "st_data_export_description": "st_antirad_descr",
       "st_prop_weight": "0.05",
       "st_upgr_cost": "1860",
       "pda_encyclopedia_tier": "3",
@@ -545,7 +560,8 @@
     {
       "id": "salicidic_acid",
       "pda_encyclopedia_name": "st_salicidic_acid",
-      "st_prop_weight": "0.076",
+      "st_data_export_description": "st_salicidic_acid_descr",
+      "st_prop_weight": "0.08",
       "st_upgr_cost": "980",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "1%",
@@ -581,6 +597,7 @@
     {
       "id": "jgut",
       "pda_encyclopedia_name": "st_jgut_zhgut",
+      "st_data_export_description": "st_jgut_descr",
       "st_prop_weight": "0.02",
       "st_upgr_cost": "1750",
       "pda_encyclopedia_tier": "2",
@@ -617,7 +634,8 @@
     {
       "id": "yadylin",
       "pda_encyclopedia_name": "st_yadylin",
-      "st_prop_weight": "0.1",
+      "st_data_export_description": "st_yadylin_descr",
+      "st_prop_weight": "0.10",
       "st_upgr_cost": "816",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "2%",
@@ -653,7 +671,8 @@
     {
       "id": "stimpack_army",
       "pda_encyclopedia_name": "st_stim_military",
-      "st_prop_weight": "0.1",
+      "st_data_export_description": "st_stim_military_descr",
+      "st_prop_weight": "0.10",
       "st_upgr_cost": "5000",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "1%",
@@ -689,7 +708,8 @@
     {
       "id": "caffeine",
       "pda_encyclopedia_name": "st_caffeine",
-      "st_prop_weight": "0.011",
+      "st_data_export_description": "st_caffeine_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "2550",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "-3%",
@@ -716,7 +736,7 @@
       "st_data_export_restore_radiation_max": "0",
       "ui_inv_outfit_power_restore": "0.8%",
       "st_data_export_power_restore_max": "212%",
-      "ui_inv_outfit_additional_weight": "0.724",
+      "ui_inv_outfit_additional_weight": "0.72",
       "st_data_export_used_in_crafting": "N",
       "st_data_export_can_be_crafted": "N",
       "displayName": "st_caffeine",
@@ -725,7 +745,8 @@
     {
       "id": "bandage",
       "pda_encyclopedia_name": "st_bandage",
-      "st_prop_weight": "0.038",
+      "st_data_export_description": "st_bandage_descr",
+      "st_prop_weight": "0.04",
       "st_upgr_cost": "1000",
       "pda_encyclopedia_tier": "1",
       "st_data_export_sleepiness": "0%",
@@ -761,7 +782,8 @@
     {
       "id": "medkit",
       "pda_encyclopedia_name": "st_medkit",
-      "st_prop_weight": "0.5",
+      "st_data_export_description": "st_medkit_descr",
+      "st_prop_weight": "0.50",
       "st_upgr_cost": "2500",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "0%",
@@ -797,7 +819,8 @@
     {
       "id": "rebirth",
       "pda_encyclopedia_name": "st_rebirth",
-      "st_prop_weight": "0.076",
+      "st_data_export_description": "st_rebirth_descr",
+      "st_prop_weight": "0.08",
       "st_upgr_cost": "6690",
       "pda_encyclopedia_tier": "5",
       "st_data_export_sleepiness": "-1%",
@@ -833,7 +856,8 @@
     {
       "id": "drug_anabiotic",
       "pda_encyclopedia_name": "st_drug_anabiotic",
-      "st_prop_weight": "0.012",
+      "st_data_export_description": "st_drug_anabiotic_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "2650",
       "pda_encyclopedia_tier": "5",
       "st_data_export_sleepiness": "0%",
@@ -869,6 +893,7 @@
     {
       "id": "antirad_cystamine",
       "pda_encyclopedia_name": "st_antirad_cystamine",
+      "st_data_export_description": "st_antirad_cystamine_descr",
       "st_prop_weight": "0.05",
       "st_upgr_cost": "1080",
       "pda_encyclopedia_tier": "3",
@@ -905,7 +930,8 @@
     {
       "id": "tetanus",
       "pda_encyclopedia_name": "st_tetanus",
-      "st_prop_weight": "0.046",
+      "st_data_export_description": "st_tetanus_descr",
+      "st_prop_weight": "0.05",
       "st_upgr_cost": "1940",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "1%",
@@ -941,7 +967,8 @@
     {
       "id": "glucose",
       "pda_encyclopedia_name": "st_glucose",
-      "st_prop_weight": "0.021",
+      "st_data_export_description": "st_glucose_descr",
+      "st_prop_weight": "0.02",
       "st_upgr_cost": "2760",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "3%",
@@ -977,7 +1004,8 @@
     {
       "id": "morphine",
       "pda_encyclopedia_name": "st_morphine",
-      "st_prop_weight": "0.074",
+      "st_data_export_description": "st_morphine_descr",
+      "st_prop_weight": "0.07",
       "st_upgr_cost": "1640",
       "pda_encyclopedia_tier": "5",
       "st_data_export_sleepiness": "2%",
@@ -1013,6 +1041,7 @@
     {
       "id": "survival_kit",
       "pda_encyclopedia_name": "st_survival_kit",
+      "st_data_export_description": "st_survival_kit_descr",
       "st_prop_weight": "0.18",
       "st_upgr_cost": "7500",
       "pda_encyclopedia_tier": "5",
@@ -1049,7 +1078,8 @@
     {
       "id": "analgetic",
       "pda_encyclopedia_name": "st_analgetic",
-      "st_prop_weight": "0.076",
+      "st_data_export_description": "st_analgetic_descr",
+      "st_prop_weight": "0.08",
       "st_upgr_cost": "1360",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "3%",
@@ -1085,7 +1115,8 @@
     {
       "id": "drug_psy_blockade",
       "pda_encyclopedia_name": "st_drug_psy_blockade",
-      "st_prop_weight": "0.011",
+      "st_data_export_description": "st_drug_psy_blockade_descr",
+      "st_prop_weight": "0.01",
       "st_upgr_cost": "4450",
       "pda_encyclopedia_tier": "3",
       "st_data_export_sleepiness": "1%",
@@ -1121,7 +1152,8 @@
     {
       "id": "stimpack",
       "pda_encyclopedia_name": "st_stim_impro",
-      "st_prop_weight": "0.1",
+      "st_data_export_description": "st_stim_impro_descr",
+      "st_prop_weight": "0.10",
       "st_upgr_cost": "3000",
       "pda_encyclopedia_tier": "2",
       "st_data_export_sleepiness": "1%",
@@ -1157,7 +1189,8 @@
     {
       "id": "medkit_army",
       "pda_encyclopedia_name": "st_medkit_army",
-      "st_prop_weight": "0.5",
+      "st_data_export_description": "st_medkit_army_descr",
+      "st_prop_weight": "0.50",
       "st_upgr_cost": "4500",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "0%",
@@ -1193,7 +1226,8 @@
     {
       "id": "medkit_scientic",
       "pda_encyclopedia_name": "st_medkit_science",
-      "st_prop_weight": "0.5",
+      "st_data_export_description": "st_medkit_science_descr",
+      "st_prop_weight": "0.50",
       "st_upgr_cost": "6500",
       "pda_encyclopedia_tier": "4",
       "st_data_export_sleepiness": "0%",
@@ -1229,6 +1263,7 @@
     {
       "id": "antirad_kalium",
       "pda_encyclopedia_name": "st_antirad_kalium",
+      "st_data_export_description": "st_antirad_kalium_descr",
       "st_prop_weight": "0.05",
       "st_upgr_cost": "3080",
       "pda_encyclopedia_tier": "4",

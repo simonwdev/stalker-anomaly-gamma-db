@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 2026-03-29
+
+### Added
+
+- Artifact crafting tree view with collapsible nodes, connection lines, and stat tooltips (Evincars)
+- Quick navigation dialog (Ctrl+K) for jumping to any item or page (Evincars)
+- Infinite scroll for large item lists to improve initial load performance (Evincars)
+- Grim Raid Addon 2.4 mod pack with full item data, icons, and drop locations (SaloEater)
+- Stash drop chances for Anomaly 1.5.3 items (SaloEater)
+- Version compare filters now persist in URL query params for shareable filtered views
+
+### Changed
+
+- Responsive header, filter bar, and version compare toolbar — collapses gracefully on tablet and mobile with icon-only buttons and two-row layout
+- Updated Anomaly 1.5.3 data with latest game exports and new item icons
+
+### Fixed
+
+- Save file import now resolves weapons with GAMMA-style addon suffixes (e.g. wpn_ak74u_tac_p1x42) and uses equip slot data to correctly assign loadout slots
+- Build planner character name and faction now persist across page refreshes and are properly reset on clear
+
 ## 2026-03-28
 
 ### Added
@@ -12,6 +33,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Feature callouts that spotlight new UI elements when the user navigates to the relevant page
 - Ammo tooltips on weapon caliber badges — hover any ammo type on a gun to see an image, armor penetration, damage, accuracy, and cost per round (Evincars)
 - Clicking an ammo badge on a weapon now navigates directly to that ammo item (Evincars)
+- Version Compare page accessible from the sidebar with category and property filter dropdowns
+- Version compare filters persist to localStorage and survive modal navigation
 
 ### Changed
 

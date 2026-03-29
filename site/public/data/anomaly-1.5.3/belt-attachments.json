@@ -29,7 +29,7 @@
     {
       "id": "hide_burer",
       "pda_encyclopedia_name": "st_hide_burer_name",
-      "st_prop_weight": "1.331",
+      "st_prop_weight": "1.33",
       "st_upgr_cost": "2540",
       "pda_encyclopedia_tier": "4",
       "st_data_export_is_backpack": "N",
@@ -56,7 +56,7 @@
     {
       "id": "af_plates",
       "pda_encyclopedia_name": "st_af_plates_name",
-      "st_prop_weight": "1.246",
+      "st_prop_weight": "1.25",
       "st_upgr_cost": "7860",
       "pda_encyclopedia_tier": "3",
       "st_data_export_is_backpack": "N",
@@ -83,7 +83,7 @@
     {
       "id": "af_kevlar_up",
       "pda_encyclopedia_name": "st_af_kevlar_up_name",
-      "st_prop_weight": "0.483",
+      "st_prop_weight": "0.48",
       "st_upgr_cost": "13380",
       "pda_encyclopedia_tier": "4",
       "st_data_export_is_backpack": "N",
@@ -110,7 +110,7 @@
     {
       "id": "hide_pseudogiant",
       "pda_encyclopedia_name": "st_hide_pseudogiant_name",
-      "st_prop_weight": "2.192",
+      "st_prop_weight": "2.19",
       "st_upgr_cost": "4090",
       "pda_encyclopedia_tier": "5",
       "st_data_export_is_backpack": "N",
@@ -164,7 +164,7 @@
     {
       "id": "hide_psy_dog",
       "pda_encyclopedia_name": "st_hide_psy_dog_name",
-      "st_prop_weight": "1.161",
+      "st_prop_weight": "1.16",
       "st_upgr_cost": "1570",
       "pda_encyclopedia_tier": "3",
       "st_data_export_is_backpack": "N",
@@ -218,7 +218,7 @@
     {
       "id": "af_plates_up",
       "pda_encyclopedia_name": "st_af_plates_up_name",
-      "st_prop_weight": "2.826",
+      "st_prop_weight": "2.83",
       "st_upgr_cost": "16860",
       "pda_encyclopedia_tier": "5",
       "st_data_export_is_backpack": "N",
@@ -326,7 +326,7 @@
     {
       "id": "powder_poltergeist",
       "pda_encyclopedia_name": "st_powder_poltergeist",
-      "st_prop_weight": "0.162",
+      "st_prop_weight": "0.16",
       "st_upgr_cost": "2760",
       "pda_encyclopedia_tier": "4",
       "st_data_export_is_backpack": "N",
@@ -380,7 +380,7 @@
     {
       "id": "hide_pseudodog",
       "pda_encyclopedia_name": "st_hide_pseudodog_name",
-      "st_prop_weight": "1.111",
+      "st_prop_weight": "1.11",
       "st_upgr_cost": "940",
       "pda_encyclopedia_tier": "2",
       "st_data_export_is_backpack": "N",
@@ -434,7 +434,7 @@
     {
       "id": "kit_hunt",
       "pda_encyclopedia_name": "st_kit_hunt",
-      "st_prop_weight": "4.231",
+      "st_prop_weight": "4.23",
       "st_upgr_cost": "8043",
       "pda_encyclopedia_tier": "0",
       "st_data_export_is_backpack": "Y",
@@ -461,7 +461,7 @@
     {
       "id": "af_kevlar",
       "pda_encyclopedia_name": "st_af_kevlar_name",
-      "st_prop_weight": "0.483",
+      "st_prop_weight": "0.48",
       "st_upgr_cost": "6380",
       "pda_encyclopedia_tier": "3",
       "st_data_export_is_backpack": "N",
@@ -488,7 +488,7 @@
     {
       "id": "hide_controller",
       "pda_encyclopedia_name": "st_hide_controller_name",
-      "st_prop_weight": "1.261",
+      "st_prop_weight": "1.26",
       "st_upgr_cost": "3040",
       "pda_encyclopedia_tier": "5",
       "st_data_export_is_backpack": "N",
@@ -542,7 +542,7 @@
     {
       "id": "hide_chimera",
       "pda_encyclopedia_name": "st_hide_chimera_name",
-      "st_prop_weight": "1.361",
+      "st_prop_weight": "1.36",
       "st_upgr_cost": "3284",
       "pda_encyclopedia_tier": "4",
       "st_data_export_is_backpack": "N",
@@ -569,7 +569,7 @@
     {
       "id": "hide_psysucker",
       "pda_encyclopedia_name": "st_hide_psysucker_name",
-      "st_prop_weight": "1.172",
+      "st_prop_weight": "1.17",
       "st_upgr_cost": "2020",
       "pda_encyclopedia_tier": "3",
       "st_data_export_is_backpack": "N",
@@ -596,7 +596,7 @@
     {
       "id": "hide_lurker",
       "pda_encyclopedia_name": "st_hide_lurker_name",
-      "st_prop_weight": "1.152",
+      "st_prop_weight": "1.15",
       "st_upgr_cost": "730",
       "pda_encyclopedia_tier": "2",
       "st_data_export_is_backpack": "N",
@@ -758,7 +758,7 @@
     {
       "id": "hide_boar",
       "pda_encyclopedia_name": "st_hide_boar_name",
-      "st_prop_weight": "1.152",
+      "st_prop_weight": "1.15",
       "st_upgr_cost": "730",
       "pda_encyclopedia_tier": "2",
       "st_data_export_is_backpack": "N",
@@ -812,7 +812,7 @@
     {
       "id": "hide_bloodsucker",
       "pda_encyclopedia_name": "st_hide_bloodsucker_name",
-      "st_prop_weight": "1.172",
+      "st_prop_weight": "1.17",
       "st_upgr_cost": "2020",
       "pda_encyclopedia_tier": "3",
       "st_data_export_is_backpack": "N",
@@ -947,7 +947,7 @@
     {
       "id": "hide_flesh",
       "pda_encyclopedia_name": "st_hide_flesh_name",
-      "st_prop_weight": "2.183",
+      "st_prop_weight": "2.18",
       "st_upgr_cost": "640",
       "pda_encyclopedia_tier": "1",
       "st_data_export_is_backpack": "N",
