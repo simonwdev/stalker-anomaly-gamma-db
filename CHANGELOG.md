@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Fixed
 
 - Save file import now resolves weapons with GAMMA-style addon suffixes (e.g. wpn_ak74u_tac_p1x42) and uses equip slot data to correctly assign loadout slots
+- Build planner character name and faction now persist across page refreshes and are properly reset on clear
 
 ## 2026-03-28
 

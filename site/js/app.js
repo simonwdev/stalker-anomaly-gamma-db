@@ -4307,6 +4307,8 @@ export const appDefinition = {
         },
 
         clearBuild() {
+            this.buildPlayerName = "Stalker";
+            this.buildPlayerFaction = "stalker";
             this.buildOutfit = null;
             this.buildHelmet = null;
             this.buildBackpack = null;
@@ -4389,6 +4391,8 @@ export const appDefinition = {
 
         saveBuildToStorage() {
             const data = {
+                playerName: this.buildPlayerName,
+                playerFaction: this.buildPlayerFaction,
                 outfit: this.buildOutfit?.id || null,
                 helmet: this.buildHelmet?.id || null,
                 backpack: this.buildBackpack?.id || null,
@@ -4430,6 +4434,8 @@ export const appDefinition = {
                 }
                 return null;
             };
+            if (data.playerName) this.buildPlayerName = data.playerName;
+            if (data.playerFaction) this.buildPlayerFaction = data.playerFaction;
             this.buildOutfit = findItem(data.outfit, "outfits");
             this.buildHelmet = findItem(data.helmet, "helmets");
             this.buildBackpack = findItem(data.backpack, "belt-attachments");
@@ -5810,9 +5816,11 @@ export const appDefinition = {
         },
         buildPlayerName() {
             if (this.buildPlannerActive && !this._restoringUrl) this.debouncedPushUrl();
+            this.saveBuildToStorage();
         },
         buildPlayerFaction() {
             if (this.buildPlannerActive && !this._restoringUrl) this.pushUrlState();
+            this.saveBuildToStorage();
         },
         buildSaveModalOpen(open) {
             if (open) {
