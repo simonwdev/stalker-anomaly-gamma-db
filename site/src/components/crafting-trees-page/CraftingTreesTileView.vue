@@ -1,9 +1,17 @@
 <template>
     <div v-if="isCraftingTrees" class="crafting-trees-view">
         <div class="crafting-trees-toolbar">
-            <button class="filter-chip" :class="{ active: !graphViewOpen }" @click="graphViewOpen = false">Tile view</button>
-            <button class="filter-chip" :class="{ active: graphViewOpen }" @click="graphViewOpen = true">Tree view</button>
-            <button class="filter-chip crafting-expand-toggle-btn" @click="toggleExpandCollapse()">
+            <div class="view-toggle">
+                <button :class="{ active: !graphViewOpen }" @click="graphViewOpen = false" v-tooltip="t('app_label_tile_view')">
+                    <LucideLayoutGrid :size="14" />
+                    <span class="view-toggle-label">{{ t('app_label_tile_view') }}</span>
+                </button>
+                <button class="crafting-tree-view-btn" :class="{ active: graphViewOpen }" @click="graphViewOpen = true" v-tooltip="t('app_label_tree_view')">
+                    <LucideList :size="14" />
+                    <span class="view-toggle-label">{{ t('app_label_tree_view') }}</span>
+                </button>
+            </div>
+            <button class="crafting-expand-toggle-btn" @click="toggleExpandCollapse()">
                 {{ currentExpandLabel }}
             </button>
             <span class="item-count">{{ filteredCraftingTrees.length }} {{ t('app_label_recipes') }}</span>
@@ -122,13 +130,23 @@ export default {
     },
     emits: ["expandAllTrees", "collapseAllTrees", "toggleTreeNode", "navigateToItem"],
     data() {
+        let graphViewOpen = false;
+        try {
+            const stored = localStorage.getItem("craftingTreesView");
+            if (stored === "tree") graphViewOpen = true;
+        } catch {}
         return {
-            graphViewOpen: false,
+            graphViewOpen,
             treeViewExpandAll: true,
             hoverItem: null,
             hoverPos: {},
             _hoverTimeout: null,
         };
+    },
+    watch: {
+        graphViewOpen(v) {
+            try { localStorage.setItem("craftingTreesView", v ? "tree" : "tile"); } catch {}
+        },
     },
     computed: {
         currentExpandLabel() {

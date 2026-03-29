@@ -4576,9 +4576,11 @@ export const appDefinition = {
 
         whatsNewAction(entry) {
             if (!entry.action) return;
+            this.whatsNewVisible = false;
             if (entry.action === "buildPlanner") {
-                this.whatsNewVisible = false;
                 this.openBuildPlanner();
+            } else if (entry.action === "craftingTrees") {
+                this.selectCategory(CAT.CRAFTING_TREES);
             }
         },
 

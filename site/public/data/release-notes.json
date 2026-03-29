@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-03-29",
+    "entries": [
+      { "type": "added", "text": "Artifact crafting trees - see every recipe chain at a glance.", "highlight": true, "summaryKey": "app_whats_new_crafting_trees", "action": "craftingTrees", "callout": { "selector": ".crafting-tree-view-btn", "titleKey": "app_callout_crafting_trees_title", "descKey": "app_callout_crafting_trees_desc" }, "credits": [{ "name": "Evincars", "role": "code" }] },
+      { "type": "added", "text": "Grim Raid Addon 2.4 mod pack with full item data, icons, and drop locations.", "credits": [{ "name": "SaloEater", "role": "code" }] },
+      { "type": "added", "text": "Stash drop chances for Anomaly 1.5.3 items.", "credits": [{ "name": "SaloEater", "role": "code" }] },
+      { "type": "changed", "text": "Responsive layout improvements - header, filter bar, and version compare toolbar now collapse gracefully on tablet and mobile." },
+      { "type": "changed", "text": "Version compare filter selections now persist in the URL, so filtered views can be shared or bookmarked." },
+      { "type": "fixed", "text": "Save file import now correctly resolves weapons with GAMMA-style addon suffixes and assigns loadout slots based on equipped state." }
+    ]
+  },
+  {
     "date": "2026-03-28",
     "entries": [
       { "type": "added", "text": "Save file import in the build planner - drag and drop your .scop and .scoc save files to auto-populate your loadout, inventory, and stash.", "highlight": true, "summaryKey": "app_whats_new_save_import", "action": "buildPlanner", "callout": { "selector": ".save-import-btn", "titleKey": "app_callout_save_import_title", "descKey": "app_callout_save_import_desc" } },

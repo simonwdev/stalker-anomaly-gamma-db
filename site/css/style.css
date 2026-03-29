@@ -551,7 +551,7 @@ button.header-link {
 /* Layout */
 .layout {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 220px 1fr;
     flex: 1;
     min-height: 0;
     overflow: hidden;
@@ -794,6 +794,15 @@ button.header-link {
     border-color: var(--accent-dim);
     background: rgba(200, 168, 78, 0.08);
     z-index: 2;
+}
+.view-toggle-label {
+    font-size: 0.75rem;
+    font-family: inherit;
+}
+.view-toggle button:has(.view-toggle-label) {
+    width: auto;
+    padding: 0 0.5rem;
+    gap: 0.3rem;
 }
 
 /* Tile grid */
@@ -2056,137 +2065,6 @@ input.range-input {
     background: rgba(208, 122, 110, 0.15);
 }
 
-/* Version Compare */
-.version-compare-view {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-height: 0;
-    padding-right: 1rem;
-}
-.version-compare-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding-bottom: 0.75rem;
-    flex-shrink: 0;
-}
-.version-compare-header h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0;
-}
-.version-compare-picker {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-}
-.version-compare-pack {
-    color: var(--text-secondary);
-}
-.version-compare-pack-btn {
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: var(--text);
-    border-radius: 4px;
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
-    font-family: inherit;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    transition: border-color 0.15s;
-}
-.version-compare-pack-btn:hover {
-    border-color: var(--accent-dim);
-}
-.version-compare-count {
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    white-space: nowrap;
-}
-.version-compare-spacer {
-    flex: 1;
-}
-.version-compare-property-menu {
-    max-height: 320px;
-    display: flex;
-    flex-direction: column;
-}
-.version-compare-property-list {
-    overflow-y: auto;
-    flex: 1;
-}
-.version-compare-item-count {
-    color: var(--text-secondary);
-    font-size: 0.75rem;
-    white-space: nowrap;
-    margin-left: auto;
-}
-.version-compare-list {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    flex: 1;
-    min-height: 0;
-}
-.version-compare-item {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    padding: 0.4rem 0.5rem;
-    border-bottom: 1px solid var(--border);
-    cursor: pointer;
-    transition: background 0.1s;
-}
-.version-compare-item:hover {
-    background: var(--card);
-}
-.version-compare-item:last-child {
-    border-bottom: none;
-}
-.version-compare-cat {
-    font-size: 0.7rem;
-    color: var(--text-secondary);
-    min-width: 6rem;
-    flex-shrink: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-}
-.version-compare-name {
-    font-size: 0.8rem;
-    white-space: nowrap;
-    min-width: 12rem;
-    flex-shrink: 0;
-    color: var(--accent);
-}
-.version-compare-changes {
-    display: flex;
-    gap: 0.5rem 1rem;
-    font-size: 0.75rem;
-    font-family: var(--mono);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    min-width: 0;
-}
-.version-compare-stat {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 0.25rem;
-}
-.version-compare-stat-label {
-    color: var(--text-secondary);
-    margin-right: 0.15rem;
-}
-.version-compare-more {
-    color: var(--text-secondary);
-    font-style: italic;
-    font-family: inherit;
-}
-
 /* Legacy stat table (item.html standalone) */
 .stat-table {
     width: 100%;
@@ -3381,15 +3259,26 @@ input.range-input {
     gap: 0.75rem;
     padding: 0.25rem 0;
 }
+.crafting-trees-toolbar .view-toggle {
+    margin-left: 0;
+}
 .crafting-expand-toggle-btn {
-    border-color: #5f7fa8;
-    background: rgba(95, 127, 168, 0.2);
-    color: #a9cbf6;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    height: 1.75rem;
+    padding: 0 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.15s, border-color 0.15s;
 }
 .crafting-expand-toggle-btn:hover {
-    border-color: #7e9fca;
-    background: rgba(95, 127, 168, 0.32);
-    color: #c2dcff;
+    color: var(--text);
+    border-color: var(--accent-dim);
 }
 .crafting-tree-card .tile-card-header {
     border-bottom: 1px solid var(--border);
