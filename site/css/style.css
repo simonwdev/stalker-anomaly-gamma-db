@@ -2267,6 +2267,96 @@ input.range-input {
 .modal-body::-webkit-scrollbar-thumb:hover {
     background: var(--text-secondary);
 }
+/* Modal header: image-left / title-right layout */
+.modal-header-layout {
+    display: flex;
+    gap: 1.1rem;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+    animation: fade-in 0.25s ease;
+}
+
+/* Item image box — same visual language as .ammo-tooltip-image-wrap */
+.modal-item-img-box {
+    flex-shrink: 0;
+    position: relative;
+    background: #141a1f;
+    border: 1px solid #3d464e;
+    border-radius: 6px;
+    padding: 0.55rem 0.85rem;
+    min-width: 130px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    overflow: hidden;
+}
+.modal-item-img {
+    max-width: 200px;
+    min-height: 90px;
+    max-height: 90px;
+    object-fit: contain;
+    display: block;
+}
+/* Faction badge pinned to the bottom-right of the image box */
+.modal-item-faction-badge {
+    position: absolute;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    z-index: 1;
+}
+/* Placeholder shown when the image fails to load */
+.modal-item-img-box .modal-item-img-placeholder {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    color: var(--text-secondary);
+    opacity: 0.35;
+    pointer-events: none;
+}
+.modal-item-img-box.no-icon .modal-item-img-placeholder {
+    display: flex;
+}
+.modal-item-img-box .item-icon-placeholder-x {
+    width: 80px;
+    height: 36px;
+}
+.modal-item-img-box .item-icon-placeholder-text {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.modal-item-img-box {
+    margin-top: 11px;
+}
+
+/* Header content (title, meta, toolbar) takes remaining space */
+.modal-header-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Collapse to stacked on very small screens */
+@media (max-width: 500px) {
+    .modal-header-layout {
+        flex-direction: column;
+    }
+    .modal-item-img-box {
+        width: 100%;
+        min-width: unset;
+    }
+    .modal-item-img {
+        max-width: 100%;
+        max-height: 80px;
+    }
+}
+
 .modal-title-row {
     display: flex;
     align-items: center;
