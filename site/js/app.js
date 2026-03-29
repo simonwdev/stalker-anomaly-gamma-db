@@ -2582,9 +2582,77 @@ export const appDefinition = {
             const fields = this.compareRadarFields;
             if (fields.length === 0) return;
 
+            const hexToRgba = (hex, alpha) => {
+                const r = parseInt(hex.slice(1, 3), 16);
+                const g = parseInt(hex.slice(3, 5), 16);
+                const b = parseInt(hex.slice(5, 7), 16);
+                return `rgba(${r},${g},${b},${alpha})`;
+            };
+
+            const self = this;
+            const categories = this.compareData.map(e => e.category);
+            const isMutantParts = categories.every(c => c === CAT.MUTANT_PARTS);
+
+            // Mutant parts: use a grouped bar chart (actual price values) instead of radar
+            if (isMutantParts) {
+                const labels = fields.map(f => this.headerLabel(f));
+                const datasets = this.compareData.map((entry, i) => {
+                    const color = CHART_COLORS[i % CHART_COLORS.length];
+                    return {
+                        label: this.tName(entry.item),
+                        data: fields.map(f => {
+                            const n = parseFloat(String(entry.item[f] ?? "").replace("%", ""));
+                            return isNaN(n) ? 0 : n;
+                        }),
+                        backgroundColor: hexToRgba(color, 0.75),
+                        borderColor: color,
+                        borderWidth: 1,
+                    };
+                });
+                this._compareChart = new Chart(canvas, {
+                    type: "bar",
+                    data: { labels, datasets },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        scales: {
+                            x: {
+                                ticks: { color: "#d4d4d4", font: { size: 12 } },
+                                grid: { color: "#2a2a2a" },
+                            },
+                            y: {
+                                beginAtZero: true,
+                                ticks: { color: "#b0b0b0", font: { size: 11 } },
+                                grid: { color: "#2a2a2a" },
+                            },
+                        },
+                        plugins: {
+                            legend: { labels: { color: "#d4d4d4", font: { size: 12 }, usePointStyle: true, pointStyle: "circle" } },
+                            tooltip: {
+                                backgroundColor: "#1a1a1a",
+                                titleColor: "#d4d4d4",
+                                bodyColor: "#d4d4d4",
+                                borderColor: "#2a2a2a",
+                                borderWidth: 1,
+                                callbacks: {
+                                    label(ctx) {
+                                        const field = fields[ctx.dataIndex];
+                                        const entry = self.compareData[ctx.datasetIndex];
+                                        const rawVal = entry.item[field];
+                                        const name = self.tName(entry.item);
+                                        return `${name}: ${self.formatValue(field, rawVal ?? "--")}`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                return;
+            }
+
             // Use full category ranges so items are positioned relative to all items in the category
             const catRanges = {};
-            const seenCategories = new Set(this.compareData.map(e => e.category));
+            const seenCategories = new Set(categories);
             for (const cat of seenCategories) {
                 const cr = this.getColumnRanges(cat);
                 for (const [k, v] of Object.entries(cr)) {
@@ -2618,12 +2686,6 @@ export const appDefinition = {
                 return Math.max(0, Math.min(100, norm));
             };
 
-            const hexToRgba = (hex, alpha) => {
-                const r = parseInt(hex.slice(1, 3), 16);
-                const g = parseInt(hex.slice(3, 5), 16);
-                const b = parseInt(hex.slice(5, 7), 16);
-                return `rgba(${r},${g},${b},${alpha})`;
-            };
             const labels = fields.map(f => this.headerLabel(f));
             const datasets = this.compareData.map((entry, i) => {
                 const color = CHART_COLORS[i % CHART_COLORS.length];
@@ -2639,7 +2701,6 @@ export const appDefinition = {
                 };
             });
 
-            const self = this;
             this._compareChart = new Chart(canvas, {
                 type: "radar",
                 data: { labels, datasets },
