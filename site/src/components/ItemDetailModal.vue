@@ -205,6 +205,22 @@
                     </div>
                 </div>
 
+                <!-- Stash chance -->
+                <div v-if="modalStashChanceEntries.length > 0" class="drop-sources">
+                    <h2>{{ t('app_label_stash_chance') }}</h2>
+                    <div class="stash-drop-grid">
+                        <div v-for="entry in modalStashChanceEntries" :key="entry.type" class="stash-drop-card">
+                            <div class="stash-drop-map">{{ t(entry.type) }}</div>
+                            <div class="stash-drop-chances">
+                                <span class="stash-chance" :class="'stash-chance-' + entry.type.split('_').pop()">{{ entry.chance }}%</span>
+                            </div>
+                            <div v-if="modalStashChanceHasRestrictedEcos && entry.ecos.length" class="stash-drop-ecos">
+                                <span class="stash-eco-tag">{{ entry.ecos.join('/') }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Crafting Recipe -->
                 <div v-if="modalRecipe" class="drop-sources">
                     <h2>{{ t('app_label_crafting_recipe') }}</h2>
@@ -288,6 +304,8 @@ export default {
     modalItemDropLocations: Array,
     modalItemDropTypes: Array,
     modalItemDropHasRestrictedEcos: Boolean,
+    modalStashChanceEntries: { type: Array, default: () => [] },
+    modalStashChanceHasRestrictedEcos: Boolean,
     modalAmmoVariants: Array,
     modalAmmoStatKeys: Array,
     modalRecipe: { type: Array, default: null },

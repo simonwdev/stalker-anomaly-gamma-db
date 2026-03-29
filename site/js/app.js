@@ -359,6 +359,7 @@ export const appDefinition = {
             calibersCache: null,
             dropsCache: null,
             itemDropsCache: null,
+            stashChanceCache: null,
             recipesCache: null,
             disassembleCache: null,
             ammoWeaponsCache: null,
@@ -385,6 +386,7 @@ export const appDefinition = {
             modalHeaders: [],
             modalDrops: null,
             modalItemDrops: null,
+            modalStashChance: null,
             modalRecipeData: null,
             modalDisassemble: null,
             modalAmmoWeapons: null,
@@ -714,6 +716,19 @@ export const appDefinition = {
                 if (max > 0) best[type] = max;
             }
             return best;
+        },
+
+        modalStashChanceEntries() {
+            if (!this.modalStashChance) return [];
+            return Object.entries(this.modalStashChance).map(([type, data]) => ({ type, ...data }));
+        },
+
+        modalStashChanceHasRestrictedEcos() {
+            if (!this.modalStashChance) return false;
+            const full = [1, 2, 3];
+            return Object.values(this.modalStashChance).some(
+                ({ ecos }) => ecos.length !== 3 || !full.every((v, i) => ecos[i] === v)
+            );
         },
 
         isOutfitExchange() {
@@ -1617,6 +1632,10 @@ export const appDefinition = {
             return this.fetchJsonCached("itemDropsCache", "item-drops.json");
         },
 
+        fetchStashChance() {
+            return this.fetchJsonCached("stashChanceCache", "item-stash-chance.json");
+        },
+
         fetchRecipes() {
             return this.fetchJsonCached("recipesCache", "recipes.json");
         },
@@ -1763,6 +1782,7 @@ export const appDefinition = {
             this.calibersCache = null;
             this.dropsCache = null;
             this.itemDropsCache = null;
+            this.stashChanceCache = null;
             this.recipesCache = null;
             this.disassembleCache = null;
             this.ammoWeaponsCache = null;
@@ -2055,6 +2075,7 @@ export const appDefinition = {
             this.modalItem = null;
             this.modalDrops = null;
             this.modalItemDrops = null;
+            this.modalStashChance = null;
             this.modalRecipeData = null;
             this.modalDisassemble = null;
             this.modalAmmoWeapons = null;
@@ -2086,15 +2107,17 @@ export const appDefinition = {
                 this.modalHeaders = this.categoryHeaders[slug];
                 this.modalItem = this.categoryItems[slug].find((i) => i.id === id);
 
-                const [drops, itemDrops, recipeData, disassemble, ammoWeapons] = await Promise.all([
+                const [drops, itemDrops, stashChance, recipeData, disassemble, ammoWeapons] = await Promise.all([
                     this.fetchDrops(),
                     this.fetchItemDrops(),
+                    this.fetchStashChance(),
                     this.fetchRecipes(),
                     this.fetchDisassemble(),
                     this.fetchAmmoWeapons(),
                 ]);
                 this.modalDrops = drops[id] || null;
                 this.modalItemDrops = itemDrops[id] || null;
+                this.modalStashChance = stashChance[id] || null;
                 this.modalRecipeData = recipeData;
                 this.modalDisassemble = disassemble[id] || null;
                 this.modalAmmoWeapons = ammoWeapons[id] || null;
