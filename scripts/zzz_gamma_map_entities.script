@@ -1,0 +1,281 @@
+--[[
+    zzz_gamma_map_entities.script
+    One-time use: load any save, open debug menu, run "Export map entities".
+    Dumps fixed map entities with world-space positions.
+    Output: gamedata/map_entities.json + gamedata/map_entities_translations_<lang>.json
+    Delete this file from gamedata/scripts/ when done.
+--]]
+
+-- JSON-safe string escape
+local function esc(s)
+    if not s then return "" end
+    return tostring(s):gsub('\\', '\\\\'):gsub('"', '\\"'):gsub('\n', '\\n'):gsub('\r', '')
+end
+
+-- Stalker roles we care about (traders, mechanics, medics, barmen, quest givers)
+local npc_role_patterns = {
+    { pattern = "trader",    role = "trader"   },
+    { pattern = "trade",     role = "trader"   },
+    { pattern = "mechanic",  role = "mechanic" },
+    { pattern = "tech",      role = "mechanic" },
+    { pattern = "medic",     role = "medic"    },
+    { pattern = "barman",    role = "barman"   },
+    { pattern = "guide",     role = "guide"    },
+    { pattern = "navigator", role = "guide"    },
+    { pattern = "informator",role = "guide"    },
+    { pattern = "leader",    role = "leader"   },
+    { pattern = "general",   role = "leader"   },
+    { pattern = "colonel",   role = "leader"   },
+    { pattern = "commander", role = "leader"   },
+    { pattern = "arena",     role = "arena"    },
+}
+
+local function get_npc_role(section)
+    for _, entry in ipairs(npc_role_patterns) do
+        if string.find(section, entry.pattern) then
+            return entry.role
+        end
+    end
+    return "npc"
+end
+
+-- Sections to skip entirely (generic squads, not real named NPCs)
+local function is_generic_squad(section)
+    return string.find(section, "^sim_default_") ~= nil
+end
+
+local function classify(se)
+    local cls = se:clsid()
+
+    if cls == clsid.smart_terrain   then return "smart_terrain"  end
+    if cls == clsid.level_changer   then return "level_changer"  end
+    if cls == clsid.level_changer_s then return "level_changer"  end
+    if IsInvbox(nil, cls)           then return "stash"          end
+
+    -- Campfires (inside IsAnomaly but distinct)
+    if cls == clsid.zone_campfire   then return "campfire"       end
+
+    -- Stalkers: only keep real named NPCs (not generic squads)
+    if IsStalker(nil, cls) or IsTrader(nil, cls) then
+        local section = se:section_name()
+        if is_generic_squad(section) then return nil end
+        return "named_npc"
+    end
+
+    return nil
+end
+
+local cmd_list = {
+    { name = "Export map entities", cmd = "export_map_entities", hide_ui = 0 },
+}
+
+function debug_cmd_list.cmd.export_map_entities(_, txt, x)
+    x:SendOutput("[START] export map entities")
+
+    local sim = alife()
+    local gg  = game_graph()
+    if not (sim and gg) then
+        x:SendOutput("! Load a save first — alife/game_graph not available")
+        return
+    end
+
+    ------------------------------------------------
+    -- 1. Level bounds from game-graph vertices
+    ------------------------------------------------
+    local level_bounds = {}
+    for gvid = 0, 65534 do
+        if not gg:valid_vertex_id(gvid) then
+            break
+        end
+        local v   = gg:vertex(gvid)
+        local lvl = sim:level_name(v:level_id())
+        local pos = v:level_point()
+        local b   = level_bounds[lvl]
+        if not b then
+            level_bounds[lvl] = {
+                minX = pos.x, maxX = pos.x,
+                minZ = pos.z, maxZ = pos.z,
+            }
+        else
+            if pos.x < b.minX then b.minX = pos.x end
+            if pos.x > b.maxX then b.maxX = pos.x end
+            if pos.z < b.minZ then b.minZ = pos.z end
+            if pos.z > b.maxZ then b.maxZ = pos.z end
+        end
+    end
+
+    ------------------------------------------------
+    -- 2. Iterate all alife objects
+    ------------------------------------------------
+    local items = {}
+    local counts = {}
+    local skipped = 0
+    for i = 1, 65534 do
+        local se = sim:object(i)
+        if se then
+            local obj_type = classify(se)
+            if obj_type then
+                local pos  = se.position
+                local gvid = se.m_game_vertex_id
+
+                -- For named NPCs, use their smart terrain position instead of
+                -- their current position. NPCs are anchored to smart terrains
+                -- but may have moved (e.g. recruited as companion).
+                if obj_type == "named_npc" then
+                    local st_id = se.m_smart_terrain_id
+                    if st_id and st_id ~= 65535 then
+                        local st = sim:object(st_id)
+                        if st then
+                            pos  = st.position
+                            gvid = st.m_game_vertex_id
+                        end
+                    end
+                end
+
+                local ok, lvl = pcall(function()
+                    return sim:level_name(gg:vertex(gvid):level_id())
+                end)
+                if not ok then lvl = "unknown" end
+
+                local obj_name = se:name()
+                local section = se:section_name()
+
+                -- Build translation key
+                local lookup_name = obj_name
+                if string.find(obj_name, "level_prefix") then
+                    lookup_name = string.gsub(obj_name, "level_prefix", lvl, 1)
+                end
+                local tr_key = "st_" .. lookup_name .. "_name"
+                local translated = game.translate_string(tr_key)
+                local label_key = (translated ~= tr_key) and tr_key or ""
+
+                -- For named NPCs, resolve character_name and role
+                local char_name = ""
+                local role = ""
+                if obj_type == "named_npc" then
+                    role = get_npc_role(section)
+                    -- Try to get the character display name via multiple methods
+                    local ok_cn, char_key = pcall(function()
+                        -- Try section directly
+                        local ck = ini_sys:r_string_ex(section, "character_name")
+                        if ck and ck ~= "" then return ck end
+                        -- Try via se_obj character_name method if available
+                        if se.character_name then
+                            local cn = se:character_name()
+                            if cn and cn ~= "" and cn ~= section then return cn end
+                        end
+                        return ""
+                    end)
+                    if not ok_cn then char_key = "" end
+                    if char_key and char_key ~= "" then
+                        local char_translated = game.translate_string(char_key)
+                        if char_translated ~= char_key then
+                            char_name = char_translated
+                            label_key = char_key
+                        else
+                            -- char_key might already be the display name
+                            char_name = char_key
+                        end
+                    end
+                end
+
+                local extra = ""
+                if obj_type == "named_npc" then
+                    local faction = ""
+                    local ok_f, fac = pcall(function() return se:community() end)
+                    if ok_f and fac and fac ~= "" then faction = fac end
+                    extra = string.format(',"role":"%s","char_name":"%s","faction":"%s"', esc(role), esc(char_name), esc(faction))
+                end
+
+                items[#items + 1] = string.format(
+                    '    {"id":%d,"name":"%s","label_key":"%s","section":"%s","type":"%s","level":"%s","x":%.3f,"y":%.3f,"z":%.3f%s}',
+                    se.id,
+                    esc(obj_name),
+                    esc(label_key),
+                    esc(section),
+                    obj_type,
+                    esc(lvl),
+                    pos.x, pos.y, pos.z,
+                    extra
+                )
+
+                counts[obj_type] = (counts[obj_type] or 0) + 1
+            end
+        end
+    end
+
+    ------------------------------------------------
+    -- 3. Build JSON
+    ------------------------------------------------
+    local bounds_parts = {}
+    for lvl, b in pairs(level_bounds) do
+        bounds_parts[#bounds_parts + 1] = string.format(
+            '    "%s": {"minX":%.3f,"maxX":%.3f,"minZ":%.3f,"maxZ":%.3f}',
+            esc(lvl), b.minX, b.maxX, b.minZ, b.maxZ
+        )
+    end
+
+    local count_parts = {}
+    for k, v in pairs(counts) do
+        count_parts[#count_parts + 1] = string.format('    "%s": %d', k, v)
+    end
+
+    local json = '{\n'
+        .. '"_info": "Generated by zzz_gamma_map_entities.script via debug menu",\n'
+        .. '"counts": {\n' .. table.concat(count_parts, ',\n') .. '\n},\n'
+        .. '"level_bounds": {\n' .. table.concat(bounds_parts, ',\n') .. '\n},\n'
+        .. '"entities": [\n' .. table.concat(items, ',\n') .. '\n]\n'
+        .. '}\n'
+
+    ------------------------------------------------
+    -- 4. Write file
+    ------------------------------------------------
+    local path = "gamedata\\map_entities.json"
+    local f = io.open(path, "wb")
+    if not f then
+        x:SendOutput("! Failed to open %s for writing", path)
+        return
+    end
+    f:write(json)
+    f:close()
+
+    ------------------------------------------------
+    -- 5. Collect and write translations for label_keys
+    ------------------------------------------------
+    local tr_keys = {}
+    for _, item_json in ipairs(items) do
+        local key = item_json:match('"label_key":"([^"]+)"')
+        if key and key ~= "" then
+            tr_keys[key] = true
+        end
+    end
+
+    local tr_parts = {}
+    for key, _ in pairs(tr_keys) do
+        local val = game.translate_string(key)
+        if val ~= key then
+            tr_parts[#tr_parts + 1] = string.format('    "%s": "%s"', esc(key), esc(val))
+        end
+    end
+
+    local lang = ini_sys:r_string_ex("string_table", "language")
+    local locale = (lang == "rus" and "ru") or (lang == "eng" and "en") or lang
+
+    local tr_json = '{\n' .. table.concat(tr_parts, ',\n') .. '\n}\n'
+    local tr_path = "gamedata\\map_entities_translations_" .. locale .. ".json"
+    local tf = io.open(tr_path, "wb")
+    if tf then
+        tf:write(tr_json)
+        tf:close()
+        x:SendOutput("  translations (%s): %s keys - see %s", locale, tostring(#tr_parts), tr_path)
+    end
+
+    for k, v in pairs(counts) do
+        x:SendOutput("  %s: %s", k, tostring(v))
+    end
+    x:SendOutput("[END] export map entities - %s total - see gamedata\\map_entities.json", tostring(#items))
+end
+
+for i, cmd in ipairs(cmd_list) do
+    ui_debug_launcher.inject("action", cmd)
+end

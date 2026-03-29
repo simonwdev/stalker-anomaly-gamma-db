@@ -238,6 +238,200 @@ function dumpScoc(filePath) {
                 }
             }
         }
+
+        // =============================================
+        // PROGRESSION DATA
+        // =============================================
+        console.log();
+        console.log(`  ============================`);
+        console.log(`    PROGRESSION`);
+        console.log(`  ============================`);
+
+        // Faction
+        const faction = rootTable["default_faction"];
+        if (faction) console.log(`\n  Faction: ${faction}`);
+
+        // Actor statistics summary
+        if (stats?.actor_statistics && typeof stats.actor_statistics === "object") {
+            console.log();
+            console.log(`  Actor Statistics:`);
+            for (const [k, v] of Object.entries(stats.actor_statistics)) {
+                console.log(`    ${k}: ${v}`);
+            }
+        }
+
+        // Visited levels
+        if (stats?.actor_visited_levels && typeof stats.actor_visited_levels === "object") {
+            const levels = Object.entries(stats.actor_visited_levels);
+            const visited = levels.filter(([, v]) => v === true || v === 1);
+            const unvisited = levels.filter(([, v]) => !v && v !== true);
+            console.log();
+            console.log(`  Visited Levels (${visited.length}/${levels.length}):`);
+            for (const [name] of visited.sort()) console.log(`    ✓ ${name}`);
+            if (unvisited.length <= 20) {
+                console.log(`  Unvisited:`);
+                for (const [name] of unvisited.sort()) console.log(`    · ${name}`);
+            }
+        }
+
+        // Visited smart terrains
+        if (stats?.actor_visited_smarts && typeof stats.actor_visited_smarts === "object") {
+            const smarts = Object.entries(stats.actor_visited_smarts);
+            const visited = smarts.filter(([, v]) => v === true || v === 1);
+            console.log();
+            console.log(`  Visited Smart Terrains (${visited.length}/${smarts.length}):`);
+            // Group by level prefix
+            const byLevel = {};
+            for (const [name] of visited) {
+                const prefix = name.match(/^([a-z]+\d*[a-z]*_)/)?.[1] || "other_";
+                if (!byLevel[prefix]) byLevel[prefix] = [];
+                byLevel[prefix].push(name);
+            }
+            for (const [prefix, names] of Object.entries(byLevel).sort()) {
+                console.log(`    ${prefix}: ${names.length} (${names.sort().join(", ")})`);
+            }
+        }
+
+        // Achievements
+        if (stats?.actor_achievements && typeof stats.actor_achievements === "object") {
+            const achievements = Object.entries(stats.actor_achievements);
+            const unlocked = achievements.filter(([, v]) => v === true || v === 1);
+            console.log();
+            console.log(`  Achievements (${unlocked.length}/${achievements.length}):`);
+            for (const [name] of unlocked.sort()) console.log(`    ★ ${name}`);
+        }
+
+        // Task/quest completion
+        const taskInfo = rootTable["task_info"];
+        if (taskInfo && typeof taskInfo === "object") {
+            const tasks = Object.keys(taskInfo);
+            console.log();
+            console.log(`  Completed Tasks (${tasks.length}):`);
+            for (const name of tasks.sort()) console.log(`    ✓ ${name}`);
+        }
+
+        // Treasure/stash discovery
+        const treasure = rootTable["treasure_manager"];
+        if (treasure && typeof treasure === "object") {
+            const total = treasure.caches_count || 0;
+            const caches = treasure.caches && typeof treasure.caches === "object" ? Object.entries(treasure.caches) : [];
+            const found = caches.filter(([, v]) => v === true || v === 1);
+            console.log();
+            console.log(`  Stash Discovery: ${found.length}/${total} found (${total ? ((found.length / total) * 100).toFixed(1) : 0}%)`);
+            if (found.length > 0 && found.length <= 50) {
+                for (const [id] of found) console.log(`    found: stash ${id}`);
+            }
+        }
+
+        // Fast travel discovery
+        const fastTravel = rootTable["fast_travel_system"];
+        if (fastTravel && typeof fastTravel === "object") {
+            const found = fastTravel.locations_found || 0;
+            const zones = fastTravel.spawned_zones && typeof fastTravel.spawned_zones === "object" ? Object.keys(fastTravel.spawned_zones) : [];
+            console.log();
+            console.log(`  Fast Travel: ${found}/${zones.length} locations discovered`);
+            if (fastTravel.spawned_zones) {
+                for (const [id, zone] of Object.entries(fastTravel.spawned_zones)) {
+                    const name = typeof zone === "object" ? (zone.name || zone.location || id) : id;
+                    console.log(`    ${name}`);
+                }
+            }
+        }
+
+        // Visited campfires
+        const campfires = rootTable["visited_campfires"];
+        if (campfires && typeof campfires === "object") {
+            const ids = Object.keys(campfires);
+            console.log();
+            console.log(`  Visited Campfires: ${ids.length} (IDs: ${ids.join(", ")})`);
+        }
+
+        // Skills
+        const skills = rootTable["skills_levels"];
+        if (skills && typeof skills === "object") {
+            console.log();
+            console.log(`  Skills:`);
+            for (const [name, data] of Object.entries(skills)) {
+                if (typeof data === "object") {
+                    const lvl = data.current_level ?? data.level ?? "?";
+                    const maxLvl = data.max_level ?? "?";
+                    const xp = data.experience ?? 0;
+                    const req = data.requirement ?? "?";
+                    console.log(`    ${name}: level ${lvl}/${maxLvl} (xp: ${xp}/${req})`);
+                } else {
+                    console.log(`    ${name}: ${data}`);
+                }
+            }
+        }
+
+        // Known recipes
+        const recipes = rootTable["known_recipe"];
+        if (recipes && typeof recipes === "object") {
+            const names = Object.keys(recipes);
+            console.log();
+            console.log(`  Known Recipes (${names.length}): ${names.sort().join(", ")}`);
+        }
+
+        // Encyclopedia articles
+        const articles = rootTable["drx_da_opened_articles"];
+        if (articles && typeof articles === "object") {
+            let count = 0;
+            const flatArticles = [];
+            for (const [cat, entries] of Object.entries(articles)) {
+                if (typeof entries === "object") {
+                    const names = Object.keys(entries);
+                    count += names.length;
+                    flatArticles.push(`${cat}: ${names.length}`);
+                }
+            }
+            console.log();
+            console.log(`  Encyclopedia Articles (${count}): ${flatArticles.join(", ")}`);
+        }
+
+        // Looted bodies/containers
+        const looted = rootTable["looted"];
+        if (looted && typeof looted === "object") {
+            console.log();
+            console.log(`  Looted Containers: ${Object.keys(looted).length}`);
+        }
+
+        // Stealth kills
+        const stealthKills = rootTable["stealth_kills"];
+        if (stealthKills && typeof stealthKills === "object") {
+            const victims = stealthKills.victims && typeof stealthKills.victims === "object" ? Object.keys(stealthKills.victims) : [];
+            console.log();
+            console.log(`  Stealth Kills: ${victims.length}`);
+        }
+
+        // MilPDA tracked bodies (kill journal)
+        const milpda = rootTable["milpda"];
+        if (milpda && typeof milpda === "object") {
+            const bodies = milpda.tracked_bodies && typeof milpda.tracked_bodies === "object" ? Object.entries(milpda.tracked_bodies) : [];
+            const factions = milpda.faction_data && typeof milpda.faction_data === "object" ? Object.entries(milpda.faction_data) : [];
+            console.log();
+            console.log(`  MilPDA:`);
+            console.log(`    Tracked kills: ${bodies.length}`);
+            if (bodies.length > 0) {
+                for (const [id, body] of bodies.slice(0, 10)) {
+                    if (typeof body === "object") {
+                        const level = body.level_name || body.level || "?";
+                        const community = body.community || "?";
+                        console.log(`      ${community} @ ${level}`);
+                    }
+                }
+                if (bodies.length > 10) console.log(`      ... and ${bodies.length - 10} more`);
+            }
+            if (factions.length > 0) {
+                console.log(`    Faction standings (${factions.length}):`);
+                for (const [name, data] of factions) {
+                    if (typeof data === "object") {
+                        const blacklisted = data.blacklisted ? " [BLACKLISTED]" : "";
+                        const progress = data.progress ?? "";
+                        console.log(`      ${name}: progress=${progress}${blacklisted}`);
+                    }
+                }
+            }
+        }
     }
     console.log();
 }

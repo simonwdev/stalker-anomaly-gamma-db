@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" version="1.0" state="normal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<svg id="level-changer" viewBox="0 0 128 128">
+			<path d="M 64 10 L 121,55 121,112 110,119 18,119 7,112 7,55 Z" stroke="#08fef8" stroke-width="7" fill="none"/>
+			<path d="M 53 102 L 53,73 26,73 64,42 102,73 75,73 75,102 Z" fill="#08fef8"/>
+		</svg>
+	</defs>
+	
+	<use x="0" y="0" width="128" height="128" xlink:href="#level-changer" transform="rotate(180,64,64)"/>
+	
+</svg>

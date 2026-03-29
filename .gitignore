@@ -7,6 +7,11 @@ tmpclaude-*
 site/public/tiles/
 High_Resolution_PDA_Maps/
 
+# Map source images (DDS/PNG, not part of repo — see map_images/README.md)
+map_images/*.dds
+map_images/*.png
+.upscale-temp/
+
 # Logs
 logs
 *.log

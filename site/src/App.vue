@@ -92,7 +92,7 @@
     <div class="sidebar-backdrop" v-show="sidebarOpen" @click="closeSidebar()"></div>
 
     <main class="content" :class="{ 'content-maps': mapsActive }">
-        <MapsView v-if="mapsActive" />
+        <MapsView v-if="mapsActive" :pack-id="activePack?.id" />
         <div v-show="showContentSpinner && !mapsActive" class="loading-screen">
             <div class="loading-spinner"></div>
             <p class="loading-text">{{ t('app_label_loading') }}</p>

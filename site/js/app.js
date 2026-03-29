@@ -204,15 +204,18 @@ const FACTION_ICONS = {
     "bandit": "faction_bandits.png",
     "csky": "faction_clearsky.png",
     "dolg": "faction_duty.png",
+    "duty": "faction_duty.png",
     "ecolog": "faction_ecologists.png",
     "stalker": "faction_loners.png",
     "freedom": "faction_freedom.png",
     "killer": "faction_mercenary.png",
+    "merc": "faction_mercenary.png",
     "army": "faction_military.png",
     "monolith": "faction_monolith.png",
     "renegade": "faction_renegades.png",
     "greh": "faction_sin.png",
     "isg": "faction_inisig.png",
+    "zombied": "faction_zombie.svg",
 };
 
 const FACTION_COLORS = {

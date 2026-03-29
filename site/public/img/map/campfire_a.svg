@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glow -->
+  <circle cx="64" cy="75" r="40" fill="#E8751A" opacity="0.15"/>
+  <!-- Outer flame -->
+  <path d="M 64 18 Q 42 50, 38 72 Q 35 92, 50 104 Q 58 110, 64 110 Q 70 110, 78 104 Q 93 92, 90 72 Q 86 50, 64 18 Z" fill="#D84315"/>
+  <!-- Mid flame -->
+  <path d="M 64 32 Q 48 55, 46 74 Q 44 90, 54 100 Q 59 104, 64 104 Q 69 104, 74 100 Q 84 90, 82 74 Q 80 55, 64 32 Z" fill="#F57C00"/>
+  <!-- Inner flame -->
+  <path d="M 64 48 Q 54 63, 53 76 Q 52 88, 58 94 Q 61 97, 64 97 Q 67 97, 70 94 Q 76 88, 75 76 Q 74 63, 64 48 Z" fill="#FFB300"/>
+  <!-- Core -->
+  <path d="M 64 62 Q 59 72, 59 80 Q 59 87, 62 90 Q 63 91, 64 91 Q 65 91, 66 90 Q 69 87, 69 80 Q 69 72, 64 62 Z" fill="#FFF176"/>
+  <!-- Sparks -->
+  <circle cx="50" cy="35" r="2" fill="#FFB300" opacity="0.7"/>
+  <circle cx="78" cy="30" r="1.5" fill="#FFA000" opacity="0.6"/>
+  <circle cx="44" cy="45" r="1.5" fill="#FFB300" opacity="0.5"/>
+</svg>

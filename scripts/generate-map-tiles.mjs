@@ -10,7 +10,7 @@
  * Output: site/public/tiles/{z}/{x}/{y}.{jpg|png}
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, rmSync } from "fs";
 import { join } from "path";
 import { createRequire } from "module";
 import sharp from "sharp";
@@ -20,8 +20,8 @@ const parseDDS = require("parse-dds");
 const decodeDXT = require("decode-dxt");
 
 const ROOT = join(import.meta.dirname, "..");
-const GLOBAL_DDS = join(ROOT, "High_Resolution_PDA_Maps", "ui", "ui_global_map.dds");
-const LEVEL_DDS_DIR = join(ROOT, "High_Resolution_PDA_Maps", "map");
+const GLOBAL_DDS = join(ROOT, "map_images", "ui_global_map.dds");
+const LEVEL_DDS_DIR = join(ROOT, "map_images");
 const LEVELS_JSON = join(ROOT, "site", "public", "data", "map-levels.json");
 const OUT_DIR = join(ROOT, "site", "public", "tiles");
 
@@ -31,14 +31,21 @@ function parseArg(name, fallback) {
 }
 
 const TILE_SIZE = Number(parseArg("tile-size", 256));
-const BASE_MAX_ZOOM = 5; // global map zoom levels 0-5
-const LEVEL_MAX_ZOOM = 8; // per-level detail up to zoom 8 where textures support it
+const MIN_ZOOM = 2; // skip Z0-1 (too zoomed out to be useful)
+const GLOBAL_MAX_ZOOM = 4; // global map tiles Z2-4 (sharp background at all zooms)
+const BASE_MAX_ZOOM = 3; // detail tiles start at Z4 (BASE_MAX_ZOOM + 1)
+const LEVEL_MAX_ZOOM = 8; // per-level detail up to zoom 8
 const FORMAT = parseArg("format", "jpg");
-const JPG_QUALITY = Number(parseArg("quality", 85));
+const JPG_QUALITY = Number(parseArg("quality", 95));
 
-// --- DDS decode helper ---
-function decodeDDSFile(path) {
-  console.log(`  Decoding: ${path.split(/[/\\]/).pop()}`);
+// --- Image decode helper (DDS or PNG) ---
+async function decodeImageFile(path) {
+  const name = path.split(/[/\\]/).pop();
+  console.log(`  Decoding: ${name}`);
+  if (path.endsWith(".png")) {
+    const { data, info } = await sharp(path).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    return { width: info.width, height: info.height, data };
+  }
   const buf = readFileSync(path);
   const ab = buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
   const info = parseDDS(ab);
@@ -53,16 +60,32 @@ function decodeDDSFile(path) {
   };
 }
 
+// --- Concurrency pool for parallel tile writes ---
+const CONCURRENCY = 16;
+async function runPool(tasks) {
+  const results = [];
+  let i = 0;
+  async function next() {
+    while (i < tasks.length) {
+      const idx = i++;
+      results[idx] = await tasks[idx]();
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, tasks.length) }, () => next()));
+  return results;
+}
+
 // --- Tile output helper ---
-async function writeTile(pipeline, z, x, y) {
+async function writeTile(pipeline, z, x, y, fmt) {
+  fmt = fmt || FORMAT;
   const dir = join(OUT_DIR, String(z), String(x));
   if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
-  if (FORMAT === "jpg") {
+  if (fmt === "jpg") {
     pipeline = pipeline.jpeg({ quality: JPG_QUALITY });
   } else {
-    pipeline = pipeline.png({ compressionLevel: 9 });
+    pipeline = pipeline.png({ compressionLevel: 6 });
   }
-  await pipeline.toFile(join(dir, `${y}.${FORMAT}`));
+  await pipeline.toFile(join(dir, `${y}.${fmt}`));
 }
 
 // --- Level ID to DDS filename mapping ---
@@ -71,26 +94,26 @@ const LEVEL_TEXTURE_MAP = {
   l03_agroprom: "map_agroprom",
   l07_military: "map_l07_military",
   // l05_bar + l06_rostok merged — see MERGED_REGIONS
-  l01_escape: "map_escape",
-  l02_garbage: "map_garbage",
-  l04_darkvalley: "map_l04_darkvalley",
+  l01_escape: "map_escape_upscale",
+  l02_garbage: "map_garbage_upscale",
+  l04_darkvalley: "map_l04_darkvalley_upscale",
   l08_yantar: "map_l08_yantar",
-  l09_deadcity: "map_l09_deadcity",
-  l10_limansk: "map_limansk",
-  l10_radar: "map_l10_radar",
+  l09_deadcity: "map_l09_deadcity_upscale",
+  l10_limansk: "map_limansk_upscale",
+  l10_radar: "map_l10_radar_upscale",
   l10_red_forest: "map_red_forest",
-  l11_hospital: "map_hospital",
+  l11_hospital: "map_hospital_upscale",
   l11_pripyat: "map_l11_pripyat",
-  l12_stancia: "map_l12_stancia",
-  l12_stancia_2: "map_stancia_2",
-  l13_generators: "map_l13_generators",
+  l12_stancia: "map_aes_1_upscale",
+  l12_stancia_2: "map_aes_2_upscale",
+  l13_generators: "map_l13_generators_upscale",
   jupiter: "map_jupiter",
   k00_marsh: "map_marsh",
-  k01_darkscape: "map_k01_darkscape",
+  k01_darkscape: "map_k01_darkscape_upscale",
   k02_trucks_cemetery: "map_k02_trucks_cemetery",
   pripyat: "map_pripyat",
   zaton: "map_zaton",
-  y04_pole: "map_y04_pole",
+  y04_pole: "map_y04_pole_upscale",
 };
 
 // Manually stitched textures that cover multiple levels.
@@ -107,11 +130,11 @@ const MERGED_REGIONS = [
 // PASS 1: Global map tiles (zoom 0 to BASE_MAX_ZOOM)
 // ============================================================
 console.log("=== Pass 1: Global map tiles ===");
-const globalDDS = decodeDDSFile(GLOBAL_DDS);
+const globalDDS = await decodeImageFile(GLOBAL_DDS);
 const { width: gw, height: gh } = globalDDS;
 console.log(`  Global map: ${gw}x${gh}`);
 
-const canvasSize = TILE_SIZE * Math.pow(2, BASE_MAX_ZOOM); // 8192
+const canvasSize = TILE_SIZE * Math.pow(2, GLOBAL_MAX_ZOOM);
 const scaleX = canvasSize / gw;
 const scaleY = canvasSize / gh;
 const scale = Math.min(scaleX, scaleY);
@@ -142,9 +165,10 @@ globalDDS.data = null;
 
 let tileCount = 0;
 
-for (let z = 0; z <= BASE_MAX_ZOOM; z++) {
+for (let z = MIN_ZOOM; z <= GLOBAL_MAX_ZOOM; z++) {
   const tilesPerSide = Math.pow(2, z);
   const srcTileSize = Math.round(canvasSize / tilesPerSide);
+  const tasks = [];
 
   for (let x = 0; x < tilesPerSide; x++) {
     for (let y = 0; y < tilesPerSide; y++) {
@@ -152,21 +176,24 @@ for (let z = 0; z <= BASE_MAX_ZOOM; z++) {
       const srcY = y * srcTileSize;
       if (srcX >= scaledW || srcY >= scaledH) continue;
 
-      const pipeline = sharp(globalCanvas, {
-        raw: { width: canvasSize, height: canvasSize, channels: 4 },
-      })
-        .extract({
-          left: srcX,
-          top: srcY,
-          width: Math.min(srcTileSize, canvasSize - srcX),
-          height: Math.min(srcTileSize, canvasSize - srcY),
+      const tx = x, ty = y, tz = z;
+      tasks.push(() => {
+        const pipeline = sharp(globalCanvas, {
+          raw: { width: canvasSize, height: canvasSize, channels: 4 },
         })
-        .resize(TILE_SIZE, TILE_SIZE, { fit: "fill" });
-
-      await writeTile(pipeline, z, x, y);
-      tileCount++;
+          .extract({
+            left: srcX,
+            top: srcY,
+            width: Math.min(srcTileSize, canvasSize - srcX),
+            height: Math.min(srcTileSize, canvasSize - srcY),
+          })
+          .resize(TILE_SIZE, TILE_SIZE, { fit: "fill" });
+        return writeTile(pipeline, tz, tx, ty);
+      });
     }
   }
+  await runPool(tasks);
+  tileCount += tasks.length;
   console.log(`  Zoom ${z}: ${tilesPerSide}x${tilesPerSide} grid`);
 }
 
@@ -175,6 +202,13 @@ console.log(`  Global tiles: ${tileCount}`);
 // ============================================================
 // PASS 2: Per-level high-res tiles (zoom BASE_MAX_ZOOM+1 to LEVEL_MAX_ZOOM)
 // ============================================================
+// Purge old detail tiles to avoid stale leftovers
+// Purge detail-only zoom levels (keep global tiles at Z4)
+for (let z = GLOBAL_MAX_ZOOM + 1; z <= LEVEL_MAX_ZOOM; z++) {
+  const zDir = join(OUT_DIR, String(z));
+  if (existsSync(zDir)) rmSync(zDir, { recursive: true });
+}
+
 console.log("\n=== Pass 2: Per-level high-res tiles ===");
 
 const levelsData = JSON.parse(readFileSync(LEVELS_JSON, "utf-8"));
@@ -197,20 +231,20 @@ async function generateLevelTiles(label, ddsPath, rawRect) {
   const regionH = cy2 - cy1;
   if (regionW < 1 || regionH < 1) return 0;
 
-  const levelDDS = decodeDDSFile(ddsPath);
+  const levelDDS = await decodeImageFile(ddsPath);
   const { width: lw, height: lh } = levelDDS;
 
   const zoomFactorX = lw / regionW;
   const zoomFactorY = lh / regionH;
   const extraZoom = Math.ceil(Math.log2(Math.max(zoomFactorX, zoomFactorY)));
-  const levelMaxZoom = Math.min(BASE_MAX_ZOOM + extraZoom, LEVEL_MAX_ZOOM);
+  const levelMaxZoom = Math.min(GLOBAL_MAX_ZOOM + extraZoom, LEVEL_MAX_ZOOM);
 
   console.log(`  ${label}: ${lw}x${lh}, region ${Math.round(regionW)}x${Math.round(regionH)}px, extra zoom: +${extraZoom} (max z${levelMaxZoom})`);
 
   let tiles = 0;
 
   for (let z = BASE_MAX_ZOOM + 1; z <= levelMaxZoom; z++) {
-    const zoomFactor = Math.pow(2, z - BASE_MAX_ZOOM);
+    const zoomFactor = Math.pow(2, z - GLOBAL_MAX_ZOOM);
     const lx1 = cx1 * zoomFactor;
     const ly1 = cy1 * zoomFactor;
     const lx2 = cx2 * zoomFactor;
@@ -221,6 +255,7 @@ async function generateLevelTiles(label, ddsPath, rawRect) {
     const tyMin = Math.max(0, Math.floor(ly1 / TILE_SIZE));
     const tyMax = Math.ceil(ly2 / TILE_SIZE) - 1;
 
+    const tasks = [];
     for (let tx = txMin; tx <= txMax; tx++) {
       for (let ty = tyMin; ty <= tyMax; ty++) {
         const tilePxLeft = tx * TILE_SIZE;
@@ -228,47 +263,63 @@ async function generateLevelTiles(label, ddsPath, rawRect) {
         const tilePxRight = tilePxLeft + TILE_SIZE;
         const tilePxBottom = tilePxTop + TILE_SIZE;
 
-        const normLeft = (tilePxLeft - lx1) / (lx2 - lx1);
-        const normTop = (tilePxTop - ly1) / (ly2 - ly1);
-        const normRight = (tilePxRight - lx1) / (lx2 - lx1);
-        const normBottom = (tilePxBottom - ly1) / (ly2 - ly1);
+        // Clip tile to level bounds — edge tiles only partially overlap
+        const overlapLeft = Math.max(tilePxLeft, lx1);
+        const overlapTop = Math.max(tilePxTop, ly1);
+        const overlapRight = Math.min(tilePxRight, lx2);
+        const overlapBottom = Math.min(tilePxBottom, ly2);
+        if (overlapRight <= overlapLeft || overlapBottom <= overlapTop) continue;
 
-        const srcLeft = Math.max(0, Math.round(normLeft * lw));
-        const srcTop = Math.max(0, Math.round(normTop * lh));
-        const srcRight = Math.min(lw, Math.round(normRight * lw));
-        const srcBottom = Math.min(lh, Math.round(normBottom * lh));
+        // Destination position and size within the 256×256 tile
+        const destX = Math.round(overlapLeft - tilePxLeft);
+        const destY = Math.round(overlapTop - tilePxTop);
+        const destW = Math.round(overlapRight - overlapLeft);
+        const destH = Math.round(overlapBottom - overlapTop);
+        if (destW < 1 || destH < 1) continue;
+
+        // Source coords in DDS (norms are always 0–1 thanks to overlap clipping)
+        const normLeft = (overlapLeft - lx1) / (lx2 - lx1);
+        const normTop = (overlapTop - ly1) / (ly2 - ly1);
+        const normRight = (overlapRight - lx1) / (lx2 - lx1);
+        const normBottom = (overlapBottom - ly1) / (ly2 - ly1);
+
+        const srcLeft = Math.round(normLeft * lw);
+        const srcTop = Math.round(normTop * lh);
+        const srcRight = Math.round(normRight * lw);
+        const srcBottom = Math.round(normBottom * lh);
 
         const srcW = srcRight - srcLeft;
         const srcH = srcBottom - srcTop;
         if (srcW < 1 || srcH < 1) continue;
 
-        // Extract and resize the level region to tile size (keep RGBA for alpha)
-        const overlay = await sharp(levelDDS.data, {
-          raw: { width: lw, height: lh, channels: 4 },
-        })
-          .extract({ left: srcLeft, top: srcTop, width: srcW, height: srcH })
-          .resize(TILE_SIZE, TILE_SIZE, { fit: "fill" })
-          .png()
-          .toBuffer();
+        const _tx = tx, _ty = ty, _z = z;
+        tasks.push(async () => {
+          const overlay = await sharp(levelDDS.data, {
+            raw: { width: lw, height: lh, channels: 4 },
+          })
+            .extract({ left: srcLeft, top: srcTop, width: srcW, height: srcH })
+            .resize(destW, destH, { fit: "fill" })
+            .png()
+            .toBuffer();
 
-        const tilePath = join(OUT_DIR, String(z), String(tx), `${ty}.${FORMAT}`);
+          const tilePath = join(OUT_DIR, String(_z), String(_tx), `${_ty}.png`);
 
-        // If tile already exists, composite this level on top (alpha blend)
-        if (existsSync(tilePath)) {
-          const existing = readFileSync(tilePath);
-          const pipeline = sharp(existing)
-            .composite([{ input: overlay }]);
-          await writeTile(pipeline, z, tx, ty);
-        } else {
-          // No existing tile — write with black background
-          const pipeline = sharp({
-            create: { width: TILE_SIZE, height: TILE_SIZE, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 1 } },
-          }).composite([{ input: overlay }]);
-          await writeTile(pipeline, z, tx, ty);
-        }
-        tiles++;
+          if (existsSync(tilePath)) {
+            const existing = readFileSync(tilePath);
+            const pipeline = sharp(existing)
+              .composite([{ input: overlay, left: destX, top: destY }]);
+            await writeTile(pipeline, _z, _tx, _ty, "png");
+          } else {
+            const pipeline = sharp({
+              create: { width: TILE_SIZE, height: TILE_SIZE, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
+            }).composite([{ input: overlay, left: destX, top: destY }]);
+            await writeTile(pipeline, _z, _tx, _ty, "png");
+          }
+        });
       }
     }
+    await runPool(tasks);
+    tiles += tasks.length;
   }
 
   levelDDS.data = null;
@@ -281,9 +332,10 @@ for (const level of surfaceLevels) {
   const ddsName = LEVEL_TEXTURE_MAP[level.id];
   if (!ddsName) continue;
 
-  const ddsPath = join(LEVEL_DDS_DIR, ddsName + ".dds");
+  const pngPath = join(LEVEL_DDS_DIR, ddsName + ".png");
+  const ddsPath = existsSync(pngPath) ? pngPath : join(LEVEL_DDS_DIR, ddsName + ".dds");
   if (!existsSync(ddsPath)) {
-    console.log(`  Skipping ${level.id}: ${ddsName}.dds not found`);
+    console.log(`  Skipping ${level.id}: ${ddsName} not found`);
     continue;
   }
 
@@ -296,9 +348,10 @@ for (const level of surfaceLevels) {
 
 // Process merged regions
 for (const merged of MERGED_REGIONS) {
-  const ddsPath = join(LEVEL_DDS_DIR, merged.dds + ".dds");
+  const mergedPng = join(LEVEL_DDS_DIR, merged.dds + ".png");
+  const ddsPath = existsSync(mergedPng) ? mergedPng : join(LEVEL_DDS_DIR, merged.dds + ".dds");
   if (!existsSync(ddsPath)) {
-    console.log(`  Skipping merged ${merged.name}: ${merged.dds}.dds not found`);
+    console.log(`  Skipping merged ${merged.name}: ${merged.dds} not found`);
     continue;
   }
 
@@ -318,14 +371,17 @@ console.log(`  Total tiles: ${tileCount}`);
 // ============================================================
 const metadata = {
   tileSize: TILE_SIZE,
+  minZoom: MIN_ZOOM,
   maxZoom: LEVEL_MAX_ZOOM,
   format: FORMAT,
+  detailFormat: "png",
   imageWidth: gw,
   imageHeight: gh,
   scaledWidth: scaledW,
   scaledHeight: scaledH,
   canvasSize,
   baseMaxZoom: BASE_MAX_ZOOM,
+  globalMaxZoom: GLOBAL_MAX_ZOOM,
 };
 const metaPath = join(OUT_DIR, "metadata.json");
 writeFileSync(metaPath, JSON.stringify(metadata, null, 2));

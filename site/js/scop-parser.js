@@ -20,13 +20,14 @@ const ScopParser = (() => {
     const STASH_SECTIONS = new Set(["workshop_stash"]);
 
     /**
-     * Parse a .scop file and extract actor inventory and stash items.
+     * Parse a .scop file and extract actor inventory, stash items, and actor position.
      *
      * @param {ArrayBuffer} buffer   Raw .scop file contents.
      * @param {Set<string>} knownIds Set of known item section names from index.json.
      * @returns {{ items: Array<{sectionName: string, id: number}>,
      *             stashItems: Array<{sectionName: string, id: number}>,
-     *             objectCount: number }}
+     *             objectCount: number,
+     *             actorPosition: {x: number, y: number, z: number, graphId: number, levelId: string} | null }}
      */
     function parse(buffer, knownIds) {
         if (buffer.byteLength > MAX_FILE_SIZE) {
@@ -100,9 +101,12 @@ const ScopParser = (() => {
         const objectCount = readU32(data, 0);
         let pos = 4;
 
-        // First pass: parse all objects to find stash container IDs
+        // First pass: parse all objects
         const allSpawns = [];
         const stashIds = new Set();
+        let actorSpawn = null;
+        // graphId → level mapping built from named objects (smart terrains, level changers)
+        const graphToLevel = new Map();
 
         for (let i = 0; i < objectCount && pos < data.length; i++) {
             const spawnSize = readU16(data, pos); pos += 2;
@@ -116,6 +120,75 @@ const ScopParser = (() => {
                 allSpawns.push(spawn);
                 if (STASH_SECTIONS.has(spawn.sectionName)) {
                     stashIds.add(spawn.id);
+                }
+                if (spawn.id === ACTOR_ID) {
+                    actorSpawn = spawn;
+                }
+                // Build graphId→level from objects with recognizable level-prefixed names
+                if (spawn.graphId >= 0 && spawn.nameReplace) {
+                    const level = nameToLevel(spawn.nameReplace);
+                    if (level) graphToLevel.set(spawn.graphId, level);
+                }
+            }
+        }
+
+        // Resolve a graphId to a level using collected mappings
+        function resolveLevel(graphId) {
+            if (graphId < 0) return null;
+            const direct = graphToLevel.get(graphId);
+            if (direct) return direct;
+            let bestDist = Infinity, bestLevel = null;
+            for (const [gid, lvl] of graphToLevel) {
+                const d = Math.abs(gid - graphId);
+                if (d < bestDist) { bestDist = d; bestLevel = lvl; }
+            }
+            return bestLevel;
+        }
+
+        // Actor position
+        let actorPosition = null;
+        if (actorSpawn && actorSpawn.graphId >= 0) {
+            const levelId = resolveLevel(actorSpawn.graphId);
+            if (levelId) {
+                actorPosition = {
+                    x: actorSpawn.posX, y: actorSpawn.posY, z: actorSpawn.posZ,
+                    graphId: actorSpawn.graphId, levelId,
+                    name: actorSpawn.nameReplace || '',
+                };
+            }
+        }
+
+        // Equipped weapons (slot 2 = primary, slot 3 = secondary)
+        if (actorPosition) {
+            for (const spawn of allSpawns) {
+                if (spawn.parentId === ACTOR_ID && spawn.id !== ACTOR_ID) {
+                    if (spawn.equipSlot === 2) actorPosition.primaryWeapon = spawn.sectionName;
+                    if (spawn.equipSlot === 3) actorPosition.secondaryWeapon = spawn.sectionName;
+                }
+            }
+        }
+
+        // Player stash position(s)
+        const stashPositions = [];
+        for (const spawn of allSpawns) {
+            if (STASH_SECTIONS.has(spawn.sectionName) && spawn.graphId >= 0) {
+                const levelId = resolveLevel(spawn.graphId);
+                if (levelId) {
+                    stashPositions.push({ x: spawn.posX, z: spawn.posZ, levelId });
+                }
+            }
+        }
+
+        // Anomaly positions (zone_* sections, excluding campfires)
+        const anomalies = [];
+        for (const spawn of allSpawns) {
+            if (spawn.sectionName.startsWith('zone_') &&
+                !spawn.sectionName.startsWith('zone_campfire') &&
+                spawn.parentId === NO_PARENT &&
+                spawn.graphId >= 0) {
+                const levelId = resolveLevel(spawn.graphId);
+                if (levelId) {
+                    anomalies.push({ section: spawn.sectionName, x: spawn.posX, z: spawn.posZ, levelId });
                 }
             }
         }
@@ -154,8 +227,21 @@ const ScopParser = (() => {
             }
         }
 
-        return { items, stashItems, objectCount };
+        return { items, stashItems, objectCount, actorPosition, stashPositions, anomalies };
     }
+
+    // Level prefix → level ID mapping for resolving object names to levels
+    const LEVEL_PREFIX_MAP = {
+        esc: 'l01_escape', gar: 'l02_garbage', agr: 'l03_agroprom',
+        val: 'l04_darkvalley', bar: 'l05_bar', ros: 'l06_rostok',
+        mil: 'l07_military', yan: 'l08_yantar', dead: 'l09_deadcity',
+        lim: 'l10_limansk', rad: 'l10_radar', red: 'l10_red_forest',
+        hos: 'l11_hospital', pri: 'l11_pripyat',
+        cnpp: 'l12_stancia', gen: 'l13_generators',
+        jup: 'jupiter', zat: 'zaton', mar: 'k00_marsh',
+        dark: 'k01_darkscape', trc: 'k02_trucks_cemetery',
+        pol: 'y04_pole', cop: 'pripyat',
+    };
 
     /**
      * Parse the essential fields from a spawn packet.
@@ -175,16 +261,24 @@ const ScopParser = (() => {
             const sectionName = readStringZ(data, p, secEnd);
             p = secEnd + 1;
 
-            // stringZ name_replace (skip)
+            // stringZ name_replace
             const nameEnd = findNull(data, p, end);
             if (nameEnd < 0) return null;
+            const nameReplace = readStringZ(data, p, nameEnd);
             p = nameEnd + 1;
 
             // u8 legacy_gameid + u8 s_RP
             p += 2;
 
-            // vec3 o_Position (12 bytes) + vec3 o_Angle (12 bytes)
-            p += 24;
+            // vec3 o_Position (3x float32 LE)
+            if (p + 12 > end) return null;
+            const posX = readF32(data, p);
+            const posY = readF32(data, p + 4);
+            const posZ = readF32(data, p + 8);
+            p += 12;
+
+            // vec3 o_Angle (12 bytes, skip)
+            p += 12;
 
             // u16 RespawnTime
             p += 2;
@@ -195,9 +289,8 @@ const ScopParser = (() => {
             // u16 ID_Parent
             const parentId = readU16(data, p); p += 2;
 
-            const result = { sectionName, id, parentId, ammoTypeIndex: -1, equipSlot: -1 };
+            const result = { sectionName, nameReplace, id, parentId, posX, posY, posZ, graphId: -1, ammoTypeIndex: -1, equipSlot: -1 };
 
-            // Try to extract weapon ammo_type from STATE_Write data
             // Skip: ID_Phantom(2) + s_flags(2) + SPAWN_VERSION(2) + m_gameType(2) + script_server_object_version(2)
             p += 10;
             // client_data_size + client_data
@@ -213,7 +306,6 @@ const ScopParser = (() => {
                 if (slot > 0 && state === 1) {
                     result.equipSlot = slot;
                 }
-                // state 3 or slot 0 → item is in the ruck (equipSlot stays -1)
             }
             p += cdSize;
             // m_tSpawnID
@@ -221,9 +313,13 @@ const ScopParser = (() => {
             // state_size + STATE_Write data
             if (p + 2 > end) return result;
             const stateSize = readU16(data, p); p += 2;
-            if (stateSize < 40) return result;
-            // stateEnd may slightly exceed spawn end due to format quirks; use stateSize as limit
+            if (stateSize < 2) return result;
             const stateEnd = p + stateSize;
+
+            // CSE_ALifeObject: first field is m_tGraphID (u16)
+            result.graphId = readU16(data, p);
+
+            if (stateSize < 40) return result;
 
             // Parse STATE to reach weapon ammo_type:
             // CSE_ALifeObject: graphID(2) + dist(4) + directCtrl(4) + nodeID(4) + flags(4) + ini_stringZ + story_id(4) + spawn_story_id(4)
@@ -259,6 +355,16 @@ const ScopParser = (() => {
         }
     }
 
+    /**
+     * Resolve an object name to a level ID using known level prefixes.
+     */
+    function nameToLevel(name) {
+        if (!name) return null;
+        const idx = name.indexOf("_");
+        if (idx <= 0) return null;
+        return LEVEL_PREFIX_MAP[name.substring(0, idx)] || null;
+    }
+
     // --- Binary helpers ---
 
     function readU16(data, offset) {
@@ -267,6 +373,17 @@ const ScopParser = (() => {
 
     function readU32(data, offset) {
         return (data[offset] | (data[offset + 1] << 8) | (data[offset + 2] << 16) | (data[offset + 3] << 24)) >>> 0;
+    }
+
+    const _f32buf = new ArrayBuffer(4);
+    const _f32u8 = new Uint8Array(_f32buf);
+    const _f32view = new DataView(_f32buf);
+    function readF32(data, offset) {
+        _f32u8[0] = data[offset];
+        _f32u8[1] = data[offset + 1];
+        _f32u8[2] = data[offset + 2];
+        _f32u8[3] = data[offset + 3];
+        return _f32view.getFloat32(0, true);
     }
 
     function findNull(data, start, end) {

@@ -21,6 +21,44 @@ const OUT_PATH = join(ROOT, "site", "public", "data", "map-levels.json");
 const GLOBAL_W = 1024;
 const GLOBAL_H = 2634;
 
+// World-space level bounds from level.ltx bound_rect (minX, minZ, maxX, maxZ)
+// Used client-side for save-game coordinate transforms (world coords → map pixels)
+const WORLD_BOUNDS = {
+  jupiter:              { minX: -600, maxX: 600, minZ: -600, maxZ: 600 },
+  jupiter_underground:  { minX: -390.808, maxX: 349.192, minZ: -265.132, maxZ: 474.868 },
+  k00_marsh:            { minX: -445, maxX: 755, minZ: -445, maxZ: 755 },
+  k01_darkscape:        { minX: -702, maxX: 708.5, minZ: -704.09, maxZ: 716.778 },
+  k02_trucks_cemetery:  { minX: -543.948, maxX: 387.099, minZ: -472.689, maxZ: 467.012 },
+  l01_escape:           { minX: -335, maxX: 415, minZ: -630, maxZ: 870 },
+  l02_garbage:          { minX: -370, maxX: 370, minZ: -422, maxZ: 327.867 },
+  l03_agroprom:         { minX: -275, maxX: 335, minZ: -370, maxZ: 240 },
+  l03u_agr_underground: { minX: -21.868, maxX: 161.91, minZ: -208.824, maxZ: 195.815 },
+  l04_darkvalley:       { minX: -215, maxX: 235, minZ: -665, maxZ: 235 },
+  l04u_labx18:          { minX: -52.316, maxX: 49.368, minZ: -39.219, maxZ: 82.368 },
+  l05_bar:              { minX: 0, maxX: 512, minZ: -512.03, maxZ: 512.001 },
+  l06_rostok:           { minX: -512, maxX: 0, minZ: -512.03, maxZ: 512.001 },
+  l07_military:         { minX: -420, maxX: 180, minZ: -105, maxZ: 495 },
+  l08_yantar:           { minX: -270, maxX: 270, minZ: -405, maxZ: 135 },
+  l08u_brainlab:        { minX: -149.45, maxX: 157.072, minZ: -45.408, maxZ: 25.718 },
+  l09_deadcity:         { minX: -481.497, maxX: 379.976, minZ: -412.284, maxZ: 474.479 },
+  l10_limansk:          { minX: -210, maxX: 210, minZ: -415, maxZ: 425 },
+  l10_radar:            { minX: -320.405, maxX: 890.625, minZ: -658.741, maxZ: 557.681 },
+  l10_red_forest:       { minX: -285, maxX: 375, minZ: -485, maxZ: 175 },
+  l10u_bunker:          { minX: -75.655, maxX: 30.716, minZ: -112.497, maxZ: 85.01 },
+  l11_hospital:         { minX: -180, maxX: 10, minZ: 537, maxZ: 917 },
+  l11_pripyat:          { minX: -628.133, maxX: 671.867, minZ: -520.743, maxZ: 779.257 },
+  l12_stancia:          { minX: -600.105, maxX: 1729.65, minZ: -747.782, maxZ: 850.523 },
+  l12_stancia_2:        { minX: -603.302, maxX: 1729.65, minZ: -930.571, maxZ: 966.97 },
+  l12u_control_monolith:{ minX: -43.996, maxX: 43.947, minZ: -44.348, maxZ: 40.702 },
+  l12u_sarcofag:        { minX: -34.982, maxX: 102.851, minZ: -43.51, maxZ: 55.244 },
+  l13_generators:       { minX: -525.205, maxX: 540.927, minZ: -853.156, maxZ: 209.524 },
+  l13u_warlab:          { minX: -51.513, maxX: 51.513, minZ: -80.721, maxZ: 43.721 },
+  labx8:                { minX: -122.441, maxX: -40.441, minZ: 44.614, maxZ: 126.614 },
+  pripyat:              { minX: -550, maxX: 550, minZ: -550, maxZ: 550 },
+  y04_pole:             { minX: -544.541, maxX: 555.461, minZ: -615.296, maxZ: 484.704 },
+  zaton:                { minX: -600, maxX: 600, minZ: -615, maxZ: 585 },
+};
+
 // Human-readable level names
 const LEVEL_NAMES = {
   jupiter: "Jupiter",
@@ -34,8 +72,8 @@ const LEVEL_NAMES = {
   l03u_agr_underground: "Agroprom Underground",
   l04_darkvalley: "Dark Valley",
   l04u_labx18: "Lab X-18",
-  l05_bar: "Bar",
-  l06_rostok: "Rostok",
+  l05_bar: "Rostok",
+  l06_rostok: "Wild Territory",
   l07_military: "Army Warehouses",
   l08_yantar: "Yantar",
   l08u_brainlab: "Brain Lab",
@@ -46,8 +84,8 @@ const LEVEL_NAMES = {
   l10u_bunker: "Bunker",
   l11_hospital: "Hospital",
   l11_pripyat: "Pripyat (SoC)",
-  l12_stancia: "CNPP",
-  l12_stancia_2: "CNPP-2",
+  l12_stancia: "CNPP (North)",
+  l12_stancia_2: "CNPP (South)",
   l12u_control_monolith: "Monolith Control Center",
   l12u_sarcofag: "Sarcophagus",
   l13_generators: "Generators",
@@ -133,6 +171,8 @@ for (const id of levelIds) {
     },
     // Raw LTX coordinates (for reference)
     rawRect: rect,
+    // World-space level bounds (for save-game coordinate transform)
+    ...(WORLD_BOUNDS[id] ? { worldBounds: WORLD_BOUNDS[id] } : {}),
   });
 
   console.log(
