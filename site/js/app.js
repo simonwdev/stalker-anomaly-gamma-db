@@ -1702,6 +1702,22 @@ export const appDefinition = {
             const slug = categorySlug(entry.category);
             const catRes = await fetch(this.dataUrl(`${slug}.json`));
             const catData = await catRes.json();
+
+            // Cache category data (items + Fuse) so filtering works if the user
+            // later navigates to this category, and so getColumnRanges can use full
+            // data for chart normalisation.
+            if (!this.categoryItems[slug]) {
+                for (const item of catData.items) {
+                    item.localeName = this.tName(item);
+                }
+                this.categoryItems[slug] = catData.items;
+                this.categoryHeaders[slug] = catData.headers;
+                this.categoryFuse[slug] = new Fuse(catData.items, {
+                    keys: ["displayName", "pda_encyclopedia_name", "localeName", "id", "ui_ammo_types", "st_data_export_ammo_types_alt"],
+                    threshold: 0.35,
+                });
+            }
+
             const item = catData.items.find((i) => i.id === id);
 
             const drops = await this.fetchDrops();
@@ -1986,6 +2002,10 @@ export const appDefinition = {
                         if (!this.categoryItems[s]) {
                             this.categoryItems[s] = r.items;
                             this.categoryHeaders[s] = r.headers;
+                            this.categoryFuse[s] = new Fuse(r.items, {
+                                keys: ["displayName", "pda_encyclopedia_name", "localeName", "id", "ui_ammo_types", "st_data_export_ammo_types_alt"],
+                                threshold: 0.35,
+                            });
                         }
                     }
 
@@ -2081,6 +2101,18 @@ export const appDefinition = {
 
             const slug = categorySlug(cat);
             if (this.categoryItems[slug]) {
+                // Items may have been pre-cached (by loadItemById or All Weapons loader) without a
+                // Fuse index — build it now so text filtering works on this category page.
+                if (!this.categoryFuse[slug]) {
+                    const items = this.categoryItems[slug];
+                    for (const item of items) {
+                        if (!item.localeName) item.localeName = this.tName(item);
+                    }
+                    this.categoryFuse[slug] = new Fuse(items, {
+                        keys: ["displayName", "pda_encyclopedia_name", "localeName", "id", "ui_ammo_types", "st_data_export_ammo_types_alt"],
+                        threshold: 0.35,
+                    });
+                }
                 if (slug === 'ammo') this.fetchAmmoWeapons();
                 return;
             }
