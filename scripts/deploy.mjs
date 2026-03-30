@@ -8,6 +8,6 @@ if (!existsSync(distDir)) {
   process.exit(1);
 }
 
-execSync('npx wrangler pages deploy ./dist --project-name stalker-gamma-db', {
+execSync('npx wrangler pages deploy', {
   stdio: 'inherit',
 });

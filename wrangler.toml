@@ -1,0 +1,11 @@
+name = "stalker-gamma-db"
+pages_build_output_dir = "./dist"
+compatibility_date = "2025-01-01"
+
+[[kv_namespaces]]
+binding = "BUILDS"
+id = "9497e56fc1ce4a198567c2ebb567374c"
+
+[[env.preview.kv_namespaces]]
+binding = "BUILDS"
+id = "23a36247ba85455694ec2a55c9712464"

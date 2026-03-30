@@ -3,7 +3,6 @@
   "include": ["/*"],
   "exclude": [
     "/data/*",
-    "/api/*",
     "/img/*",
     "/css/*",
     "/js/*",
