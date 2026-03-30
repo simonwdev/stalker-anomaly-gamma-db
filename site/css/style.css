@@ -2267,11 +2267,91 @@ input.range-input {
 .modal-body::-webkit-scrollbar-thumb:hover {
     background: var(--text-secondary);
 }
+/* Modal header: two columns — left: title+meta+toolbar, right: image */
+.modal-header-layout {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+    animation: fade-in 0.25s ease;
+}
+
+/* Item image box — same visual language as .ammo-tooltip-image-wrap */
+.modal-item-img-box {
+    flex-shrink: 0;
+    position: relative;
+    background: #141a1f;
+    border: 1px solid #3d464e;
+    border-radius: 6px;
+    padding: 0.4rem 0.7rem;
+    min-width: 100px;
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.modal-item-img {
+    max-width: 160px;
+    min-height: 68px;
+    max-height: 68px;
+    object-fit: contain;
+    display: block;
+}
+/* Faction badge pinned to the bottom-right of the image box */
+.modal-item-faction-badge {
+    position: absolute;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    z-index: 1;
+}
+/* Placeholder shown when the image fails to load */
+.modal-item-img-box .modal-item-img-placeholder {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    color: var(--text-secondary);
+    opacity: 0.35;
+    pointer-events: none;
+}
+.modal-item-img-box.no-icon .modal-item-img-placeholder {
+    display: flex;
+}
+.modal-item-img-box .item-icon-placeholder-x {
+    width: 60px;
+    height: 28px;
+}
+.modal-item-img-box .item-icon-placeholder-text {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Header content — natural width so image sits right next to it */
+.modal-header-content {
+    min-width: 0;
+}
+
+/* Collapse image below content on very small screens */
+@media (max-width: 500px) {
+    .modal-header-layout {
+        flex-direction: column;
+    }
+    .modal-item-img-box {
+        display: none;
+    }
+}
+
 .modal-title-row {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
+
 .modal-pin-icon {
     font-size: 1.1rem;
     flex-shrink: 0;

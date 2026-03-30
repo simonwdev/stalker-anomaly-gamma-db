@@ -10,62 +10,80 @@
             <p v-show="modalLoading" class="loading">{{ t('app_label_loading') }}</p>
 
             <div v-if="modalItem && !modalLoading">
-                <div class="item-icon-float" :key="'icon-' + modalItem.id">
-                    <img v-if="modalItem.ui_st_community && factionIcon(modalItem.ui_st_community)" :src="'img/' + factionIcon(modalItem.ui_st_community)" :alt="modalItem.ui_st_community" class="item-icon-float-faction" v-tooltip="t(modalItem.ui_st_community)">
-                    <img class="item-icon item-icon-lg" :src="'img/icons/' + modalItem.id + '.png'" @load="$event.target.classList.add($event.target.naturalHeight <= $event.target.naturalWidth ? 'item-icon-landscape' : 'item-icon-portrait')" @error="$event.target.classList.add('item-icon-hidden'); $event.target.parentElement.classList.add('no-icon')">
-                    <div class="item-icon-placeholder">
-                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg" class="item-icon-placeholder-x">
-                            <line x1="5" y1="5" x2="95" y2="35" stroke="currentColor" stroke-width="1"/>
-                            <line x1="95" y1="5" x2="5" y2="35" stroke="currentColor" stroke-width="1"/>
-                        </svg>
-                        <span class="item-icon-placeholder-text">{{ t('app_label_no_image') }}</span>
-                    </div>
-                </div>
-                <div class="modal-title-row">
-                    <h1 class="modal-title">{{ tName(modalItem) }}</h1>
-                </div>
-                <div class="item-meta">
-                    <span class="cat-badge">{{ t(singularCategory(modalCategory)) || tCat(modalCategory) }}</span>
-                    <span class="item-id">{{ modalItem.id }}</span>
-                </div>
-                <div class="item-toolbar">
-                    <div class="utility-group">
-                        <button class="copy-link-btn" :class="{ favorited: isFavorited(modalItem.id) }" @click="$emit('toggleFavorite', modalItem.id)" v-tooltip="isFavorited(modalItem.id) ? t('app_tooltip_remove_fav') : t('app_tooltip_add_fav')">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" :fill="isFavorited(modalItem.id) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        </button>
-                        <button class="copy-link-btn" :class="{ pinned: isPinned(modalItem.id), 'pin-disabled': !isPinned(modalItem.id) && pinnedIds.length >= 5 }" @click="$emit('togglePin', modalItem.id)" v-tooltip="isPinned(modalItem.id) ? t('app_tooltip_unpin') : t('app_tooltip_pin')">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" :fill="isPinned(modalItem.id) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>
-                        </button>
-                    </div>
-                    <div class="utility-group">
-                        <button class="copy-link-btn" :class="{ copied: copyIdFeedback }" @click="$emit('copyItemId', modalItem.id)" v-tooltip="copyIdFeedback ? t('app_label_copied') : t('app_tooltip_copy_id')">
-                            <svg v-if="copyIdFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                        </button>
-                        <button class="copy-link-btn" :class="{ copied: copyModalLinkFeedback }" @click="$emit('copyModalLink')" v-tooltip="copyModalLinkFeedback ? t('app_label_copied') : t('app_label_copy_link')">
-                            <svg v-if="copyModalLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                        </button>
-                    </div>
-                    <div v-if="packs.length > 1" class="compare-wrap" v-click-outside="closeCompareMenu">
-                        <button class="copy-link-btn cross-pack-btn" :class="{ active: crossPackId }" @click.stop="compareMenuOpen = !compareMenuOpen" v-tooltip="t('app_label_compare_with')">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg>
-                        </button>
-                        <div class="compare-menu" v-show="compareMenuOpen" @click.stop>
-                            <button v-for="p in crossPackOptions" :key="p.id" class="sort-menu-item" :class="{ active: crossPackId === p.id }" @click="$emit('pickComparePack', p.id)">
-                                <span class="sort-menu-check">{{ crossPackId === p.id ? '\u2713' : '' }}</span>
-                                <span>{{ p.name }}</span>
-                            </button>
-                            <template v-if="crossPackId">
-                                <div class="sort-menu-divider"></div>
-                                <button class="sort-menu-item" @click="$emit('pickComparePack', null)">
-                                    <span class="sort-menu-check"></span>
-                                    <span>{{ t('app_label_clear') }}</span>
+                <!-- Header -->
+                <div class="modal-header-layout" :key="'hdr-' + modalItem.id">
+                    <!-- Column 1: title + meta + toolbar -->
+                    <div class="modal-header-content">
+                        <div class="modal-title-row">
+                            <h1 class="modal-title">{{ tName(modalItem) }}</h1>
+                        </div>
+                        <div class="item-meta">
+                            <span class="cat-badge">{{ t(singularCategory(modalCategory)) || tCat(modalCategory) }}</span>
+                            <span class="item-id">{{ modalItem.id }}</span>
+                        </div>
+                        <div class="item-toolbar">
+                            <div class="utility-group">
+                                <button class="copy-link-btn" :class="{ favorited: isFavorited(modalItem.id) }" @click="$emit('toggleFavorite', modalItem.id)" v-tooltip="isFavorited(modalItem.id) ? t('app_tooltip_remove_fav') : t('app_tooltip_add_fav')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" :fill="isFavorited(modalItem.id) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                                 </button>
-                            </template>
+                                <button class="copy-link-btn" :class="{ pinned: isPinned(modalItem.id), 'pin-disabled': !isPinned(modalItem.id) && pinnedIds.length >= 5 }" @click="$emit('togglePin', modalItem.id)" v-tooltip="isPinned(modalItem.id) ? t('app_tooltip_unpin') : t('app_tooltip_pin')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" :fill="isPinned(modalItem.id) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>
+                                </button>
+                            </div>
+                            <div class="utility-group">
+                                <button class="copy-link-btn" :class="{ copied: copyIdFeedback }" @click="$emit('copyItemId', modalItem.id)" v-tooltip="copyIdFeedback ? t('app_label_copied') : t('app_tooltip_copy_id')">
+                                    <svg v-if="copyIdFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                </button>
+                                <button class="copy-link-btn" :class="{ copied: copyModalLinkFeedback }" @click="$emit('copyModalLink')" v-tooltip="copyModalLinkFeedback ? t('app_label_copied') : t('app_label_copy_link')">
+                                    <svg v-if="copyModalLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                                </button>
+                            </div>
+                            <div v-if="packs.length > 1" class="compare-wrap" v-click-outside="closeCompareMenu">
+                                <button class="copy-link-btn cross-pack-btn" :class="{ active: crossPackId }" @click.stop="compareMenuOpen = !compareMenuOpen" v-tooltip="t('app_label_compare_with')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg>
+                                </button>
+                                <div class="compare-menu" v-show="compareMenuOpen" @click.stop>
+                                    <button v-for="p in crossPackOptions" :key="p.id" class="sort-menu-item" :class="{ active: crossPackId === p.id }" @click="$emit('pickComparePack', p.id)">
+                                        <span class="sort-menu-check">{{ crossPackId === p.id ? '\u2713' : '' }}</span>
+                                        <span>{{ p.name }}</span>
+                                    </button>
+                                    <template v-if="crossPackId">
+                                        <div class="sort-menu-divider"></div>
+                                        <button class="sort-menu-item" @click="$emit('pickComparePack', null)">
+                                            <span class="sort-menu-check"></span>
+                                            <span>{{ t('app_label_clear') }}</span>
+                                        </button>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /modal-header-content -->
+
+                    <!-- Column 2: item image -->
+                    <div class="modal-item-img-box"
+                         @click="$event.currentTarget.classList.remove('no-icon')"
+                    >
+                        <img
+                            class="modal-item-img"
+                            :src="'img/icons/' + modalItem.id + '.png'"
+                            :alt="tName(modalItem)"
+                            @error="$event.target.style.display='none'; $event.target.parentElement.classList.add('no-icon')"
+                        />
+                        <img
+                            v-if="modalItem.ui_st_community && factionIcon(modalItem.ui_st_community)"
+                            :src="'img/' + factionIcon(modalItem.ui_st_community)"
+                            :alt="modalItem.ui_st_community"
+                            class="modal-item-faction-badge"
+                            v-tooltip="t(modalItem.ui_st_community)"
+                        />
+                        <div class="modal-item-img-placeholder">
+                            <svg viewBox="0 0 80 36" xmlns="http://www.w3.org/2000/svg" class="item-icon-placeholder-x"><line x1="4" y1="4" x2="76" y2="32" stroke="currentColor" stroke-width="1.5"/><line x1="76" y1="4" x2="4" y2="32" stroke="currentColor" stroke-width="1.5"/></svg>
+                            <span class="item-icon-placeholder-text">{{ t('app_label_no_image') }}</span>
                         </div>
                     </div>
-                </div>
+                </div><!-- /modal-header-layout -->
 
                 <div class="modal-badges" v-if="modalItem['st_data_export_has_perk'] === 'Y' || modalItem['st_data_export_is_junk'] === 'Y' || modalItem['st_data_export_can_be_crafted'] === 'Y' || modalItem['ui_mcm_menu_exo'] === 'Y' || modalItem['st_data_export_can_be_cooked'] === 'Y' || modalItem['st_data_export_used_in_cooking'] === 'Y' || modalItem['st_data_export_used_in_crafting'] === 'Y' || modalItem['st_data_export_cuts_thick_skin'] === 'Y' || modalItem.hasNpcWeaponDrop === false || isUnusedAmmo(modalItem, modalCategory)">
                     <span v-if="modalItem.hasNpcWeaponDrop === false" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
