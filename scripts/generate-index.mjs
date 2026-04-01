@@ -40,6 +40,8 @@ const SKIP_FILES = new Set([
   "export_toolkit_map_rates.csv",
   "item_chance_in_stash.csv",
   "export_item_chance_in_stash.csv",
+  "export_addon_weapon_map.csv",   // addon→weapons lookup (not item list)
+  "export_weapon_addon_map.csv",   // weapon→addons lookup (not item list)
   "en_us.csv",
   "ru_ru.csv",
   "fr_fr.csv",
@@ -59,6 +61,9 @@ const FILE_CONFIG = [
   { match: /^export_outfits_outfit_helmet/, category: "Helmets", group: "Equipment", nameCol: 1 },
   { match: /^export_outfits_/, category: "Outfits", group: "Equipment", nameCol: 2 },
   { match: /^export_belt_attachments/, category: "Belt Attachments", group: "Equipment" },
+  { match: /^export_scopes/, category: "Scopes", group: "Weapon Addons" },
+  { match: /^export_silencers/, category: "Silencers", group: "Weapon Addons" },
+  { match: /^export_grenade_launchers/, category: "Grenade Launchers", group: "Weapon Addons" },
   { match: /^export_artefacts/, category: "Artefacts", group: "Items" },
   { match: /^export_artefact_recipes/, category: "Recipes", group: "Items" },
   { match: /^export_eatable/, category: "Food", group: "Consumables" },
@@ -67,7 +72,7 @@ const FILE_CONFIG = [
 ];
 
 // Ordered group list for sidebar display
-const GROUP_ORDER = ["Weapons", "Ammo & Explosives", "Equipment", "Consumables", "Items"];
+const GROUP_ORDER = ["Weapons", "Ammo & Explosives", "Equipment", "Weapon Addons", "Consumables", "Items"];
 
 function getConfig(filename) {
   return FILE_CONFIG.find((c) => c.match.test(filename));

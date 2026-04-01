@@ -1,0 +1,32 @@
+[
+  {
+    "id": "wpn_addon_grenade_launcher",
+    "name": "st_grenade_launcher",
+    "addonType": "grenade-launchers",
+    "category": "Grenade Launchers"
+  },
+  {
+    "id": "wpn_addon_grenade_launcher_l85",
+    "name": "st_grenade_launcher_l85",
+    "addonType": "grenade-launchers",
+    "category": "Grenade Launchers"
+  },
+  {
+    "id": "wpn_addon_grenade_launcher_m203",
+    "name": "st_grenade_launcher_m203",
+    "addonType": "grenade-launchers",
+    "category": "Grenade Launchers"
+  },
+  {
+    "id": "wpn_addon_grenade_launcher_monolit",
+    "name": "st_grenade_launcher_monolit",
+    "addonType": "grenade-launchers",
+    "category": "Grenade Launchers"
+  },
+  {
+    "id": "wpn_addon_grenade_launcher_scar",
+    "name": "st_grenade_launcher_scar",
+    "addonType": "grenade-launchers",
+    "category": "Grenade Launchers"
+  }
+]
