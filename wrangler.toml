@@ -6,6 +6,14 @@ compatibility_date = "2025-01-01"
 binding = "BUILDS"
 id = "9497e56fc1ce4a198567c2ebb567374c"
 
+[[r2_buckets]]
+binding = "TILES"
+bucket_name = "stalker-anomaly-db-tiles"
+
 [[env.preview.kv_namespaces]]
 binding = "BUILDS"
 id = "23a36247ba85455694ec2a55c9712464"
+
+[[env.preview.r2_buckets]]
+binding = "TILES"
+bucket_name = "stalker-anomaly-db-tiles"

@@ -37,4 +37,18 @@ export default defineConfig({
     emptyOutDir: true,
     chunkSizeWarningLimit: 1000,
   },
+  server: {
+    proxy: {
+      // Forward /tiles/v2/* to the R2 CDN in dev mode.
+      // Node.js handles TLS differently from the browser, so
+      // ERR_SSL_VERSION_OR_CIPHER_MISMATCH doesn't apply here.
+      // Strip the /tiles prefix so /tiles/v2/foo → /v2/foo on the target.
+      '/tiles/v2': {
+        target: 'https://tiles.stalker-anomaly-db.com',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/tiles/, ''),
+      },
+    },
+  },
 });

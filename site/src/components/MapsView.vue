@@ -965,7 +965,11 @@ export default defineComponent({
       if (!mapContainer.value) return;
       const myId = ++initMapId; // guard against concurrent inits from pack changes
 
-      const TILES_BASE = localTiles.value ? '/tiles' : 'https://tiles.stalker-anomaly-db.com/v2';
+      // Use same-origin proxy (/tiles/v2/*) instead of the external CDN domain
+      // which has ERR_SSL_VERSION_OR_CIPHER_MISMATCH. In production this hits the
+      // Cloudflare Pages Function (functions/tiles/[[path]].js) that reads from R2.
+      // In dev the Vite proxy forwards the request to the CDN server-side (no browser SSL).
+      const TILES_BASE = localTiles.value ? '/tiles' : '/tiles/v2';
 
       let meta: TileMetadata;
       try {
