@@ -3,6 +3,10 @@
 release.zip
 tmpclaude-*
 
+# Save files
+*.scop
+*.scoc
+
 # Map tiles (served from R2)
 site/public/tiles/
 High_Resolution_PDA_Maps/
