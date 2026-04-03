@@ -179,7 +179,7 @@
         <LucideHammer :size="14" />
         {{ t('app_cat_build_planner') }}
     </button>
-    <button class="nav-bar-item" :class="{ active: damageSimActive }" @click="$emit('openDamageSim')">
+    <button class="nav-bar-item ballistics-nav-btn" :class="{ active: damageSimActive }" @click="$emit('openDamageSim')">
         <LucideCrosshair :size="14" />
         {{ t('app_nav_damage_sim') }}
     </button>

@@ -4813,6 +4813,8 @@ export const appDefinition = {
                 this.selectCategory(CAT.CRAFTING_TREES);
             } else if (entry.action === "maps") {
                 this.openMaps();
+            } else if (entry.action === "ballistics") {
+                this.openDamageSim();
             }
         },
 

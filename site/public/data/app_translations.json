@@ -380,7 +380,10 @@
     "app_sim_radar_all_weapons": "All Weapons",
     "app_sim_add_loadout": "Add loadout",
     "app_sim_remove_loadout": "Remove",
-    "app_sim_starting_loadouts": "Starting loadouts"
+    "app_sim_starting_loadouts": "Starting loadouts",
+    "app_whats_new_ballistics": "Ballistics calculator - compare up to 5 weapons side by side.",
+    "app_callout_ballistics_title": "Ballistics Calculator",
+    "app_callout_ballistics_desc": "Compare weapons, ammo, and armor penetration with a full damage breakdown. Select up to 5 loadouts and see how they stack up."
   },
   "ru": {
     "app_group_saved": "Быстрый доступ",
@@ -762,7 +765,10 @@
     "app_sim_radar_all_weapons": "Все оружие",
     "app_sim_add_loadout": "Добавить набор",
     "app_sim_remove_loadout": "Удалить",
-    "app_sim_starting_loadouts": "Стартовое снаряжение"
+    "app_sim_starting_loadouts": "Стартовое снаряжение",
+    "app_whats_new_ballistics": "Баллистический калькулятор - сравните до 5 видов оружия.",
+    "app_callout_ballistics_title": "Баллистический калькулятор",
+    "app_callout_ballistics_desc": "Сравнивайте оружие, патроны и бронебойность с полной разбивкой урона. Выберите до 5 наборов и оцените их."
   },
   "fr": {
     "app_group_saved": "Accès rapide",
