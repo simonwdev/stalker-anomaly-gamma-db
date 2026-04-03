@@ -251,7 +251,7 @@ function categorySlug(category) {
 
 function buildPathUrl(state) {
     if (state.buildPlanner && state.pack) return `/db/${state.pack}/build-planner`;
-    if (state.damageSim && state.pack) return `/db/${state.pack}/damage-sim`;
+    if (state.damageSim && state.pack) return `/db/${state.pack}/ballistics`;
     if (state.maps && state.pack) return `/db/${state.pack}/maps`;
     if (state.versionCompare && state.pack) return `/db/${state.pack}/version-compare`;
     if (state.favorites && state.pack) return `/db/${state.pack}/favorites`;
@@ -272,7 +272,7 @@ function parsePathUrl(pathname) {
     if (m) {
         result.pack = m[1];
         if (m[2] === "build-planner") result.buildPlanner = true;
-        else if (m[2] === "damage-sim") result.damageSim = true;
+        else if (m[2] === "ballistics") result.damageSim = true;
         else if (m[2] === "maps") result.maps = true;
         else if (m[2] === "version-compare") result.versionCompare = true;
         else if (m[2] === "favorites") result.favorites = true;
@@ -1820,7 +1820,7 @@ export const appDefinition = {
                     const urlCat = pathParsed.cat || new URLSearchParams(window.location.search).get("cat");
                     if (urlCat === "build-planner" || pathParsed.buildPlanner) {
                         // Defer to mounted handler
-                    } else if (urlCat === "damage-sim" || pathParsed.damageSim) {
+                    } else if (urlCat === "ballistics" || pathParsed.damageSim) {
                         await this.openDamageSim();
                     } else if (urlCat === "maps" || pathParsed.maps) {
                         this.mapsActive = true;
