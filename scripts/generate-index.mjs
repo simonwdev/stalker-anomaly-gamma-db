@@ -1131,6 +1131,52 @@ if (existsSync(gboSrc)) {
   console.log(`Copied GBO constants to ${gboOut}`);
 }
 
+// Helper: parse an addon-weapon CSV (first column = addon id, rest = weapon ids)
+// Returns { addonId: [weaponId, ...], ... }
+function parseAddonWeaponCsv(filePath) {
+  const text = readFileSync(filePath, "utf-8");
+  const map = {};
+  for (const line of text.split(/\r?\n/)) {
+    const parts = line.split(",").map((v) => v.trim()).filter(Boolean);
+    if (parts.length < 2) continue;
+    map[parts[0]] = parts.slice(1);
+  }
+  return map;
+}
+
+// Generate scopes.json from export_scopes.csv
+try {
+  const map = parseAddonWeaponCsv(join(CSV_DIR, "export_scopes.csv"));
+  const out = join(OUT_DIR, "scopes.json");
+  writeFileSync(out, JSON.stringify(map, null, 2));
+  console.log(`Wrote ${Object.keys(map).length} scope entries to ${out}`);
+} catch (e) {
+  if (e.code !== "ENOENT") throw e;
+  console.log("No export_scopes.csv found, skipping scopes.json");
+}
+
+// Generate silencers.json from export_silencers.csv
+try {
+  const map = parseAddonWeaponCsv(join(CSV_DIR, "export_silencers.csv"));
+  const out = join(OUT_DIR, "silencers.json");
+  writeFileSync(out, JSON.stringify(map, null, 2));
+  console.log(`Wrote ${Object.keys(map).length} silencer entries to ${out}`);
+} catch (e) {
+  if (e.code !== "ENOENT") throw e;
+  console.log("No export_silencers.csv found, skipping silencers.json");
+}
+
+// Generate grenade-launchers.json from export_grenade_launchers.csv
+try {
+  const map = parseAddonWeaponCsv(join(CSV_DIR, "export_grenade_launchers.csv"));
+  const out = join(OUT_DIR, "grenade-launchers.json");
+  writeFileSync(out, JSON.stringify(map, null, 2));
+  console.log(`Wrote ${Object.keys(map).length} grenade launcher entries to ${out}`);
+} catch (e) {
+  if (e.code !== "ENOENT") throw e;
+  console.log("No export_grenade_launchers.csv found, skipping grenade-launchers.json");
+}
+
 // Generate translations.json from translation CSVs + supplementary
 const translations = loadTranslations(CSV_DIR);
 const suppPath = join(CSV_DIR, "..", "supplementary_translations.json");
