@@ -381,7 +381,7 @@ export default defineComponent({
       hitzone: 'torso',
       faction: 'default',
       distance: 25,
-      barrelCondition: 100,
+      barrelCondition: 70,
       difficulty: 3,
       weaponPickerSlot: -1,
       ammoPickerSlot: -1,
@@ -905,7 +905,7 @@ export default defineComponent({
       if (this.hitzone !== 'torso') p.set('bhz', this.hitzone);
       if (this.faction !== 'default') p.set('bfc', this.faction);
       if (this.distance !== 25) p.set('bdi', String(this.distance));
-      if (this.barrelCondition !== 100) p.set('bbc', String(this.barrelCondition));
+      if (this.barrelCondition !== 70) p.set('bbc', String(this.barrelCondition));
       if (this.difficulty !== 3) p.set('bdf', String(this.difficulty));
       window.history.replaceState(null, '', url.toString());
     },
@@ -922,7 +922,7 @@ export default defineComponent({
       if (p.has('bhz')) this.hitzone = p.get('bhz')!;
       if (p.has('bfc')) this.faction = p.get('bfc')!;
       if (p.has('bdi')) this.distance = parseInt(p.get('bdi')!) || 25;
-      if (p.has('bbc')) this.barrelCondition = parseInt(p.get('bbc')!) || 100;
+      if (p.has('bbc')) this.barrelCondition = parseInt(p.get('bbc')!) || 70;
       if (p.has('bdf')) this.difficulty = parseInt(p.get('bdf')!) || 3;
       // Stash weapon/ammo IDs for deferred restore
       const savedLoadouts = [];
