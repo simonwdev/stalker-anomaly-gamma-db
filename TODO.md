@@ -10,10 +10,10 @@
 - [ ] Split each page-component into smaller components (e.g., `WeaponList`, `WeaponDetail`, `AttachmentList`, etc.)
 
 ## Weapon Attachments
-- [ ] Data pipeline for attachments and cross-reference to allowed weapons
-- [ ] Tile/grid view for attachments category
-- [ ] Item modal: show list of compatible weapons for each attachment
-- [ ] Item modal: show allowed attachments for weapons
+- [x] Data pipeline for attachments and cross-reference to allowed weapons
+- [x] Tile/grid view for attachments category
+- [x] Item modal: show list of compatible weapons for each attachment
+- [x] Item modal: show allowed attachments for weapons
 
 ## Data
 - [ ] Toolkit map rates CSV not yet available for 0.9.5 - `toolkit-rates.json` generation is skipped. Requires @sw to export from 0.9.5 game files
@@ -24,5 +24,5 @@
 # Future Ideas
 
 ## Interactive Maps
-- [ ] Interactive maps using Leaflet.js or similar
-- [ ] Map overlays for stashes, NPCs, etc.
+- [x] Interactive maps using Leaflet.js or similar
+- [x] Map overlays for stashes, NPCs, etc.
