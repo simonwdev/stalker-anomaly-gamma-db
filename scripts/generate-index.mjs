@@ -42,6 +42,8 @@ const SKIP_FILES = new Set([
   "export_item_chance_in_stash.csv",
   "export_mutant_profiles.csv",
   "export_npc_armor_profiles.csv",
+  "export_addon_weapon_map.csv",
+  "export_weapon_addon_map.csv",
   "en_us.csv",
   "ru_ru.csv",
   "fr_fr.csv",
@@ -66,6 +68,9 @@ const FILE_CONFIG = [
   { match: /^export_eatable/, category: "Food", group: "Consumables" },
   { match: /^export_medicine/, category: "Medicine", group: "Consumables" },
   { match: /^export_mutant_parts_prices/, category: "Mutant Parts", group: "Items" },
+  { match: /^export_scopes/, category: "Scopes", group: "Equipment" },
+  { match: /^export_silencers/, category: "Silencers", group: "Equipment" },
+  { match: /^export_grenade_launchers/, category: "Grenade Launchers", group: "Equipment" },
 ];
 
 // Ordered group list for sidebar display
@@ -1131,50 +1136,55 @@ if (existsSync(gboSrc)) {
   console.log(`Copied GBO constants to ${gboOut}`);
 }
 
-// Helper: parse an addon-weapon CSV (first column = addon id, rest = weapon ids)
-// Returns { addonId: [weaponId, ...], ... }
-function parseAddonWeaponCsv(filePath) {
-  const text = readFileSync(filePath, "utf-8");
-  const map = {};
+// Generate addon-weapons.json from export_addon_weapon_map.csv (addon ID → weapon IDs)
+const ADDON_WEAPON_MAP_FILE = join(CSV_DIR, "export_addon_weapon_map.csv");
+try {
+  const text = readFileSync(ADDON_WEAPON_MAP_FILE, "utf-8");
+  const addonWeapons = {};
   for (const line of text.split(/\r?\n/)) {
     const parts = line.split(",").map((v) => v.trim()).filter(Boolean);
     if (parts.length < 2) continue;
-    map[parts[0]] = parts.slice(1);
+    addonWeapons[parts[0]] = parts.slice(1);
   }
-  return map;
-}
-
-// Generate scopes.json from export_scopes.csv
-try {
-  const map = parseAddonWeaponCsv(join(CSV_DIR, "export_scopes.csv"));
-  const out = join(OUT_DIR, "scopes.json");
-  writeFileSync(out, JSON.stringify(map, null, 2));
-  console.log(`Wrote ${Object.keys(map).length} scope entries to ${out}`);
+  const awOut = join(OUT_DIR, "addon-weapons.json");
+  writeFileSync(awOut, JSON.stringify(addonWeapons, null, 2));
+  console.log(`Wrote ${Object.keys(addonWeapons).length} addon-weapon mappings to ${awOut}`);
 } catch (e) {
   if (e.code !== "ENOENT") throw e;
-  console.log("No export_scopes.csv found, skipping scopes.json");
+  console.log("No addon weapon map CSV found, skipping addon-weapons.json");
 }
 
-// Generate silencers.json from export_silencers.csv
+// Generate weapon-addons.json from export_weapon_addon_map.csv (weapon ID → addons by type)
+const WEAPON_ADDON_MAP_FILE = join(CSV_DIR, "export_weapon_addon_map.csv");
 try {
-  const map = parseAddonWeaponCsv(join(CSV_DIR, "export_silencers.csv"));
-  const out = join(OUT_DIR, "silencers.json");
-  writeFileSync(out, JSON.stringify(map, null, 2));
-  console.log(`Wrote ${Object.keys(map).length} silencer entries to ${out}`);
-} catch (e) {
-  if (e.code !== "ENOENT") throw e;
-  console.log("No export_silencers.csv found, skipping silencers.json");
-}
+  // Build ID sets from the processed item categories for classification
+  const scopeIds = new Set((categoryData.get("scopes")?.items || []).map(i => i.id));
+  const silencerIds = new Set((categoryData.get("silencers")?.items || []).map(i => i.id));
+  const launcherIds = new Set((categoryData.get("grenade-launchers")?.items || []).map(i => i.id));
 
-// Generate grenade-launchers.json from export_grenade_launchers.csv
-try {
-  const map = parseAddonWeaponCsv(join(CSV_DIR, "export_grenade_launchers.csv"));
-  const out = join(OUT_DIR, "grenade-launchers.json");
-  writeFileSync(out, JSON.stringify(map, null, 2));
-  console.log(`Wrote ${Object.keys(map).length} grenade launcher entries to ${out}`);
+  const text = readFileSync(WEAPON_ADDON_MAP_FILE, "utf-8");
+  const weaponAddons = {};
+  for (const line of text.split(/\r?\n/)) {
+    const parts = line.split(",").map((v) => v.trim()).filter(Boolean);
+    if (parts.length < 2) continue;
+    const weaponId = parts[0];
+    const addons = { scopes: [], silencers: [], launchers: [] };
+    for (const addonId of parts.slice(1)) {
+      if (scopeIds.has(addonId)) addons.scopes.push(addonId);
+      else if (silencerIds.has(addonId)) addons.silencers.push(addonId);
+      else if (launcherIds.has(addonId)) addons.launchers.push(addonId);
+    }
+    // Only include weapons that have at least one classified addon
+    if (addons.scopes.length || addons.silencers.length || addons.launchers.length) {
+      weaponAddons[weaponId] = addons;
+    }
+  }
+  const waOut = join(OUT_DIR, "weapon-addons.json");
+  writeFileSync(waOut, JSON.stringify(weaponAddons, null, 2));
+  console.log(`Wrote ${Object.keys(weaponAddons).length} weapon-addon mappings to ${waOut}`);
 } catch (e) {
   if (e.code !== "ENOENT") throw e;
-  console.log("No export_grenade_launchers.csv found, skipping grenade-launchers.json");
+  console.log("No weapon addon map CSV found, skipping weapon-addons.json");
 }
 
 // Generate translations.json from translation CSVs + supplementary

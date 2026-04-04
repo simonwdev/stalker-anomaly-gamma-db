@@ -1,0 +1,6156 @@
+{
+  "pri_a17_gauss_rifle": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_9a91": {
+    "scopes": [
+      "kobra",
+      "ekp8_02",
+      "okp",
+      "1p76",
+      "1p78gs",
+      "1pn93",
+      "1pn93n2_1gs",
+      "usp1",
+      "pka",
+      "pso1m21",
+      "ps01",
+      "pso2",
+      "1p59",
+      "1p29",
+      "1p63"
+    ],
+    "silencers": [
+      "wpn_sil_9a91"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_abakan": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_abakan_camo": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_abakan_n": {
+    "scopes": [
+      "kobra",
+      "ekp8_02",
+      "okp",
+      "pso2",
+      "pka",
+      "1p78gs",
+      "1pn93n2_1gs",
+      "1pn93",
+      "1p29",
+      "usp1",
+      "1p76",
+      "1p63",
+      "1p59",
+      "pso1m21"
+    ],
+    "silencers": [],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ace21": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ace52": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "0kp2",
+      "aimpoint",
+      "compm4s",
+      "deltapoint",
+      "d0cter",
+      "e0t2",
+      "ekp8_18",
+      "gauss_sight",
+      "kemper",
+      "leupold",
+      "marchf",
+      "mark8_rmr",
+      "mepro",
+      "pn23",
+      "rmr",
+      "specter",
+      "susat",
+      "he510",
+      "p1x42",
+      "exps3",
+      "romeo4",
+      "gee36",
+      "triji",
+      "spec_alt",
+      "t12",
+      "bossxe",
+      "hamr",
+      "ps320",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "e0t2_magd"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_adar2_15": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "specter",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "mepro",
+      "ekp8_18",
+      "he510",
+      "p1x42"
+    ],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_aek": {
+    "scopes": [
+      "ekp8_02",
+      "okp",
+      "pso2",
+      "pka",
+      "1p78gs",
+      "1pn93n2_1gs",
+      "1pn93",
+      "1p29",
+      "usp1",
+      "1p76",
+      "1p59",
+      "pso1m21",
+      "1p63"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak101": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak101_camo": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak102": {
+    "scopes": [
+      "ac10632",
+      "eot",
+      "1p29",
+      "kobra",
+      "ps01",
+      "acog"
+    ],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": []
+  },
+  "wpn_ak103": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak103_camo": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak104": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak104_alfa": {
+    "scopes": [
+      "acog",
+      "specter",
+      "c-more",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "ekp8_18",
+      "0kp2",
+      "1p87",
+      "p1x42",
+      "hco",
+      "aim_acro",
+      "pk6",
+      "uh2",
+      "gauss_sight",
+      "t12",
+      "uh1_magd",
+      "ado",
+      "bossxe",
+      "echo1",
+      "c79",
+      "cortex"
+    ],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak105": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "swamp",
+      "shakal",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak105_shakal": {
+    "scopes": [
+      "1p59",
+      "1pn93n2_1gs",
+      "ac10632",
+      "acog",
+      "ado",
+      "aim_acro",
+      "aimpoint",
+      "bravo4",
+      "c-more",
+      "c79",
+      "cortex",
+      "e0t2",
+      "e0t2_magd",
+      "echo1",
+      "ekp8_18",
+      "exps3",
+      "gauss_sight",
+      "hamr",
+      "he510",
+      "kemper",
+      "leupold",
+      "marchf",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "mark8_rmr",
+      "mepro",
+      "pk6",
+      "pn23",
+      "ps320",
+      "romeo4",
+      "spec_alt",
+      "specter",
+      "t12",
+      "triji",
+      "uh1_magd",
+      "uh2"
+    ],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak105_sp": {
+    "scopes": [
+      "pso2",
+      "1p78gs",
+      "1pn93n2_1gs",
+      "1pn93",
+      "1p29",
+      "usp1"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak105_swamp": {
+    "scopes": [
+      "1p59",
+      "1pn93n2_1gs",
+      "ac10632",
+      "acog",
+      "ado",
+      "aim_acro",
+      "aimpoint",
+      "bravo4",
+      "c-more",
+      "c79",
+      "cortex",
+      "e0t2",
+      "e0t2_magd",
+      "echo1",
+      "ekp8_18",
+      "exps3",
+      "gauss_sight",
+      "hamr",
+      "he510",
+      "kemper",
+      "leupold",
+      "marchf",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "mark8_rmr",
+      "mepro",
+      "pk6",
+      "pn23",
+      "ps320",
+      "romeo4",
+      "spec_alt",
+      "specter",
+      "t12",
+      "triji",
+      "uh1_magd",
+      "uh2"
+    ],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak12": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak12_custom": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "aimpoint",
+      "aim_low",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "deltapoint",
+      "susat",
+      "compm4s",
+      "rakurs",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mono_kit",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_monolit"
+    ]
+  },
+  "wpn_ak12_custom_mono_kit": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_monolit"
+    ]
+  },
+  "wpn_ak12_m1": {
+    "scopes": [
+      "acog",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "compm4s",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "1p87",
+      "p1x42",
+      "pk6",
+      "romeo4",
+      "romeo8",
+      "gee36",
+      "tac30",
+      "c79",
+      "bossxe"
+    ],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak5c_bas": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "deltapoint",
+      "susat",
+      "compm4s",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "5c_tik",
+      "he510",
+      "p1x42",
+      "romeo4",
+      "lco1",
+      "hco",
+      "t12",
+      "bossxe",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "e0t2_magd"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_ak5c_bas_5c_tik": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "deltapoint",
+      "susat",
+      "compm4s",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "he510",
+      "p1x42",
+      "romeo4",
+      "lco1",
+      "hco",
+      "t12",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "e0t2_magd",
+      "devo",
+      "echo1",
+      "c79"
+    ],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_ak5c_isg": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "aimpoint",
+      "aim_low",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "deltapoint",
+      "susat",
+      "compm4s",
+      "rakurs",
+      "marchf",
+      "kemper",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_ak74": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74_alt": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74_custom": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74_isg": {
+    "scopes": [
+      "uh2",
+      "lco1",
+      "uh1_magd",
+      "e0t2_magd",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "acog",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "deltapoint",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "ekp8_18",
+      "t12",
+      "exps3",
+      "he510",
+      "p1x42"
+    ],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74_modern": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74_n": {
+    "scopes": [
+      "kobra",
+      "ekp8_02",
+      "okp",
+      "pso2",
+      "pka",
+      "1p78gs",
+      "1pn93n2_1gs",
+      "1pn93",
+      "1p29",
+      "usp1",
+      "1p76"
+    ],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74_old": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74_pmc": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "okp",
+      "specter",
+      "pka",
+      "acog",
+      "c-more",
+      "ekp8_02",
+      "pso2",
+      "d0cter",
+      "1pn93",
+      "leupold",
+      "rmr",
+      "aimpoint",
+      "deltapoint",
+      "pn23",
+      "1pn93n2_1gs",
+      "1p78gs",
+      "susat",
+      "kemper",
+      "usp1",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "1p76",
+      "mepro",
+      "pritseldob",
+      "kashtan_rmr",
+      "p1x42",
+      "pk6",
+      "1p87",
+      "exps3",
+      "hco",
+      "pso1m21",
+      "tac30",
+      "c79",
+      "ps320",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74_rpk": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74m": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74m_alt": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74m_beard": {
+    "scopes": [
+      "c-more",
+      "ac10632",
+      "d0cter",
+      "aim_low",
+      "rmr",
+      "kobra",
+      "ekp8_02",
+      "okp",
+      "1p29",
+      "pka",
+      "pso2",
+      "1pn93",
+      "deltapoint",
+      "1pn93n2_1gs",
+      "1p78gs",
+      "compm4s",
+      "kemper",
+      "usp1",
+      "1p76",
+      "pritseldob",
+      "kashtan_rmr",
+      "p1x42",
+      "pk6",
+      "pso1m21",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74m_camo": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74m_custom": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74m_duty": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74m_n": {
+    "scopes": [
+      "kobra",
+      "ekp8_02",
+      "okp",
+      "pso2",
+      "pka",
+      "1p78gs",
+      "1pn93n2_1gs",
+      "1pn93",
+      "1p29",
+      "usp1",
+      "1p76"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74u": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ekp8_02",
+      "okp",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs"
+    ],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": []
+  },
+  "wpn_ak74u_camo": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ekp8_02",
+      "okp",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs"
+    ],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": []
+  },
+  "wpn_ak74u_custom": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ekp8_02",
+      "okp",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs"
+    ],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": []
+  },
+  "wpn_ak74u_isg": {
+    "scopes": [
+      "uh2",
+      "lco1",
+      "uh1_magd",
+      "e0t2_magd",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "acog",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "deltapoint",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "ekp8_18",
+      "t12",
+      "exps3",
+      "he510",
+      "p1x42"
+    ],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74u_m1_isg": {
+    "scopes": [
+      "uh2",
+      "lco1",
+      "uh1_magd",
+      "e0t2_magd",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "acog",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "deltapoint",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "ekp8_18",
+      "t12",
+      "exps3",
+      "he510",
+      "p1x42"
+    ],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ak74u_n1": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "pka",
+      "pso2",
+      "okp",
+      "ekp8_02",
+      "1pn93",
+      "1pn93n2_1gs",
+      "1p78gs",
+      "usp1",
+      "1p76"
+    ],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": []
+  },
+  "wpn_ak74u_old": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": []
+  },
+  "wpn_ak74u_snag": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": []
+  },
+  "wpn_ak74u_tac": {
+    "scopes": [
+      "c-more",
+      "ac10632",
+      "d0cter",
+      "mepro",
+      "aim_low",
+      "rmr",
+      "kobra",
+      "ekp8_02",
+      "okp",
+      "1p29",
+      "1p76",
+      "pka",
+      "pso2",
+      "1pn93",
+      "deltapoint",
+      "kemper",
+      "compm4s",
+      "1p78gs",
+      "1pn93n2_1gs",
+      "usp1",
+      "pritseldob",
+      "kashtan_rmr",
+      "p1x42",
+      "pk6",
+      "pso1m21"
+    ],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_akm": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_akm_alfa": {
+    "scopes": [
+      "acog",
+      "specter",
+      "c-more",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "eot",
+      "0kp2",
+      "exps3",
+      "hco",
+      "p1x42",
+      "aim_acro",
+      "he510",
+      "lco1",
+      "romeo4",
+      "t12",
+      "echo1",
+      "razorhd",
+      "e0t2_magd",
+      "devo"
+    ],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_akm_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_akm_isg": {
+    "scopes": [
+      "uh2",
+      "lco1",
+      "uh1_magd",
+      "e0t2_magd",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "acog",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "deltapoint",
+      "compm4s",
+      "susat",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "ekp8_18",
+      "t12",
+      "exps3",
+      "he510",
+      "p1x42"
+    ],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_akms": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_akms_alt": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_akms_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_aks": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_aks74": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_aks74_new": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_am17": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "aim_low",
+      "point_aimpro",
+      "e0t2",
+      "compm4s",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "rmr",
+      "deltapoint",
+      "kemper"
+    ],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_amb17": {
+    "scopes": [
+      "acog",
+      "specter",
+      "c-more",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "aim_low",
+      "e0t2",
+      "compm4s",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "kemper",
+      "pk6",
+      "uh2",
+      "romeo8",
+      "hco",
+      "aim_acro",
+      "gee36",
+      "gauss_sight",
+      "t12",
+      "echo1",
+      "c79",
+      "razorhd",
+      "cortex",
+      "ado",
+      "uh1_magd",
+      "e0t2_magd"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_aps": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aps"
+    ],
+    "launchers": []
+  },
+  "wpn_aps_bas": {
+    "scopes": [
+      "apsabigo"
+    ],
+    "silencers": [
+      "wpn_sil_apb"
+    ],
+    "launchers": []
+  },
+  "wpn_aps_bas_apsabigo": {
+    "scopes": [
+      "apsabigo"
+    ],
+    "silencers": [
+      "wpn_sil_apb"
+    ],
+    "launchers": []
+  },
+  "wpn_ar15_freedom": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "specter",
+      "c-more",
+      "point_aimpro",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "mepro",
+      "ekp8_18",
+      "0kp2"
+    ],
+    "silencers": [
+      "wpn_sil_surfire"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_ash12": {
+    "scopes": [
+      "0kp2",
+      "1p87",
+      "compm4s",
+      "eot",
+      "aimpoint",
+      "e0t2",
+      "sup",
+      "ekp8_18",
+      "he510",
+      "rmr",
+      "p1x42",
+      "romeo4",
+      "cortex",
+      "gee36",
+      "gauss_sight",
+      "acog",
+      "triji",
+      "leupold",
+      "mark8_rmr",
+      "ps320",
+      "specter",
+      "spec_alt",
+      "t12",
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_ash12"
+    ],
+    "launchers": []
+  },
+  "wpn_ash12_sup": {
+    "scopes": [
+      "gauss_sight",
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_ash12"
+    ],
+    "launchers": []
+  },
+  "wpn_aug": {
+    "scopes": [
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_aug_a1_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_auga"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_aug_a1_custom_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_auga"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_aug_a3": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_aug_a3_bas": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "rakurs",
+      "marchf",
+      "kemper",
+      "mark8_rmr",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_auga"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_aug_a3_custom_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_auga"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_aug_custom": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_aug_freedom": {
+    "scopes": [
+      "tac30",
+      "ac10632",
+      "c-more",
+      "rmr",
+      "aim_low",
+      "aim_acro",
+      "romeo4",
+      "he510",
+      "lco1",
+      "p1x42",
+      "romeo8",
+      "e0t2",
+      "hco",
+      "uh2",
+      "acog",
+      "specter",
+      "echo1",
+      "spectre_tactical_kit",
+      "infiltrator_tactical_kit",
+      "trihawk",
+      "monstrum",
+      "t12",
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_aug_merc": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "specter",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "mepro",
+      "ekp8_18",
+      "aim_acro",
+      "he510",
+      "p1x42",
+      "romeo4",
+      "triji",
+      "spec_alt",
+      "mark8_rmr",
+      "gee36",
+      "gauss_sight",
+      "t12",
+      "e0t2_magd",
+      "uh1_magd",
+      "cortex",
+      "ado",
+      "echo1",
+      "tac30",
+      "hamr",
+      "ps320",
+      "pn23",
+      "c79",
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_aug_modern": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "specter",
+      "point_aimpro",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "mepro",
+      "ekp8_18",
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_benelli_m1014": {
+    "scopes": [
+      "0kp2",
+      "e0t2",
+      "eot",
+      "ac10632",
+      "c-more",
+      "ekp8_18",
+      "rmr",
+      "deltapoint",
+      "d0cter",
+      "pk6",
+      "acog",
+      "specter",
+      "tac30",
+      "vulcan",
+      "trihawk",
+      "monstrum",
+      "t12",
+      "c79",
+      "bossxe",
+      "e0t2_magd"
+    ],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": []
+  },
+  "wpn_beretta": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_beretta_alt": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_beretta_camo": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_beretta_modern": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_beretta_modern_d0cter": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_beretta_modern_deltapoint": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_beretta_modern_rmr": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_bizon": {
+    "scopes": [
+      "kobra",
+      "ekp8_02",
+      "okp",
+      "1p76",
+      "pka",
+      "1p63",
+      "pso2",
+      "ps01",
+      "1pn93n2_1gs",
+      "1pn93",
+      "1p29",
+      "1p78gs"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": []
+  },
+  "wpn_brn180": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "specter",
+      "c-more",
+      "point_aimpro",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "rmr",
+      "deltapoint",
+      "d0cter",
+      "0kp2",
+      "exps3",
+      "he510",
+      "romeo4",
+      "lco1",
+      "uh2",
+      "gee36",
+      "t12",
+      "c79",
+      "echo1",
+      "uh1_magd",
+      "devo",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "hamr"
+    ],
+    "silencers": [
+      "wpn_sil_surfire"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_colt1911": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": []
+  },
+  "wpn_colt1911_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": []
+  },
+  "wpn_colt1911_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": []
+  },
+  "wpn_colt1911_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": []
+  },
+  "wpn_colt1911_duty": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": []
+  },
+  "wpn_colt1911_merc": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": []
+  },
+  "wpn_colt1911_modern": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": []
+  },
+  "wpn_colt1911_n": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": []
+  },
+  "wpn_colt1911_new": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": []
+  },
+  "wpn_colt_kimber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": []
+  },
+  "wpn_cz75": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_desert_eagle": {
+    "scopes": [
+      "rmr",
+      "d0cter",
+      "deltapoint",
+      "pk6"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_desert_eagle_nimble": {
+    "scopes": [
+      "lazup_pl15",
+      "rmr",
+      "d0cter",
+      "deltapoint",
+      "t12",
+      "pk6"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_dtmdr": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "specter",
+      "point_aimpro",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "compm4s",
+      "marchf",
+      "mepro",
+      "ekp8_18",
+      "sup"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_dtmdr_black": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "specter",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "compm4s",
+      "marchf",
+      "ekp8_18",
+      "sup",
+      "p1x42",
+      "he510",
+      "pn23",
+      "gee36",
+      "gauss_sight",
+      "t12"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_dtmdr_black_sup": {
+    "scopes": [
+      "gauss_sight"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_dtmdr_sup": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_dvl10": {
+    "scopes": [
+      "acog",
+      "specter",
+      "leupold",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "marchf",
+      "ado",
+      "cortex",
+      "razorhd",
+      "ps320",
+      "tac30"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": []
+  },
+  "wpn_dvl10_m1": {
+    "scopes": [
+      "acog",
+      "specter",
+      "leupold",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "marchf",
+      "ado",
+      "cortex",
+      "razorhd",
+      "ps320",
+      "tac30"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": []
+  },
+  "wpn_eft_rsh12": {
+    "scopes": [
+      "0kp2",
+      "compm4s",
+      "ekp8_18",
+      "ac10632",
+      "e0t2",
+      "eot",
+      "aimpoint",
+      "point_aimpro",
+      "exps3",
+      "he510",
+      "rmr",
+      "aim_low",
+      "deltapoint",
+      "d0cter",
+      "c-more",
+      "p1x42",
+      "romeo4",
+      "lco1",
+      "pk6",
+      "1p87",
+      "aim_acro",
+      "hco",
+      "romeo8",
+      "uh2"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_fal": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_fal_aus": {
+    "scopes": [
+      "kit_aus_tri",
+      "kit_fal_leup",
+      "kit_sa5x_spec"
+    ],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_fal_sa58_osw": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "ekp8_18",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "mepro",
+      "deltapoint",
+      "susat",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "romeo4",
+      "hco",
+      "uh2",
+      "he510",
+      "lco1",
+      "p1x42",
+      "gee36",
+      "t12",
+      "cortex",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "e0t2_magd",
+      "echo1",
+      "tac30",
+      "razorhd",
+      "devo"
+    ],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_famas3": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": []
+  },
+  "wpn_fn2000": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_fn2000_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_fn2000_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_fn2000_nimble": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "0kp2",
+      "aimpoint",
+      "e0t2",
+      "ekp8_18",
+      "kemper",
+      "mepro",
+      "compm4s",
+      "leupold",
+      "specter",
+      "pn23",
+      "aim_acro",
+      "he510",
+      "romeo8",
+      "uh2",
+      "gauss_sight",
+      "t12",
+      "gee36",
+      "triji",
+      "spec_alt",
+      "mark8_rmr",
+      "razorhd",
+      "uh1_magd",
+      "hamr",
+      "ps320"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_fn57": {
+    "scopes": [
+      "t12",
+      "rmr",
+      "aim_low",
+      "deltapoint",
+      "d0cter",
+      "pk6",
+      "lazup_pl15"
+    ],
+    "silencers": [
+      "wpn_sil_57"
+    ],
+    "launchers": []
+  },
+  "wpn_fnc": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_fnp45": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": []
+  },
+  "wpn_fnp45_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": []
+  },
+  "wpn_fnx45": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": []
+  },
+  "wpn_fnx45_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": []
+  },
+  "wpn_fnx45_custom": {
+    "scopes": [
+      "lazup_pl15"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": []
+  },
+  "wpn_fort": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_fort17": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_fort_snag": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_g3": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g36": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g36_camo": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g36_nimble": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g36c_rwap": {
+    "scopes": [
+      "acog",
+      "ac10632",
+      "eot",
+      "c-more",
+      "specter",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "ekp8_18",
+      "e0t2",
+      "compm4s",
+      "kemper",
+      "mepro"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g36k": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g36k_rwap": {
+    "scopes": [
+      "acog",
+      "ac10632",
+      "eot",
+      "c-more",
+      "specter",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "ekp8_18",
+      "e0t2",
+      "compm4s",
+      "kemper",
+      "mepro"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g36ka4_rwap": {
+    "scopes": [
+      "acog",
+      "ac10632",
+      "eot",
+      "c-more",
+      "specter",
+      "leupold",
+      "aimpoint",
+      "ekp8_18",
+      "e0t2",
+      "compm4s",
+      "kemper",
+      "mepro",
+      "aim_acro",
+      "lco1",
+      "exps3",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "pn23",
+      "gauss_sight",
+      "t12",
+      "echo1",
+      "c79",
+      "tac30",
+      "razorhd",
+      "e0t2_magd",
+      "uh1_magd",
+      "devo",
+      "bossxe",
+      "uh2"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g36nimble_rwap": {
+    "scopes": [
+      "acog",
+      "ac10632",
+      "eot",
+      "c-more",
+      "specter",
+      "leupold",
+      "aimpoint",
+      "ekp8_18",
+      "e0t2",
+      "compm4s",
+      "kemper",
+      "mepro",
+      "hco",
+      "uh2",
+      "romeo8",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "pn23",
+      "gauss_sight",
+      "t12",
+      "e0t2_magd",
+      "uh1_magd",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "echo1",
+      "tac30",
+      "ps320"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g36v_rwap": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g3sg1": {
+    "scopes": [],
+    "silencers": [],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_g43": {
+    "scopes": [
+      "wpn_addon_scope_g43"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_galil": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_galil_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_galil_modern": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_gauss": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_gauss_quest": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_glock": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": []
+  },
+  "wpn_glock17": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_osp9"
+    ],
+    "launchers": []
+  },
+  "wpn_glock17_m1": {
+    "scopes": [
+      "d0cter",
+      "aim_low",
+      "rmr",
+      "deltapoint",
+      "ac10632",
+      "c-more",
+      "pk6",
+      "lazup_pl15"
+    ],
+    "silencers": [
+      "wpn_sil_osp9"
+    ],
+    "launchers": []
+  },
+  "wpn_glock_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": []
+  },
+  "wpn_glock_modern": {
+    "scopes": [
+      "lazup_pl15"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": []
+  },
+  "wpn_groza": {
+    "scopes": [
+      "wpn_addon_scope_po4x34"
+    ],
+    "silencers": [],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_groza_nimble": {
+    "scopes": [
+      "ac10632",
+      "point_aimpro",
+      "ekp8_18",
+      "pn23",
+      "specter",
+      "acog",
+      "wpn_addon_scope_po4x34",
+      "rmr",
+      "mepro",
+      "kemper",
+      "eot",
+      "e0t2",
+      "d0cter",
+      "deltapoint",
+      "compm4s",
+      "c-more",
+      "aimpoint",
+      "0kp2",
+      "pk6",
+      "p1x42",
+      "1p87",
+      "hco",
+      "gauss_sight",
+      "t12",
+      "leupold",
+      "echo1",
+      "c79",
+      "razorhd",
+      "ps320",
+      "e0t2_magd",
+      "tac30",
+      "hamr",
+      "ado"
+    ],
+    "silencers": [],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_gsh18": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_gsh18_custom": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_hk416": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_hk417": {
+    "scopes": [
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_howa20": {
+    "scopes": [
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "uh1_magd",
+      "e0t2_magd",
+      "uh2",
+      "lco1",
+      "acog",
+      "eot",
+      "ac10632",
+      "specter",
+      "c-more",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "ekp8_18",
+      "0kp2",
+      "t12",
+      "ps320",
+      "he510",
+      "romeo4",
+      "p1x42"
+    ],
+    "silencers": [
+      "wpn_sil_kac4"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_hpsa": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_hpsa_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_k98": {
+    "scopes": [
+      "wpn_addon_scope_zf4",
+      "mauser_kit"
+    ],
+    "silencers": [
+      "wpn_sil_forester"
+    ],
+    "launchers": []
+  },
+  "wpn_k98_mauser_kit": {
+    "scopes": [
+      "skeet"
+    ],
+    "silencers": [
+      "wpn_sil_forester"
+    ],
+    "launchers": []
+  },
+  "wpn_k98_mod": {
+    "scopes": [
+      "silen98",
+      "skeet"
+    ],
+    "silencers": [
+      "wpn_sil_forester"
+    ],
+    "launchers": []
+  },
+  "wpn_k98_mod_silen98": {
+    "scopes": [
+      "skeet"
+    ],
+    "silencers": [
+      "wpn_sil_forester"
+    ],
+    "launchers": []
+  },
+  "wpn_kiparis": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_korth": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": []
+  },
+  "wpn_korth_custom": {
+    "scopes": [
+      "d0cter",
+      "deltapoint",
+      "rmr",
+      "pk6",
+      "lazup_pl15"
+    ],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": []
+  },
+  "wpn_kriss_vector": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "c-more",
+      "aimpoint",
+      "e0t2",
+      "compm4s",
+      "kemper",
+      "mepro",
+      "ekp8_18",
+      "0kp2",
+      "lco1",
+      "romeo4",
+      "romeo8",
+      "exps3",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "specter",
+      "t12",
+      "e0t2_magd",
+      "c79",
+      "echo1"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ks23": {
+    "scopes": [
+      "23_up"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_ks23_kaban": {
+    "scopes": [
+      "kab_up"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_ks23_kaban_kab_up": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_hex23"
+    ],
+    "launchers": []
+  },
+  "wpn_ksg23": {
+    "scopes": [
+      "ac10632",
+      "eot",
+      "c-more",
+      "0kp2",
+      "d0cter",
+      "e0t2",
+      "rmr",
+      "deltapoint",
+      "kemper",
+      "aimpoint",
+      "ekp8_18",
+      "mepro",
+      "acog",
+      "he510",
+      "hco",
+      "aim_acro",
+      "romeo8",
+      "romeo4",
+      "t12",
+      "echo1",
+      "tac30",
+      "hamr",
+      "specter",
+      "c79",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "gee36",
+      "e0t2_magd"
+    ],
+    "silencers": [
+      "wpn_sil_hex23"
+    ],
+    "launchers": []
+  },
+  "wpn_l85": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_l85_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_l85_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_l85_m1": {
+    "scopes": [
+      "susatov"
+    ],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_l85_m2": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "t12",
+      "bossxe",
+      "romeo4",
+      "tac30",
+      "ps320",
+      "razorhd",
+      "e0t2_magd",
+      "march_f_shorty",
+      "march_f_shorty_alt",
+      "c79",
+      "cortex"
+    ],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_l85_m3": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_l85"
+    ]
+  },
+  "wpn_l85_modern": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_l85a2": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_l85a2_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_l85a2_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_l85a2_modern": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_l96a1": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": []
+  },
+  "wpn_l96a1m": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": []
+  },
+  "wpn_lr300": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_lr300_camo": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_lr300_custom": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m16": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m16a2": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m24": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_m249": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "exps3",
+      "hco",
+      "he510",
+      "lco1",
+      "p1x42",
+      "rmr",
+      "romeo4",
+      "mepro",
+      "uh2",
+      "e0t2",
+      "bossxe",
+      "t12",
+      "specter",
+      "march_f_shorty",
+      "c79",
+      "monstrum",
+      "uh1_magd",
+      "e0t2_magd",
+      "trihawk",
+      "echo1",
+      "triji",
+      "march_f_shorty_alt"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": []
+  },
+  "wpn_m4": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m4_butcher": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "specter",
+      "c-more",
+      "point_aimpro",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m4_ru556": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "specter",
+      "c-more",
+      "point_aimpro",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "kemper",
+      "mepro",
+      "ekp8_18",
+      "0kp2",
+      "gee36",
+      "uh1_magd",
+      "e0t2_magd",
+      "bravo4",
+      "razorhd",
+      "tac30",
+      "cortex",
+      "c79",
+      "devo",
+      "uh2",
+      "lco1",
+      "rmr"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m4_tac": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "specter",
+      "c-more",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "ekp8_18",
+      "0kp2",
+      "exps3",
+      "lco1",
+      "hco",
+      "he510",
+      "gee36"
+    ],
+    "silencers": [
+      "wpn_sil_surfire"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m4a1": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m4a1_camo": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m4a1_custom": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m4a1_freedom": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m4a1_siber": {
+    "scopes": [
+      "gee36",
+      "acog",
+      "eot",
+      "ac10632",
+      "specter",
+      "c-more",
+      "point_aimpro",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_m60": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_m82": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_m98b": {
+    "scopes": [
+      "pn23",
+      "skeet",
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_sr25"
+    ],
+    "launchers": []
+  },
+  "wpn_mk14": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_mk47": {
+    "scopes": [
+      "exps3",
+      "hco",
+      "he510",
+      "p1x42",
+      "romeo4",
+      "acog",
+      "eot",
+      "gauss_sight",
+      "specter",
+      "spec_alt",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "deltapoint",
+      "leupold",
+      "aimpoint",
+      "pn23",
+      "e0t2",
+      "marchf",
+      "mark8_rmr",
+      "kemper",
+      "ekp8_18",
+      "triji",
+      "susat",
+      "rmr",
+      "t12"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_mosin": {
+    "scopes": [
+      "wpn_addon_scope_pu"
+    ],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": []
+  },
+  "wpn_mossberg590_rail": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "specter",
+      "rmr",
+      "d0cter",
+      "c-more",
+      "e0t2",
+      "aim_low",
+      "hco",
+      "p1x42",
+      "tac30",
+      "monstrum",
+      "trihawk",
+      "hamr",
+      "vulcan",
+      "bossxe",
+      "pk6",
+      "ekp8_18"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_mp153_m1": {
+    "scopes": [
+      "ac10632",
+      "c-more",
+      "d0cter",
+      "aim_low",
+      "rmr",
+      "deltapoint",
+      "0kp2",
+      "rakurs"
+    ],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": []
+  },
+  "wpn_mp155": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "c-more",
+      "eot",
+      "t12",
+      "trihawk",
+      "monstrum",
+      "vulcan"
+    ],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": []
+  },
+  "wpn_mp412": {
+    "scopes": [
+      "ac10632",
+      "c-more",
+      "d0cter",
+      "march_f_shorty",
+      "t12",
+      "rmr",
+      "pk6",
+      "deltapoint"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_mp443": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_mp5": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "ekp8_18",
+      "e0t2",
+      "mepro",
+      "aimpoint",
+      "he510",
+      "romeo4",
+      "p1x42",
+      "bossxe",
+      "specter",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "c79",
+      "e0t2_magd"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_mp5_alt": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "ekp8_18",
+      "e0t2",
+      "mepro",
+      "aimpoint",
+      "he510",
+      "romeo4",
+      "p1x42",
+      "bossxe",
+      "specter",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "c79",
+      "e0t2_magd"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_mp5_custom": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "ekp8_18",
+      "e0t2",
+      "mepro",
+      "aimpoint",
+      "he510",
+      "romeo4",
+      "p1x42",
+      "bossxe",
+      "specter",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "c79",
+      "e0t2_magd"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_mp5_nimble": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "ekp8_18",
+      "e0t2",
+      "mepro",
+      "aimpoint",
+      "he510",
+      "romeo4",
+      "p1x42",
+      "bossxe",
+      "specter",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "c79",
+      "e0t2_magd",
+      "echo1",
+      "t12"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_mp5sd": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "ekp8_18",
+      "e0t2",
+      "mepro",
+      "aimpoint",
+      "he510",
+      "romeo4",
+      "p1x42",
+      "bossxe",
+      "specter",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "t12",
+      "echo1",
+      "e0t2_magd",
+      "c79"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_mp5sd_custom": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "ekp8_18",
+      "e0t2",
+      "mepro",
+      "aimpoint",
+      "he510",
+      "romeo4",
+      "p1x42",
+      "bossxe",
+      "specter",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "t12",
+      "echo1",
+      "e0t2_magd",
+      "c79"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_mp5sd_new": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "ekp8_18",
+      "e0t2",
+      "mepro",
+      "aimpoint",
+      "he510",
+      "romeo4",
+      "p1x42",
+      "bossxe",
+      "specter",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "t12",
+      "echo1",
+      "e0t2_magd",
+      "c79"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_mp7": {
+    "scopes": [
+      "eot",
+      "c-more",
+      "ac10632",
+      "d0cter",
+      "aim_low",
+      "e0t2",
+      "rmr",
+      "deltapoint",
+      "kemper",
+      "acog",
+      "aim_acro",
+      "bossxe",
+      "lco1",
+      "uh2",
+      "p1x42",
+      "romeo8",
+      "specter",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "t12",
+      "echo1",
+      "c79",
+      "e0t2_magd"
+    ],
+    "silencers": [
+      "wpn_sil_57"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_mp9": {
+    "scopes": [
+      "0kp2",
+      "ac10632",
+      "ekp8_18",
+      "eot",
+      "exps3",
+      "he510",
+      "kemper",
+      "e0t2",
+      "rmr",
+      "mepro",
+      "d0cter",
+      "deltapoint",
+      "c-more",
+      "uh2",
+      "romeo4",
+      "romeo8",
+      "p1x42",
+      "bossxe"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_oc33": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aps"
+    ],
+    "launchers": []
+  },
+  "wpn_p90": {
+    "scopes": [
+      "aim_low",
+      "point_aimpro",
+      "compm4s",
+      "ekp8_18",
+      "eot",
+      "e0t2",
+      "kemper",
+      "mepro",
+      "rmr",
+      "specter"
+    ],
+    "silencers": [
+      "wpn_sil_57"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_p90_gs": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_57"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_p90gamma": {
+    "scopes": [
+      "aim_low",
+      "ekp8_18",
+      "eot",
+      "e0t2",
+      "kemper",
+      "mepro",
+      "rmr",
+      "specter",
+      "d0cter",
+      "ac10632",
+      "acog",
+      "he510",
+      "p1x42",
+      "pk6",
+      "romeo8",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "t12"
+    ],
+    "silencers": [
+      "wpn_sil_57"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_pb": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_6p9"
+    ],
+    "launchers": []
+  },
+  "wpn_pb_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_6p9"
+    ],
+    "launchers": []
+  },
+  "wpn_pb_bas_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_6p9"
+    ],
+    "launchers": []
+  },
+  "wpn_pb_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_6p9"
+    ],
+    "launchers": []
+  },
+  "wpn_pkm_zenit_siber": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "deltapoint",
+      "kemper",
+      "mepro",
+      "ekp8_18",
+      "1p87",
+      "p1x42",
+      "pk6",
+      "romeo8"
+    ],
+    "silencers": [
+      "wpn_sil_tgpv"
+    ],
+    "launchers": []
+  },
+  "wpn_pkp_siber": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "pso1m21",
+      "okp",
+      "pka",
+      "ekp8_02",
+      "pso2",
+      "1pn93",
+      "1pn93n2_1gs",
+      "ps01",
+      "1p78gs",
+      "usp1",
+      "1p76",
+      "1p59",
+      "1p63"
+    ],
+    "silencers": [
+      "wpn_sil_tgpv"
+    ],
+    "launchers": []
+  },
+  "wpn_pl15": {
+    "scopes": [
+      "lazup_pl15",
+      "pl15_scolaz"
+    ],
+    "silencers": [
+      "wpn_sil_pl15"
+    ],
+    "launchers": []
+  },
+  "wpn_pl15_pl15_scolaz": {
+    "scopes": [
+      "lazup_pl15",
+      "pl15_scolaz"
+    ],
+    "silencers": [
+      "wpn_sil_pl15"
+    ],
+    "launchers": []
+  },
+  "wpn_pl15_tan": {
+    "scopes": [
+      "lazup_pl15",
+      "pl15_scolaz"
+    ],
+    "silencers": [
+      "wpn_sil_pl15"
+    ],
+    "launchers": []
+  },
+  "wpn_pl15_tan_pl15_scolaz": {
+    "scopes": [
+      "lazup_pl15",
+      "pl15_scolaz"
+    ],
+    "silencers": [
+      "wpn_sil_pl15"
+    ],
+    "launchers": []
+  },
+  "wpn_pm": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_pm_actor": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_pm_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_pm_bas_actor": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_pm_bas_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pmm"
+    ],
+    "launchers": []
+  },
+  "wpn_pm_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_pmm": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_pmm_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pmm"
+    ],
+    "launchers": []
+  },
+  "wpn_pp2000": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "e0t2",
+      "0kp2",
+      "aim_low",
+      "aimpoint",
+      "deltapoint",
+      "d0cter",
+      "kemper",
+      "rmr",
+      "specter",
+      "c-more",
+      "bossxe",
+      "1p87",
+      "pk6",
+      "p1x42",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "t12"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_pp2000_operator": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_ppsh41": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ppsh41_rednew": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ppsh41_woodnew": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_raptr": {
+    "scopes": [
+      "acog",
+      "ekp8_18",
+      "eot",
+      "e0t2",
+      "kemper",
+      "mepro",
+      "point_aimpro",
+      "specter",
+      "susat",
+      "aimpoint",
+      "aim_acro",
+      "p1x42",
+      "romeo8",
+      "uh2",
+      "gee36",
+      "tac30",
+      "vulcan",
+      "trihawk",
+      "monstrum",
+      "t12"
+    ],
+    "silencers": [
+      "wpn_sil_kek12"
+    ],
+    "launchers": []
+  },
+  "wpn_remington700": {
+    "scopes": [
+      "archangel",
+      "magpul_pro",
+      "mod_x_gen3",
+      "lapua700"
+    ],
+    "silencers": [
+      "wpn_sil_daniel"
+    ],
+    "launchers": []
+  },
+  "wpn_remington700_archangel": {
+    "scopes": [
+      "archangel",
+      "magpul_pro",
+      "mod_x_gen3",
+      "lapua700"
+    ],
+    "silencers": [
+      "wpn_sil_daniel"
+    ],
+    "launchers": []
+  },
+  "wpn_remington700_lapua700": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_lapu7"
+    ],
+    "launchers": []
+  },
+  "wpn_remington700_magpul_pro": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_daniel"
+    ],
+    "launchers": []
+  },
+  "wpn_remington700_mod_x_gen3": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_daniel"
+    ],
+    "launchers": []
+  },
+  "wpn_remington870": {
+    "scopes": [
+      "ac10632",
+      "eot",
+      "c-more"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_rpd": {
+    "scopes": [],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_rpg7": {
+    "scopes": [
+      "pgo7gs"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_rpk": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_rpk74": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_rpk74_16": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "deltapoint",
+      "susat",
+      "rakurs",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "1p87",
+      "bossxe",
+      "he510",
+      "p1x42",
+      "pk6",
+      "rmr",
+      "gee36",
+      "t12",
+      "d0cter"
+    ],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_rpk74_16_drum": {
+    "scopes": [
+      "ac10632",
+      "c-more",
+      "eot",
+      "acog",
+      "triji",
+      "specter",
+      "spec_alt",
+      "leupold",
+      "mark8_rmr",
+      "pn23",
+      "ps320",
+      "gauss_sight"
+    ],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_saiga12s": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_saiga12s_isg": {
+    "scopes": [
+      "ac10632",
+      "eot",
+      "c-more",
+      "0kp2",
+      "d0cter",
+      "aim_low",
+      "e0t2",
+      "rmr",
+      "deltapoint",
+      "kemper",
+      "aimpoint",
+      "mepro",
+      "ekp8_18",
+      "1p87",
+      "he510",
+      "p1x42",
+      "pk6",
+      "romeo8",
+      "acog",
+      "specter",
+      "tac30",
+      "vulcan",
+      "trihawk",
+      "monstrum",
+      "t12"
+    ],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_saiga12s_m1": {
+    "scopes": [
+      "kobra",
+      "okp",
+      "ekp8_02",
+      "pka",
+      "1p76",
+      "1p63",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p29",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_kek12"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_saiga12s_m2": {
+    "scopes": [
+      "ac10632",
+      "eot",
+      "c-more",
+      "0kp2",
+      "d0cter",
+      "aim_low",
+      "e0t2",
+      "rmr",
+      "deltapoint",
+      "kemper",
+      "aimpoint",
+      "ekp8_18",
+      "mepro",
+      "acog",
+      "specter",
+      "tac30",
+      "vulcan",
+      "trihawk",
+      "monstrum",
+      "1pn93n2_1gs",
+      "1pn93",
+      "ps01",
+      "1p29",
+      "1p87",
+      "bossxe",
+      "p1x42",
+      "pk6"
+    ],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_scar": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_scar_custom": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_scar_new": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_scar_siber": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "bossxe",
+      "exps3",
+      "hco",
+      "he510",
+      "romeo8",
+      "uh2",
+      "gee36"
+    ],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_scar"
+    ]
+  },
+  "wpn_scar_siber_black": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_scar"
+    ]
+  },
+  "wpn_scar_siber_m1": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_scar_siber_m1_black": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_scar_siber_m2": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "compm4s",
+      "marchf",
+      "kemper",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_scar_siber_m2_custom": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "leupold",
+      "aimpoint",
+      "aim_low",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "rmr",
+      "deltapoint",
+      "susat",
+      "compm4s",
+      "rakurs",
+      "marchf",
+      "kemper",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_sig220": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_sig220_custom": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_sig220_n": {
+    "scopes": [
+      "upg220",
+      "u2p2g0r"
+    ],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_sig220_n_u2p2g0r": {
+    "scopes": [
+      "upg220",
+      "u2p2g0r"
+    ],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_sig220_n_upg220": {
+    "scopes": [
+      "upg220",
+      "u2p2g0r"
+    ],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_sig220_nimble": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_sig226": {
+    "scopes": [
+      "226sig_kit"
+    ],
+    "silencers": [
+      "wpn_sil_osp9"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_sig226_226sig_kit": {
+    "scopes": [
+      "lazup_pl15"
+    ],
+    "silencers": [
+      "wpn_sil_osp9"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_sig550": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "c-more",
+      "e0t2",
+      "ekp8_18",
+      "hco",
+      "he510",
+      "kemper",
+      "mepro",
+      "aimpoint",
+      "0kp2",
+      "romeo4",
+      "romeo8",
+      "bossxe",
+      "leupold",
+      "pn23",
+      "specter",
+      "marchf",
+      "gauss_sight"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_sig550_camo": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "c-more",
+      "e0t2",
+      "ekp8_18",
+      "hco",
+      "he510",
+      "kemper",
+      "mepro",
+      "aimpoint",
+      "0kp2",
+      "romeo4",
+      "romeo8",
+      "bossxe",
+      "leupold",
+      "pn23",
+      "specter",
+      "marchf",
+      "gauss_sight"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_sig550_custom": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "c-more",
+      "e0t2",
+      "ekp8_18",
+      "hco",
+      "he510",
+      "kemper",
+      "mepro",
+      "aimpoint",
+      "0kp2",
+      "romeo4",
+      "romeo8",
+      "leupold",
+      "pn23",
+      "specter",
+      "marchf",
+      "gee36",
+      "gauss_sight",
+      "t12"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_sig550_luckygun": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "c-more"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_sig550_sniper": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_sig552": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "c-more"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_sks_b": {
+    "scopes": [
+      "wpn_addon_scope_pu"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_sks_molot": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "okp",
+      "1p59",
+      "pso2",
+      "ekp8_02",
+      "pka",
+      "1pn93",
+      "1p78gs",
+      "1pn93n2_1gs",
+      "pso1m21",
+      "usp1",
+      "1p76",
+      "1p63"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_sks_tac": {
+    "scopes": [
+      "eot",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "d0cter",
+      "aim_low",
+      "1p59",
+      "e0t2",
+      "rmr",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "1p29",
+      "pka",
+      "pso2",
+      "1pn93",
+      "deltapoint",
+      "compm4s",
+      "rakurs",
+      "1pn93n2_1gs",
+      "1p78gs",
+      "kemper",
+      "pso1m21",
+      "usp1",
+      "kashtan_rmr",
+      "1p76",
+      "mepro",
+      "ekp8_18",
+      "pritseldob"
+    ],
+    "silencers": [
+      "wpn_sil_hexagon"
+    ],
+    "launchers": []
+  },
+  "wpn_spas12": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": []
+  },
+  "wpn_spas12_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": []
+  },
+  "wpn_spas12_nimble": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": []
+  },
+  "wpn_sr1m": {
+    "scopes": [
+      "sr1upgr1",
+      "gurza_up"
+    ],
+    "silencers": [
+      "wpn_sil_sr1m"
+    ],
+    "launchers": []
+  },
+  "wpn_sr1m_gurza_up": {
+    "scopes": [
+      "sr1upgr1",
+      "gurza_up"
+    ],
+    "silencers": [
+      "wpn_sil_sr1m"
+    ],
+    "launchers": []
+  },
+  "wpn_sr1m_sr1upgr1": {
+    "scopes": [
+      "sr1upgr1",
+      "gurza_up"
+    ],
+    "silencers": [
+      "wpn_sil_sr1m"
+    ],
+    "launchers": []
+  },
+  "wpn_sr25": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "specter",
+      "c-more",
+      "leupold",
+      "aimpoint",
+      "e0t2",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "marchf",
+      "kemper",
+      "mepro",
+      "lco1",
+      "romeo8",
+      "romeo4",
+      "exps3"
+    ],
+    "silencers": [
+      "wpn_sil_sr25"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_sr2_m1": {
+    "scopes": [
+      "kp_sr2",
+      "ac10632",
+      "c-more",
+      "0kp2",
+      "d0cter",
+      "aim_low",
+      "e0t2",
+      "rmr",
+      "deltapoint",
+      "kemper",
+      "aimpoint",
+      "ekp8_18",
+      "mepro",
+      "aim_acro",
+      "p1x42",
+      "pk6",
+      "hco",
+      "1p87",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "acog",
+      "specter"
+    ],
+    "silencers": [
+      "wpn_sil_veresk"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_sr2_veresk": {
+    "scopes": [
+      "kp_sr2",
+      "sr2_upkit"
+    ],
+    "silencers": [
+      "wpn_sil_veresk"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_sr2_veresk_sr2_upkit": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_veresk"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_steyr_scout": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_surfire"
+    ],
+    "launchers": []
+  },
+  "wpn_steyr_scout_big": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_daniel"
+    ],
+    "launchers": []
+  },
+  "wpn_sv98": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": []
+  },
+  "wpn_sv98_custom": {
+    "scopes": [
+      "pn23"
+    ],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": []
+  },
+  "wpn_svd": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": []
+  },
+  "wpn_svd_custom": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": []
+  },
+  "wpn_svd_m1": {
+    "scopes": [
+      "pso2",
+      "1p78gs",
+      "1pn93n2_1gs",
+      "1pn93",
+      "1p29",
+      "usp1",
+      "ps01",
+      "pso1m21",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": []
+  },
+  "wpn_svd_nimble": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": []
+  },
+  "wpn_svds": {
+    "scopes": [
+      "pso2",
+      "1p78gs",
+      "1pn93n2_1gs",
+      "1pn93",
+      "1p29",
+      "usp1",
+      "ps01",
+      "pso1m21",
+      "1p59"
+    ],
+    "silencers": [
+      "wpn_sil_tgpv"
+    ],
+    "launchers": []
+  },
+  "wpn_svds_pmc": {
+    "scopes": [
+      "acog",
+      "specter",
+      "leupold",
+      "pn23",
+      "gauss_sight",
+      "susat",
+      "marchf",
+      "gee36"
+    ],
+    "silencers": [
+      "wpn_sil_rotor"
+    ],
+    "launchers": []
+  },
+  "wpn_svu": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59",
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_svu_alt": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59",
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_svu_nimble": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "ekp8_02",
+      "okp",
+      "pka",
+      "1p63",
+      "1p76",
+      "pso2",
+      "pso1m21",
+      "1pn93n2_1gs",
+      "1pn93",
+      "usp1",
+      "1p78gs",
+      "1p59",
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_thompson_1921": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_thompson_m1a1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_toz106": {
+    "scopes": [
+      "wpn_addon_scope_pu"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_toz106_m1": {
+    "scopes": [
+      "ac10632",
+      "c-more",
+      "d0cter",
+      "aim_low",
+      "rmr",
+      "deltapoint",
+      "0kp2",
+      "p1x42",
+      "pk6"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_trg": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_57"
+    ],
+    "launchers": []
+  },
+  "wpn_udp9": {
+    "scopes": [
+      "ac10632",
+      "c-more",
+      "eot",
+      "aimpoint",
+      "lco1",
+      "uh2",
+      "e0t2",
+      "rmr",
+      "acog",
+      "specter",
+      "exps3",
+      "he510",
+      "hco",
+      "romeo4",
+      "romeo8",
+      "vulcan",
+      "monstrum",
+      "tac30",
+      "trihawk",
+      "t12"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ump45": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "leupold",
+      "aimpoint",
+      "point_aimpro",
+      "e0t2",
+      "pn23",
+      "susat",
+      "compm4s",
+      "rakurs",
+      "marchf",
+      "kemper",
+      "mark8_rmr",
+      "mepro",
+      "ekp8_18"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_ump45_custom": {
+    "scopes": [
+      "acog",
+      "eot",
+      "specter",
+      "c-more",
+      "0kp2",
+      "ac10632",
+      "aimpoint",
+      "e0t2",
+      "susat",
+      "kemper",
+      "mepro",
+      "ekp8_18",
+      "aim_acro",
+      "bossxe",
+      "he510",
+      "p1x42",
+      "romeo8",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "t12"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_usp": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_usp_custom": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_usp_match": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_usp_nimble": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_usp_tac": {
+    "scopes": [
+      "d0cter",
+      "aim_low",
+      "rmr",
+      "deltapoint"
+    ],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_usp_tac_45": {
+    "scopes": [
+      "d0cter",
+      "aim_low",
+      "rmr",
+      "deltapoint",
+      "pk6"
+    ],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_val": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "pso1m21",
+      "1p78gs",
+      "1pn93",
+      "ekp8_02",
+      "okp",
+      "1p76",
+      "pka",
+      "usp1",
+      "1pn93n2_1gs",
+      "1p59",
+      "pso2",
+      "1p63",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": []
+  },
+  "wpn_val_modern": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "1p78gs",
+      "1pn93",
+      "ekp8_02",
+      "okp",
+      "1p76",
+      "pka",
+      "usp1",
+      "1pn93n2_1gs",
+      "1p59",
+      "pso2"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": []
+  },
+  "wpn_val_tac": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "okp",
+      "pso2",
+      "ekp8_02",
+      "1p59",
+      "pka",
+      "1pn93",
+      "1pn93n2_1gs",
+      "1p78gs",
+      "pso1m21",
+      "usp1",
+      "1p76"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": []
+  },
+  "wpn_vepr": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_vihr": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "pso1m21",
+      "1p78gs",
+      "1pn93",
+      "ekp8_02",
+      "okp",
+      "1p76",
+      "pka",
+      "usp1",
+      "1pn93n2_1gs",
+      "1p59",
+      "pso2",
+      "1p63"
+    ],
+    "silencers": [
+      "wpn_sil_vihr"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_vintorez": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "pso1m21",
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_vintorez_1pn93": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_vintorez_alt": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "pso1m21",
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_vintorez_isg": {
+    "scopes": [
+      "1p29",
+      "specter",
+      "acog",
+      "1pn93",
+      "leupold",
+      "gauss_sight",
+      "pn23",
+      "1pn93n2_1gs",
+      "susat",
+      "marchf",
+      "usp1",
+      "ps01",
+      "pso2",
+      "pso1m21",
+      "1p59",
+      "gee36"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_monolit"
+    ]
+  },
+  "wpn_vintorez_m1": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "pso1m21",
+      "ps01",
+      "okp",
+      "specter",
+      "pka",
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "gauss_sight",
+      "ekp8_02",
+      "pso2",
+      "d0cter",
+      "1pn93",
+      "leupold",
+      "aim_low",
+      "rmr",
+      "aimpoint",
+      "point_aimpro",
+      "deltapoint",
+      "0kp2",
+      "e0t2",
+      "pn23",
+      "1pn93n2_1gs",
+      "1p78gs",
+      "susat",
+      "1p59",
+      "compm4s",
+      "rakurs",
+      "marchf",
+      "kemper",
+      "usp1",
+      "mepro",
+      "ekp8_18",
+      "1p76"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_vintorez_m2": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "pso1m21",
+      "okp",
+      "specter",
+      "pka",
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "ekp8_02",
+      "pso2",
+      "d0cter",
+      "1pn93",
+      "leupold",
+      "aim_low",
+      "gauss_sight",
+      "rmr",
+      "aimpoint",
+      "point_aimpro",
+      "deltapoint",
+      "0kp2",
+      "e0t2",
+      "pn23",
+      "1pn93n2_1gs",
+      "susat",
+      "compm4s",
+      "rakurs",
+      "marchf",
+      "kemper",
+      "ps01",
+      "usp1",
+      "triji",
+      "mark8_rmr",
+      "spec_alt",
+      "mepro",
+      "ekp8_18",
+      "1p76",
+      "pritseldob"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_vintorez_n1": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "pso1m21",
+      "okp",
+      "pka",
+      "ekp8_02",
+      "pso2",
+      "1pn93",
+      "1pn93n2_1gs",
+      "ps01",
+      "1p78gs",
+      "usp1",
+      "1p76",
+      "1p59",
+      "1p63"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_vintorez_nimble": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_vityaz": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more",
+      "1p87",
+      "lco1",
+      "bossxe",
+      "aimpoint",
+      "deltapoint",
+      "e0t2",
+      "ekp8_18",
+      "he510",
+      "kemper",
+      "p1x42",
+      "pk6",
+      "rmr",
+      "romeo8",
+      "monstrum",
+      "trihawk",
+      "vulcan",
+      "specter"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": []
+  },
+  "wpn_vsk94": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "pso1m21",
+      "ekp8_02",
+      "okp",
+      "1p76",
+      "1p78gs",
+      "1pn93",
+      "1pn93n2_1gs",
+      "usp1",
+      "pka",
+      "ps01",
+      "1p59",
+      "pso2"
+    ],
+    "silencers": [
+      "wpn_sil_9a91"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_vssk": {
+    "scopes": [
+      "acog",
+      "ac10632",
+      "eot",
+      "cortex",
+      "1p87",
+      "p1x42",
+      "c-more",
+      "ekp8_18",
+      "bossxe",
+      "gauss_sight",
+      "leupold",
+      "marchf",
+      "ps320",
+      "razorhd",
+      "ado",
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_vz61": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_vz61_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_vz61_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_vz61_freedom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": []
+  },
+  "wpn_wa2000": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": []
+  },
+  "wpn_walther": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_walther_custom": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_walther_p99": {
+    "scopes": [
+      "mod9"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_walther_p99_mod9": {
+    "scopes": [
+      "mod9"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ]
+  },
+  "wpn_winchester1873": {
+    "scopes": [
+      "side"
+    ],
+    "silencers": [],
+    "launchers": []
+  },
+  "wpn_xm4": {
+    "scopes": [
+      "0kp2",
+      "acog",
+      "e0t2",
+      "mepro",
+      "pn23",
+      "specter",
+      "ekp8_18",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  },
+  "wpn_xm8": {
+    "scopes": [
+      "acog",
+      "eot",
+      "ac10632",
+      "c-more",
+      "ac11090"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ]
+  }
+}

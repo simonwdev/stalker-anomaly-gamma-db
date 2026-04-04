@@ -1242,6 +1242,924 @@
     "displayName": "specops_outfit_name"
   },
   {
+    "id": "ps01",
+    "name": "st_addon_scope",
+    "category": "Scopes",
+    "displayName": "st_addon_scope [ps01]"
+  },
+  {
+    "id": "wpn_addon_scope",
+    "name": "st_addon_scope",
+    "category": "Scopes",
+    "displayName": "st_addon_scope [wpn_addon_scope]"
+  },
+  {
+    "id": "0kp2",
+    "name": "st_addon_scope_0kp2",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_0kp2"
+  },
+  {
+    "id": "1p29",
+    "name": "st_addon_scope_1p29",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_1p29"
+  },
+  {
+    "id": "1p59",
+    "name": "st_addon_scope_1p59",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_1p59"
+  },
+  {
+    "id": "1p76",
+    "name": "st_addon_scope_1p76",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_1p76"
+  },
+  {
+    "id": "1p78gs",
+    "name": "st_addon_scope_1p78gs",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_1p78gs"
+  },
+  {
+    "id": "1p87",
+    "name": "st_addon_scope_1p87",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_1p87"
+  },
+  {
+    "id": "1pn93",
+    "name": "st_addon_scope_1pn93",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_1pn93"
+  },
+  {
+    "id": "1pn93n2_1gs",
+    "name": "st_addon_scope_1pn93n2_1gs",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_1pn93n2_1gs"
+  },
+  {
+    "id": "226sig_kit",
+    "name": "st_addon_scope_226sig_kit",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_226sig_kit"
+  },
+  {
+    "id": "23_up",
+    "name": "st_addon_scope_23_up",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_23_up"
+  },
+  {
+    "id": "5c_tik",
+    "name": "st_addon_scope_5c_tik",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_5c_tik"
+  },
+  {
+    "id": "ac10632",
+    "name": "st_addon_scope_ac10632",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_ac10632"
+  },
+  {
+    "id": "ac11090",
+    "name": "st_addon_scope_ac11090",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_ac11090"
+  },
+  {
+    "id": "acog",
+    "name": "st_addon_scope_acog",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_acog"
+  },
+  {
+    "id": "aim_acro",
+    "name": "st_addon_scope_aim_acro",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_aim_acro"
+  },
+  {
+    "id": "aim_low",
+    "name": "st_addon_scope_aim_low",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_aim_low"
+  },
+  {
+    "id": "aimpoint",
+    "name": "st_addon_scope_aimpoint",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_aimpoint"
+  },
+  {
+    "id": "point_aimpro",
+    "name": "st_addon_scope_aimpoint_pro",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_aimpoint_pro"
+  },
+  {
+    "id": "apsabigo",
+    "name": "st_addon_scope_apsabigo",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_apsabigo"
+  },
+  {
+    "id": "archangel",
+    "name": "st_addon_scope_archangel",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_archangel"
+  },
+  {
+    "id": "bossxe",
+    "name": "st_addon_scope_bossxe",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_bossxe"
+  },
+  {
+    "id": "bravo4",
+    "name": "st_addon_scope_bravo4",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_bravo4"
+  },
+  {
+    "id": "tac30",
+    "name": "st_addon_scope_burris_tac30",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_burris_tac30"
+  },
+  {
+    "id": "c79",
+    "name": "st_addon_scope_c79",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_c79"
+  },
+  {
+    "id": "c-more",
+    "name": "st_addon_scope_cmore",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_cmore"
+  },
+  {
+    "id": "compm4s",
+    "name": "st_addon_scope_compm4s",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_compm4s"
+  },
+  {
+    "id": "d0cter",
+    "name": "st_addon_scope_d0cter",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_d0cter"
+  },
+  {
+    "id": "deltapoint",
+    "name": "st_addon_scope_deltapoint",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_deltapoint"
+  },
+  {
+    "id": "devo",
+    "name": "st_addon_scope_devo",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_devo"
+  },
+  {
+    "id": "e0t2",
+    "name": "st_addon_scope_e0t2",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_e0t2"
+  },
+  {
+    "id": "e0t2_magd",
+    "name": "st_addon_scope_e0t2_mag",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_e0t2_mag"
+  },
+  {
+    "id": "echo1",
+    "name": "st_addon_scope_echo1",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_echo1"
+  },
+  {
+    "id": "ekp8_02",
+    "name": "st_addon_scope_ekp8_02",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_ekp8_02"
+  },
+  {
+    "id": "ekp8_18",
+    "name": "st_addon_scope_ekp8_18",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_ekp8_18"
+  },
+  {
+    "id": "eot",
+    "name": "st_addon_scope_eotech",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_eotech"
+  },
+  {
+    "id": "exps3",
+    "name": "st_addon_scope_exps3",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_exps3"
+  },
+  {
+    "id": "wpn_addon_scope_susat",
+    "name": "st_addon_scope_galil_susat",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_galil_susat"
+  },
+  {
+    "id": "gauss_sight",
+    "name": "st_addon_scope_gauss_sight",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_gauss_sight"
+  },
+  {
+    "id": "gee36",
+    "name": "st_addon_scope_gee36",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_gee36"
+  },
+  {
+    "id": "gurza_up",
+    "name": "st_addon_scope_gurza_up",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_gurza_up"
+  },
+  {
+    "id": "hamr",
+    "name": "st_addon_scope_hamr",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_hamr"
+  },
+  {
+    "id": "he510",
+    "name": "st_addon_scope_he510",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_he510"
+  },
+  {
+    "id": "infiltrator_tactical_kit",
+    "name": "st_addon_scope_infiltrator_tactical_kit",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_infiltrator_tactical_kit"
+  },
+  {
+    "id": "kab_up",
+    "name": "st_addon_scope_kab_up",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_kab_up"
+  },
+  {
+    "id": "kashtan_rmr",
+    "name": "st_addon_scope_kashtan_rmr",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_kashtan_rmr"
+  },
+  {
+    "id": "kemper",
+    "name": "st_addon_scope_kemper",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_kemper"
+  },
+  {
+    "id": "kit_aus_tri",
+    "name": "st_addon_scope_kit_aus_tri",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_kit_aus_tri"
+  },
+  {
+    "id": "kit_fal_leup",
+    "name": "st_addon_scope_kit_fal_leup",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_kit_fal_leup"
+  },
+  {
+    "id": "kit_sa5x_spec",
+    "name": "st_addon_scope_kit_sa5x_spec",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_kit_sa5x_spec"
+  },
+  {
+    "id": "kobra",
+    "name": "st_addon_scope_kobra",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_kobra"
+  },
+  {
+    "id": "kp_sr2",
+    "name": "st_addon_scope_kp_sr2",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_kp_sr2"
+  },
+  {
+    "id": "lapua700",
+    "name": "st_addon_scope_lapua700",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_lapua700"
+  },
+  {
+    "id": "lazup_pl15",
+    "name": "st_addon_scope_lazup_generic",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_lazup_generic"
+  },
+  {
+    "id": "lco1",
+    "name": "st_addon_scope_lco1",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_lco1"
+  },
+  {
+    "id": "leupold",
+    "name": "st_addon_scope_leupold",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_leupold"
+  },
+  {
+    "id": "magpul_pro",
+    "name": "st_addon_scope_magpul_pro",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_magpul_pro"
+  },
+  {
+    "id": "march_f_shorty",
+    "name": "st_addon_scope_march_f_shorty",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_march_f_shorty"
+  },
+  {
+    "id": "march_f_shorty_alt",
+    "name": "st_addon_scope_march_f_shorty_alt",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_march_f_shorty_alt"
+  },
+  {
+    "id": "marchf",
+    "name": "st_addon_scope_marchf",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_marchf"
+  },
+  {
+    "id": "mark8_rmr",
+    "name": "st_addon_scope_mark8_rmr",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_mark8_rmr"
+  },
+  {
+    "id": "mauser_kit",
+    "name": "st_addon_scope_mauser_kit",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_mauser_kit"
+  },
+  {
+    "id": "mepro",
+    "name": "st_addon_scope_mepro",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_mepro"
+  },
+  {
+    "id": "mod_x_gen3",
+    "name": "st_addon_scope_mod_x_gen3",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_mod_x_gen3"
+  },
+  {
+    "id": "mod9",
+    "name": "st_addon_scope_mod9",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_mod9"
+  },
+  {
+    "id": "mono_kit",
+    "name": "st_addon_scope_mono_kit",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_mono_kit"
+  },
+  {
+    "id": "monstrum",
+    "name": "st_addon_scope_monstrum_2x32",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_monstrum_2x32"
+  },
+  {
+    "id": "ado",
+    "name": "st_addon_scope_ncstar_ado",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_ncstar_ado"
+  },
+  {
+    "id": "okp",
+    "name": "st_addon_scope_okp-7",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_okp-7"
+  },
+  {
+    "id": "pgo7gs",
+    "name": "st_addon_scope_pgo7gs",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pgo7gs"
+  },
+  {
+    "id": "p1x42",
+    "name": "st_addon_scope_pilad_p1x42",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pilad_p1x42"
+  },
+  {
+    "id": "1p63",
+    "name": "st_addon_scope_pk1_obzor",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pk1_obzor"
+  },
+  {
+    "id": "pk6",
+    "name": "st_addon_scope_pk6",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pk6"
+  },
+  {
+    "id": "pka",
+    "name": "st_addon_scope_pka",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pka"
+  },
+  {
+    "id": "pl15_scolaz",
+    "name": "st_addon_scope_pl15_scolaz",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pl15_scolaz"
+  },
+  {
+    "id": "pn23",
+    "name": "st_addon_scope_pn23",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pn23"
+  },
+  {
+    "id": "wpn_addon_scope_po4x34",
+    "name": "st_addon_scope_po4x34",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_po4x34"
+  },
+  {
+    "id": "pritseldob",
+    "name": "st_addon_scope_psicho_rmr",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_psicho_rmr"
+  },
+  {
+    "id": "pso1m21",
+    "name": "st_addon_scope_pso-1m2-01",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pso-1m2-01"
+  },
+  {
+    "id": "pso2",
+    "name": "st_addon_scope_pso2",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pso2"
+  },
+  {
+    "id": "wpn_addon_scope_pu",
+    "name": "st_addon_scope_pu",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pu"
+  },
+  {
+    "id": "rakurs",
+    "name": "st_addon_scope_rakurs",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_rakurs"
+  },
+  {
+    "id": "uh2",
+    "name": "st_addon_scope_razor",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_razor"
+  },
+  {
+    "id": "uh1_magd",
+    "name": "st_addon_scope_razor_mag",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_razor_mag"
+  },
+  {
+    "id": "razorhd",
+    "name": "st_addon_scope_razorhd",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_razorhd"
+  },
+  {
+    "id": "rmr",
+    "name": "st_addon_scope_rmr",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_rmr"
+  },
+  {
+    "id": "romeo4",
+    "name": "st_addon_scope_romeo4",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_romeo4"
+  },
+  {
+    "id": "romeo8",
+    "name": "st_addon_scope_romeo8",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_romeo8"
+  },
+  {
+    "id": "shakal",
+    "name": "st_addon_scope_shakal",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_shakal"
+  },
+  {
+    "id": "side",
+    "name": "st_addon_scope_side",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_side"
+  },
+  {
+    "id": "silen98",
+    "name": "st_addon_scope_silen98",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_silen98"
+  },
+  {
+    "id": "skeet",
+    "name": "st_addon_scope_skeet",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_skeet"
+  },
+  {
+    "id": "spec_alt",
+    "name": "st_addon_scope_spec_alt",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_spec_alt"
+  },
+  {
+    "id": "hco",
+    "name": "st_addon_scope_specter_hco",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_specter_hco"
+  },
+  {
+    "id": "specter",
+    "name": "st_addon_scope_specterDR",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_specterDR"
+  },
+  {
+    "id": "spectre_tactical_kit",
+    "name": "st_addon_scope_spectre_tactical_kit",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_spectre_tactical_kit"
+  },
+  {
+    "id": "sr1upgr1",
+    "name": "st_addon_scope_sr1upgr1",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_sr1upgr1"
+  },
+  {
+    "id": "sr2_upkit",
+    "name": "st_addon_scope_sr2_upkit",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_sr2_upkit"
+  },
+  {
+    "id": "sup",
+    "name": "st_addon_scope_sup_new",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_sup_new"
+  },
+  {
+    "id": "susat",
+    "name": "st_addon_scope_susat",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_susat"
+  },
+  {
+    "id": "susatov",
+    "name": "st_addon_scope_susatov",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_susatov"
+  },
+  {
+    "id": "swamp",
+    "name": "st_addon_scope_swamp",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_swamp"
+  },
+  {
+    "id": "t12",
+    "name": "st_addon_scope_t12",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_t12"
+  },
+  {
+    "id": "trihawk",
+    "name": "st_addon_scope_trihawk_3x30",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_trihawk_3x30"
+  },
+  {
+    "id": "triji",
+    "name": "st_addon_scope_trijicon_rmr",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_trijicon_rmr"
+  },
+  {
+    "id": "u2p2g0r",
+    "name": "st_addon_scope_u2p2g0r",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_u2p2g0r"
+  },
+  {
+    "id": "upg220",
+    "name": "st_addon_scope_upg220",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_upg220"
+  },
+  {
+    "id": "usp1",
+    "name": "st_addon_scope_usp1",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_usp1"
+  },
+  {
+    "id": "ps320",
+    "name": "st_addon_scope_valday_ps320",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_valday_ps320"
+  },
+  {
+    "id": "vulcan",
+    "name": "st_addon_scope_vulcan",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_vulcan"
+  },
+  {
+    "id": "wpn_addon_scope_g43",
+    "name": "st_addon_scope_zf4",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_zf4 [g43]"
+  },
+  {
+    "id": "wpn_addon_scope_zf4",
+    "name": "st_addon_scope_zf4",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_zf4 [zf4]"
+  },
+  {
+    "id": "wpn_sil_45",
+    "name": "st_addon_sil_45",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_45"
+  },
+  {
+    "id": "wpn_sil_57",
+    "name": "st_addon_sil_57",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_57"
+  },
+  {
+    "id": "wpn_sil_6p9",
+    "name": "st_addon_sil_6p9",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_6p9"
+  },
+  {
+    "id": "wpn_sil_9a91",
+    "name": "st_addon_sil_9a91",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_9a91"
+  },
+  {
+    "id": "wpn_sil_9mm",
+    "name": "st_addon_sil_9mm",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_9mm"
+  },
+  {
+    "id": "wpn_sil_aac762",
+    "name": "st_addon_sil_aac762",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_aac762"
+  },
+  {
+    "id": "wpn_sil_apb",
+    "name": "st_addon_sil_apb",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_apb"
+  },
+  {
+    "id": "wpn_sil_aps",
+    "name": "st_addon_sil_aps",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_aps"
+  },
+  {
+    "id": "wpn_sil_ash12",
+    "name": "st_addon_sil_ash12",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_ash12"
+  },
+  {
+    "id": "wpn_sil_atg",
+    "name": "st_addon_sil_atg",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_atg"
+  },
+  {
+    "id": "wpn_sil_auga",
+    "name": "st_addon_sil_auga",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_auga"
+  },
+  {
+    "id": "wpn_sil_black_box",
+    "name": "st_addon_sil_black_box",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_black_box"
+  },
+  {
+    "id": "wpn_sil_daniel",
+    "name": "st_addon_sil_daniel",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_daniel"
+  },
+  {
+    "id": "wpn_sil_forester",
+    "name": "st_addon_sil_forester",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_forester"
+  },
+  {
+    "id": "wpn_sil_geks545",
+    "name": "st_addon_sil_geks545",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_geks545"
+  },
+  {
+    "id": "wpn_sil_gemtech",
+    "name": "st_addon_sil_gemtech",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_gemtech"
+  },
+  {
+    "id": "wpn_sil_hex23",
+    "name": "st_addon_sil_hex23",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_hex23"
+  },
+  {
+    "id": "wpn_sil_hexagon",
+    "name": "st_addon_sil_hexagon",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_hexagon"
+  },
+  {
+    "id": "wpn_sil_kac4",
+    "name": "st_addon_sil_kac4",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_kac4"
+  },
+  {
+    "id": "wpn_sil_kek12",
+    "name": "st_addon_sil_kek12",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_kek12"
+  },
+  {
+    "id": "wpn_sil_kzrzp",
+    "name": "st_addon_sil_kzrzp",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_kzrzp"
+  },
+  {
+    "id": "wpn_sil_lapu7",
+    "name": "st_addon_sil_lapu7",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_lapu7"
+  },
+  {
+    "id": "wpn_sil_m42k",
+    "name": "st_addon_sil_m42k",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_m42k"
+  },
+  {
+    "id": "wpn_sil_nato",
+    "name": "st_addon_sil_nato",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_nato"
+  },
+  {
+    "id": "wpn_sil_osp9",
+    "name": "st_addon_sil_osp9",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_osp9"
+  },
+  {
+    "id": "wpn_sil_pbs1",
+    "name": "st_addon_sil_pbs1",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_pbs1"
+  },
+  {
+    "id": "wpn_sil_pbs4",
+    "name": "st_addon_sil_pbs4",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_pbs4"
+  },
+  {
+    "id": "wpn_sil_pl15",
+    "name": "st_addon_sil_pl15",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_pl15"
+  },
+  {
+    "id": "wpn_sil_pmm",
+    "name": "st_addon_sil_pmm",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_pmm"
+  },
+  {
+    "id": "wpn_sil_rotor",
+    "name": "st_addon_sil_rotor",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_rotor"
+  },
+  {
+    "id": "wpn_sil_salvo",
+    "name": "st_addon_sil_salvo",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_salvo"
+  },
+  {
+    "id": "wpn_sil_spec_isg",
+    "name": "st_addon_sil_spec_isg",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_spec_isg"
+  },
+  {
+    "id": "wpn_sil_sr1m",
+    "name": "st_addon_sil_sr1m",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_sr1m"
+  },
+  {
+    "id": "wpn_sil_sr25",
+    "name": "st_addon_sil_sr25",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_sr25"
+  },
+  {
+    "id": "wpn_sil_surfire",
+    "name": "st_addon_sil_surfire",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_surfire"
+  },
+  {
+    "id": "wpn_sil_tgp-a",
+    "name": "st_addon_sil_tgp-a",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_tgp-a"
+  },
+  {
+    "id": "wpn_sil_tgpv",
+    "name": "st_addon_sil_tgpv",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_tgpv"
+  },
+  {
+    "id": "wpn_sil_veresk",
+    "name": "st_addon_sil_veresk",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_veresk"
+  },
+  {
+    "id": "wpn_sil_vihr",
+    "name": "st_addon_sil_vihr",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_vihr"
+  },
+  {
+    "id": "wpn_addon_silencer",
+    "name": "st_addon_silencer",
+    "category": "Silencers",
+    "displayName": "st_addon_silencer"
+  },
+  {
     "id": "adrenalin",
     "name": "st_adrenalin",
     "category": "Medicine",
@@ -2052,6 +2970,12 @@
     "displayName": "st_corn"
   },
   {
+    "id": "cortex",
+    "name": "st_cortex_scope",
+    "category": "Scopes",
+    "displayName": "st_cortex_scope"
+  },
+  {
     "id": "cigar",
     "name": "st_cuban_cigar",
     "category": "Food",
@@ -2189,6 +3113,36 @@
     "category": "Explosives",
     "displayName": "st_grenade_f1",
     "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_addon_grenade_launcher",
+    "name": "st_grenade_launcher",
+    "category": "Grenade Launchers",
+    "displayName": "st_grenade_launcher"
+  },
+  {
+    "id": "wpn_addon_grenade_launcher_l85",
+    "name": "st_grenade_launcher_l85",
+    "category": "Grenade Launchers",
+    "displayName": "st_grenade_launcher_l85"
+  },
+  {
+    "id": "wpn_addon_grenade_launcher_m203",
+    "name": "st_grenade_launcher_m203",
+    "category": "Grenade Launchers",
+    "displayName": "st_grenade_launcher_m203"
+  },
+  {
+    "id": "wpn_addon_grenade_launcher_monolit",
+    "name": "st_grenade_launcher_monolit",
+    "category": "Grenade Launchers",
+    "displayName": "st_grenade_launcher_monolit"
+  },
+  {
+    "id": "wpn_addon_grenade_launcher_scar",
+    "name": "st_grenade_launcher_scar",
+    "category": "Grenade Launchers",
+    "displayName": "st_grenade_launcher_scar"
   },
   {
     "id": "grenade_rgd5",
