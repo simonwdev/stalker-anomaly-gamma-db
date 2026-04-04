@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-04-05",
+    "entries": [
+      { "type": "added", "text": "Scopes, Silencers, and Grenade Launchers category pages, and in compatible attachment chips with icons inside the gun detail modal.", "credits": [{ "name": "Evincars", "role": "code" }] }
+    ]
+  },
+  {
     "date": "2026-04-03",
     "entries": [
       { "type": "added", "text": "Ballistics calculator - compare up to 5 weapon + ammo loadouts against any stalker or mutant target. See damage, AP, penetration, shots to kill, and a radar chart breakdown. Click Ballistics in the tab bar to try it.", "highlight": true, "summaryKey": "app_whats_new_ballistics", "action": "ballistics", "callout": { "selector": ".ballistics-nav-btn", "titleKey": "app_callout_ballistics_title", "descKey": "app_callout_ballistics_desc" } }
