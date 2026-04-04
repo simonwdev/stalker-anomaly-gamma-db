@@ -656,7 +656,8 @@ export const appDefinition = {
 
         modalAddonCompatibleWeapons() {
             if (!this.modalItem) return [];
-            const weaponIds = (this.addonCompatibleWeaponsMap || {})[this.modalItem.id] || [];
+            // Deduplicate weapon IDs before resolving
+            const weaponIds = [...new Set((this.addonCompatibleWeaponsMap || {})[this.modalItem.id] || [])];
             if (!weaponIds.length) return [];
             const indexMap = new Map((this.index || []).map(i => [i.id, i]));
             return weaponIds
@@ -4074,7 +4075,8 @@ export const appDefinition = {
         addonCompatibleWeaponsTooltip(item) {
             if (!item) return '';
             const esc = this.escapeHtml;
-            const weaponIds = (this.addonCompatibleWeaponsMap || {})[item.id] || [];
+            // Deduplicate weapon IDs (same weapon can appear multiple times in addon map)
+            const weaponIds = [...new Set((this.addonCompatibleWeaponsMap || {})[item.id] || [])];
             const title = esc(this.t('app_label_compatible_weapons'));
             if (!weaponIds.length) {
                 return {
@@ -4084,12 +4086,13 @@ export const appDefinition = {
             }
             const MAX_SHOWN = 20;
             const indexMap = new Map(this.index.map(i => [i.id, i]));
-            const names = weaponIds
-                .map(wid => esc(this.tName(indexMap.get(wid) || { id: wid, pda_encyclopedia_name: wid })))
-                .sort((a, b) => a.localeCompare(b));
-            const shown = names.slice(0, MAX_SHOWN);
-            const extra = names.length - shown.length;
-            const countLabel = `<span class="addon-compat-count">(${names.length})</span>`;
+            // Translate, deduplicate names, then sort
+            const allNames = [...new Set(
+                weaponIds.map(wid => esc(this.tName(indexMap.get(wid) || { id: wid, pda_encyclopedia_name: wid })))
+            )].sort((a, b) => a.localeCompare(b));
+            const shown = allNames.slice(0, MAX_SHOWN);
+            const extra = allNames.length - shown.length;
+            const countLabel = `<span class="addon-compat-count">(${allNames.length})</span>`;
             const items = shown.map(n => `<div class="addon-compat-weapon">${n}</div>`).join('');
             const moreInDetail = this.t('app_label_more_in_detail');
             const moreLabel = extra > 0

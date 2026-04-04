@@ -453,10 +453,9 @@ export default {
       return {
         className: 'tooltip-weapon-quick',
         html: `<div class="weapon-quick-tooltip">
-          <div class="wqt-header">
-            <img class="wqt-img" src="${imgUrl}" onerror="this.style.display='none'" alt="" />
-            <div class="wqt-info"><div class="wqt-name">${name}</div><div class="wqt-cat">${cat}</div></div>
-          </div>
+          <img class="wqt-img" src="${imgUrl}" onerror="this.style.display='none'" alt="" />
+          <div class="wqt-name">${name}</div>
+          <div class="wqt-cat">${cat}</div>
           ${statRows ? `<div class="wqt-stats">${statRows}</div>` : ''}
         </div>`,
       };
