@@ -83,6 +83,15 @@
                             <span class="item-icon-placeholder-text">{{ t('app_label_no_image') }}</span>
                         </div>
                     </div>
+                    <!-- Small image for addon items (scopes / silencers / launchers) -->
+                    <div v-else class="modal-addon-img-box">
+                        <img
+                            class="addon-img-tile-icon modal-addon-img"
+                            :src="'img/icons/' + modalItem.id + '.png'"
+                            :alt="tName(modalItem)"
+                            @error="$event.target.parentElement.style.display='none'"
+                        />
+                    </div>
                 </div><!-- /modal-header-layout -->
 
                 <div class="modal-badges" v-if="modalItem['st_data_export_has_perk'] === 'Y' || modalItem['st_data_export_is_junk'] === 'Y' || modalItem['st_data_export_can_be_crafted'] === 'Y' || modalItem['ui_mcm_menu_exo'] === 'Y' || modalItem['st_data_export_can_be_cooked'] === 'Y' || modalItem['st_data_export_used_in_cooking'] === 'Y' || modalItem['st_data_export_used_in_crafting'] === 'Y' || modalItem['st_data_export_cuts_thick_skin'] === 'Y' || modalItem.hasNpcWeaponDrop === false || isUnusedAmmo(modalItem, modalCategory)">

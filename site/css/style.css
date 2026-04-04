@@ -1094,6 +1094,18 @@ a.tile-card-name:hover {
     grid-template-columns: 1fr 1fr;
     gap: 0.1rem 0.75rem;
 }
+/* Icon row inside tile cards for addon category pages (scopes / silencers / launchers) */
+.tile-card-icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem 0 0.15rem;
+    min-height: 1.8rem;
+}
+.tile-card-icon-row .addon-img-tile-icon {
+    max-width: 120px;
+    height: 1.5rem;
+}
 .tile-stat-row:has(.tile-ammo-list) {
     grid-column: 1 / -1;
 }
@@ -2535,6 +2547,26 @@ input.range-input {
         flex-direction: column;
     }
     .modal-item-img-box {
+        display: none;
+    }
+}
+
+/* Small image for addon items (scopes / silencers / launchers) in detail modal */
+.modal-addon-img-box {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0.5rem;
+    background: #141a1f;
+    border: 1px solid #3d464e;
+    border-radius: 6px;
+}
+.modal-addon-img-box .modal-addon-img {
+    /* inherits addon-img-tile-icon sizing — height: 1.5rem */
+}
+@media (max-width: 500px) {
+    .modal-addon-img-box {
         display: none;
     }
 }

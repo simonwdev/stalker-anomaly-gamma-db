@@ -18,6 +18,15 @@
             <span v-if="item['st_data_export_cuts_thick_skin'] === 'Y'" class="badge-flag badge-thick-skin">{{ t('app_badge_thick_skin') }}</span>
             <span v-if="compact && item.category" class="badge-flag badge-category">{{ t(singularCategory(item.category)) }}</span>
         </div>
+        <!-- Icon row: shown for addon categories (scopes/silencers/launchers) -->
+        <div v-if="showItemIcon" class="tile-card-icon-row">
+            <img
+                class="addon-img-tile-icon"
+                :src="'img/icons/' + item.id + '.png'"
+                :alt="tItemName(item)"
+                @error="$event.target.parentElement.style.display='none'"
+            />
+        </div>
         <div class="tile-card-stats" v-show="tileFields.length > 0">
             <div v-for="field in tileFields" :key="field" class="tile-stat-row">
                 <span class="stat-label" v-tooltip="field === '_malfunction_chance' ? t('app_tooltip_malfunction') : ''">{{ headerLabel(field) }}<svg v-if="field === '_malfunction_chance'" class="info-hint" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
@@ -65,6 +74,7 @@ export default {
         pinnedIds: { type: Array, default: () => [] },
         compact: { type: Boolean, default: false },
         tileTooltipFn: { type: Function, default: null },
+        showItemIcon: { type: Boolean, default: false },
     },
     emits: ['navigateToItem', 'toggleFavorite', 'togglePin'],
     inject: [

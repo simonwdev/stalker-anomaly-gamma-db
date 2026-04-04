@@ -360,6 +360,7 @@
                 :pinned-ids="pinnedIds"
                 :compact="favoritesViewActive || recentViewActive"
                 :tile-tooltip-fn="isAddonCategory ? addonCompatibleWeaponsTooltip : null"
+                :show-item-icon="isAddonCategory"
                 @navigate-to-item="navigateToItem"
                 @toggle-favorite="toggleFavorite"
                 @toggle-pin="togglePin"
