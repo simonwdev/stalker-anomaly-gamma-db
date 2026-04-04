@@ -102,10 +102,16 @@
                 <div class="modal-description-row">
                     <div class="modal-description-content">
                         <p v-if="parsedDescription" class="modal-description">{{ parsedDescription.text }}</p>
-                        <div v-if="parsedDescription && parsedDescription.sections.length" class="modal-desc-meta">
-                            <template v-for="section in parsedDescription.sections">
-                                <span v-if="section.header === 'WARNING'" v-for="item in section.items" class="desc-chip desc-chip-warning">{{ item }}</span>
-                                <span v-else v-for="item in section.items" class="desc-chip">{{ item }}</span>
+                        <div v-if="(parsedDescription && parsedDescription.sections.length) || modalCompatibleScopes.length" class="modal-desc-meta">
+                            <template v-if="parsedDescription && parsedDescription.sections.length">
+                                <template v-for="section in parsedDescription.sections">
+                                    <span v-if="section.header === 'WARNING'" v-for="item in section.items" class="desc-chip desc-chip-warning">{{ item }}</span>
+                                    <span v-else v-for="item in section.items" class="desc-chip">{{ item }}</span>
+                                </template>
+                            </template>
+                            <template v-if="modalCompatibleScopes.length">
+                                <span class="desc-chip-label">{{ t('app_label_compatible_scopes') }}</span>
+                                <span v-for="scopeId in modalCompatibleScopes" :key="scopeId" class="desc-chip desc-chip-scope">{{ scopeId }}</span>
                             </template>
                         </div>
                     </div>
@@ -331,6 +337,7 @@ export default {
     modalDisassembleMaterials: { type: Array, default: null },
     modalUsedByWeapons: Array,
     parsedDescription: Object,
+    modalCompatibleScopes: { type: Array, default: () => [] },
     favoriteIds: Array,
     pinnedIds: Array,
     packs: Array,

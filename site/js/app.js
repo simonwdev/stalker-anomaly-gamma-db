@@ -373,6 +373,7 @@ export const appDefinition = {
             recipesCache: null,
             disassembleCache: null,
             ammoWeaponsCache: null,
+            scopesCache: null,
             mutantProfilesCache: null,
             npcArmorProfilesCache: null,
             gboConstantsCache: null,
@@ -623,6 +624,14 @@ export const appDefinition = {
         parsedDescription() {
             if (!this.modalItem?.st_data_export_description) return null;
             return this.parseDescription(this.modalItem);
+        },
+
+        modalCompatibleScopes() {
+            if (!this.modalItem || !this.scopesCache) return [];
+            const id = this.modalItem.id;
+            return Object.entries(this.scopesCache)
+                .filter(([, weapons]) => weapons.includes(id))
+                .map(([addonId]) => addonId);
         },
 
         modalStatRows() {
@@ -1700,6 +1709,10 @@ export const appDefinition = {
             return this.fetchJsonCached("ammoWeaponsCache", "ammo-weapons.json");
         },
 
+        fetchScopes() {
+            return this.fetchJsonCached("scopesCache", "scopes.json");
+        },
+
         fetchMutantProfiles() {
             return this.fetchJsonCached("mutantProfilesCache", "mutant-profiles.json");
         },
@@ -1844,6 +1857,7 @@ export const appDefinition = {
                 console.error("Failed to load index:", e);
             }
             this.calibers = await this.fetchCalibers();
+            this.fetchScopes();
             this.rebuildGlobalFuse();
             this.loading = false;
             const preloader = document.getElementById('app-preloader');
@@ -1873,6 +1887,7 @@ export const appDefinition = {
             this.recipesCache = null;
             this.disassembleCache = null;
             this.ammoWeaponsCache = null;
+            this.scopesCache = null;
             this.outfitExchange = null;
             this.displayLabels = {};
             this.translations = null;
@@ -2249,6 +2264,7 @@ export const appDefinition = {
                     this.fetchRecipes(),
                     this.fetchDisassemble(),
                     this.fetchAmmoWeapons(),
+                    WEAPON_CATEGORIES.includes(entry.category) ? this.fetchScopes() : Promise.resolve(null),
                 ]);
                 this.modalDrops = drops[id] || null;
                 this.modalItemDrops = itemDrops[id] || null;

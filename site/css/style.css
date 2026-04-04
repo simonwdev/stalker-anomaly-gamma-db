@@ -1720,6 +1720,21 @@ input.range-input {
     background: rgba(220, 80, 60, 0.18);
     color: #d06050;
 }
+.desc-chip-scope {
+    background: rgba(80, 160, 120, 0.14);
+    color: var(--text-secondary);
+    font-family: monospace;
+    font-size: 0.63rem;
+}
+.desc-chip-label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    opacity: 0.65;
+    margin-right: 0.1rem;
+}
 .modal-badges {
     margin: 0 0 0.5rem 0;
     display: flex;

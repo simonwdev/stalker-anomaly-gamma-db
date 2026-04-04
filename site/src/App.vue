@@ -406,6 +406,7 @@
     :modal-disassemble-materials="modalDisassembleMaterials"
     :modal-used-by-weapons="modalUsedByWeapons"
     :parsed-description="parsedDescription"
+    :modal-compatible-scopes="modalCompatibleScopes"
     :favorite-ids="favoriteIds"
     :pinned-ids="pinnedIds"
     :packs="packs"
