@@ -400,7 +400,6 @@ export default defineComponent({
         { key: 1, label: 'app_sim_difficulty_easy' },
         { key: 2, label: 'app_sim_difficulty_medium' },
         { key: 3, label: 'app_sim_difficulty_hard' },
-        { key: 4, label: 'app_sim_difficulty_master' },
       ];
     },
 
@@ -519,7 +518,7 @@ export default defineComponent({
     weaponStatRanges(): { accuracy: [number, number], recoil: [number, number], magSize: [number, number] } {
       const pool = this.radarMode === 'category' ? this.categoryWeapons : this.allWeapons;
       let minAcc = 100, maxAcc = 0;
-      let minRec = 999, maxRec = 0;
+      let minCtrl = 999, maxCtrl = 0;
       let minMag = 999, maxMag = 0;
 
       for (const w of pool) {
@@ -527,16 +526,16 @@ export default defineComponent({
         const rec = parseFloat(w.ui_inv_recoil as string || '0') || 0;
         const mag = parseFloat(w.ui_ammo_count as string || '0') || 0;
         if (acc > 0) { minAcc = Math.min(minAcc, acc); maxAcc = Math.max(maxAcc, acc); }
-        if (rec > 0) { minRec = Math.min(minRec, rec); maxRec = Math.max(maxRec, rec); }
+        if (rec > 0) { minCtrl = Math.min(minCtrl, rec); maxCtrl = Math.max(maxCtrl, rec); }
         if (mag > 0) { minMag = Math.min(minMag, mag); maxMag = Math.max(maxMag, mag); }
       }
       if (minAcc > maxAcc) { minAcc = 0; maxAcc = 100; }
-      if (minRec > maxRec) { minRec = 0; maxRec = 100; }
+      if (minCtrl > maxCtrl) { minCtrl = 0; maxCtrl = 100; }
       if (minMag > maxMag) { minMag = 0; maxMag = 100; }
 
       return {
         accuracy: [minAcc, maxAcc],
-        recoil: [minRec, maxRec],
+        recoil: [minCtrl, maxCtrl],
         magSize: [minMag, maxMag],
       };
     },
@@ -585,12 +584,12 @@ export default defineComponent({
         const fireRate = parseFloat(lo.weapon.ui_inv_rate_of_fire as string || '0') || 0;
         const dps = damage * fireRate / 60;
         const accuracy = parseFloat((lo.weapon.ui_inv_accuracy as string || '0').replace('%', '')) || 0;
-        const recoil = parseFloat(lo.weapon.ui_inv_recoil as string || '0') || 0;
+        const control = parseFloat(lo.weapon.ui_inv_recoil as string || '0') || 0; // higher = better control
         const kAirRes = ammo ? parseFloat(ammo.st_data_export_k_air_resistance || '0') : 0;
         const rangeEff = 1 / this.airResDivisorAt(this.distance, kAirRes) * 100;
         const magSize = parseFloat(lo.weapon.ui_ammo_count as string || '0') || 0;
 
-        rawValues.push([damage, ap, dps, accuracy, recoil, rangeEff, magSize]);
+        rawValues.push([damage, ap, dps, accuracy, control, rangeEff, magSize]);
       }
 
       if (rawValues.length === 0) return null;
@@ -612,10 +611,8 @@ export default defineComponent({
             max = Math.max(max, vals[j]);
           }
           if (min === max) {
-            // Same value — keep global range so both show at 50%
             continue;
           }
-          // Use 0 as floor so the lower value shows proportionally small
           effectiveRanges[keys[j]] = [0, max];
         }
       }
@@ -632,7 +629,7 @@ export default defineComponent({
           normalize(vals[1], effectiveRanges.ap[0], effectiveRanges.ap[1]),
           normalize(vals[2], effectiveRanges.dps[0], effectiveRanges.dps[1]),
           normalize(vals[3], effectiveRanges.accuracy[0], effectiveRanges.accuracy[1]),
-          normalize(effectiveRanges.recoil[1] - vals[4], 0, effectiveRanges.recoil[1] - effectiveRanges.recoil[0]), // inverted
+          normalize(vals[4], effectiveRanges.recoil[0], effectiveRanges.recoil[1]), // control: higher = better
           normalize(vals[5], effectiveRanges.range[0], effectiveRanges.range[1]),
           normalize(vals[6], effectiveRanges.magSize[0], effectiveRanges.magSize[1]),
         ];
@@ -833,7 +830,7 @@ export default defineComponent({
                   const val = rawValues[ctx.datasetIndex]?.[ctx.dataIndex];
                   const axis = labels[ctx.dataIndex];
                   const fmtVal = val != null ? (val < 1 ? val.toFixed(4) : val.toFixed(1)) : '--';
-                  const suffix = axis === labels[5] ? '%' : ''; // range efficiency
+                  const suffix = axis === labels[5] ? '%' : '';
                   return `${ctx.dataset.label}: ${fmtVal}${suffix}`;
                 }
               }
@@ -871,7 +868,7 @@ export default defineComponent({
       this.hitzone = 'torso';
       this.faction = 'default';
       this.distance = 25;
-      this.barrelCondition = 100;
+      this.barrelCondition = 70;
       this.difficulty = 3;
       // Restore defaults
       const sunrise = this.npcArmorProfiles.find(p =>
