@@ -109,7 +109,7 @@
             <div v-if="layer.id === 'named_npc' && layer.visible" class="map-overlay-legend">
               <span v-for="(color, role) in npcRoleColors" :key="role" class="map-legend-item">
                 <svg class="map-legend-pin" viewBox="0 0 368 368" width="14" height="18">
-                  <path d="M184.277,0c-71.683,0-130,58.317-130,130c0,87.26,119.188,229.855,124.263,235.883c1.417,1.685,3.504,2.66,5.705,2.67c0.011,0,0.021,0,0.032,0c2.189,0,4.271-0.957,5.696-2.621c5.075-5.926,124.304-146.165,124.304-235.932C314.276,58.317,255.96,0,184.277,0z" :fill="color" fill-opacity="0.85" stroke="rgba(0,0,0,0.6)" stroke-width="12"/>
+                  <path d="M184.277,0c-71.683,0-130,58.317-130,130c0,87.26,119.188,229.855,124.263,235.883c1.417,1.685,3.504,2.66,5.705,2.67c0.011,0,0.021,0,0.032,0c2.189,0,4.271-0.957,5.696-2.621c5.075-5.926,124.304-146.165,124.304-235.932C314.276,58.317,255.96,0,184.277,0z" :fill="color" fill-opacity="0.85" :style="{ stroke: 'var(--color-overlay-black-60)' }" stroke-width="12"/>
                 </svg>
                 <span>{{ role.charAt(0).toUpperCase() + role.slice(1) }}</span>
               </span>
@@ -402,9 +402,9 @@ export default defineComponent({
       }
       highlightMarker = L.circleMarker(item.latlng, {
         radius: 20,
-        color: '#c8a84e',
+        color: 'var(--color-accent)',
         weight: 2,
-        fillColor: '#c8a84e',
+        fillColor: 'var(--color-accent)',
         fillOpacity: 0.2,
         className: 'map-search-highlight',
       }).addTo(map);
@@ -525,14 +525,14 @@ export default defineComponent({
     }
 
     const npcRoleColors: Record<string, string> = {
-      trader:   '#ffd54f',
-      mechanic: '#1565c0',
-      medic:    '#e53935',
-      barman:   '#ffb74d',
-      guide:    '#ce93d8',
-      leader:   '#7b1fa2',
-      arena:    '#ff8a65',
-      npc:      '#90caf9',
+      trader:   'var(--color-map-trader)',
+      mechanic: 'var(--color-map-mechanic)',
+      medic:    'var(--color-map-medic)',
+      barman:   'var(--color-orange-bright)',
+      guide:    'var(--color-map-guide)',
+      leader:   'var(--color-map-leader)',
+      arena:    'var(--color-map-arena)',
+      npc:      'var(--color-map-npc)',
     };
     // Restore panel & layer state from localStorage
     const STORAGE_KEY = 'map-overlay-state';
@@ -908,7 +908,7 @@ export default defineComponent({
         id: string; label: string; color: string; radius: number; minZoom: number;
         icon?: string; iconSize?: number; iconZoom?: number;
       }[] = [
-        { id: 'campfire',       label: 'Campfires',        color: '#ffb74d', radius: 3, minZoom: 5 },
+        { id: 'campfire',       label: 'Campfires',        color: 'var(--color-orange-bright)', radius: 3, minZoom: 5 },
         ...( packId === 'anomaly-1.5.3' ? [
           { id: 'stash', label: 'Stashes', color: '#4fc3f7', radius: 3, minZoom: 4, icon: '/img/map/stash.svg', iconSize: 18, iconZoom: 6 },
         ] : []),
@@ -1140,7 +1140,7 @@ export default defineComponent({
         L.rectangle(boundsToLatLng(level.bounds), {
           color: 'rgba(200, 168, 78, 0.7)',
           weight: 2,
-          fillColor: 'rgba(200, 168, 78, 0.06)',
+          fillColor: 'var(--color-accent-tint-6)',
           fillOpacity: 1,
           interactive: false,
         }).addTo(boundsGroup);
@@ -1896,7 +1896,7 @@ export default defineComponent({
           key: `level-${level.id}`,
           title: level.name,
           typeLabel: 'Level',
-          color: '#c8a84e',
+          color: 'var(--color-accent)',
           levelName: '',
           latlng: boundsCenter(level.bounds),
           layerId: 'level-labels',
@@ -2142,7 +2142,7 @@ export default defineComponent({
     const entityLayers = computed(() => layers.filter(l => !baseLayerIds.has(l.id) && l.group));
 
     function entityColor(id: string) {
-      return entityLayerDefs.find(d => d.id === id)?.color || '#fff';
+      return entityLayerDefs.find(d => d.id === id)?.color || 'var(--color-white)';
     }
 
     return {
@@ -2229,7 +2229,7 @@ export default defineComponent({
   align-items: center;
   gap: 0.4rem;
   padding: 0.35rem 0.75rem;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--color-overlay-black-70);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(200, 168, 78, 0.25);
   border-radius: 6px;
@@ -2285,7 +2285,7 @@ export default defineComponent({
 .map-container {
   position: absolute;
   inset: 0;
-  background: #000;
+  background: var(--color-black);
 }
 
 /* --- Controls column (layer panel + save button) --- */
@@ -2330,7 +2330,7 @@ export default defineComponent({
 }
 
 .map-overlay-toggle:hover {
-  color: #fff;
+  color: var(--color-white);
 }
 
 .map-overlay-body {
@@ -2358,7 +2358,7 @@ export default defineComponent({
 }
 
 .map-overlay-item:hover {
-  color: #fff;
+  color: var(--color-white);
 }
 
 .map-overlay-item input[type="checkbox"] {
@@ -2390,7 +2390,7 @@ export default defineComponent({
 .map-overlay-section + .map-overlay-section {
   margin-top: 0.5rem;
   padding-top: 0.5rem;
-  border-top: 1px solid rgba(200, 168, 78, 0.15);
+  border-top: 1px solid var(--color-accent-tint-15);
 }
 
 .map-overlay-legend {
@@ -2444,7 +2444,7 @@ export default defineComponent({
   line-height: 1.4;
   max-width: 230px;
   pointer-events: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 8px var(--color-overlay-black-50);
 }
 
 .map-info-tooltip-content {
@@ -2482,9 +2482,9 @@ export default defineComponent({
   gap: 0.2rem;
   margin-left: auto;
   padding: 0.15rem 0.4rem;
-  border: 1px solid rgba(200, 168, 78, 0.2);
+  border: 1px solid var(--color-accent-tint-20);
   border-radius: 3px;
-  background: rgba(200, 168, 78, 0.06);
+  background: var(--color-accent-tint-6);
   color: var(--text-secondary);
   font-size: 0.65rem;
   font-family: inherit;
@@ -2492,8 +2492,8 @@ export default defineComponent({
   transition: background 0.12s, color 0.12s;
 }
 .map-player-goto-btn:hover {
-  color: #fff;
-  background: rgba(200, 168, 78, 0.15);
+  color: var(--color-white);
+  background: var(--color-accent-tint-15);
 }
 
 .map-overlay-count {
@@ -2533,7 +2533,7 @@ export default defineComponent({
 }
 
 .map-save-toggle:hover {
-  color: #fff;
+  color: var(--color-white);
 }
 
 .map-save-dot {
@@ -2597,9 +2597,9 @@ export default defineComponent({
   align-items: center;
   gap: 0.25rem;
   padding: 0.3rem 0.5rem;
-  border: 1px solid rgba(200, 168, 78, 0.2);
+  border: 1px solid var(--color-accent-tint-20);
   border-radius: 4px;
-  background: rgba(200, 168, 78, 0.06);
+  background: var(--color-accent-tint-6);
   color: var(--text-secondary);
   font-size: 0.7rem;
   font-family: inherit;
@@ -2608,8 +2608,8 @@ export default defineComponent({
 }
 
 .map-save-action-btn:hover {
-  color: #fff;
-  background: rgba(200, 168, 78, 0.15);
+  color: var(--color-white);
+  background: var(--color-accent-tint-15);
 }
 
 .map-save-action-clear:hover {
@@ -2625,14 +2625,14 @@ export default defineComponent({
   align-items: center;
   gap: 0.4rem;
   padding: 1rem 0.8rem;
-  border: 2px dashed rgba(200, 168, 78, 0.2);
+  border: 2px dashed var(--color-accent-tint-20);
   border-radius: 6px;
   transition: border-color 0.15s, background 0.15s;
 }
 
 .map-save-dropzone.dragover {
   border-color: rgba(200, 168, 78, 0.6);
-  background: rgba(200, 168, 78, 0.06);
+  background: var(--color-accent-tint-6);
 }
 
 .map-save-dropzone-icon {
@@ -2649,7 +2649,7 @@ export default defineComponent({
   padding: 0.3rem 0.7rem;
   border: 1px solid rgba(200, 168, 78, 0.3);
   border-radius: 4px;
-  background: rgba(200, 168, 78, 0.08);
+  background: var(--color-accent-tint-8);
   color: var(--accent);
   font-size: 0.72rem;
   font-family: inherit;
@@ -2672,7 +2672,7 @@ export default defineComponent({
   position: absolute;
   inset: 0;
   z-index: 2000;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--color-overlay-black-70);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -2691,7 +2691,7 @@ export default defineComponent({
   padding: 2rem 3rem;
   border: 2px dashed rgba(200, 168, 78, 0.5);
   border-radius: 12px;
-  background: rgba(200, 168, 78, 0.05);
+  background: var(--color-accent-tint-5);
 }
 
 /* Fade transition for drag overlay */
@@ -2731,7 +2731,7 @@ export default defineComponent({
 
 .map-search.open .map-search-input-wrap {
   border-radius: 6px 6px 0 0;
-  border-bottom-color: rgba(200, 168, 78, 0.12);
+  border-bottom-color: var(--color-accent-tint-12);
 }
 
 .map-search-icon {
@@ -2768,7 +2768,7 @@ export default defineComponent({
 }
 
 .map-search-clear:hover {
-  color: #fff;
+  color: var(--color-white);
 }
 
 .map-search-results {
@@ -2798,7 +2798,7 @@ export default defineComponent({
 
 .map-search-result:hover,
 .map-search-result.active {
-  background: rgba(200, 168, 78, 0.12);
+  background: var(--color-accent-tint-12);
 }
 
 .map-search-result-type {
@@ -2862,7 +2862,7 @@ export default defineComponent({
 <style>
 /* Leaflet overrides — must be unscoped to affect Leaflet's DOM */
 .leaflet-container {
-  background: #000 !important;
+  background: var(--color-black) !important;
 }
 
 .map-level-label {
@@ -2888,7 +2888,7 @@ export default defineComponent({
   height: 14px;
   border-radius: 50%;
   background: #76ff03;
-  border: 2.5px solid rgba(0, 0, 0, 0.5);
+  border: 2.5px solid var(--color-overlay-black-50);
   box-shadow: 0 0 0 2px rgba(118, 255, 3, 0.35);
 }
 
@@ -2942,12 +2942,12 @@ export default defineComponent({
   height: 28px;
   border-radius: 50%;
   background: rgba(66, 133, 244, 0.9);
-  color: #fff;
+  color: var(--color-white);
   font-size: 0.7rem;
   font-weight: 700;
   font-family: inherit;
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 4px var(--color-overlay-black-50);
   transition: transform 0.15s ease;
 }
 
@@ -2991,7 +2991,7 @@ export default defineComponent({
   font-size: 0.8rem;
   font-weight: 600;
   color: rgba(200, 168, 78, 0.9);
-  border-bottom: 1px solid rgba(200, 168, 78, 0.2);
+  border-bottom: 1px solid var(--color-accent-tint-20);
   margin-bottom: 0.15rem;
 }
 
@@ -3007,7 +3007,7 @@ export default defineComponent({
 }
 
 .map-cluster-popup-item:hover {
-  background: rgba(200, 168, 78, 0.12);
+  background: var(--color-accent-tint-12);
 }
 
 .map-cluster-popup-icon-cell {
@@ -3074,7 +3074,7 @@ export default defineComponent({
 }
 
 .map-location-label span:hover {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-overlay-white-90);
 }
 
 .map-npc-marker {
@@ -3093,7 +3093,7 @@ export default defineComponent({
   border-radius: 5px;
   font-size: 0.85rem;
   padding: 0.6rem 0.8rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 12px var(--color-overlay-black-70);
   pointer-events: none;
   width: max-content;
   max-width: 320px;
@@ -3151,7 +3151,7 @@ export default defineComponent({
 .map-debug-info {
   margin-top: 0.4rem;
   padding-top: 0.4rem;
-  border-top: 1px solid rgba(200, 168, 78, 0.2);
+  border-top: 1px solid var(--color-accent-tint-20);
   font-size: 0.6rem;
   font-family: monospace;
   color: rgba(150, 200, 150, 0.8);

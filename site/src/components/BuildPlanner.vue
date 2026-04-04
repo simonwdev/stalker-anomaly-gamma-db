@@ -714,7 +714,7 @@ export default {
 .build-action-divider {
     width: 1px;
     height: 1.1rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-overlay-white-10);
     margin: 0 0.25rem;
     flex-shrink: 0;
 }
@@ -739,10 +739,10 @@ export default {
 }
 .build-header-icon:hover {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--color-overlay-white-6);
 }
 .build-header-icon.copied {
-    color: #4ac45a;
+    color: var(--color-green);
 }
 .build-header-icon-label {
     font-size: 0.68rem;
@@ -754,14 +754,14 @@ export default {
     color: var(--text-secondary);
 }
 .build-header-icon-danger:hover {
-    color: #f06a5e;
-    background: rgba(240, 106, 94, 0.1);
+    color: var(--color-red-vibrant);
+    background: var(--color-red-vibrant-tint-10);
 }
 
 /* Inline badge (flows after label text) */
 .build-header-badge-inline {
     background: var(--accent);
-    color: #000;
+    color: var(--color-black);
     font-size: 0.5rem;
     font-weight: 700;
     min-width: 0.9rem;
@@ -784,7 +784,7 @@ export default {
     border-radius: 4px;
     padding: 0.25rem;
     z-index: 120;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 12px var(--color-overlay-black-40);
 }
 .build-overflow-item {
     display: flex;
@@ -803,22 +803,22 @@ export default {
 }
 .build-overflow-item:hover {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--color-overlay-white-6);
 }
 .build-overflow-item.copied {
-    color: #4ac45a;
+    color: var(--color-green);
 }
 .build-overflow-item:disabled {
     opacity: 0.4;
     cursor: default;
 }
 .build-overflow-item-danger:hover {
-    color: #f06a5e;
-    background: rgba(240, 106, 94, 0.1);
+    color: var(--color-red-vibrant);
+    background: var(--color-red-vibrant-tint-10);
 }
 .build-overflow-divider {
     height: 1px;
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--color-overlay-white-8);
     margin: 0.2rem 0.3rem;
 }
 
@@ -844,14 +844,14 @@ export default {
     margin-bottom: 0.5rem;
     background: transparent;
     border: 1px solid transparent;
-    color: #f06a5e;
+    color: var(--color-red-vibrant);
     transition: background 0.15s, border-color 0.15s;
 }
 .build-import-code-banner.visible {
-    background: rgba(240, 106, 94, 0.12);
-    border-color: rgba(240, 106, 94, 0.3);
+    background: var(--color-red-vibrant-tint-12);
+    border-color: var(--color-red-vibrant-tint-30);
 }
 .build-save-input-error {
-    border-color: rgba(240, 106, 94, 0.5) !important;
+    border-color: var(--color-red-vibrant-tint-50) !important;
 }
 </style>

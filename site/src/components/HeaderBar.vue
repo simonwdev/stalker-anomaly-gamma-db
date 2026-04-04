@@ -285,7 +285,7 @@ export default {
 .header-drawer-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--color-overlay-black-50);
     z-index: 160;
 }
 .header-drawer {
@@ -318,7 +318,7 @@ export default {
 }
 .header-drawer-close:hover {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--color-overlay-white-8);
 }
 .header-drawer-label {
     padding: 0.5rem 1rem 0.2rem;
@@ -347,14 +347,14 @@ export default {
 }
 .header-drawer-item:hover {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--color-overlay-white-6);
 }
 .header-drawer-item.active {
     color: var(--accent);
 }
 .header-drawer-divider {
     height: 1px;
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--color-overlay-white-8);
     margin: 0.3rem 0.75rem;
 }
 .drawer-right-enter-active,
@@ -370,7 +370,7 @@ export default {
 .mobile-search-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--color-overlay-black-70);
     z-index: 200;
     display: flex;
     align-items: flex-start;
@@ -403,7 +403,7 @@ export default {
     align-items: center;
     justify-content: center;
     width: 2.4rem;
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--color-overlay-white-8);
     border: 1px solid var(--border);
     border-radius: 4px;
     color: var(--text-secondary);
@@ -412,6 +412,6 @@ export default {
 }
 .mobile-search-close:hover {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.12);
+    background: var(--color-overlay-white-12);
 }
 </style>

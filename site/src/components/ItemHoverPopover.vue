@@ -83,7 +83,7 @@ export default defineComponent({
   border: 1px solid var(--border);
   border-radius: 5px;
   padding: 0.5rem 0.6rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 16px var(--color-overlay-black-50);
   min-width: 18rem;
   max-width: 24rem;
   overflow: hidden;
@@ -162,7 +162,7 @@ export default defineComponent({
 .item-hover-desc {
   padding: 0.4rem 0 0;
   margin-top: 0.4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--color-overlay-white-8);
 }
 .item-hover-icon {
   float: right;

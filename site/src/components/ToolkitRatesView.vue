@@ -45,7 +45,7 @@ export default {
         toolkitHeatBg(value) {
             if (!value) return "";
             const intensity = Math.min(value / 100, 1) * 0.45;
-            return `background: rgba(76, 175, 80, ${intensity})`;
+            return `background: rgba(var(--color-green-intensity-rgb), ${intensity})`;
         },
     },
 };

@@ -212,10 +212,42 @@
     --color-overlay-black-40:   rgba(0, 0, 0, 0.40);
     --color-overlay-black-50:   rgba(0, 0, 0, 0.50);
     --color-overlay-black-55:   rgba(0, 0, 0, 0.55);
+    --color-overlay-black-60:   rgba(0, 0, 0, 0.60);
     --color-overlay-black-70:   rgba(0, 0, 0, 0.70);
 
-    /* White */
-    --color-overlay-white-1:    rgba(255, 255, 255, 0.01);
+    /* Border / card overlays */
+    --color-overlay-border-50:  rgba(42, 42, 42, 0.50);
+
+    /* ── Additional tints ───────────────────────────────── */
+
+    /* Red-vibrant (f06a5e) at extra opacities */
+    --color-red-vibrant-tint-12: rgba(240, 106, 94, 0.12);
+    --color-red-vibrant-tint-30: rgba(240, 106, 94, 0.30);
+    --color-red-vibrant-tint-50: rgba(240, 106, 94, 0.50);
+
+    /* Green-positive (6ec87a) tints */
+    --color-green-positive-tint-10: rgba(110, 200, 122, 0.10);
+    --color-green-positive-tint-12: rgba(110, 200, 122, 0.12);
+
+    /* Red-warm-soft (d07a6e) tints */
+    --color-red-warm-soft-tint-10: rgba(208, 122, 110, 0.10);
+    --color-red-warm-soft-tint-12: rgba(208, 122, 110, 0.12);
+
+    /* ── Special / icon colors ──────────────────────────── */
+    --color-heart:              #e25555;   /* acknowledgements heart icon  */
+
+    /* ── Map NPC role colors ────────────────────────────── */
+    --color-map-trader:         #ffd54f;
+    --color-map-mechanic:       #1565c0;
+    --color-map-medic:          #e53935;
+    --color-map-guide:          #ce93d8;
+    --color-map-leader:         #7b1fa2;
+    --color-map-arena:          #ff8a65;
+    --color-map-npc:            #90caf9;
+
+    /* ── Dynamic color channels (for use in rgba() templates) ── */
+    /* Usage: background: rgba(var(--color-green-intensity-rgb), <alpha>); */
+    --color-green-intensity-rgb: 76, 175, 80;
     --color-overlay-white-2:    rgba(255, 255, 255, 0.02);
     --color-overlay-white-3:    rgba(255, 255, 255, 0.03);
     --color-overlay-white-4:    rgba(255, 255, 255, 0.04);
@@ -224,6 +256,7 @@
     --color-overlay-white-7:    rgba(255, 255, 255, 0.07);
     --color-overlay-white-8:    rgba(255, 255, 255, 0.08);
     --color-overlay-white-10:   rgba(255, 255, 255, 0.10);
+    --color-overlay-white-12:   rgba(255, 255, 255, 0.12);
     --color-overlay-white-14:   rgba(255, 255, 255, 0.14);
     --color-overlay-white-15:   rgba(255, 255, 255, 0.15);
     --color-overlay-white-25:   rgba(255, 255, 255, 0.25);
@@ -245,5 +278,10 @@
     --text-secondary: var(--color-text-secondary);
     --accent:        var(--color-accent);
     --accent-dim:    var(--color-accent-dim);
+    /* Added by apply-color-palette */
+    --color-accent-warm-tint-12:     rgba(200, 144, 80, 0.12);
+    --color-accent-warm-tint-20:     rgba(200, 144, 80, 0.20);
+    --color-green-mid-tint-15:       rgba(78,  168, 100, 0.15);
+    --color-red-soft-tint-18:        rgba(200, 80,  80,  0.18);
+    --color-red-warm-soft-tint-15:   rgba(208, 122, 110, 0.15);
 }
-

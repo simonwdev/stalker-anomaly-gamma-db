@@ -351,7 +351,7 @@ interface DifficultyOption {
 }
 
 const MAX_LOADOUTS = 5;
-const LOADOUT_COLORS = ['#5b8abd', '#c89050', '#b8a048', '#9b6fb0', '#6b9ec8'];
+const LOADOUT_COLORS = ['var(--color-blue-mid)', 'var(--color-accent-warm)', '#b8a048', 'var(--color-purple-mid)', '#6b9ec8'];
 
 export default defineComponent({
   name: 'DamageSimulator',
@@ -812,18 +812,18 @@ export default defineComponent({
             r: {
               min: 0, max: 100,
               ticks: { display: false, stepSize: 20 },
-              grid: { color: '#2a2a2a' },
-              angleLines: { color: '#2a2a2a' },
-              pointLabels: { color: '#d4d4d4', font: { size: 11 } },
+              grid: { color: 'var(--color-border)' },
+              angleLines: { color: 'var(--color-border)' },
+              pointLabels: { color: 'var(--color-text)', font: { size: 11 } },
             }
           },
           plugins: {
-            legend: { display: data.datasets.length > 1, position: 'top' as const, labels: { color: '#d4d4d4', font: { size: 10 }, usePointStyle: true, pointStyle: 'circle', padding: 12 } },
+            legend: { display: data.datasets.length > 1, position: 'top' as const, labels: { color: 'var(--color-text)', font: { size: 10 }, usePointStyle: true, pointStyle: 'circle', padding: 12 } },
             tooltip: {
-              backgroundColor: '#1a1a1a',
-              titleColor: '#d4d4d4',
-              bodyColor: '#d4d4d4',
-              borderColor: '#2a2a2a',
+              backgroundColor: 'var(--color-card)',
+              titleColor: 'var(--color-text)',
+              bodyColor: 'var(--color-text)',
+              borderColor: 'var(--color-border)',
               borderWidth: 1,
               callbacks: {
                 label(ctx: any) {
@@ -1223,7 +1223,7 @@ export default defineComponent({
   text-decoration: underline;
 }
 .damage-sim-credit svg {
-  color: #d07a6e;
+  color: var(--color-red-warm-soft);
 }
 .damage-sim-columns {
   display: grid;
@@ -1262,14 +1262,14 @@ export default defineComponent({
 }
 .damage-sim-icon-btn:hover {
   color: var(--accent);
-  background: rgba(200, 168, 78, 0.08);
+  background: var(--color-accent-tint-8);
 }
 .damage-sim-icon-btn-hidden {
   visibility: hidden;
 }
 .damage-sim-icon-btn-danger:hover {
-  color: #f06a5e;
-  background: rgba(240, 106, 94, 0.1);
+  color: var(--color-red-vibrant);
+  background: var(--color-red-vibrant-tint-10);
 }
 
 /* Add loadout button */
@@ -1278,7 +1278,7 @@ export default defineComponent({
   align-items: center;
   gap: 0.3rem;
   background: none;
-  border: 2px dashed rgba(255, 255, 255, 0.15);
+  border: 2px dashed var(--color-overlay-white-15);
   border-radius: 4px;
   color: var(--text-secondary);
   font-size: 0.6rem;
@@ -1308,8 +1308,8 @@ export default defineComponent({
 
 
 /* Comparison highlights */
-.damage-sim-better { color: #6ec87a !important; }
-.damage-sim-worse { color: #d07a6e !important; }
+.damage-sim-better { color: var(--color-green-positive) !important; }
+.damage-sim-worse { color: var(--color-red-warm-soft) !important; }
 
 /* Compare tag (inline percentage delta) */
 .damage-sim-compare-tag {
@@ -1321,10 +1321,10 @@ export default defineComponent({
   border-radius: 2px;
 }
 .damage-sim-compare-tag.damage-sim-better {
-  background: rgba(110, 200, 122, 0.1);
+  background: var(--color-green-positive-tint-10);
 }
 .damage-sim-compare-tag.damage-sim-worse {
-  background: rgba(208, 122, 110, 0.1);
+  background: var(--color-red-warm-soft-tint-10);
 }
 
 /* Section labels */
@@ -1363,17 +1363,17 @@ export default defineComponent({
 }
 .damage-sim-slot.filled:hover {
   border-color: var(--accent-dim);
-  background: rgba(200, 168, 78, 0.05);
+  background: var(--color-accent-tint-5);
 }
 .damage-sim-slot.empty {
-  border: 2px dashed rgba(255, 255, 255, 0.15);
+  border: 2px dashed var(--color-overlay-white-15);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .damage-sim-slot.empty:hover {
   border-color: var(--accent-dim);
-  background: rgba(200, 168, 78, 0.05);
+  background: var(--color-accent-tint-5);
 }
 .damage-sim-slot.disabled {
   opacity: 0.4;
@@ -1411,8 +1411,8 @@ export default defineComponent({
   transition: color 0.15s, background 0.15s;
 }
 .damage-sim-slot-remove:hover {
-  color: #f06a5e;
-  background: rgba(240, 106, 94, 0.1);
+  color: var(--color-red-vibrant);
+  background: var(--color-red-vibrant-tint-10);
 }
 
 /* Toggle groups */
@@ -1444,7 +1444,7 @@ export default defineComponent({
 .damage-sim-toggle-group button.active {
   color: var(--accent);
   border-color: var(--accent-dim);
-  background: rgba(200, 168, 78, 0.08);
+  background: var(--color-accent-tint-8);
 }
 
 /* Range rows */
@@ -1491,7 +1491,7 @@ export default defineComponent({
 .damage-sim-picker-filter.active {
   color: var(--accent);
   border-color: var(--accent-dim);
-  background: rgba(200, 168, 78, 0.08);
+  background: var(--color-accent-tint-8);
 }
 
 /* Divider */
@@ -1550,8 +1550,8 @@ export default defineComponent({
   vertical-align: middle;
   margin-right: 0.25rem;
 }
-.damage-sim-pen-icon.pen { color: #6ec87a; }
-.damage-sim-pen-icon.nopen { color: #d07a6e; }
+.damage-sim-pen-icon.pen { color: var(--color-green-positive); }
+.damage-sim-pen-icon.nopen { color: var(--color-red-warm-soft); }
 
 /* Pen badge */
 .damage-sim-pen-badge {
@@ -1565,12 +1565,12 @@ export default defineComponent({
   margin-top: 0.35rem;
 }
 .damage-sim-pen-badge.pen {
-  background: rgba(110, 200, 122, 0.12);
-  color: #6ec87a;
+  background: var(--color-green-positive-tint-12);
+  color: var(--color-green-positive);
 }
 .damage-sim-pen-badge.nopen {
-  background: rgba(208, 122, 110, 0.12);
-  color: #d07a6e;
+  background: var(--color-red-warm-soft-tint-12);
+  color: var(--color-red-warm-soft);
 }
 
 /* Crit badge */
@@ -1583,7 +1583,7 @@ export default defineComponent({
   padding: 0.1rem 0.4rem;
   border-radius: 3px;
   margin-top: 0.35rem;
-  background: rgba(200, 168, 78, 0.12);
+  background: var(--color-accent-tint-12);
   color: var(--accent);
 }
 
@@ -1596,7 +1596,7 @@ export default defineComponent({
   justify-content: space-between;
   align-items: baseline;
   padding: 0.15rem 0;
-  border-bottom: 1px solid rgba(42, 42, 42, 0.5);
+  border-bottom: 1px solid var(--color-overlay-border-50);
   font-size: 0.65rem;
 }
 .damage-sim-stat-row span:first-child {
@@ -1654,7 +1654,7 @@ export default defineComponent({
 }
 .damage-sim-results-table td {
   padding: 0.3rem 0.4rem;
-  border-bottom: 1px solid rgba(42, 42, 42, 0.5);
+  border-bottom: 1px solid var(--color-overlay-border-50);
   vertical-align: top;
 }
 .damage-sim-table-label {
@@ -1752,7 +1752,7 @@ export default defineComponent({
 .damage-sim-radar-mode button.active {
   color: var(--accent);
   border-color: var(--accent-dim);
-  background: rgba(200, 168, 78, 0.08);
+  background: var(--color-accent-tint-8);
   z-index: 1;
   position: relative;
   border-left: 1px solid var(--accent-dim);
