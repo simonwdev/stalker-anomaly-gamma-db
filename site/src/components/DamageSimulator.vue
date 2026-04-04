@@ -868,7 +868,7 @@ export default defineComponent({
       this.hitzone = 'torso';
       this.faction = 'default';
       this.distance = 25;
-      this.barrelCondition = 100;
+      this.barrelCondition = 70;
       this.difficulty = 3;
       // Restore defaults
       const sunrise = this.npcArmorProfiles.find(p =>
