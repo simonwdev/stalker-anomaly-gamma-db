@@ -1,0 +1,249 @@
+/**
+ * ============================================================
+ *  COLOR PALETTE — Single source of truth for all colors.
+ * ============================================================
+ *
+ *  CONVENTION:
+ *    Every color value in any stylesheet (style.css, component
+ *    <style> blocks, inline styles) MUST reference a variable
+ *    defined here.  Never hard-code a hex, rgb(), or rgba()
+ *    value directly in a rule.  Instead:
+ *
+ *      ✔  color: var(--color-text);
+ *      ✔  background: var(--color-accent-tint-10);
+ *      ✗  color: #d4d4d4;
+ *      ✗  background: rgba(200, 168, 78, 0.1);
+ *
+ *    When a new color is needed, add it here first with a
+ *    descriptive semantic name, then use the variable.
+ *
+ *  TINT NAMING:
+ *    --color-<base>-tint-<opacity-percent>
+ *    e.g. --color-accent-tint-10 = accent color at 10 % opacity
+ *
+ *  OVERLAY NAMING:
+ *    --color-overlay-<base>-<opacity-percent>
+ *    e.g. --color-overlay-black-40 = black at 40 % opacity
+ * ============================================================
+ */
+
+:root {
+
+    /* ── Backgrounds / Surfaces ─────────────────────────── */
+    --color-black:          #000;
+    --color-bg:             #0d0d0d;   /* root app background           */
+    --color-surface-1:      #0f0f0f;   /* slightly lighter than bg      */
+    --color-surface-2:      #121212;
+    --color-surface-3:      #141414;
+    --color-surface-4:      #151515;
+    --color-surface-5:      #171717;
+    --color-card:           #1a1a1a;   /* default card / panel          */
+    --color-card-alt:       #1e1e1e;
+    --color-card-mid:       #1f1f1f;
+    --color-card-raised:    #222222;   /* elevated card                 */
+    --color-elevated:       #252525;
+    --color-elevated-2:     #343434;
+    --color-elevated-3:     #3a3a3a;
+    --color-elevated-4:     #3b3b3b;
+
+    /* ── Borders ────────────────────────────────────────── */
+    --color-border:         #2a2a2a;   /* default border                */
+    --color-border-strong:  #3b3b3b;
+
+    /* ── Text ───────────────────────────────────────────── */
+    --color-white:          #fff;
+    --color-text:           #d4d4d4;   /* primary body text             */
+    --color-text-bright:    #c8c8c8;
+    --color-text-muted:     #bdbdbd;
+    --color-text-secondary: #888;
+    --color-text-tertiary:  #999;
+
+    /* ── Accent — brand gold ────────────────────────────── */
+    --color-accent:         #c8a84e;   /* primary brand gold            */
+    --color-accent-warm:    #c89050;
+    --color-accent-orange:  #c8843c;
+    --color-accent-alt:     #b0a040;
+    --color-accent-muted:   #a8883f;
+    --color-accent-dim:     #a08030;
+    --color-accent-gold:    #dca032;
+    --color-accent-dark:    #7a6a2a;
+    --color-accent-tan:     #b8a078;
+    --color-accent-tan-alt: #b8a878;
+    --color-accent-light:   #e8d48a;
+    --color-accent-lighter: #f3d98f;
+
+    /* Accent semi-transparent tints */
+    --color-accent-tint-5:  rgba(200, 168, 78, 0.05);
+    --color-accent-tint-6:  rgba(200, 168, 78, 0.06);
+    --color-accent-tint-8:  rgba(200, 168, 78, 0.08);
+    --color-accent-tint-10: rgba(200, 168, 78, 0.10);
+    --color-accent-tint-12: rgba(200, 168, 78, 0.12);
+    --color-accent-tint-14: rgba(200, 168, 78, 0.14);
+    --color-accent-tint-15: rgba(200, 168, 78, 0.15);
+    --color-accent-tint-18: rgba(220, 160, 50,  0.18);
+    --color-accent-tint-20: rgba(200, 168, 78, 0.20);
+    --color-accent-tint-35: rgba(200, 168, 78, 0.35);
+
+    /* ── Status — Positive (green) ──────────────────────── */
+    --color-green-deep:     #2f6c37;
+    --color-green-muted:    #4a7a55;
+    --color-green:          #4ac45a;
+    --color-green-mid:      #5cb85c;
+    --color-green-soft:     #6bab5b;
+    --color-green-positive: #6ec87a;
+    --color-green-light:    #7ec88a;
+    --color-green-pale:     #8fd397;
+    --color-green-pastel:   #9ed6aa;
+
+    /* Green tints */
+    --color-green-tint-12:  rgba(107, 171, 91,  0.12);
+    --color-green-tint-15:  rgba(110, 200, 122, 0.15);
+    --color-green-tint-20:  rgba(107, 171, 91,  0.20);
+    --color-green-tint-30:  rgba(92,  184, 92,  0.30);
+    --color-green-muted-tint-20: rgba(74, 122, 85, 0.20);
+
+    /* ── Status — Info (blue) ───────────────────────────── */
+    --color-blue-muted:     #5f7fa8;
+    --color-blue-mid:       #5b8abd;
+    --color-blue:           #5b9bd5;
+    --color-blue-bright:    #60a5fa;
+    --color-blue-soft:      #6ea8d0;
+    --color-blue-light:     #78b8e0;
+    --color-blue-grey:      #7eaab8;
+    --color-blue-grey-soft: #8a9aaa;
+    --color-blue-pale:      #a9cbf6;
+
+    /* Blue tints */
+    --color-blue-tint-12:   rgba(91,  138, 189, 0.12);
+    --color-blue-tint-14:   rgba(80,  120, 180, 0.14);
+    --color-blue-tint-15:   rgba(78,  130, 200, 0.15);
+    --color-blue-tint-18:   rgba(100, 160, 210, 0.18);
+    --color-blue-tint-20:   rgba(91,  138, 189, 0.20);
+    --color-blue-tint-28:   rgba(80,  120, 180, 0.28);
+    --color-blue-tint-30:   rgba(80,  120, 180, 0.30);
+    --color-blue-bright-tint-14: rgba(96, 165, 250, 0.14);
+    --color-blue-muted-tint-20:  rgba(95, 127, 168, 0.20);
+
+    /* ── Status — Negative (red) ────────────────────────── */
+    --color-red-deep:       #8e3f3a;
+    --color-red-muted:      #b85c5c;
+    --color-red-strong:     #cc4444;   /* expanded from #c44            */
+    --color-red:            #c87070;
+    --color-red-soft:       #c87e7e;
+    --color-red-warm:       #d06050;
+    --color-red-warm-soft:  #d07a6e;
+    --color-red-mid:        #d47070;
+    --color-red-bright:     #d9534f;
+    --color-red-light:      #e57373;
+    --color-red-vibrant:    #f06a5e;
+    --color-red-pale:       #f08b84;
+    --color-red-danger:     #f44336;
+
+    /* Red tints */
+    --color-red-tint-12:    rgba(184, 92,  92,  0.12);
+    --color-red-tint-15:    rgba(200, 100, 78,  0.15);
+    --color-red-tint-18:    rgba(220, 80,  60,  0.18);
+    --color-red-tint-20:    rgba(184, 92,  92,  0.20);
+    --color-red-vibrant-tint-10: rgba(240, 106, 94, 0.10);
+    --color-red-vibrant-tint-20: rgba(240, 106, 94, 0.20);
+
+    /* ── Status — Warning (orange) ──────────────────────── */
+    --color-orange-muted:   #a66f47;
+    --color-orange:         #c8843c;
+    --color-orange-bright:  #ffb74d;
+    --color-orange-pale:    #ffc9a6;
+
+    /* Orange tints */
+    --color-orange-tint-12: rgba(255, 183, 77, 0.12);
+    --color-orange-tint-35: rgba(255, 183, 77, 0.35);
+    --color-orange-muted-tint-20: rgba(166, 111, 71, 0.20);
+    --color-orange-warm-tint-14:  rgba(180, 100, 60, 0.14);
+    --color-orange-warm-tint-18:  rgba(200, 130, 60, 0.18);
+    --color-orange-warm-tint-28:  rgba(180, 100, 60, 0.28);
+    --color-orange-warm-tint-30:  rgba(180, 100, 60, 0.30);
+
+    /* ── Special — Artefact / Purple ────────────────────── */
+    --color-purple-mid:     #9b6fb0;
+    --color-purple-light:   #a880b8;
+
+    /* Purple tints */
+    --color-purple-tint-12: rgba(155, 111, 176, 0.12);
+    --color-purple-tint-18: rgba(160, 120, 180, 0.18);
+    --color-purple-tint-20: rgba(155, 111, 176, 0.20);
+
+    /* ── Special — Teal / Olive / Warm ──────────────────── */
+    --color-teal:           #5ba8a0;
+    --color-olive:          #8b8b5e;
+    --color-warm-brown:     #7a6e50;
+
+    /* Teal tints */
+    --color-teal-tint-12:   rgba(91, 168, 160, 0.12);
+    --color-teal-tint-14:   rgba(80, 160, 120, 0.14);
+    --color-teal-tint-20:   rgba(91, 168, 160, 0.20);
+    --color-teal-tint-28:   rgba(80, 160, 120, 0.28);
+    --color-teal-tint-30:   rgba(80, 160, 120, 0.30);
+
+    /* Olive / warm tints */
+    --color-olive-tint-12:      rgba(139, 139, 94,  0.12);
+    --color-olive-tint-20:      rgba(139, 139, 94,  0.20);
+    --color-warm-brown-tint-12: rgba(122, 110, 80,  0.12);
+    --color-warm-brown-tint-20: rgba(122, 110, 80,  0.20);
+    --color-accent-dark-tint-20: rgba(122, 106, 42, 0.20);
+    --color-grey-tint-12:       rgba(140, 140, 140, 0.18);
+    --color-grey-blue-tint-12:  rgba(140, 160, 180, 0.12);
+    --color-accent-tan-tint-12: rgba(180, 160, 120, 0.12);
+    --color-accent-tan-tint-18: rgba(180, 160, 120, 0.18);
+    --color-accent-alt-tint-18: rgba(180, 160, 60,  0.18);
+
+    /* ── Map theme ──────────────────────────────────────── */
+    --color-map-bg:             #141a1f;
+    --color-map-surface:        #1c2228;
+    --color-map-border:         #2d3540;
+    --color-map-elevated:       #3d444d;
+    --color-map-elevated-2:     #3d464e;
+    --color-map-text-muted:     #6a7a8a;
+    --color-map-text:           #c8d4dc;
+    --color-map-text-light:     #d4dade;
+    --color-map-text-bright:    #d8e3ea;
+
+    /* ── Semi-transparent overlays ──────────────────────── */
+
+    /* Black */
+    --color-overlay-black-40:   rgba(0, 0, 0, 0.40);
+    --color-overlay-black-50:   rgba(0, 0, 0, 0.50);
+    --color-overlay-black-55:   rgba(0, 0, 0, 0.55);
+    --color-overlay-black-70:   rgba(0, 0, 0, 0.70);
+
+    /* White */
+    --color-overlay-white-1:    rgba(255, 255, 255, 0.01);
+    --color-overlay-white-2:    rgba(255, 255, 255, 0.02);
+    --color-overlay-white-3:    rgba(255, 255, 255, 0.03);
+    --color-overlay-white-4:    rgba(255, 255, 255, 0.04);
+    --color-overlay-white-5:    rgba(255, 255, 255, 0.05);
+    --color-overlay-white-6:    rgba(255, 255, 255, 0.06);
+    --color-overlay-white-7:    rgba(255, 255, 255, 0.07);
+    --color-overlay-white-8:    rgba(255, 255, 255, 0.08);
+    --color-overlay-white-10:   rgba(255, 255, 255, 0.10);
+    --color-overlay-white-14:   rgba(255, 255, 255, 0.14);
+    --color-overlay-white-15:   rgba(255, 255, 255, 0.15);
+    --color-overlay-white-25:   rgba(255, 255, 255, 0.25);
+    --color-overlay-white-50:   rgba(255, 255, 255, 0.50);
+    --color-overlay-white-90:   rgba(255, 255, 255, 0.90);
+
+    /* Border / card overlays */
+    --color-overlay-border-50:  rgba(42, 42, 42, 0.50);
+
+    /* ── Theme alias shortcuts (bridge to existing :root vars) ── */
+    /* These mirror the short-form vars already used across the    */
+    /* codebase so existing rules continue to work unchanged.      */
+    --bg:            var(--color-bg);
+    --card:          var(--color-card);
+    --card-raised:   var(--color-card-raised);
+    --border:        var(--color-border);
+    --text:          var(--color-text);
+    --text-primary:  var(--color-text);
+    --text-secondary: var(--color-text-secondary);
+    --accent:        var(--color-accent);
+    --accent-dim:    var(--color-accent-dim);
+}
+
