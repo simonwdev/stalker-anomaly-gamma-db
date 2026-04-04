@@ -2,7 +2,7 @@
   {
     "date": "2026-04-05",
     "entries": [
-      { "type": "added", "text": "Scopes, Silencers, and Grenade Launchers category pages, and in compatible attachment chips with icons inside the gun detail modal.", "credits": [{ "name": "Evincars", "role": "code" }] }
+      { "type": "added", "text": "Scopes, Silencers, and Grenade Launchers category pages with tile/grid views (detail modal for attachment with compatible weapons), and compatible attachments with icons inside the gun detail modal.", "credits": [{ "name": "Evincars", "role": "code" }] }
     ]
   },
   {
