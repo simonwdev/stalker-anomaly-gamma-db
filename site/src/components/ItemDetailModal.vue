@@ -335,7 +335,7 @@
                             class="addon-compat-weapon-link"
                             v-tooltip="weaponTooltip(w)"
                             @click.prevent="$emit('navigateToItem', w.id)"
-                        >{{ tName(w) }}</a>
+                        >{{ weaponDisplayName(w) }}</a>
                     </div>
                 </div>
             </div>
@@ -439,9 +439,12 @@ export default {
         html: `<div class="addon-tooltip"><div class="addon-tooltip-name">${name}</div><div class="addon-tooltip-stats">${rows.join('')}</div></div>`,
       };
     },
+    weaponDisplayName(w) {
+      return this.tName(w).replace(/\s*\[default\]$/i, '').trim();
+    },
     weaponTooltip(w) {
       const esc = this._esc.bind(this);
-      const name = esc(this.tName(w));
+      const name = esc(this.weaponDisplayName(w));
       const cat = esc(this.tCat(w.category || ''));
       const imgUrl = esc('img/icons/' + w.id + '.png');
       const STAT_KEYS = ['ui_inv_damage', 'ui_inv_accuracy', 'ui_inv_handling', 'ui_inv_wrange', 'ui_ammo_count'];

@@ -4088,7 +4088,10 @@ export const appDefinition = {
             const indexMap = new Map(this.index.map(i => [i.id, i]));
             // Translate, deduplicate names, then sort
             const allNames = [...new Set(
-                weaponIds.map(wid => esc(this.tName(indexMap.get(wid) || { id: wid, pda_encyclopedia_name: wid })))
+                weaponIds.map(wid => {
+                    const item = indexMap.get(wid) || { id: wid, pda_encyclopedia_name: wid };
+                    return esc(this.tName(item).replace(/\s*\[default\]$/i, '').trim());
+                })
             )].sort((a, b) => a.localeCompare(b));
             const shown = allNames.slice(0, MAX_SHOWN);
             const extra = allNames.length - shown.length;
