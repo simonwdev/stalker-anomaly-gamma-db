@@ -4091,8 +4091,9 @@ export const appDefinition = {
             const extra = names.length - shown.length;
             const countLabel = `<span class="addon-compat-count">(${names.length})</span>`;
             const items = shown.map(n => `<div class="addon-compat-weapon">${n}</div>`).join('');
+            const moreInDetail = this.t('app_label_more_in_detail');
             const moreLabel = extra > 0
-                ? `<div class="addon-compat-more">+${extra} ${esc(this.t('app_label_more_in_detail'))}</div>`
+                ? `<div class="addon-compat-more">+${extra} ${esc(moreInDetail === 'app_label_more_in_detail' ? 'more · open detail for full list' : moreInDetail)}</div>`
                 : '';
             return {
                 className: 'tooltip-addon-weapons-card',
