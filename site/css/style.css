@@ -1099,12 +1099,12 @@ a.tile-card-name:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.25rem 0 0.15rem;
-    min-height: 1.8rem;
+    padding: 0.3rem 0 0.2rem;
+    min-height: 4.5rem;
 }
 .tile-card-icon-row .addon-img-tile-icon {
-    max-width: 120px;
-    height: 1.5rem;
+    max-width: 200px;
+    height: 4rem;
 }
 .tile-stat-row:has(.tile-ammo-list) {
     grid-column: 1 / -1;
@@ -1906,6 +1906,57 @@ input.range-input {
     background: rgba(180, 100, 60, 0.28);
     color: var(--text-primary);
 }
+
+/* ── Addon image tiles ─────────────────────────────────────────────────────
+   Used in:
+     • Gun detail modal: Compatible Scopes / Silencers / Launchers sections
+     • Scope / Silencer / Launcher detail modal header (via .modal-addon-img-box)
+   ────────────────────────────────────────────────────────────────────────── */
+.addon-tile-group {
+    align-items: flex-start;
+}
+.addon-tile-section-label {
+    align-self: flex-start;
+    padding-top: 0.3rem;
+}
+.addon-img-tile {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.3rem 0.45rem 0.35rem;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 0.2rem;
+    min-width: 3.2rem;
+    max-width: 6rem;
+    transition: background 0.15s;
+    vertical-align: top;
+}
+.addon-img-tile-icon {
+    width: auto;
+    height: 2rem;
+    max-width: 4.5rem;
+    object-fit: contain;
+    image-rendering: pixelated;
+    display: block;
+}
+.addon-img-tile-name {
+    font-size: 0.55rem;
+    text-align: center;
+    word-break: break-word;
+    line-height: 1.25;
+    font-family: monospace;
+    color: var(--text-secondary);
+    max-width: 5.5rem;
+}
+.addon-img-tile-scope  { background: rgba(80, 160, 120, 0.14); }
+.addon-img-tile-scope:hover  { background: rgba(80, 160, 120, 0.30); }
+.addon-img-tile-silencer { background: rgba(80, 120, 180, 0.14); }
+.addon-img-tile-silencer:hover { background: rgba(80, 120, 180, 0.30); }
+.addon-img-tile-launcher { background: rgba(180, 100, 60, 0.14); }
+.addon-img-tile-launcher:hover { background: rgba(180, 100, 60, 0.30); }
+
 .desc-chip-label {
     display: inline-flex;
     align-items: center;
@@ -2563,7 +2614,12 @@ input.range-input {
     border-radius: 6px;
 }
 .modal-addon-img-box .modal-addon-img {
-    /* inherits addon-img-tile-icon sizing — height: 1.5rem */
+    height: 2.5rem;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    display: block;
 }
 @media (max-width: 500px) {
     .modal-addon-img-box {

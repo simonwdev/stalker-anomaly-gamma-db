@@ -118,38 +118,47 @@
                                     <span v-else v-for="item in section.items" class="desc-chip">{{ item }}</span>
                                 </template>
                             </div>
-                            <div v-if="modalWeaponAddons.scopes.length" class="desc-chip-group">
-                                <span class="desc-chip-label">{{ t('app_label_compatible_scopes') }}</span>
+                            <div v-if="modalWeaponAddons.scopes.length" class="desc-chip-group addon-tile-group">
+                                <span class="desc-chip-label addon-tile-section-label">{{ t('app_label_compatible_scopes') }}</span>
                                 <a
                                     v-for="addon in modalWeaponAddons.scopes"
                                     :key="addon.id"
                                     href="#"
-                                    class="desc-chip desc-chip-scope"
+                                    class="addon-img-tile addon-img-tile-scope"
                                     v-tooltip="addonTooltip(addon)"
                                     @click.prevent="$emit('navigateToItem', addon.id)"
-                                >{{ t(addon.pda_encyclopedia_name) }}</a>
+                                >
+                                    <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                                    <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
+                                </a>
                             </div>
-                            <div v-if="modalWeaponAddons.silencers.length" class="desc-chip-group">
-                                <span class="desc-chip-label">{{ t('app_label_compatible_silencers') }}</span>
+                            <div v-if="modalWeaponAddons.silencers.length" class="desc-chip-group addon-tile-group">
+                                <span class="desc-chip-label addon-tile-section-label">{{ t('app_label_compatible_silencers') }}</span>
                                 <a
                                     v-for="addon in modalWeaponAddons.silencers"
                                     :key="addon.id"
                                     href="#"
-                                    class="desc-chip desc-chip-silencer"
+                                    class="addon-img-tile addon-img-tile-silencer"
                                     v-tooltip="addonTooltip(addon)"
                                     @click.prevent="$emit('navigateToItem', addon.id)"
-                                >{{ t(addon.pda_encyclopedia_name) }}</a>
+                                >
+                                    <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                                    <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
+                                </a>
                             </div>
-                            <div v-if="modalWeaponAddons.launchers.length" class="desc-chip-group">
-                                <span class="desc-chip-label">{{ t('app_label_compatible_launchers') }}</span>
+                            <div v-if="modalWeaponAddons.launchers.length" class="desc-chip-group addon-tile-group">
+                                <span class="desc-chip-label addon-tile-section-label">{{ t('app_label_compatible_launchers') }}</span>
                                 <a
                                     v-for="addon in modalWeaponAddons.launchers"
                                     :key="addon.id"
                                     href="#"
-                                    class="desc-chip desc-chip-launcher"
+                                    class="addon-img-tile addon-img-tile-launcher"
                                     v-tooltip="addonTooltip(addon)"
                                     @click.prevent="$emit('navigateToItem', addon.id)"
-                                >{{ t(addon.pda_encyclopedia_name) }}</a>
+                                >
+                                    <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                                    <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
+                                </a>
                             </div>
                         </div>
                     </div>
