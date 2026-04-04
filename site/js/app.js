@@ -1672,6 +1672,7 @@ export const appDefinition = {
 
         async fetchJsonCached(cacheKey, filename) {
             if (this[cacheKey] !== null) return this[cacheKey];
+            if (!this.fileManifest[filename]) { this[cacheKey] = {}; return this[cacheKey]; }
             try {
                 const res = await fetch(this.dataUrl(filename));
                 this[cacheKey] = res.ok ? await res.json() : {};
