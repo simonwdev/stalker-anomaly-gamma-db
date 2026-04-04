@@ -660,7 +660,14 @@ export const appDefinition = {
             if (!weaponIds.length) return [];
             const indexMap = new Map((this.index || []).map(i => [i.id, i]));
             return weaponIds
-                .map(id => indexMap.get(id))
+                .map(id => {
+                    const indexItem = indexMap.get(id);
+                    if (!indexItem) return null;
+                    // Use full item from categoryItems if already loaded (populated by openItem for addon modals)
+                    const slug = categorySlug(indexItem.category);
+                    const full = this.categoryItems[slug]?.find(i => i.id === id);
+                    return full || indexItem;
+                })
                 .filter(Boolean)
                 .sort((a, b) => (this.tName(a) || '').localeCompare(this.tName(b) || ''));
         },
@@ -2351,6 +2358,30 @@ export const appDefinition = {
                 this.modalRecipeData = recipeData;
                 this.modalDisassemble = disassemble[id] || null;
                 this.modalAmmoWeapons = ammoWeapons[id] || null;
+
+                // For addon items (scopes/silencers/grenade launchers), pre-fetch compatible
+                // weapon category data so the modal can show rich stat tooltips on each weapon.
+                if ([CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS].includes(entry.category)) {
+                    await this.fetchWeaponAddons();
+                    const weaponIds = this.addonCompatibleWeaponsMap[id] || [];
+                    if (weaponIds.length) {
+                        const idxMap = new Map(this.index.map(i => [i.id, i]));
+                        const slugsToLoad = [...new Set(
+                            weaponIds.map(wid => {
+                                const we = idxMap.get(wid);
+                                return we ? categorySlug(we.category) : null;
+                            }).filter(Boolean)
+                        )].filter(s => !this.categoryItems[s]);
+                        await Promise.all(slugsToLoad.map(async s => {
+                            try {
+                                const res = await fetch(this.dataUrl(`${s}.json`));
+                                const data = await res.json();
+                                this.categoryItems[s] = data.items;
+                                this.categoryHeaders[s] = data.headers;
+                            } catch (e) { /* non-critical */ }
+                        }));
+                    }
+                }
             } catch (e) {
                 console.error("Failed to load item:", e);
             }
@@ -4051,15 +4082,21 @@ export const appDefinition = {
                     html: `<div class="addon-compat-tooltip"><div class="addon-compat-title">${title}</div><div class="addon-compat-none">${esc(this.t('app_label_no_compatible_weapons'))}</div></div>`,
                 };
             }
+            const MAX_SHOWN = 20;
             const indexMap = new Map(this.index.map(i => [i.id, i]));
             const names = weaponIds
                 .map(wid => esc(this.tName(indexMap.get(wid) || { id: wid, pda_encyclopedia_name: wid })))
                 .sort((a, b) => a.localeCompare(b));
+            const shown = names.slice(0, MAX_SHOWN);
+            const extra = names.length - shown.length;
             const countLabel = `<span class="addon-compat-count">(${names.length})</span>`;
-            const items = names.map(n => `<div class="addon-compat-weapon">${n}</div>`).join('');
+            const items = shown.map(n => `<div class="addon-compat-weapon">${n}</div>`).join('');
+            const moreLabel = extra > 0
+                ? `<div class="addon-compat-more">+${extra} ${esc(this.t('app_label_more_in_detail'))}</div>`
+                : '';
             return {
                 className: 'tooltip-addon-weapons-card',
-                html: `<div class="addon-compat-tooltip"><div class="addon-compat-title">${title} ${countLabel}</div><div class="addon-compat-list">${items}</div></div>`,
+                html: `<div class="addon-compat-tooltip"><div class="addon-compat-title">${title} ${countLabel}</div><div class="addon-compat-list">${items}</div>${moreLabel}</div>`,
             };
         },
 

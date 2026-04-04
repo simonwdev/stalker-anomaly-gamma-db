@@ -268,6 +268,63 @@ a:hover {
     color: #8a9aaa;
     font-style: italic;
 }
+.addon-compat-more {
+    font-size: 0.6rem;
+    color: #6a7a8a;
+    font-style: italic;
+    margin-top: 0.25rem;
+    padding-top: 0.2rem;
+    border-top: 1px solid #2d3540;
+}
+
+/* Weapon quick-stat tooltip (compatible weapons list in addon modal) */
+.tooltip.tooltip-weapon-quick {
+    max-width: 230px;
+    padding: 0.4rem;
+}
+.weapon-quick-tooltip {}
+.wqt-header {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #2d3540;
+    margin-bottom: 0.25rem;
+}
+.wqt-img {
+    width: 48px;
+    height: 22px;
+    object-fit: contain;
+    background: rgba(255,255,255,0.03);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+.wqt-info {}
+.wqt-name {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #d8e3ea;
+    line-height: 1.2;
+}
+.wqt-cat {
+    font-size: 0.59rem;
+    color: #8a9aaa;
+    margin-top: 0.05rem;
+}
+.wqt-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.wqt-stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.61rem;
+}
+.wqt-key { color: #8a9aaa; }
+.wqt-val { color: #c8d4dc; font-weight: 500; }
 .site-header {
     background: #141414;
     border-bottom: 1px solid var(--border);

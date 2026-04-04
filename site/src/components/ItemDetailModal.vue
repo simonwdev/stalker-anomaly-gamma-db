@@ -333,6 +333,7 @@
                             :key="w.id"
                             href="#"
                             class="addon-compat-weapon-link"
+                            v-tooltip="weaponTooltip(w)"
                             @click.prevent="$emit('navigateToItem', w.id)"
                         >{{ tName(w) }}</a>
                     </div>
@@ -436,6 +437,28 @@ export default {
       return {
         className: 'tooltip-addon-card',
         html: `<div class="addon-tooltip"><div class="addon-tooltip-name">${name}</div><div class="addon-tooltip-stats">${rows.join('')}</div></div>`,
+      };
+    },
+    weaponTooltip(w) {
+      const esc = this._esc.bind(this);
+      const name = esc(this.tName(w));
+      const cat = esc(this.tCat(w.category || ''));
+      const imgUrl = esc('img/icons/' + w.id + '.png');
+      const STAT_KEYS = ['ui_inv_damage', 'ui_inv_accuracy', 'ui_inv_handling', 'ui_inv_wrange', 'ui_ammo_count'];
+      const statRows = STAT_KEYS
+        .filter(k => w[k] !== undefined && w[k] !== null && w[k] !== '')
+        .map(k =>
+          `<div class="wqt-stat-row"><span class="wqt-key">${esc(this.headerLabel(k))}</span><span class="wqt-val">${esc(this.formatValue(k, w[k]))}</span></div>`
+        ).join('');
+      return {
+        className: 'tooltip-weapon-quick',
+        html: `<div class="weapon-quick-tooltip">
+          <div class="wqt-header">
+            <img class="wqt-img" src="${imgUrl}" onerror="this.style.display='none'" alt="" />
+            <div class="wqt-info"><div class="wqt-name">${name}</div><div class="wqt-cat">${cat}</div></div>
+          </div>
+          ${statRows ? `<div class="wqt-stats">${statRows}</div>` : ''}
+        </div>`,
       };
     },
   },
