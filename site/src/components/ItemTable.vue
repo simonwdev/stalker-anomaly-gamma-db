@@ -16,7 +16,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="item in visibleItems" :key="item.id" @click="$emit('navigateToItem', item.id)" class="clickable-row">
+        <tr v-for="item in visibleItems" :key="item.id" @click="$emit('navigateToItem', item.id)" class="clickable-row" v-tooltip="rowTooltipFn ? rowTooltipFn(item) : null">
             <td class="fav-col" @click.stop="$emit('toggleFavorite', item.id)">
                 <span class="fav-icon" :class="{ favorited: isFavorited(item.id) }">{{ isFavorited(item.id) ? '\u2605' : '\u2606' }}</span>
             </td>
@@ -111,6 +111,7 @@ export default {
     favoriteIds: { type: Array, required: true },
     pinnedIds: { type: Array, required: true },
     activeNameTags: { type: Array, required: true },
+    rowTooltipFn: { type: Function, default: null },
   },
   emits: ["navigateToItem", "toggleFavorite", "togglePin", "toggleSort"],
   methods: {

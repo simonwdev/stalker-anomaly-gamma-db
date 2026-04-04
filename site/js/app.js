@@ -586,6 +586,11 @@ export const appDefinition = {
             if (categories.every(c => WEAPON_CATEGORIES.includes(c))) return WEAPON_STAT_FIELDS;
             if (categories.every(c => c === CAT.OUTFITS || c === CAT.HELMETS)) return PROTECTION_FIELDS;
             if (categories.every(c => c === CAT.AMMO)) return [...AMMO_MULTIPLIER_FIELDS, ...AMMO_ONLY_FIELDS];
+            if (categories.every(c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS)) {
+                return ["st_prop_weight", "st_upgr_cost", "st_data_export_zoom_factor"].filter(f =>
+                    this.compareData.some(e => e.item[f] != null && e.item[f] !== "")
+                );
+            }
             // Mixed: find common numeric fields
             return this.compareHeaders.filter(h => {
                 if (SKIP_KEYS.has(h) || BADGE_COLS.has(h) || NO_HIGHLIGHT.has(h)) return false;
@@ -2815,6 +2820,66 @@ export const appDefinition = {
             const self = this;
             const categories = this.compareData.map(e => e.category);
             const isMutantParts = categories.every(c => c === CAT.MUTANT_PARTS);
+            const isAddonCat = categories.every(c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS);
+
+            // Addon categories (Scopes/Silencers/Grenade Launchers): use a horizontal bar chart with real values
+            if (isAddonCat) {
+                const labels = fields.map(f => this.headerLabel(f));
+                const datasets = this.compareData.map((entry, i) => {
+                    const color = CHART_COLORS[i % CHART_COLORS.length];
+                    return {
+                        label: this.tName(entry.item),
+                        data: fields.map(f => {
+                            const n = parseFloat(String(entry.item[f] ?? "").replace("%", ""));
+                            return isNaN(n) ? 0 : n;
+                        }),
+                        backgroundColor: hexToRgba(color, 0.75),
+                        borderColor: color,
+                        borderWidth: 1,
+                    };
+                });
+                this._compareChart = new Chart(canvas, {
+                    type: "bar",
+                    data: { labels, datasets },
+                    options: {
+                        indexAxis: "y",
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        aspectRatio: 1.6,
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                ticks: { color: "#b0b0b0", font: { size: 11 } },
+                                grid: { color: "#2a2a2a" },
+                            },
+                            y: {
+                                ticks: { color: "#d4d4d4", font: { size: 12 } },
+                                grid: { color: "#2a2a2a" },
+                            },
+                        },
+                        plugins: {
+                            legend: { labels: { color: "#d4d4d4", font: { size: 12 }, usePointStyle: true, pointStyle: "circle" } },
+                            tooltip: {
+                                backgroundColor: "#1a1a1a",
+                                titleColor: "#d4d4d4",
+                                bodyColor: "#d4d4d4",
+                                borderColor: "#2a2a2a",
+                                borderWidth: 1,
+                                callbacks: {
+                                    label(ctx) {
+                                        const field = fields[ctx.dataIndex];
+                                        const entry = self.compareData[ctx.datasetIndex];
+                                        const rawVal = entry.item[field];
+                                        const name = self.tName(entry.item);
+                                        return `${name}: ${self.formatValue(field, rawVal ?? "--")}`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                return;
+            }
 
             // Mutant parts: use a grouped bar chart (actual price values) instead of radar
             if (isMutantParts) {

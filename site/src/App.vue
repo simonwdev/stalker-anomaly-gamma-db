@@ -345,6 +345,7 @@
                 :favorite-ids="favoriteIds"
                 :pinned-ids="pinnedIds"
                 :active-name-tags="activeNameTags"
+                :row-tooltip-fn="isAddonCategory ? addonCompatibleWeaponsTooltip : null"
                 @navigate-to-item="navigateToItem"
                 @toggle-favorite="toggleFavorite"
                 @toggle-pin="togglePin"
