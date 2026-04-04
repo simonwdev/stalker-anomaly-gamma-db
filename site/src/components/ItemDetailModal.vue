@@ -103,39 +103,45 @@
                     <div class="modal-description-content">
                         <p v-if="parsedDescription" class="modal-description">{{ parsedDescription.text }}</p>
                         <div v-if="(parsedDescription && parsedDescription.sections.length) || hasWeaponAddons" class="modal-desc-meta">
-                            <template v-if="parsedDescription && parsedDescription.sections.length">
+                            <div v-if="parsedDescription && parsedDescription.sections.length" class="desc-chip-group">
                                 <template v-for="section in parsedDescription.sections">
                                     <span v-if="section.header === 'WARNING'" v-for="item in section.items" class="desc-chip desc-chip-warning">{{ item }}</span>
                                     <span v-else v-for="item in section.items" class="desc-chip">{{ item }}</span>
                                 </template>
-                            </template>
-                            <template v-if="modalWeaponAddons.scopes.length">
+                            </div>
+                            <div v-if="modalWeaponAddons.scopes.length" class="desc-chip-group">
                                 <span class="desc-chip-label">{{ t('app_label_compatible_scopes') }}</span>
-                                <span
+                                <a
                                     v-for="addon in modalWeaponAddons.scopes"
                                     :key="addon.id"
+                                    href="#"
                                     class="desc-chip desc-chip-scope"
                                     v-tooltip="addonTooltip(addon)"
-                                >{{ t(addon.pda_encyclopedia_name) }}</span>
-                            </template>
-                            <template v-if="modalWeaponAddons.silencers.length">
+                                    @click.prevent="$emit('navigateToItem', addon.id)"
+                                >{{ t(addon.pda_encyclopedia_name) }}</a>
+                            </div>
+                            <div v-if="modalWeaponAddons.silencers.length" class="desc-chip-group">
                                 <span class="desc-chip-label">{{ t('app_label_compatible_silencers') }}</span>
-                                <span
+                                <a
                                     v-for="addon in modalWeaponAddons.silencers"
                                     :key="addon.id"
+                                    href="#"
                                     class="desc-chip desc-chip-silencer"
                                     v-tooltip="addonTooltip(addon)"
-                                >{{ t(addon.pda_encyclopedia_name) }}</span>
-                            </template>
-                            <template v-if="modalWeaponAddons.launchers.length">
+                                    @click.prevent="$emit('navigateToItem', addon.id)"
+                                >{{ t(addon.pda_encyclopedia_name) }}</a>
+                            </div>
+                            <div v-if="modalWeaponAddons.launchers.length" class="desc-chip-group">
                                 <span class="desc-chip-label">{{ t('app_label_compatible_launchers') }}</span>
-                                <span
+                                <a
                                     v-for="addon in modalWeaponAddons.launchers"
                                     :key="addon.id"
+                                    href="#"
                                     class="desc-chip desc-chip-launcher"
                                     v-tooltip="addonTooltip(addon)"
-                                >{{ t(addon.pda_encyclopedia_name) }}</span>
-                            </template>
+                                    @click.prevent="$emit('navigateToItem', addon.id)"
+                                >{{ t(addon.pda_encyclopedia_name) }}</a>
+                            </div>
                         </div>
                     </div>
                 </div>

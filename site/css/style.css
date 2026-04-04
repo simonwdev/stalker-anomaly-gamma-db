@@ -1838,9 +1838,15 @@ input.range-input {
 }
 .modal-desc-meta {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
+    flex-direction: column;
+    gap: 0.4rem;
     margin: 0.35rem 0 0.25rem;
+}
+.desc-chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
 }
 .desc-chip {
     display: inline-block;
@@ -1861,18 +1867,33 @@ input.range-input {
     color: var(--text-secondary);
     font-family: monospace;
     font-size: 0.63rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+.desc-chip-scope:hover {
+    background: rgba(80, 160, 120, 0.28);
+    color: var(--text-primary);
 }
 .desc-chip-silencer {
     background: rgba(80, 120, 180, 0.14);
     color: var(--text-secondary);
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
+}
+.desc-chip-silencer:hover {
+    background: rgba(80, 120, 180, 0.28);
+    color: var(--text-primary);
 }
 .desc-chip-launcher {
     background: rgba(180, 100, 60, 0.14);
     color: var(--text-secondary);
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
 }
-.desc-chip-scope { cursor: default; }
+.desc-chip-launcher:hover {
+    background: rgba(180, 100, 60, 0.28);
+    color: var(--text-primary);
+}
 .desc-chip-label {
     display: inline-flex;
     align-items: center;
