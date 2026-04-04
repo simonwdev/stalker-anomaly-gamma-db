@@ -102,16 +102,39 @@
                 <div class="modal-description-row">
                     <div class="modal-description-content">
                         <p v-if="parsedDescription" class="modal-description">{{ parsedDescription.text }}</p>
-                        <div v-if="(parsedDescription && parsedDescription.sections.length) || modalCompatibleScopes.length" class="modal-desc-meta">
+                        <div v-if="(parsedDescription && parsedDescription.sections.length) || hasWeaponAddons" class="modal-desc-meta">
                             <template v-if="parsedDescription && parsedDescription.sections.length">
                                 <template v-for="section in parsedDescription.sections">
                                     <span v-if="section.header === 'WARNING'" v-for="item in section.items" class="desc-chip desc-chip-warning">{{ item }}</span>
                                     <span v-else v-for="item in section.items" class="desc-chip">{{ item }}</span>
                                 </template>
                             </template>
-                            <template v-if="modalCompatibleScopes.length">
+                            <template v-if="modalWeaponAddons.scopes.length">
                                 <span class="desc-chip-label">{{ t('app_label_compatible_scopes') }}</span>
-                                <span v-for="scopeId in modalCompatibleScopes" :key="scopeId" class="desc-chip desc-chip-scope">{{ scopeId }}</span>
+                                <span
+                                    v-for="addon in modalWeaponAddons.scopes"
+                                    :key="addon.id"
+                                    class="desc-chip desc-chip-scope"
+                                    v-tooltip="addonTooltip(addon)"
+                                >{{ t(addon.pda_encyclopedia_name) }}</span>
+                            </template>
+                            <template v-if="modalWeaponAddons.silencers.length">
+                                <span class="desc-chip-label">{{ t('app_label_compatible_silencers') }}</span>
+                                <span
+                                    v-for="addon in modalWeaponAddons.silencers"
+                                    :key="addon.id"
+                                    class="desc-chip desc-chip-silencer"
+                                    v-tooltip="addonTooltip(addon)"
+                                >{{ t(addon.pda_encyclopedia_name) }}</span>
+                            </template>
+                            <template v-if="modalWeaponAddons.launchers.length">
+                                <span class="desc-chip-label">{{ t('app_label_compatible_launchers') }}</span>
+                                <span
+                                    v-for="addon in modalWeaponAddons.launchers"
+                                    :key="addon.id"
+                                    class="desc-chip desc-chip-launcher"
+                                    v-tooltip="addonTooltip(addon)"
+                                >{{ t(addon.pda_encyclopedia_name) }}</span>
                             </template>
                         </div>
                     </div>
@@ -338,6 +361,7 @@ export default {
     modalUsedByWeapons: Array,
     parsedDescription: Object,
     modalCompatibleScopes: { type: Array, default: () => [] },
+    modalWeaponAddons: { type: Object, default: () => ({ scopes: [], silencers: [], launchers: [] }) },
     favoriteIds: Array,
     pinnedIds: Array,
     packs: Array,
@@ -359,6 +383,12 @@ export default {
       compareMenuOpen: false,
     };
   },
+  computed: {
+    hasWeaponAddons() {
+      const a = this.modalWeaponAddons;
+      return a.scopes.length > 0 || a.silencers.length > 0 || a.launchers.length > 0;
+    },
+  },
   methods: {
     isFavorited(id) {
       return this.favoriteIds.includes(id);
@@ -368,6 +398,27 @@ export default {
     },
     closeCompareMenu() {
       this.compareMenuOpen = false;
+    },
+    _esc(s) {
+      return String(s ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+    },
+    addonTooltip(addon) {
+      const esc = this._esc.bind(this);
+      const kv = (key, val) =>
+        `<div class="addon-tt-row"><span class="addon-tt-key">${esc(this.headerLabel(key))}</span><span class="addon-tt-val">${esc(val)}</span></div>`;
+      const bool = (label, val) =>
+        `<div class="addon-tt-row"><span class="addon-tt-key">${esc(label)}</span><span class="addon-tt-val ${val ? 'addon-tt-yes' : 'addon-tt-no'}">${val ? '✓' : '✗'}</span></div>`;
+      const rows = [];
+      if (addon.st_prop_weight) rows.push(kv('st_prop_weight', addon.st_prop_weight));
+      if (addon.st_upgr_cost) rows.push(kv('st_upgr_cost', addon.st_upgr_cost + ' ₽'));
+      if (addon.st_data_export_zoom_factor) rows.push(kv('st_data_export_zoom_factor', addon.st_data_export_zoom_factor + 'x'));
+      rows.push(bool(this.t('app_label_stash_drop'), addon.hasStashDrop));
+      rows.push(bool(this.t('app_label_can_disassemble'), addon.hasDisassemble));
+      const name = esc(this.t(addon.pda_encyclopedia_name || addon.id));
+      return {
+        className: 'tooltip-addon-card',
+        html: `<div class="addon-tooltip"><div class="addon-tooltip-name">${name}</div><div class="addon-tooltip-stats">${rows.join('')}</div></div>`,
+      };
     },
   },
 };

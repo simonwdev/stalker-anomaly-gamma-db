@@ -374,6 +374,9 @@ export const appDefinition = {
             disassembleCache: null,
             ammoWeaponsCache: null,
             scopesCache: null,
+            weaponAddonsCache: null,
+            silencerItemsCache: null,
+            launcherItemsCache: null,
             mutantProfilesCache: null,
             npcArmorProfilesCache: null,
             gboConstantsCache: null,
@@ -632,6 +635,20 @@ export const appDefinition = {
             return Object.entries(this.scopesCache)
                 .filter(([, weapons]) => weapons.includes(id))
                 .map(([addonId]) => addonId);
+        },
+
+        modalWeaponAddons() {
+            if (!this.modalItem || !this.weaponAddonsCache) return { scopes: [], silencers: [], launchers: [] };
+            const addons = this.weaponAddonsCache[this.modalItem.id];
+            if (!addons) return { scopes: [], silencers: [], launchers: [] };
+            const scopeMap = Object.fromEntries((this.scopesCache?.items || []).map(i => [i.id, i]));
+            const silencerMap = Object.fromEntries((this.silencerItemsCache?.items || []).map(i => [i.id, i]));
+            const launcherMap = Object.fromEntries((this.launcherItemsCache?.items || []).map(i => [i.id, i]));
+            return {
+                scopes: (addons.scopes || []).map(id => scopeMap[id]).filter(Boolean),
+                silencers: (addons.silencers || []).map(id => silencerMap[id]).filter(Boolean),
+                launchers: (addons.launchers || []).map(id => launcherMap[id]).filter(Boolean),
+            };
         },
 
         modalStatRows() {
@@ -1714,6 +1731,18 @@ export const appDefinition = {
             return this.fetchJsonCached("scopesCache", "scopes.json");
         },
 
+        fetchWeaponAddons() {
+            return this.fetchJsonCached("weaponAddonsCache", "weapon-addons.json");
+        },
+
+        fetchSilencerItems() {
+            return this.fetchJsonCached("silencerItemsCache", "silencers.json");
+        },
+
+        fetchLauncherItems() {
+            return this.fetchJsonCached("launcherItemsCache", "launchers.json");
+        },
+
         fetchMutantProfiles() {
             return this.fetchJsonCached("mutantProfilesCache", "mutant-profiles.json");
         },
@@ -1859,6 +1888,9 @@ export const appDefinition = {
             }
             this.calibers = await this.fetchCalibers();
             this.fetchScopes();
+            this.fetchWeaponAddons();
+            this.fetchSilencerItems();
+            this.fetchLauncherItems();
             this.rebuildGlobalFuse();
             this.loading = false;
             const preloader = document.getElementById('app-preloader');
@@ -1889,6 +1921,9 @@ export const appDefinition = {
             this.disassembleCache = null;
             this.ammoWeaponsCache = null;
             this.scopesCache = null;
+            this.weaponAddonsCache = null;
+            this.silencerItemsCache = null;
+            this.launcherItemsCache = null;
             this.outfitExchange = null;
             this.displayLabels = {};
             this.translations = null;
@@ -2266,6 +2301,9 @@ export const appDefinition = {
                     this.fetchDisassemble(),
                     this.fetchAmmoWeapons(),
                     WEAPON_CATEGORIES.includes(entry.category) ? this.fetchScopes() : Promise.resolve(null),
+                    WEAPON_CATEGORIES.includes(entry.category) ? this.fetchWeaponAddons() : Promise.resolve(null),
+                    WEAPON_CATEGORIES.includes(entry.category) ? this.fetchSilencerItems() : Promise.resolve(null),
+                    WEAPON_CATEGORIES.includes(entry.category) ? this.fetchLauncherItems() : Promise.resolve(null),
                 ]);
                 this.modalDrops = drops[id] || null;
                 this.modalItemDrops = itemDrops[id] || null;

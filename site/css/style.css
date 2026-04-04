@@ -186,7 +186,47 @@ a:hover {
     color: #e8d48a;
 }
 
-/* Header */
+/* Addon (scope / silencer / launcher) tooltip */
+.tooltip.tooltip-addon-card {
+    max-width: 240px;
+    padding: 0.4rem;
+}
+.addon-tooltip {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.addon-tooltip-name {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #d8e3ea;
+    line-height: 1.2;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #2d3540;
+}
+.addon-tooltip-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.18rem;
+}
+.addon-tt-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+    font-size: 0.64rem;
+    line-height: 1.3;
+}
+.addon-tt-key {
+    color: #8a9aaa;
+    flex-shrink: 0;
+}
+.addon-tt-val {
+    color: #d4dade;
+    font-weight: 600;
+    text-align: right;
+}
+.addon-tt-yes { color: #7ec88a; }
+.addon-tt-no  { color: #c87e7e; }
 .site-header {
     background: #141414;
     border-bottom: 1px solid var(--border);
@@ -1726,6 +1766,17 @@ input.range-input {
     font-family: monospace;
     font-size: 0.63rem;
 }
+.desc-chip-silencer {
+    background: rgba(80, 120, 180, 0.14);
+    color: var(--text-secondary);
+    cursor: default;
+}
+.desc-chip-launcher {
+    background: rgba(180, 100, 60, 0.14);
+    color: var(--text-secondary);
+    cursor: default;
+}
+.desc-chip-scope { cursor: default; }
 .desc-chip-label {
     display: inline-flex;
     align-items: center;
