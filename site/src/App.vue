@@ -409,6 +409,7 @@
     :parsed-description="parsedDescription"
     :modal-compatible-scopes="modalCompatibleScopes"
     :modal-weapon-addons="modalWeaponAddons"
+    :modal-addon-compatible-weapons="modalAddonCompatibleWeapons"
     :favorite-ids="favoriteIds"
     :pinned-ids="pinnedIds"
     :packs="packs"

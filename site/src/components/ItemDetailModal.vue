@@ -62,7 +62,7 @@
                     </div><!-- /modal-header-content -->
 
                     <!-- Column 2: item image -->
-                    <div class="modal-item-img-box"
+                    <div v-if="!isAddonItem" class="modal-item-img-box"
                          @click="$event.currentTarget.classList.remove('no-icon')"
                     >
                         <img
@@ -323,6 +323,20 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Compatible Weapons (on scope/silencer/grenade launcher detail) -->
+                <div v-if="modalAddonCompatibleWeapons.length > 0" class="drop-sources">
+                    <h2>{{ t('app_label_compatible_weapons') }}</h2>
+                    <div class="addon-compat-weapons-grid">
+                        <a
+                            v-for="w in modalAddonCompatibleWeapons"
+                            :key="w.id"
+                            href="#"
+                            class="addon-compat-weapon-link"
+                            @click.prevent="$emit('navigateToItem', w.id)"
+                        >{{ tName(w) }}</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -362,6 +376,7 @@ export default {
     parsedDescription: Object,
     modalCompatibleScopes: { type: Array, default: () => [] },
     modalWeaponAddons: { type: Object, default: () => ({ scopes: [], silencers: [], launchers: [] }) },
+    modalAddonCompatibleWeapons: { type: Array, default: () => [] },
     favoriteIds: Array,
     pinnedIds: Array,
     packs: Array,
@@ -387,6 +402,9 @@ export default {
     hasWeaponAddons() {
       const a = this.modalWeaponAddons;
       return a.scopes.length > 0 || a.silencers.length > 0 || a.launchers.length > 0;
+    },
+    isAddonItem() {
+      return ['Scopes', 'Silencers', 'Grenade Launchers'].includes(this.modalCategory);
     },
   },
   methods: {

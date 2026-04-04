@@ -230,7 +230,7 @@ a:hover {
 
 /* Compatible weapons tooltip (scope / silencer / launcher tile hover) */
 .tooltip.tooltip-addon-weapons-card {
-    max-width: 260px;
+    max-width: 380px;
     padding: 0.4rem;
 }
 .addon-compat-tooltip {
@@ -254,11 +254,8 @@ a:hover {
     font-size: 0.62rem;
 }
 .addon-compat-list {
-    max-height: 220px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.12rem;
+    columns: 2;
+    column-gap: 0.5rem;
 }
 .addon-compat-weapon {
     font-size: 0.63rem;
@@ -3989,6 +3986,23 @@ input.range-input {
     display: flex;
     flex-wrap: wrap;
     gap: 0.35rem;
+}
+.addon-compat-weapons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+.addon-compat-weapon-link {
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+}
+.addon-compat-weapon-link:hover {
+    text-decoration: underline;
 }
 .used-by-item {
     display: flex;

@@ -162,7 +162,7 @@ const CATEGORY_KEYS = {
 };
 const WEAPON_CATEGORIES = [CAT.PISTOLS, CAT.SMGS, CAT.SHOTGUNS, CAT.RIFLES, CAT.SNIPERS, CAT.LAUNCHERS, CAT.MELEE];
 const WEAPON_CATEGORY_SLUGS = WEAPON_CATEGORIES.map(c => categorySlug(c));
-const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING_TREES, CAT.TOOLKIT_RATES]);
+const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING_TREES, CAT.TOOLKIT_RATES, CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS]);
 
 const CATEGORY_GROUPS = [
     { name: "app_group_weapons", categories: [CAT.ALL_WEAPONS, ...WEAPON_CATEGORIES, CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS] },
@@ -652,6 +652,17 @@ export const appDefinition = {
                 silencers: (addons.silencers || []).map(id => silencerMap[id]).filter(Boolean),
                 launchers: (addons.launchers || []).map(id => launcherMap[id]).filter(Boolean),
             };
+        },
+
+        modalAddonCompatibleWeapons() {
+            if (!this.modalItem) return [];
+            const weaponIds = (this.addonCompatibleWeaponsMap || {})[this.modalItem.id] || [];
+            if (!weaponIds.length) return [];
+            const indexMap = new Map((this.index || []).map(i => [i.id, i]));
+            return weaponIds
+                .map(id => indexMap.get(id))
+                .filter(Boolean)
+                .sort((a, b) => (this.tName(a) || '').localeCompare(this.tName(b) || ''));
         },
 
         modalStatRows() {
@@ -1710,6 +1721,9 @@ export const appDefinition = {
 
         isVirtualCategoryAvailable(cat) {
             if (cat === CAT.TOOLKIT_RATES) return !!this.fileManifest["toolkit-rates.json"];
+            if (cat === CAT.SCOPES) return !!this.fileManifest["scopes.json"];
+            if (cat === CAT.SILENCERS) return !!this.fileManifest["silencers.json"];
+            if (cat === CAT.GRENADE_LAUNCHERS) return !!this.fileManifest["grenade-launchers.json"];
             return true;
         },
 
