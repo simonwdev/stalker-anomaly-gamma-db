@@ -227,6 +227,50 @@ a:hover {
 }
 .addon-tt-yes { color: #7ec88a; }
 .addon-tt-no  { color: #c87e7e; }
+
+/* Compatible weapons tooltip (scope / silencer / launcher tile hover) */
+.tooltip.tooltip-addon-weapons-card {
+    max-width: 260px;
+    padding: 0.4rem;
+}
+.addon-compat-tooltip {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.addon-compat-title {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #d8e3ea;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid #2d3540;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.addon-compat-count {
+    font-weight: 400;
+    color: #8a9aaa;
+    font-size: 0.62rem;
+}
+.addon-compat-list {
+    max-height: 220px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+}
+.addon-compat-weapon {
+    font-size: 0.63rem;
+    color: #c8d4dc;
+    line-height: 1.35;
+    padding: 0.05rem 0;
+}
+.addon-compat-none {
+    font-size: 0.63rem;
+    color: #8a9aaa;
+    font-style: italic;
+}
 .site-header {
     background: #141414;
     border-bottom: 1px solid var(--border);

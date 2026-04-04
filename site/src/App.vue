@@ -358,6 +358,7 @@
                 :favorite-ids="favoriteIds"
                 :pinned-ids="pinnedIds"
                 :compact="favoritesViewActive || recentViewActive"
+                :tile-tooltip-fn="isAddonCategory ? addonCompatibleWeaponsTooltip : null"
                 @navigate-to-item="navigateToItem"
                 @toggle-favorite="toggleFavorite"
                 @toggle-pin="togglePin"
@@ -609,6 +610,7 @@ export default {
       isAltAmmo: this.isAltAmmo,
       getItemSlotType: this.getItemSlotType,
       saveImportItemName: this.saveImportItemName,
+      addonCompatibleWeaponsTooltip: this.addonCompatibleWeaponsTooltip,
     };
   },
 };

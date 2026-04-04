@@ -112,6 +112,7 @@ const CAT = {
     FAVORITES: "Favorites", ALL_WEAPONS: "All Weapons",
     PISTOLS: "Pistols", SMGS: "SMGs", SHOTGUNS: "Shotguns",
     RIFLES: "Rifles", SNIPERS: "Snipers", LAUNCHERS: "Launchers", MELEE: "Melee",
+    SCOPES: "Scopes", SILENCERS: "Silencers", GRENADE_LAUNCHERS: "Grenade Launchers",
     AMMO: "Ammo", EXPLOSIVES: "Explosives",
     OUTFITS: "Outfits", HELMETS: "Helmets", BELT_ATTACHMENTS: "Belt Attachments",
     OUTFIT_EXCHANGE: "Outfit Exchange", ARTEFACTS: "Artefacts",
@@ -149,7 +150,9 @@ const CATEGORY_KEYS = {
     [CAT.FAVORITES]: "app_cat_favorites", [CAT.ALL_WEAPONS]: "app_cat_all_weapons",
     [CAT.PISTOLS]: "app_cat_pistols", [CAT.SMGS]: "app_cat_smgs", [CAT.SHOTGUNS]: "app_cat_shotguns",
     [CAT.RIFLES]: "app_cat_rifles", [CAT.SNIPERS]: "app_cat_snipers", [CAT.LAUNCHERS]: "app_cat_launchers",
-    [CAT.MELEE]: "app_cat_melee", [CAT.AMMO]: "app_cat_ammo", [CAT.EXPLOSIVES]: "app_cat_explosives",
+    [CAT.MELEE]: "app_cat_melee",
+    [CAT.SCOPES]: "app_cat_scopes", [CAT.SILENCERS]: "app_cat_silencers", [CAT.GRENADE_LAUNCHERS]: "app_cat_grenade_launchers",
+    [CAT.AMMO]: "app_cat_ammo", [CAT.EXPLOSIVES]: "app_cat_explosives",
     [CAT.OUTFITS]: "app_cat_outfits", [CAT.HELMETS]: "app_cat_helmets",
     [CAT.BELT_ATTACHMENTS]: "app_cat_belt_attachments", [CAT.OUTFIT_EXCHANGE]: "app_cat_outfit_exchange",
     [CAT.FOOD]: "app_cat_food", [CAT.MEDICINE]: "app_cat_medicine", [CAT.ARTEFACTS]: "app_cat_artefacts",
@@ -162,7 +165,7 @@ const WEAPON_CATEGORY_SLUGS = WEAPON_CATEGORIES.map(c => categorySlug(c));
 const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING_TREES, CAT.TOOLKIT_RATES]);
 
 const CATEGORY_GROUPS = [
-    { name: "app_group_weapons", categories: [CAT.ALL_WEAPONS, ...WEAPON_CATEGORIES] },
+    { name: "app_group_weapons", categories: [CAT.ALL_WEAPONS, ...WEAPON_CATEGORIES, CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS] },
     { name: "app_group_ammo_explosives", categories: [CAT.AMMO, CAT.EXPLOSIVES] },
     { name: "app_group_equipment", categories: [CAT.OUTFITS, CAT.HELMETS, CAT.BELT_ATTACHMENTS, CAT.ARTEFACTS, CAT.OUTFIT_EXCHANGE] },
     { name: "app_group_consumables", categories: [CAT.FOOD, CAT.MEDICINE] },
@@ -851,6 +854,29 @@ export const appDefinition = {
 
         isAllWeapons() {
             return this.activeCategory === CAT.ALL_WEAPONS;
+        },
+
+        isAddonCategory() {
+            return this.activeCategory === CAT.SCOPES
+                || this.activeCategory === CAT.SILENCERS
+                || this.activeCategory === CAT.GRENADE_LAUNCHERS;
+        },
+
+        addonCompatibleWeaponsMap() {
+            if (!this.weaponAddonsCache) return {};
+            const map = {};
+            for (const [weaponId, addons] of Object.entries(this.weaponAddonsCache)) {
+                for (const id of addons.scopes || []) {
+                    (map[id] = map[id] || []).push(weaponId);
+                }
+                for (const id of addons.silencers || []) {
+                    (map[id] = map[id] || []).push(weaponId);
+                }
+                for (const id of addons.launchers || []) {
+                    (map[id] = map[id] || []).push(weaponId);
+                }
+            }
+            return map;
         },
 
         modalDisassembleMaterials() {
@@ -3997,6 +4023,29 @@ export const appDefinition = {
                     "  </div>",
                     "</div>",
                 ].join(""),
+            };
+        },
+
+        addonCompatibleWeaponsTooltip(item) {
+            if (!item) return '';
+            const esc = this.escapeHtml;
+            const weaponIds = (this.addonCompatibleWeaponsMap || {})[item.id] || [];
+            const title = esc(this.t('app_label_compatible_weapons'));
+            if (!weaponIds.length) {
+                return {
+                    className: 'tooltip-addon-weapons-card',
+                    html: `<div class="addon-compat-tooltip"><div class="addon-compat-title">${title}</div><div class="addon-compat-none">${esc(this.t('app_label_no_compatible_weapons'))}</div></div>`,
+                };
+            }
+            const indexMap = new Map(this.index.map(i => [i.id, i]));
+            const names = weaponIds
+                .map(wid => esc(this.tName(indexMap.get(wid) || { id: wid, pda_encyclopedia_name: wid })))
+                .sort((a, b) => a.localeCompare(b));
+            const countLabel = `<span class="addon-compat-count">(${names.length})</span>`;
+            const items = names.map(n => `<div class="addon-compat-weapon">${n}</div>`).join('');
+            return {
+                className: 'tooltip-addon-weapons-card',
+                html: `<div class="addon-compat-tooltip"><div class="addon-compat-title">${title} ${countLabel}</div><div class="addon-compat-list">${items}</div></div>`,
             };
         },
 

@@ -1,6 +1,6 @@
 <template>
 <div class="tile-grid">
-    <div v-for="item in visibleItems" :key="item.id" class="tile-card" :class="{ 'tile-card-compact': compact }" @click="$emit('navigateToItem', item.id)">
+    <div v-for="item in visibleItems" :key="item.id" class="tile-card" :class="{ 'tile-card-compact': compact }" @click="$emit('navigateToItem', item.id)" v-tooltip="tileTooltipFn ? tileTooltipFn(item) : null">
         <div class="tile-card-header">
             <span class="fav-icon" :class="{ favorited: isFavorited(item.id) }" @click.stop="$emit('toggleFavorite', item.id)">{{ isFavorited(item.id) ? '\u2605' : '\u2606' }}</span>
             <span class="pin-icon" :class="{ pinned: isPinned(item.id), 'pin-disabled': !isPinned(item.id) && pinnedIds.length >= 5 }" @click.stop="$emit('togglePin', item.id)">&#x1F4CC;</span>
@@ -64,6 +64,7 @@ export default {
         favoriteIds: { type: Array, default: () => [] },
         pinnedIds: { type: Array, default: () => [] },
         compact: { type: Boolean, default: false },
+        tileTooltipFn: { type: Function, default: null },
     },
     emits: ['navigateToItem', 'toggleFavorite', 'togglePin'],
     inject: [
