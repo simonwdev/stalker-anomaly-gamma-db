@@ -56,6 +56,7 @@
     :item-db-active="!buildPlannerActive && !mapsActive && !damageSimActive"
     :hide-no-drop="hideNoDrop"
     :hide-unused-ammo="hideUnusedAmmo"
+    :show-tile-icons="showTileIcons"
     @toggle-sidebar-collapse="toggleSidebarCollapse()"
     @toggle-sidebar="toggleSidebar()"
     @open-item-db="openItemDb()"
@@ -64,6 +65,7 @@
     @open-damage-sim="openDamageSim()"
     @toggle-hide-no-drop="toggleHideNoDrop()"
     @toggle-hide-unused-ammo="toggleHideUnusedAmmo()"
+    @toggle-show-tile-icons="toggleShowTileIcons()"
     @switch-pack="(p) => { activePack = p; switchPack() }"
     @change-locale="(id) => { locale = id; onLocaleChange() }"
     @open-shortcut-help="shortcutHelpOpen = true"
@@ -150,6 +152,7 @@
                 :filtered-exchanges="filteredExchanges"
                 :hide-no-drop="hideNoDrop"
                 :hide-unused-ammo="hideUnusedAmmo"
+                :show-tile-icons="showTileIcons"
                 :toolkit-rates="toolkitRates"
                 :toolkit-sort-col="toolkitSortCol"
                 :toolkit-sort-asc="toolkitSortAsc"
@@ -175,6 +178,7 @@
                 @download-data="(format) => downloadData(format)"
                 @toggle-hide-no-drop="toggleHideNoDrop()"
                 @toggle-hide-unused-ammo="toggleHideUnusedAmmo()"
+                @toggle-show-tile-icons="toggleShowTileIcons()"
             />
             <div v-if="favoritesViewActive && favoriteIds.length === 0" class="favorites-empty">
                 <p>{{ t('app_label_no_favorites_1') }} <span class="fav-icon-inline">&#9734;</span> {{ t('app_label_no_favorites_2') }}</p>
@@ -345,7 +349,6 @@
                 :favorite-ids="favoriteIds"
                 :pinned-ids="pinnedIds"
                 :active-name-tags="activeNameTags"
-                :row-tooltip-fn="isAddonCategory ? addonCompatibleWeaponsTooltip : null"
                 @navigate-to-item="navigateToItem"
                 @toggle-favorite="toggleFavorite"
                 @toggle-pin="togglePin"
@@ -359,8 +362,7 @@
                 :favorite-ids="favoriteIds"
                 :pinned-ids="pinnedIds"
                 :compact="favoritesViewActive || recentViewActive"
-                :tile-tooltip-fn="isAddonCategory ? addonCompatibleWeaponsTooltip : null"
-                :show-item-icon="isAddonCategory"
+                :show-item-icon="showTileIcons"
                 @navigate-to-item="navigateToItem"
                 @toggle-favorite="toggleFavorite"
                 @toggle-pin="togglePin"
@@ -371,6 +373,22 @@
 
 <!-- Item hover popover (used by damage sim, rendered outside content-inner) -->
 <ItemHoverPopover :item="buildHoverItem" :pos="buildHoverPos" />
+
+<!-- General item hover popover (ammo badges in table/grid) -->
+<ItemHoverPopover class="item-hover-popover-global" :item="itemHoverItem" :pos="itemHoverPos" />
+
+<!-- Compatible weapons click popover (addon categories) -->
+<Transition name="fade">
+<div v-if="weaponListPopoverItem" class="weapon-list-popover" :style="{ position: 'fixed', top: (weaponListPopoverPos ? weaponListPopoverPos.top + 'px' : '-9999px'), left: (weaponListPopoverPos ? weaponListPopoverPos.left + 'px' : '-9999px'), zIndex: 250 }" @mouseenter="keepWeaponListPopover()" @mouseleave="hideWeaponListPopover()">
+    <div class="weapon-list-popover-title">{{ t('app_label_compatible_weapons') }} <span class="weapon-list-popover-count">({{ weaponListPopoverWeapons.length }})</span></div>
+    <div class="weapon-list-popover-items">
+        <a v-for="w in weaponListPopoverWeapons" :key="w.id" href="#" class="weapon-list-popover-item" @click.prevent="navigateToItem(w.id); closeWeaponListPopover();">
+            <span class="weapon-list-popover-name">{{ tName(w) }}</span>
+            <span class="badge-flag badge-type">{{ t(singularCategory(w.category)) || tCat(w.category) }}</span>
+        </a>
+    </div>
+</div>
+</Transition>
 
 <!-- Compare bar + modal -->
 <ComparePanel
@@ -613,6 +631,11 @@ export default {
       getItemSlotType: this.getItemSlotType,
       saveImportItemName: this.saveImportItemName,
       addonCompatibleWeaponsTooltip: this.addonCompatibleWeaponsTooltip,
+      showWeaponListPopover: this.showWeaponListPopover,
+      hideWeaponListPopover: this.hideWeaponListPopover,
+      keepWeaponListPopover: this.keepWeaponListPopover,
+      showItemHoverFromCaliber: this.showItemHoverFromCaliber,
+      hideItemHover: this.hideItemHover,
     };
   },
 };

@@ -274,6 +274,76 @@ a:hover {
     border-top: 1px solid var(--color-map-border);
 }
 
+/* Compatible weapons badge (clickable count in table/grid) */
+.compat-weapons-badge {
+    cursor: pointer;
+    text-transform: none;
+    letter-spacing: normal;
+    margin-left: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+.compat-weapons-badge svg { opacity: 0.5; }
+.compat-weapons-badge:hover {
+    background: var(--color-blue-tint-20);
+}
+.compat-weapons-badge:hover svg { opacity: 0.8; }
+
+/* Compatible weapons click popover */
+.weapon-list-popover {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 16px var(--color-overlay-black-50);
+    max-width: 320px;
+    max-height: 360px;
+    overflow-y: auto;
+}
+.weapon-list-popover-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border);
+}
+.weapon-list-popover-count {
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+.weapon-list-popover-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+.weapon-list-popover-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.1s;
+}
+.weapon-list-popover-item:hover {
+    background: var(--color-overlay-white-5);
+}
+.weapon-list-popover-name {
+    color: var(--text);
+    font-size: 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.weapon-list-popover-item .badge-flag {
+    font-size: 0.55rem;
+    flex-shrink: 0;
+    margin-left: 0;
+}
+
 .site-header {
     background: var(--color-surface-3);
     border-bottom: 1px solid var(--border);
@@ -1010,8 +1080,8 @@ button.header-link {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    margin-bottom: 0.4rem;
-    padding-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
+    padding-bottom: 0.2rem;
     border-bottom: 1px solid var(--border);
 }
 .tile-card.tile-card-compact .tile-card-header {
@@ -1050,8 +1120,9 @@ a.tile-card-name:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.3rem 0 0.2rem;
-    min-height: 4.5rem;
+    padding: 0.1rem 0 0.25rem;
+    margin: 0 15% 0.25rem;
+    border-bottom: 1px solid var(--color-overlay-white-6);
 }
 .tile-card-icon-row .addon-img-tile-icon {
     max-width: 200px;
@@ -1902,7 +1973,6 @@ input.range-input {
     text-align: center;
     word-break: break-word;
     line-height: 1.25;
-    font-family: monospace;
     color: var(--text-secondary);
     max-width: 5.5rem;
 }
@@ -1912,6 +1982,12 @@ input.range-input {
 .addon-img-tile-silencer:hover { background: var(--color-blue-tint-30); }
 .addon-img-tile-launcher { background: var(--color-orange-warm-tint-14); }
 .addon-img-tile-launcher:hover { background: var(--color-orange-warm-tint-30); }
+.addon-tile-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: flex-start;
+}
 
 .desc-chip-label {
     display: inline-flex;
@@ -1961,6 +2037,7 @@ input.range-input {
 .badge-craft-mat { background: var(--color-purple-tint-18); color: var(--color-purple-light); }
 .badge-thick-skin { background: var(--color-red-tint-15); color: var(--color-red-warm-soft); }
 .badge-type { background: var(--color-blue-tint-18); color: var(--color-blue-light); }
+.badge-compat { background: var(--color-blue-tint-14); color: var(--color-blue-soft); }
 
 /* Preloader (pre-Vue) */
 #app-preloader {
@@ -2773,6 +2850,32 @@ input.range-input {
     margin-bottom: 0.5rem;
     padding-bottom: 0.3rem;
     border-bottom: 1px solid var(--accent-dim);
+}
+.drop-sources h2.section-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    user-select: none;
+}
+.drop-sources h2.section-toggle:hover {
+    color: var(--color-accent-light);
+}
+.section-chevron {
+    transition: transform 0.2s;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+}
+.drop-sources.collapsed .section-chevron {
+    transform: rotate(0deg);
+}
+.drop-sources.collapsed > *:not(h2) {
+    display: none;
+}
+.drop-sources.collapsed h2 {
+    margin-bottom: 0;
+    padding-bottom: 0.3rem;
+    border-bottom-style: dashed;
 }
 .drop-grid {
     display: grid;

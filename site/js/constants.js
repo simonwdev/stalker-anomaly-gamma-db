@@ -35,7 +35,7 @@ export const BUILD_HASH_PREFIX = "build/";
 
 export const LOWER_IS_BETTER = new Set(["st_data_export_weapon_degradation"]);
 export const HIGHER_IS_WORSE = new Set(["st_prop_weight", "st_upgr_cost", "_cost_per_round", "_malfunction_chance"]);
-export const NO_HIGHLIGHT = new Set(["ui_ammo_types", "st_data_export_ammo_types_alt", "ui_mm_repair"]);
+export const NO_HIGHLIGHT = new Set(["ui_ammo_types", "st_data_export_ammo_types_alt", "ui_mm_repair", "_compatible_weapons"]);
 export const BIPOLAR = new Set([
     "ui_inv_outfit_fire_wound_protection", "ui_inv_outfit_wound_protection", "ui_inv_outfit_burn_protection", "ui_inv_outfit_shock_protection",
     "ui_inv_outfit_chemical_burn_protection", "ui_inv_outfit_radiation_protection", "ui_inv_outfit_telepatic_protection", "ui_inv_outfit_strike_protection",
@@ -96,7 +96,7 @@ export const CAT = {
     FAVORITES: "Favorites", ALL_WEAPONS: "All Weapons",
     PISTOLS: "Pistols", SMGS: "SMGs", SHOTGUNS: "Shotguns",
     RIFLES: "Rifles", SNIPERS: "Snipers", LAUNCHERS: "Launchers", MELEE: "Melee",
-    SCOPES: "Scopes", SILENCERS: "Silencers", GRENADE_LAUNCHERS: "Grenade Launchers",
+    SCOPES: "Scopes", SILENCERS: "Silencers", GRENADE_LAUNCHERS: "Grenade Launchers", TACTICAL_KITS: "Tactical Kits",
     AMMO: "Ammo", EXPLOSIVES: "Explosives",
     OUTFITS: "Outfits", HELMETS: "Helmets", BELT_ATTACHMENTS: "Belt Attachments",
     OUTFIT_EXCHANGE: "Outfit Exchange", ARTEFACTS: "Artefacts",
@@ -134,7 +134,7 @@ export const CATEGORY_KEYS = {
     [CAT.PISTOLS]: "app_cat_pistols", [CAT.SMGS]: "app_cat_smgs", [CAT.SHOTGUNS]: "app_cat_shotguns",
     [CAT.RIFLES]: "app_cat_rifles", [CAT.SNIPERS]: "app_cat_snipers", [CAT.LAUNCHERS]: "app_cat_launchers",
     [CAT.MELEE]: "app_cat_melee",
-    [CAT.SCOPES]: "app_cat_scopes", [CAT.SILENCERS]: "app_cat_silencers", [CAT.GRENADE_LAUNCHERS]: "app_cat_grenade_launchers",
+    [CAT.SCOPES]: "app_cat_scopes", [CAT.SILENCERS]: "app_cat_silencers", [CAT.GRENADE_LAUNCHERS]: "app_cat_grenade_launchers", [CAT.TACTICAL_KITS]: "app_cat_tactical_kits",
     [CAT.AMMO]: "app_cat_ammo", [CAT.EXPLOSIVES]: "app_cat_explosives",
     [CAT.OUTFITS]: "app_cat_outfits", [CAT.HELMETS]: "app_cat_helmets",
     [CAT.BELT_ATTACHMENTS]: "app_cat_belt_attachments", [CAT.OUTFIT_EXCHANGE]: "app_cat_outfit_exchange",
@@ -145,10 +145,11 @@ export const CATEGORY_KEYS = {
 };
 export const WEAPON_CATEGORIES = [CAT.PISTOLS, CAT.SMGS, CAT.SHOTGUNS, CAT.RIFLES, CAT.SNIPERS, CAT.LAUNCHERS, CAT.MELEE];
 export const WEAPON_CATEGORY_SLUGS = WEAPON_CATEGORIES.map(c => c.toLowerCase().replace(/ /g, "-"));
-export const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING_TREES, CAT.TOOLKIT_RATES, CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS]);
+export const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING_TREES, CAT.TOOLKIT_RATES, CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS, CAT.TACTICAL_KITS]);
 
 export const CATEGORY_GROUPS = [
-    { name: "app_group_weapons", categories: [CAT.ALL_WEAPONS, ...WEAPON_CATEGORIES, CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS] },
+    { name: "app_group_weapons", categories: [CAT.ALL_WEAPONS, ...WEAPON_CATEGORIES] },
+    { name: "app_group_attachments", categories: [CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS, CAT.TACTICAL_KITS] },
     { name: "app_group_ammo_explosives", categories: [CAT.AMMO, CAT.EXPLOSIVES] },
     { name: "app_group_equipment", categories: [CAT.OUTFITS, CAT.HELMETS, CAT.BELT_ATTACHMENTS, CAT.ARTEFACTS, CAT.OUTFIT_EXCHANGE] },
     { name: "app_group_consumables", categories: [CAT.FOOD, CAT.MEDICINE] },

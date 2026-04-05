@@ -202,6 +202,10 @@
                 <span class="toggle-switch" :class="{ on: hideUnusedAmmo }"><span class="toggle-knob"></span></span>
                 <span>{{ t('app_label_hide_unused_ammo') }}</span>
             </div>
+            <div class="settings-item" @click.stop="$emit('toggleShowTileIcons')">
+                <span class="toggle-switch" :class="{ on: showTileIcons }"><span class="toggle-knob"></span></span>
+                <span>{{ t('app_label_show_tile_icons') }}</span>
+            </div>
         </div>
     </div>
 </nav>
@@ -228,13 +232,14 @@ export default {
         itemDbActive: { type: Boolean, default: false },
         hideNoDrop: { type: Boolean, default: false },
         hideUnusedAmmo: { type: Boolean, default: false },
+        showTileIcons: { type: Boolean, default: true },
     },
     emits: [
         'toggleSidebarCollapse', 'toggleSidebar', 'switchPack',
         'changeLocale', 'openShortcutHelp', 'clearGlobalQuery',
         'update:globalQuery', 'search', 'escapeSearch', 'selectSearchResult',
         'openItemDb', 'openMaps', 'openBuildPlanner', 'openDamageSim',
-        'toggleHideNoDrop', 'toggleHideUnusedAmmo',
+        'toggleHideNoDrop', 'toggleHideUnusedAmmo', 'toggleShowTileIcons',
     ],
     inject: ['t', 'tName', 'tCat'],
     computed: {

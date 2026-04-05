@@ -90,10 +90,7 @@ export const appDefinition = {
             recipesCache: null,
             disassembleCache: null,
             ammoWeaponsCache: null,
-            scopesCache: null,
             weaponAddonsCache: null,
-            silencerItemsCache: null,
-            launcherItemsCache: null,
             mutantProfilesCache: null,
             npcArmorProfilesCache: null,
             gboConstantsCache: null,
@@ -109,6 +106,7 @@ export const appDefinition = {
             collapsedGroups: {},
             hideNoDrop: true,
             hideUnusedAmmo: true,
+            showTileIcons: true,
 
             // Filter & Sort
             activeFilters: {},
@@ -210,6 +208,14 @@ export const appDefinition = {
             toastMessage: "",
             toastType: "error",
 
+            // Compatible weapons popover (addon categories)
+            weaponListPopoverItem: null,
+            weaponListPopoverPos: null,
+
+            // General item hover popover (table/grid ammo badges, etc.)
+            itemHoverItem: null,
+            itemHoverPos: null,
+
             // Item hover popover
             buildHoverItem: null,
             buildHoverCompareItem: null,
@@ -300,7 +306,7 @@ export const appDefinition = {
             if (categories.every(c => WEAPON_CATEGORIES.includes(c))) return WEAPON_STAT_FIELDS;
             if (categories.every(c => c === CAT.OUTFITS || c === CAT.HELMETS)) return PROTECTION_FIELDS;
             if (categories.every(c => c === CAT.AMMO)) return [...AMMO_MULTIPLIER_FIELDS, ...AMMO_ONLY_FIELDS];
-            if (categories.every(c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS)) {
+            if (categories.every(c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS || c === CAT.TACTICAL_KITS)) {
                 return ["st_prop_weight", "st_upgr_cost", "st_data_export_zoom_factor"].filter(f =>
                     this.compareData.some(e => e.item[f] != null && e.item[f] !== "")
                 );
@@ -318,11 +324,15 @@ export const appDefinition = {
         tileFields() {
             if (!this.activeCategory) return [];
             const isAmmo = this.activeCategory === CAT.AMMO;
-            return this.displayHeaders.filter(h => {
+            const ammoKeys = new Set(["ui_ammo_types", "st_data_export_ammo_types_alt"]);
+            const fields = this.displayHeaders.filter(h => {
                 if (h.startsWith("Total ")) return false;
                 if (h === "st_upgr_cost") return isAmmo;
                 return !TILE_HIDE.has(h);
             });
+            const regular = fields.filter(h => !ammoKeys.has(h));
+            const ammo = fields.filter(h => ammoKeys.has(h));
+            return [...regular, ...ammo];
         },
 
         tileHealGroups() {
@@ -352,16 +362,19 @@ export const appDefinition = {
         },
 
         modalWeaponAddons() {
-            if (!this.modalItem || !this.weaponAddonsCache) return { scopes: [], silencers: [], launchers: [] };
+            if (!this.modalItem || !this.weaponAddonsCache) return { scopes: [], silencers: [], launchers: [], kits: [] };
             const addons = this.weaponAddonsCache[this.modalItem.id];
-            if (!addons) return { scopes: [], silencers: [], launchers: [] };
-            const scopeMap = Object.fromEntries((this.scopesCache?.items || []).map(i => [i.id, i]));
-            const silencerMap = Object.fromEntries((this.silencerItemsCache?.items || []).map(i => [i.id, i]));
-            const launcherMap = Object.fromEntries((this.launcherItemsCache?.items || []).map(i => [i.id, i]));
+            if (!addons) return { scopes: [], silencers: [], launchers: [], kits: [] };
+            const resolve = (cat) => Object.fromEntries((this.categoryItems[categorySlug(cat)] || []).map(i => [i.id, i]));
+            const scopeMap = resolve(CAT.SCOPES);
+            const silencerMap = resolve(CAT.SILENCERS);
+            const launcherMap = resolve(CAT.GRENADE_LAUNCHERS);
+            const kitMap = resolve(CAT.TACTICAL_KITS);
             return {
                 scopes: (addons.scopes || []).map(id => scopeMap[id]).filter(Boolean),
                 silencers: (addons.silencers || []).map(id => silencerMap[id]).filter(Boolean),
                 launchers: (addons.launchers || []).map(id => launcherMap[id]).filter(Boolean),
+                kits: (addons.kits || []).map(id => kitMap[id]).filter(Boolean),
             };
         },
 
@@ -589,24 +602,31 @@ export const appDefinition = {
         isAddonCategory() {
             return this.activeCategory === CAT.SCOPES
                 || this.activeCategory === CAT.SILENCERS
-                || this.activeCategory === CAT.GRENADE_LAUNCHERS;
+                || this.activeCategory === CAT.GRENADE_LAUNCHERS
+                || this.activeCategory === CAT.TACTICAL_KITS;
         },
 
         addonCompatibleWeaponsMap() {
             if (!this.weaponAddonsCache) return {};
             const map = {};
             for (const [weaponId, addons] of Object.entries(this.weaponAddonsCache)) {
-                for (const id of addons.scopes || []) {
-                    (map[id] = map[id] || []).push(weaponId);
-                }
-                for (const id of addons.silencers || []) {
-                    (map[id] = map[id] || []).push(weaponId);
-                }
-                for (const id of addons.launchers || []) {
-                    (map[id] = map[id] || []).push(weaponId);
+                for (const list of [addons.scopes, addons.silencers, addons.launchers, addons.kits]) {
+                    for (const id of list || []) {
+                        (map[id] = map[id] || []).push(weaponId);
+                    }
                 }
             }
             return map;
+        },
+
+        weaponListPopoverWeapons() {
+            if (!this.weaponListPopoverItem) return [];
+            const weaponIds = [...new Set((this.addonCompatibleWeaponsMap || {})[this.weaponListPopoverItem.id] || [])];
+            if (!weaponIds.length) return [];
+            const indexMap = new Map((this.index || []).map(i => [i.id, i]));
+            let weapons = weaponIds.map(wid => indexMap.get(wid)).filter(Boolean);
+            if (this.hideNoDrop) weapons = weapons.filter(w => w.hasNpcWeaponDrop !== false);
+            return weapons.sort((a, b) => (this.tName(a) || '').localeCompare(this.tName(b) || ''));
         },
 
         modalDisassembleMaterials() {
@@ -742,6 +762,11 @@ export const appDefinition = {
             const reliIdx = filtered.indexOf("ui_inv_reli");
             if (reliIdx >= 0) {
                 filtered.splice(reliIdx + 1, 0, "_malfunction_chance");
+            }
+
+            // Inject compatible weapons count for addon categories
+            if (this.isAddonCategory) {
+                filtered.push("_compatible_weapons");
             }
 
             return filtered;
@@ -925,6 +950,16 @@ export const appDefinition = {
             let items = this.categoryItems[slug] || [];
             if (this.hideNoDrop) {
                 items = items.filter((i) => i.hasNpcWeaponDrop !== false);
+                if (this.isAddonCategory) {
+                    const indexMap = new Map((this.index || []).map(i => [i.id, i]));
+                    items = items.filter(i => {
+                        const weaponIds = (this.addonCompatibleWeaponsMap || {})[i.id] || [];
+                        return weaponIds.some(wid => {
+                            const w = indexMap.get(wid);
+                            return w && w.hasNpcWeaponDrop !== false;
+                        });
+                    });
+                }
             }
             if (this.hideUnusedAmmo && slug === 'ammo' && this.ammoWeaponsCache) {
                 items = items.filter(i => {
@@ -1443,6 +1478,7 @@ export const appDefinition = {
             if (cat === CAT.SCOPES) return !!this.fileManifest["scopes.json"];
             if (cat === CAT.SILENCERS) return !!this.fileManifest["silencers.json"];
             if (cat === CAT.GRENADE_LAUNCHERS) return !!this.fileManifest["grenade-launchers.json"];
+            if (cat === CAT.TACTICAL_KITS) return !!this.fileManifest["tactical-kits.json"];
             return true;
         },
 
@@ -1462,6 +1498,21 @@ export const appDefinition = {
                 this[cacheKey] = {};
             }
             return this[cacheKey];
+        },
+
+        async ensureCategoryLoaded(slug) {
+            if (this.categoryItems[slug]) return;
+            const filename = `${slug}.json`;
+            if (!this.fileManifest[filename]) return;
+            try {
+                const res = await fetch(this.dataUrl(filename));
+                if (!res.ok) { console.warn(`Failed to load category ${slug}: HTTP ${res.status}`); return; }
+                const data = await res.json();
+                if (data.items) this.categoryItems[slug] = data.items;
+                if (data.headers) this.categoryHeaders[slug] = data.headers;
+            } catch (e) {
+                console.warn(`Failed to load category ${slug}:`, e);
+            }
         },
 
         fetchCalibers() {
@@ -1492,20 +1543,8 @@ export const appDefinition = {
             return this.fetchJsonCached("ammoWeaponsCache", "ammo-weapons.json");
         },
 
-        fetchScopes() {
-            return this.fetchJsonCached("scopesCache", "scopes.json");
-        },
-
         fetchWeaponAddons() {
             return this.fetchJsonCached("weaponAddonsCache", "weapon-addons.json");
-        },
-
-        fetchSilencerItems() {
-            return this.fetchJsonCached("silencerItemsCache", "silencers.json");
-        },
-
-        fetchLauncherItems() {
-            return this.fetchJsonCached("launcherItemsCache", "grenade-launchers.json");
         },
 
         fetchMutantProfiles() {
@@ -1653,10 +1692,12 @@ export const appDefinition = {
             }
             this.calibers = await this.fetchCalibers();
             await Promise.all([
-                this.fetchScopes(),
+                this.ensureCategoryLoaded(categorySlug(CAT.AMMO)),
+                this.ensureCategoryLoaded(categorySlug(CAT.SCOPES)),
+                this.ensureCategoryLoaded(categorySlug(CAT.SILENCERS)),
+                this.ensureCategoryLoaded(categorySlug(CAT.GRENADE_LAUNCHERS)),
+                this.ensureCategoryLoaded(categorySlug(CAT.TACTICAL_KITS)),
                 this.fetchWeaponAddons(),
-                this.fetchSilencerItems(),
-                this.fetchLauncherItems(),
             ]);
             this.rebuildGlobalFuse();
             this.loading = false;
@@ -1687,10 +1728,7 @@ export const appDefinition = {
             this.recipesCache = null;
             this.disassembleCache = null;
             this.ammoWeaponsCache = null;
-            this.scopesCache = null;
             this.weaponAddonsCache = null;
-            this.silencerItemsCache = null;
-            this.launcherItemsCache = null;
             this.outfitExchange = null;
             this.displayLabels = {};
             this.translations = null;
@@ -1802,6 +1840,7 @@ export const appDefinition = {
             }
 
             const previousCategory = this.activeCategory;
+            this.closeWeaponListPopover();
 
             this.buildPlannerActive = false;
             this.mapsActive = false;
@@ -2050,16 +2089,12 @@ export const appDefinition = {
                 this.modalCategory = entry.category;
                 const slug = categorySlug(entry.category);
 
-                if (!this.categoryItems[slug]) {
-                    const res = await fetch(this.dataUrl(`${slug}.json`));
-                    const data = await res.json();
-                    this.categoryItems[slug] = data.items;
-                    this.categoryHeaders[slug] = data.headers;
-                }
+                await this.ensureCategoryLoaded(slug);
 
                 this.modalHeaders = this.categoryHeaders[slug];
                 this.modalItem = this.categoryItems[slug].find((i) => i.id === id);
 
+                const isWeapon = WEAPON_CATEGORIES.includes(entry.category);
                 const [drops, itemDrops, stashChance, recipeData, disassemble, ammoWeapons] = await Promise.all([
                     this.fetchDrops(),
                     this.fetchItemDrops(),
@@ -2067,10 +2102,12 @@ export const appDefinition = {
                     this.fetchRecipes(),
                     this.fetchDisassemble(),
                     this.fetchAmmoWeapons(),
-                    WEAPON_CATEGORIES.includes(entry.category) ? this.fetchScopes() : Promise.resolve(null),
-                    WEAPON_CATEGORIES.includes(entry.category) ? this.fetchWeaponAddons() : Promise.resolve(null),
-                    WEAPON_CATEGORIES.includes(entry.category) ? this.fetchSilencerItems() : Promise.resolve(null),
-                    WEAPON_CATEGORIES.includes(entry.category) ? this.fetchLauncherItems() : Promise.resolve(null),
+                    isWeapon ? this.ensureCategoryLoaded(categorySlug(CAT.AMMO)) : Promise.resolve(),
+                    isWeapon ? this.ensureCategoryLoaded(categorySlug(CAT.SCOPES)) : Promise.resolve(),
+                    isWeapon ? this.fetchWeaponAddons() : Promise.resolve(),
+                    isWeapon ? this.ensureCategoryLoaded(categorySlug(CAT.SILENCERS)) : Promise.resolve(),
+                    isWeapon ? this.ensureCategoryLoaded(categorySlug(CAT.GRENADE_LAUNCHERS)) : Promise.resolve(),
+                    isWeapon ? this.ensureCategoryLoaded(categorySlug(CAT.TACTICAL_KITS)) : Promise.resolve(),
                 ]);
                 this.modalDrops = drops[id] || null;
                 this.modalItemDrops = itemDrops[id] || null;
@@ -2081,7 +2118,7 @@ export const appDefinition = {
 
                 // For addon items (scopes/silencers/grenade launchers), pre-fetch compatible
                 // weapon category data so the modal can show rich stat tooltips on each weapon.
-                if ([CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS].includes(entry.category)) {
+                if ([CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS, CAT.TACTICAL_KITS].includes(entry.category)) {
                     await this.fetchWeaponAddons();
                     const weaponIds = this.addonCompatibleWeaponsMap[id] || [];
                     if (weaponIds.length) {
@@ -2535,7 +2572,7 @@ export const appDefinition = {
             const self = this;
             const categories = this.compareData.map(e => e.category);
             const isMutantParts = categories.every(c => c === CAT.MUTANT_PARTS);
-            const isAddonCat = categories.every(c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS);
+            const isAddonCat = categories.every(c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS || c === CAT.TACTICAL_KITS);
 
             // Addon categories (Scopes/Silencers/Grenade Launchers): use a horizontal bar chart with real values
             if (isAddonCat) {
@@ -3331,6 +3368,11 @@ export const appDefinition = {
             localStorage.setItem("hideUnusedAmmo", JSON.stringify(this.hideUnusedAmmo));
         },
 
+        toggleShowTileIcons() {
+            this.showTileIcons = !this.showTileIcons;
+            localStorage.setItem("showTileIcons", JSON.stringify(this.showTileIcons));
+        },
+
         isUnusedAmmo(item, category) {
             if ((category || this.activeCategory) !== 'Ammo') return false;
             if (!this.ammoWeaponsCache) return false;
@@ -3375,6 +3417,7 @@ export const appDefinition = {
             if (h === "_heal") return this.t("app_heal_heals");
             if (h === "_malfunction_chance") return this.t("_malfunction_chance");
             if (h === "_cost_per_round") return this.t("_cost_per_round");
+            if (h === "_compatible_weapons") return this.t("app_label_compatible_weapons");
             if (h === "st_upgr_cost" && this.activeCategory === CAT.AMMO) return this.t("_cost_per_pack");
             if (h === "ui_inv_damage" && this.activeCategory === CAT.AMMO) return this.t("st_data_export_damage_mult");
             const translated = this.t(h);
@@ -3432,6 +3475,9 @@ export const appDefinition = {
             }
             if (headers.includes("st_upgr_cost") && category === CAT.AMMO && !allHeaders.includes("_cost_per_round")) {
                 allHeaders.push("_cost_per_round");
+            }
+            if ([CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS, CAT.TACTICAL_KITS].includes(category) && !allHeaders.includes("_compatible_weapons")) {
+                allHeaders.push("_compatible_weapons");
             }
             const ranges = {};
             for (const h of allHeaders) {
@@ -3632,6 +3678,17 @@ export const appDefinition = {
                 if (isNaN(cost) || isNaN(box) || box === 0) return undefined;
                 return cost / box;
             }
+            if (field === "_compatible_weapons") {
+                let weapons = (this.addonCompatibleWeaponsMap || {})[item.id] || [];
+                if (this.hideNoDrop && weapons.length) {
+                    const indexMap = new Map((this.index || []).map(i => [i.id, i]));
+                    weapons = weapons.filter(wid => {
+                        const w = indexMap.get(wid);
+                        return w && w.hasNpcWeaponDrop !== false;
+                    });
+                }
+                return weapons.length;
+            }
             return item[field];
         },
 
@@ -3639,6 +3696,7 @@ export const appDefinition = {
             if (val === undefined || val === null || val === "" || val === "--") return "--";
             if (h === "_malfunction_chance") return val.toFixed(2) + "%";
             if (h === "_cost_per_round") return parseFloat(val).toFixed(1) + " ₽";
+            if (h === "_compatible_weapons") return String(val);
             if (h === "ui_ammo_types" || h === "st_data_export_ammo_types_alt") return this.caliberName(val);
             if (h === "ui_st_community") return this.t(val);
 
@@ -3716,7 +3774,17 @@ export const appDefinition = {
         },
 
         shortAmmoName(name) {
-            return name.replace(/\s*rounds$/i, "").replace(/^Патроны\s*/i, "").replace(/\s*мм\b/i, "").replace(/\s*mm\b/i, "").replace(/\bPst\b/, "PST");
+            return name
+                .replace(/\s*(rounds?|shells|slugs|cartridge)$/i, "")
+                .replace(/\bBuckshot\b/i, "Buck")
+                .replace(/\bHome-made\b/i, "HM")
+                .replace(/\bHydra-shock HP\b/i, "Hydra-shock")
+                .replace(/[""]/g, "")
+                .replace(/^Патроны\s*/i, "")
+                .replace(/\s*мм\b/i, "")
+                .replace(/\s*mm\b/i, "")
+                .replace(/\bPst\b/, "PST")
+                .trim();
         },
 
         escapeHtml(text) {
@@ -3885,6 +3953,92 @@ export const appDefinition = {
                 className: 'tooltip-addon-weapons-card',
                 html: `<div class="addon-compat-tooltip"><div class="addon-compat-title">${title} ${countLabel}</div><div class="addon-compat-list">${items}</div>${moreLabel}</div>`,
             };
+        },
+
+        showWeaponListPopover(item, event) {
+            clearTimeout(this._weaponListHideTimeout);
+            clearTimeout(this._weaponListShowTimeout);
+            const anchor = event.currentTarget;
+            if (this.weaponListPopoverItem?.id === item.id) return;
+            this._weaponListShowTimeout = setTimeout(() => {
+                this.weaponListPopoverItem = item;
+                this.$nextTick(() => {
+                    const el = document.querySelector('.weapon-list-popover');
+                    if (!el || !anchor) return;
+                    FloatingUIDOM.computePosition(anchor, el, {
+                        placement: 'bottom-start',
+                        strategy: 'fixed',
+                        middleware: [
+                            FloatingUIDOM.offset(4),
+                            FloatingUIDOM.flip({ fallbackPlacements: ['top-start', 'bottom-end', 'top-end'] }),
+                            FloatingUIDOM.shift({ padding: 8 }),
+                        ],
+                    }).then(({ x, y }) => {
+                        this.weaponListPopoverPos = { top: y, left: x };
+                    });
+                });
+            }, 300);
+        },
+
+        hideWeaponListPopover() {
+            clearTimeout(this._weaponListShowTimeout);
+            this._weaponListHideTimeout = setTimeout(() => {
+                this.weaponListPopoverItem = null;
+                this.weaponListPopoverPos = null;
+            }, 150);
+        },
+
+        keepWeaponListPopover() {
+            clearTimeout(this._weaponListHideTimeout);
+        },
+
+        closeWeaponListPopover() {
+            clearTimeout(this._weaponListShowTimeout);
+            clearTimeout(this._weaponListHideTimeout);
+            this.weaponListPopoverItem = null;
+            this.weaponListPopoverPos = null;
+        },
+
+        showItemHoverFromCaliber(caliberId, event) {
+            const cal = (caliberId || "").trim();
+            if (!cal) return;
+            const entry = this.calibers[cal];
+            if (!entry || !entry.variants?.length) return;
+            const variant = entry.variants[0];
+            if (!variant) return;
+            // Resolve full item from categoryItems if available
+            const full = this.ammoItemById(variant.id);
+            this.showItemHover(full || variant, event);
+        },
+
+        showItemHover(item, event) {
+            clearTimeout(this._itemHoverShowTimeout);
+            clearTimeout(this._itemHoverHideTimeout);
+            const anchor = event.currentTarget;
+            this._itemHoverShowTimeout = setTimeout(() => {
+                this.itemHoverItem = item;
+                this.$nextTick(() => {
+                    const el = document.querySelector('.item-hover-popover-global');
+                    if (!el || !anchor) return;
+                    FloatingUIDOM.computePosition(anchor, el, {
+                        placement: 'right-start',
+                        strategy: 'fixed',
+                        middleware: [
+                            FloatingUIDOM.offset(12),
+                            FloatingUIDOM.flip({ fallbackPlacements: ['left-start', 'right-end', 'left-end'] }),
+                            FloatingUIDOM.shift({ padding: 8 }),
+                        ],
+                    }).then(({ x, y }) => {
+                        this.itemHoverPos = { top: y, left: x };
+                    });
+                });
+            }, 250);
+        },
+
+        hideItemHover() {
+            clearTimeout(this._itemHoverShowTimeout);
+            this.itemHoverItem = null;
+            this.itemHoverPos = null;
         },
 
         caliberName(val) {
@@ -5516,9 +5670,20 @@ export const appDefinition = {
             }
             const slugMap = { outfit: "outfits", helmet: "helmets", backpack: "belt-attachments", belt: "belt-attachments", artifact: "artefacts" };
             const slug = slugMap[slotType];
-            if (!slug) return [];
-            const headers = this.categoryHeaders[slug] || [];
-            return headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id");
+            if (slug) {
+                const headers = this.categoryHeaders[slug] || [];
+                return headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id");
+            }
+            // Fallback: resolve category from index and use its headers
+            const indexEntry = (this.index || []).find(i => i.id === item.id);
+            if (indexEntry?.category) {
+                const fallbackSlug = categorySlug(indexEntry.category);
+                const headers = this.categoryHeaders[fallbackSlug] || [];
+                if (headers.length) {
+                    return headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id");
+                }
+            }
+            return [];
         },
 
         buildHoverCompareFields() {
@@ -6204,6 +6369,11 @@ export const appDefinition = {
         try {
             const savedHideAmmo = localStorage.getItem("hideUnusedAmmo");
             if (savedHideAmmo !== null) this.hideUnusedAmmo = JSON.parse(savedHideAmmo);
+        } catch (e) { /* ignore */ }
+
+        try {
+            const savedIcons = localStorage.getItem("showTileIcons");
+            if (savedIcons !== null) this.showTileIcons = JSON.parse(savedIcons);
         } catch (e) { /* ignore */ }
 
         // 6b. Restore URL state (sort, filters, view, etc.)

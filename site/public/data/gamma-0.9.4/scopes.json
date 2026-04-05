@@ -109,39 +109,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "226sig_kit",
-      "pda_encyclopedia_name": "st_addon_scope_226sig_kit",
-      "st_data_export_description": "st_addon_scope_226sig_kit_descr",
-      "st_prop_weight": "0.35",
-      "st_upgr_cost": "19950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_226sig_kit",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "23_up",
-      "pda_encyclopedia_name": "st_addon_scope_23_up",
-      "st_data_export_description": "st_addon_scope_23_up_descr",
-      "st_prop_weight": "0.60",
-      "st_upgr_cost": "8950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_23_up",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "5c_tik",
-      "pda_encyclopedia_name": "st_addon_scope_5c_tik",
-      "st_data_export_description": "st_addon_scope_5c_tik_descr",
-      "st_prop_weight": "2.15",
-      "st_upgr_cost": "33150",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_5c_tik",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
       "id": "ac10632",
       "pda_encyclopedia_name": "st_addon_scope_ac10632",
       "st_data_export_description": "st_addon_scope_ac10632_descr",
@@ -215,28 +182,6 @@
       "st_upgr_cost": "6350",
       "st_data_export_zoom_factor": "",
       "displayName": "st_addon_scope_aimpoint",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "apsabigo",
-      "pda_encyclopedia_name": "st_addon_scope_apsabigo",
-      "st_data_export_description": "st_addon_scope_apsabigo_descr",
-      "st_prop_weight": "0.26",
-      "st_upgr_cost": "6750",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_apsabigo",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "archangel",
-      "pda_encyclopedia_name": "st_addon_scope_archangel",
-      "st_data_export_description": "st_addon_scope_archangel_descr",
-      "st_prop_weight": "2.20",
-      "st_upgr_cost": "28000",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_archangel",
       "hasStashDrop": false,
       "hasDisassemble": false
     },
@@ -439,17 +384,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "gurza_up",
-      "pda_encyclopedia_name": "st_addon_scope_gurza_up",
-      "st_data_export_description": "st_addon_scope_gurza_up_descr",
-      "st_prop_weight": "0.10",
-      "st_upgr_cost": "42300",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_gurza_up",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
       "id": "hamr",
       "pda_encyclopedia_name": "st_addon_scope_hamr",
       "st_data_export_description": "st_addon_scope_hamr_descr",
@@ -483,39 +417,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "infiltrator_tactical_kit",
-      "pda_encyclopedia_name": "st_addon_scope_infiltrator_tactical_kit",
-      "st_data_export_description": "st_addon_scope_infiltrator_tactical_kit_descr",
-      "st_prop_weight": "2.00",
-      "st_upgr_cost": "60000",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_infiltrator_tactical_kit",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "kab_up",
-      "pda_encyclopedia_name": "st_addon_scope_kab_up",
-      "st_data_export_description": "st_addon_scope_kab_up_descr",
-      "st_prop_weight": "1.10",
-      "st_upgr_cost": "33999",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_kab_up",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "kashtan_rmr",
-      "pda_encyclopedia_name": "st_addon_scope_kashtan_rmr",
-      "st_data_export_description": "st_addon_scope_kashtan_rmr_descr",
-      "st_prop_weight": "0.76",
-      "st_upgr_cost": "48950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_kashtan_rmr",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
       "id": "kemper",
       "pda_encyclopedia_name": "st_addon_scope_kemper",
       "st_data_export_description": "st_addon_scope_kemper_descr",
@@ -527,39 +428,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "kit_aus_tri",
-      "pda_encyclopedia_name": "st_addon_scope_kit_aus_tri",
-      "st_data_export_description": "st_addon_scope_kit_aus_tri_descr",
-      "st_prop_weight": "0.56",
-      "st_upgr_cost": "28950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_kit_aus_tri",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "kit_fal_leup",
-      "pda_encyclopedia_name": "st_addon_scope_kit_fal_leup",
-      "st_data_export_description": "st_addon_scope_kit_fal_leup_descr",
-      "st_prop_weight": "0.85",
-      "st_upgr_cost": "24950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_kit_fal_leup",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "kit_sa5x_spec",
-      "pda_encyclopedia_name": "st_addon_scope_kit_sa5x_spec",
-      "st_data_export_description": "st_addon_scope_kit_sa5x_spec_descr",
-      "st_prop_weight": "0.85",
-      "st_upgr_cost": "26950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_kit_sa5x_spec",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
       "id": "kobra",
       "pda_encyclopedia_name": "st_addon_scope_kobra",
       "st_data_export_description": "st_addon_scope_kobra_descr",
@@ -567,39 +435,6 @@
       "st_upgr_cost": "4350",
       "st_data_export_zoom_factor": "",
       "displayName": "st_addon_scope_kobra",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "kp_sr2",
-      "pda_encyclopedia_name": "st_addon_scope_kp_sr2",
-      "st_data_export_description": "st_addon_scope_kp_sr2_descr",
-      "st_prop_weight": "0.03",
-      "st_upgr_cost": "9500",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_kp_sr2",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "lapua700",
-      "pda_encyclopedia_name": "st_addon_scope_lapua700",
-      "st_data_export_description": "st_addon_scope_lapua700_descr",
-      "st_prop_weight": "2.60",
-      "st_upgr_cost": "55350",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_lapua700",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "lazup_pl15",
-      "pda_encyclopedia_name": "st_addon_scope_lazup_generic",
-      "st_data_export_description": "st_addon_scope_lazup_generic_descr",
-      "st_prop_weight": "0.09",
-      "st_upgr_cost": "12300",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_lazup_generic",
       "hasStashDrop": false,
       "hasDisassemble": false
     },
@@ -626,17 +461,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "magpul_pro",
-      "pda_encyclopedia_name": "st_addon_scope_magpul_pro",
-      "st_data_export_description": "st_addon_scope_magpul_pro_descr",
-      "st_prop_weight": "1.72",
-      "st_upgr_cost": "38000",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_magpul_pro",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
       "id": "march_f_shorty",
       "pda_encyclopedia_name": "st_addon_scope_march_f_shorty",
       "st_data_export_description": "st_addon_scope_march_f_shorty_descr",
@@ -644,17 +468,6 @@
       "st_upgr_cost": "27280",
       "st_data_export_zoom_factor": "",
       "displayName": "st_addon_scope_march_f_shorty",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "march_f_shorty_alt",
-      "pda_encyclopedia_name": "st_addon_scope_march_f_shorty_alt",
-      "st_data_export_description": "st_addon_scope_march_f_shorty_alt_descr",
-      "st_prop_weight": "0.59",
-      "st_upgr_cost": "64280",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_march_f_shorty_alt",
       "hasStashDrop": false,
       "hasDisassemble": false
     },
@@ -670,28 +483,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "mark8_rmr",
-      "pda_encyclopedia_name": "st_addon_scope_mark8_rmr",
-      "st_data_export_description": "st_addon_scope_mark8_rmr_descr",
-      "st_prop_weight": "0.71",
-      "st_upgr_cost": "69950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_mark8_rmr",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "mauser_kit",
-      "pda_encyclopedia_name": "st_addon_scope_mauser_kit",
-      "st_data_export_description": "st_addon_scope_mauser_kit_descr",
-      "st_prop_weight": "3.60",
-      "st_upgr_cost": "51500",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_mauser_kit",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
       "id": "mepro",
       "pda_encyclopedia_name": "st_addon_scope_mepro",
       "st_data_export_description": "st_addon_scope_mepro_descr",
@@ -699,39 +490,6 @@
       "st_upgr_cost": "6580",
       "st_data_export_zoom_factor": "",
       "displayName": "st_addon_scope_mepro",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "mod9",
-      "pda_encyclopedia_name": "st_addon_scope_mod9",
-      "st_data_export_description": "st_addon_scope_mod9_descr",
-      "st_prop_weight": "0.26",
-      "st_upgr_cost": "6950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_mod9",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "mod_x_gen3",
-      "pda_encyclopedia_name": "st_addon_scope_mod_x_gen3",
-      "st_data_export_description": "st_addon_scope_mod_x_gen3_descr",
-      "st_prop_weight": "1.65",
-      "st_upgr_cost": "48000",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_mod_x_gen3",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "mono_kit",
-      "pda_encyclopedia_name": "st_addon_scope_mono_kit",
-      "st_data_export_description": "st_addon_scope_mono_kit_descr",
-      "st_prop_weight": "0.56",
-      "st_upgr_cost": "36850",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_mono_kit",
       "hasStashDrop": false,
       "hasDisassemble": false
     },
@@ -802,17 +560,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "pl15_scolaz",
-      "pda_encyclopedia_name": "st_addon_scope_pl15_scolaz",
-      "st_data_export_description": "st_addon_scope_pl15_scolaz_descr",
-      "st_prop_weight": "0.13",
-      "st_upgr_cost": "42300",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_pl15_scolaz",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
       "id": "pn23",
       "pda_encyclopedia_name": "st_addon_scope_pn23",
       "st_data_export_description": "st_addon_scope_pn23_descr",
@@ -831,17 +578,6 @@
       "st_upgr_cost": "8280",
       "st_data_export_zoom_factor": "",
       "displayName": "st_addon_scope_aimpoint_pro",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "pritseldob",
-      "pda_encyclopedia_name": "st_addon_scope_psicho_rmr",
-      "st_data_export_description": "st_addon_scope_psicho_rmr_descr",
-      "st_prop_weight": "0.66",
-      "st_upgr_cost": "45950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_psicho_rmr",
       "hasStashDrop": false,
       "hasDisassemble": false
     },
@@ -945,28 +681,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "shakal",
-      "pda_encyclopedia_name": "st_addon_scope_shakal",
-      "st_data_export_description": "st_addon_scope_shakal_descr",
-      "st_prop_weight": "1.30",
-      "st_upgr_cost": "81150",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_shakal",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "side",
-      "pda_encyclopedia_name": "st_addon_scope_side",
-      "st_data_export_description": "st_addon_scope_side_descr",
-      "st_prop_weight": "0.51",
-      "st_upgr_cost": "4950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_side",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
       "id": "silen98",
       "pda_encyclopedia_name": "st_addon_scope_silen98",
       "st_data_export_description": "st_addon_scope_silen98_descr",
@@ -989,17 +703,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "spec_alt",
-      "pda_encyclopedia_name": "st_addon_scope_spec_alt",
-      "st_data_export_description": "st_addon_scope_spec_alt_descr",
-      "st_prop_weight": "0.71",
-      "st_upgr_cost": "61950",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_spec_alt",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
       "id": "specter",
       "pda_encyclopedia_name": "st_addon_scope_specterDR",
       "st_data_export_description": "st_addon_scope_specterDR_descr",
@@ -1007,50 +710,6 @@
       "st_upgr_cost": "19000",
       "st_data_export_zoom_factor": "",
       "displayName": "st_addon_scope_specterDR",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "spectre_tactical_kit",
-      "pda_encyclopedia_name": "st_addon_scope_spectre_tactical_kit",
-      "st_data_export_description": "st_addon_scope_spectre_tactical_kit_descr",
-      "st_prop_weight": "2.00",
-      "st_upgr_cost": "35000",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_spectre_tactical_kit",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "sr1upgr1",
-      "pda_encyclopedia_name": "st_addon_scope_sr1upgr1",
-      "st_data_export_description": "st_addon_scope_sr1upgr1_descr",
-      "st_prop_weight": "0.45",
-      "st_upgr_cost": "7150",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_sr1upgr1",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "sr2_upkit",
-      "pda_encyclopedia_name": "st_addon_scope_sr2_upkit",
-      "st_data_export_description": "st_addon_scope_sr2_upkit_descr",
-      "st_prop_weight": "0.50",
-      "st_upgr_cost": "28500",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_sr2_upkit",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "sup",
-      "pda_encyclopedia_name": "st_addon_scope_sup_new",
-      "st_data_export_description": "st_addon_scope_sup_new_descr",
-      "st_prop_weight": "0.74",
-      "st_upgr_cost": "50950",
-      "st_data_export_zoom_factor": "15",
-      "displayName": "st_addon_scope_sup_new",
       "hasStashDrop": false,
       "hasDisassemble": false
     },
@@ -1073,17 +732,6 @@
       "st_upgr_cost": "21000",
       "st_data_export_zoom_factor": "",
       "displayName": "st_addon_scope_susatov",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "swamp",
-      "pda_encyclopedia_name": "st_addon_scope_swamp",
-      "st_data_export_description": "st_addon_scope_swamp_descr",
-      "st_prop_weight": "1.60",
-      "st_upgr_cost": "88150",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_swamp",
       "hasStashDrop": false,
       "hasDisassemble": false
     },
@@ -1121,28 +769,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "triji",
-      "pda_encyclopedia_name": "st_addon_scope_trijicon_rmr",
-      "st_data_export_description": "st_addon_scope_trijicon_rmr_descr",
-      "st_prop_weight": "0.56",
-      "st_upgr_cost": "58000",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_trijicon_rmr",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "u2p2g0r",
-      "pda_encyclopedia_name": "st_addon_scope_u2p2g0r",
-      "st_data_export_description": "st_addon_scope_u2p2g0r_descr",
-      "st_prop_weight": "0.26",
-      "st_upgr_cost": "17600",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_u2p2g0r",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
       "id": "uh1_magd",
       "pda_encyclopedia_name": "st_addon_scope_razor_mag",
       "st_data_export_description": "st_addon_scope_razor_mag_descr",
@@ -1161,17 +787,6 @@
       "st_upgr_cost": "18950",
       "st_data_export_zoom_factor": "",
       "displayName": "st_addon_scope_razor",
-      "hasStashDrop": false,
-      "hasDisassemble": false
-    },
-    {
-      "id": "upg220",
-      "pda_encyclopedia_name": "st_addon_scope_upg220",
-      "st_data_export_description": "st_addon_scope_upg220_descr",
-      "st_prop_weight": "0.26",
-      "st_upgr_cost": "15100",
-      "st_data_export_zoom_factor": "",
-      "displayName": "st_addon_scope_upg220",
       "hasStashDrop": false,
       "hasDisassemble": false
     },

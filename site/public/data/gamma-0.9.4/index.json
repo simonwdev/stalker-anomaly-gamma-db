@@ -1304,19 +1304,19 @@
   {
     "id": "226sig_kit",
     "name": "st_addon_scope_226sig_kit",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_226sig_kit"
   },
   {
     "id": "23_up",
     "name": "st_addon_scope_23_up",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_23_up"
   },
   {
     "id": "5c_tik",
     "name": "st_addon_scope_5c_tik",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_5c_tik"
   },
   {
@@ -1364,13 +1364,13 @@
   {
     "id": "apsabigo",
     "name": "st_addon_scope_apsabigo",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_apsabigo"
   },
   {
     "id": "archangel",
     "name": "st_addon_scope_archangel",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_archangel"
   },
   {
@@ -1490,7 +1490,7 @@
   {
     "id": "gurza_up",
     "name": "st_addon_scope_gurza_up",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_gurza_up"
   },
   {
@@ -1508,19 +1508,19 @@
   {
     "id": "infiltrator_tactical_kit",
     "name": "st_addon_scope_infiltrator_tactical_kit",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_infiltrator_tactical_kit"
   },
   {
     "id": "kab_up",
     "name": "st_addon_scope_kab_up",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_kab_up"
   },
   {
     "id": "kashtan_rmr",
     "name": "st_addon_scope_kashtan_rmr",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_kashtan_rmr"
   },
   {
@@ -1532,19 +1532,19 @@
   {
     "id": "kit_aus_tri",
     "name": "st_addon_scope_kit_aus_tri",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_kit_aus_tri"
   },
   {
     "id": "kit_fal_leup",
     "name": "st_addon_scope_kit_fal_leup",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_kit_fal_leup"
   },
   {
     "id": "kit_sa5x_spec",
     "name": "st_addon_scope_kit_sa5x_spec",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_kit_sa5x_spec"
   },
   {
@@ -1556,19 +1556,19 @@
   {
     "id": "kp_sr2",
     "name": "st_addon_scope_kp_sr2",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_kp_sr2"
   },
   {
     "id": "lapua700",
     "name": "st_addon_scope_lapua700",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_lapua700"
   },
   {
     "id": "lazup_pl15",
     "name": "st_addon_scope_lazup_generic",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_lazup_generic"
   },
   {
@@ -1586,7 +1586,7 @@
   {
     "id": "magpul_pro",
     "name": "st_addon_scope_magpul_pro",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_magpul_pro"
   },
   {
@@ -1598,7 +1598,7 @@
   {
     "id": "march_f_shorty_alt",
     "name": "st_addon_scope_march_f_shorty_alt",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_march_f_shorty_alt"
   },
   {
@@ -1610,13 +1610,13 @@
   {
     "id": "mark8_rmr",
     "name": "st_addon_scope_mark8_rmr",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_mark8_rmr"
   },
   {
     "id": "mauser_kit",
     "name": "st_addon_scope_mauser_kit",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_mauser_kit"
   },
   {
@@ -1628,19 +1628,19 @@
   {
     "id": "mod_x_gen3",
     "name": "st_addon_scope_mod_x_gen3",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_mod_x_gen3"
   },
   {
     "id": "mod9",
     "name": "st_addon_scope_mod9",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_mod9"
   },
   {
     "id": "mono_kit",
     "name": "st_addon_scope_mono_kit",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_mono_kit"
   },
   {
@@ -1694,7 +1694,7 @@
   {
     "id": "pl15_scolaz",
     "name": "st_addon_scope_pl15_scolaz",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_pl15_scolaz"
   },
   {
@@ -1712,7 +1712,7 @@
   {
     "id": "pritseldob",
     "name": "st_addon_scope_psicho_rmr",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_psicho_rmr"
   },
   {
@@ -1778,13 +1778,13 @@
   {
     "id": "shakal",
     "name": "st_addon_scope_shakal",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_shakal"
   },
   {
     "id": "side",
     "name": "st_addon_scope_side",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_side"
   },
   {
@@ -1802,7 +1802,7 @@
   {
     "id": "spec_alt",
     "name": "st_addon_scope_spec_alt",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_spec_alt"
   },
   {
@@ -1820,25 +1820,25 @@
   {
     "id": "spectre_tactical_kit",
     "name": "st_addon_scope_spectre_tactical_kit",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_spectre_tactical_kit"
   },
   {
     "id": "sr1upgr1",
     "name": "st_addon_scope_sr1upgr1",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_sr1upgr1"
   },
   {
     "id": "sr2_upkit",
     "name": "st_addon_scope_sr2_upkit",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_sr2_upkit"
   },
   {
     "id": "sup",
     "name": "st_addon_scope_sup_new",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_sup_new"
   },
   {
@@ -1856,7 +1856,7 @@
   {
     "id": "swamp",
     "name": "st_addon_scope_swamp",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_swamp"
   },
   {
@@ -1874,19 +1874,19 @@
   {
     "id": "triji",
     "name": "st_addon_scope_trijicon_rmr",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_trijicon_rmr"
   },
   {
     "id": "u2p2g0r",
     "name": "st_addon_scope_u2p2g0r",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_u2p2g0r"
   },
   {
     "id": "upg220",
     "name": "st_addon_scope_upg220",
-    "category": "Scopes",
+    "category": "Tactical Kits",
     "displayName": "st_addon_scope_upg220"
   },
   {

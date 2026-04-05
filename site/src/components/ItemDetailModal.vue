@@ -111,61 +111,19 @@
                 <div class="modal-description-row">
                     <div class="modal-description-content">
                         <p v-if="parsedDescription" class="modal-description">{{ parsedDescription.text }}</p>
-                        <div v-if="(parsedDescription && parsedDescription.sections.length) || hasWeaponAddons" class="modal-desc-meta">
-                            <div v-if="parsedDescription && parsedDescription.sections.length" class="desc-chip-group">
+                        <div v-if="parsedDescription && parsedDescription.sections.length" class="modal-desc-meta">
+                            <div class="desc-chip-group">
                                 <template v-for="section in parsedDescription.sections">
                                     <span v-if="section.header === 'WARNING'" v-for="item in section.items" class="desc-chip desc-chip-warning">{{ item }}</span>
                                     <span v-else v-for="item in section.items" class="desc-chip">{{ item }}</span>
                                 </template>
                             </div>
-                            <div v-if="modalWeaponAddons.scopes.length" class="desc-chip-group addon-tile-group">
-                                <span class="desc-chip-label addon-tile-section-label">{{ t('app_label_compatible_scopes') }}</span>
-                                <a
-                                    v-for="addon in modalWeaponAddons.scopes"
-                                    :key="addon.id"
-                                    href="#"
-                                    class="addon-img-tile addon-img-tile-scope"
-                                    v-tooltip="addonTooltip(addon)"
-                                    @click.prevent="$emit('navigateToItem', addon.id)"
-                                >
-                                    <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
-                                    <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
-                                </a>
-                            </div>
-                            <div v-if="modalWeaponAddons.silencers.length" class="desc-chip-group addon-tile-group">
-                                <span class="desc-chip-label addon-tile-section-label">{{ t('app_label_compatible_silencers') }}</span>
-                                <a
-                                    v-for="addon in modalWeaponAddons.silencers"
-                                    :key="addon.id"
-                                    href="#"
-                                    class="addon-img-tile addon-img-tile-silencer"
-                                    v-tooltip="addonTooltip(addon)"
-                                    @click.prevent="$emit('navigateToItem', addon.id)"
-                                >
-                                    <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
-                                    <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
-                                </a>
-                            </div>
-                            <div v-if="modalWeaponAddons.launchers.length" class="desc-chip-group addon-tile-group">
-                                <span class="desc-chip-label addon-tile-section-label">{{ t('app_label_compatible_launchers') }}</span>
-                                <a
-                                    v-for="addon in modalWeaponAddons.launchers"
-                                    :key="addon.id"
-                                    href="#"
-                                    class="addon-img-tile addon-img-tile-launcher"
-                                    v-tooltip="addonTooltip(addon)"
-                                    @click.prevent="$emit('navigateToItem', addon.id)"
-                                >
-                                    <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
-                                    <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="drop-sources">
-                    <h2>{{ t('app_label_stats') }}</h2>
+                <div class="drop-sources" :class="{ collapsed: isCollapsed('stats') }">
+                    <h2 class="section-toggle" @click="toggleSection('stats')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_stats') }}</h2>
                     <div class="stat-grid">
                         <div v-for="row in modalStatRows" :key="row.key" :class="row.isSection ? 'stat-section' : 'stat-row'">
                             <template v-if="row.isSection">
@@ -200,8 +158,8 @@
                 </div>
 
                 <!-- Cross-pack changes -->
-                <div v-if="crossPackId && crossPackItem" class="drop-sources">
-                    <h2>{{ t('app_label_changes_from') }} {{ crossPackName }}</h2>
+                <div v-if="crossPackId && crossPackItem" class="drop-sources" :class="{ collapsed: isCollapsed('cross-pack') }">
+                    <h2 class="section-toggle" @click="toggleSection('cross-pack')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_changes_from') }} {{ crossPackName }}</h2>
                     <div v-if="crossPackDiffs.length" class="stat-grid">
                         <div v-for="row in crossPackDiffs" :key="'diff-'+row.key" class="stat-row">
                             <span class="stat-label">{{ headerLabel(row.key) }}</span>
@@ -210,14 +168,14 @@
                     </div>
                     <p v-else class="cross-pack-no-changes">{{ t('app_label_no_changes') }}</p>
                 </div>
-                <div v-else-if="crossPackId && crossPackNotFound" class="drop-sources">
-                    <h2>{{ t('app_label_changes_from') }} {{ crossPackName }}</h2>
+                <div v-else-if="crossPackId && crossPackNotFound" class="drop-sources" :class="{ collapsed: isCollapsed('cross-pack') }">
+                    <h2 class="section-toggle" @click="toggleSection('cross-pack')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_changes_from') }} {{ crossPackName }}</h2>
                     <p class="cross-pack-no-changes">{{ t('app_label_not_in_pack') }}</p>
                 </div>
 
                 <!-- Compatible Ammo (on weapon detail) -->
-                <div v-if="modalAmmoVariants.length > 0" class="drop-sources">
-                    <h2>{{ t('app_label_compatible_ammo') }}</h2>
+                <div v-if="modalAmmoVariants.length > 0" class="drop-sources" :class="{ collapsed: isCollapsed('ammo') }">
+                    <h2 class="section-toggle" @click="toggleSection('ammo')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_ammo') }}</h2>
                     <div class="ammo-table-wrap">
                         <table class="ammo-compare-table">
                             <thead>
@@ -229,7 +187,7 @@
                             <tbody>
                                 <tr v-for="v in modalAmmoVariants" :key="v.id || v.name" :class="{ 'ammo-alt-row': v.isAlt }">
                                     <td>
-                                        <a v-if="v.id" href="#" @click.prevent="$emit('navigateToItem', v.id)" class="ammo-variant-link">{{ shortAmmoName(tName(v)) }}</a>
+                                        <a v-if="v.id" href="#" @click.prevent="$emit('navigateToItem', v.id)" class="ammo-variant-link" @mouseenter="showWeaponHover(v, $event)" @mousemove="moveWeaponHover($event)" @mouseleave="hideWeaponHover()">{{ shortAmmoName(tName(v)) }}</a>
                                         <span v-else>{{ shortAmmoName(tName(v)) }}</span>
                                         <span v-if="v.isAlt" class="badge-ammo badge-ammo-alt ammo-alt-tag">{{ t('app_badge_alt') }}</span>
                                     </td>
@@ -240,9 +198,53 @@
                     </div>
                 </div>
 
+                <!-- Compatible Scopes (on weapon detail) -->
+                <div v-if="modalWeaponAddons.scopes.length" class="drop-sources" :class="{ collapsed: isCollapsed('scopes') }">
+                    <h2 class="section-toggle" @click="toggleSection('scopes')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_scopes') }}</h2>
+                    <div class="addon-tile-grid">
+                        <a v-for="addon in modalWeaponAddons.scopes" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-scope" @mouseenter="showWeaponHover(addon, $event)" @mousemove="moveWeaponHover($event)" @mouseleave="hideWeaponHover()" @click.prevent="$emit('navigateToItem', addon.id)">
+                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                            <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Compatible Silencers (on weapon detail) -->
+                <div v-if="modalWeaponAddons.silencers.length" class="drop-sources" :class="{ collapsed: isCollapsed('silencers') }">
+                    <h2 class="section-toggle" @click="toggleSection('silencers')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_silencers') }}</h2>
+                    <div class="addon-tile-grid">
+                        <a v-for="addon in modalWeaponAddons.silencers" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-silencer" @mouseenter="showWeaponHover(addon, $event)" @mousemove="moveWeaponHover($event)" @mouseleave="hideWeaponHover()" @click.prevent="$emit('navigateToItem', addon.id)">
+                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                            <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Compatible Launchers (on weapon detail) -->
+                <div v-if="modalWeaponAddons.launchers.length" class="drop-sources" :class="{ collapsed: isCollapsed('launchers') }">
+                    <h2 class="section-toggle" @click="toggleSection('launchers')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_launchers') }}</h2>
+                    <div class="addon-tile-grid">
+                        <a v-for="addon in modalWeaponAddons.launchers" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-launcher" @mouseenter="showWeaponHover(addon, $event)" @mousemove="moveWeaponHover($event)" @mouseleave="hideWeaponHover()" @click.prevent="$emit('navigateToItem', addon.id)">
+                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                            <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Compatible Tactical Kits (on weapon detail) -->
+                <div v-if="modalWeaponAddons.kits.length" class="drop-sources" :class="{ collapsed: isCollapsed('kits') }">
+                    <h2 class="section-toggle" @click="toggleSection('kits')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_kits') }}</h2>
+                    <div class="addon-tile-grid">
+                        <a v-for="addon in modalWeaponAddons.kits" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-scope" @mouseenter="showWeaponHover(addon, $event)" @mousemove="moveWeaponHover($event)" @mouseleave="hideWeaponHover()" @click.prevent="$emit('navigateToItem', addon.id)">
+                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                            <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- NPC drop sources -->
-                <div v-if="modalDropFactions.length > 0" class="drop-sources">
-                    <h2>{{ t('app_label_npc_drops') }}</h2>
+                <div v-if="modalDropFactions.length > 0" class="drop-sources" :class="{ collapsed: isCollapsed('npc-drops') }">
+                    <h2 class="section-toggle" @click="toggleSection('npc-drops')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_npc_drops') }}</h2>
                     <div class="drop-grid">
                         <div v-for="f in modalDropFactions" :key="f.name" class="drop-faction">
                             <img v-if="f.icon" :src="'img/' + f.icon" :alt="f.name" class="drop-faction-icon">
@@ -257,8 +259,8 @@
                 </div>
 
                 <!-- Stash drop locations -->
-                <div v-if="modalItemDropLocations.length > 0" class="drop-sources">
-                    <h2>{{ t('app_label_stash_drops') }}</h2>
+                <div v-if="modalItemDropLocations.length > 0" class="drop-sources" :class="{ collapsed: isCollapsed('stash-drops') }">
+                    <h2 class="section-toggle" @click="toggleSection('stash-drops')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_stash_drops') }}</h2>
                     <div class="stash-drop-grid">
                         <div v-for="row in modalItemDropLocations" :key="row.map" class="stash-drop-card">
                             <div class="stash-drop-map">{{ t(row.map) }}</div>
@@ -277,8 +279,8 @@
                 </div>
 
                 <!-- Stash chance -->
-                <div v-if="modalStashChanceEntries.length > 0" class="drop-sources">
-                    <h2>{{ t('app_label_stash_chance') }}</h2>
+                <div v-if="modalStashChanceEntries.length > 0" class="drop-sources" :class="{ collapsed: isCollapsed('stash-chance') }">
+                    <h2 class="section-toggle" @click="toggleSection('stash-chance')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_stash_chance') }}</h2>
                     <div class="stash-drop-grid">
                         <div v-for="entry in modalStashChanceEntries" :key="entry.type" class="stash-drop-card">
                             <div class="stash-drop-map">{{ t(entry.type) }}</div>
@@ -293,8 +295,8 @@
                 </div>
 
                 <!-- Crafting Recipe -->
-                <div v-if="modalRecipe" class="drop-sources">
-                    <h2>{{ t('app_label_crafting_recipe') }}</h2>
+                <div v-if="modalRecipe" class="drop-sources" :class="{ collapsed: isCollapsed('recipe') }">
+                    <h2 class="section-toggle" @click="toggleSection('recipe')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_crafting_recipe') }}</h2>
                     <div class="recipe-ingredients recipe-ingredients-modal">
                         <div v-for="(ing, idx) in modalRecipe" :key="idx" class="recipe-ingredient">
                             <span v-if="idx > 0" class="recipe-plus">+</span>
@@ -310,8 +312,8 @@
                 </div>
 
                 <!-- Used in Crafting -->
-                <div v-if="modalUsedInRecipes.length > 0" class="drop-sources">
-                    <h2>{{ t('app_label_used_in_crafting') }}</h2>
+                <div v-if="modalUsedInRecipes.length > 0" class="drop-sources" :class="{ collapsed: isCollapsed('used-in-crafting') }">
+                    <h2 class="section-toggle" @click="toggleSection('used-in-crafting')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_used_in_crafting') }}</h2>
                     <div class="recipe-used-list">
                         <div v-for="recipe in modalUsedInRecipes" :key="recipe.id" class="recipe-used-item">
                             <a href="#" @click.prevent="$emit('navigateToItem', recipe.id)">{{ tName(recipe) }}</a>
@@ -320,8 +322,8 @@
                 </div>
 
                 <!-- Disassembles Into -->
-                <div v-if="modalDisassembleMaterials" class="drop-sources">
-                    <h2>{{ t('app_label_disassembles') }}</h2>
+                <div v-if="modalDisassembleMaterials" class="drop-sources" :class="{ collapsed: isCollapsed('disassemble') }">
+                    <h2 class="section-toggle" @click="toggleSection('disassemble')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_disassembles') }}</h2>
                     <div class="recipe-ingredients recipe-ingredients-modal">
                         <div v-for="(mat, idx) in modalDisassembleMaterials" :key="idx" class="recipe-ingredient">
                             <span v-if="idx > 0" class="recipe-plus">+</span>
@@ -337,8 +339,8 @@
                 </div>
 
                 <!-- Used By Weapons (on ammo detail) -->
-                <div v-if="modalUsedByWeapons.length > 0" class="drop-sources">
-                    <h2>{{ t('app_label_used_by') }}</h2>
+                <div v-if="modalUsedByWeapons.length > 0" class="drop-sources" :class="{ collapsed: isCollapsed('used-by') }">
+                    <h2 class="section-toggle" @click="toggleSection('used-by')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_used_by') }}</h2>
                     <div class="used-by-grid">
                         <div v-for="w in modalUsedByWeapons" :key="w.id" class="used-by-item">
                             <a href="#" @click.prevent="$emit('navigateToItem', w.id)">{{ tName(w) }}</a>
@@ -349,8 +351,8 @@
                 </div>
 
                 <!-- Compatible Weapons (on scope/silencer/grenade launcher detail) -->
-                <div v-if="modalAddonCompatibleWeapons.length > 0" class="drop-sources">
-                    <h2>{{ t('app_label_compatible_weapons') }}</h2>
+                <div v-if="modalAddonCompatibleWeapons.length > 0" class="drop-sources" :class="{ collapsed: isCollapsed('compat-weapons') }">
+                    <h2 class="section-toggle" @click="toggleSection('compat-weapons')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_weapons') }}</h2>
                     <div class="addon-compat-weapons-grid">
                         <a
                             v-for="w in modalAddonCompatibleWeapons"
@@ -363,10 +365,10 @@
                             @click.prevent="$emit('navigateToItem', w.id)"
                         >{{ weaponDisplayName(w) }}</a>
                     </div>
-                    <ItemHoverPopover :item="hoverWeapon" :pos="hoverWeaponPos" />
                 </div>
             </div>
         </div>
+        <ItemHoverPopover :item="hoverWeapon" :pos="hoverWeaponPos" />
     </div>
     </Transition>
 </div>
@@ -430,6 +432,7 @@ export default {
       hoverWeaponPos: null,
       _hoverTimeout: null,
       _hoverMouse: null,
+      collapsedSections: this._loadCollapsedSections(),
     };
   },
   watch: {
@@ -438,13 +441,26 @@ export default {
   computed: {
     hasWeaponAddons() {
       const a = this.modalWeaponAddons;
-      return a.scopes.length > 0 || a.silencers.length > 0 || a.launchers.length > 0;
+      return a.scopes.length > 0 || a.silencers.length > 0 || a.launchers.length > 0 || a.kits.length > 0;
     },
     isAddonItem() {
-      return ['Scopes', 'Silencers', 'Grenade Launchers'].includes(this.modalCategory);
+      return ['Scopes', 'Silencers', 'Grenade Launchers', 'Tactical Kits'].includes(this.modalCategory);
     },
   },
   methods: {
+    _loadCollapsedSections() {
+      try {
+        const raw = localStorage.getItem('modal-collapsed-sections');
+        return raw ? JSON.parse(raw) : {};
+      } catch { return {}; }
+    },
+    isCollapsed(key) {
+      return !!this.collapsedSections[key];
+    },
+    toggleSection(key) {
+      this.collapsedSections[key] = !this.collapsedSections[key];
+      try { localStorage.setItem('modal-collapsed-sections', JSON.stringify(this.collapsedSections)); } catch {}
+    },
     isFavorited(id) {
       return this.favoriteIds.includes(id);
     },

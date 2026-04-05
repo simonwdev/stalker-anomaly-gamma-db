@@ -281,6 +281,45 @@ for (const file of files) {
   console.log(`${file}: ${items.length} items (${config.category})`);
 }
 
+// ── Split tactical/conversion kits out of the Scopes category ────────────────
+// The game exporter lumps all weapon addons (optics + body kits) into the scopes
+// CSV. These IDs are weapon conversion / body-kit items, not optical sights.
+const TACTICAL_KIT_IDS = new Set([
+  "226sig_kit", "23_up", "5c_tik", "apsabigo", "archangel",
+  "gurza_up", "infiltrator_tactical_kit", "kab_up", "kashtan_rmr",
+  "kit_aus_tri", "kit_fal_leup", "kit_sa5x_spec", "kp_sr2", "lapua700",
+  "lazup_pl15", "magpul_pro", "march_f_shorty_alt", "mark8_rmr",
+  "mauser_kit", "mod9", "mod_x_gen3", "mono_kit", "none",
+  "ots2_upgr_kit", "pl15_scolaz", "pritseldob", "shakal", "side",
+  "spec_alt", "spectre_tactical_kit", "sr1upgr1", "sr2_upkit",
+  "sup", "swamp", "triji", "u2p2g0r", "upg220", "vorkuta",
+]);
+
+const scopeData = categoryData.get("scopes");
+if (scopeData) {
+  const kits = [];
+  const realScopes = [];
+  for (const item of scopeData.items) {
+    if (TACTICAL_KIT_IDS.has(item.id)) kits.push(item);
+    else realScopes.push(item);
+  }
+  if (kits.length) {
+    scopeData.items = realScopes;
+    const kitSlug = "tactical-kits";
+    categoryData.set(kitSlug, {
+      category: "Tactical Kits",
+      headers: [...scopeData.headers],
+      items: kits,
+    });
+    // Update index entries for moved items
+    for (const item of kits) {
+      const entry = index.find(e => e.id === item.id);
+      if (entry) entry.category = "Tactical Kits";
+    }
+    console.log(`Split ${kits.length} tactical kits from Scopes into Tactical Kits`);
+  }
+}
+
 // Find longest common prefix of an array of strings
 function commonPrefix(strs) {
   if (strs.length === 0) return "";
@@ -1161,6 +1200,7 @@ try {
   const scopeIds = new Set((categoryData.get("scopes")?.items || []).map(i => i.id));
   const silencerIds = new Set((categoryData.get("silencers")?.items || []).map(i => i.id));
   const launcherIds = new Set((categoryData.get("grenade-launchers")?.items || []).map(i => i.id));
+  const kitIds = new Set((categoryData.get("tactical-kits")?.items || []).map(i => i.id));
   if (!scopeIds.size) console.warn("WARNING: No scope items found in categoryData — weapon-addons.json will have no scope classifications");
   if (!silencerIds.size) console.warn("WARNING: No silencer items found in categoryData — weapon-addons.json will have no silencer classifications");
   if (!launcherIds.size) console.warn("WARNING: No launcher items found in categoryData — weapon-addons.json will have no launcher classifications");
@@ -1171,14 +1211,14 @@ try {
     const parts = line.split(",").map((v) => v.trim()).filter(Boolean);
     if (parts.length < 2) continue;
     const weaponId = parts[0];
-    const addons = { scopes: [], silencers: [], launchers: [] };
+    const addons = { scopes: [], silencers: [], launchers: [], kits: [] };
     for (const addonId of parts.slice(1)) {
       if (scopeIds.has(addonId)) addons.scopes.push(addonId);
       else if (silencerIds.has(addonId)) addons.silencers.push(addonId);
       else if (launcherIds.has(addonId)) addons.launchers.push(addonId);
+      else if (kitIds.has(addonId)) addons.kits.push(addonId);
     }
-    // Only include weapons that have at least one classified addon
-    if (addons.scopes.length || addons.silencers.length || addons.launchers.length) {
+    if (addons.scopes.length || addons.silencers.length || addons.launchers.length || addons.kits.length) {
       weaponAddons[weaponId] = addons;
     }
   }

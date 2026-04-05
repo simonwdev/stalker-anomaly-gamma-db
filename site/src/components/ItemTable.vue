@@ -16,7 +16,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="item in visibleItems" :key="item.id" @click="$emit('navigateToItem', item.id)" class="clickable-row" v-tooltip="rowTooltipFn ? rowTooltipFn(item) : null">
+        <tr v-for="item in visibleItems" :key="item.id" @click="$emit('navigateToItem', item.id)" class="clickable-row">
             <td class="fav-col" @click.stop="$emit('toggleFavorite', item.id)">
                 <span class="fav-icon" :class="{ favorited: isFavorited(item.id) }">{{ isFavorited(item.id) ? '\u2605' : '\u2606' }}</span>
             </td>
@@ -61,11 +61,14 @@
                     </template>
                     <template v-else-if="col.key === 'ui_ammo_types' || col.key === 'st_data_export_ammo_types_alt'">
                         <span v-if="item[col.key]" class="table-ammo-list">
-                            <span v-for="a in item[col.key].split(';')" :key="a" :class="col.key === 'st_data_export_ammo_types_alt' ? 'badge-ammo badge-ammo-alt clickable' : 'badge-ammo clickable'" v-tooltip="ammoTooltipPayload(a.trim())" @click.stop="openAmmoFromCaliber(a.trim())">{{ caliberName(a.trim()) }}</span>
+                            <span v-for="a in item[col.key].split(';')" :key="a" :class="col.key === 'st_data_export_ammo_types_alt' ? 'badge-ammo badge-ammo-alt clickable' : 'badge-ammo clickable'" @mouseenter="showItemHoverFromCaliber(a.trim(), $event)" @mouseleave="hideItemHover()" @click.stop="openAmmoFromCaliber(a.trim())">{{ caliberName(a.trim()) }}</span>
                         </span>
                     </template>
                     <template v-else-if="col.key === 'ui_st_community'">
                         <span v-if="item[col.key]" class="badge-flag" :style="factionColor(item[col.key]) ? { color: factionColor(item[col.key]), background: 'rgba(' + parseInt(factionColor(item[col.key]).slice(1,3),16) + ',' + parseInt(factionColor(item[col.key]).slice(3,5),16) + ',' + parseInt(factionColor(item[col.key]).slice(5,7),16) + ',0.18)' } : null">{{ t(item[col.key]).toUpperCase() }}</span>
+                    </template>
+                    <template v-else-if="col.key === '_compatible_weapons'">
+                        <span class="badge-flag badge-compat compat-weapons-badge" @mouseenter="showWeaponListPopover(item, $event)" @mouseleave="hideWeaponListPopover()"><LucideSearch :size="10" /> {{ formatValue(col.key, cellValue(item, col.key), true) }}</span>
                     </template>
                     <template v-else>
                         <span :class="statClass(col.key, cellValue(item, col.key))" :style="statStyle(col.key, cellValue(item, col.key))">{{ formatValue(col.key, cellValue(item, col.key), true) }}</span>
@@ -98,10 +101,13 @@ export default {
     "singularType",
     "healDots",
     "caliberName",
-    "ammoTooltipPayload",
+    "showItemHoverFromCaliber",
+    "hideItemHover",
     "factionColor",
     "isUnusedAmmo",
     "openAmmoFromCaliber",
+    "showWeaponListPopover",
+    "hideWeaponListPopover",
   ],
   props: {
     items: { type: Array, required: true },
@@ -111,7 +117,6 @@ export default {
     favoriteIds: { type: Array, required: true },
     pinnedIds: { type: Array, required: true },
     activeNameTags: { type: Array, required: true },
-    rowTooltipFn: { type: Function, default: null },
   },
   emits: ["navigateToItem", "toggleFavorite", "togglePin", "toggleSort"],
   methods: {
