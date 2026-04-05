@@ -20,10 +20,6 @@
 - [ ] Toolkit map rates CSV not yet available for 0.9.5 - `toolkit-rates.json` generation is skipped. Requires @sw to export from 0.9.5 game files
 - [ ] Belt attachments missing `ui_inv_ap_res` column in `export_belt_attachments.csv`
 
----
-
-# Future Ideas
-
 ## Interactive Maps
 - [x] Interactive maps using Leaflet.js or similar
 - [x] Map overlays for stashes, NPCs, etc.
