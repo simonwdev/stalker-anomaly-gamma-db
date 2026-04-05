@@ -22,6 +22,7 @@
                                     class="crafting-graph-node-img"
                                     :src="itemImageUrl(resolveNodeItem(tree))"
                                     :alt="t(tree.name)"
+                                    loading="lazy"
                                     @error="onNodeImageError(resolveNodeItem(tree))"
                                 >
                                 <div class="crafting-graph-node-text">
@@ -66,6 +67,7 @@
                                             class="crafting-graph-node-img"
                                             :src="itemImageUrl(resolveNodeItem(child))"
                                             :alt="t(child.name)"
+                                            loading="lazy"
                                             @error="onNodeImageError(resolveNodeItem(child))"
                                         >
                                         <div class="crafting-graph-node-text">

@@ -36,7 +36,7 @@
                 </td>
                 <td v-else :class="{ 'text-right': !isLeftAlignCol(col.key) }">
                     <template v-if="col.key === 'pda_encyclopedia_name' || col.key === 'name'">
-                        <a href="#" @click.prevent.stop="$emit('navigateToItem', item.id)">{{ tItemName(item) }}</a>
+                        <a :href="itemHref(item.id)" @click.prevent.stop="$emit('navigateToItem', item.id)">{{ tItemName(item) }}</a>
                         <span v-if="item.hasNpcWeaponDrop === false" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
                         <span v-if="isUnusedAmmo(item)" class="badge-unused" v-tooltip="t('app_tooltip_unused_ammo')">{{ t('app_badge_unused') }}</span>
                         <div v-if="activeNameTags.some(tag => item[tag] === 'Y')" class="name-tags">
@@ -101,6 +101,7 @@ export default {
     "singularType",
     "healDots",
     "caliberName",
+    "itemHref",
     "showItemHoverFromCaliber",
     "hideItemHover",
     "factionColor",

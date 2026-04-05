@@ -187,7 +187,7 @@
                             <tbody>
                                 <tr v-for="v in modalAmmoVariants" :key="v.id || v.name" :class="{ 'ammo-alt-row': v.isAlt }">
                                     <td>
-                                        <a v-if="v.id" href="#" @click.prevent="$emit('navigateToItem', v.id)" class="ammo-variant-link" @mouseenter="showWeaponHover(v, $event)" @mousemove="moveWeaponHover($event)" @mouseleave="hideWeaponHover()">{{ shortAmmoName(tName(v)) }}</a>
+                                        <a v-if="v.id" href="#" @click.prevent="$emit('navigateToItem', v.id)" class="ammo-variant-link" @mouseenter="showItemHover(v, $event)" @mousemove="moveItemHover($event)" @mouseleave="hideItemHover()">{{ shortAmmoName(tName(v)) }}</a>
                                         <span v-else>{{ shortAmmoName(tName(v)) }}</span>
                                         <span v-if="v.isAlt" class="badge-ammo badge-ammo-alt ammo-alt-tag">{{ t('app_badge_alt') }}</span>
                                     </td>
@@ -202,8 +202,8 @@
                 <div v-if="modalWeaponAddons.scopes.length" class="drop-sources" :class="{ collapsed: isCollapsed('scopes') }">
                     <h2 class="section-toggle" @click="toggleSection('scopes')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_scopes') }}</h2>
                     <div class="addon-tile-grid">
-                        <a v-for="addon in modalWeaponAddons.scopes" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-scope" @mouseenter="showWeaponHover(addon, $event)" @mousemove="moveWeaponHover($event)" @mouseleave="hideWeaponHover()" @click.prevent="$emit('navigateToItem', addon.id)">
-                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                        <a v-for="addon in modalWeaponAddons.scopes" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-scope" @mouseenter="showItemHover(addon, $event)" @mousemove="moveItemHover($event)" @mouseleave="hideItemHover()" @click.prevent="$emit('navigateToItem', addon.id)">
+                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" loading="lazy" @error="$event.target.style.display='none'" />
                             <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
                         </a>
                     </div>
@@ -213,8 +213,8 @@
                 <div v-if="modalWeaponAddons.silencers.length" class="drop-sources" :class="{ collapsed: isCollapsed('silencers') }">
                     <h2 class="section-toggle" @click="toggleSection('silencers')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_silencers') }}</h2>
                     <div class="addon-tile-grid">
-                        <a v-for="addon in modalWeaponAddons.silencers" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-silencer" @mouseenter="showWeaponHover(addon, $event)" @mousemove="moveWeaponHover($event)" @mouseleave="hideWeaponHover()" @click.prevent="$emit('navigateToItem', addon.id)">
-                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                        <a v-for="addon in modalWeaponAddons.silencers" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-silencer" @mouseenter="showItemHover(addon, $event)" @mousemove="moveItemHover($event)" @mouseleave="hideItemHover()" @click.prevent="$emit('navigateToItem', addon.id)">
+                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" loading="lazy" @error="$event.target.style.display='none'" />
                             <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
                         </a>
                     </div>
@@ -224,8 +224,8 @@
                 <div v-if="modalWeaponAddons.launchers.length" class="drop-sources" :class="{ collapsed: isCollapsed('launchers') }">
                     <h2 class="section-toggle" @click="toggleSection('launchers')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_launchers') }}</h2>
                     <div class="addon-tile-grid">
-                        <a v-for="addon in modalWeaponAddons.launchers" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-launcher" @mouseenter="showWeaponHover(addon, $event)" @mousemove="moveWeaponHover($event)" @mouseleave="hideWeaponHover()" @click.prevent="$emit('navigateToItem', addon.id)">
-                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                        <a v-for="addon in modalWeaponAddons.launchers" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-launcher" @mouseenter="showItemHover(addon, $event)" @mousemove="moveItemHover($event)" @mouseleave="hideItemHover()" @click.prevent="$emit('navigateToItem', addon.id)">
+                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" loading="lazy" @error="$event.target.style.display='none'" />
                             <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
                         </a>
                     </div>
@@ -235,8 +235,8 @@
                 <div v-if="modalWeaponAddons.kits.length" class="drop-sources" :class="{ collapsed: isCollapsed('kits') }">
                     <h2 class="section-toggle" @click="toggleSection('kits')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_kits') }}</h2>
                     <div class="addon-tile-grid">
-                        <a v-for="addon in modalWeaponAddons.kits" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-scope" @mouseenter="showWeaponHover(addon, $event)" @mousemove="moveWeaponHover($event)" @mouseleave="hideWeaponHover()" @click.prevent="$emit('navigateToItem', addon.id)">
-                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" @error="$event.target.style.display='none'" />
+                        <a v-for="addon in modalWeaponAddons.kits" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-scope" @mouseenter="showItemHover(addon, $event)" @mousemove="moveItemHover($event)" @mouseleave="hideItemHover()" @click.prevent="$emit('navigateToItem', addon.id)">
+                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" loading="lazy" @error="$event.target.style.display='none'" />
                             <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
                         </a>
                     </div>
@@ -359,16 +359,15 @@
                             :key="w.id"
                             href="#"
                             class="addon-compat-weapon-link"
-                            @mouseenter="showWeaponHover(w, $event)"
-                            @mousemove="moveWeaponHover($event)"
-                            @mouseleave="hideWeaponHover()"
+                            @mouseenter="showItemHover(w, $event)"
+                            @mousemove="moveItemHover($event)"
+                            @mouseleave="hideItemHover()"
                             @click.prevent="$emit('navigateToItem', w.id)"
                         >{{ weaponDisplayName(w) }}</a>
                     </div>
                 </div>
             </div>
         </div>
-        <ItemHoverPopover :item="hoverWeapon" :pos="hoverWeaponPos" />
     </div>
     </Transition>
 </div>
@@ -376,16 +375,14 @@
 </template>
 
 <script>
-import ItemHoverPopover from './ItemHoverPopover.vue';
-
 export default {
   name: 'ItemDetailModal',
-  components: { ItemHoverPopover },
   inject: [
     't', 'tName', 'tCat', 'headerLabel', 'formatValue', 'displayLabel', 'displayStyle',
     'healDots', 'factionColor', 'factionIcon', 'singularCategory', 'isUnusedAmmo',
     'caliberVariantObjects', 'shortAmmoName', 'formatAmmoStat', 'ammoArrow', 'isAmmoBest',
     'findItemByName', 'modalStatClass', 'modalStatStyle',
+    'showItemHover', 'moveItemHover', 'hideItemHover',
   ],
   props: {
     modalOpen: Boolean,
@@ -428,15 +425,11 @@ export default {
   data() {
     return {
       compareMenuOpen: false,
-      hoverWeapon: null,
-      hoverWeaponPos: null,
-      _hoverTimeout: null,
-      _hoverMouse: null,
       collapsedSections: this._loadCollapsedSections(),
     };
   },
   watch: {
-    modalItem() { this.hideWeaponHover(); },
+    modalItem() { this.hideItemHover(); },
   },
   computed: {
     hasWeaponAddons() {
@@ -493,41 +486,6 @@ export default {
     },
     weaponDisplayName(w) {
       return this.tName(w).replace(/\s*\[default\]$/i, '').trim();
-    },
-    showWeaponHover(item, event) {
-      clearTimeout(this._hoverTimeout);
-      this._hoverMouse = { x: event.clientX, y: event.clientY };
-      this._hoverTimeout = setTimeout(() => {
-        this.hoverWeapon = item;
-        this.$nextTick(() => this._positionWeaponHover());
-      }, 250);
-    },
-    moveWeaponHover(event) {
-      this._hoverMouse = { x: event.clientX, y: event.clientY };
-      if (this.hoverWeapon) this._positionWeaponHover();
-    },
-    hideWeaponHover() {
-      clearTimeout(this._hoverTimeout);
-      this.hoverWeapon = null;
-      this.hoverWeaponPos = null;
-      this._hoverMouse = null;
-    },
-    _positionWeaponHover() {
-      const el = this.$el?.querySelector('.item-hover-popover');
-      if (!el || !this._hoverMouse) return;
-      const { x, y } = this._hoverMouse;
-      const virt = { getBoundingClientRect: () => ({ x, y, top: y, left: x, bottom: y, right: x, width: 0, height: 0 }) };
-      FloatingUIDOM.computePosition(virt, el, {
-        placement: 'right-start',
-        strategy: 'fixed',
-        middleware: [
-          FloatingUIDOM.offset(12),
-          FloatingUIDOM.flip({ fallbackPlacements: ['left-start', 'right-end', 'left-end'] }),
-          FloatingUIDOM.shift({ padding: 8 }),
-        ],
-      }).then(({ x: px, y: py }) => {
-        this.hoverWeaponPos = { top: py, left: px };
-      });
     },
   },
 };

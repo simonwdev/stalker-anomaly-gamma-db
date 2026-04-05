@@ -4,7 +4,7 @@
         <div class="tile-card-header">
             <span class="fav-icon" :class="{ favorited: isFavorited(item.id) }" @click.stop="$emit('toggleFavorite', item.id)">{{ isFavorited(item.id) ? '\u2605' : '\u2606' }}</span>
             <span class="pin-icon" :class="{ pinned: isPinned(item.id), 'pin-disabled': !isPinned(item.id) && pinnedIds.length >= 5 }" @click.stop="$emit('togglePin', item.id)">&#x1F4CC;</span>
-            <a href="#" @click.prevent.stop="$emit('navigateToItem', item.id)" class="tile-card-name">{{ tItemName(item) }}</a>
+            <a :href="itemHref(item.id)" @click.prevent.stop="$emit('navigateToItem', item.id)" class="tile-card-name">{{ tItemName(item) }}</a>
             <span v-if="item.hasNpcWeaponDrop === false" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
             <span v-if="isUnusedAmmo(item)" class="badge-unused" v-tooltip="t('app_tooltip_unused_ammo')">{{ t('app_badge_unused') }}</span>
             <span v-if="item.Type" class="badge-flag badge-type">{{ t(singularType(item.Type)) }}</span>
@@ -24,6 +24,7 @@
                 class="addon-img-tile-icon"
                 :src="'img/icons/' + item.id + '.png'"
                 :alt="tItemName(item)"
+                loading="lazy"
                 @error="$event.target.parentElement.style.display='none'"
             />
         </div>
@@ -83,7 +84,7 @@ export default {
         't', 'tItemName', 'headerLabel', 'cellValue', 'formatValue',
         'statClass', 'statStyle', 'displayLabel', 'displayStyle',
         'singularType', 'singularCategory', 'healDots',
-        'caliberName', 'showItemHoverFromCaliber', 'hideItemHover', 'factionColor',
+        'caliberName', 'itemHref', 'showItemHoverFromCaliber', 'hideItemHover', 'factionColor',
         'isUnusedAmmo', 'openAmmoFromCaliber',
         'showWeaponListPopover',
         'hideWeaponListPopover',

@@ -490,79 +490,6 @@
     </div>
 
     <!-- Item hover popover -->
-    <div v-if="buildHoverItem" class="build-hover-popover" :style="buildHoverPos ? { top: buildHoverPos.top + 'px', left: buildHoverPos.left + 'px' } : { visibility: 'hidden' }">
-        <!-- Single-item popover (no comparison) -->
-        <div v-if="!buildHoverCompareItem" class="tile-card build-hover-tile">
-            <div class="tile-card-header">
-                <span class="tile-card-name">{{ tItemName(buildHoverItem) }}</span>
-                <span v-if="buildHoverItem['st_data_export_has_perk'] === 'Y'" class="badge-flag badge-perk">{{ t('app_badge_perk') }}</span>
-                <span v-if="buildHoverItem['ui_mcm_menu_exo'] === 'Y'" class="badge-flag badge-powered">{{ t('app_badge_powered') }}</span>
-            </div>
-            <div class="tile-card-stats">
-                <div v-for="field in getItemFields(buildHoverItem)" :key="field" class="tile-stat-row">
-                    <span class="stat-label">{{ headerLabel(field) }}</span>
-                    <template v-if="field === 'ui_mm_repair'">
-                        <span class="badge" :style="displayStyle(field, buildHoverItem[field])">{{ displayLabel(field, buildHoverItem[field]) }}</span>
-                    </template>
-                    <template v-else-if="field === 'ui_ammo_types' || field === 'st_data_export_ammo_types_alt'">
-                        <span v-if="buildHoverItem[field]" class="tile-ammo-list">
-                            <span v-for="a in buildHoverItem[field].split(';')" :key="a" :class="field === 'st_data_export_ammo_types_alt' ? 'badge-ammo badge-ammo-alt clickable' : 'badge-ammo clickable'" v-tooltip="ammoTooltipPayload(a.trim())" @click.stop="openAmmoFromCaliber(a.trim())">{{ caliberName(a.trim()) }}</span>
-                        </span>
-                        <span v-else class="stat-value">--</span>
-                    </template>
-                    <template v-else>
-                        <span class="stat-value" :class="statClass(field, cellValue(buildHoverItem, field))" :style="statStyle(field, cellValue(buildHoverItem, field))">{{ formatValue(field, cellValue(buildHoverItem, field)) }}</span>
-                    </template>
-                </div>
-            </div>
-            <div class="build-hover-desc">
-                <img class="build-hover-icon" :src="'img/icons/' + buildHoverItem.id + '.png'" @error="$event.target.style.display='none'">
-                <p v-if="parseDescription(buildHoverItem)" class="modal-description">{{ parseDescription(buildHoverItem).text }}</p>
-                <div v-if="parseDescription(buildHoverItem) && parseDescription(buildHoverItem).sections.length" class="modal-desc-meta">
-                    <template v-for="section in parseDescription(buildHoverItem).sections">
-                        <span v-if="section.header === 'WARNING'" v-for="item in section.items" class="desc-chip desc-chip-warning">{{ item }}</span>
-                        <span v-else v-for="item in section.items" class="desc-chip">{{ item }}</span>
-                    </template>
-                </div>
-            </div>
-        </div>
-        <!-- Comparison popover -->
-        <div v-else class="tile-card build-hover-tile build-hover-tile--compare">
-            <div class="build-compare-header">
-                {{ tItemName(buildHoverCompareItem) }} <span class="build-compare-vs">vs</span> {{ tItemName(buildHoverItem) }}
-            </div>
-            <div class="build-compare-grid">
-                <span class="build-compare-sublabel"></span>
-                <span class="build-compare-sublabel">{{ t('app_build_equipped') }}</span>
-                <span class="build-compare-sublabel">{{ t('app_build_inventory') }}</span>
-                <span class="build-compare-sublabel"></span>
-                <template v-for="field in buildHoverCompareFields()" :key="field">
-                    <span class="stat-label">{{ headerLabel(field) }}</span>
-                    <span class="stat-value build-compare-val">{{ formatValue(field, cellValue(buildHoverCompareItem, field)) }}</span>
-                    <span class="stat-value build-compare-val">{{ formatValue(field, cellValue(buildHoverItem, field)) }}</span>
-                    <span class="build-compare-diff"
-                          :class="buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value === null ? 'diff-dash'
-                                 : buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value === 0 ? 'diff-zero'
-                                 : buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).positive ? 'diff-positive'
-                                 : 'diff-negative'">
-                        {{ buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value === null ? '—'
-                           : buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value === 0 ? '='
-                           : (buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value > 0 ? '+' : '') + formatValue(field, buildHoverDiff(field, buildHoverItem, buildHoverCompareItem).value) }}
-                    </span>
-                </template>
-            </div>
-            <div class="build-hover-desc">
-                <img class="build-hover-icon" :src="'img/icons/' + buildHoverItem.id + '.png'" @error="$event.target.style.display='none'">
-                <p v-if="parseDescription(buildHoverItem)" class="modal-description">{{ parseDescription(buildHoverItem).text }}</p>
-                <div v-if="parseDescription(buildHoverItem) && parseDescription(buildHoverItem).sections.length" class="modal-desc-meta">
-                    <template v-for="section in parseDescription(buildHoverItem).sections">
-                        <span v-if="section.header === 'WARNING'" v-for="item in section.items" class="desc-chip desc-chip-warning">{{ item }}</span>
-                        <span v-else v-for="item in section.items" class="desc-chip">{{ item }}</span>
-                    </template>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 </template>
 
@@ -608,9 +535,6 @@ export default {
         buildInventorySort: { type: String, default: 'none' },
         buildInventorySortLabel: { type: String, default: '' },
         buildDragState: { type: Object, default: null },
-        buildHoverItem: { type: Object, default: null },
-        buildHoverCompareItem: { type: Object, default: null },
-        buildHoverPos: { type: Object, default: null },
         favoriteIds: { type: Array, default: () => [] },
         factionList: { type: Array, default: () => [] },
         weaponCompareSlotCount: { type: Number, default: 0 },

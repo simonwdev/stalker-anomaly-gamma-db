@@ -351,7 +351,7 @@ interface DifficultyOption {
 }
 
 const MAX_LOADOUTS = 5;
-const LOADOUT_COLORS = ['var(--color-blue-mid)', 'var(--color-accent-warm)', '#b8a048', 'var(--color-purple-mid)', '#6b9ec8'];
+const LOADOUT_COLORS = ['#5b8abd', '#c89050', '#b8a048', '#9b6fb0', '#6b9ec8'];
 
 export default defineComponent({
   name: 'DamageSimulator',
@@ -812,18 +812,18 @@ export default defineComponent({
             r: {
               min: 0, max: 100,
               ticks: { display: false, stepSize: 20 },
-              grid: { color: 'var(--color-border)' },
-              angleLines: { color: 'var(--color-border)' },
-              pointLabels: { color: 'var(--color-text)', font: { size: 11 } },
+              grid: { color: '#2a2a2a' },
+              angleLines: { color: '#2a2a2a' },
+              pointLabels: { color: '#d4d4d4', font: { size: 11 } },
             }
           },
           plugins: {
-            legend: { display: data.datasets.length > 1, position: 'top' as const, labels: { color: 'var(--color-text)', font: { size: 10 }, usePointStyle: true, pointStyle: 'circle', padding: 12 } },
+            legend: { display: data.datasets.length > 1, position: 'top' as const, labels: { color: '#d4d4d4', font: { size: 10 }, usePointStyle: true, pointStyle: 'circle', padding: 12 } },
             tooltip: {
-              backgroundColor: 'var(--color-card)',
-              titleColor: 'var(--color-text)',
-              bodyColor: 'var(--color-text)',
-              borderColor: 'var(--color-border)',
+              backgroundColor: '#1a1a1a',
+              titleColor: '#d4d4d4',
+              bodyColor: '#d4d4d4',
+              borderColor: '#2a2a2a',
               borderWidth: 1,
               callbacks: {
                 label(ctx: any) {

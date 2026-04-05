@@ -44,22 +44,22 @@
             <button class="header-drawer-close" @click.stop="overflowOpen = false">&times;</button>
         </div>
         <div class="header-drawer-label">{{ t('app_group_tools') }}</div>
-        <button class="header-drawer-item" :class="{ active: itemDbActive }" @click="$emit('openItemDb'); overflowOpen = false">
+        <a class="header-drawer-item" :class="{ active: itemDbActive }" :href="navHref('db')" @click.prevent="$emit('openItemDb'); overflowOpen = false">
             <LucideDatabase :size="16" />
             <span>{{ t('app_nav_item_db') }}</span>
-        </button>
-        <button class="header-drawer-item" :class="{ active: buildPlannerActive }" @click="$emit('openBuildPlanner'); overflowOpen = false">
+        </a>
+        <a class="header-drawer-item" :class="{ active: buildPlannerActive }" :href="navHref('build-planner')" @click.prevent="$emit('openBuildPlanner'); overflowOpen = false">
             <LucideHammer :size="16" />
             <span>{{ t('app_cat_build_planner') }}</span>
-        </button>
-        <button class="header-drawer-item" :class="{ active: damageSimActive }" @click="$emit('openDamageSim'); overflowOpen = false">
+        </a>
+        <a class="header-drawer-item" :class="{ active: damageSimActive }" :href="navHref('ballistics')" @click.prevent="$emit('openDamageSim'); overflowOpen = false">
             <LucideCrosshair :size="16" />
             <span>{{ t('app_nav_damage_sim') }}</span>
-        </button>
-        <button class="header-drawer-item maps-nav-btn" :class="{ active: mapsActive }" @click="$emit('openMaps'); overflowOpen = false">
+        </a>
+        <a class="header-drawer-item maps-nav-btn" :class="{ active: mapsActive }" :href="navHref('maps')" @click.prevent="$emit('openMaps'); overflowOpen = false">
             <LucideMap :size="16" />
             <span>{{ t('app_nav_maps') }}</span>
-        </button>
+        </a>
         <div class="header-drawer-divider"></div>
         <template v-if="packs.length > 1">
             <div class="header-drawer-label">{{ t('app_drawer_pack') || 'Pack' }}</div>
@@ -171,22 +171,22 @@
     </Transition>
 </header>
 <nav class="nav-bar header-desktop-items" v-show="translations">
-    <button class="nav-bar-item" :class="{ active: itemDbActive }" @click="$emit('openItemDb')">
+    <a class="nav-bar-item" :class="{ active: itemDbActive }" :href="navHref('db')" @click.prevent="$emit('openItemDb')">
         <LucideDatabase :size="14" />
         {{ t('app_nav_item_db') }}
-    </button>
-    <button class="nav-bar-item" :class="{ active: buildPlannerActive }" @click="$emit('openBuildPlanner')">
+    </a>
+    <a class="nav-bar-item" :class="{ active: buildPlannerActive }" :href="navHref('build-planner')" @click.prevent="$emit('openBuildPlanner')">
         <LucideHammer :size="14" />
         {{ t('app_cat_build_planner') }}
-    </button>
-    <button class="nav-bar-item ballistics-nav-btn" :class="{ active: damageSimActive }" @click="$emit('openDamageSim')">
+    </a>
+    <a class="nav-bar-item ballistics-nav-btn" :class="{ active: damageSimActive }" :href="navHref('ballistics')" @click.prevent="$emit('openDamageSim')">
         <LucideCrosshair :size="14" />
         {{ t('app_nav_damage_sim') }}
-    </button>
-    <button class="nav-bar-item maps-nav-btn" :class="{ active: mapsActive }" @click="$emit('openMaps')">
+    </a>
+    <a class="nav-bar-item maps-nav-btn" :class="{ active: mapsActive }" :href="navHref('maps')" @click.prevent="$emit('openMaps')">
         <LucideMap :size="14" />
         {{ t('app_nav_maps') }}
-    </button>
+    </a>
     <div class="nav-bar-spacer"></div>
     <div class="settings-wrap" v-click-outside="() => settingsOpen = false">
         <button class="settings-btn" @click.stop="settingsOpen = !settingsOpen" v-tooltip="t('app_label_settings')">
@@ -241,7 +241,7 @@ export default {
         'openItemDb', 'openMaps', 'openBuildPlanner', 'openDamageSim',
         'toggleHideNoDrop', 'toggleHideUnusedAmmo', 'toggleShowTileIcons',
     ],
-    inject: ['t', 'tName', 'tCat'],
+    inject: ['t', 'tName', 'tCat', 'navHref'],
     computed: {
         sortedPacks() {
             return [...this.packs].sort((a, b) => a.name.localeCompare(b.name));

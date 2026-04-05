@@ -26,12 +26,13 @@
             {{ t(group.name) }}
         </div>
         <div class="sidebar-group-items" v-show="!collapsedGroups[group.name]">
-            <button
+            <a
                 v-for="cat in group.categories"
                 :key="cat"
+                :href="categoryHref(cat)"
                 :class="{ active: activeCategory === cat && !favoritesViewActive && !recentViewActive && !buildPlannerActive && !versionCompareActive }"
-                @click="$emit('selectCategory', cat)"
-            ><span class="cat-label" :title="tCat(cat)">{{ tCat(cat) }}</span> <span v-if="categoryCounts[cat]" class="cat-count">{{ categoryCounts[cat] }}</span></button>
+                @click.prevent="$emit('selectCategory', cat)"
+            ><span class="cat-label" :title="tCat(cat)">{{ tCat(cat) }}</span> <span v-if="categoryCounts[cat]" class="cat-count">{{ categoryCounts[cat] }}</span></a>
         </div>
     </div>
     </div>
@@ -61,6 +62,6 @@ export default {
         'toggleGroup', 'selectFavorites', 'selectRecent', 'openVersionCompare',
         'selectCategory', 'toggleSidebarCollapse',
     ],
-    inject: ['t', 'tCat'],
+    inject: ['t', 'tCat', 'categoryHref'],
 };
 </script>

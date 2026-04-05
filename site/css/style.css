@@ -436,6 +436,7 @@ a:hover {
     font-size: 0.75rem;
     font-weight: 500;
     cursor: pointer;
+    text-decoration: none;
     transition: color 0.15s, border-color 0.15s;
     white-space: nowrap;
 }
@@ -810,7 +811,8 @@ button.header-link {
 .sidebar-chevron.collapsed {
     transform: rotate(-90deg);
 }
-.sidebar button {
+.sidebar button,
+.sidebar .sidebar-group-items a {
     display: flex;
     align-items: center;
     width: 100%;
@@ -822,13 +824,16 @@ button.header-link {
     padding: 0.2rem 0.75rem;
     font-size: 0.8rem;
     cursor: pointer;
+    text-decoration: none;
     transition: color 0.15s, background 0.15s;
 }
-.sidebar button:hover {
+.sidebar button:hover,
+.sidebar .sidebar-group-items a:hover {
     color: var(--text);
     background: var(--border);
 }
-.sidebar button.active {
+.sidebar button.active,
+.sidebar .sidebar-group-items a.active {
     color: var(--accent);
     background: var(--color-accent-tint-8);
     border-left: 2px solid var(--accent);
@@ -900,7 +905,8 @@ button.header-link {
     display: flex;
 }
 
-.sidebar button.active .cat-count {
+.sidebar button.active .cat-count,
+.sidebar .sidebar-group-items a.active .cat-count {
     color: var(--accent);
     background: var(--color-accent-tint-12);
 }
@@ -3517,7 +3523,7 @@ input.range-input {
         display: block; position: fixed; inset: 0;
         z-index: 140; background: var(--color-overlay-black-50);
     }
-    .sidebar button { min-height: 44px; font-size: 0.85rem; }
+    .sidebar button, .sidebar .sidebar-group-items a { min-height: 44px; font-size: 0.85rem; }
     .sidebar-collapse-btn { display: none; }
     .layout.sidebar-collapsed { grid-template-columns: 1fr; }
     .layout.sidebar-collapsed .sidebar { display: none; }

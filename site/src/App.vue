@@ -293,9 +293,6 @@
                 :build-inventory-sort="buildInventorySort"
                 :build-inventory-sort-label="buildInventorySortLabel"
                 :build-drag-state="buildDragState"
-                :build-hover-item="buildHoverItem"
-                :build-hover-compare-item="buildHoverCompareItem"
-                :build-hover-pos="buildHoverPos"
                 :favorite-ids="favoriteIds"
                 :faction-list="factionList"
                 :weapon-compare-slot-count="weaponCompareSlotCount"
@@ -371,11 +368,19 @@
     </main>
 </div>
 
-<!-- Item hover popover (used by damage sim, rendered outside content-inner) -->
-<ItemHoverPopover :item="buildHoverItem" :pos="buildHoverPos" />
+<!-- Global item hover popover (single instance for all non-comparison hovers) -->
+<ItemHoverPopover
+    class="item-hover-popover-global"
+    :item="!hoverCompareItem ? hoverItem : null"
+    :pos="hoverPos"
+/>
 
-<!-- General item hover popover (ammo badges in table/grid) -->
-<ItemHoverPopover class="item-hover-popover-global" :item="itemHoverItem" :pos="itemHoverPos" />
+<!-- Item comparison popover (build planner equipped vs inventory) -->
+<ItemComparePopover
+    :item="hoverItem"
+    :compare-item="hoverCompareItem"
+    :pos="hoverPos"
+/>
 
 <!-- Compatible weapons click popover (addon categories) -->
 <Transition name="fade">
@@ -538,6 +543,7 @@ import { defineAsyncComponent } from 'vue';
 const BuildPlanner = defineAsyncComponent(() => import('./components/BuildPlanner.vue'));
 const DamageSimulator = defineAsyncComponent(() => import('./components/DamageSimulator.vue'));
 import ItemHoverPopover from "./components/ItemHoverPopover.vue";
+import ItemComparePopover from "./components/ItemComparePopover.vue";
 const MapsView = defineAsyncComponent(() => import('./components/MapsView.vue'));
 import ComparePanel from "./components/ComparePanel.vue";
 import CraftingTreesTileView from "./components/crafting-trees-page/CraftingTreesTileView.vue";
@@ -559,6 +565,7 @@ export default {
     BuildPlanner,
     DamageSimulator,
     ItemHoverPopover,
+    ItemComparePopover,
     BuildImportCodeModal,
     BuildPickerModal,
     BuildSaveModal,
@@ -634,6 +641,11 @@ export default {
       showWeaponListPopover: this.showWeaponListPopover,
       hideWeaponListPopover: this.hideWeaponListPopover,
       keepWeaponListPopover: this.keepWeaponListPopover,
+      navHref: this.navHref,
+      itemHref: this.itemHref,
+      categoryHref: this.categoryHref,
+      showItemHover: this.showItemHover,
+      moveItemHover: this.moveItemHover,
       showItemHoverFromCaliber: this.showItemHoverFromCaliber,
       hideItemHover: this.hideItemHover,
     };

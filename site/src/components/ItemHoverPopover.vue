@@ -80,7 +80,7 @@ export default defineComponent({
 }
 .item-hover-card {
   background: var(--card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--color-accent-tint-20);
   border-radius: 5px;
   padding: 0.5rem 0.6rem;
   box-shadow: 0 4px 16px var(--color-overlay-black-50);

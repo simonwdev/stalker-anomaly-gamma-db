@@ -212,15 +212,10 @@ export const appDefinition = {
             weaponListPopoverItem: null,
             weaponListPopoverPos: null,
 
-            // General item hover popover (table/grid ammo badges, etc.)
-            itemHoverItem: null,
-            itemHoverPos: null,
-
-            // Item hover popover
-            buildHoverItem: null,
-            buildHoverCompareItem: null,
-            buildHoverPos: null,
-            buildHoverTimeout: null,
+            // Unified item hover popover
+            hoverItem: null,
+            hoverPos: null,
+            hoverCompareItem: null,
 
             buildWeaponCompareSlot: "primary",  // "primary" | "secondary" | "sidearm"
 
@@ -2076,6 +2071,8 @@ export const appDefinition = {
             this.copyModalLinkFeedback = false;
             this.crossPackItem = null;
             this.crossPackNotFound = false;
+            this.hideItemHover();
+            this.closeWeaponListPopover();
             document.body.style.overflow = "hidden";
 
             try {
@@ -4006,39 +4003,68 @@ export const appDefinition = {
             if (!entry || !entry.variants?.length) return;
             const variant = entry.variants[0];
             if (!variant) return;
-            // Resolve full item from categoryItems if available
             const full = this.ammoItemById(variant.id);
             this.showItemHover(full || variant, event);
         },
 
-        showItemHover(item, event) {
-            clearTimeout(this._itemHoverShowTimeout);
-            clearTimeout(this._itemHoverHideTimeout);
+        showItemHover(item, event, compareItem) {
+            clearTimeout(this._hoverShowTimeout);
             const anchor = event.currentTarget;
-            this._itemHoverShowTimeout = setTimeout(() => {
-                this.itemHoverItem = item;
-                this.$nextTick(() => {
-                    const el = document.querySelector('.item-hover-popover-global');
-                    if (!el || !anchor) return;
-                    FloatingUIDOM.computePosition(anchor, el, {
-                        placement: 'right-start',
-                        strategy: 'fixed',
-                        middleware: [
-                            FloatingUIDOM.offset(12),
-                            FloatingUIDOM.flip({ fallbackPlacements: ['left-start', 'right-end', 'left-end'] }),
-                            FloatingUIDOM.shift({ padding: 8 }),
-                        ],
-                    }).then(({ x, y }) => {
-                        this.itemHoverPos = { top: y, left: x };
-                    });
-                });
+            const mouse = { x: event.clientX, y: event.clientY };
+            this._hoverMouse = mouse;
+            this._hoverShowTimeout = setTimeout(() => {
+                this.hoverItem = item;
+                this.hoverCompareItem = compareItem || null;
+                this.$nextTick(() => this._positionHoverPopover(anchor));
             }, 250);
         },
 
+        moveItemHover(event) {
+            this._hoverMouse = { x: event.clientX, y: event.clientY };
+            if (this.hoverItem) this._positionHoverPopover();
+        },
+
         hideItemHover() {
-            clearTimeout(this._itemHoverShowTimeout);
-            this.itemHoverItem = null;
-            this.itemHoverPos = null;
+            clearTimeout(this._hoverShowTimeout);
+            this._hoverMouse = null;
+            this.hoverItem = null;
+            this.hoverPos = null;
+            this.hoverCompareItem = null;
+        },
+
+        _positionHoverPopover(anchor) {
+            const el = document.querySelector('.item-hover-popover-global') || document.querySelector('.item-compare-popover');
+            const mouse = this._hoverMouse;
+            if (!el || !mouse) return;
+            const ref = anchor || { getBoundingClientRect: () => ({ x: mouse.x, y: mouse.y, top: mouse.y, left: mouse.x, bottom: mouse.y, right: mouse.x, width: 0, height: 0 }) };
+            FloatingUIDOM.computePosition(ref, el, {
+                placement: 'right-start',
+                strategy: 'fixed',
+                middleware: [
+                    FloatingUIDOM.offset(16),
+                    FloatingUIDOM.flip({ fallbackPlacements: ['left-start', 'right-end', 'left-end'] }),
+                    FloatingUIDOM.shift({ padding: 8 }),
+                ],
+            }).then(({ x, y }) => {
+                this.hoverPos = { top: y, left: x };
+            });
+        },
+
+        navHref(page) {
+            const pack = this.activePack?.id;
+            if (!pack) return '/';
+            if (!page || page === 'db') return `/db/${pack}`;
+            return `/db/${pack}/${page}`;
+        },
+
+        itemHref(itemId) {
+            const pack = this.activePack?.id;
+            if (!pack) return '#';
+            return `/db/${pack}#${itemId}`;
+        },
+
+        categoryHref(category) {
+            return this.navHref(categorySlug(category));
         },
 
         caliberName(val) {
@@ -5687,9 +5713,9 @@ export const appDefinition = {
         },
 
         buildHoverCompareFields() {
-            if (!this.buildHoverItem || !this.buildHoverCompareItem) return [];
-            const hoverFields = this.getItemFields(this.buildHoverItem);
-            const equippedFields = this.getItemFields(this.buildHoverCompareItem);
+            if (!this.hoverItem || !this.hoverCompareItem) return [];
+            const hoverFields = this.getItemFields(this.hoverItem);
+            const equippedFields = this.getItemFields(this.hoverCompareItem);
             const seen = new Set(hoverFields);
             const extra = equippedFields.filter(f => !seen.has(f));
             return hoverFields.concat(extra);
@@ -5712,10 +5738,6 @@ export const appDefinition = {
         },
 
         showBuildHover(item, event) {
-            clearTimeout(this.buildHoverTimeout);
-            this._buildHoverItem = item;
-            this._buildHoverMouse = { x: event.clientX, y: event.clientY };
-
             // Resolve comparison item — only for inventory/picker items, not equipped slots
             let compareItem = null;
             let slotType = null;
@@ -5747,49 +5769,15 @@ export const appDefinition = {
                 compareItem = map[this.buildWeaponCompareSlot] || this.buildAmmoPrimary || this.buildAmmoSecondary || this.buildAmmoSidearm;
             }
             if (compareItem && compareItem.id === item.id) compareItem = null;
-            this._buildHoverCompareItem = compareItem;
-
-            this.buildHoverTimeout = setTimeout(() => {
-                this.buildHoverItem = this._buildHoverItem;
-                this.buildHoverCompareItem = this._buildHoverCompareItem;
-                this.$nextTick(() => this._updateBuildHoverFloat());
-            }, 300);
+            this.showItemHover(item, event, compareItem);
         },
 
         moveBuildHover(event) {
-            this._buildHoverMouse = { x: event.clientX, y: event.clientY };
-            if (!this.buildHoverItem) return;
-            this._updateBuildHoverFloat();
-        },
-
-        _updateBuildHoverFloat() {
-            const popover = document.querySelector('.build-hover-popover') || document.querySelector('.item-hover-popover');
-            if (!popover || !this._buildHoverMouse) return;
-            const { x, y } = this._buildHoverMouse;
-            const virtualEl = {
-                getBoundingClientRect: () => ({ x, y, top: y, left: x, bottom: y, right: x, width: 0, height: 0 }),
-            };
-            FloatingUIDOM.computePosition(virtualEl, popover, {
-                placement: 'right-start',
-                strategy: 'fixed',
-                middleware: [
-                    FloatingUIDOM.offset(16),
-                    FloatingUIDOM.flip({ fallbackPlacements: ['left-start', 'right-end', 'left-end'] }),
-                    FloatingUIDOM.shift({ padding: 8 }),
-                ],
-            }).then(({ x: px, y: py }) => {
-                this.buildHoverPos = { top: py, left: px };
-            });
+            this.moveItemHover(event);
         },
 
         hideBuildHover() {
-            clearTimeout(this.buildHoverTimeout);
-            this._buildHoverItem = null;
-            this._buildHoverCompareItem = null;
-            this._buildHoverMouse = null;
-            this.buildHoverItem = null;
-            this.buildHoverCompareItem = null;
-            this.buildHoverPos = null;
+            this.hideItemHover();
         },
 
         equipFromInventory(idx) {
