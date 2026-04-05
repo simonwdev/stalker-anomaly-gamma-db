@@ -14,6 +14,7 @@
 - [x] Tile/grid view for attachments category
 - [x] Item modal: show list of compatible weapons for each attachment
 - [x] Item modal: show allowed attachments for weapons
+- [ ] Graph comparison of attachments (except the price, all other values are 'zero')
 
 ## Data
 - [ ] Toolkit map rates CSV not yet available for 0.9.5 - `toolkit-rates.json` generation is skipped. Requires @sw to export from 0.9.5 game files
