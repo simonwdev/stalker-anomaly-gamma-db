@@ -1161,6 +1161,9 @@ try {
   const scopeIds = new Set((categoryData.get("scopes")?.items || []).map(i => i.id));
   const silencerIds = new Set((categoryData.get("silencers")?.items || []).map(i => i.id));
   const launcherIds = new Set((categoryData.get("grenade-launchers")?.items || []).map(i => i.id));
+  if (!scopeIds.size) console.warn("WARNING: No scope items found in categoryData — weapon-addons.json will have no scope classifications");
+  if (!silencerIds.size) console.warn("WARNING: No silencer items found in categoryData — weapon-addons.json will have no silencer classifications");
+  if (!launcherIds.size) console.warn("WARNING: No launcher items found in categoryData — weapon-addons.json will have no launcher classifications");
 
   const text = readFileSync(WEAPON_ADDON_MAP_FILE, "utf-8");
   const weaponAddons = {};

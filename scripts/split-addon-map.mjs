@@ -77,6 +77,9 @@ const OUT = {
 };
 
 for (const [cat, outPath] of Object.entries(OUT)) {
+  if (!buckets[cat].length) {
+    console.warn(`WARNING: No entries categorised as "${cat}" — output file will be empty`);
+  }
   writeFileSync(outPath, buckets[cat].join("\n") + "\n");
   console.log(`Wrote ${buckets[cat].length} entries → ${outPath}`);
 }

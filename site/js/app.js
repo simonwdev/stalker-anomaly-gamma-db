@@ -351,14 +351,6 @@ export const appDefinition = {
             return this.parseDescription(this.modalItem);
         },
 
-        modalCompatibleScopes() {
-            if (!this.modalItem || !this.scopesCache) return [];
-            const id = this.modalItem.id;
-            return Object.entries(this.scopesCache)
-                .filter(([, weapons]) => weapons.includes(id))
-                .map(([addonId]) => addonId);
-        },
-
         modalWeaponAddons() {
             if (!this.modalItem || !this.weaponAddonsCache) return { scopes: [], silencers: [], launchers: [] };
             const addons = this.weaponAddonsCache[this.modalItem.id];
@@ -1459,8 +1451,14 @@ export const appDefinition = {
             if (!this.fileManifest[filename]) { this[cacheKey] = {}; return this[cacheKey]; }
             try {
                 const res = await fetch(this.dataUrl(filename));
-                this[cacheKey] = res.ok ? await res.json() : {};
-            } catch {
+                if (!res.ok) {
+                    console.warn(`Failed to fetch ${filename}: HTTP ${res.status}`);
+                    this[cacheKey] = {};
+                } else {
+                    this[cacheKey] = await res.json();
+                }
+            } catch (e) {
+                console.warn(`Failed to fetch ${filename}:`, e);
                 this[cacheKey] = {};
             }
             return this[cacheKey];
@@ -1654,10 +1652,12 @@ export const appDefinition = {
                 console.error("Failed to load index:", e);
             }
             this.calibers = await this.fetchCalibers();
-            this.fetchScopes();
-            this.fetchWeaponAddons();
-            this.fetchSilencerItems();
-            this.fetchLauncherItems();
+            await Promise.all([
+                this.fetchScopes(),
+                this.fetchWeaponAddons(),
+                this.fetchSilencerItems(),
+                this.fetchLauncherItems(),
+            ]);
             this.rebuildGlobalFuse();
             this.loading = false;
             const preloader = document.getElementById('app-preloader');
@@ -2095,10 +2095,11 @@ export const appDefinition = {
                         await Promise.all(slugsToLoad.map(async s => {
                             try {
                                 const res = await fetch(this.dataUrl(`${s}.json`));
+                                if (!res.ok) throw new Error(`HTTP ${res.status} for ${s}.json`);
                                 const data = await res.json();
                                 this.categoryItems[s] = data.items;
                                 this.categoryHeaders[s] = data.headers;
-                            } catch (e) { /* non-critical */ }
+                            } catch (e) { console.warn(`Failed to load category data for "${s}":`, e); }
                         }));
                     }
                 }
@@ -3868,8 +3869,8 @@ export const appDefinition = {
             // Translate, deduplicate names, then sort
             const allNames = [...new Set(
                 weaponIds.map(wid => {
-                    const item = indexMap.get(wid) || { id: wid, pda_encyclopedia_name: wid };
-                    return esc(this.tName(item).replace(/\s*\[default\]$/i, '').trim());
+                    const weapon = indexMap.get(wid) || { id: wid, pda_encyclopedia_name: wid };
+                    return esc(this.tName(weapon).replace(/\s*\[default\]$/i, '').trim());
                 })
             )].sort((a, b) => a.localeCompare(b));
             const shown = allNames.slice(0, MAX_SHOWN);

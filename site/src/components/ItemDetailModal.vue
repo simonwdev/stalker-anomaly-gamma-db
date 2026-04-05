@@ -399,7 +399,6 @@ export default {
     modalDisassembleMaterials: { type: Array, default: null },
     modalUsedByWeapons: Array,
     parsedDescription: Object,
-    modalCompatibleScopes: { type: Array, default: () => [] },
     modalWeaponAddons: { type: Object, default: () => ({ scopes: [], silencers: [], launchers: [] }) },
     modalAddonCompatibleWeapons: { type: Array, default: () => [] },
     favoriteIds: Array,
