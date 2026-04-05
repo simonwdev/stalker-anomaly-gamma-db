@@ -1132,6 +1132,9 @@ a.tile-card-name:hover {
 }
 .tile-card-icon-row .addon-img-tile-icon {
     max-width: 200px;
+    height: 2.5rem;
+}
+.tile-card-icon-row.tile-icon-large .addon-img-tile-icon {
     height: 4rem;
 }
 .tile-stat-row:has(.tile-ammo-list) {

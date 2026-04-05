@@ -19,7 +19,7 @@
             <span v-if="compact && item.category" class="badge-flag badge-category">{{ t(singularCategory(item.category)) }}</span>
         </div>
         <!-- Icon row: shown for addon categories (scopes/silencers/launchers) -->
-        <div v-if="showItemIcon" class="tile-card-icon-row">
+        <div v-if="showItemIcon" class="tile-card-icon-row" :class="'tile-icon-' + iconSize">
             <img
                 class="addon-img-tile-icon"
                 :src="'img/icons/' + item.id + '.png'"
@@ -78,6 +78,7 @@ export default {
         pinnedIds: { type: Array, default: () => [] },
         compact: { type: Boolean, default: false },
         showItemIcon: { type: Boolean, default: false },
+        iconSize: { type: String, default: 'small' },
     },
     emits: ['navigateToItem', 'toggleFavorite', 'togglePin'],
     inject: [

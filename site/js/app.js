@@ -601,6 +601,11 @@ export const appDefinition = {
                 || this.activeCategory === CAT.TACTICAL_KITS;
         },
 
+        tileIconSize() {
+            const large = new Set([...WEAPON_CATEGORIES, CAT.OUTFITS, CAT.HELMETS]);
+            return large.has(this.activeCategory) ? 'large' : 'small';
+        },
+
         addonCompatibleWeaponsMap() {
             if (!this.weaponAddonsCache) return {};
             const map = {};

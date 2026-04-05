@@ -360,6 +360,7 @@
                 :pinned-ids="pinnedIds"
                 :compact="favoritesViewActive || recentViewActive"
                 :show-item-icon="showTileIcons"
+                :icon-size="tileIconSize"
                 @navigate-to-item="navigateToItem"
                 @toggle-favorite="toggleFavorite"
                 @toggle-pin="togglePin"
