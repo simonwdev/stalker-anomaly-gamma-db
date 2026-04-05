@@ -274,52 +274,6 @@ a:hover {
     border-top: 1px solid var(--color-map-border);
 }
 
-/* Weapon quick-stat tooltip (compatible weapons list in addon modal) */
-.tooltip.tooltip-weapon-quick {
-    max-width: 310px;
-    padding: 0.5rem;
-}
-.weapon-quick-tooltip {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-}
-.wqt-img {
-    width: 100%;
-    height: 80px;
-    object-fit: contain;
-    background: var(--color-overlay-white-4);
-    border-radius: 3px;
-    margin-bottom: 0.2rem;
-}
-.wqt-name {
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: var(--color-map-text-bright);
-    line-height: 1.2;
-}
-.wqt-cat {
-    font-size: 0.6rem;
-    color: var(--color-blue-grey-soft);
-    margin-bottom: 0.25rem;
-}
-.wqt-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-    border-top: 1px solid var(--color-map-border);
-    padding-top: 0.25rem;
-    margin-top: 0.1rem;
-}
-.wqt-stat-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.62rem;
-}
-.wqt-key { color: var(--color-blue-grey-soft); }
-.wqt-val { color: var(--color-map-text); font-weight: 500; }
 .site-header {
     background: var(--color-surface-3);
     border-bottom: 1px solid var(--border);

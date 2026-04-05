@@ -357,10 +357,13 @@
                             :key="w.id"
                             href="#"
                             class="addon-compat-weapon-link"
-                            v-tooltip="weaponTooltip(w)"
+                            @mouseenter="showWeaponHover(w, $event)"
+                            @mousemove="moveWeaponHover($event)"
+                            @mouseleave="hideWeaponHover()"
                             @click.prevent="$emit('navigateToItem', w.id)"
                         >{{ weaponDisplayName(w) }}</a>
                     </div>
+                    <ItemHoverPopover :item="hoverWeapon" :pos="hoverWeaponPos" />
                 </div>
             </div>
         </div>
@@ -371,8 +374,11 @@
 </template>
 
 <script>
+import ItemHoverPopover from './ItemHoverPopover.vue';
+
 export default {
   name: 'ItemDetailModal',
+  components: { ItemHoverPopover },
   inject: [
     't', 'tName', 'tCat', 'headerLabel', 'formatValue', 'displayLabel', 'displayStyle',
     'healDots', 'factionColor', 'factionIcon', 'singularCategory', 'isUnusedAmmo',
@@ -420,7 +426,14 @@ export default {
   data() {
     return {
       compareMenuOpen: false,
+      hoverWeapon: null,
+      hoverWeaponPos: null,
+      _hoverTimeout: null,
+      _hoverMouse: null,
     };
+  },
+  watch: {
+    modalItem() { this.hideWeaponHover(); },
   },
   computed: {
     hasWeaponAddons() {
@@ -465,26 +478,40 @@ export default {
     weaponDisplayName(w) {
       return this.tName(w).replace(/\s*\[default\]$/i, '').trim();
     },
-    weaponTooltip(w) {
-      const esc = this._esc.bind(this);
-      const name = esc(this.weaponDisplayName(w));
-      const cat = esc(this.tCat(w.category || ''));
-      const imgUrl = esc('img/icons/' + w.id + '.png');
-      const STAT_KEYS = ['ui_inv_damage', 'ui_inv_accuracy', 'ui_inv_handling', 'ui_inv_wrange', 'ui_ammo_count'];
-      const statRows = STAT_KEYS
-        .filter(k => w[k] !== undefined && w[k] !== null && w[k] !== '')
-        .map(k =>
-          `<div class="wqt-stat-row"><span class="wqt-key">${esc(this.headerLabel(k))}</span><span class="wqt-val">${esc(this.formatValue(k, w[k]))}</span></div>`
-        ).join('');
-      return {
-        className: 'tooltip-weapon-quick',
-        html: `<div class="weapon-quick-tooltip">
-          <img class="wqt-img" src="${imgUrl}" onerror="this.style.display='none'" alt="" />
-          <div class="wqt-name">${name}</div>
-          <div class="wqt-cat">${cat}</div>
-          ${statRows ? `<div class="wqt-stats">${statRows}</div>` : ''}
-        </div>`,
-      };
+    showWeaponHover(item, event) {
+      clearTimeout(this._hoverTimeout);
+      this._hoverMouse = { x: event.clientX, y: event.clientY };
+      this._hoverTimeout = setTimeout(() => {
+        this.hoverWeapon = item;
+        this.$nextTick(() => this._positionWeaponHover());
+      }, 250);
+    },
+    moveWeaponHover(event) {
+      this._hoverMouse = { x: event.clientX, y: event.clientY };
+      if (this.hoverWeapon) this._positionWeaponHover();
+    },
+    hideWeaponHover() {
+      clearTimeout(this._hoverTimeout);
+      this.hoverWeapon = null;
+      this.hoverWeaponPos = null;
+      this._hoverMouse = null;
+    },
+    _positionWeaponHover() {
+      const el = this.$el?.querySelector('.item-hover-popover');
+      if (!el || !this._hoverMouse) return;
+      const { x, y } = this._hoverMouse;
+      const virt = { getBoundingClientRect: () => ({ x, y, top: y, left: x, bottom: y, right: x, width: 0, height: 0 }) };
+      FloatingUIDOM.computePosition(virt, el, {
+        placement: 'right-start',
+        strategy: 'fixed',
+        middleware: [
+          FloatingUIDOM.offset(12),
+          FloatingUIDOM.flip({ fallbackPlacements: ['left-start', 'right-end', 'left-end'] }),
+          FloatingUIDOM.shift({ padding: 8 }),
+        ],
+      }).then(({ x: px, y: py }) => {
+        this.hoverWeaponPos = { top: py, left: px };
+      });
     },
   },
 };
