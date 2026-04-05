@@ -4,6 +4,49 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 2026-04-05
+
+### Added
+
+- Weapon attachments: Scopes, Silencers, Underbarrel, and Tactical Kits as new sidebar categories under Attachments group (Evincars)
+- Compatible weapons count badge on addon tiles with hover popover showing full weapon list
+- Compatible scopes, silencers, underbarrel, and tactical kit sections in weapon detail modal
+- Item hover popover on ammo badges in table/grid views, ammo links in weapon modal, and addon tiles in weapon modal
+- Collapsible sections in item detail modal with state persisted to localStorage
+- Item icons on all tile views with "Show tile icons" toggle in settings, category-aware sizing
+- Lazy loading on tile icons, modal addon tiles, and crafting tree images
+- ItemComparePopover component extracted from build planner for item comparison hover
+- Navigation links (header, sidebar, item names) now use `<a>` tags with proper href for open-in-new-tab support
+
+### Changed
+
+- Unified hover popover system — single `showItemHover`/`hideItemHover` API replaces separate build/item/modal hover states
+- `ensureCategoryLoaded` replaces ad-hoc category fetching — one method for all category data loading
+- Ammo display names shortened: strip shells/slugs/round/cartridge/mm, Buckshot→Buck, Home-made→HM, Hydra-shock HP→Hydra-shock
+- Sidebar: Attachments group separates addons from weapons, Grenade Launchers renamed to Underbarrel
+- Tactical kits split from Scopes into dedicated category during data generation (moved classification from orphaned split-addon-map.mjs into generate-index.mjs)
+- Addon categories respect "Hide non-NPC dropped weapons" — addons with zero compatible weapons are filtered out
+- Gold accent border on item hover popover for better visibility
+
+### Fixed
+
+- Chart.js colors in ballistics radar chart reverted from CSS vars to hex (Canvas API cannot resolve CSS custom properties)
+- Restored 177 missing outfit/helmet description translations dropped in 87bdb00
+- Fixed Windows-1251 encoding corruption when merging translation CSV entries
+- Build planner hover popover no longer duplicates behind item modal
+- All hover popovers dismissed when opening item modal
+- `getItemFields` fallback resolves any item's category from index for popover stat display
+- `addonCompatibleWeaponsTooltip` variable shadowing fix
+- `fetchJsonCached` now logs warnings on HTTP errors and fetch failures
+- Empty addon classification warnings in generate-index.mjs and split-addon-map.mjs
+
+### Removed
+
+- `scripts/split-addon-map.mjs` — classification logic moved into generate-index.mjs
+- Redundant `scopesCache`/`silencerItemsCache`/`launcherItemsCache` data properties
+- Custom HTML ammo tooltip and weapon quick-stat tooltip replaced by standard ItemHoverPopover
+- Unused `modalCompatibleScopes` computed property and prop
+
 ## 2026-03-29
 
 ### Added
