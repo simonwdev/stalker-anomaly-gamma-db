@@ -12,6 +12,7 @@
     /* All color vars are defined in color-palette.css.          */
     /* Add non-color design tokens here (typography, spacing…).  */
     --mono: "Consolas", "Monaco", "Courier New", monospace;
+    --label-scale: 1;   /* overridden dynamically by MapsView per zoom level */
 }
 
 html {
@@ -1911,9 +1912,14 @@ input.range-input {
 .addon-tile-group {
     align-items: flex-start;
 }
-.addon-tile-section-label {
-    align-self: flex-start;
-    padding-top: 0.3rem;
+.desc-chip-label.addon-tile-section-label {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    opacity: 1;
+    color: var(--color-text-secondary);
+    padding-top: 0.35rem;
+    margin-bottom: 0.1rem;
 }
 .addon-img-tile {
     display: inline-flex;
