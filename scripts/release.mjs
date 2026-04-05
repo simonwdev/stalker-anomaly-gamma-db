@@ -11,6 +11,7 @@ execSync('npx vite build', { stdio: 'inherit' });
 const distCss = join(root, 'dist', 'css');
 mkdirSync(distCss, { recursive: true });
 cpSync(join(root, 'site', 'css', 'style.css'), join(distCss, 'style.css'));
-console.log('Copied css/style.css to dist/css/');
+cpSync(join(root, 'site', 'css', 'color-palette.css'), join(distCss, 'color-palette.css'));
+console.log('Copied css/style.css and color-palette.css to dist/css/');
 
 console.log('Built to dist/');

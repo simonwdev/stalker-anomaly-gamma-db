@@ -4895,14 +4895,6 @@ export const appDefinition = {
 
         initWhatsNew(rnData, hash) {
             const lastSeenDate = localStorage.getItem("whatsNewLastDate") || "";
-            // Legacy: if old hash-based key exists but no date key, treat as having seen everything
-            const legacySeen = localStorage.getItem("whatsNewHash");
-            if (legacySeen && !lastSeenDate) {
-                const latestDate = rnData.length ? rnData[0].date : "";
-                if (latestDate) localStorage.setItem("whatsNewLastDate", latestDate);
-                localStorage.removeItem("whatsNewHash");
-                return;
-            }
 
             // Only show entries from releases newer than lastSeenDate
             let totalCount = 0;
