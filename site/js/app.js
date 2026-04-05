@@ -1507,7 +1507,7 @@ export const appDefinition = {
         },
 
         fetchLauncherItems() {
-            return this.fetchJsonCached("launcherItemsCache", "launchers.json");
+            return this.fetchJsonCached("launcherItemsCache", "grenade-launchers.json");
         },
 
         fetchMutantProfiles() {
