@@ -6,6 +6,10 @@
       <span>Based on veerserif's damage <a href="https://github.com/veerserif/gamma-dashboard" target="_blank" rel="noopener">calculator</a>.</span>
     </div>
     <div class="damage-sim-actions">
+      <button class="copy-link-btn damage-sim-help-toggle" :class="{ active: showHelp }" @click="showHelp = !showHelp; saveToStorage()">
+        <LucideCircleHelp :size="14" />
+        <span>{{ t('app_sim_show_help') }}</span>
+      </button>
       <button class="copy-link-btn" :class="{ copied: _shareFeedback }" @click="copyShareLink()" v-tooltip="_shareFeedback ? t('app_sim_link_copied') : t('app_sim_copy_link')">
         <LucideLink v-show="!_shareFeedback" :size="16" />
         <svg v-show="_shareFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -20,6 +24,7 @@
     <!-- Left: Inputs -->
     <div class="damage-sim-panel">
       <!-- Loadouts -->
+      <div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_loadout_pre') }} {{ gboConstants.silencer_boost || '?' }}x. {{ t('app_sim_help_loadout_post') }}</div>
       <div v-for="(lo, idx) in loadouts" :key="idx" class="damage-sim-loadout-row">
         <span class="damage-sim-loadout-dot" :style="{ background: loadoutColor(idx) }"></span>
         <div class="damage-sim-slot" :class="lo.weapon ? 'filled' : 'empty'" :style="lo.weapon ? { borderLeftColor: loadoutColor(idx) } : {}" @click="openWeaponPicker(idx)" @mouseenter="lo.weapon && $emit('showBuildHover', lo.weapon, $event)" @mousemove="lo.weapon && $emit('moveBuildHover', $event)" @mouseleave="$emit('hideBuildHover')">
@@ -33,7 +38,7 @@
           <span v-else class="damage-sim-slot-hint">{{ t('app_sim_select_ammo') }}</span>
           <button v-if="selectedAmmoFor(idx)" class="damage-sim-slot-remove" @click.stop="clearAmmo(idx)">&times;</button>
         </div>
-        <div class="damage-sim-silencer-toggle" @click="lo.silenced = !lo.silenced; saveToStorage()" v-tooltip="t('app_sim_silencer')">
+        <div class="damage-sim-silencer-toggle" @click="lo.silenced = !lo.silenced; saveToStorage()" v-tooltip="t('app_sim_silencer') + (gboConstants.silencer_boost ? ' (' + gboConstants.silencer_boost + 'x)' : '')">
           <span class="toggle-switch" :class="{ on: lo.silenced }"><span class="toggle-knob"></span></span>
         </div>
         <button class="damage-sim-icon-btn" :class="{ 'damage-sim-icon-btn-hidden': !lo.weapon || !canAddLoadout }" @click="lo.weapon && canAddLoadout && copyLoadout(idx)" v-tooltip="t('app_sim_copy_loadout')">
@@ -51,14 +56,14 @@
       <div class="damage-sim-divider"></div>
 
       <!-- Target -->
-      <div class="damage-sim-section-label">{{ t('app_sim_target') }}</div>
+      <div class="damage-sim-section-label">{{ t('app_sim_target') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_target') }}</div></div>
       <div class="damage-sim-toggle-group">
         <button :class="{ active: targetType === 'mutant' }" @click="targetType = 'mutant'; saveToStorage()">{{ t('app_sim_target_mutant') }}</button>
         <button :class="{ active: targetType === 'stalker' }" @click="targetType = 'stalker'; saveToStorage()">{{ t('app_sim_target_stalker') }}</button>
       </div>
 
       <template v-if="targetType === 'mutant'">
-        <div class="damage-sim-slot" :class="selectedMutant ? 'filled' : 'empty'" @click="mutantPickerOpen = true">
+        <div class="damage-sim-slot damage-sim-target-slot" :class="selectedMutant ? 'filled' : 'empty'" @click="mutantPickerOpen = true">
           <template v-if="selectedMutant">
             <span class="damage-sim-slot-name">{{ mutantDisplayName(selectedMutant.id) }}</span>
             <button class="damage-sim-slot-remove" @click.stop="selectedMutantId = ''">&times;</button>
@@ -67,50 +72,51 @@
             <span class="damage-sim-slot-hint">{{ t('app_sim_select_target') }}</span>
           </template>
         </div>
-        <div class="damage-sim-section-label">{{ t('app_sim_hitzone') }}</div>
+        <div class="damage-sim-section-label">{{ t('app_sim_hitzone') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_hitzone_mutant') }}</div></div>
         <div class="damage-sim-toggle-group">
-          <button v-for="z in mutantHitzones" :key="z" :class="{ active: hitzone === z }" @click="hitzone = z; saveToStorage()">{{ t('app_sim_hitzone_' + z) }}</button>
+          <button v-for="z in mutantHitzones" :key="z" :class="{ active: hitzone === z }" @click="hitzone = z; saveToStorage()">{{ t('app_sim_hitzone_' + z) }}<span v-if="selectedMutant" class="damage-sim-btn-sub">{{ selectedMutant['hitzone_' + z] }}x</span></button>
         </div>
       </template>
 
       <template v-if="targetType === 'stalker'">
-        <div class="damage-sim-slot" :class="selectedNpcProfile ? 'filled' : 'empty'" @click="npcPickerOpen = true">
+        <div class="damage-sim-slot damage-sim-target-slot" :class="selectedNpcProfile ? 'filled' : 'empty'" @click="npcPickerOpen = true">
           <template v-if="selectedNpcProfile">
             <span class="damage-sim-slot-name">{{ npcProfileLabel(selectedNpcProfile) }}</span>
+            <span class="damage-sim-slot-meta">Body {{ selectedNpcProfile.body_bonearmor }} · Head {{ selectedNpcProfile.head_bonearmor }} · AP Scale {{ selectedNpcProfile.ap_scale }} · Hit Frac {{ selectedNpcProfile.hit_fraction }}</span>
             <button class="damage-sim-slot-remove" @click.stop="selectedNpcProfileId = ''">&times;</button>
           </template>
           <template v-else>
             <span class="damage-sim-slot-hint">{{ t('app_sim_select_target') }}</span>
           </template>
         </div>
-        <div class="damage-sim-section-label">{{ t('app_sim_hitzone') }}</div>
+        <div class="damage-sim-section-label">{{ t('app_sim_hitzone') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_hitzone') }}</div></div>
         <div class="damage-sim-toggle-group">
-          <button v-for="z in stalkerHitzones" :key="z" :class="{ active: hitzone === z }" @click="hitzone = z; saveToStorage()">{{ t('app_sim_hitzone_' + z) }}</button>
+          <button v-for="z in stalkerHitzones" :key="z" :class="{ active: hitzone === z }" @click="hitzone = z; saveToStorage()">{{ t('app_sim_hitzone_' + z) }}<span v-if="gboConstants.stalker_hitzones" class="damage-sim-btn-sub">{{ stalkerBoneDamageMult(z, gboConstants) }}x<template v-if="hitzoneApBoost(z)">, +{{ hitzoneApBoost(z) }} AP</template></span></button>
         </div>
-        <div class="damage-sim-section-label">{{ t('app_sim_faction') }}</div>
+        <div class="damage-sim-section-label">{{ t('app_sim_faction') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_faction') }}</div></div>
         <div class="damage-sim-toggle-group">
-          <button :class="{ active: faction === 'default' }" @click="faction = 'default'; saveToStorage()">{{ t('app_sim_faction_default') }}</button>
-          <button v-for="f in factions" :key="f" :class="{ active: faction === f }" @click="faction = f; saveToStorage()">{{ t('app_sim_faction_' + f) }}</button>
+          <button :class="{ active: faction === 'default' }" @click="faction = 'default'; saveToStorage()">{{ t('app_sim_faction_default') }}<span v-if="gboConstants.faction_resistance" class="damage-sim-btn-sub">{{ resolveFactionRes('default', gboConstants).dmg_res }}x<template v-if="resolveFactionRes('default', gboConstants).ap_res !== resolveFactionRes('default', gboConstants).dmg_res">, {{ resolveFactionRes('default', gboConstants).ap_res }}x AP</template></span></button>
+          <button v-for="f in factions" :key="f" :class="{ active: faction === f }" @click="faction = f; saveToStorage()">{{ t('app_sim_faction_' + f) }}<span v-if="gboConstants.faction_resistance" class="damage-sim-btn-sub">{{ resolveFactionRes(f, gboConstants).dmg_res }}x<template v-if="resolveFactionRes(f, gboConstants).ap_res !== resolveFactionRes(f, gboConstants).dmg_res">, {{ resolveFactionRes(f, gboConstants).ap_res }}x AP</template></span></button>
         </div>
       </template>
 
       <div class="damage-sim-divider"></div>
 
-      <div class="damage-sim-section-label">{{ t('app_sim_distance') }}</div>
+      <div class="damage-sim-section-label">{{ t('app_sim_distance') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_distance') }}</div></div>
       <div class="damage-sim-range-row">
         <input type="range" v-model.number="distance" min="0" max="300" step="5" @change="saveToStorage()" />
         <span class="damage-sim-range-value">{{ distance }}m</span>
       </div>
 
-      <div class="damage-sim-section-label">{{ t('app_sim_barrel_condition') }}</div>
+      <div class="damage-sim-section-label">{{ t('app_sim_barrel_condition') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_barrel_condition') }}</div></div>
       <div class="damage-sim-range-row">
         <input type="range" v-model.number="barrelCondition" min="0" max="100" step="1" @change="saveToStorage()" />
-        <span class="damage-sim-range-value">{{ barrelCondition }}%</span>
+        <span class="damage-sim-range-value">{{ barrelCondition }}% ({{ barrelConditionCorrected(barrelCondition).toFixed(2) }}x)</span>
       </div>
 
-      <div class="damage-sim-section-label">{{ t('app_sim_difficulty') }}</div>
+      <div class="damage-sim-section-label">{{ t('app_sim_difficulty') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_difficulty') }}</div></div>
       <div class="damage-sim-toggle-group">
-        <button v-for="d in difficulties" :key="d.key" :class="{ active: difficulty === d.key }" @click="difficulty = d.key; saveToStorage()">{{ t(d.label) }}</button>
+        <button v-for="d in difficulties" :key="d.key" :class="{ active: difficulty === d.key }" @click="difficulty = d.key; saveToStorage()">{{ t(d.label) }}<span v-if="gboConstants.difficulty" class="damage-sim-btn-sub">{{ gboConstants.difficulty[String(d.key)] }}x</span></button>
       </div>
 
     </div>
@@ -127,7 +133,7 @@
           </thead>
           <tbody v-if="targetType === 'stalker'">
             <tr>
-              <td class="damage-sim-table-label">{{ t('app_sim_result_ap') }}</td>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_ap') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_ap') }}</div></td>
               <td v-for="ar in activeResults" :key="'ap'+ar.idx">
                 <span class="damage-sim-table-val">{{ fmt(ar.result.stalker?.ap) }}</span>
                 <span class="damage-sim-table-vs">vs</span>
@@ -139,7 +145,7 @@
               </td>
             </tr>
             <tr>
-              <td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}</td>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_damage') }}</div></td>
               <td v-for="ar in activeResults" :key="'dmg'+ar.idx">
                 <span class="damage-sim-table-val damage-sim-table-val-primary" :class="compareClass(ar.idx, 'damage')">{{ fmt(ar.result.stalker?.armor?.damage) }}</span>
                 <span v-if="hasComparison && compareDelta(ar.idx, 'damage')" class="damage-sim-compare-tag" :class="compareClass(ar.idx, 'damage')">{{ compareDelta(ar.idx, 'damage') }}</span>
@@ -147,7 +153,7 @@
               </td>
             </tr>
             <tr>
-              <td class="damage-sim-table-label">{{ t('app_sim_result_stk') }}</td>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_stk') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_stk') }}</div></td>
               <td v-for="ar in activeResults" :key="'stk'+ar.idx">
                 <span class="damage-sim-table-val damage-sim-table-val-primary" :class="compareClass(ar.idx, 'stk')">{{ ar.result.stalker?.stk?.stk }}</span>
                 <span v-if="ar.result.stalker?.stk?.minStk !== ar.result.stalker?.stk?.maxStk" class="damage-sim-table-sub">({{ ar.result.stalker?.stk?.minStk }}&ndash;{{ ar.result.stalker?.stk?.maxStk }})</span>
@@ -155,7 +161,7 @@
               </td>
             </tr>
             <tr v-if="activeResults.some(ar => ar.result.stalker?.stp > 1)">
-              <td class="damage-sim-table-label">{{ t('app_sim_result_stp') }}</td>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_stp') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_stp') }}</div></td>
               <td v-for="ar in activeResults" :key="'stp'+ar.idx">
                 <span class="damage-sim-table-val">{{ ar.result.stalker?.stp }}</span>
               </td>
@@ -163,7 +169,7 @@
           </tbody>
           <tbody v-if="targetType === 'mutant'">
             <tr>
-              <td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}</td>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_damage_mutant') }}</div></td>
               <td v-for="ar in activeResults" :key="'dmg'+ar.idx">
                 <span class="damage-sim-table-val damage-sim-table-val-primary" :class="compareClass(ar.idx, 'damage')">{{ fmt(ar.result.mutant?.damage) }}</span>
                 <span v-if="hasComparison && compareDelta(ar.idx, 'damage')" class="damage-sim-compare-tag" :class="compareClass(ar.idx, 'damage')">{{ compareDelta(ar.idx, 'damage') }}</span>
@@ -191,12 +197,12 @@
             <th v-for="ar in activeResults" :key="'bh'+ar.idx" :style="{ color: loadoutColor(ar.idx) }">{{ loadoutLabel(ar.idx) }}</th>
           </tr></thead>
           <tbody>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_raw_damage') }}</td><td v-for="ar in activeResults" :key="'rd'+ar.idx"><span class="damage-sim-table-val">{{ fmt(ar.result.mutant?.rawDmg) }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_air_res') }}</td><td v-for="ar in activeResults" :key="'ar'+ar.idx"><span class="damage-sim-table-val">&divide; {{ fmt(ar.result.mutant?.airDiv) }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_ammo_mult') }}</td><td v-for="ar in activeResults" :key="'am'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.mutant?.ammoMult }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_spec_mult') }}</td><td v-for="ar in activeResults" :key="'sm'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.mutant?.specMult }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_bone_mult') }}</td><td v-for="ar in activeResults" :key="'bm'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.mutant?.boneMult }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_barrel') }}</td><td v-for="ar in activeResults" :key="'ba'+ar.idx"><span class="damage-sim-table-val">&times; {{ fmt(ar.result.mutant?.barrel) }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_raw_damage') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_raw_damage') }}</div></td><td v-for="ar in activeResults" :key="'rd'+ar.idx"><span class="damage-sim-table-val">{{ fmt(ar.result.mutant?.rawDmg) }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_air_res') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_air_res') }}</div></td><td v-for="ar in activeResults" :key="'ar'+ar.idx"><span class="damage-sim-table-val">&divide; {{ fmt(ar.result.mutant?.airDiv) }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_ammo_mult') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_ammo_mult') }}</div></td><td v-for="ar in activeResults" :key="'am'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.mutant?.ammoMult }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_spec_mult') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_spec_mult') }}</div></td><td v-for="ar in activeResults" :key="'sm'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.mutant?.specMult }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_bone_mult') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_bone_mult') }}</div></td><td v-for="ar in activeResults" :key="'bm'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.mutant?.boneMult }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_barrel') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_barrel') }}</div></td><td v-for="ar in activeResults" :key="'ba'+ar.idx"><span class="damage-sim-table-val">&times; {{ fmt(ar.result.mutant?.barrel) }}</span></td></tr>
             <tr class="damage-sim-table-total"><td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}</td><td v-for="ar in activeResults" :key="'td'+ar.idx"><span class="damage-sim-table-val damage-sim-table-val-primary">{{ fmt(ar.result.mutant?.damage) }}</span></td></tr>
           </tbody>
         </table>
@@ -209,25 +215,25 @@
           </tr></thead>
           <tbody>
             <tr class="damage-sim-table-section"><td :colspan="activeResults.length + 1">{{ t('app_sim_result_damage') }}</td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_hit_power') }}</td><td v-for="ar in activeResults" :key="'hp'+ar.idx"><span class="damage-sim-table-val">{{ fmt(ar.result.stalker?.breakdown?.hitPower) }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_air_res') }}</td><td v-for="ar in activeResults" :key="'ar'+ar.idx"><span class="damage-sim-table-val">&divide; {{ fmt(ar.result.stalker?.breakdown?.airDiv) }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_k_hit') }}</td><td v-for="ar in activeResults" :key="'kh'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.kHit }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_bone_mult') }}</td><td v-for="ar in activeResults" :key="'bm'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.boneDmgMult }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_ap_scale') }}</td><td v-for="ar in activeResults" :key="'as'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.apScale }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_barrel') }}</td><td v-for="ar in activeResults" :key="'ba'+ar.idx"><span class="damage-sim-table-val">&times; {{ fmt(ar.result.stalker?.breakdown?.barrel) }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_difficulty') }}</td><td v-for="ar in activeResults" :key="'df'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.diffMult }}</span></td></tr>
-            <tr v-if="activeResults.some(ar => ar.result.stalker?.breakdown?.ammoMult !== 1)"><td class="damage-sim-table-label">{{ t('app_sim_ammo_mult') }}</td><td v-for="ar in activeResults" :key="'am'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.ammoMult }}</span></td></tr>
-            <tr v-if="activeResults.some(ar => ar.result.stalker?.breakdown?.silencerMult !== 1)"><td class="damage-sim-table-label">{{ t('app_sim_silencer_mult') }}</td><td v-for="ar in activeResults" :key="'sl'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.silencerMult }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_hit_power') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_hit_power') }}</div></td><td v-for="ar in activeResults" :key="'hp'+ar.idx"><span class="damage-sim-table-val">{{ fmt(ar.result.stalker?.breakdown?.hitPower) }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_air_res') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_air_res') }}</div></td><td v-for="ar in activeResults" :key="'ar'+ar.idx"><span class="damage-sim-table-val">&divide; {{ fmt(ar.result.stalker?.breakdown?.airDiv) }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_k_hit') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_k_hit') }}</div></td><td v-for="ar in activeResults" :key="'kh'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.kHit }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_bone_mult') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_bone_mult') }}</div></td><td v-for="ar in activeResults" :key="'bm'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.boneDmgMult }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_ap_scale') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_ap_scale') }}</div></td><td v-for="ar in activeResults" :key="'as'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.apScale }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_barrel') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_barrel') }}</div></td><td v-for="ar in activeResults" :key="'ba'+ar.idx"><span class="damage-sim-table-val">&times; {{ fmt(ar.result.stalker?.breakdown?.barrel) }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_difficulty') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_difficulty') }}</div></td><td v-for="ar in activeResults" :key="'df'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.diffMult }}</span></td></tr>
+            <tr v-if="activeResults.some(ar => ar.result.stalker?.breakdown?.ammoMult !== 1)"><td class="damage-sim-table-label">{{ t('app_sim_ammo_mult') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_ammo_mult') }}</div></td><td v-for="ar in activeResults" :key="'am'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.ammoMult }}</span></td></tr>
+            <tr v-if="activeResults.some(ar => ar.result.stalker?.breakdown?.silencerMult !== 1)"><td class="damage-sim-table-label">{{ t('app_sim_silencer_mult') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_silencer_mult') }}</div></td><td v-for="ar in activeResults" :key="'sl'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.silencerMult }}</span></td></tr>
             <tr class="damage-sim-table-total"><td class="damage-sim-table-label">{{ t('app_sim_raw_damage') }}</td><td v-for="ar in activeResults" :key="'rd'+ar.idx"><span class="damage-sim-table-val damage-sim-table-val-primary">{{ fmt(ar.result.stalker?.rawDmg) }}</span></td></tr>
 
             <tr class="damage-sim-table-section"><td :colspan="activeResults.length + 1">{{ t('app_sim_result_ap') }}</td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_base_ap') }}</td><td v-for="ar in activeResults" :key="'kap'+ar.idx"><span class="damage-sim-table-val">{{ fmt(ar.result.stalker?.breakdown?.kAp) }}</span></td></tr>
-            <tr v-if="activeResults.some(ar => ar.result.stalker?.breakdown?.apBoost)"><td class="damage-sim-table-label">{{ t('app_sim_ap_boost') }}</td><td v-for="ar in activeResults" :key="'ab'+ar.idx"><span class="damage-sim-table-val">+ {{ ar.result.stalker?.breakdown?.apBoost || 0 }}</span></td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_difficulty') }}</td><td v-for="ar in activeResults" :key="'df2'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.diffMult }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_base_ap') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_base_ap') }}</div></td><td v-for="ar in activeResults" :key="'kap'+ar.idx"><span class="damage-sim-table-val">{{ fmt(ar.result.stalker?.breakdown?.kAp) }}</span></td></tr>
+            <tr v-if="activeResults.some(ar => ar.result.stalker?.breakdown?.apBoost)"><td class="damage-sim-table-label">{{ t('app_sim_ap_boost') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_ap_boost') }}</div></td><td v-for="ar in activeResults" :key="'ab'+ar.idx"><span class="damage-sim-table-val">+ {{ ar.result.stalker?.breakdown?.apBoost || 0 }}</span></td></tr>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_difficulty') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_difficulty') }}</div></td><td v-for="ar in activeResults" :key="'df2'+ar.idx"><span class="damage-sim-table-val">&times; {{ ar.result.stalker?.breakdown?.diffMult }}</span></td></tr>
             <tr class="damage-sim-table-total"><td class="damage-sim-table-label">{{ t('app_sim_result_ap') }}</td><td v-for="ar in activeResults" :key="'tap'+ar.idx"><span class="damage-sim-table-val damage-sim-table-val-primary">{{ fmt(ar.result.stalker?.ap) }}</span></td></tr>
 
             <tr class="damage-sim-table-section"><td :colspan="activeResults.length + 1">{{ t('app_sim_armor_result') }}</td></tr>
-            <tr><td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}</td>
+            <tr><td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_armor_result') }}</div></td>
               <td v-for="ar in activeResults" :key="'ares'+ar.idx">
                 <span class="damage-sim-pen-icon" :class="ar.result.stalker?.armor?.penetrated ? 'pen' : 'nopen'" v-tooltip="ar.result.stalker?.armor?.penetrated ? t('app_sim_result_pen') : ar.result.stalker?.armor?.partialPen ? t('app_sim_armor_partial_pen') : t('app_sim_result_no_pen')">
                   <svg v-if="ar.result.stalker?.armor?.penetrated" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -295,7 +301,8 @@
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue';
 import { calcMutantDamage, calcStalkerDetailed, stalkerArmorCalc,
-         stalkerShotsToKill, stalkerArmorGroup, shotsToPen, resolveHpNoPenPenalty } from '../../js/damage-calc.js';
+         stalkerShotsToKill, stalkerArmorGroup, shotsToPen, resolveHpNoPenPenalty,
+         stalkerBoneDamageMult, resolveFactionRes, barrelConditionCorrected } from '../../js/damage-calc.js';
 import ItemPickerModal from './modals/ItemPickerModal.vue';
 
 interface GameItem {
@@ -390,6 +397,7 @@ export default defineComponent({
       _shareFeedback: false as boolean,
       startingLoadoutIds: null as Set<string> | null,
       weaponStartingFilter: false,
+      showHelp: false,
       detailView: 'chart' as 'breakdown' | 'chart',
       radarMode: 'relative' as 'relative' | 'category' | 'global',
     };
@@ -651,6 +659,24 @@ export default defineComponent({
     },
   },
   methods: {
+    stalkerBoneDamageMult(hitzone: string, gbo: any): number {
+      return stalkerBoneDamageMult(hitzone, gbo);
+    },
+    resolveFactionRes(faction: string, gbo: any): { dmg_res: number, ap_res: number } {
+      return resolveFactionRes(faction, gbo);
+    },
+    barrelConditionCorrected(conditionPct: number): number {
+      return barrelConditionCorrected(conditionPct);
+    },
+    hitzoneApBoost(hitzone: string): number {
+      const gbo = this.gboConstants;
+      if (!gbo?.stalker_hitzones || !gbo?.ap_boost) return 0;
+      const zone = gbo.stalker_hitzones[hitzone];
+      const group = zone ? zone.group : 'upper_body';
+      if (group === 'head') return gbo.ap_boost.head || 0;
+      if (group === 'lower_body') return gbo.ap_boost.legs || 0;
+      return 0;
+    },
     selectedAmmoFor(slot: number): GameItem | null {
       const id = this.loadouts[slot].ammoId;
       return id ? (this.ammoItems.find(a => a.id === id) || null) : null;
@@ -960,6 +986,7 @@ export default defineComponent({
           distance: this.distance,
           barrelCondition: this.barrelCondition,
           difficulty: this.difficulty,
+          showHelp: this.showHelp,
         };
         localStorage.setItem('damageSimState', JSON.stringify(state));
       } catch (e) { /* quota */ }
@@ -967,6 +994,15 @@ export default defineComponent({
     },
 
     restoreFromStorage(): void {
+      // Always restore UI prefs from localStorage (not part of URL sharing)
+      try {
+        const raw = localStorage.getItem('damageSimState');
+        if (raw) {
+          const prefs = JSON.parse(raw);
+          if (prefs.showHelp != null) this.showHelp = prefs.showHelp;
+        }
+      } catch (e) { /* ignore */ }
+
       // URL params take priority (shared link)
       if (this.restoreFromUrl()) return;
 
@@ -987,6 +1023,7 @@ export default defineComponent({
           if (data.difficulty != null) this.difficulty = data.difficulty;
           if (data.mutantId) this.selectedMutantId = data.mutantId;
           if (data.npcProfileId) this.selectedNpcProfileId = data.npcProfileId;
+          if (data.showHelp != null) this.showHelp = data.showHelp;
           // Try weapon restore now (may succeed if data already loaded)
           this.restoreWeaponsFromStorage();
           return;
@@ -1351,7 +1388,7 @@ export default defineComponent({
   padding: 0.35rem 0.6rem;
   cursor: pointer;
   transition: border-color 0.15s, background 0.15s;
-  height: 2rem;
+  min-height: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1387,6 +1424,9 @@ export default defineComponent({
   overflow: hidden;
   text-overflow: ellipsis;
   padding-right: 1rem;
+}
+.damage-sim-target-slot {
+  height: 2.8rem;
 }
 .damage-sim-slot-meta {
   font-size: 0.6rem;
@@ -1445,6 +1485,16 @@ export default defineComponent({
   color: var(--accent);
   border-color: var(--accent-dim);
   background: var(--color-accent-tint-8);
+}
+
+/* Sub-line values in toggle buttons */
+.damage-sim-btn-sub {
+  display: block;
+  font-size: 0.5rem;
+  font-weight: 400;
+  opacity: 0.7;
+  margin-top: 0.1rem;
+  letter-spacing: 0;
 }
 
 /* Range rows */
@@ -1704,6 +1754,73 @@ export default defineComponent({
 }
 .damage-sim-table-total .damage-sim-table-label {
   color: var(--text);
+}
+
+/* Help toggle — extends .copy-link-btn */
+.damage-sim-help-toggle {
+  width: auto;
+  gap: 0.3rem;
+  padding: 0 0.5rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.damage-sim-help-toggle:hover {
+  color: #8db8d8;
+  border-color: #6a9bbe;
+}
+.damage-sim-help-toggle.active {
+  color: #8db8d8;
+  border-color: #6a9bbe;
+  background: rgba(80, 130, 170, 0.12);
+}
+
+/* Help text — inline callout */
+.damage-sim-help-text {
+  font-size: 0.65rem;
+  color: #a0b8d0;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: normal;
+  line-height: 1.4;
+  margin-top: 0.35rem;
+  padding: 0.35rem 0.5rem 0.35rem 1.5rem;
+  background: rgba(80, 130, 170, 0.08);
+  border: 1px solid rgba(100, 145, 180, 0.2);
+  border-radius: 4px;
+  position: relative;
+}
+.damage-sim-help-text::before {
+  content: '';
+  position: absolute;
+  left: 0.4rem;
+  top: 0.4rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: currentColor;
+  opacity: 0.5;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4'/%3E%3Cpath d='M12 8h.01'/%3E%3C/svg%3E") center / contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4'/%3E%3Cpath d='M12 8h.01'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.damage-sim-table-label:has(.damage-sim-help-text) {
+  white-space: normal;
+  overflow: visible;
+  max-width: none;
+}
+.damage-sim-table-label .damage-sim-help-text {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-top: 0.1rem;
+  border-radius: 0;
+  font-size: 0.6rem;
+  opacity: 0.85;
+  position: static;
+}
+.damage-sim-table-label .damage-sim-help-text::before {
+  display: none;
 }
 
 /* Detail toggle */

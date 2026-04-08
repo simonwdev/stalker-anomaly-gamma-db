@@ -3069,7 +3069,7 @@ export const appDefinition = {
         },
 
         buildExportColumns() {
-            const cols = [];
+            const cols = [{ key: 'id', label: 'ID' }];
             for (const col of this.tableColumns) {
                 if (col.type === 'heal') {
                     for (const hg of col.groups) {
@@ -3090,6 +3090,7 @@ export const appDefinition = {
             const rows = this.sortedItems;
 
             const getValue = (item, col) => {
+                if (col.key === 'id') return item.id || '';
                 if (col.key === 'pda_encyclopedia_name' || col.key === 'name') {
                     return this.tName(item);
                 }
