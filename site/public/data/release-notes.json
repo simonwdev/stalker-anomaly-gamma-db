@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-04-09",
+    "entries": [
+      { "type": "added", "text": "Ballistic help and instructions panel - learn how damage, armor penetration, and hit zones work with an in-app guide accessible from the Ballistics tab." }
+    ]
+  },
+  {
     "date": "2026-04-05",
     "entries": [
       { "type": "added", "text": "Weapon attachments - Scopes, Silencers, Underbarrel, and Tactical Kits with compatible weapons and attachment tiles on weapon modals.", "highlight": true, "summaryKey": "app_whats_new_attachments", "action": "attachments", "callout": { "selector": ".sidebar-group--app_group_attachments", "titleKey": "app_callout_attachments_title", "descKey": "app_callout_attachments_desc" }, "credits": [{ "name": "Evincars", "role": "code" }] }
