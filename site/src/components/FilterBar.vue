@@ -1,5 +1,5 @@
 <template>
-<div class="filter-bar-wrapper" v-show="!buildPlannerActive && !versionCompareActive">
+<div class="filter-bar-wrapper" v-show="!buildPlannerActive && !versionCompareActive && !startingLoadoutsActive">
             <div class="filter-bar">
                 <div class="filter-input-group" v-click-outside="closeFilterPanel">
                     <LucideSearch class="filter-input-icon" :size="14" />
@@ -255,6 +255,7 @@ export default {
         toolkitSortAsc: { type: Boolean, default: true },
         buildPlannerActive: { type: Boolean, default: false },
         versionCompareActive: { type: Boolean, default: false },
+        startingLoadoutsActive: { type: Boolean, default: false },
     },
     emits: [
         'update:filterInput',

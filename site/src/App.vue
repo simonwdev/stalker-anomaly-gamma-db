@@ -88,10 +88,13 @@
         :recent-ids="recentIds"
         :build-planner-active="buildPlannerActive"
         :version-compare-active="versionCompareActive"
+        :starting-loadouts-active="startingLoadoutsActive"
+        :has-starting-loadouts="!!fileManifest['starting-loadouts.json']"
         :favorites-view-active="favoritesViewActive"
         :recent-view-active="recentViewActive"
         @toggle-group="toggleGroup"
         @open-version-compare="openVersionCompare()"
+        @open-starting-loadouts="openStartingLoadouts()"
         @select-favorites="selectFavorites()"
         @select-recent="selectRecent()"
         @select-category="selectCategory"
@@ -158,6 +161,7 @@
                 :toolkit-sort-asc="toolkitSortAsc"
                 :build-planner-active="buildPlannerActive"
                 :version-compare-active="versionCompareActive"
+                :starting-loadouts-active="startingLoadoutsActive"
                 @update:filter-input="filterInput = $event"
                 @clear-filter-input="filterInput = ''; filterQuery = ''"
                 @clear-all-filters="clearAllFilters()"
@@ -250,6 +254,21 @@
                 @navigate-to-item="navigateToItem"
             />
 
+            <StartingLoadoutsView
+                :starting-loadouts-active="startingLoadoutsActive"
+                :starting-loadouts-data="startingLoadoutsCache"
+                :pack-id="activePack?.id"
+                :starting-loadouts-faction="startingLoadoutsFaction"
+                :starting-loadouts-difficulty="startingLoadoutsDifficulty"
+                :index-by-id="indexById"
+                @update:starting-loadouts-faction="startingLoadoutsFaction = $event"
+                @update:starting-loadouts-difficulty="startingLoadoutsDifficulty = $event"
+                @navigate-to-item="navigateToItem"
+                @show-item-hover="loadoutItemHover"
+                @move-item-hover="(event) => moveBuildHover(event)"
+                @hide-item-hover="hideBuildHover()"
+            />
+
             <!-- Build Planner view -->
             <BuildPlanner
                 v-if="buildPlannerActive"
@@ -338,7 +357,7 @@
             />
 
             <ItemTable
-                v-show="viewMode === 'table' && !favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates && !buildPlannerActive && !versionCompareActive"
+                v-show="viewMode === 'table' && !favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates && !buildPlannerActive && !versionCompareActive && !startingLoadoutsActive"
                 :items="sortedItems"
                 :table-columns="tableColumns"
                 :sort-col="sortCol"
@@ -352,7 +371,7 @@
                 @toggle-sort="toggleSort"
             />
             <ItemGrid
-                v-show="(viewMode === 'tiles' || favoritesViewActive || recentViewActive) && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates && !buildPlannerActive && !versionCompareActive"
+                v-show="(viewMode === 'tiles' || favoritesViewActive || recentViewActive) && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates && !buildPlannerActive && !versionCompareActive && !startingLoadoutsActive"
                 :items="sortedItems"
                 :tile-fields="tileFields"
                 :tile-heal-groups="tileHealGroups"
@@ -552,6 +571,7 @@ import MaterialsView from "./components/MaterialsView.vue";
 import OutfitExchangeView from "./components/OutfitExchangeView.vue";
 import ToolkitRatesView from "./components/ToolkitRatesView.vue";
 import VersionCompareView from "./components/VersionCompareView.vue";
+const StartingLoadoutsView = defineAsyncComponent(() => import('./components/StartingLoadoutsView.vue'));
 import BuildImportCodeModal from "./components/modals/BuildImportCodeModal.vue";
 import BuildSaveModal from "./components/modals/BuildSaveModal.vue";
 import SaveImportModal from "./components/modals/SaveImportModal.vue";
@@ -587,6 +607,7 @@ export default {
     SidebarNav,
     ToolkitRatesView,
     VersionCompareView,
+    StartingLoadoutsView,
   },
   provide() {
     return {

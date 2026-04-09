@@ -144,6 +144,10 @@ export const appDefinition = {
             mapsActive: false,
             damageSimActive: false,
             versionCompareActive: false,
+            startingLoadoutsActive: false,
+            startingLoadoutsCache: null,
+            startingLoadoutsFaction: null,
+            startingLoadoutsDifficulty: 0,
             versionCompareLoading: false,
             versionCompareResults: [],
             versionCompareFilter: "",
@@ -239,6 +243,12 @@ export const appDefinition = {
         dataBasePath() {
             if (!this.activePack) return "/data";
             return `/data/${this.activePack.id}`;
+        },
+
+        indexById() {
+            const map = {};
+            for (const entry of this.index) map[entry.id] = entry;
+            return map;
         },
 
         categoryCounts() {
@@ -1674,6 +1684,8 @@ export const appDefinition = {
                         this.activeCategory = null;
                     } else if (urlCat === "version-compare" || pathParsed.versionCompare) {
                         // Defer to restoreUrlState
+                    } else if (urlCat === "starting-loadouts" || pathParsed.startingLoadouts) {
+                        await this.openStartingLoadouts();
                     } else if (urlCat === "favorites" || pathParsed.favorites) {
                         this.favoritesViewActive = true;
                         this.activeCategory = null;
@@ -1730,6 +1742,7 @@ export const appDefinition = {
             this.ammoWeaponsCache = null;
             this.weaponAddonsCache = null;
             this.outfitExchange = null;
+            this.startingLoadoutsCache = null;
             this.displayLabels = {};
             this.translations = null;
             this.craftingTrees = [];
@@ -1843,6 +1856,7 @@ export const appDefinition = {
             this.mapsActive = false;
             this.damageSimActive = false;
             this.versionCompareActive = false;
+            this.startingLoadoutsActive = false;
             this.favoritesViewActive = false;
             this.recentViewActive = false;
             this.showFavoritesOnly = false;
@@ -2295,6 +2309,30 @@ export const appDefinition = {
             if (this.crossPackId) this.loadVersionCompareData();
         },
 
+        async openStartingLoadouts() {
+            this.resetViewState();
+            this.startingLoadoutsActive = true;
+            this.pushUrlState(true);
+            await this.fetchJsonCached("startingLoadoutsCache", "starting-loadouts.json");
+        },
+
+        async loadoutItemHover(id, event) {
+            const entry = this.indexById[id];
+            if (!entry) return;
+            const slug = categorySlug(entry.category);
+            if (!this.categoryItems[slug]) {
+                try {
+                    const res = await fetch(this.dataUrl(`${slug}.json`));
+                    const data = await res.json();
+                    for (const item of data.items) item.localeName = this.tName(item);
+                    this.categoryItems[slug] = data.items;
+                    this.categoryHeaders[slug] = data.headers;
+                } catch { return; }
+            }
+            const item = (this.categoryItems[slug] || []).find(i => i.id === id);
+            if (item) this.showItemHover(item, event);
+        },
+
         async loadVersionCompareData() {
             if (!this.crossPackId) { this.versionCompareResults = []; this.versionComparePropertyFilter = []; this.versionCompareCategoryFilter = []; this.versionCompareFilter = ""; return; }
             this.versionCompareLoading = true;
@@ -2470,6 +2508,7 @@ export const appDefinition = {
             this.mapsActive = false;
             this.damageSimActive = false;
             this.versionCompareActive = false;
+            this.startingLoadoutsActive = false;
             this.favoritesViewActive = false;
             this.recentViewActive = false;
             this.showFavoritesOnly = false;
@@ -4123,6 +4162,7 @@ export const appDefinition = {
                 favorites: this.favoritesViewActive,
                 recent: this.recentViewActive,
                 versionCompare: this.versionCompareActive,
+                startingLoadouts: this.startingLoadoutsActive,
             };
             url.pathname = buildPathUrl(pathState);
 
@@ -4241,6 +4281,8 @@ export const appDefinition = {
                 const vcc = params.get("vcc");
                 if (vcc) this.versionCompareCategoryFilter = vcc.split(",");
                 if (this.crossPackId) this.loadVersionCompareData();
+            } else if (parsed.startingLoadouts || legacyCat === "starting-loadouts") {
+                this.openStartingLoadouts();
             } else if (parsed.favorites || legacyCat === "favorites") {
                 this.favoritesViewActive = true;
                 this.activeCategory = null;
@@ -4942,6 +4984,8 @@ export const appDefinition = {
                 this.openDamageSim();
             } else if (entry.action === "attachments") {
                 this.selectCategory(CAT.SCOPES);
+            } else if (entry.action === "startingLoadouts") {
+                this.openStartingLoadouts();
             }
         },
 
@@ -6438,6 +6482,8 @@ export const appDefinition = {
                     this.versionCompareActive = true;
                     if (this.crossPackId) this.loadVersionCompareData();
                 }
+            } else if (parsed.startingLoadouts) {
+                if (!this.startingLoadoutsActive) await this.openStartingLoadouts();
             } else if (parsed.cat) {
                 const match = this.categories.find(c => categorySlug(c) === parsed.cat) || [...VIRTUAL_CATEGORIES].find(c => categorySlug(c) === parsed.cat);
                 if (match) await this.selectCategory(match);

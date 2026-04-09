@@ -15,8 +15,19 @@
                 <span class="cat-label">{{ t('app_cat_recent') }}</span>
                 <span v-if="recentIds.length" class="cat-count">{{ recentIds.length }}</span>
             </button>
+        </div>
+    </div>
+    <div class="sidebar-group">
+        <div class="sidebar-group-label" @click="$emit('toggleGroup', 'tools')">
+            <svg class="sidebar-chevron" :class="{ collapsed: collapsedGroups['tools'] }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            {{ t('app_group_tools') }}
+        </div>
+        <div class="sidebar-group-items" v-show="!collapsedGroups['tools']">
             <button :class="{ active: versionCompareActive }" @click="$emit('openVersionCompare')">
                 <span class="cat-label">{{ t('app_cat_version_compare') }}</span>
+            </button>
+            <button v-if="hasStartingLoadouts" :class="{ active: startingLoadoutsActive }" @click="$emit('openStartingLoadouts')">
+                <span class="cat-label">{{ t('app_cat_starting_loadouts') }}</span>
             </button>
         </div>
     </div>
@@ -30,7 +41,7 @@
                 v-for="cat in group.categories"
                 :key="cat"
                 :href="categoryHref(cat)"
-                :class="{ active: activeCategory === cat && !favoritesViewActive && !recentViewActive && !buildPlannerActive && !versionCompareActive }"
+                :class="{ active: activeCategory === cat && !favoritesViewActive && !recentViewActive && !buildPlannerActive && !versionCompareActive && !startingLoadoutsActive }"
                 @click.prevent="$emit('selectCategory', cat)"
             ><span class="cat-label" :title="tCat(cat)">{{ tCat(cat) }}</span> <span v-if="categoryCounts[cat]" class="cat-count">{{ categoryCounts[cat] }}</span></a>
         </div>
@@ -55,12 +66,14 @@ export default {
         recentIds: { type: Array, default: () => [] },
         buildPlannerActive: { type: Boolean, default: false },
         versionCompareActive: { type: Boolean, default: false },
+        startingLoadoutsActive: { type: Boolean, default: false },
+        hasStartingLoadouts: { type: Boolean, default: false },
         favoritesViewActive: { type: Boolean, default: false },
         recentViewActive: { type: Boolean, default: false },
     },
     emits: [
         'toggleGroup', 'selectFavorites', 'selectRecent', 'openVersionCompare',
-        'selectCategory', 'toggleSidebarCollapse',
+        'openStartingLoadouts', 'selectCategory', 'toggleSidebarCollapse',
     ],
     inject: ['t', 'tCat', 'categoryHref'],
 };
