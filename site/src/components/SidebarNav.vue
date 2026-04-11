@@ -7,14 +7,14 @@
             {{ t('app_group_saved') }}
         </div>
         <div class="sidebar-group-items" v-show="!collapsedGroups['saved']">
-            <button :class="{ active: favoritesViewActive }" @click="$emit('selectFavorites')">
+            <a :href="navHref('favorites')" :class="{ active: favoritesViewActive }" @click.prevent="$emit('selectFavorites')">
                 <span class="cat-label">{{ t('app_cat_favorites') }}</span>
                 <span v-if="favoriteIds.length" class="cat-count">{{ favoriteIds.length }}</span>
-            </button>
-            <button :class="{ active: recentViewActive }" @click="$emit('selectRecent')">
+            </a>
+            <a :href="navHref('recent')" :class="{ active: recentViewActive }" @click.prevent="$emit('selectRecent')">
                 <span class="cat-label">{{ t('app_cat_recent') }}</span>
                 <span v-if="recentIds.length" class="cat-count">{{ recentIds.length }}</span>
-            </button>
+            </a>
         </div>
     </div>
     <div class="sidebar-group">
@@ -23,12 +23,15 @@
             {{ t('app_group_tools') }}
         </div>
         <div class="sidebar-group-items" v-show="!collapsedGroups['tools']">
-            <button :class="{ active: versionCompareActive }" @click="$emit('openVersionCompare')">
+            <a :href="navHref('version-compare')" :class="{ active: versionCompareActive }" @click.prevent="$emit('openVersionCompare')">
                 <span class="cat-label">{{ t('app_cat_version_compare') }}</span>
-            </button>
-            <button v-if="hasStartingLoadouts" :class="{ active: startingLoadoutsActive }" @click="$emit('openStartingLoadouts')">
+            </a>
+            <a v-if="hasStartingLoadouts" :href="navHref('starting-loadouts')" :class="{ active: startingLoadoutsActive }" @click.prevent="$emit('openStartingLoadouts')">
                 <span class="cat-label">{{ t('app_cat_starting_loadouts') }}</span>
-            </button>
+            </a>
+            <a v-if="hasToolkitRates" :href="categoryHref(toolkitRatesCategory)" :class="{ active: activeCategory === toolkitRatesCategory && !favoritesViewActive && !recentViewActive && !versionCompareActive && !startingLoadoutsActive }" @click.prevent="$emit('selectCategory', toolkitRatesCategory)">
+                <span class="cat-label">{{ t('app_cat_toolkit_rates') }}</span>
+            </a>
         </div>
     </div>
     <div v-for="group in groupedCategories" :key="group.name" class="sidebar-group" :class="'sidebar-group--' + group.name.replace(/\s+/g, '-').toLowerCase()">
@@ -68,6 +71,8 @@ export default {
         versionCompareActive: { type: Boolean, default: false },
         startingLoadoutsActive: { type: Boolean, default: false },
         hasStartingLoadouts: { type: Boolean, default: false },
+        hasToolkitRates: { type: Boolean, default: false },
+        toolkitRatesCategory: { type: String, default: null },
         favoritesViewActive: { type: Boolean, default: false },
         recentViewActive: { type: Boolean, default: false },
     },
@@ -75,6 +80,6 @@ export default {
         'toggleGroup', 'selectFavorites', 'selectRecent', 'openVersionCompare',
         'openStartingLoadouts', 'selectCategory', 'toggleSidebarCollapse',
     ],
-    inject: ['t', 'tCat', 'categoryHref'],
+    inject: ['t', 'tCat', 'categoryHref', 'navHref'],
 };
 </script>

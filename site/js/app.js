@@ -612,7 +612,7 @@ export const appDefinition = {
         },
 
         tileIconSize() {
-            const large = new Set([...WEAPON_CATEGORIES, CAT.OUTFITS, CAT.HELMETS]);
+            const large = new Set([...WEAPON_CATEGORIES, CAT.ALL_WEAPONS, CAT.OUTFITS, CAT.HELMETS]);
             return large.has(this.activeCategory) ? 'large' : 'small';
         },
 

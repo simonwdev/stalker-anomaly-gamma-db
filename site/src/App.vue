@@ -90,6 +90,8 @@
         :version-compare-active="versionCompareActive"
         :starting-loadouts-active="startingLoadoutsActive"
         :has-starting-loadouts="!!fileManifest['starting-loadouts.json']"
+        :has-toolkit-rates="!!fileManifest['toolkit-rates.json']"
+        :toolkit-rates-category="'Toolkit Rates'"
         :favorites-view-active="favoritesViewActive"
         :recent-view-active="recentViewActive"
         @toggle-group="toggleGroup"

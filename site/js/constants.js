@@ -153,7 +153,7 @@ export const CATEGORY_GROUPS = [
     { name: "app_group_ammo_explosives", categories: [CAT.AMMO, CAT.EXPLOSIVES] },
     { name: "app_group_equipment", categories: [CAT.OUTFITS, CAT.HELMETS, CAT.BELT_ATTACHMENTS, CAT.ARTEFACTS, CAT.OUTFIT_EXCHANGE] },
     { name: "app_group_consumables", categories: [CAT.FOOD, CAT.MEDICINE] },
-    { name: "app_group_crafting", categories: [CAT.CRAFTING_TREES, CAT.MATERIALS, CAT.MUTANT_PARTS, CAT.TOOLKIT_RATES] },
+    { name: "app_group_crafting", categories: [CAT.CRAFTING_TREES, CAT.MATERIALS, CAT.MUTANT_PARTS] },
 ];
 
 export const KEYS = {
