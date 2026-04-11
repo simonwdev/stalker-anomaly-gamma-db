@@ -66,9 +66,11 @@ for (const file of srcFiles) {
   const destPath = join(destDir, file);
 
   if (mergeTranslations && TRANSLATION_FILES.has(file)) {
+    // Read as latin1 (binary-safe) to preserve Windows-1251 bytes.
+    // The generation script handles the actual Win-1251 → UTF-8 decoding.
     const existing = new Map();
     if (existsSync(destPath)) {
-      const text = readFileSync(destPath, "utf-8");
+      const text = readFileSync(destPath, "latin1");
       for (const line of text.split(/\r?\n/)) {
         if (!line.trim()) continue;
         const sep = line.indexOf(",");
@@ -79,7 +81,7 @@ for (const file of srcFiles) {
     }
 
     const existingCount = existing.size;
-    const srcText = readFileSync(srcPath, "utf-8");
+    const srcText = readFileSync(srcPath, "latin1");
     let added = 0;
     for (const line of srcText.split(/\r?\n/)) {
       if (!line.trim()) continue;
@@ -98,7 +100,7 @@ for (const file of srcFiles) {
       if (line.startsWith("Translation Key,")) continue;
       lines.push(line);
     }
-    writeFileSync(destPath, lines.join("\n") + "\n");
+    writeFileSync(destPath, lines.join("\n") + "\n", "latin1");
     console.log(`${file}: merged ${added} new keys (${existingCount} → ${existing.size} total)`);
     merged++;
   } else {

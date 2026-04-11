@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-04-11",
+    "entries": [
+      { "type": "added", "text": "Upgrade tree for weapons and outfits - browse every upgrade tier and see costs and stat changes at a glance.", "highlight": true, "summaryKey": "app_whats_new_upgrade_tree" }
+    ]
+  },
+  {
     "date": "2026-04-09",
     "entries": [
       { "type": "added", "text": "Starting Loadouts planner - browse and plan your new game loadout for all 13 factions. Select items, track your point budget with a live progress bar, and see which ammo you'll receive. Supports all three difficulty levels and persists selections per faction.", "highlight": true, "summaryKey": "app_whats_new_starting_loadouts", "action": "startingLoadouts" },
