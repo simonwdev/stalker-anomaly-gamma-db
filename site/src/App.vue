@@ -452,6 +452,7 @@
     :modal-recipe="modalRecipe"
     :modal-used-in-recipes="modalUsedInRecipes"
     :modal-disassemble-materials="modalDisassembleMaterials"
+    :modal-upgrade-nodes="modalUpgradeNodes"
     :modal-used-by-weapons="modalUsedByWeapons"
     :parsed-description="parsedDescription"
     :modal-weapon-addons="modalWeaponAddons"

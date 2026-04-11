@@ -95,6 +95,7 @@ export const appDefinition = {
             npcArmorProfilesCache: null,
             gboConstantsCache: null,
             ballisticRangesCache: null,
+            upgradesCache: null,
 
             // Crafting trees
             craftingTrees: [],
@@ -122,6 +123,7 @@ export const appDefinition = {
             modalStashChance: null,
             modalRecipeData: null,
             modalDisassemble: null,
+            modalUpgradeNodes: null,
             modalAmmoWeapons: null,
             modalLoading: false,
             copyIdFeedback: false,
@@ -1553,6 +1555,10 @@ export const appDefinition = {
             return this.fetchJsonCached("ammoWeaponsCache", "ammo-weapons.json");
         },
 
+        fetchUpgrades() {
+            return this.fetchJsonCached("upgradesCache", "upgrades.json");
+        },
+
         fetchWeaponAddons() {
             return this.fetchJsonCached("weaponAddonsCache", "weapon-addons.json");
         },
@@ -1739,6 +1745,7 @@ export const appDefinition = {
             this.stashChanceCache = null;
             this.recipesCache = null;
             this.disassembleCache = null;
+            this.upgradesCache = null;
             this.ammoWeaponsCache = null;
             this.weaponAddonsCache = null;
             this.outfitExchange = null;
@@ -2081,6 +2088,7 @@ export const appDefinition = {
             this.modalStashChance = null;
             this.modalRecipeData = null;
             this.modalDisassemble = null;
+            this.modalUpgradeNodes = null;
             this.modalAmmoWeapons = null;
             this._ammoDecCache = {};
             this.copyIdFeedback = false;
@@ -2108,13 +2116,14 @@ export const appDefinition = {
                 this.modalItem = this.categoryItems[slug].find((i) => i.id === id);
 
                 const isWeapon = WEAPON_CATEGORIES.includes(entry.category);
-                const [drops, itemDrops, stashChance, recipeData, disassemble, ammoWeapons] = await Promise.all([
+                const [drops, itemDrops, stashChance, recipeData, disassemble, ammoWeapons, upgrades] = await Promise.all([
                     this.fetchDrops(),
                     this.fetchItemDrops(),
                     this.fetchStashChance(),
                     this.fetchRecipes(),
                     this.fetchDisassemble(),
                     this.fetchAmmoWeapons(),
+                    this.fetchUpgrades(),
                     isWeapon ? this.ensureCategoryLoaded(categorySlug(CAT.AMMO)) : Promise.resolve(),
                     isWeapon ? this.ensureCategoryLoaded(categorySlug(CAT.SCOPES)) : Promise.resolve(),
                     isWeapon ? this.fetchWeaponAddons() : Promise.resolve(),
@@ -2127,6 +2136,7 @@ export const appDefinition = {
                 this.modalStashChance = stashChance[id] || null;
                 this.modalRecipeData = recipeData;
                 this.modalDisassemble = disassemble[id] || null;
+                this.modalUpgradeNodes = upgrades[id] || null;
                 this.modalAmmoWeapons = ammoWeapons[id] || null;
 
                 // For addon items (scopes/silencers/grenade launchers), pre-fetch compatible

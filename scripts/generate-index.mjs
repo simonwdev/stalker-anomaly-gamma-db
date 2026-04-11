@@ -44,6 +44,8 @@ const SKIP_FILES = new Set([
   "export_npc_armor_profiles.csv",
   "export_addon_weapon_map.csv",
   "export_weapon_addon_map.csv",
+  "export_upgrades_items.csv",
+  "export_upgrade_sections.csv",
   "en_us.csv",
   "ru_ru.csv",
   "fr_fr.csv",
@@ -182,8 +184,8 @@ function loadTranslations(packDir) {
     const text = new TextDecoder(encoding).decode(buf);
     const lines = text.split(/\r?\n/).filter((l) => l.length > 0);
     for (let i = 1; i < lines.length; i++) {
-      // Strip color codes before CSV parsing — they contain commas that break column splitting
-      const cleanLine = lines[i].replace(/%c\[[^\]]*\]/gi, "");
+      // Strip color codes, replacement characters, and misencoded BOM (пїЅ) before CSV parsing
+      const cleanLine = lines[i].replace(/%c\[[^\]]*\]/gi, "").replace(/\uFFFD/g, "").replace(/\u043F\u0457\u0405/g, "");
       const cols = parseCsvLine(cleanLine);
       const key = cols[0]?.trim().toLowerCase();
       // Rejoin all columns after the key — commas in values are not column separators
@@ -607,6 +609,93 @@ try {
 } catch (e) {
   if (e.code !== "ENOENT") throw e;
   console.log("No disassemble table CSV found, skipping disassemble.json");
+}
+
+// Generate upgrades.json from export_upgrade_sections.csv + export_upgrades_items.csv
+const UPGRADE_SECTIONS_FILE = join(CSV_DIR, "export_upgrade_sections.csv");
+const UPGRADE_ITEMS_FILE = join(CSV_DIR, "export_upgrades_items.csv");
+try {
+  const sectText = readFileSync(UPGRADE_SECTIONS_FILE, "utf-8");
+  const sectLines = sectText.split(/\r?\n/).filter((l) => l.length > 0);
+  const sectionsMap = new Map();
+
+  for (let i = 1; i < sectLines.length; i++) {
+    const cols = parseCsvLine(sectLines[i]);
+    const sectionId = cols[0]?.trim();
+    if (!sectionId) continue;
+    // cols[1] is type (outfit/weapon/any) — not stored
+    let cost = 0;
+    const stats = {};
+    for (let j = 2; j < cols.length; j += 2) {
+      const key = cols[j]?.trim().replace(/^"|"$/g, "");
+      const val = cols[j + 1]?.trim().replace(/^"|"$/g, "");
+      if (!key) continue;
+      if (key === "cost") {
+        cost = parseFloat(val) || 0;
+      } else {
+        stats[key] = val;
+      }
+    }
+    sectionsMap.set(sectionId, { cost, stats });
+  }
+  console.log(`Loaded ${sectionsMap.size} upgrade sections`);
+
+  const upItemsText = readFileSync(UPGRADE_ITEMS_FILE, "utf-8");
+  const upItemsLines = upItemsText.split(/\r?\n/).filter((l) => l.length > 0);
+  const upgrades = {};
+
+  for (let i = 1; i < upItemsLines.length; i++) {
+    const cols = parseCsvLine(upItemsLines[i]);
+    const itemId = cols[0]?.trim();
+    if (!itemId) continue;
+
+    const nodes = [];
+    // Repeating groups of 8 columns starting at index 2: Row, Column, Cell, Property, Value, Name, Desc, Section
+    for (let n = 0; n < 22; n++) {
+      const base = 2 + n * 8;
+      const row = cols[base]?.trim();
+      const col = cols[base + 1]?.trim();
+      const cell = cols[base + 2]?.trim();
+      const prop = cols[base + 3]?.trim();
+      const val = cols[base + 4]?.trim();
+      const name = cols[base + 5]?.trim();
+      const desc = cols[base + 6]?.trim();
+      const sectionId = cols[base + 7]?.trim();
+      if (!row || !sectionId) continue;
+
+      const sect = sectionsMap.get(sectionId) || { cost: 0, stats: {} };
+      nodes.push({
+        row: parseInt(row, 10),
+        col: parseInt(col, 10),
+        cell: parseInt(cell, 10),
+        prop: prop || "",
+        val: val || "",
+        name: name || "",
+        desc: desc || "",
+        section: sectionId,
+        cost: sect.cost,
+        stats: Object.keys(sect.stats).length > 0 ? sect.stats : undefined,
+      });
+    }
+
+    if (nodes.length > 0) {
+      upgrades[itemId] = nodes;
+    }
+  }
+
+  // Mark items with hasUpgrades
+  for (const [, data] of categoryData) {
+    for (const item of data.items) {
+      if (item.id in upgrades) item.hasUpgrades = true;
+    }
+  }
+
+  const upgradesOut = join(OUT_DIR, "upgrades.json");
+  writeFileSync(upgradesOut, JSON.stringify(upgrades));
+  console.log(`Wrote ${Object.keys(upgrades).length} upgrade trees to ${upgradesOut}`);
+} catch (e) {
+  if (e.code !== "ENOENT") throw e;
+  console.log("No upgrade CSVs found, skipping upgrades.json");
 }
 
 // Generate materials.json from export_disassembles_materials.csv

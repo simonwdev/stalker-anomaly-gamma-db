@@ -10,36 +10,14 @@
             <p v-show="modalLoading" class="loading">{{ t('app_label_loading') }}</p>
 
             <div v-if="modalItem && !modalLoading">
-                <!-- Header -->
-                <div class="modal-header-layout" :key="'hdr-' + modalItem.id">
-                    <!-- Column 1: title + meta + toolbar -->
-                    <div class="modal-header-content">
-                        <div class="modal-title-row">
-                            <h1 class="modal-title">{{ tName(modalItem) }}</h1>
-                        </div>
-                        <div class="item-meta">
-                            <span class="cat-badge">{{ t(singularCategory(modalCategory)) || tCat(modalCategory) }}</span>
-                            <span class="item-id">{{ modalItem.id }}</span>
-                        </div>
+                <!-- Sticky title bar -->
+                <div class="modal-sticky-bar modal-sticky-bar--visible">
+                    <span class="modal-sticky-title">
+                        <span class="modal-sticky-name">{{ tName(modalItem) }} <span class="modal-sticky-cat">{{ t(singularCategory(modalCategory)) || tCat(modalCategory) }}</span></span>
+                        <span class="modal-sticky-id">{{ modalItem.id }}</span>
+                    </span>
+                    <div class="modal-sticky-actions">
                         <div class="item-toolbar">
-                            <div class="utility-group">
-                                <button class="copy-link-btn" :class="{ favorited: isFavorited(modalItem.id) }" @click="$emit('toggleFavorite', modalItem.id)" v-tooltip="isFavorited(modalItem.id) ? t('app_tooltip_remove_fav') : t('app_tooltip_add_fav')">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" :fill="isFavorited(modalItem.id) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                </button>
-                                <button class="copy-link-btn" :class="{ pinned: isPinned(modalItem.id), 'pin-disabled': !isPinned(modalItem.id) && pinnedIds.length >= 5 }" @click="$emit('togglePin', modalItem.id)" v-tooltip="isPinned(modalItem.id) ? t('app_tooltip_unpin') : t('app_tooltip_pin')">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" :fill="isPinned(modalItem.id) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>
-                                </button>
-                            </div>
-                            <div class="utility-group">
-                                <button class="copy-link-btn" :class="{ copied: copyIdFeedback }" @click="$emit('copyItemId', modalItem.id)" v-tooltip="copyIdFeedback ? t('app_label_copied') : t('app_tooltip_copy_id')">
-                                    <svg v-if="copyIdFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                                </button>
-                                <button class="copy-link-btn" :class="{ copied: copyModalLinkFeedback }" @click="$emit('copyModalLink')" v-tooltip="copyModalLinkFeedback ? t('app_label_copied') : t('app_label_copy_link')">
-                                    <svg v-if="copyModalLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                                </button>
-                            </div>
                             <div v-if="packs.length > 1" class="compare-wrap" v-click-outside="closeCompareMenu">
                                 <button class="copy-link-btn cross-pack-btn" :class="{ active: crossPackId }" @click.stop="compareMenuOpen = !compareMenuOpen" v-tooltip="t('app_label_compare_with')">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg>
@@ -58,41 +36,28 @@
                                     </template>
                                 </div>
                             </div>
+                            <div class="utility-group">
+                                <button class="copy-link-btn" :class="{ favorited: isFavorited(modalItem.id) }" @click="$emit('toggleFavorite', modalItem.id)" v-tooltip="isFavorited(modalItem.id) ? t('app_tooltip_remove_fav') : t('app_tooltip_add_fav')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" :fill="isFavorited(modalItem.id) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                </button>
+                                <button class="copy-link-btn" :class="{ pinned: isPinned(modalItem.id), 'pin-disabled': !isPinned(modalItem.id) && pinnedIds.length >= 5 }" @click="$emit('togglePin', modalItem.id)" v-tooltip="isPinned(modalItem.id) ? t('app_tooltip_unpin') : t('app_tooltip_pin')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" :fill="isPinned(modalItem.id) ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>
+                                </button>
+                            </div>
+                            <div class="utility-group">
+                                <button class="copy-link-btn" :class="{ copied: copyIdFeedback }" @click="$emit('copyItemId', modalItem.id)" v-tooltip="copyIdFeedback ? t('app_label_copied') : t('app_tooltip_copy_id')">
+                                    <svg v-if="copyIdFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                </button>
+                                <button class="copy-link-btn" :class="{ copied: copyModalLinkFeedback }" @click="$emit('copyModalLink')" v-tooltip="copyModalLinkFeedback ? t('app_label_copied') : t('app_label_copy_link')">
+                                    <svg v-if="copyModalLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                                </button>
+                            </div>
                         </div>
-                    </div><!-- /modal-header-content -->
+                    </div>
+                </div>
 
-                    <!-- Column 2: item image -->
-                    <div v-if="!isAddonItem" class="modal-item-img-box"
-                         @click="$event.currentTarget.classList.remove('no-icon')"
-                    >
-                        <img
-                            class="modal-item-img"
-                            :src="'img/icons/' + modalItem.id + '.png'"
-                            :alt="tName(modalItem)"
-                            @error="$event.target.style.display='none'; $event.target.parentElement.classList.add('no-icon')"
-                        />
-                        <img
-                            v-if="modalItem.ui_st_community && factionIcon(modalItem.ui_st_community)"
-                            :src="'img/' + factionIcon(modalItem.ui_st_community)"
-                            :alt="modalItem.ui_st_community"
-                            class="modal-item-faction-badge"
-                            v-tooltip="t(modalItem.ui_st_community)"
-                        />
-                        <div class="modal-item-img-placeholder">
-                            <svg viewBox="0 0 80 36" xmlns="http://www.w3.org/2000/svg" class="item-icon-placeholder-x"><line x1="4" y1="4" x2="76" y2="32" stroke="currentColor" stroke-width="1.5"/><line x1="76" y1="4" x2="4" y2="32" stroke="currentColor" stroke-width="1.5"/></svg>
-                            <span class="item-icon-placeholder-text">{{ t('app_label_no_image') }}</span>
-                        </div>
-                    </div>
-                    <!-- Small image for addon items (scopes / silencers / launchers) -->
-                    <div v-else class="modal-addon-img-box">
-                        <img
-                            class="addon-img-tile-icon modal-addon-img"
-                            :src="'img/icons/' + modalItem.id + '.png'"
-                            :alt="tName(modalItem)"
-                            @error="$event.target.parentElement.style.display='none'"
-                        />
-                    </div>
-                </div><!-- /modal-header-layout -->
 
                 <div class="modal-badges" v-if="modalItem['st_data_export_has_perk'] === 'Y' || modalItem['st_data_export_is_junk'] === 'Y' || modalItem['st_data_export_can_be_crafted'] === 'Y' || modalItem['ui_mcm_menu_exo'] === 'Y' || modalItem['st_data_export_can_be_cooked'] === 'Y' || modalItem['st_data_export_used_in_cooking'] === 'Y' || modalItem['st_data_export_used_in_crafting'] === 'Y' || modalItem['st_data_export_cuts_thick_skin'] === 'Y' || modalItem.hasNpcWeaponDrop === false || isUnusedAmmo(modalItem, modalCategory)">
                     <span v-if="modalItem.hasNpcWeaponDrop === false" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
@@ -110,6 +75,23 @@
 
                 <div class="modal-description-row">
                     <div class="modal-description-content">
+                        <div class="modal-desc-img-float"
+                             @click="$event.currentTarget.classList.remove('no-icon')"
+                        >
+                            <img
+                                class="modal-item-img"
+                                :src="'img/icons/' + modalItem.id + '.png'"
+                                :alt="tName(modalItem)"
+                                @error="$event.target.style.display='none'; $event.target.parentElement.classList.add('no-icon')"
+                            />
+                            <img
+                                v-if="modalItem.ui_st_community && factionIcon(modalItem.ui_st_community)"
+                                :src="'img/' + factionIcon(modalItem.ui_st_community)"
+                                :alt="modalItem.ui_st_community"
+                                class="modal-item-faction-badge"
+                                v-tooltip="t(modalItem.ui_st_community)"
+                            />
+                        </div>
                         <p v-if="parsedDescription" class="modal-description">{{ parsedDescription.text }}</p>
                         <div v-if="parsedDescription && parsedDescription.sections.length" class="modal-desc-meta">
                             <div class="desc-chip-group">
@@ -231,15 +213,10 @@
                     </div>
                 </div>
 
-                <!-- Compatible Tactical Kits (on weapon detail) -->
-                <div v-if="modalWeaponAddons.kits.length" class="drop-sources" :class="{ collapsed: isCollapsed('kits') }">
-                    <h2 class="section-toggle" @click="toggleSection('kits')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_kits') }}</h2>
-                    <div class="addon-tile-grid">
-                        <a v-for="addon in modalWeaponAddons.kits" :key="addon.id" href="#" class="addon-img-tile addon-img-tile-scope" @mouseenter="showItemHover(addon, $event)" @mousemove="moveItemHover($event)" @mouseleave="hideItemHover()" @click.prevent="$emit('navigateToItem', addon.id)">
-                            <img class="addon-img-tile-icon" :src="'img/icons/' + addon.id + '.png'" :alt="t(addon.pda_encyclopedia_name)" loading="lazy" @error="$event.target.style.display='none'" />
-                            <span class="addon-img-tile-name">{{ t(addon.pda_encyclopedia_name) }}</span>
-                        </a>
-                    </div>
+                <!-- Upgrade Tree -->
+                <div v-if="modalUpgradeNodes && modalUpgradeNodes.length > 0" class="drop-sources" :class="{ collapsed: isCollapsed('upgrades') }">
+                    <h2 class="section-toggle" @click="toggleSection('upgrades')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_upgrades') }}</h2>
+                    <UpgradeTreeView :nodes="modalUpgradeNodes" />
                 </div>
 
                 <!-- NPC drop sources -->
@@ -375,8 +352,11 @@
 </template>
 
 <script>
+import UpgradeTreeView from './UpgradeTreeView.vue';
+
 export default {
   name: 'ItemDetailModal',
+  components: { UpgradeTreeView },
   inject: [
     't', 'tName', 'tCat', 'headerLabel', 'formatValue', 'displayLabel', 'displayStyle',
     'healDots', 'factionColor', 'factionIcon', 'singularCategory', 'isUnusedAmmo',
@@ -402,6 +382,7 @@ export default {
     modalRecipe: { type: Array, default: null },
     modalUsedInRecipes: Array,
     modalDisassembleMaterials: { type: Array, default: null },
+    modalUpgradeNodes: { type: Array, default: null },
     modalUsedByWeapons: Array,
     parsedDescription: Object,
     modalWeaponAddons: { type: Object, default: () => ({ scopes: [], silencers: [], launchers: [] }) },
@@ -429,7 +410,18 @@ export default {
     };
   },
   watch: {
-    modalItem() { this.hideItemHover(); },
+    modalItem() {
+      this.hideItemHover();
+      this.stickyVisible = false;
+    },
+    modalLoading(val) {
+      if (!val && this.modalItem) {
+        this.$nextTick(() => this._setupHeaderObserver());
+      }
+    },
+  },
+  beforeUnmount() {
+    if (this._headerObserver) this._headerObserver.disconnect();
   },
   computed: {
     hasWeaponAddons() {
@@ -459,6 +451,20 @@ export default {
     },
     isPinned(id) {
       return this.pinnedIds.includes(id);
+    },
+    _setupHeaderObserver() {
+      if (this._headerObserver) this._headerObserver.disconnect();
+      const sentinel = this.$refs.headerSentinel;
+      if (!sentinel) return;
+      // Find the scrollable modal-body ancestor
+      let root = sentinel.parentElement;
+      while (root && !root.classList.contains('modal-body')) root = root.parentElement;
+      if (!root) return;
+      this._headerObserver = new IntersectionObserver(
+        ([entry]) => { this.stickyVisible = !entry.isIntersecting; },
+        { root, threshold: 0 }
+      );
+      this._headerObserver.observe(sentinel);
     },
     closeCompareMenu() {
       this.compareMenuOpen = false;
@@ -490,3 +496,79 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.modal-sticky-bar {
+    position: sticky;
+    top: -0.75rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.5rem;
+    margin: -0.75rem -1.5rem 0.75rem;
+    background: var(--color-surface-3);
+    border-bottom: 1px solid var(--border);
+    border-radius: 8px 8px 0 0;
+}
+.modal-sticky-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+.modal-desc-img-float {
+    float: right;
+    margin: 0 0 0.5rem 1rem;
+    position: relative;
+    background: var(--color-map-bg);
+    border: 1px solid var(--color-map-elevated-2);
+    border-radius: 6px;
+    padding: 0.3rem 0.5rem;
+}
+.modal-desc-img-float.no-icon {
+    display: none;
+}
+.modal-desc-img-float .modal-item-img {
+    max-width: 140px;
+    max-height: 60px;
+    object-fit: contain;
+}
+.modal-sticky-id {
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    font-family: var(--mono, monospace);
+    line-height: 1;
+}
+.modal-sticky-actions .item-toolbar {
+    margin: 0;
+}
+.modal-sticky-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    flex-shrink: 0;
+}
+.modal-sticky-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    white-space: nowrap;
+    line-height: 1.2;
+}
+.modal-sticky-cat {
+    font-size: 0.55rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    background: var(--color-elevated-2);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+}
+</style>

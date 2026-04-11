@@ -45,7 +45,8 @@
       "displayName": "st_wpn_dvl10_m1",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_steyr_scout",
@@ -70,7 +71,8 @@
       "displayName": "st_wpn_steyr_scout",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m24",
@@ -95,7 +97,8 @@
       "displayName": "st_wpn_m24",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_remington700_mod_x_gen3",
@@ -120,7 +123,8 @@
       "displayName": "st_wpn_remington700_mod_x_gen3",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l96a1",
@@ -145,7 +149,8 @@
       "displayName": "st_wpn_l96a1",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_wa2000",
@@ -170,7 +175,8 @@
       "displayName": "st_wpn_wa2000",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sv98",
@@ -195,7 +201,8 @@
       "displayName": "st_wpn_sv98",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svt40_modern",
@@ -220,7 +227,8 @@
       "displayName": "st_wpn_svt40_modern",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sv98_custom",
@@ -245,7 +253,8 @@
       "displayName": "st_wpn_sv98_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_steyr_scout_big",
@@ -270,7 +279,8 @@
       "displayName": "st_wpn_steyr_scout_big",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_winchester1873",
@@ -295,7 +305,8 @@
       "displayName": "st_wpn_winchester1873",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_gauss_quest",
@@ -320,7 +331,8 @@
       "displayName": "lttz_ll_wpn_gauss_quest_name",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svd_custom",
@@ -370,7 +382,8 @@
       "displayName": "st_wpn_k98_mod_silen98 [auser_kit]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_vssk",
@@ -395,7 +408,8 @@
       "displayName": "st_wpn_vssk",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_k98_mod",
@@ -420,7 +434,8 @@
       "displayName": "st_wpn_k98_mod",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_remington700_magpul_pro",
@@ -445,7 +460,8 @@
       "displayName": "st_wpn_remington700_magpul_pro",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svu_nimble",
@@ -470,7 +486,8 @@
       "displayName": "st_wpn_svu_nimble",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_k98_mod_silen98",
@@ -495,7 +512,8 @@
       "displayName": "st_wpn_k98_mod_silen98 [od_silen98]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svds",
@@ -520,7 +538,8 @@
       "displayName": "st_wpn_svds",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_g43",
@@ -545,7 +564,8 @@
       "displayName": "st_wpn_g43",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sks_tac",
@@ -570,7 +590,8 @@
       "displayName": "st_wpn_sks_tac",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svu",
@@ -595,7 +616,8 @@
       "displayName": "st_wpn_svu",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m82",
@@ -620,7 +642,8 @@
       "displayName": "st_wpn_m82",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svt40",
@@ -645,7 +668,8 @@
       "displayName": "st_wpn_svt40",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_dvl10",
@@ -670,7 +694,8 @@
       "displayName": "st_wpn_dvl10",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svd_nimble",
@@ -695,7 +720,8 @@
       "displayName": "st_wpn_svd_nimble",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sr25",
@@ -720,7 +746,8 @@
       "displayName": "st_wpn_sr25",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_remington700_archangel",
@@ -745,7 +772,8 @@
       "displayName": "st_wpn_remington700_archangel",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l96a1m",
@@ -770,7 +798,8 @@
       "displayName": "st_wpn_l96a1m",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svd",
@@ -795,7 +824,8 @@
       "displayName": "st_wpn_svd",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sks_modern",
@@ -820,7 +850,8 @@
       "displayName": "st_wpn_sks_modern",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_mosin",
@@ -845,7 +876,8 @@
       "displayName": "st_wpn_mosin_k",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_remington700_lapua700",
@@ -870,7 +902,8 @@
       "displayName": "st_wpn_remington700_lapua700",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sks_b",
@@ -895,7 +928,8 @@
       "displayName": "st_wpn_sks_b",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_remington700",
@@ -920,7 +954,8 @@
       "displayName": "st_wpn_remington700",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_gauss",
@@ -945,7 +980,8 @@
       "displayName": "st_wpn_gauss_bas",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svds_pmc",
@@ -970,7 +1006,8 @@
       "displayName": "st_wpn_svds_pmc",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m98b",
@@ -995,7 +1032,8 @@
       "displayName": "st_wpn_m98b",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sks",
@@ -1020,7 +1058,8 @@
       "displayName": "st_wpn_sks",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "pri_a17_gauss_rifle",
@@ -1045,7 +1084,8 @@
       "displayName": "st_wpn_umirotvoritel_bas",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sig550_sniper",
@@ -1070,7 +1110,8 @@
       "displayName": "st_wpn_sig550_sniper",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svu_alt",
@@ -1095,7 +1136,8 @@
       "displayName": "st_wpn_svu_alt",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_k98",
@@ -1120,7 +1162,8 @@
       "displayName": "st_wpn_k98",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sks_molot",
@@ -1145,7 +1188,8 @@
       "displayName": "st_wpn_sks_molot",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_trg",
@@ -1170,7 +1214,8 @@
       "displayName": "st_trg_sako",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_svd_m1",
@@ -1195,7 +1240,8 @@
       "displayName": "st_wpn_svd_m1",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     }
   ]
 }

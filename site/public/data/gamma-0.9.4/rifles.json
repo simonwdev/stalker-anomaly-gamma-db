@@ -45,7 +45,8 @@
       "displayName": "st_wpn_ash12 [sup]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74m_duty",
@@ -95,7 +96,8 @@
       "displayName": "st_wpn_ak105_shakal",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74u_isg",
@@ -120,7 +122,8 @@
       "displayName": "st_wpn_ak74u_isg",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_vintorez_nimble",
@@ -145,7 +148,8 @@
       "displayName": "st_wpn_vintorez_nimble",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_dtmdr",
@@ -170,7 +174,8 @@
       "displayName": "MDR [default]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m249",
@@ -195,7 +200,8 @@
       "displayName": "st_wpn_m249",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_vintorez_isg",
@@ -220,7 +226,8 @@
       "displayName": "st_wpn_vintorez_isg",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak105",
@@ -245,7 +252,8 @@
       "displayName": "st_wpn_ak105",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_g36_camo",
@@ -270,7 +278,8 @@
       "displayName": "st_wpn_g36new_k [camo]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_dtmdr_sup",
@@ -295,7 +304,8 @@
       "displayName": "MDR [sup]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m4_butcher",
@@ -320,7 +330,8 @@
       "displayName": "st_wpn_m4_butcher",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_g36v_rwap",
@@ -345,7 +356,8 @@
       "displayName": "st_wpn_g36new [v_rwap]",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m4",
@@ -370,7 +382,8 @@
       "displayName": "st_wpn_m4",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sig550_luckygun",
@@ -395,7 +408,8 @@
       "displayName": "st_wpn_sig550_strelok",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_lr300",
@@ -420,7 +434,8 @@
       "displayName": "st_wpn_lr300",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak103_camo",
@@ -445,7 +460,8 @@
       "displayName": "st_wpn_ak103_camo",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_aek",
@@ -470,7 +486,8 @@
       "displayName": "st_wpn_aek971",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak",
@@ -495,7 +512,8 @@
       "displayName": "st_wpn_ak",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_abakan_camo",
@@ -545,7 +563,8 @@
       "displayName": "st_wpn_scar_siber_m1_black",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_xm4",
@@ -570,7 +589,8 @@
       "displayName": "st_wpn_xm4",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fal",
@@ -595,7 +615,8 @@
       "displayName": "st_wpn_fal",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak101_camo",
@@ -620,7 +641,8 @@
       "displayName": "st_wpn_ak101_camo",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_lr300_custom",
@@ -645,7 +667,8 @@
       "displayName": "st_wpn_lr300_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fn2000_nimble",
@@ -670,7 +693,8 @@
       "displayName": "st_wpn_fn2000e_nimble",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_akms_bas",
@@ -695,7 +719,8 @@
       "displayName": "st_wpn_akms_bas",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74u_tac",
@@ -720,7 +745,8 @@
       "displayName": "st_wpn_ak74u_tac",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_val_modern",
@@ -745,7 +771,8 @@
       "displayName": "st_wpn_val_modern",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l85a2_modern",
@@ -795,7 +822,8 @@
       "displayName": "st_wpn_g3",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_scar_custom",
@@ -845,7 +873,8 @@
       "displayName": "st_wpn_akm_isg",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74m_custom",
@@ -895,7 +924,8 @@
       "displayName": "st_wpn_aug_a1_bas",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_brn180",
@@ -920,7 +950,8 @@
       "displayName": "st_wpn_brn180",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74m_alt",
@@ -970,7 +1001,8 @@
       "displayName": "st_wpn_rpk74_16 [drum]",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_rpd",
@@ -995,7 +1027,8 @@
       "displayName": "st_wpn_rpd",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74",
@@ -1020,7 +1053,8 @@
       "displayName": "st_wpn_ak74",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak12_custom_mono_kit",
@@ -1045,7 +1079,8 @@
       "displayName": "st_wpn_ak12_mono_kit",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_abakan",
@@ -1070,7 +1105,8 @@
       "displayName": "st_wpn_abakan",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ace52",
@@ -1095,7 +1131,8 @@
       "displayName": "st_wpn_ace52",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_galil_custom",
@@ -1145,7 +1182,8 @@
       "displayName": "st_wpn_ak5c_bas_5c_tik",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_groza_nimble",
@@ -1170,7 +1208,8 @@
       "displayName": "st_wpn_groza_guns_nimble",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_g3sg1",
@@ -1195,7 +1234,8 @@
       "displayName": "st_wpn_g3sg1",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_vihr",
@@ -1220,7 +1260,8 @@
       "displayName": "st_wpn_vihrn",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_am17",
@@ -1245,7 +1286,8 @@
       "displayName": "st_wpn_am17",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sig552",
@@ -1270,7 +1312,8 @@
       "displayName": "st_wpn_sig552",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_g36k_rwap",
@@ -1295,7 +1338,8 @@
       "displayName": "st_wpn_g36new_k [k_rwap]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_vintorez_n1",
@@ -1320,7 +1364,8 @@
       "displayName": "st_wpn_vintorez_n1",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_scar_new",
@@ -1345,7 +1390,8 @@
       "displayName": "st_wpn_scar_new",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_g36nimble_rwap",
@@ -1370,7 +1416,8 @@
       "displayName": "st_wpn_g36nimble_rwap",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74u_camo",
@@ -1420,7 +1467,8 @@
       "displayName": "st_wpn_aug_a3 [modern]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_scar_siber_m2",
@@ -1445,7 +1493,8 @@
       "displayName": "st_wpn_scar_siber_m2",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_mk47",
@@ -1470,7 +1519,8 @@
       "displayName": "st_wpn_mk47",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_g36ka4_rwap",
@@ -1495,7 +1545,8 @@
       "displayName": "st_wpn_g36new_k [ka4_rwap]",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ar15_freedom",
@@ -1520,7 +1571,8 @@
       "displayName": "st_wpn_ar15_freedom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_vintorez_m1",
@@ -1545,7 +1597,8 @@
       "displayName": "st_wpn_vintorez_m1",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_rpk74_16",
@@ -1570,7 +1623,8 @@
       "displayName": "st_wpn_rpk74_16 [default]",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l85_modern",
@@ -1595,7 +1649,8 @@
       "displayName": "st_wpn_l85_modern",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_type63",
@@ -1620,7 +1675,8 @@
       "displayName": "st_wpn_type63",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_akms",
@@ -1645,7 +1701,8 @@
       "displayName": "st_wpn_akms",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ash12",
@@ -1670,7 +1727,8 @@
       "displayName": "st_wpn_ash12 [default]",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_howa20",
@@ -1695,7 +1753,8 @@
       "displayName": "st_wpn_howa20",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_9a91",
@@ -1720,7 +1779,8 @@
       "displayName": "st_wpn_9a91",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74_n",
@@ -1745,7 +1805,8 @@
       "displayName": "st_wpn_ak74_n",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_famas3",
@@ -1770,7 +1831,8 @@
       "displayName": "st_wpn_famas3",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74m_camo",
@@ -1795,7 +1857,8 @@
       "displayName": "st_wpn_ak74m_camo",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ppsh41_woodnew",
@@ -1820,7 +1883,8 @@
       "displayName": "st_wpn_ppsh41_new",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l85",
@@ -1845,7 +1909,8 @@
       "displayName": "st_wpn_l85",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pkm",
@@ -1870,7 +1935,8 @@
       "displayName": "st_wpn_rp",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_aks",
@@ -1895,7 +1961,8 @@
       "displayName": "st_wpn_aks",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_akm_alfa",
@@ -1920,7 +1987,8 @@
       "displayName": "st_wpn_akm_alfa",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_aug",
@@ -1945,7 +2013,8 @@
       "displayName": "st_wpn_aug_a1",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74_old",
@@ -1995,7 +2064,8 @@
       "displayName": "st_wpn_ak5c_bas",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fnc",
@@ -2020,7 +2090,8 @@
       "displayName": "st_wpn_fnc",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74u_custom",
@@ -2070,7 +2141,8 @@
       "displayName": "st_wpn_vintorez_m2",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_hk416",
@@ -2095,7 +2167,8 @@
       "displayName": "st_wpn_hk416",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74_pmc",
@@ -2120,7 +2193,8 @@
       "displayName": "st_wpn_ak74_pmc",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_scar_siber_black",
@@ -2145,7 +2219,8 @@
       "displayName": "st_wpn_scar_siber_black",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_aug_a3",
@@ -2170,7 +2245,8 @@
       "displayName": "st_wpn_aug_a3 [a3]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_vintorez_alt",
@@ -2270,7 +2346,8 @@
       "displayName": "st_wpn_val_tac",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_val",
@@ -2295,7 +2372,8 @@
       "displayName": "st_wpn_val",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_vintorez",
@@ -2320,7 +2398,8 @@
       "displayName": "st_wpn_vintorez [default]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74u_m1_isg",
@@ -2345,7 +2424,8 @@
       "displayName": "st_wpn_ak74u_m1_isg",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74_rpk",
@@ -2395,7 +2475,8 @@
       "displayName": "MDR_black [sup]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sig550_camo",
@@ -2420,7 +2501,8 @@
       "displayName": "st_wpn_sig550_camos",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_galil",
@@ -2470,7 +2552,8 @@
       "displayName": "st_wpn_sig550",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_scar_siber",
@@ -2495,7 +2578,8 @@
       "displayName": "st_wpn_scar_siber",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_scar_siber_m1",
@@ -2520,7 +2604,8 @@
       "displayName": "st_wpn_scar_siber_m1",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74m_beard",
@@ -2545,7 +2630,8 @@
       "displayName": "st_wpn_ak74m_beard",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak105_sp",
@@ -2570,7 +2656,8 @@
       "displayName": "st_wpn_ak105_sp",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_scar_siber_m2_custom",
@@ -2595,7 +2682,8 @@
       "displayName": "st_wpn_scar_siber_m2_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fal_aus",
@@ -2620,7 +2708,8 @@
       "displayName": "st_wpn_fal_aus",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_galil_modern",
@@ -2670,7 +2759,8 @@
       "displayName": "st_wpn_m4a1",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l85_m3",
@@ -2695,7 +2785,8 @@
       "displayName": "st_wpn_l85_m3",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_rpk74",
@@ -2720,7 +2811,8 @@
       "displayName": "st_wpn_rpk74",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fn2000_custom",
@@ -2745,7 +2837,8 @@
       "displayName": "st_wpn_fn2000_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_rpk",
@@ -2770,7 +2863,8 @@
       "displayName": "st_wpn_rpk",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak5c_isg",
@@ -2795,7 +2889,8 @@
       "displayName": "st_wpn_ak5c_isg",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ppsh41_rednew",
@@ -2820,7 +2915,8 @@
       "displayName": "st_wpn_ppsh41_camo",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l85_m2",
@@ -2845,7 +2941,8 @@
       "displayName": "st_wpn_l85_m2",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74u",
@@ -2870,7 +2967,8 @@
       "displayName": "st_wpn_ak74u",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_aug_merc",
@@ -2895,7 +2993,8 @@
       "displayName": "st_wpn_aug_thales",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l85a2_custom",
@@ -2970,7 +3069,8 @@
       "displayName": "st_wpn_ppsh41",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m16",
@@ -2995,7 +3095,8 @@
       "displayName": "st_wpn_m16",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_mk14",
@@ -3020,7 +3121,8 @@
       "displayName": "st_wpn_mk14",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_aks74_new",
@@ -3045,7 +3147,8 @@
       "displayName": "st_wpn_aks74_new",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pkp",
@@ -3070,7 +3173,8 @@
       "displayName": "st_wpn_pkp",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74_isg",
@@ -3095,7 +3199,8 @@
       "displayName": "st_wpn_ak74_isg",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pkm_zenit_siber",
@@ -3120,7 +3225,8 @@
       "displayName": "st_wpn_pkm_zenit_siber",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pkm_siber",
@@ -3145,7 +3251,8 @@
       "displayName": "st_wpn_pkm_siber",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pkp_siber",
@@ -3170,7 +3277,8 @@
       "displayName": "st_wpn_pkp_siber",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak12_m1",
@@ -3195,7 +3303,8 @@
       "displayName": "st_wpn_ak12_m1",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m60",
@@ -3220,7 +3329,8 @@
       "displayName": "st_wpn_m60",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_akm_bas",
@@ -3245,7 +3355,8 @@
       "displayName": "st_wpn_akm_bas",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak103",
@@ -3270,7 +3381,8 @@
       "displayName": "st_wpn_ak103",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_g36c_rwap",
@@ -3295,7 +3407,8 @@
       "displayName": "st_wpn_g36new_c [c_rwap]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m4a1_siber",
@@ -3320,7 +3433,8 @@
       "displayName": "st_wpn_m4a1_siber",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m4a1_freedom",
@@ -3345,7 +3459,8 @@
       "displayName": "st_wpn_m4a1_freedom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m4a1_custom",
@@ -3370,7 +3485,8 @@
       "displayName": "st_wpn_m4a1_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74u_n1",
@@ -3395,7 +3511,8 @@
       "displayName": "st_wpn_ak74u_n1",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l85_alt",
@@ -3445,7 +3562,8 @@
       "displayName": "st_wpn_m4_tac",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak12",
@@ -3470,7 +3588,8 @@
       "displayName": "st_wpn_ak12",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_amb17",
@@ -3495,7 +3614,8 @@
       "displayName": "st_wpn_amb17",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m16a2",
@@ -3520,7 +3640,8 @@
       "displayName": "st_wpn_m16a2",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_hk417",
@@ -3545,7 +3666,8 @@
       "displayName": "st_wpn_hk417",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_lr300_camo",
@@ -3570,7 +3692,8 @@
       "displayName": "st_wpn_lr300_camo",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak105_swamp",
@@ -3595,7 +3718,8 @@
       "displayName": "st_wpn_ak105_swamp",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l85_custom",
@@ -3670,7 +3794,8 @@
       "displayName": "st_wpn_ak101",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_xm8",
@@ -3695,7 +3820,8 @@
       "displayName": "st_wpn_xm8",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak104",
@@ -3720,7 +3846,8 @@
       "displayName": "st_wpn_ak104",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak104_alfa",
@@ -3745,7 +3872,8 @@
       "displayName": "st_wpn_ak104_alfa",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pkm_zulus",
@@ -3770,7 +3898,8 @@
       "displayName": "st_wpn_pkm_zulus",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m4a1_camo",
@@ -3795,7 +3924,8 @@
       "displayName": "st_wpn_m4a1_camo",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74u_snag",
@@ -3845,7 +3975,8 @@
       "displayName": "st_wpn_fn2000",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_g36_nimble",
@@ -3895,7 +4026,8 @@
       "displayName": "st_wpn_ak74m",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74u_old",
@@ -3970,7 +4102,8 @@
       "displayName": "st_wpn_akms_alt",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_g36",
@@ -3995,7 +4128,8 @@
       "displayName": "st_wpn_g36new [default]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ace21",
@@ -4020,7 +4154,8 @@
       "displayName": "st_wpn_ace21",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_vintorez_1pn93",
@@ -4070,7 +4205,8 @@
       "displayName": "st_wpn_aug_a3_bas",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_akm",
@@ -4095,7 +4231,8 @@
       "displayName": "st_wpn_akm",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74_custom",
@@ -4145,7 +4282,8 @@
       "displayName": "st_wpn_guns_groza",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak12_custom",
@@ -4170,7 +4308,8 @@
       "displayName": "st_wpn_ak12_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74m_n",
@@ -4195,7 +4334,8 @@
       "displayName": "st_wpn_ak74m_n",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak102",
@@ -4220,7 +4360,8 @@
       "displayName": "st_wpn_ak102",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_dtmdr_black",
@@ -4245,7 +4386,8 @@
       "displayName": "MDR_black [default]",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_ak74_modern",
@@ -4295,7 +4437,8 @@
       "displayName": "st_wpn_vsk94",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_aug_a3_custom_bas",
@@ -4320,7 +4463,8 @@
       "displayName": "st_wpn_aug_a3_custom_bas",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fal_sa58_osw",
@@ -4345,7 +4489,8 @@
       "displayName": "st_wpn_fal_sa58_osw",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_aug_custom",
@@ -4395,7 +4540,8 @@
       "displayName": "st_wpn_sig550_custom",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fn2000_camo",
@@ -4420,7 +4566,8 @@
       "displayName": "st_wpn_fn2000_camo",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_abakan_n",
@@ -4445,7 +4592,8 @@
       "displayName": "st_wpn_abakan_n",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l85_m1",
@@ -4470,7 +4618,8 @@
       "displayName": "st_wpn_l85_m1",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_m4_ru556",
@@ -4495,7 +4644,8 @@
       "displayName": "st_wpn_m4_ru556",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_l85a2_alt",
@@ -4545,7 +4695,8 @@
       "displayName": "st_wpn_aug_a1_custom_bas",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_adar2_15",
@@ -4570,7 +4721,8 @@
       "displayName": "st_wpn_adar2_15",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     }
   ]
 }
