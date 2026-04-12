@@ -1,55 +1,79 @@
 <template>
     <div v-if="isCrafting" class="crafting-view">
-        <!-- Materials view -->
-        <div v-if="craftingCategory === 'materials'" class="tile-grid">
-            <div v-for="item in filteredMaterials" :key="item.id" class="tile-card recipe-card">
-                <div class="tile-card-header">
-                    <span class="tile-card-name">{{ tName(item) }}</span>
-                </div>
-                <div class="material-sources" v-if="item.sources">
-                    <div v-for="(src, idx) in item.sources" :key="idx" class="material-source">
-                        <span class="recipe-ing-amount">x{{ src.amount }}</span>
-                        <span class="material-from">{{ t('app_label_from') }}</span>
-                        <template v-if="findItemByName(src.name)">
-                            <a href="#" @click.prevent.stop="$emit('navigateToItem', findItemByName(src.name).id)">{{ t(src.name) }}</a>
-                        </template>
-                        <template v-else>
-                            <span>{{ t(src.name) }}</span>
-                        </template>
+
+        <!-- Inner view mode tabs -->
+        <div class="crafting-inner-tabs">
+            <button :class="{ active: craftingViewMode === 'list' }" @click="setInnerTab('list')">
+                <LucideLayoutGrid :size="13" />
+                <span>{{ t('app_label_list_view') }}</span>
+            </button>
+            <button :class="{ active: craftingViewMode === 'tree' }" @click="setInnerTab('tree')">
+                <LucideList :size="13" />
+                <span>{{ t('app_label_tree_view') }}</span>
+            </button>
+        </div>
+
+        <!-- Tree view placeholder -->
+        <div v-if="craftingViewMode === 'tree'" class="crafting-inner-tree-placeholder">
+            <LucideList :size="36" />
+            <p>{{ t('app_label_crafting_tree_placeholder') }}</p>
+        </div>
+
+        <!-- List view content -->
+        <template v-else>
+            <!-- Materials view -->
+            <div v-if="craftingCategory === 'materials'" class="tile-grid">
+                <div v-for="item in filteredMaterials" :key="item.id" class="tile-card recipe-card">
+                    <div class="tile-card-header">
+                        <span class="tile-card-name">{{ tName(item) }}</span>
+                    </div>
+                    <div class="material-sources" v-if="item.sources">
+                        <div v-for="(src, idx) in item.sources" :key="idx" class="material-source">
+                            <span class="recipe-ing-amount">x{{ src.amount }}</span>
+                            <span class="material-from">{{ t('app_label_from') }}</span>
+                            <template v-if="findItemByName(src.name)">
+                                <a href="#" @click.prevent.stop="$emit('navigateToItem', findItemByName(src.name).id)">{{ t(src.name) }}</a>
+                            </template>
+                            <template v-else>
+                                <span>{{ t(src.name) }}</span>
+                            </template>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Graph tree view -->
-        <CraftingTreesTreeView
-            v-else-if="graphViewOpen"
-            :all-crafting-trees="allCraftingTrees"
-            :filtered-crafting-trees="filteredCraftingTrees"
-            :expand-all="treeViewExpandAll"
-            @navigate-to-item="(id) => $emit('navigateToItem', id)"
-        />
-
-        <!-- Tile card view (all categories including artefacts) -->
-        <div v-else class="tile-grid">
-            <CraftingRecipeCard
-                v-for="tree in filteredCraftingTrees"
-                :key="tree.id"
-                :title="t(tree.name)"
-                :title-clickable="true"
-                :tier-label="tree.toolTier ? t('app_craft_toolkit_' + tree.toolTier) : ''"
-                :tier-tooltip="t('app_craft_tool_tier')"
-                :tier-class="tree.toolTier ? 'tier-' + tree.toolTier : ''"
-                :rows="treeRows(tree)"
-                :footer="tree.recipeReqName ? t(tree.recipeReqName) : ''"
-                @click-title="$emit('navigateToItem', tree.id)"
-                @click-row="(row) => row.itemId && $emit('navigateToItem', row.itemId)"
-                @toggle-expand="(path) => $emit('toggleTreeNode', path)"
-                @hover-enter="(ev, row) => showHover(row ? row.hoverName : tree.name, ev)"
-                @hover-move="moveHover"
-                @hover-leave="hideHover"
+            <!-- Graph tree view -->
+            <CraftingTreesTreeView
+                v-else-if="graphViewOpen"
+                :all-crafting-trees="allCraftingTrees"
+                :filtered-crafting-trees="filteredCraftingTrees"
+                :expand-all="treeViewExpandAll"
+                @navigate-to-item="(id) => $emit('navigateToItem', id)"
             />
-        </div>
+
+            <!-- Tile card view (all categories including artefacts) -->
+            <div v-else class="tile-grid" ref="tileGrid">
+                <CraftingRecipeCard
+                    v-for="tree in visibleTrees"
+                    :key="tree.id"
+                    :title="t(tree.name)"
+                    :title-clickable="true"
+                    :tier-label="tree.toolTier ? t('app_craft_toolkit_' + tree.toolTier) : ''"
+                    :tier-tooltip="t('app_craft_tool_tier')"
+                    :tier-class="tree.toolTier ? 'tier-' + tree.toolTier : ''"
+                    :rows="treeRows(tree)"
+                    :footer="tree.recipeReqName ? t(tree.recipeReqName) : ''"
+                    @click-title="$emit('navigateToItem', tree.id)"
+                    @click-row="(row) => row.itemId && $emit('navigateToItem', row.itemId)"
+                    @toggle-expand="(path) => $emit('toggleTreeNode', path)"
+                    @hover-enter="(ev, row) => showHover(row ? row.hoverName : tree.name, ev)"
+                    @hover-move="moveHover"
+                    @hover-leave="hideHover"
+                />
+                <!-- Infinite scroll sentinel -->
+                <div class="infinite-scroll-sentinel" ref="scrollSentinel"></div>
+            </div>
+        </template>
 
         <!-- Hover tooltip -->
         <Teleport to="body">
@@ -101,6 +125,8 @@ const HOVER_SKIP = new Set([
     "st_data_export_used_in_crafting",
 ]);
 
+const PAGE_SIZE = 30;
+
 export default {
     name: "CraftingView",
     components: { CraftingTreesTreeView, CraftingRecipeCard },
@@ -123,6 +149,10 @@ export default {
             hoverItem: null,
             hoverPos: {},
             _hoverTimeout: null,
+            craftingViewMode: 'list',
+            visibleCount: PAGE_SIZE,
+            _observer: null,
+            _observingSentinel: null,
         };
     },
     computed: {
@@ -140,8 +170,67 @@ export default {
                 (f) => !HOVER_SKIP.has(f) && this.cellValue(this.hoverItem, f) !== null && this.cellValue(this.hoverItem, f) !== "" && this.cellValue(this.hoverItem, f) !== "0" && this.cellValue(this.hoverItem, f) !== "0%"
             );
         },
+        visibleTrees() {
+            return this.filteredCraftingTrees.slice(0, this.visibleCount);
+        },
+    },
+    watch: {
+        filteredCraftingTrees() {
+            this.visibleCount = PAGE_SIZE;
+        },
+        craftingCategory() {
+            this.visibleCount = PAGE_SIZE;
+        },
+        graphViewOpen() {
+            this.$nextTick(() => this._setupObserver());
+        },
+        craftingViewMode() {
+            this.$nextTick(() => this._setupObserver());
+        },
+    },
+    mounted() {
+        this.$nextTick(() => this._setupObserver());
+    },
+    updated() {
+        this._setupObserver();
+    },
+    beforeUnmount() {
+        if (this._observer) {
+            this._observer.disconnect();
+            this._observer = null;
+        }
     },
     methods: {
+        setInnerTab(mode) {
+            this.craftingViewMode = mode;
+            this.visibleCount = PAGE_SIZE;
+        },
+
+        _setupObserver() {
+            const sentinel = this.$refs.scrollSentinel;
+            const root = this.$refs.tileGrid;
+            if (!sentinel || !root) {
+                if (this._observer) {
+                    this._observer.disconnect();
+                    this._observer = null;
+                    this._observingSentinel = null;
+                }
+                return;
+            }
+            if (this._observingSentinel === sentinel) return;
+            if (this._observer) {
+                this._observer.disconnect();
+                this._observer = null;
+            }
+            this._observingSentinel = sentinel;
+            this._observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && this.visibleCount < this.filteredCraftingTrees.length) {
+                    this.visibleCount += PAGE_SIZE;
+                }
+            }, { root, threshold: 0 });
+            this._observer.observe(sentinel);
+        },
+
         treeRows(tree) {
             const rows = [];
             const walk = (node, depth, parentPath) => {
@@ -215,5 +304,64 @@ export default {
     flex: 1;
     min-height: 0;
     overflow: hidden;
+}
+
+.crafting-inner-tabs {
+    display: flex;
+    flex-shrink: 0;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.crafting-inner-tabs button {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    height: 1.75rem;
+    padding: 0 0.65rem;
+    font-size: 0.72rem;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.crafting-inner-tabs button:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.crafting-inner-tabs button + button {
+    margin-left: -1px;
+}
+
+.crafting-inner-tabs button:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.crafting-inner-tabs button:hover {
+    color: var(--text);
+    border-color: var(--accent-dim);
+    z-index: 1;
+}
+
+.crafting-inner-tabs button.active {
+    color: var(--accent);
+    border-color: var(--accent-dim);
+    background: var(--color-accent-tint-8);
+    z-index: 2;
+}
+
+.crafting-inner-tree-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
 }
 </style>
