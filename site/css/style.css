@@ -2892,6 +2892,67 @@ input.range-input {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 0.5rem;
 }
+
+/* ── Ammo compare table in gun detail modal ─────────────── */
+.ammo-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.ammo-compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.72rem;
+    color: var(--color-text);
+}
+.ammo-compare-table th {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.3rem 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+    white-space: nowrap;
+}
+.ammo-compare-table td {
+    padding: 0.28rem 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+}
+.ammo-compare-table tr:last-child td {
+    border-bottom: none;
+}
+.ammo-compare-table .ammo-alt-row td {
+    color: var(--color-text-secondary);
+}
+.ammo-stat-cell {
+    font-family: var(--mono);
+    text-align: right;
+    white-space: nowrap;
+}
+.ammo-stat-cell.ammo-best {
+    color: var(--color-green-positive);
+    font-weight: 600;
+}
+.ammo-variant-link {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+.ammo-variant-link:hover {
+    text-decoration: underline;
+}
+.ammo-alt-tag {
+    margin-left: 0.3rem;
+    vertical-align: middle;
+}
+.ammo-arrow {
+    margin-left: 0.2rem;
+    font-size: 0.55rem;
+    vertical-align: middle;
+}
+.arrow-up   { color: var(--color-green-positive); }
+.arrow-down { color: var(--color-red-soft); }
+.arrow-neutral { color: var(--color-text-secondary); }
 .drop-faction {
     background: var(--card);
     border: 1px solid var(--border);
@@ -3492,6 +3553,54 @@ input.range-input {
     color: var(--text);
     font-size: 1.25rem;
     cursor: pointer;
+}
+
+/* ── Site Footer ────────────────────────────────────────── */
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface-2);
+    font-size: 0.65rem;
+    color: var(--color-text-secondary);
+    flex-shrink: 0;
+    gap: 0.75rem;
+}
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+.footer-center {
+    flex: 1;
+    text-align: center;
+}
+.footer-credit-short {
+    display: none;
+}
+.footer-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}
+.footer-right:hover {
+    color: var(--color-text);
+    text-decoration: none;
+}
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}
+.footer-link:hover {
+    color: var(--color-text);
+    text-decoration: none;
 }
 
 /* Mobile */
