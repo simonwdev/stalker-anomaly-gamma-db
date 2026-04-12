@@ -13,11 +13,12 @@
             </button>
         </div>
 
-        <!-- Tree view placeholder -->
-        <div v-if="craftingViewMode === 'tree'" class="crafting-inner-tree-placeholder">
-            <LucideList :size="36" />
-            <p>{{ t('app_label_crafting_tree_placeholder') }}</p>
-        </div>
+        <!-- Tree view -->
+        <CraftingInnerTreeView
+            v-if="craftingViewMode === 'tree'"
+            :filtered-crafting-trees="filteredCraftingTrees"
+            @navigate-to-item="(id) => $emit('navigateToItem', id)"
+        />
 
         <!-- List view content -->
         <template v-else>
@@ -116,6 +117,7 @@
 
 <script>
 import CraftingTreesTreeView from "./crafting-trees-page/CraftingTreesTreeView.vue";
+import CraftingInnerTreeView from "./crafting-trees-page/CraftingInnerTreeView.vue";
 import CraftingRecipeCard from "./CraftingRecipeCard.vue";
 
 const HOVER_SKIP = new Set([
@@ -129,7 +131,7 @@ const PAGE_SIZE = 30;
 
 export default {
     name: "CraftingView",
-    components: { CraftingTreesTreeView, CraftingRecipeCard },
+    components: { CraftingTreesTreeView, CraftingInnerTreeView, CraftingRecipeCard },
     inject: ["t", "tName", "tItemName", "findItemByName", "findFullItemByName", "headerLabel", "formatValue", "cellValue", "statClass", "getItemFields"],
     props: {
         isCrafting: Boolean,
@@ -352,16 +354,5 @@ export default {
     border-color: var(--accent-dim);
     background: var(--color-accent-tint-8);
     z-index: 2;
-}
-
-.crafting-inner-tree-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    gap: 0.75rem;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
 }
 </style>
