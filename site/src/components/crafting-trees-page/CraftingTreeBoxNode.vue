@@ -3,8 +3,13 @@
         <!-- Node box -->
         <div
             class="ctree-node"
-            :class="[isRoot ? 'ctree-node--root' : 'ctree-node--child', { 'ctree-node--clickable': !!nodeItem && !isRoot }]"
-            @click.stop="!isRoot && nodeItem && $emit('navigate', nodeItem.id)"
+            :class="[
+                isRoot ? 'ctree-node--root' : 'ctree-node--child',
+                { 'ctree-node--expandable': !isRoot && hasOwnChildren },
+                { 'ctree-node--sub-expanded': !isRoot && hasOwnChildren && expanded },
+                { 'ctree-node--clickable': !isRoot && !hasOwnChildren && !!nodeItem },
+            ]"
+            @click.stop="handleNodeClick"
         >
             <img
                 v-if="nodeItem && nodeItem.id"
@@ -14,19 +19,23 @@
                 @error="$event.target.style.display = 'none'"
             />
             <div class="ctree-node-name">
-                <a v-if="isRoot && nodeItem" href="#" @click.prevent.stop="$emit('navigate', nodeItem.id)">{{ label }}</a>
-                <a v-else-if="!isRoot && nodeItem" href="#" @click.prevent.stop="$emit('navigate', nodeItem.id)">{{ label }}</a>
+                <a v-if="nodeItem" href="#" @click.prevent.stop="$emit('navigate', nodeItem.id)">{{ label }}</a>
                 <span v-else class="ctree-node-raw">{{ label }}</span>
             </div>
             <div v-if="amount" class="ctree-node-amount">{{ amount }}</div>
+            <!-- Expand toggle for craftable sub-ingredients -->
+            <div v-if="!isRoot && hasOwnChildren" class="ctree-expand-toggle" @click.stop="toggleExpand">
+                <span class="ctree-expand-arrow" :class="{ 'ctree-expand-arrow--open': expanded }">▶</span>
+                <span class="ctree-expand-count">{{ children.length }} {{ t('app_label_sub_ingredients') }}</span>
+            </div>
             <span v-if="isRoot && tier" class="ctree-node-tier" :class="'ctree-tier-' + tier">
                 {{ t('app_craft_toolkit_' + tier) }}
             </span>
             <div v-if="isRoot && recipeReq" class="ctree-node-req">{{ t(recipeReq) }}</div>
         </div>
 
-        <!-- Children column -->
-        <div class="ctree-right" v-if="children && children.length">
+        <!-- Children column: always shown for root, shown when expanded for non-root -->
+        <div class="ctree-right" v-if="showChildren">
             <div class="ctree-rows">
                 <div v-for="(child, idx) in children" :key="idx" class="ctree-row">
                     <CraftingTreeBoxNode
@@ -55,12 +64,34 @@ export default {
         recipeReq: { type: String, default: '' },
     },
     emits: ['navigate'],
+    data() {
+        return { expanded: false };
+    },
     computed: {
         nodeItem() {
             return this.findItemByName(this.name) || null;
         },
         label() {
             return this.t(this.name);
+        },
+        hasOwnChildren() {
+            return this.children && this.children.length > 0;
+        },
+        showChildren() {
+            return this.hasOwnChildren && (this.isRoot || this.expanded);
+        },
+    },
+    methods: {
+        handleNodeClick() {
+            if (this.isRoot) return;
+            if (this.hasOwnChildren) {
+                this.toggleExpand();
+            } else if (this.nodeItem) {
+                this.$emit('navigate', this.nodeItem.id);
+            }
+        },
+        toggleExpand() {
+            this.expanded = !this.expanded;
         },
     },
 };

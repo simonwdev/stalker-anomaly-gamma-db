@@ -4129,6 +4129,49 @@ input.range-input {
     background: var(--color-card);
 }
 
+/* Expandable craftable ingredient nodes */
+.ctree-node--expandable {
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+}
+.ctree-node--expandable:hover {
+    border-color: var(--color-border-strong);
+    background: var(--color-card);
+}
+.ctree-node--sub-expanded {
+    border-color: var(--color-accent-dim);
+    background: var(--color-accent-tint-5);
+}
+.ctree-node--sub-expanded:hover {
+    border-color: var(--color-accent);
+}
+
+/* Expand toggle indicator */
+.ctree-expand-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.28rem;
+    margin-top: 0.25rem;
+    padding-top: 0.2rem;
+    border-top: 1px solid var(--color-border);
+}
+.ctree-expand-arrow {
+    display: inline-block;
+    font-size: 0.55rem;
+    color: var(--color-accent);
+    transition: transform 0.18s ease;
+    line-height: 1;
+}
+.ctree-expand-arrow--open {
+    transform: rotate(90deg);
+}
+.ctree-expand-count {
+    font-size: 0.6rem;
+    color: var(--color-text-secondary);
+    font-family: var(--mono);
+    white-space: nowrap;
+}
+
 /* Node icon */
 .ctree-node-icon {
     width: 28px;
