@@ -51,9 +51,10 @@
     :sidebar-collapsed="sidebarCollapsed"
     :sidebar-open="sidebarOpen"
     :build-planner-active="buildPlannerActive"
+    :crafting-active="isCrafting"
     :damage-sim-active="damageSimActive"
     :maps-active="mapsActive"
-    :item-db-active="!buildPlannerActive && !mapsActive && !damageSimActive"
+    :item-db-active="!buildPlannerActive && !mapsActive && !damageSimActive && !isCrafting"
     :hide-no-drop="hideNoDrop"
     :hide-unused-ammo="hideUnusedAmmo"
     :show-tile-icons="showTileIcons"
@@ -62,6 +63,7 @@
     @open-item-db="openItemDb()"
     @open-maps="openMaps()"
     @open-build-planner="openBuildPlanner()"
+    @open-crafting="openCrafting()"
     @open-damage-sim="openDamageSim()"
     @toggle-hide-no-drop="toggleHideNoDrop()"
     @toggle-hide-unused-ammo="toggleHideUnusedAmmo()"
@@ -87,6 +89,10 @@
         :favorite-ids="favoriteIds"
         :recent-ids="recentIds"
         :build-planner-active="buildPlannerActive"
+        :crafting-active="isCrafting"
+        :crafting-category="craftingCategory"
+        :crafting-recipe-categories="craftingRecipeCategories"
+        :crafting-disassembly-categories="craftingDisassemblyCategories"
         :version-compare-active="versionCompareActive"
         :starting-loadouts-active="startingLoadoutsActive"
         :has-starting-loadouts="!!fileManifest['starting-loadouts.json']"
@@ -100,6 +106,7 @@
         @select-favorites="selectFavorites()"
         @select-recent="selectRecent()"
         @select-category="selectCategory"
+        @select-crafting-category="selectCraftingCategory"
         @toggle-sidebar-collapse="toggleSidebarCollapse()"
     />
     <div class="sidebar-backdrop" v-show="sidebarOpen" @click="closeSidebar()"></div>
@@ -131,7 +138,7 @@
                 ref="filterBar"
                 :filter-input="filterInput"
                 :filter-query="filterQuery"
-                :available-filters="availableFilters"
+                :available-filters="isCrafting ? craftingAvailableFilters : availableFilters"
                 :range-filters="rangeFilters"
                 :range-filters-left="rangeFiltersLeft"
                 :range-filters-right="rangeFiltersRight"
@@ -150,8 +157,11 @@
                 :favorites-view-active="favoritesViewActive"
                 :recent-view-active="recentViewActive"
                 :is-outfit-exchange="isOutfitExchange"
-                :is-materials-category="isMaterialsCategory"
-                :is-crafting-trees="isCraftingTrees"
+                :is-crafting="isCrafting"
+                :crafting-item-count="craftingFilteredCount"
+                :crafting-artefact-view="isCrafting && craftingCategory === 'artefact'"
+                :crafting-graph-view="craftingGraphView"
+                :crafting-expand-label="craftingExpandLabel"
                 :is-toolkit-rates="isToolkitRates"
                 :outfit-exchange="outfitExchange"
                 :filtered-exchanges="filteredExchanges"
@@ -184,6 +194,8 @@
                 @download-data="(format) => downloadData(format)"
                 @toggle-hide-no-drop="toggleHideNoDrop()"
                 @toggle-hide-unused-ammo="toggleHideUnusedAmmo()"
+                @set-crafting-graph-view="setCraftingGraphView"
+                @toggle-crafting-expand="toggleCraftingExpand"
                 @toggle-show-tile-icons="toggleShowTileIcons()"
             />
             <div v-if="favoritesViewActive && favoriteIds.length === 0" class="favorites-empty">
@@ -212,20 +224,17 @@
                 @toggle-toolkit-sort="toggleToolkitSort"
             />
 
-            <MaterialsView
-                :is-materials-category="isMaterialsCategory"
-                :items="sortedItems"
-                @navigate-to-item="navigateToItem"
-            />
-
-            <CraftingTreesTileView
-                :is-crafting-trees="isCraftingTrees"
+            <CraftingView
+                :is-crafting="isCrafting"
+                :crafting-category="craftingCategory"
+                :filter-query="filterQuery"
+                :materials-items="materialsItems"
                 :all-crafting-trees="craftingTrees"
                 :filtered-crafting-trees="filteredCraftingTrees"
                 :crafting-tree-expand-all="craftingTreeExpandAll"
                 :crafting-tree-expanded="craftingTreeExpanded"
-                @expand-all-trees="expandAllTrees()"
-                @collapse-all-trees="collapseAllTrees()"
+                :graph-view-open="craftingGraphView"
+                :tree-view-expand-all="_craftingTreeViewExpandAll"
                 @toggle-tree-node="toggleTreeNode"
                 @navigate-to-item="navigateToItem"
             />
@@ -359,7 +368,7 @@
             />
 
             <ItemTable
-                v-show="viewMode === 'table' && !favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates && !buildPlannerActive && !versionCompareActive && !startingLoadoutsActive"
+                v-show="viewMode === 'table' && !favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCrafting && !isToolkitRates && !buildPlannerActive && !versionCompareActive && !startingLoadoutsActive"
                 :items="sortedItems"
                 :table-columns="tableColumns"
                 :sort-col="sortCol"
@@ -373,7 +382,7 @@
                 @toggle-sort="toggleSort"
             />
             <ItemGrid
-                v-show="(viewMode === 'tiles' || favoritesViewActive || recentViewActive) && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates && !buildPlannerActive && !versionCompareActive && !startingLoadoutsActive"
+                v-show="(viewMode === 'tiles' || favoritesViewActive || recentViewActive) && !isOutfitExchange && !isCrafting && !isToolkitRates && !buildPlannerActive && !versionCompareActive && !startingLoadoutsActive"
                 :items="sortedItems"
                 :tile-fields="tileFields"
                 :tile-heal-groups="tileHealGroups"
@@ -569,8 +578,7 @@ import ItemHoverPopover from "./components/ItemHoverPopover.vue";
 import ItemComparePopover from "./components/ItemComparePopover.vue";
 const MapsView = defineAsyncComponent(() => import('./components/MapsView.vue'));
 import ComparePanel from "./components/ComparePanel.vue";
-import CraftingTreesTileView from "./components/crafting-trees-page/CraftingTreesTileView.vue";
-import MaterialsView from "./components/MaterialsView.vue";
+import CraftingView from "./components/CraftingView.vue";
 import OutfitExchangeView from "./components/OutfitExchangeView.vue";
 import ToolkitRatesView from "./components/ToolkitRatesView.vue";
 import VersionCompareView from "./components/VersionCompareView.vue";
@@ -594,7 +602,7 @@ export default {
     BuildPickerModal,
     BuildSaveModal,
     ComparePanel,
-    CraftingTreesTileView,
+    CraftingView,
     FilterBar,
     FooterBar,
     HeaderBar,
@@ -602,7 +610,6 @@ export default {
     ItemTable,
     ItemDetailModal,
     MapsView,
-    MaterialsView,
     OutfitExchangeView,
     QuickNavModal,
     SaveImportModal,
@@ -669,6 +676,7 @@ export default {
       navHref: this.navHref,
       itemHref: this.itemHref,
       categoryHref: this.categoryHref,
+      craftingHref: this.craftingHref,
       showItemHover: this.showItemHover,
       moveItemHover: this.moveItemHover,
       showItemHoverFromCaliber: this.showItemHoverFromCaliber,

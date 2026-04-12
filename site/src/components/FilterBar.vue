@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="filter-panel-backdrop" v-show="filterPanelOpen" @click="closeFilterPanel()"></div>
-                <div class="sort-wrap" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates" v-click-outside="closeSortMenu">
+                <div class="sort-wrap" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCrafting && !isToolkitRates" v-click-outside="closeSortMenu">
                     <button class="sort-btn" @click.stop="sortMenuOpen = !sortMenuOpen" v-tooltip="t('app_label_sort')">
                         <LucideArrowUpDown :size="14" />
                         <span class="sort-btn-label">{{ headerLabel(sortCol) }}</span>
@@ -174,15 +174,29 @@
                         </button>
                     </div>
                 </div>
-                <button v-if="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCraftingTrees && favoriteIds.length > 0"
+                <button v-if="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCrafting && favoriteIds.length > 0"
                         class="fav-filter-btn" :class="{ active: showFavoritesOnly }"
                         @click="$emit('toggleShowFavoritesOnly')"
                         v-tooltip="showFavoritesOnly ? t('app_tooltip_showing_favs') : t('app_tooltip_show_favs')">
                     <span class="fav-filter-star">&#9733;</span>
                 </button>
-                <span class="item-count" v-if="!isOutfitExchange && !isCraftingTrees">{{ sortedItems.length }} {{ t('app_label_items') }}</span>
+                <span class="item-count" v-if="!isOutfitExchange && !isCrafting">{{ sortedItems.length }} {{ t('app_label_items') }}</span>
+                <span class="item-count" v-if="isCrafting">{{ craftingItemCount }} {{ t('app_label_recipes') }}</span>
+                <div class="view-toggle" v-if="craftingArtefactView">
+                    <button :class="{ active: !craftingGraphView }" @click="$emit('setCraftingGraphView', false)" v-tooltip="t('app_label_tile_view')">
+                        <LucideLayoutGrid :size="14" />
+                        <span class="view-toggle-label">{{ t('app_label_tile_view') }}</span>
+                    </button>
+                    <button :class="{ active: craftingGraphView }" @click="$emit('setCraftingGraphView', true)" v-tooltip="t('app_label_tree_view')">
+                        <LucideList :size="14" />
+                        <span class="view-toggle-label">{{ t('app_label_tree_view') }}</span>
+                    </button>
+                </div>
+                <button v-if="craftingArtefactView" class="crafting-expand-toggle-btn" @click="$emit('toggleCraftingExpand')">
+                    {{ craftingExpandLabel }}
+                </button>
                 <span class="item-count" v-if="isOutfitExchange && outfitExchange">{{ filteredExchanges.length }} {{ t('app_label_exchanges') }}</span>
-                <div class="view-toggle" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isMaterialsCategory && !isCraftingTrees && !isToolkitRates">
+                <div class="view-toggle" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCrafting && !isToolkitRates">
                     <button :class="{ active: viewMode === 'table' }" @click="$emit('setViewMode', 'table')" v-tooltip="t('app_label_table_view')">
                         <LucideList :size="16" />
                     </button>
@@ -195,7 +209,7 @@
                         <LucideLink v-show="!copyLinkFeedback" :size="16" />
                         <svg v-show="copyLinkFeedback" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     </button>
-                    <div class="download-wrap" v-show="(!isOutfitExchange && !isMaterialsCategory && !isCraftingTrees) || isToolkitRates"
+                    <div class="download-wrap" v-show="(!isOutfitExchange && !isCrafting) || isToolkitRates"
                          v-click-outside="closeDownloadMenu">
                         <button class="download-btn" @click.stop="downloadMenuOpen = !downloadMenuOpen" v-tooltip="t('app_label_download')">
                             <LucideDownload :size="16" />
@@ -243,8 +257,11 @@ export default {
         favoritesViewActive: { type: Boolean, default: false },
         recentViewActive: { type: Boolean, default: false },
         isOutfitExchange: { type: Boolean, default: false },
-        isMaterialsCategory: { type: Boolean, default: false },
-        isCraftingTrees: { type: Boolean, default: false },
+        isCrafting: { type: Boolean, default: false },
+        craftingItemCount: { type: Number, default: 0 },
+        craftingArtefactView: { type: Boolean, default: false },
+        craftingGraphView: { type: Boolean, default: false },
+        craftingExpandLabel: { type: String, default: "" },
         isToolkitRates: { type: Boolean, default: false },
         outfitExchange: { type: Object, default: null },
         filteredExchanges: { type: Array, default: () => [] },
@@ -278,6 +295,8 @@ export default {
         'downloadData',
         'toggleHideNoDrop',
         'toggleHideUnusedAmmo',
+        'setCraftingGraphView',
+        'toggleCraftingExpand',
     ],
     data() {
         return {

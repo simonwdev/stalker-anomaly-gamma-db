@@ -2969,3 +2969,207 @@ st_up_autd_c2_name,Barrel closing system
 st_up_1921_b5_name,Polymer Stock
 st_up_binoc_d1_name,Detect targets
 st_up_1921_b6_name,Polymer Handguard
+st_placeable_metal_torch,Metal Torch
+st_upgr_o_burn,CBRN Material Package 'KHMy'
+st_upgr_w_muffle,Firearm Optics & Mounts Package 'SPS'
+st_placeable_door04,Wooden Door
+st_placeable_poster2,"""Humanity: Degraded"" Poster"
+st_placeable_storage01,Metal Storage Container
+st_placeable_storage07,Locker
+st_rasp_tool,File
+st_jerrycan_fuel,Jerrycan
+st_placeable_door,Wooden Door
+st_data_export_tool_tier,st_data_export_tool_tier
+st_upgr_o_arty,Suit Utility Package 'APTe'
+st_placeable_light7,Yellow Wall-Mounted Bulb
+st_prop_lamp1,Desk Lamp
+st_upgr_w_firemode,Small Arms Tuning Package 'F-23'
+st_placeable_poster6,"""Infested Thoughts"" Poster"
+st_placeable_exo_kit,Empty Exoskeleton Repair Kit
+st_placeable_light3,Hanging Lamp
+st_upgr_o_durability,Ballistic Materials Package 'PRCh'
+st_placeable_blue_box,Metal Box
+st_recipe_ammo_1,Safety Guide to Ammunition (1st Edition)
+st_prop_bong,Hookah
+st_placeable_storage04,Small Safe
+st_placeable_wall02_metal,Metal Sheet Wall
+st_placeable_pot,Cooking Pot
+st_placeable_storage08,Large Safe
+st_gun_oil_ru_d,"Cleaning Solvent ""Dvojka"""
+st_prop_mug,Mug
+st_prop_stove1,Stove (Small)
+st_placeable_gun_parts,Gun Parts
+st_prop_dish2,Ceramic Bowl
+st_placeable_wooden_board,Wooden Panel
+st_placeable_wall_doorway,Wooden Wall w\ Doorway
+st_upgr_w_recoil,Small Arms Tuning Package 'K-01'
+st_placeable_wall_metal,Metal Sheet Wall
+st_prop_table_1,Wooden Desk
+st_upgr_w_speed,Small Arms Tuning Package 'V-99'
+st_placeable_wooden_plank,Wooden Plank
+st_placeable_light_altar,Compact Psi-Light
+st_prop_bed_1,Rollable Bed
+st_placeable_poster3,"""Machine Gun"" Poster"
+st_placeable_documents_1,Paper Bundle
+st_placeable_trophie5,Trophy (Bloodsucker Head)
+st_upgr_o_rad,CBRN Material Package 'CHst'
+st_placeable_arti_display,Artefact Display
+st_placeable_cabinet,Kitchen Cabinets
+st_placeable_door03,Wooden Door
+st_placeable_case,Gun Case
+st_placeable_survivalguide,Survival Guide
+st_prop_couch_1,Old Sofa
+st_placeable_suit,SSP-99M Suit Display
+st_upgr_w_scope,Firearm Optics & Mounts Package 'OByE'
+st_placeable_radiola,Radio
+st_placeable_biliard,Biliard Table
+st_prop_lamp2,Desk Lamp (Large)
+st_prop_shelf_1,Wooden Shelf
+st_placeable_poster7,"""You Can't Run from Heaven"" Poster"
+st_prop_counter_1,Wooden Counter
+st_upgr_o_shock,CBRN Material Package 'MSCh'
+st_data_export_recipe_requirement,st_data_export_recipe_requirement
+st_placeable_trophie1,Trophy (Boar Head)
+st_placeable_weapon_rack,Gun Display Rack
+st_placeable_plant4,Large Potted Plant
+st_placeable_shooting_target_1,Target
+st_upgr_w_dispersion,Aftermarket Parts Package 'D-19'
+st_placeable_wall_divider,2x2m Room Divider
+st_placeable_notes_writing_book,Spiral Notebook
+st_upgr_w_grenade_mount,Firearm Optics & Mounts Package 'Gzh-L'
+st_placeable_light8,Tube Light
+st_placeable_storage05,Toolbox
+st_placeable_poster4,Soviet Propaganda Poster
+st_prop_chair,Wooden chair
+st_placeable_gaz_balon,Old Gas Tank
+st_toolkit_r5_new,Type C Weapon Repair Kit
+st_placeable_stalker_outfit,Stalker Outfit Bundle
+st_prop_stove2,Stove (Large)
+st_gamma_recipe_ammo_4,Advances in Military Applications: Exoskeletons (Confidential)
+st_prop_mice_pad,Mouse with Mouse Pad
+st_placeable_cuttingboard,Cutting Board
+st_placeable_sink,Sink
+st_prop_table_2,Wooden Table
+st_placeable_metal_table1,Metal Table
+st_prop_poster_vertical_item,Poster (Vertical)
+st_upgr_o_carry,Suit Utility Package 'OSEL'
+st_placeable_wall_doorway_metal,Metal Sheet Wall w\ Doorway
+st_placeable_documents_2,Documents
+st_upgr_o_chem,CBRN Materials Package 'CHM-1'
+st_placeable_countertop,Countertop
+st_upgr_o_damage,Ballistic Materials Package 'PzDH'
+st_placeable_game,Board Game
+st_placeable_tv_box,Box Television
+st_placeable_toilet,Toilet
+st_prop_fridge,Old Fridge
+st_placeable_metal_plate,Metal Sheet
+st_placeable_merc_outfit,Mercenary Outfit Bundle
+st_placeable_wall02,Wooden Wall
+st_placeable_light1,Wall Sconce
+st_prop_prop_clock_1,Digital Clock
+st_placeable_trophie2,Trophy (Chimera)
+st_placeable_gas_lamp,Gas Lamp
+st_placeable_fuel,Jerrycan
+st_cleaning_kit_p_new,Type A Weapon Cleaning Kit
+st_sewing_kit_b,Sewing Kit (Basic)
+st_placeable_psi_helmet,Psi-helmet
+st_placeable_trophie6,Trophy (Bloodsucker)
+st_placeable_map1,Great Swamps Map
+st_prop_shelf_2,Wooden Shelf (Large)
+st_prop_laptop_item,Laptop
+st_upgr_w_reliability,Small Arms Tuning Package 'D-11'
+st_upgr_o_weight,Ballistic Materials Package 'LGkY'
+st_placeable_light5,Triple-Tube Light
+st_placeable_radio,Radio
+st_placeable_lead_box_open,Decorative Lead-lined Metal Container
+st_placeable_grave1,Stalker's Grave Marker
+st_upgr_w_weight,Small Arms Tuning Package 'W-02'
+st_placeable_sidetable1,Tall Side Table
+st_placeable_stool,Stool
+st_placeable_poster5,"""Infected"" Poster"
+st_upgr_w_scope_mount,Firearm Optics & Mounts Package 'MTt'
+st_placeable_storage06,Green Chest
+st_placeable_workshop,Portable Workshop
+st_upgr_o_psi,CBRN Material Package 'MZg'
+st_upgr_w_magazine,Small Arms Tuning Package 'M-45'
+st_placeable_poster1,Soviet Propaganda Poster
+st_prop_keyboard,Keyboard
+st_placeable_metal_table2,Large Metal Table
+st_upgr_o_bleed,Suit Utility Package 'KrV'
+st_placeable_junk,Electrical Project
+st_placeable_shelves_b,Bathroom Shelves
+st_placeable_plant2,"""Anomalous Plant"""
+st_placeable_barrel_metal,Metal Barrel
+st_cards,Deck of Cards
+st_prop_med_case_1,Medical Case
+st_placeable_money_5000,Pile of Money
+st_placeable_trophie4,Trophy (Cat)
+st_placeable_bidon,Milk Can
+st_placeable_guidebook2,Machinist's Guide
+st_placeable_box_paper,Cardboard Box
+st_placeable_shelves,Metal Shelves
+st_placeable_guidebook1,Weapons Design Guide
+st_placeable_door05,Heavy Door
+st_placeable_ashtray,Ash Tray
+st_prop_cans_tuna,Canned Food Crate
+st_placeable_map2,Exclusion Zone Map
+st_placeable_sumka6,Small Backpack
+st_placeable_shower,Shower
+st_placeable_light6,Wall-Mounted Bulb
+st_placeable_trophie9,Trophy (Boar)
+st_placeable_stretcher,Stretcher
+st_placeable_light4,Hanging Light Bulb
+st_placeable_microscope,Microscope
+st_placeable_fchair,Modern Chair
+st_upgr_o_run,Suit Utility Package 'DVgt'
+st_upgr_w_rpm,Small Arms Tuning Package 'R-39'
+st_prop_bed_2,Metal Bed
+st_grizzly,Grizzly Detector
+st_placeable_grave2,Cross Grave Marker
+st_ramrod_tool,Ramrod
+st_toolkit_s_new,Type B Weapon Repair Kit
+st_placeable_shield,Metal Barrier
+st_upgr_o_power,Suit Utility Package 'UPRz'
+st_placeable_rug,Rug
+st_cleaning_kit_r7_new,Type D Weapon Cleaning Kit
+st_placeable_trophie3,Trophy (Pseudodog)
+st_toolkit_r7_new,Type D Weapon Repair Kit
+st_placeable_light2,Theater Light
+st_data_export_recipe_requirement_name,st_data_export_recipe_requirement_name
+st_placeable_storage03,Green Metal Box
+st_placeable_trophie7,Trophy (Blind Dog)
+st_placeable_box_wood,Reinforced Wooden Crate
+st_gun_oil,"Spray Lubricant ""Brunox Gun Care"""
+st_medium_repair_kit,Armor Repair Kit (Medium Armor)
+st_itm_exo_psu_name,Jury-rigged Exoskeleton power supply
+st_upgr_o_armor,Ballistic Materials Package 'BRna'
+st_prt_i_ammo,Ammo Parts
+st_placeable_wall,Wooden Wall
+st_upgr_w_inertion,Small Arms Tuning Package 'H-7'
+st_placeable_sidetable2,Short Side Table
+st_placeable_exoskelet,Exoskeleton Bundle
+st_placeable_kartina03,Picture Frame
+st_prop_case,PC Case
+st_light_repair_kit,Armor Repair Kit (Light Armor)
+st_upgr_o_health,Suit Utility Package 'HPs-1'
+st_placeable_door02,Metal Door
+st_cleaning_kit_r5_new,Type C Weapon Cleaning Kit
+st_placeable_piano,Portable Keyboard
+st_prop_tv,TV
+st_placeable_ammo_box,Ammo Box
+st_kerosene,Kerosene
+st_placeable_clinic_equipments,Clinical Equipment
+st_toolkit_p_new,Type A Weapon Repair Kit
+st_prop_fan,Small Fan
+st_prop_monitor,Monitor
+st_cleaning_kit_s_new,Type B Weapon Cleaning Kit
+st_placeable_teapot,Teapot
+st_placeable_plant3,Potted Plant
+st_prop_board_map,Zone Map
+st_placeable_pistol_shelf,Pistol Display Shelf
+st_prop_bed_3,Wooden Bed
+st_upgr_w_calibre,Small Arms Tuning Package 'C-22'
+st_placeable_dev_guitar,Decorative Guitar
+st_placeable_trophie8,Trophy (Flesh)
+st_placeable_storage02,Large Metal Storage Container
+st_prop_dish1,Ceramic Plate

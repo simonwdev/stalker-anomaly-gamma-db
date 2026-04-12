@@ -29,13 +29,16 @@ function parseArgs(argv) {
   return args;
 }
 
+const DEFAULT_SRC = "C:\\Stalker_GAMMA\\overwrite\\bin";
+
 const args = parseArgs(process.argv);
 const pack = args.pack;
-const srcDir = args.src;
+const srcDir = args.src || DEFAULT_SRC;
 const mergeTranslations = !!args["merge-translations"];
 
-if (!pack || !srcDir) {
-  console.error('Usage: node scripts/import-game-exports.mjs --pack <pack-id> --src "<game-bin-path>" [--merge-translations]');
+if (!pack) {
+  console.error('Usage: node scripts/import-game-exports.mjs --pack <pack-id> [--src "<game-bin-path>"] [--merge-translations]');
+  console.error(`  --src defaults to ${DEFAULT_SRC}`);
   process.exit(1);
 }
 

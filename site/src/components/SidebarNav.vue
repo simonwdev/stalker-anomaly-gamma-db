@@ -1,6 +1,43 @@
 <template>
 <aside class="sidebar" :class="{ open: sidebarOpen }" v-show="translations">
     <div class="sidebar-scroll">
+
+    <!-- Crafting sidebar -->
+    <template v-if="craftingActive">
+    <div class="sidebar-group">
+        <div class="sidebar-group-label" @click="$emit('toggleGroup', 'craft-recipes')">
+            <svg class="sidebar-chevron" :class="{ collapsed: collapsedGroups['craft-recipes'] }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            {{ t('app_cat_crafting') }}
+        </div>
+        <div class="sidebar-group-items" v-show="!collapsedGroups['craft-recipes']">
+            <a
+                v-for="chip in craftingRecipeCategories"
+                :key="chip.key"
+                :href="craftingHref(chip.key)"
+                :class="{ active: craftingCategory === chip.key }"
+                @click.prevent="$emit('selectCraftingCategory', chip.key)"
+            ><span class="cat-label">{{ t(chip.label) }}</span> <span v-if="chip.count" class="cat-count">{{ chip.count }}</span></a>
+        </div>
+    </div>
+    <div class="sidebar-group" v-if="craftingDisassemblyCategories.length">
+        <div class="sidebar-group-label" @click="$emit('toggleGroup', 'craft-disassembly')">
+            <svg class="sidebar-chevron" :class="{ collapsed: collapsedGroups['craft-disassembly'] }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            {{ t('app_craft_group_disassembly') }}
+        </div>
+        <div class="sidebar-group-items" v-show="!collapsedGroups['craft-disassembly']">
+            <a
+                v-for="chip in craftingDisassemblyCategories"
+                :key="chip.key"
+                :href="craftingHref(chip.key)"
+                :class="{ active: craftingCategory === chip.key }"
+                @click.prevent="$emit('selectCraftingCategory', chip.key)"
+            ><span class="cat-label">{{ t(chip.label) }}</span> <span v-if="chip.count" class="cat-count">{{ chip.count }}</span></a>
+        </div>
+    </div>
+    </template>
+
+    <!-- Item DB sidebar -->
+    <template v-else>
     <div class="sidebar-group">
         <div class="sidebar-group-label" @click="$emit('toggleGroup', 'saved')">
             <svg class="sidebar-chevron" :class="{ collapsed: collapsedGroups['saved'] }" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
@@ -49,6 +86,8 @@
             ><span class="cat-label" :title="tCat(cat)">{{ tCat(cat) }}</span> <span v-if="categoryCounts[cat]" class="cat-count">{{ categoryCounts[cat] }}</span></a>
         </div>
     </div>
+    </template>
+
     </div>
     <button class="sidebar-collapse-btn" @click="$emit('toggleSidebarCollapse')" v-tooltip="t('app_shortcuts_toggle_sidebar')">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="11 17 6 12 11 7"/><polyline points="18 17 13 12 18 7"/></svg>
@@ -68,6 +107,10 @@ export default {
         favoriteIds: { type: Array, default: () => [] },
         recentIds: { type: Array, default: () => [] },
         buildPlannerActive: { type: Boolean, default: false },
+        craftingActive: { type: Boolean, default: false },
+        craftingCategory: { type: String, default: "repair" },
+        craftingRecipeCategories: { type: Array, default: () => [] },
+        craftingDisassemblyCategories: { type: Array, default: () => [] },
         versionCompareActive: { type: Boolean, default: false },
         startingLoadoutsActive: { type: Boolean, default: false },
         hasStartingLoadouts: { type: Boolean, default: false },
@@ -78,8 +121,8 @@ export default {
     },
     emits: [
         'toggleGroup', 'selectFavorites', 'selectRecent', 'openVersionCompare',
-        'openStartingLoadouts', 'selectCategory', 'toggleSidebarCollapse',
+        'openStartingLoadouts', 'selectCategory', 'selectCraftingCategory', 'toggleSidebarCollapse',
     ],
-    inject: ['t', 'tCat', 'categoryHref', 'navHref'],
+    inject: ['t', 'tCat', 'categoryHref', 'navHref', 'craftingHref'],
 };
 </script>

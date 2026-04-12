@@ -48,6 +48,10 @@
             <LucideDatabase :size="16" />
             <span>{{ t('app_nav_item_db') }}</span>
         </a>
+        <a class="header-drawer-item" :class="{ active: craftingActive }" :href="navHref('crafting')" @click.prevent="$emit('openCrafting'); overflowOpen = false">
+            <LucideFlaskConical :size="16" />
+            <span>{{ t('app_cat_crafting') }}</span>
+        </a>
         <a class="header-drawer-item" :class="{ active: buildPlannerActive }" :href="navHref('build-planner')" @click.prevent="$emit('openBuildPlanner'); overflowOpen = false">
             <LucideHammer :size="16" />
             <span>{{ t('app_cat_build_planner') }}</span>
@@ -175,6 +179,10 @@
         <LucideDatabase :size="14" />
         {{ t('app_nav_item_db') }}
     </a>
+    <a class="nav-bar-item" :class="{ active: craftingActive }" :href="navHref('crafting')" @click.prevent="$emit('openCrafting')">
+        <LucideFlaskConical :size="14" />
+        {{ t('app_cat_crafting') }}
+    </a>
     <a class="nav-bar-item" :class="{ active: buildPlannerActive }" :href="navHref('build-planner')" @click.prevent="$emit('openBuildPlanner')">
         <LucideHammer :size="14" />
         {{ t('app_cat_build_planner') }}
@@ -227,6 +235,7 @@ export default {
         sidebarCollapsed: { type: Boolean, default: false },
         sidebarOpen: { type: Boolean, default: false },
         buildPlannerActive: { type: Boolean, default: false },
+        craftingActive: { type: Boolean, default: false },
         damageSimActive: { type: Boolean, default: false },
         mapsActive: { type: Boolean, default: false },
         itemDbActive: { type: Boolean, default: false },
@@ -238,7 +247,7 @@ export default {
         'toggleSidebarCollapse', 'toggleSidebar', 'switchPack',
         'changeLocale', 'openShortcutHelp', 'clearGlobalQuery',
         'update:globalQuery', 'search', 'escapeSearch', 'selectSearchResult',
-        'openItemDb', 'openMaps', 'openBuildPlanner', 'openDamageSim',
+        'openItemDb', 'openMaps', 'openBuildPlanner', 'openCrafting', 'openDamageSim',
         'toggleHideNoDrop', 'toggleHideUnusedAmmo', 'toggleShowTileIcons',
     ],
     inject: ['t', 'tName', 'tCat', 'navHref'],

@@ -10,7 +10,7 @@ import {
     PRIMARY_WEAPON_SLUGS, SIDEARM_SLUGS, GRENADE_SLUG, SLOT_COLORS,
     LOCALES, CHART_COLORS,
     SINGULAR_TYPE, SINGULAR_CATEGORY, CATEGORY_KEYS,
-    WEAPON_CATEGORIES, WEAPON_CATEGORY_SLUGS, VIRTUAL_CATEGORIES, CATEGORY_GROUPS,
+    WEAPON_CATEGORIES, WEAPON_CATEGORY_SLUGS, VIRTUAL_CATEGORIES, CRAFTING_SUBCATEGORIES, CATEGORY_GROUPS,
     KEYS, CHORD_TIMEOUT,
     FACTION_ICONS, FACTION_COLORS, FACTION_LIST,
 } from './constants.js';
@@ -88,6 +88,7 @@ export const appDefinition = {
             itemDropsCache: null,
             stashChanceCache: null,
             recipesCache: null,
+            craftRecipesCache: null,
             disassembleCache: null,
             ammoWeaponsCache: null,
             weaponAddonsCache: null,
@@ -97,10 +98,14 @@ export const appDefinition = {
             ballisticRangesCache: null,
             upgradesCache: null,
 
-            // Crafting trees
+            // Crafting
+            craftRecipes: null,
+            craftingCategory: "all",
+            craftingGraphView: (() => { try { return localStorage.getItem("craftingTreesView") === "tree"; } catch { return false; } })(),
             craftingTrees: [],
             craftingTreeExpanded: new Set(),
             craftingTreeExpandAll: false,
+            _craftingTreeViewExpandAll: true,
 
             sidebarOpen: false,
             sidebarCollapsed: false,
@@ -268,7 +273,7 @@ export const appDefinition = {
             let allWeapons = 0;
             for (const c of WEAPON_CATEGORIES) allWeapons += counts[c] || 0;
             counts[CAT.ALL_WEAPONS] = allWeapons;
-            counts[CAT.CRAFTING_TREES] = counts[CAT.RECIPES] || 0;
+            counts[CAT.CRAFTING] = this.craftRecipes ? Object.values(this.craftRecipes).reduce((sum, cat) => sum + cat.items.length, 0) : (counts[CAT.RECIPES] || 0);
             counts[CAT.FAVORITES] = this.favoriteIds.length;
             return counts;
         },
@@ -557,12 +562,58 @@ export const appDefinition = {
             return this.activeCategory === CAT.OUTFIT_EXCHANGE;
         },
 
-        isMaterialsCategory() {
-            return this.activeCategory === CAT.MATERIALS;
+        isCrafting() {
+            return this.activeCategory === CAT.CRAFTING;
         },
 
-        isCraftingTrees() {
-            return this.activeCategory === CAT.CRAFTING_TREES;
+        materialsItems() {
+            return this.categoryItems[categorySlug(CAT.MATERIALS)] || [];
+        },
+
+        craftingRecipeCategories() {
+            const CRAFT_CATS = [
+                { key: "device", label: "app_craft_chip_device" },
+                { key: "equipment", label: "app_craft_chip_equipment" },
+                { key: "repair", label: "app_craft_chip_repair" },
+                { key: "upgrades", label: "app_craft_chip_upgrades" },
+                { key: "medical", label: "app_craft_chip_medical" },
+                { key: "ammo", label: "app_craft_chip_ammo" },
+                { key: "artefact", label: "app_craft_chip_artefact" },
+                { key: "furniture", label: "app_craft_chip_furniture" },
+                { key: "decoration", label: "app_craft_chip_decoration" },
+            ];
+            const cats = CRAFT_CATS.map(c => ({
+                ...c,
+                count: this.craftingTrees.filter(t => t.craftCategory === c.key).length,
+            })).filter(c => c.count > 0);
+            const total = cats.reduce((sum, c) => sum + c.count, 0);
+            return [{ key: "all", label: "app_craft_chip_all", count: total }, ...cats];
+        },
+
+        craftingFilteredCount() {
+            if (!this.isCrafting) return 0;
+            if (this.craftingCategory === "materials") {
+                const items = this.materialsItems;
+                const q = this.filterQuery.trim().toLowerCase();
+                if (!q) return items.length;
+                return items.filter(item =>
+                    this.tName(item).toLowerCase().includes(q) ||
+                    (item.sources && item.sources.some(s => this.t(s.name).toLowerCase().includes(q)))
+                ).length;
+            }
+            return this.filteredCraftingTrees.length;
+        },
+
+        craftingDisassemblyCategories() {
+            const count = this.materialsItems.length;
+            return count > 0 ? [{ key: "materials", label: "app_craft_chip_materials", count }] : [];
+        },
+
+        craftingExpandLabel() {
+            if (this.craftingGraphView) {
+                return this._craftingTreeViewExpandAll ? this.t("app_label_collapse_all") : this.t("app_label_expand_all");
+            }
+            return this.craftingTreeExpandAll ? this.t("app_label_collapse_all") : this.t("app_label_expand_all");
         },
 
         isToolkitRates() {
@@ -590,9 +641,26 @@ export const appDefinition = {
 
         filteredCraftingTrees() {
             if (!this.craftingTrees.length) return [];
-            if (!this.filterQuery.trim()) return this.craftingTrees;
-            const q = this.filterQuery.toLowerCase();
-            return this.craftingTrees.filter(tree => {
+            let trees = this.craftingTrees;
+            // Filter by crafting sub-category
+            const cat = this.craftingCategory;
+            if (cat && cat !== "all" && cat !== "materials") {
+                trees = trees.filter(t => t.craftCategory === cat);
+            }
+            if (cat === "materials") return [];
+            // Apply discrete filters
+            const tierFilter = this.activeFilters.toolTier;
+            if (Array.isArray(tierFilter) && tierFilter.length > 0) {
+                trees = trees.filter(t => tierFilter.includes(String(t.toolTier)));
+            }
+            const reqFilter = this.activeFilters.recipeReqName;
+            if (Array.isArray(reqFilter) && reqFilter.length > 0) {
+                trees = trees.filter(t => reqFilter.includes(t.recipeReqName));
+            }
+            // Apply text search
+            const q = this.filterQuery.trim().toLowerCase();
+            if (!q) return trees;
+            return trees.filter(tree => {
                 if (this.t(tree.name).toLowerCase().includes(q)) return true;
                 const check = (node) => {
                     if (this.t(node.name).toLowerCase().includes(q)) return true;
@@ -872,6 +940,46 @@ export const appDefinition = {
                 }
             }
             return [...existingDefs, ...rangeDefs];
+        },
+
+        craftingAvailableFilters() {
+            if (!this.isCrafting || this.craftingCategory === "materials" || this.craftingCategory === "artefact") return [];
+            // Gather all recipe items for current view
+            let items;
+            if (this.craftingCategory === "all") {
+                items = this.craftRecipes ? Object.values(this.craftRecipes).flatMap(c => c.items) : [];
+            } else {
+                items = this.craftRecipes?.[this.craftingCategory]?.items || [];
+            }
+            if (!items.length) return [];
+
+            const filters = [];
+            // Tool Tier discrete filter
+            const tiers = new Set(items.map(i => i.toolTier).filter(Boolean));
+            if (tiers.size > 1) {
+                filters.push({
+                    key: "toolTier",
+                    type: "discrete",
+                    label: this.t("app_craft_tool_tier"),
+                    values: [...tiers].sort().map(t => String(t)),
+                    format: (v) => this.t("app_craft_toolkit_" + v),
+                });
+            }
+            // Recipe Requirement discrete filter
+            const reqs = new Set();
+            for (const item of items) {
+                if (item.recipeReqName) reqs.add(item.recipeReqName);
+            }
+            if (reqs.size > 1) {
+                filters.push({
+                    key: "recipeReqName",
+                    type: "discrete",
+                    label: this.t("app_craft_requires"),
+                    values: [...reqs].sort((a, b) => this.t(a).localeCompare(this.t(b))),
+                    translate: true,
+                });
+            }
+            return filters;
         },
 
         rangeFilters() {
@@ -1547,6 +1655,10 @@ export const appDefinition = {
             return this.fetchJsonCached("recipesCache", "recipes.json");
         },
 
+        fetchCraftRecipes() {
+            return this.fetchJsonCached("craftRecipesCache", "craft-recipes.json");
+        },
+
         fetchDisassemble() {
             return this.fetchJsonCached("disassembleCache", "disassemble.json");
         },
@@ -1700,6 +1812,9 @@ export const appDefinition = {
                         this.recentViewActive = true;
                         this.activeCategory = null;
                         this.sortCol = "pda_encyclopedia_name";
+                    } else if (urlCat && CRAFTING_SUBCATEGORIES.has(urlCat)) {
+                        await this.selectCategory(CAT.CRAFTING);
+                        this.craftingCategory = urlCat;
                     } else {
                         const match = urlCat && (this.categories.find(c => categorySlug(c) === urlCat) || [...VIRTUAL_CATEGORIES].find(c => categorySlug(c) === urlCat));
                         await this.selectCategory(match || this.groupedCategories[0].categories[0]);
@@ -1744,6 +1859,8 @@ export const appDefinition = {
             this.itemDropsCache = null;
             this.stashChanceCache = null;
             this.recipesCache = null;
+            this.craftRecipesCache = null;
+            this.craftRecipes = null;
             this.disassembleCache = null;
             this.upgradesCache = null;
             this.ammoWeaponsCache = null;
@@ -1992,12 +2109,16 @@ export const appDefinition = {
                 return;
             }
 
-            if (cat === CAT.CRAFTING_TREES) {
+            if (cat === CAT.CRAFTING) {
                 this.startContentLoading();
                 try {
-                    if (this.craftingTrees.length === 0) {
-                        const recipesData = await this.fetchRecipes();
-                        this.buildCraftingTreeData(recipesData);
+                    // Load craft recipes and build artefact trees from the artefact category
+                    const craftData = await this.fetchCraftRecipes();
+                    if (craftData) {
+                        this.craftRecipes = craftData;
+                        if (this.craftingTrees.length === 0) {
+                            this.buildCraftingTreeData(craftData);
+                        }
                     }
                     // Ensure artefacts + ingredient categories are loaded so tree view can show full item stats
                     const slugsToLoad = [
@@ -2025,12 +2146,10 @@ export const appDefinition = {
                         });
                     await Promise.all(fetches);
                 } catch (e) {
-                    console.error("Failed to load crafting trees:", e);
+                    console.error("Failed to load crafting data:", e);
                 }
                 await this.stopContentLoading();
-                // Only reset expansion state when navigating TO crafting trees from another page.
-                // If we're already on crafting trees (e.g. returning from a modal), preserve the state.
-                if (previousCategory !== CAT.CRAFTING_TREES) {
+                if (previousCategory !== CAT.CRAFTING) {
                     this.craftingTreeExpandAll = false;
                     this.craftingTreeExpanded = new Set();
                 }
@@ -2080,31 +2199,16 @@ export const appDefinition = {
         },
 
         async openItem(id) {
-            this.modalLoading = true;
-            this.modalOpen = true;
-            this.modalItem = null;
-            this.modalDrops = null;
-            this.modalItemDrops = null;
-            this.modalStashChance = null;
-            this.modalRecipeData = null;
-            this.modalDisassemble = null;
-            this.modalUpgradeNodes = null;
-            this.modalAmmoWeapons = null;
-            this._ammoDecCache = {};
-            this.copyIdFeedback = false;
-            this.copyModalLinkFeedback = false;
-            this.crossPackItem = null;
-            this.crossPackNotFound = false;
+            const entry = this.index.find((i) => i.id === id);
+            if (!entry) {
+                history.replaceState(null, "", window.location.pathname + window.location.search);
+                return;
+            }
+
             this.hideItemHover();
             this.closeWeaponListPopover();
-            document.body.style.overflow = "hidden";
 
             try {
-                const entry = this.index.find((i) => i.id === id);
-                if (!entry) {
-                    this.modalLoading = false;
-                    return;
-                }
                 this.addRecent(id);
 
                 this.modalCategory = entry.category;
@@ -2114,6 +2218,23 @@ export const appDefinition = {
 
                 this.modalHeaders = this.categoryHeaders[slug];
                 this.modalItem = this.categoryItems[slug].find((i) => i.id === id);
+
+                // Show modal only after item data is ready to avoid a loading flash
+                this.modalLoading = false;
+                this.modalOpen = true;
+                this.modalDrops = null;
+                this.modalItemDrops = null;
+                this.modalStashChance = null;
+                this.modalRecipeData = null;
+                this.modalDisassemble = null;
+                this.modalUpgradeNodes = null;
+                this.modalAmmoWeapons = null;
+                this._ammoDecCache = {};
+                this.copyIdFeedback = false;
+                this.copyModalLinkFeedback = false;
+                this.crossPackItem = null;
+                this.crossPackNotFound = false;
+                document.body.style.overflow = "hidden";
 
                 const isWeapon = WEAPON_CATEGORIES.includes(entry.category);
                 const [drops, itemDrops, stashChance, recipeData, disassemble, ammoWeapons, upgrades] = await Promise.all([
@@ -2434,6 +2555,8 @@ export const appDefinition = {
             let items;
             if (this.versionCompareActive) {
                 items = this.filteredVersionCompareResults.flatMap(g => g.items);
+            } else if (this.isCrafting) {
+                items = this.filteredCraftingTrees;
             } else {
                 items = this.sortedItems;
             }
@@ -2536,13 +2659,40 @@ export const appDefinition = {
         },
 
         openItemDb() {
-            const cat = this.activeCategory || (this.groupedCategories.length && this.groupedCategories[0].categories[0]);
+            const cat = (this.activeCategory && this.activeCategory !== CAT.CRAFTING) ? this.activeCategory : (this.groupedCategories.length && this.groupedCategories[0].categories[0]);
             if (cat) this.selectCategory(cat);
         },
 
         openMaps() {
             this.resetViewState();
             this.mapsActive = true;
+            this.pushUrlState(true);
+        },
+
+        openCrafting() {
+            this.selectCategory(CAT.CRAFTING);
+        },
+
+        setCraftingGraphView(val) {
+            this.craftingGraphView = val;
+            try { localStorage.setItem("craftingTreesView", val ? "tree" : "tile"); } catch {}
+        },
+
+        toggleCraftingExpand() {
+            if (this.craftingGraphView) {
+                this._craftingTreeViewExpandAll = !this._craftingTreeViewExpandAll;
+            } else {
+                if (this.craftingTreeExpandAll) this.collapseAllTrees();
+                else this.expandAllTrees();
+            }
+        },
+
+        selectCraftingCategory(key) {
+            this.craftingCategory = key;
+            this.activeFilters = {};
+            this.filterQuery = "";
+            this.filterInput = "";
+            this.sidebarOpen = false;
             this.pushUrlState(true);
         },
 
@@ -2998,11 +3148,16 @@ export const appDefinition = {
             return "";
         },
 
-        buildCraftingTreeData(recipesData) {
-            const recipes = recipesData.items || [];
+        buildCraftingTreeData(craftData) {
+            // Build a recipe map from ALL categories so cross-category ingredient resolution works
+            const allRecipes = [];
             const recipeMap = {};
-            for (const r of recipes) {
-                recipeMap[r.pda_encyclopedia_name || r.displayName] = r;
+            for (const key of Object.keys(craftData)) {
+                for (const r of craftData[key].items) {
+                    r._craftCategory = key;
+                    recipeMap[r.pda_encyclopedia_name] = r;
+                    allRecipes.push(r);
+                }
             }
             const buildNode = (name, amount, visited) => {
                 const node = { name, amount, children: [], isRaw: true };
@@ -3017,9 +3172,13 @@ export const appDefinition = {
                 }
                 return node;
             };
-            this.craftingTrees = recipes.map(r => {
-                const tree = buildNode(r.pda_encyclopedia_name || r.displayName, "x1", new Set());
+            // Build trees for every recipe
+            this.craftingTrees = allRecipes.map(r => {
+                const tree = buildNode(r.pda_encyclopedia_name, "x1", new Set());
                 tree.id = r.id;
+                tree.toolTier = r.toolTier;
+                tree.recipeReqName = r.recipeReqName;
+                tree.craftCategory = r._craftCategory;
                 return tree;
             }).sort((a, b) => a.name.localeCompare(b.name));
         },
@@ -3400,6 +3559,8 @@ export const appDefinition = {
         },
 
         filterValueLabel(def, value) {
+            if (def.format) return def.format(value);
+            if (def.translate) return this.t(value);
             if (def.displayMap && def.displayMap[value]) return def.displayMap[value];
             const entry = this.displayEntry(def.key, value);
             if (entry) { const lbl = typeof entry === 'string' ? entry : entry.label || value; return this.t(lbl); }
@@ -3449,7 +3610,9 @@ export const appDefinition = {
         },
 
         navigateToItem(id) {
-            window.location.hash = id;
+            if (!this.indexById[id]) return;
+            this.openItem(id);
+            history.pushState(null, "", `${window.location.pathname}${window.location.search}#${id}`);
         },
 
         openAmmoFromCaliber(caliberId) {
@@ -4119,6 +4282,10 @@ export const appDefinition = {
             return this.navHref(categorySlug(category));
         },
 
+        craftingHref(subcat) {
+            return this.navHref(subcat);
+        },
+
         caliberName(val) {
             if (!val) return "--";
             return val.split(";").map(s => {
@@ -4162,10 +4329,10 @@ export const appDefinition = {
                 for (const k of ["outfit","helmet","backpack","belt","arts","pn","pf","bsb","w1","w2","a1","a2","wp","ws","wsi","wg","ap","as","asi"]) url.searchParams.delete(k);
             }
 
-            // Build pathname
+            // Build pathname — for crafting, use the sub-category as the URL segment
             const pathState = {
                 pack: this.activePack?.id,
-                cat: this.activeCategory,
+                cat: this.isCrafting ? this.craftingCategory : this.activeCategory,
                 buildPlanner: this.buildPlannerActive,
                 damageSim: this.damageSimActive,
                 maps: this.mapsActive,
@@ -4986,8 +5153,8 @@ export const appDefinition = {
             this.whatsNewVisible = false;
             if (entry.action === "buildPlanner") {
                 this.openBuildPlanner();
-            } else if (entry.action === "craftingTrees") {
-                this.selectCategory(CAT.CRAFTING_TREES);
+            } else if (entry.action === "craftingTrees" || entry.action === "crafting") {
+                this.selectCategory(CAT.CRAFTING);
             } else if (entry.action === "maps") {
                 this.openMaps();
             } else if (entry.action === "ballistics") {
@@ -6494,6 +6661,9 @@ export const appDefinition = {
                 }
             } else if (parsed.startingLoadouts) {
                 if (!this.startingLoadoutsActive) await this.openStartingLoadouts();
+            } else if (parsed.cat && CRAFTING_SUBCATEGORIES.has(parsed.cat)) {
+                await this.selectCategory(CAT.CRAFTING);
+                this.craftingCategory = parsed.cat;
             } else if (parsed.cat) {
                 const match = this.categories.find(c => categorySlug(c) === parsed.cat) || [...VIRTUAL_CATEGORIES].find(c => categorySlug(c) === parsed.cat);
                 if (match) await this.selectCategory(match);

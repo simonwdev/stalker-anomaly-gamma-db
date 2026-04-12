@@ -44,6 +44,15 @@ const SKIP_FILES = new Set([
   "export_npc_armor_profiles.csv",
   "export_addon_weapon_map.csv",
   "export_weapon_addon_map.csv",
+  "export_craft_device.csv",
+  "export_craft_equipment.csv",
+  "export_craft_repair.csv",
+  "export_craft_upgrades.csv",
+  "export_craft_medical.csv",
+  "export_craft_ammo.csv",
+  "export_craft_artefact.csv",
+  "export_craft_furniture.csv",
+  "export_craft_decoration.csv",
   "export_upgrades_items.csv",
   "export_upgrade_sections.csv",
   "en_us.csv",
@@ -407,6 +416,79 @@ try {
 } catch (e) {
   if (e.code !== "ENOENT") throw e;
   console.log("No artefact recipes CSV found, skipping");
+}
+
+// Process craft recipe CSVs into craft-recipes.json
+const CRAFT_CATEGORIES = [
+  { file: "export_craft_device.csv", key: "device", label: "Devices" },
+  { file: "export_craft_equipment.csv", key: "equipment", label: "Equipment" },
+  { file: "export_craft_repair.csv", key: "repair", label: "Repair" },
+  { file: "export_craft_upgrades.csv", key: "upgrades", label: "Upgrades" },
+  { file: "export_craft_medical.csv", key: "medical", label: "Medical" },
+  { file: "export_craft_ammo.csv", key: "ammo", label: "Ammo" },
+  { file: "export_craft_artefact.csv", key: "artefact", label: "Artefacts" },
+  { file: "export_craft_furniture.csv", key: "furniture", label: "Furniture" },
+  { file: "export_craft_decoration.csv", key: "decoration", label: "Decoration" },
+];
+
+const craftRecipes = {};
+let craftTotal = 0;
+for (const cat of CRAFT_CATEGORIES) {
+  const craftFile = join(CSV_DIR, cat.file);
+  try {
+    const craftText = readFileSync(craftFile, "utf-8");
+    const craftLines = craftText.split(/\r?\n/).filter((l) => l.length > 0);
+    if (craftLines.length <= 1) continue;
+
+    const items = [];
+    for (let i = 1; i < craftLines.length; i++) {
+      const cols = parseCsvLine(craftLines[i]);
+      const id = cols[0]?.trim();
+      const name = cols[1]?.trim();
+      if (!id || !name) continue;
+
+      const toolTier = parseInt(cols[2]?.trim(), 10) || 1;
+      const recipeReq = cols[3]?.trim() || "";
+      const recipeReqName = cols[4]?.trim() || "";
+
+      const ingredients = [];
+      // Columns 5-12: repeating pairs of ingredient name + amount
+      for (let j = 5; j < cols.length; j += 2) {
+        const ingName = cols[j]?.trim();
+        const ingAmount = cols[j + 1]?.trim();
+        if (!ingName || ingName === "nil") continue;
+        ingredients.push({ name: ingName, amount: ingAmount || "x1" });
+      }
+
+      items.push({
+        id,
+        pda_encyclopedia_name: name,
+        toolTier,
+        recipeReq,
+        recipeReqName,
+        ingredients,
+      });
+
+      // Track craft recipe IDs but don't add to search index — items that exist
+      // in the DB already have an index entry from their real category. Items that
+      // only appear in recipes have no category JSON to load detail data from.
+      seen.add(id);
+    }
+
+    if (items.length > 0) {
+      craftRecipes[cat.key] = { label: cat.label, items };
+      craftTotal += items.length;
+      console.log(`${cat.file}: ${items.length} recipes (${cat.label})`);
+    }
+  } catch (e) {
+    if (e.code !== "ENOENT") throw e;
+  }
+}
+
+if (craftTotal > 0) {
+  const craftOut = join(OUT_DIR, "craft-recipes.json");
+  writeFileSync(craftOut, JSON.stringify(craftRecipes, null, 2));
+  console.log(`Wrote ${craftTotal} craft recipes across ${Object.keys(craftRecipes).length} categories to ${craftOut}`);
 }
 
 // Add displayName to each category's items

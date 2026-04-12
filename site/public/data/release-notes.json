@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-04-12",
+    "entries": [
+      { "type": "added", "text": "Full crafting recipes - browse every workshop recipe across all categories: repair kits, equipment, devices, upgrades, medical, ammo, furniture, decorations, and artefacts. See required ingredients, toolkit, and recipe book at a glance. Expand any ingredient to see its own recipe chain.", "highlight": true, "summaryKey": "app_whats_new_crafting", "action": "crafting", "callout": { "selector": ".nav-bar-item[href*='crafting']", "titleKey": "app_callout_crafting_title", "descKey": "app_callout_crafting_desc" } }
+    ]
+  },
+  {
     "date": "2026-04-11",
     "entries": [
       { "type": "added", "text": "Upgrade tree for weapons and outfits - browse every upgrade tier and see costs and stat changes at a glance.", "highlight": true, "summaryKey": "app_whats_new_upgrade_tree" }

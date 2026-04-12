@@ -101,10 +101,15 @@ export const CAT = {
     OUTFITS: "Outfits", HELMETS: "Helmets", BELT_ATTACHMENTS: "Belt Attachments",
     OUTFIT_EXCHANGE: "Outfit Exchange", ARTEFACTS: "Artefacts",
     FOOD: "Food", MEDICINE: "Medicine",
-    CRAFTING_TREES: "Crafting Trees", MATERIALS: "Materials",
+    CRAFTING: "Crafting", MATERIALS: "Materials",
     MUTANT_PARTS: "Mutant Parts", RECIPES: "Recipes",
     TOOLKIT_RATES: "Toolkit Rates",
 };
+
+export const CRAFTING_SUBCATEGORIES = new Set([
+    "all", "device", "equipment", "repair", "upgrades",
+    "medical", "ammo", "artefact", "furniture", "decoration", "materials",
+]);
 
 export const BUILD_SLOT_CATEGORIES = { outfit: CAT.OUTFITS, helmet: CAT.HELMETS, belt: CAT.BELT_ATTACHMENTS, artifact: CAT.ARTEFACTS, backpack: CAT.BELT_ATTACHMENTS };
 export function isBackpack(item) { return item?.st_data_export_is_backpack === "Y"; }
@@ -127,7 +132,7 @@ export const LOCALES = [{id:"en",label:"English"},{id:"ru",label:"Русский
 export const CHART_COLORS = ["#c8a84e", "#5b8abd", "#b85c5c", "#5ba8a0", "#9b6fb0"];
 
 export const SINGULAR_TYPE = { [CAT.PISTOLS]: "app_type_pistol", [CAT.SMGS]: "app_type_smg", [CAT.SHOTGUNS]: "app_type_shotgun", [CAT.RIFLES]: "app_type_rifle", [CAT.SNIPERS]: "app_type_sniper", [CAT.LAUNCHERS]: "app_type_launcher", [CAT.MELEE]: "app_cat_melee" };
-export const SINGULAR_CATEGORY = { ...SINGULAR_TYPE, [CAT.OUTFITS]: "app_type_outfit", [CAT.HELMETS]: "app_type_helmet", [CAT.BELT_ATTACHMENTS]: "app_type_belt_attachment", [CAT.EXPLOSIVES]: "app_type_explosive", [CAT.ARTEFACTS]: "app_type_artefact", [CAT.MATERIALS]: "app_type_material", [CAT.MUTANT_PARTS]: "app_type_mutant_part" };
+export const SINGULAR_CATEGORY = { ...SINGULAR_TYPE, [CAT.OUTFITS]: "app_type_outfit", [CAT.HELMETS]: "app_type_helmet", [CAT.BELT_ATTACHMENTS]: "app_type_belt_attachment", [CAT.EXPLOSIVES]: "app_type_explosive", [CAT.ARTEFACTS]: "app_type_artefact", [CAT.MUTANT_PARTS]: "app_type_mutant_part" };
 
 export const CATEGORY_KEYS = {
     [CAT.FAVORITES]: "app_cat_favorites", [CAT.ALL_WEAPONS]: "app_cat_all_weapons",
@@ -139,13 +144,13 @@ export const CATEGORY_KEYS = {
     [CAT.OUTFITS]: "app_cat_outfits", [CAT.HELMETS]: "app_cat_helmets",
     [CAT.BELT_ATTACHMENTS]: "app_cat_belt_attachments", [CAT.OUTFIT_EXCHANGE]: "app_cat_outfit_exchange",
     [CAT.FOOD]: "app_cat_food", [CAT.MEDICINE]: "app_cat_medicine", [CAT.ARTEFACTS]: "app_cat_artefacts",
-    [CAT.CRAFTING_TREES]: "app_cat_crafting_trees", [CAT.MATERIALS]: "app_cat_materials",
+    [CAT.CRAFTING]: "app_cat_crafting", [CAT.MATERIALS]: "app_cat_materials",
     [CAT.MUTANT_PARTS]: "app_cat_mutant_parts", [CAT.RECIPES]: "app_cat_recipes",
     [CAT.TOOLKIT_RATES]: "app_cat_toolkit_rates",
 };
 export const WEAPON_CATEGORIES = [CAT.PISTOLS, CAT.SMGS, CAT.SHOTGUNS, CAT.RIFLES, CAT.SNIPERS, CAT.LAUNCHERS, CAT.MELEE];
 export const WEAPON_CATEGORY_SLUGS = WEAPON_CATEGORIES.map(c => c.toLowerCase().replace(/ /g, "-"));
-export const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING_TREES, CAT.TOOLKIT_RATES, CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS, CAT.TACTICAL_KITS]);
+export const VIRTUAL_CATEGORIES = new Set([CAT.ALL_WEAPONS, CAT.CRAFTING, CAT.TOOLKIT_RATES, CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS, CAT.TACTICAL_KITS]);
 
 export const CATEGORY_GROUPS = [
     { name: "app_group_weapons", categories: [CAT.ALL_WEAPONS, ...WEAPON_CATEGORIES] },
@@ -153,7 +158,7 @@ export const CATEGORY_GROUPS = [
     { name: "app_group_ammo_explosives", categories: [CAT.AMMO, CAT.EXPLOSIVES] },
     { name: "app_group_equipment", categories: [CAT.OUTFITS, CAT.HELMETS, CAT.BELT_ATTACHMENTS, CAT.ARTEFACTS, CAT.OUTFIT_EXCHANGE] },
     { name: "app_group_consumables", categories: [CAT.FOOD, CAT.MEDICINE] },
-    { name: "app_group_crafting", categories: [CAT.CRAFTING_TREES, CAT.MATERIALS, CAT.MUTANT_PARTS] },
+    { name: "app_group_crafting", categories: [CAT.MUTANT_PARTS] },
 ];
 
 export const KEYS = {

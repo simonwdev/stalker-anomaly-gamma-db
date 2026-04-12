@@ -7,6 +7,7 @@
   "belt-attachments.json": "b69235d7",
   "calibers.json": "dae6c411",
   "categories.json": "bbd1aa61",
+  "craft-recipes.json": "0b4b04d0",
   "disassemble.json": "fa32e9a8",
   "display-labels.json": "9f8ec823",
   "drops.json": "fc0b0362",
@@ -38,7 +39,7 @@
   "starting-loadouts.json": "84d29597",
   "tactical-kits.json": "718ab712",
   "toolkit-rates.json": "b7ece421",
-  "translations.json": "3577ecb5",
+  "translations.json": "168eeeee",
   "upgrades.json": "45db7512",
   "weapon-addons.json": "ac5a38f1"
 }
