@@ -4453,3 +4453,1518 @@ input.range-input {
     transform: translateY(-50%);
     border-radius: 2px;
 }
+
+
+/* ================================
+   Build Planner
+   (restored from pre-274b6d6 style.css)
+   ================================ */
+.build-planner {
+    padding: 0 0.75rem 0.5rem 0;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+}
+@media (max-width: 768px) {
+    .build-planner { padding-right: 0.75rem; }
+}
+.build-columns {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1rem;
+    align-items: stretch;
+}
+.build-col-left {
+    min-width: 0;
+}
+.build-col-right {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+.build-col-right .build-inventory {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.build-col-right .build-inventory-body {
+    flex: 1;
+}
+.build-toolbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.build-toolbar-actions {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    margin-left: auto;
+}
+.build-toolbar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    height: 1.75rem;
+    padding: 0 0.55rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+    white-space: nowrap;
+}
+.build-toolbar-btn:hover {
+    color: var(--text);
+    border-color: var(--accent-dim);
+}
+.build-toolbar-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.build-toolbar-btn.copied {
+    color: var(--color-green);
+    border-color: var(--color-green);
+}
+.build-toolbar-badge {
+    background: var(--accent);
+    color: var(--color-black);
+    font-size: 0.55rem;
+    font-weight: 700;
+    padding: 0.05rem 0.3rem;
+    border-radius: 8px;
+    line-height: 1.2;
+}
+/* Saved builds dropdown */
+.build-saved-dropdown {
+    position: relative;
+}
+.build-saved-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    min-width: 12rem;
+    max-height: 16rem;
+    overflow-y: auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.3rem;
+    z-index: 120;
+    box-shadow: 0 4px 12px var(--color-overlay-black-40);
+}
+/* Save modal */
+.build-save-modal {
+    max-width: 340px;
+    height: auto;
+}
+.build-save-modal .build-save-form {
+    display: flex;
+    gap: 0.4rem;
+}
+.build-save-modal .build-save-input {
+    flex: 1;
+    height: 1.75rem;
+    padding: 0 0.5rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 0.7rem;
+    outline: none;
+}
+.build-save-modal .build-save-input:focus {
+    border-color: var(--accent-dim);
+}
+.build-save-modal .build-save-input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Save Import modal */
+.save-import-modal {
+    max-width: 720px;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 4rem);
+    overflow: hidden;
+}
+.save-import-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+.save-import-close {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.save-import-close:hover {
+    color: var(--text);
+    background: var(--color-overlay-white-8);
+}
+.save-import-modal > .modal-body {
+    overflow-y: auto;
+    padding-bottom: 0.75rem;
+}
+.save-import-dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 2rem 1.5rem;
+    border: 2px dashed var(--border);
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+.save-import-dropzone:hover,
+.save-import-dragover {
+    border-color: var(--accent-dim);
+    background: var(--color-overlay-white-2);
+}
+.save-import-icon {
+    color: var(--text-secondary);
+    opacity: 0.6;
+}
+.save-import-dropzone-label {
+    color: var(--text);
+    font-size: 0.8rem;
+    margin: 0;
+}
+.save-import-browse-btn {
+    cursor: pointer;
+}
+.save-import-hint {
+    color: var(--text-secondary);
+    font-size: 0.65rem;
+    margin: 0;
+    opacity: 0.7;
+}
+.save-import-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+.save-import-error-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+.save-import-error-msg {
+    color: var(--color-red-light);
+    font-size: 0.75rem;
+    margin: 0;
+}
+.save-import-warning {
+    background: var(--color-orange-tint-12);
+    border: 1px solid var(--color-orange-tint-35);
+    color: var(--color-orange-bright);
+    font-size: 0.72rem;
+    padding: 0.4rem 0.65rem;
+    border-radius: 4px;
+}
+.save-import-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.save-import-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    margin: 0 0 0.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.save-import-filename {
+    color: var(--text);
+    font-size: 0.75rem;
+}
+.save-import-stats {
+    color: var(--text-secondary);
+    font-size: 0.65rem;
+}
+.save-import-section-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin: 0.75rem 0 0.35rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border);
+}
+.save-import-section-label:first-child {
+    margin-top: 0;
+}
+.save-import-options {
+    display: flex;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.65rem;
+}
+.save-import-stash-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+.save-import-stash-toggle input {
+    accent-color: var(--accent-dim);
+    cursor: pointer;
+}
+.save-import-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.save-import-col {
+    min-width: 0;
+}
+.save-import-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-height: 280px;
+    overflow-y: auto;
+}
+.save-import-slot {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+}
+.save-import-slot-label {
+    flex-shrink: 0;
+    width: 80px;
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    padding-top: 0.05rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.save-import-slot-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+.save-import-slot-item {
+    display: inline-block;
+    padding: 0.1rem 0.4rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 0.65rem;
+    color: var(--text);
+    cursor: default;
+}
+.save-import-slot-item:hover {
+    border-color: var(--accent-dim);
+}
+.save-import-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+}
+.save-import-confirm {
+    background: var(--accent-dim) !important;
+    border-color: var(--accent-dim) !important;
+    color: var(--color-card) !important;
+    font-weight: 600;
+}
+.save-import-confirm:hover {
+    filter: brightness(1.15);
+}
+.save-import-cancel {
+    opacity: 0.7;
+}
+
+
+.build-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0.5rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: 0.6rem;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+}
+.build-action-btn:hover {
+    color: var(--text);
+    border-color: var(--accent-dim);
+}
+.build-action-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.build-action-btn.copied {
+    color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+/* Loadout area: weapon columns flanking center loadout */
+.build-loadout-area {
+    margin-bottom: 1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+.build-loadout-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    align-items: flex-start;
+}
+.build-weapon-col {
+    flex: 0 0 9rem;
+    min-width: 9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.build-weapon-col .build-slot-group {
+    padding: 0.35rem 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.build-weapon-col .build-slot {
+    min-height: 2.4rem;
+}
+.build-weapon-col .build-slot-label {
+    margin-bottom: -0.3rem;
+}
+.build-slot-ammo-row { margin-top: -0.25rem; }.build-loadout-box {
+    flex: 1;
+    min-width: 9rem;
+}
+.build-slot-ammo .build-slot-name { white-space: normal; word-break: break-word; }
+.build-loadout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.35rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.build-loadout-toggle {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0;
+}
+.build-loadout-header-actions {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+.build-loadout-summary {
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.build-loadout-summary:hover {
+    background: var(--color-overlay-white-3);
+}
+.build-loadout-summary-text {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+.build-loadout-summary-empty .build-loadout-summary-text {
+    font-style: italic;
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+/* Equipment Slots */
+.build-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.35rem 0.5rem 0.5rem;
+}
+.build-slot-group {
+    min-width: 0;
+}
+.build-slot-group-multi {
+    min-width: 0;
+}
+.build-slot-label {
+    font-size: 0.55rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.build-slot-counter {
+    color: var(--accent);
+    font-weight: 600;
+}
+.build-slot-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+.build-slot-row > .build-slot {
+    flex: 1 1 calc(20% - 0.3rem);
+    min-width: 0;
+}
+.build-slot {
+    position: relative;
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    min-width: 7rem;
+    min-height: 2.4rem;
+    box-sizing: border-box;
+}
+.build-slot.filled {
+    background: var(--card-raised);
+    border: 2px solid var(--border);
+}
+.build-slot.filled:hover {
+    border-color: var(--accent-dim);
+    background: var(--color-accent-tint-5);
+}
+.build-slot.empty {
+    border: 2px dashed var(--color-overlay-white-15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.build-slot.empty:hover {
+    border-color: var(--accent-dim);
+    background: var(--color-accent-tint-5);
+}
+.build-slot-sm {
+    padding: 0.2rem 0.5rem;
+    min-height: 1.8rem;
+}
+.build-slot-sm .build-slot-name {
+    font-size: 0.65rem;
+}
+.build-slot-disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+    color: var(--text-secondary);
+}
+.build-slot-name {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 0.8rem;
+}
+.build-slot-meta {
+    display: block;
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    margin-top: 0.1rem;
+}
+.build-slot-remove {
+    position: absolute;
+    top: 0.15rem;
+    right: 0.3rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.15rem 0.25rem;
+    border-radius: 3px;
+    transition: color 0.15s, background 0.15s;
+}
+.build-slot-remove:hover {
+    color: var(--color-red-vibrant);
+    background: var(--color-red-vibrant-tint-10);
+}
+.build-slot-add {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    line-height: 1;
+    white-space: nowrap;
+}
+.build-slot-hint {
+    font-size: 0.5rem;
+    color: var(--text-secondary);
+}
+.build-slot-type-tag {
+    display: inline-block;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-top: 0.2rem;
+    font-weight: 600;
+    padding: 0.1rem 0.35rem;
+    border-radius: 2px;
+}
+.build-slot-tag-belt {
+    color: var(--color-accent-warm);
+    background: var(--color-accent-warm-tint-20);
+}
+.build-slot-tag-artifact {
+    color: var(--color-purple-mid);
+    background: var(--color-purple-tint-20);
+}
+.build-slot-outfit.filled { border-left: 3px solid var(--color-blue-mid); }
+.build-slot-helmet.filled { border-left: 3px solid var(--color-teal); }
+.build-slot-backpack.filled { border-left: 3px solid var(--color-green-soft); }
+.build-slot-belt.filled { border-left: 3px solid var(--color-accent-warm); }
+.build-slot-artifact.filled { border-left: 3px solid var(--color-purple-mid); }
+.build-slot-weapon.filled { border-left: 3px solid var(--color-red-muted); }
+.build-slot-grenade.filled { border-left: 3px solid var(--color-warm-brown); }
+.build-slot-ammo.filled { border-left: 3px solid var(--color-olive); display: flex; align-items: center; }
+
+/* Combined Stats */
+.build-stats {
+    margin-bottom: 0;
+}
+.build-stats-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.build-stats-empty {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 2rem 0;
+    font-size: 0.7rem;
+}
+.build-stats-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+.build-stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.35rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.build-stats-header-actions {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+.build-expand-all-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.15rem 0.3rem;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.build-expand-all-btn:hover {
+    color: var(--accent);
+}
+.build-expand-all-btn.active {
+    color: var(--accent);
+    background: var(--color-accent-tint-10);
+}
+.build-stats-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0;
+    row-gap: 0.1rem;
+    padding: 0.35rem 0.6rem 0.5rem;
+}
+.build-stats-body > .build-tile-wrap {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-left: 1px solid var(--border);
+}
+.build-stats-body > .build-tile-wrap:nth-child(3n+1) {
+    border-left: none;
+    padding-left: 0;
+}
+.build-stats-col {
+    min-width: 0;
+}
+/* Tile-style stat rows */
+.build-tile-wrap {
+    min-width: 0;
+}
+.build-tile-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.1rem 0;
+    cursor: default;
+}
+.build-tile-bar {
+    flex: 1;
+    height: 3px;
+    background: var(--color-overlay-white-6);
+    border-radius: 1.5px;
+    overflow: hidden;
+    opacity: 0.75;
+    min-width: 1.5rem;
+}
+.build-tile-bar-fill {
+    display: flex;
+    height: 100%;
+    border-radius: 1px;
+    transition: width 0.2s ease;
+}
+.build-tile-stat.build-prot-expandable {
+    cursor: pointer;
+}
+.build-tile-stat.build-prot-expandable:hover {
+    background: var(--color-overlay-white-2);
+}
+.build-tile-label {
+    color: var(--text-secondary);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+.build-tile-value {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-align: right;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+.build-stat-section-label {
+    font-size: 0.55rem;
+    color: var(--accent-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+.build-stat-section-label-spaced {
+    margin-top: 0.5rem;
+}
+.build-stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    cursor: pointer;
+    padding: 0.15rem 0;
+    border-bottom: 1px solid var(--color-overlay-border-50);
+    font-size: 0.65rem;
+}
+.build-stat-row:last-child {
+    border-bottom: none;
+}
+.build-stat-row:hover {
+    background: var(--color-overlay-white-2);
+}
+.build-stat-row .stat-label {
+    color: var(--text-secondary);
+    font-size: 0.65rem;
+}
+.build-stat-row .stat-value {
+    font-size: 0.65rem;
+    font-family: var(--mono);
+    text-align: right;
+}
+.build-stat-breakdown {
+    padding: 0.1rem 0 0.2rem 0.8rem;
+    margin: 0 0 0.15rem 0.4rem;
+}
+.build-breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.5rem;
+    color: var(--text-secondary);
+    padding: 0.05rem 0;
+}
+.build-breakdown-arrow {
+    font-size: 0.4rem;
+    margin-left: 0.15rem;
+}
+.build-breakdown-none {
+    font-style: italic;
+    opacity: 0.5;
+}
+/* Stacked bar segments */
+.build-stat-row-wrap {
+    padding: 0.15rem 0;
+    border-bottom: 1px solid var(--color-overlay-border-50);
+}
+.build-stat-row-wrap:last-child {
+    border-bottom: none;
+}
+.build-stat-row-wrap .build-stat-row {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.build-bar {
+    display: flex;
+    height: 3px;
+    border-radius: 1.5px;
+    overflow: hidden;
+    background: var(--color-overlay-border-50);
+    margin-top: 0.15rem;
+}
+.build-bar-seg {
+    height: 100%;
+    min-width: 2px;
+    transition: width 0.2s ease;
+}
+/* Protection horizontal bar rows */
+.build-prot-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.15rem 0;
+    border-bottom: 1px solid var(--color-overlay-border-50);
+    cursor: default;
+    font-size: 0.65rem;
+}
+.build-prot-row:last-child {
+    border-bottom: none;
+}
+.build-prot-row.build-prot-expandable {
+    cursor: pointer;
+}
+.build-prot-row.build-prot-expandable:hover {
+    background: var(--color-overlay-white-2);
+}
+.build-prot-low .build-tile-value,
+.build-prot-low .build-prot-value {
+    opacity: 0.45;
+}
+.build-prot-row:not(.build-prot-expandable) {
+    cursor: default;
+}
+.build-prot-chevron {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid var(--text-secondary);
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+}
+.build-prot-chevron-open {
+    transform: rotate(90deg);
+}
+.build-prot-chevron-hidden {
+    opacity: 0.35;
+}
+.build-prot-label {
+    color: var(--text-secondary);
+    white-space: nowrap;
+    min-width: 5.5rem;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.build-prot-bar-track {
+    flex: 1;
+    height: 6px;
+    background: var(--color-overlay-border-50);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.build-prot-bar-fill {
+    display: flex;
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.2s ease;
+}
+.build-prot-value {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-align: right;
+    white-space: nowrap;
+    min-width: 3.5rem;
+}
+.build-prot-negative {
+    color: var(--color-red);
+}
+/* Inline breakdown color dots */
+.build-breakdown-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 0.3rem;
+    vertical-align: middle;
+}
+
+.build-capped-badge {
+    display: inline-block;
+    font-size: 0.4rem;
+    background: var(--color-red-vibrant-tint-20);
+    color: var(--color-red-vibrant);
+    padding: 0 0.2rem;
+    border-radius: 2px;
+    margin-left: 0.3rem;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+/* Inventory Staging Area */
+.build-inventory {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--card);
+    flex: 1;
+    container-type: inline-size;
+}
+.build-inventory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.35rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.build-inventory-sort-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: none;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.55rem;
+    padding: 0.15rem 0.35rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.build-inventory-sort-btn:hover {
+    color: var(--text);
+    border-color: var(--border);
+}
+.build-inventory-sort-btn.active {
+    color: var(--accent);
+    border-color: var(--border);
+}
+.build-compare-toggle {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3px;
+    padding: 0.25rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.build-compare-toggle-label {
+    font-size: 0.5rem;
+    color: var(--text-secondary);
+    opacity: 0.5;
+    text-transform: uppercase;
+    margin-right: 0.15rem;
+}
+.build-compare-toggle-btn {
+    padding: 0.1rem 0.4rem;
+    background: var(--color-overlay-white-4);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.55rem;
+    transition: background 0.15s, color 0.15s;
+}
+.build-compare-toggle-btn:hover {
+    background: var(--color-overlay-white-6);
+}
+.build-compare-toggle-btn.active {
+    background: var(--color-overlay-white-8);
+    color: var(--text);
+    border-color: var(--accent-dim);
+}
+.build-inventory-body {
+    padding: 0.35rem 0.5rem 0.5rem;
+    min-height: 2rem;
+    transition: background 0.15s;
+}
+.build-inventory-body.drag-over {
+    background: var(--color-accent-tint-8);
+    outline: 1px dashed var(--accent-dim);
+    outline-offset: -2px;
+}
+.build-inventory-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.6rem;
+    position: relative;
+}
+.build-inventory-buttons::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+.build-inventory-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    background: var(--color-overlay-white-3);
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: 0.65rem;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.build-inventory-btn:hover {
+    color: var(--text);
+    border-color: var(--accent-dim);
+    background: var(--color-overlay-white-5);
+}
+.build-inventory-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+.build-inventory-btn-fav {
+    border-style: solid;
+}
+.build-inventory-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+}
+@container (min-width: 20rem) {
+    .build-inventory-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@container (min-width: 35rem) {
+    .build-inventory-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.build-inventory-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0.4rem 1.4rem 0.4rem 0.5rem;
+    border-radius: 4px;
+    background: var(--card-raised);
+    border: 1px solid var(--border);
+    cursor: grab;
+    min-width: 0;
+    transition: border-color 0.15s, background 0.15s;
+}
+.build-inventory-item:active {
+    cursor: grabbing;
+}
+.build-inventory-item:hover {
+    border-color: var(--accent-dim);
+    background: var(--color-accent-tint-5);
+}
+.build-inv-outfit .build-inventory-item-type { background: var(--color-blue-tint-20); color: var(--color-blue-mid); }
+.build-inv-helmet .build-inventory-item-type { background: var(--color-teal-tint-20); color: var(--color-teal); }
+.build-inv-backpack .build-inventory-item-type { background: var(--color-green-tint-20); color: var(--color-green-soft); }
+.build-inv-belt .build-inventory-item-type { background: var(--color-accent-warm-tint-20); color: var(--color-accent-warm); }
+.build-inv-artifact .build-inventory-item-type { background: var(--color-purple-tint-20); color: var(--color-purple-mid); }
+.build-inv-weapon .build-inventory-item-type { background: var(--color-red-tint-20); color: var(--color-red-muted); }
+.build-inv-ammo .build-inventory-item-type { background: var(--color-olive-tint-20); color: var(--color-olive); }
+.build-inv-sidearm .build-inventory-item-type { background: var(--color-red-tint-20); color: var(--color-red-muted); }
+.build-inv-grenade .build-inventory-item-type { background: var(--color-warm-brown-tint-20); color: var(--color-warm-brown); }
+
+/* Weapon stats panel */
+.build-stats-divider {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--border);
+    margin: 0.25rem 0;
+}
+.build-stats-divider ~ .build-tile-wrap {
+    border-left: none;
+    padding-left: 0;
+}
+.build-stats-section-label {
+    grid-column: 1 / -1;
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding-bottom: 0.15rem;
+}
+.build-weapon-toggle {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 4px;
+}
+.build-weapon-toggle-btn {
+    padding: 0.2rem 0.6rem;
+    background: var(--color-overlay-white-4);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+}
+.build-weapon-toggle-btn:hover {
+    background: var(--color-overlay-white-6);
+}
+.build-weapon-toggle-btn.active {
+    background: var(--color-overlay-white-8);
+    color: var(--text);
+    border-color: var(--accent-dim);
+}
+.build-weapon-toggle-with {
+    color: var(--text-secondary);
+    opacity: 0.5;
+    margin: 0 0.2em 0 0.3em;
+}
+
+.build-inventory-item-name {
+    font-size: 0.7rem;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+.build-inventory-item-type {
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    padding: 0.1rem 0.35rem;
+    border-radius: 2px;
+    width: fit-content;
+    margin-top: 0.3rem;
+}
+.build-inventory-item-remove {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.15rem 0.25rem;
+    border-radius: 3px;
+    transition: color 0.15s, background 0.15s;
+}
+.build-inventory-item-remove:hover {
+    color: var(--color-red-vibrant);
+    background: var(--color-red-vibrant-tint-10);
+}
+.build-inventory-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    padding: 2rem 1rem;
+    text-align: center;
+    flex: 1;
+}
+.build-inventory-empty-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity: 0.15;
+}
+
+/* Item hover popover */
+.build-hover-popover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 220;
+    pointer-events: none;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.build-hover-tile {
+    box-shadow: 0 4px 16px var(--color-overlay-black-50);
+    min-width: 18rem;
+    max-width: 24rem;
+    overflow: hidden;
+}
+.build-hover-desc {
+    padding: 0.4rem 0 0;
+    margin-top: 0.4rem;
+    border-top: 1px solid var(--color-overlay-white-8);
+}
+.build-hover-icon {
+    float: right;
+    margin: 0 0 0.25rem 0.5rem;
+    opacity: 0.85;
+}
+.build-hover-icon:only-child {
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
+.build-hover-desc .modal-desc-meta {
+    margin-top: 0.25rem;
+}
+.build-hover-tile--compare {
+    min-width: 18rem;
+    max-width: 26rem;
+}
+.build-compare-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0.1rem 0.5rem;
+}
+.build-compare-header {
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.build-compare-vs {
+    color: var(--text);
+    font-weight: 400;
+    font-style: italic;
+}
+.build-compare-sublabel {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    opacity: 0.45;
+    text-align: right;
+    padding-bottom: 0.15rem;
+}
+.build-compare-sublabel:first-child {
+    text-align: left;
+}
+.build-compare-grid .stat-label {
+    color: var(--text-secondary);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    min-width: 0;
+    word-break: break-word;
+}
+.build-compare-val {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-align: right;
+}
+.build-compare-diff {
+    font-family: var(--mono);
+    text-align: right;
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+.diff-positive { color: var(--color-green-positive); }
+.diff-negative { color: var(--color-red-danger); }
+.diff-zero { opacity: 0.35; }
+.diff-dash { opacity: 0.25; }
+
+/* Drag feedback on slots */
+.build-slot.drag-over {
+    border-color: var(--accent) !important;
+    background: var(--color-accent-tint-10) !important;
+}
+.build-slot-row.drag-over {
+    outline: 1px dashed var(--accent-dim);
+    outline-offset: 2px;
+    background: var(--color-accent-tint-5);
+    border-radius: 4px;
+}
+
+/* Picker slot-type badge */
+.build-picker-item-type {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    padding: 0.1rem 0.35rem;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+.build-picker-type-outfit { color: var(--color-blue-mid); background: var(--color-blue-tint-12); }
+.build-picker-type-helmet { color: var(--color-teal); background: var(--color-teal-tint-12); }
+.build-picker-type-backpack { color: var(--color-green-soft); background: var(--color-green-tint-12); }
+.build-picker-type-belt { color: var(--color-accent-warm); background: var(--color-accent-warm-tint-12); }
+.build-picker-type-artifact { color: var(--color-purple-mid); background: var(--color-purple-tint-12); }
+.build-picker-type-weapon { color: var(--color-red-muted); background: var(--color-red-tint-12); }
+.build-picker-type-ammo { color: var(--color-olive); background: var(--color-olive-tint-12); }
+.build-picker-type-sidearm { color: var(--color-red-muted); background: var(--color-red-tint-12); }
+.build-picker-type-grenade { color: var(--color-warm-brown); background: var(--color-warm-brown-tint-12); }
+
+/* Saved Builds (dropdown items) */
+.build-saved-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+.build-saved-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 0.4rem;
+    border-radius: 3px;
+    transition: background 0.1s;
+}
+.build-saved-item:hover {
+    background: var(--color-overlay-white-4);
+}
+.build-saved-name {
+    font-size: 0.65rem;
+    color: var(--accent);
+    cursor: pointer;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.build-saved-name:hover {
+    text-decoration: underline;
+}
+.build-saved-delete {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    cursor: pointer;
+    padding: 0 0.15rem;
+    flex-shrink: 0;
+}
+.build-saved-delete:hover {
+    color: var(--color-red-vibrant);
+}
+.build-saved-empty {
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    padding: 0.3rem 0.2rem;
+}
+
+/* Build Picker Modal */
+.build-picker-modal {
+    width: 500px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+.build-picker-modal .modal-close {
+    font-size: 1rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+}
+.build-picker-modal .modal-body {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.build-picker-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+}
+.build-picker-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+}
+.build-picker-search {
+    position: relative;
+}
+.build-picker-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+.build-picker-search .filter-input-icon {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+.build-picker-input {
+    width: 100%;
+    padding: 0.4rem 0.5rem 0.4rem 1.8rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 0.75rem;
+    outline: none;
+}
+.build-picker-input:focus {
+    border-color: var(--accent-dim);
+}
+.build-picker-input::placeholder {
+    color: var(--text-secondary);
+}
+.build-picker-list {
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.build-picker-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.6rem;
+    background: var(--card-raised);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+}
+.build-picker-item:hover {
+    border-color: var(--accent-dim);
+    background: var(--color-accent-tint-5);
+}
+.build-picker-item-name {
+    font-size: 0.75rem;
+    color: var(--text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
+}
+.build-picker-item-weight {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+    margin-left: 0.25rem;
+}
+.build-picker-empty {
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.6rem;
+}
+
+/* Tablet: 2-column stats */
+@media (max-width: 1200px) {
+    .build-stats-body {
+        grid-template-columns: 1fr 1fr;
+    }
+    .build-stats-body > .build-tile-wrap:nth-child(3n+1) {
+        border-left: 1px solid var(--border);
+        padding-left: 0.75rem;
+    }
+    .build-stats-body > .build-tile-wrap:nth-child(2n+1) {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+
+/* Mobile: single column */
+@media (max-width: 768px) {
+    .build-columns {
+        grid-template-columns: 1fr;
+    }
+    .build-col-left, .build-col-right {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    .build-col-right .build-inventory {
+        max-height: none;
+    }
+    .build-weapon-col {
+        flex: 1 1 9rem;
+    }
+    .build-stats-body {
+        grid-template-columns: 1fr;
+    }
+    .build-stats-body > .build-tile-wrap {
+        border-left: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .build-stats-box {
+        grid-template-columns: 1fr;
+        gap: 0.5rem 0;
+    }
+    .build-slot-name {
+        max-width: 100%;
+    }
+    .build-slot-row > .build-slot {
+        flex-basis: calc(50% - 0.3rem);
+    }
+    .build-toolbar-actions {
+        flex-wrap: wrap;
+    }
+    .build-picker-modal,
+    .build-save-modal {
+        max-width: 95vw;
+    }
+}
+

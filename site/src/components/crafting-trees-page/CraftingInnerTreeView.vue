@@ -12,6 +12,9 @@
                         :tier="tree.toolTier || null"
                         :recipe-req="tree.recipeReqName || ''"
                         @navigate="$emit('navigateToItem', $event)"
+                        @hover-enter="(n, ev) => $emit('hoverEnter', n, ev)"
+                        @hover-move="(ev) => $emit('hoverMove', ev)"
+                        @hover-leave="$emit('hoverLeave')"
                     />
                 </div>
             </div>
@@ -33,7 +36,7 @@ export default {
     props: {
         filteredCraftingTrees: { type: Array, default: () => [] },
     },
-    emits: ['navigateToItem'],
+    emits: ['navigateToItem', 'hoverEnter', 'hoverMove', 'hoverLeave'],
     data() {
         return {
             visibleCount: PAGE_SIZE,

@@ -18,6 +18,9 @@
             v-if="craftingViewMode === 'tree'"
             :filtered-crafting-trees="filteredCraftingTrees"
             @navigate-to-item="(id) => $emit('navigateToItem', id)"
+            @hover-enter="(name, ev) => showHover(name, ev)"
+            @hover-move="moveHover"
+            @hover-leave="hideHover"
         />
 
         <!-- List view content -->
@@ -147,11 +150,16 @@ export default {
     },
     emits: ["navigateToItem", "expandAllTrees", "collapseAllTrees", "toggleTreeNode"],
     data() {
+        let craftingViewMode = 'list';
+        try {
+            const stored = localStorage.getItem('craftingInnerViewMode');
+            if (stored === 'tree') craftingViewMode = 'tree';
+        } catch {}
         return {
             hoverItem: null,
             hoverPos: {},
             _hoverTimeout: null,
-            craftingViewMode: 'list',
+            craftingViewMode,
             visibleCount: PAGE_SIZE,
             _observer: null,
             _observingSentinel: null,
@@ -206,6 +214,7 @@ export default {
         setInnerTab(mode) {
             this.craftingViewMode = mode;
             this.visibleCount = PAGE_SIZE;
+            try { localStorage.setItem('craftingInnerViewMode', mode); } catch {}
         },
 
         _setupObserver() {

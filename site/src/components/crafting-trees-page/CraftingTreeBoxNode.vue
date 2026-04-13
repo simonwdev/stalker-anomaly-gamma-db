@@ -10,6 +10,9 @@
                 { 'ctree-node--clickable': !isRoot && !hasOwnChildren && !!nodeItem },
             ]"
             @click.stop="handleNodeClick"
+            @mouseenter="$emit('hoverEnter', name, $event)"
+            @mousemove="$emit('hoverMove', $event)"
+            @mouseleave="$emit('hoverLeave')"
         >
             <img
                 v-if="nodeItem && nodeItem.id"
@@ -44,6 +47,9 @@
                         :children="child.children || []"
                         :is-root="false"
                         @navigate="$emit('navigate', $event)"
+                        @hover-enter="(n, ev) => $emit('hoverEnter', n, ev)"
+                        @hover-move="(ev) => $emit('hoverMove', ev)"
+                        @hover-leave="$emit('hoverLeave')"
                     />
                 </div>
             </div>
@@ -63,7 +69,7 @@ export default {
         tier: { type: [Number, String], default: null },
         recipeReq: { type: String, default: '' },
     },
-    emits: ['navigate'],
+    emits: ['navigate', 'hoverEnter', 'hoverMove', 'hoverLeave'],
     data() {
         return { expanded: false };
     },
