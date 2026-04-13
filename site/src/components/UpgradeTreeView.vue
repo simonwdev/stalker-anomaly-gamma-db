@@ -4,16 +4,16 @@
     <div class="uptree-summary">
         <span class="uptree-summary-item">
             <span class="uptree-summary-val">{{ nodes.length }}</span>
-            <span class="uptree-summary-lbl">upgrades</span>
+            <span class="uptree-summary-lbl">{{ t('app_upgrade_label_upgrades') }}</span>
         </span>
         <span class="uptree-summary-sep">·</span>
         <span class="uptree-summary-item">
             <span class="uptree-summary-val">{{ rows.length }}</span>
-            <span class="uptree-summary-lbl">tiers</span>
+            <span class="uptree-summary-lbl">{{ t('app_upgrade_label_tiers') }}</span>
         </span>
         <span class="uptree-summary-sep">·</span>
         <span class="uptree-summary-item">
-            <span class="uptree-summary-lbl">total cost</span>
+            <span class="uptree-summary-lbl">{{ t('app_upgrade_label_total_cost') }}</span>
             <span class="uptree-summary-val uptree-summary-cost">{{ totalCostFormatted }}</span>
         </span>
         <span class="uptree-summary-spacer"></span>
@@ -70,7 +70,7 @@
                         </div>
                         <div v-if="getCol(row, colNum).cells.length > 1 && ni === 0" class="uptree-or">
                             <span class="uptree-or-line"></span>
-                            <span class="uptree-or-text">or</span>
+                            <span class="uptree-or-text">{{ t('app_upgrade_label_or') }}</span>
                             <span class="uptree-or-line"></span>
                         </div>
                     </div>
@@ -128,17 +128,17 @@ const STAT_LABEL_MAP = {
     rpm: "unit_rpm",
 };
 
-const CAT_LABELS = {
-    combat: "Combat",
-    fire: "Fire/Expl",
-    hazard: "Hazard",
-    psi: "Psi",
-    weight: "Weight",
-    gun: "Weapon",
-    artifact: "Artifact",
-    medic: "Medical",
-    repair: "Repair",
-    default: "Other",
+const CAT_LABEL_KEYS = {
+    combat: "app_upgrade_cat_combat",
+    fire: "app_upgrade_cat_fire",
+    hazard: "app_upgrade_cat_hazard",
+    psi: "app_upgrade_cat_psi",
+    weight: "app_upgrade_cat_weight",
+    gun: "app_upgrade_cat_gun",
+    artifact: "app_upgrade_cat_artifact",
+    medic: "app_upgrade_cat_medic",
+    repair: "app_upgrade_cat_repair",
+    default: "app_upgrade_cat_default",
 };
 
 // Maps a prop key to a design category for color coding
@@ -229,7 +229,8 @@ export default {
             return getPropCategory(prop);
         },
         catLabel(cat) {
-            return CAT_LABELS[cat] || cat;
+            const key = CAT_LABEL_KEYS[cat];
+            return key ? this.t(key) : cat;
         },
         getCol(row, colNum) {
             return row.cols.find((c) => c.colNum === colNum) || null;
@@ -288,7 +289,7 @@ export default {
         },
         nodeStatLine(node) {
             if (node.prop === "st_prop_calibre" && node.val) {
-                return "Change to " + node.val;
+                return this.t("app_upgrade_label_change_to") + " " + node.val;
             }
             const prop = this.t(node.prop) || node.prop;
             const val = node.val ? this.formatVal(node.val) : "";
@@ -310,7 +311,7 @@ export default {
         },
         hoverPrimaryVal(node) {
             if (!node.val) return "";
-            if (node.prop === "st_prop_calibre") return "Change to " + node.val;
+            if (node.prop === "st_prop_calibre") return this.t("app_upgrade_label_change_to") + " " + node.val;
             return this.formatVal(node.val);
         },
         formatVal(val) {
