@@ -849,6 +849,11 @@ export const appDefinition = {
                 filtered.push("_compatible_weapons");
             }
 
+            // Inject scope count for weapon categories
+            if (isWeapon && this.weaponAddonsCache) {
+                filtered.push("_num_scopes");
+            }
+
             return filtered;
         },
 
@@ -1138,6 +1143,10 @@ export const appDefinition = {
             }
             if (headers.includes("st_upgr_cost") && this.activeCategory === CAT.AMMO && !allHeaders.includes("_cost_per_round")) {
                 allHeaders.push("_cost_per_round");
+            }
+            const isWeapon = WEAPON_CATEGORIES.includes(this.activeCategory) || this.activeCategory === CAT.ALL_WEAPONS;
+            if (isWeapon && this.weaponAddonsCache && !allHeaders.includes("_num_scopes")) {
+                allHeaders.push("_num_scopes");
             }
             for (const h of allHeaders) {
                 if (RANGE_EXCLUDE.has(h) || NO_HIGHLIGHT.has(h)) continue;
@@ -3630,6 +3639,7 @@ export const appDefinition = {
             if (h === "_malfunction_chance") return this.t("_malfunction_chance");
             if (h === "_cost_per_round") return this.t("_cost_per_round");
             if (h === "_compatible_weapons") return this.t("app_label_compatible_weapons");
+            if (h === "_num_scopes") return this.t("app_label_num_scopes");
             if (h === "st_upgr_cost" && this.activeCategory === CAT.AMMO) return this.t("_cost_per_pack");
             if (h === "ui_inv_damage" && this.activeCategory === CAT.AMMO) return this.t("st_data_export_damage_mult");
             const translated = this.t(h);
@@ -3690,6 +3700,10 @@ export const appDefinition = {
             }
             if ([CAT.SCOPES, CAT.SILENCERS, CAT.GRENADE_LAUNCHERS, CAT.TACTICAL_KITS].includes(category) && !allHeaders.includes("_compatible_weapons")) {
                 allHeaders.push("_compatible_weapons");
+            }
+            const isWeapon = WEAPON_CATEGORIES.includes(category) || category === CAT.ALL_WEAPONS;
+            if (isWeapon && this.weaponAddonsCache && !allHeaders.includes("_num_scopes")) {
+                allHeaders.push("_num_scopes");
             }
             const ranges = {};
             for (const h of allHeaders) {
@@ -3901,6 +3915,10 @@ export const appDefinition = {
                 }
                 return weapons.length;
             }
+            if (field === "_num_scopes") {
+                const addons = (this.weaponAddonsCache || {})[item.id];
+                return addons ? addons.scopes.length : 0;
+            }
             return item[field];
         },
 
@@ -3909,6 +3927,7 @@ export const appDefinition = {
             if (h === "_malfunction_chance") return val.toFixed(2) + "%";
             if (h === "_cost_per_round") return parseFloat(val).toFixed(1) + " ₽";
             if (h === "_compatible_weapons") return String(val);
+            if (h === "_num_scopes") return String(val);
             if (h === "ui_ammo_types" || h === "st_data_export_ammo_types_alt") return this.caliberName(val);
             if (h === "ui_st_community") return this.t(val);
 
