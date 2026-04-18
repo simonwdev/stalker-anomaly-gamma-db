@@ -36,7 +36,8 @@
       "st_data_export_hit_power": "0.77",
       "displayName": "st_wpn_toz34_obrez",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_toz34_obrez_custom",
@@ -56,7 +57,8 @@
       "st_data_export_hit_power": "0.77",
       "displayName": "st_wpn_toz34_obrez_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_protecta_custom",
@@ -76,7 +78,8 @@
       "st_data_export_hit_power": "0.78",
       "displayName": "st_wpn_protecta_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_spas12_custom",
@@ -96,7 +99,8 @@
       "st_data_export_hit_power": "0.79",
       "displayName": "st_wpn_spas12_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_toz34_obrez_decor",
@@ -116,7 +120,8 @@
       "st_data_export_hit_power": "0.77",
       "displayName": "st_wpn_toz34_obrez_decor",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_bm16_full",
@@ -136,7 +141,8 @@
       "st_data_export_hit_power": "0.77",
       "displayName": "st_wpn_bm16_full",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_wincheaster1300",
@@ -156,7 +162,8 @@
       "st_data_export_hit_power": "0.79",
       "displayName": "st_wpn_toz194 [default]",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_spas12",
@@ -176,7 +183,8 @@
       "st_data_export_hit_power": "0.79",
       "displayName": "st_wpn_spas12",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_vepr",
@@ -196,7 +204,8 @@
       "st_data_export_hit_power": "0.78",
       "displayName": "st_wpn_vepr12",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_bm16",
@@ -216,7 +225,8 @@
       "st_data_export_hit_power": "0.77",
       "displayName": "st_wpn_bm16",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_protecta_nimble",
@@ -236,7 +246,8 @@
       "st_data_export_hit_power": "0.78",
       "displayName": "st_wpn_protecta_nimble",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_usas12",
@@ -256,7 +267,8 @@
       "st_data_export_hit_power": "0.78",
       "displayName": "st_wpn_usas12",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_bm16_full_alt",
@@ -276,7 +288,8 @@
       "st_data_export_hit_power": "0.77",
       "displayName": "st_wpn_bm16_full_alt",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_toz34_custom",
@@ -296,7 +309,8 @@
       "st_data_export_hit_power": "0.8",
       "displayName": "st_wpn_toz34_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_bm16_alt",
@@ -316,7 +330,8 @@
       "st_data_export_hit_power": "0.77",
       "displayName": "st_wpn_bm16_alt",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_spas12_nimble",
@@ -336,7 +351,8 @@
       "st_data_export_hit_power": "0.83",
       "displayName": "st_wpn_spas12_nimble",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_saiga12s",
@@ -356,7 +372,8 @@
       "st_data_export_hit_power": "0.78",
       "displayName": "st_wpn_saiga12s",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_mp153",
@@ -376,7 +393,8 @@
       "st_data_export_hit_power": "0.8",
       "displayName": "st_wpn_mp153",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_wincheaster1300_trapper",
@@ -396,7 +414,8 @@
       "st_data_export_hit_power": "0.79",
       "displayName": "st_wpn_toz194 [trapper]",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_toz34_mark4",
@@ -416,7 +435,8 @@
       "st_data_export_hit_power": "0.82",
       "displayName": "st_wpn_toz34_mark4",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_toz34_bull",
@@ -456,7 +476,8 @@
       "st_data_export_hit_power": "0.8",
       "displayName": "st_wpn_toz34_decor",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_remington870",
@@ -476,7 +497,8 @@
       "st_data_export_hit_power": "0.79",
       "displayName": "st_wpn_remington870",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_toz34",
@@ -496,7 +518,8 @@
       "st_data_export_hit_power": "0.8",
       "displayName": "st_wpn_toz34",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_mossberg590",
@@ -516,7 +539,8 @@
       "st_data_export_hit_power": "0.79",
       "displayName": "st_wpn_mossberg590",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_protecta",
@@ -536,7 +560,8 @@
       "st_data_export_hit_power": "0.78",
       "displayName": "st_wpn_protecta",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_mp133",
@@ -556,7 +581,8 @@
       "st_data_export_hit_power": "0.79",
       "displayName": "st_wpn_mp133",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_protecta_aim",
@@ -576,7 +602,8 @@
       "st_data_export_hit_power": "0.78",
       "displayName": "st_wpn_protecta_aim",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_protecta_camo",
@@ -596,7 +623,8 @@
       "st_data_export_hit_power": "0.78",
       "displayName": "st_wpn_protecta_camo",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fort500",
@@ -616,7 +644,8 @@
       "st_data_export_hit_power": "0.79",
       "displayName": "st_wpn_fort500",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     }
   ]
 }

@@ -591,7 +591,8 @@
       "displayName": "st_wpn_mossberg590a1_wood",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_raptr",

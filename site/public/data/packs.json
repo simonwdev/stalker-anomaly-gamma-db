@@ -40,6 +40,14 @@
       "links": [
         { "url": "https://discord.gg/Bgwax9zwJ", "icon": "discord", "label": "Discord" }
       ]
+    },
+    {
+      "id": "gra-2.5",
+      "name": "Grim Raid 2.5",
+      "baseCarryWeight": 33,
+      "links": [
+        { "url": "https://discord.gg/Bgwax9zwJ", "icon": "discord", "label": "Discord" }
+      ]
     }
   ],
   "default": "gamma-0.9.4"

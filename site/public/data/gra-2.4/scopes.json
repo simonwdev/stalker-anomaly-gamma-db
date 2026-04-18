@@ -1,0 +1,158 @@
+{
+  "category": "Scopes",
+  "headers": [
+    "id",
+    "pda_encyclopedia_name",
+    "st_data_export_description",
+    "st_prop_weight",
+    "st_upgr_cost",
+    "st_data_export_zoom_factor",
+    "st_data_export_magnifications"
+  ],
+  "items": [
+    {
+      "id": "1p29",
+      "pda_encyclopedia_name": "st_addon_scope_1p29",
+      "st_data_export_description": "st_addon_scope_1p29_descr",
+      "st_prop_weight": "0.80",
+      "st_upgr_cost": "5960",
+      "st_data_export_zoom_factor": "15",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope_1p29",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "ac10632",
+      "pda_encyclopedia_name": "st_addon_scope_ac10632",
+      "st_data_export_description": "st_addon_scope_ac10632_descr",
+      "st_prop_weight": "0.12",
+      "st_upgr_cost": "2500",
+      "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope_ac10632",
+      "hasStashDrop": true,
+      "hasDisassemble": false
+    },
+    {
+      "id": "ac11090",
+      "pda_encyclopedia_name": "st_addon_scope_ac11090",
+      "st_data_export_description": "st_addon_scope_ac11090_descr",
+      "st_prop_weight": "0.35",
+      "st_upgr_cost": "4380",
+      "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope_ac11090",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "acog",
+      "pda_encyclopedia_name": "st_addon_scope_acog",
+      "st_data_export_description": "st_addon_scope_acog_descr",
+      "st_prop_weight": "0.35",
+      "st_upgr_cost": "4700",
+      "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope_acog",
+      "hasStashDrop": true,
+      "hasDisassemble": false
+    },
+    {
+      "id": "c-more",
+      "pda_encyclopedia_name": "st_addon_scope_cmore",
+      "st_data_export_description": "st_addon_scope_cmore_descr",
+      "st_prop_weight": "0.30",
+      "st_upgr_cost": "2500",
+      "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope_cmore",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "eot",
+      "pda_encyclopedia_name": "st_addon_scope_eotech",
+      "st_data_export_description": "st_addon_scope_eotech_descr",
+      "st_prop_weight": "0.30",
+      "st_upgr_cost": "2800",
+      "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope_eotech",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "kobra",
+      "pda_encyclopedia_name": "st_addon_scope_kobra",
+      "st_data_export_description": "st_addon_scope_kobra_descr",
+      "st_prop_weight": "0.40",
+      "st_upgr_cost": "2800",
+      "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope_kobra",
+      "hasStashDrop": true,
+      "hasDisassemble": false
+    },
+    {
+      "id": "ps01",
+      "pda_encyclopedia_name": "st_addon_scope",
+      "st_data_export_description": "st_addon_scope_descr",
+      "st_prop_weight": "0.62",
+      "st_upgr_cost": "4800",
+      "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope [ps01]",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "pso1m21",
+      "pda_encyclopedia_name": "st_addon_scope_pso-1m2-01",
+      "st_data_export_description": "st_addon_scope_pso-1m2-01_descr",
+      "st_prop_weight": "0.62",
+      "st_upgr_cost": "4800",
+      "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope_pso-1m2-01",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_addon_scope",
+      "pda_encyclopedia_name": "st_addon_scope",
+      "st_data_export_description": "st_addon_scope_descr",
+      "st_prop_weight": "0.62",
+      "st_upgr_cost": "4800",
+      "st_data_export_zoom_factor": "24",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope [wpn_addon_scope]",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_addon_scope_g43",
+      "pda_encyclopedia_name": "st_addon_scope_zf4",
+      "st_data_export_description": "st_addon_scope_zf4_descr",
+      "st_prop_weight": "0.40",
+      "st_upgr_cost": "1590",
+      "st_data_export_zoom_factor": "24.8",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope_zf4",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_addon_scope_susat",
+      "pda_encyclopedia_name": "st_addon_scope_galil_susat",
+      "st_data_export_description": "st_addon_scope_galil_descr",
+      "st_prop_weight": "0.58",
+      "st_upgr_cost": "2560",
+      "st_data_export_zoom_factor": "24",
+      "st_data_export_magnifications": "",
+      "displayName": "st_addon_scope_galil_susat",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    }
+  ]
+}

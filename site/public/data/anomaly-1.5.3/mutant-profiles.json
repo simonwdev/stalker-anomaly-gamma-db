@@ -1,0 +1,3912 @@
+[
+  {
+    "id": "agru_bloodsucker",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "agru_controller_1",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "agru_end_poltergeist_1",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.48,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "agru_end_poltergeist_2",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.48,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "agru_end_poltergeist_3",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.48,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "agru_end_poltergeist_4",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.48,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "agru_poltergeist_1",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "agru_poltergeist_2",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "agru_poltergeist_3",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "agru_poltergeist_4",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "agru_snork_1",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_10",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_11",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_12",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_13",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_14",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_15",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_16",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_17",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_2",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_3",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_4",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_5",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_6",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_7",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_8",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_snork_9",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "agru_tushkanchik_1",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "agru_tushkanchik_2",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "agru_tushkanchik_3",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "baba_yaga",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 0.46,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "baba_yaga_controller",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "bar_arena_bloodsucker",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bar_arena_burer",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "bar_arena_pseudodog",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "bar_arena_snork",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "bibliotekar_normal",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 0.1,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "bibliotekar_strong",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 0.1,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "bibliotekar_weak",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 0.1,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "bloodsucker_arena",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_black_normal",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_black_strong",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_black_weak",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_green_normal",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_green_strong",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_green_weak",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_normal",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_red_normal",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_red_strong",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_red_weak",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_strong",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_strong_big",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.65,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "bloodsucker_weak",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "boar_01a_hard",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.4,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 0.75,
+    "hitzone_torso": 1.1,
+    "hitzone_limbs": 1.5,
+    "hitzone_rear": 2.25
+  },
+  {
+    "id": "boar_01a_weak",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.4,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 0.75,
+    "hitzone_torso": 1.1,
+    "hitzone_limbs": 1.5,
+    "hitzone_rear": 2.25
+  },
+  {
+    "id": "boar_02a_hard",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.4,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 0.75,
+    "hitzone_torso": 1.1,
+    "hitzone_limbs": 1.5,
+    "hitzone_rear": 2.25
+  },
+  {
+    "id": "boar_02a_strong",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.4,
+    "fire_wound_immunity": 0.75,
+    "hitzone_head": 0.75,
+    "hitzone_torso": 1.1,
+    "hitzone_limbs": 1.5,
+    "hitzone_rear": 2.25
+  },
+  {
+    "id": "boar_02a_weak",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.4,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 0.75,
+    "hitzone_torso": 1.1,
+    "hitzone_limbs": 1.5,
+    "hitzone_rear": 2.25
+  },
+  {
+    "id": "boar_jup_b9",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.4,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 0.75,
+    "hitzone_torso": 1.1,
+    "hitzone_limbs": 1.5,
+    "hitzone_rear": 2.25
+  },
+  {
+    "id": "boar_normal",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.4,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 0.75,
+    "hitzone_torso": 1.1,
+    "hitzone_limbs": 1.5,
+    "hitzone_rear": 2.25
+  },
+  {
+    "id": "boar_strong",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.4,
+    "fire_wound_immunity": 0.75,
+    "hitzone_head": 0.75,
+    "hitzone_torso": 1.1,
+    "hitzone_limbs": 1.5,
+    "hitzone_rear": 2.25
+  },
+  {
+    "id": "borya_normal",
+    "skin_armor": 0.6,
+    "hit_fraction": 0.3,
+    "fire_wound_immunity": 1.1,
+    "hitzone_head": 3,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "burer_arena",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "burer_big",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.12,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "burer_blue_blue",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "burer_electra",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "burer_fire",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "burer_normal",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "burer_normal2",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "burer_weak",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.48,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "burer_weak2",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.48,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_normal_a",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_normal_b",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_normal_c",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_normal_d",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_normal_e",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_strong_a",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_strong_afro",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_strong_b",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_strong_base",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_strong_c",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_strong_d",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_strong_e",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_test",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_weak_a",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_weak_b",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_weak_base",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_weak_c",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_weak_d",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "cat_weak_e",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 2,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "chimera_normal",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "chimera_normal2",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "chimera_normal3",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "chimera_strong",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "chimera_strong2",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "chimera_strong3",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "chimera_strong4",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.2,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "chimera_weak",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "controller_tubeman",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "dar_snork_strong",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "dar_snork_strong_0000",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "dog_build",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_cute",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_header",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_normal",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_normal_brown",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_normal_bulterier",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_normal_red",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_normal_white",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_strong",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_strong_black",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_strong_brown",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_strong_bulterier",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_strong_red",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_strong_white",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_weak",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_weak_brown",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_weak_bulterier",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_weak_red",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "dog_weak_white",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "flesh_01a_normal",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 0.7,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 2
+  },
+  {
+    "id": "flesh_01a_strong",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 0.2,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "flesh_01a_weak",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 0.7,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 2
+  },
+  {
+    "id": "flesh_02a_normal",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 0.7,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 2
+  },
+  {
+    "id": "flesh_02a_strong",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 0.2,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "flesh_02a_weak",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 0.7,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 2
+  },
+  {
+    "id": "flesh_03a_normal",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 0.7,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 2
+  },
+  {
+    "id": "flesh_03a_strong",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 0.2,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "flesh_bolot",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 0.2,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "flesh_bolot1",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 0.2,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "flesh_jup_b9",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 0.7,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 2
+  },
+  {
+    "id": "flesh_normal",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 0.7,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 2
+  },
+  {
+    "id": "flesh_strong",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 0.2,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "flesh_weak",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 0.7,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 2
+  },
+  {
+    "id": "fracture_2",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "fracture_3",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "fracture_normal",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "fracture_strong",
+    "skin_armor": 0.02,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "fracture_weak",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "gigant_jumper",
+    "skin_armor": 0.5,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.1,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "gigant_normal",
+    "skin_armor": 0.5,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.1,
+    "hitzone_head": 0.5,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "gigant_strong",
+    "skin_armor": 0.5,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.1,
+    "hitzone_head": 0.5,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "gigant_very_big",
+    "skin_armor": 0.5,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.075,
+    "hitzone_head": 0.5,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "gigant_weak",
+    "skin_armor": 0.5,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.1,
+    "hitzone_head": 0.5,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "jup_b16_pseudodog_strong",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "jup_b1_controller",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "jup_b1_tushkano_target",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "jup_b212_chimera_killer",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.2,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "jup_b6_bloodsucker_1",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "jup_b6_bloodsucker_2",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "jup_b6_bloodsucker_3",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "karlik",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 0.3,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "labx16_controller",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "labx16_greh_1",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_greh_2",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_snork_1",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_snork_2",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_snork_3",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_snork_4",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "labx16_snork_5",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "labx16_snork_6",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "labx16_zombie_1",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_zombie_10",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "labx16_zombie_11",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "labx16_zombie_12",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "labx16_zombie_13",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "labx16_zombie_14",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_zombie_15",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "labx16_zombie_16",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "labx16_zombie_17",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "labx16_zombie_18",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_zombie_19",
+    "skin_armor": 0,
+    "hit_fraction": 1,
+    "fire_wound_immunity": 20,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "labx16_zombie_2",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "labx16_zombie_3",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "labx16_zombie_4",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "labx16_zombie_5",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_zombie_6",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "labx16_zombie_7",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_zombie_8",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx16_zombie_9",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "labx8_poltergeist",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lurker_1_normal",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.42,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lurker_1_strong",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.42,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lurker_1_weak",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.42,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lurker_2_normal",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.42,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lurker_2_strong",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.42,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lurker_2_weak",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.42,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lurker_3_normal",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.42,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lurker_3_strong",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.42,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lurker_3_weak",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.42,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lx8_1_tushkano_1",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_1_tushkano_2",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_1_tushkano_3",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_1_tushkano_4",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_2_tushkano_1",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_2_tushkano_2",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_2_tushkano_3",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_2_tushkano_4",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_burer",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lx8_burer_2",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lx8_burer_3",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lx8_controller",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lx8_lab_tushkano_1",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_lab_tushkano_2",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_lab_tushkano_3",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_lab_tushkano_4",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_lab_tushkano_5",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_lab_tushkano_6",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_lab_tushkano_7",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_lab_tushkano_8",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_litf_tushkano_1",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_litf_tushkano_2",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_litf_tushkano_3",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_litf_tushkano_4",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_litf_tushkano_5",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_poltergeist",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lx8_snork",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "lx8_snork_1_jump",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "lx8_snork_2_jump",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "lx8_toilet_burer",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "lx8_upper_tushkano_1",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_upper_tushkano_2",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_upper_tushkano_3",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_upper_tushkano_4",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_upper_tushkano_5",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_upper_tushkano_6",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "lx8_upper_tushkano_7",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "m_bibliotekar_e",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 0.1,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_bloodsucker_e",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "m_boar_e",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.4,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 0.75,
+    "hitzone_torso": 1.1,
+    "hitzone_limbs": 1.5,
+    "hitzone_rear": 2.25
+  },
+  {
+    "id": "m_borya_e",
+    "skin_armor": 0.6,
+    "hit_fraction": 0.3,
+    "fire_wound_immunity": 1.1,
+    "hitzone_head": 3,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_burer_e",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_chimera_e",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_controller_e",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_controller_normal",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_controller_normal1111",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_controller_normal2",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_controller_normal666",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_controller_normal777",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_controller_normal888",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_controller_psy",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_dog_e",
+    "skin_armor": 0.01,
+    "hit_fraction": 0.8,
+    "fire_wound_immunity": 1.5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 1.25
+  },
+  {
+    "id": "m_flesh_e",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 0.45,
+    "hitzone_head": 0.7,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 2
+  },
+  {
+    "id": "m_gigant_e",
+    "skin_armor": 0.5,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.1,
+    "hitzone_head": 0.5,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "m_karlik_e",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 0.75,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "m_lurker_e",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.42,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_poltergeist_e",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.92,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_poltergeist_normal_black",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_poltergeist_normal_flame",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.84,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_poltergeist_normal_flame_tlf",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.84,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_poltergeist_normal_tele",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_pseudodog_e",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "m_psysucker_e",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "m_rat_e",
+    "skin_armor": 0,
+    "hit_fraction": 1,
+    "fire_wound_immunity": 6,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "m_snork_e",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "m_tushkano_e",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "mar_smart_terrain_base_dog_doctor",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "mar_smart_terrain_doc_dog",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "mon_m_poltergeist_normal_flame_1",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.84,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "mon_m_poltergeist_normal_flame_2",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.84,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "mon_m_poltergeist_normal_flame_3",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.84,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "nta_tough_zombie_ghost",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 0.12,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "pas_b400_tushkano_smart",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "poltergeist_fake",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "pri_a25_poltergeist",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "pri_b301_snork_1",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "pri_b301_snork_2",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "pri_b301_snork_3",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "pri_b301_snork_4",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "pri_b301_snork_5",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "pseudodog_arena",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "pseudodog_grey_strong",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "pseudodog_grey_weak",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "pseudodog_normal",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "pseudodog_strong",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "pseudodog_strong_base",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "pseudodog_weak",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "pseudodog_weak_base",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "psy_dog",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "psy_dog_normal",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "psy_dog_phantom",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "psysucker_1_normal",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_1_strong",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_1_weak",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_2_normal",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_2_strong",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_2_weak",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_3_normal",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_3_strong",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_3_weak",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_black",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_brown",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_normal",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_strong",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_weak",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "psysucker_white",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "rat_normal",
+    "skin_armor": 0,
+    "hit_fraction": 1,
+    "fire_wound_immunity": 20,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "rat_strong",
+    "skin_armor": 0,
+    "hit_fraction": 1,
+    "fire_wound_immunity": 20,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "rat_weak",
+    "skin_armor": 0,
+    "hit_fraction": 1,
+    "fire_wound_immunity": 20,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "rat_wolf",
+    "skin_armor": 0,
+    "hit_fraction": 1,
+    "fire_wound_immunity": 5,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "snork_arena",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_indoor",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_indoor_normal",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_indoor_strong",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_indoor_weak",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_jumper",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_normal",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_normal2",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_normal3",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_normal4",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_normal_no_mask",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_outdoor",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_strong",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_strong2",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_strong3",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_strong4",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_strong_no_mask",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_weak",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_weak2",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_weak3",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_weak4",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_weak_no_mask",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "snork_weak_special",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "stalker_trader_controller",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "total_bloodsucker_left",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "total_bloodsucker_right",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "total_bloodsucker_with_group_bandits",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "total_burer_with_two_soldiers",
+    "skin_armor": 0.25,
+    "hit_fraction": 0.75,
+    "fire_wound_immunity": 0.4,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "total_chimera_left",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "total_chimera_right",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "total_pseudodog_one_with_human",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "total_snork_left_g",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "total_snork_right_g",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "total_zombied_with_dolg_1",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "total_zombied_with_dolg_2",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "total_zombied_with_dolg_3",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "total_zombied_with_dolg_4",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "total_zombied_with_dolg_5",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "total_zombied_with_dolg_6",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "tushkano_normal",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_normal_a",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_normal_b",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_normal_c",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_strong",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_strong_a",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_strong_b",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_strong_c",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_weak",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_weak_a",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_weak_b",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "tushkano_weak_c",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 10,
+    "hitzone_head": 1.2,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 1.1
+  },
+  {
+    "id": "warlab_main_poltergeist_1",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.84,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "warlab_main_poltergeist_2",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "warlab_main_psycontroller",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.67,
+    "fire_wound_immunity": 1,
+    "hitzone_head": 4,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "warlab_main_psysucker",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "warlab_poltergeist_1",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.84,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "warlab_poltergeist_2",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.84,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "warlab_poltergeist_3",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.84,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "warlab_poltergeist_4",
+    "skin_armor": 0.1,
+    "hit_fraction": 0.55,
+    "fire_wound_immunity": 0.84,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1.2,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "yan_tonnel_gigant",
+    "skin_armor": 0.5,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.1,
+    "hitzone_head": 0.5,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "yan_tonnel_snork_1",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "yan_tonnel_snork_2",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "yan_tonnel_snork_3",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "yan_tonnel_snork_4",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "yan_tonnel_snork_5",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "yan_tonnel_snork_6",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.6,
+    "fire_wound_immunity": 0.6,
+    "hitzone_head": 1.95,
+    "hitzone_torso": 0.9,
+    "hitzone_limbs": 0.95,
+    "hitzone_rear": 0.95
+  },
+  {
+    "id": "zat_b106_chimera",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.2,
+    "fire_wound_immunity": 0.5,
+    "hitzone_head": 1,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 1
+  },
+  {
+    "id": "zat_b18_dog",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "zat_b18_dog_little",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "zat_b18_dog_little_m",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "zat_b18_dog_little_two",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "zat_b18_dog_little_two_m",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "zat_b18_dog_noah",
+    "skin_armor": 0.2,
+    "hit_fraction": 0.7,
+    "fire_wound_immunity": 0.8,
+    "hitzone_head": 2.15,
+    "hitzone_torso": 0.7,
+    "hitzone_limbs": 0.5,
+    "hitzone_rear": 1.15
+  },
+  {
+    "id": "zat_b38_bloodsucker_1",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "zat_b38_bloodsucker_2",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.7,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "zat_b38_bloodsucker_corpse",
+    "skin_armor": 0.3,
+    "hit_fraction": 0.5,
+    "fire_wound_immunity": 0.9,
+    "hitzone_head": 2,
+    "hitzone_torso": 1,
+    "hitzone_limbs": 0.75,
+    "hitzone_rear": 0.75
+  },
+  {
+    "id": "zombi_9",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombi_babka_1",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombi_babka_2",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombi_babka_3",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombi_x3",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombi_x4",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombie_blind",
+    "skin_armor": 0.4,
+    "hit_fraction": 0.9,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombie_fake",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombie_ghol",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombie_ghost",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombie_normal",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombie_strong",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombie_teta",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombie_weak",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  },
+  {
+    "id": "zombie_wich",
+    "skin_armor": 0,
+    "hit_fraction": 0,
+    "fire_wound_immunity": 4,
+    "hitzone_head": 2,
+    "hitzone_torso": 0.5,
+    "hitzone_limbs": 1,
+    "hitzone_rear": 0.5
+  }
+]

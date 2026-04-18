@@ -28,9 +28,7 @@
     "silencers": [
       "wpn_sil_9a91"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_abakan": {
@@ -40,9 +38,7 @@
       "ps01"
     ],
     "silencers": [],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_abakan_camo": {
@@ -54,9 +50,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_abakan_n": {
@@ -77,9 +71,7 @@
       "pso1m21"
     ],
     "silencers": [],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ace21": {
@@ -91,9 +83,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ace52": {
@@ -133,9 +123,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "mark8_rmr",
       "triji",
@@ -164,9 +152,7 @@
     "silencers": [
       "wpn_sil_m42k"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_aek": {
@@ -200,9 +186,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak101": {
@@ -226,9 +210,7 @@
     "silencers": [
       "wpn_sil_atg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak101_camo": {
@@ -252,9 +234,7 @@
     "silencers": [
       "wpn_sil_atg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak102": {
@@ -293,9 +273,7 @@
     "silencers": [
       "wpn_sil_atg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak103_camo": {
@@ -319,9 +297,7 @@
     "silencers": [
       "wpn_sil_atg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak104": {
@@ -333,9 +309,7 @@
     "silencers": [
       "wpn_sil_atg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak104_alfa": {
@@ -373,9 +347,7 @@
     "silencers": [
       "wpn_sil_geks545"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -403,9 +375,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "swamp",
       "shakal"
@@ -449,9 +419,7 @@
     "silencers": [
       "wpn_sil_geks545"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "march_f_shorty_alt",
       "mark8_rmr",
@@ -471,9 +439,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak105_swamp": {
@@ -514,9 +480,7 @@
     "silencers": [
       "wpn_sil_geks545"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "march_f_shorty_alt",
       "mark8_rmr",
@@ -567,9 +531,7 @@
     "silencers": [
       "wpn_sil_geks545"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_monolit"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -660,9 +622,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -708,9 +668,7 @@
     "silencers": [
       "wpn_sil_spec_isg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -747,9 +705,7 @@
     "silencers": [
       "wpn_sil_spec_isg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74": {
@@ -773,9 +729,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74_alt": {
@@ -799,9 +753,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74_custom": {
@@ -825,9 +777,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74_isg": {
@@ -862,9 +812,7 @@
     "silencers": [
       "wpn_sil_spec_isg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "march_f_shorty_alt",
       "triji",
@@ -893,9 +841,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74_n": {
@@ -915,9 +861,7 @@
     "silencers": [
       "wpn_sil_atg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74_old": {
@@ -925,9 +869,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74_pmc": {
@@ -969,9 +911,7 @@
     "silencers": [
       "wpn_sil_atg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -985,9 +925,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74m": {
@@ -1011,9 +949,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74m_alt": {
@@ -1037,9 +973,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74m_beard": {
@@ -1071,9 +1005,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "pritseldob",
       "kashtan_rmr"
@@ -1100,9 +1032,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74m_custom": {
@@ -1126,9 +1056,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74m_duty": {
@@ -1152,9 +1080,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ak74m_n": {
@@ -1274,9 +1200,7 @@
     "silencers": [
       "wpn_sil_spec_isg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "march_f_shorty_alt",
       "triji",
@@ -1316,9 +1240,7 @@
     "silencers": [
       "wpn_sil_spec_isg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "march_f_shorty_alt",
       "triji",
@@ -1391,9 +1313,7 @@
     "silencers": [
       "wpn_sil_pbs4"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "pritseldob",
       "kashtan_rmr"
@@ -1408,9 +1328,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_akm_alfa": {
@@ -1446,9 +1364,7 @@
     "silencers": [
       "wpn_sil_spec_isg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -1460,9 +1376,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_akm_isg": {
@@ -1497,9 +1411,7 @@
     "silencers": [
       "wpn_sil_spec_isg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "march_f_shorty_alt",
       "triji",
@@ -1516,9 +1428,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_akms_alt": {
@@ -1542,9 +1452,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_akms_bas": {
@@ -1552,9 +1460,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_aks": {
@@ -1564,9 +1470,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_aks74": {
@@ -1578,9 +1482,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_aks74_new": {
@@ -1592,9 +1494,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_am17": {
@@ -1619,9 +1519,7 @@
     "silencers": [
       "wpn_sil_atg"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -1661,9 +1559,7 @@
     "silencers": [
       "wpn_addon_silencer"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -1722,9 +1618,7 @@
     "silencers": [
       "wpn_sil_surfire"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ash12": {
@@ -1779,9 +1673,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_aug_a1_bas": {
@@ -1789,9 +1681,7 @@
     "silencers": [
       "wpn_sil_auga"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_aug_a1_custom_bas": {
@@ -1799,9 +1689,7 @@
     "silencers": [
       "wpn_sil_auga"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_aug_a3": {
@@ -1844,9 +1732,7 @@
     "silencers": [
       "wpn_sil_auga"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "mark8_rmr"
     ]
@@ -1856,9 +1742,7 @@
     "silencers": [
       "wpn_sil_auga"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_aug_custom": {
@@ -1872,9 +1756,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_aug_freedom": {
@@ -1904,9 +1786,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "spectre_tactical_kit",
       "infiltrator_tactical_kit"
@@ -1950,9 +1830,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "spec_alt",
@@ -1981,9 +1859,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_benelli_m1014": {
@@ -2144,9 +2020,7 @@
     "silencers": [
       "wpn_sil_surfire"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -2286,9 +2160,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "sup"
     ]
@@ -2316,9 +2188,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "sup"
     ]
@@ -2330,9 +2200,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_dtmdr_sup": {
@@ -2340,9 +2208,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_dvl10": {
@@ -2428,9 +2294,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_fal_aus": {
@@ -2438,9 +2302,7 @@
     "silencers": [
       "wpn_sil_aac762"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "kit_aus_tri",
       "kit_fal_leup",
@@ -2487,9 +2349,7 @@
     "silencers": [
       "wpn_sil_aac762"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -2524,9 +2384,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_fn2000_custom": {
@@ -2534,9 +2392,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_fn2000_nimble": {
@@ -2601,9 +2457,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_fnp45": {
@@ -2681,9 +2535,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_g36": {
@@ -2691,9 +2543,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_g36_camo": {
@@ -2706,9 +2556,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_g36_nimble": {
@@ -2745,9 +2593,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_g36k": {
@@ -2760,9 +2606,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_g36k_rwap": {
@@ -2784,9 +2628,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_g36ka4_rwap": {
@@ -2861,9 +2703,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -2876,17 +2716,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
-    "kits": []
-  },
-  "wpn_g3sg1": {
-    "scopes": [],
-    "silencers": [],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_g43": {
@@ -2902,9 +2732,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_galil_custom": {
@@ -2912,9 +2740,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_galil_modern": {
@@ -2922,9 +2748,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_gauss": {
@@ -3042,9 +2866,7 @@
       "ado"
     ],
     "silencers": [],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_gsh18": {
@@ -3054,9 +2876,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_gsh18_custom": {
@@ -3066,9 +2886,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_hk416": {
@@ -3129,9 +2947,7 @@
     "silencers": [
       "wpn_sil_kac4"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "march_f_shorty_alt",
       "triji",
@@ -3258,9 +3074,7 @@
     "silencers": [
       "wpn_sil_45"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ks23": {
@@ -3330,9 +3144,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_l85_alt": {
@@ -3340,9 +3152,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_l85_custom": {
@@ -3350,9 +3160,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_l85_m1": {
@@ -3362,9 +3170,7 @@
     "silencers": [
       "wpn_sil_m42k"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_l85_m2": {
@@ -3400,9 +3206,7 @@
     "silencers": [
       "wpn_sil_m42k"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -3444,9 +3248,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_l85a2": {
@@ -3454,9 +3256,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_l85a2_alt": {
@@ -3464,9 +3264,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_l85a2_custom": {
@@ -3474,9 +3272,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_l85a2_modern": {
@@ -3484,9 +3280,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_l96a1": {
@@ -3518,9 +3312,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_lr300_camo": {
@@ -3532,9 +3324,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_lr300_custom": {
@@ -3546,9 +3336,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_m16": {
@@ -3655,9 +3443,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_m4_ru556": {
@@ -3695,9 +3481,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_m4_tac": {
@@ -3726,9 +3510,7 @@
     "silencers": [
       "wpn_sil_surfire"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -3744,9 +3526,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_m4a1_camo": {
@@ -3758,9 +3538,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_m4a1_custom": {
@@ -3772,9 +3550,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_m4a1_freedom": {
@@ -3786,9 +3562,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_m4a1_siber": {
@@ -3828,9 +3602,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_m82": {
@@ -3864,9 +3636,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_mk47": {
@@ -3899,9 +3669,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "spec_alt",
       "mark8_rmr",
@@ -4024,9 +3792,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_mp5_alt": {
@@ -4052,9 +3818,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_mp5_custom": {
@@ -4080,9 +3844,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_mp5_nimble": {
@@ -4110,9 +3872,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_mp5sd": {
@@ -4140,9 +3900,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_mp5sd_custom": {
@@ -4170,9 +3928,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_mp5sd_new": {
@@ -4200,9 +3956,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_mp7": {
@@ -4235,9 +3989,7 @@
     "silencers": [
       "wpn_sil_57"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_mp9": {
@@ -4264,9 +4016,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_oc33": {
@@ -4293,9 +4043,7 @@
     "silencers": [
       "wpn_sil_57"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_p90_gs": {
@@ -4303,9 +4051,7 @@
     "silencers": [
       "wpn_sil_57"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_p90gamma": {
@@ -4333,9 +4079,7 @@
     "silencers": [
       "wpn_sil_57"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_pb": {
@@ -4577,9 +4321,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ppsh41_rednew": {
@@ -4589,9 +4331,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ppsh41_woodnew": {
@@ -4601,9 +4341,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_raptr": {
@@ -4700,9 +4438,7 @@
     "silencers": [
       "wpn_addon_silencer"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_rpg7": {
@@ -4718,9 +4454,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_rpk74": {
@@ -4743,9 +4477,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_rpk74_16": {
@@ -4781,9 +4513,7 @@
     "silencers": [
       "wpn_sil_geks545"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -4805,9 +4535,7 @@
     "silencers": [
       "wpn_sil_tgp-a"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "spec_alt",
@@ -4823,9 +4551,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_saiga12s_isg": {
@@ -4859,9 +4585,7 @@
     "silencers": [
       "wpn_sil_salvo"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_saiga12s_m1": {
@@ -4884,9 +4608,7 @@
     "silencers": [
       "wpn_sil_kek12"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_saiga12s_m2": {
@@ -4922,9 +4644,7 @@
     "silencers": [
       "wpn_sil_salvo"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_scar": {
@@ -5064,9 +4784,7 @@
     "silencers": [
       "wpn_sil_aac762"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -5097,9 +4815,7 @@
     "silencers": [
       "wpn_sil_aac762"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -5130,9 +4846,7 @@
     "silencers": [
       "wpn_sil_aac762"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_scar_siber_m2_custom": {
@@ -5164,9 +4878,7 @@
     "silencers": [
       "wpn_sil_aac762"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -5180,9 +4892,7 @@
     "silencers": [
       "wpn_sil_45"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_sig220_custom": {
@@ -5192,9 +4902,7 @@
     "silencers": [
       "wpn_sil_45"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_sig220_n": {
@@ -5202,9 +4910,7 @@
     "silencers": [
       "wpn_sil_black_box"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "upg220",
       "u2p2g0r"
@@ -5215,9 +4921,7 @@
     "silencers": [
       "wpn_sil_black_box"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "upg220",
       "u2p2g0r"
@@ -5228,9 +4932,7 @@
     "silencers": [
       "wpn_sil_black_box"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "upg220",
       "u2p2g0r"
@@ -5243,9 +4945,7 @@
     "silencers": [
       "wpn_sil_45"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_sig226": {
@@ -5253,9 +4953,7 @@
     "silencers": [
       "wpn_sil_osp9"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "226sig_kit"
     ]
@@ -5265,9 +4963,7 @@
     "silencers": [
       "wpn_sil_osp9"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "lazup_pl15"
     ]
@@ -5298,9 +4994,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_sig550_camo": {
@@ -5376,9 +5070,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_sig550_sniper": {
@@ -5386,9 +5078,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_sig552": {
@@ -5401,9 +5091,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_sks_b": {
@@ -5557,9 +5245,7 @@
     "silencers": [
       "wpn_sil_sr25"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_sr2_m1": {
@@ -5590,9 +5276,7 @@
     "silencers": [
       "wpn_sil_veresk"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "kp_sr2"
     ]
@@ -5602,9 +5286,7 @@
     "silencers": [
       "wpn_sil_veresk"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "kp_sr2",
       "sr2_upkit"
@@ -5615,9 +5297,7 @@
     "silencers": [
       "wpn_sil_veresk"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_steyr_scout": {
@@ -5888,9 +5568,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_ump45": {
@@ -5917,9 +5595,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "mark8_rmr"
     ]
@@ -5951,9 +5627,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_usp": {
@@ -5963,9 +5637,7 @@
     "silencers": [
       "wpn_sil_45"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_usp_custom": {
@@ -5975,9 +5647,7 @@
     "silencers": [
       "wpn_sil_45"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_usp_match": {
@@ -5987,9 +5657,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_usp_nimble": {
@@ -5999,9 +5667,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_usp_tac": {
@@ -6014,9 +5680,7 @@
     "silencers": [
       "wpn_sil_black_box"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_usp_tac_45": {
@@ -6030,9 +5694,7 @@
     "silencers": [
       "wpn_sil_black_box"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_val": {
@@ -6113,9 +5775,7 @@
     "silencers": [
       "wpn_sil_pbs1"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_vihr": {
@@ -6139,9 +5799,7 @@
     "silencers": [
       "wpn_sil_vihr"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_vintorez": {
@@ -6154,9 +5812,7 @@
     "silencers": [
       "wpn_addon_silencer"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_vintorez_1pn93": {
@@ -6166,9 +5822,7 @@
     "silencers": [
       "wpn_addon_silencer"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_vintorez_alt": {
@@ -6181,9 +5835,7 @@
     "silencers": [
       "wpn_addon_silencer"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_vintorez_isg": {
@@ -6256,9 +5908,7 @@
     "silencers": [
       "wpn_addon_silencer"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_vintorez_m2": {
@@ -6302,9 +5952,7 @@
     "silencers": [
       "wpn_addon_silencer"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "triji",
       "mark8_rmr",
@@ -6333,9 +5981,7 @@
     "silencers": [
       "wpn_addon_silencer"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_vintorez_nimble": {
@@ -6345,9 +5991,7 @@
     "silencers": [
       "wpn_addon_silencer"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_vityaz": {
@@ -6400,9 +6044,7 @@
     "silencers": [
       "wpn_sil_9a91"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_vssk": {
@@ -6477,9 +6119,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_walther_custom": {
@@ -6489,9 +6129,7 @@
     "silencers": [
       "wpn_sil_9mm"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_walther_p99": {
@@ -6499,9 +6137,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "mod9"
     ]
@@ -6511,9 +6147,7 @@
     "silencers": [
       "wpn_sil_gemtech"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher"
-    ],
+    "launchers": [],
     "kits": [
       "mod9"
     ]
@@ -6540,9 +6174,7 @@
     "silencers": [
       "wpn_sil_m42k"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   },
   "wpn_xm8": {
@@ -6556,9 +6188,7 @@
     "silencers": [
       "wpn_sil_nato"
     ],
-    "launchers": [
-      "wpn_addon_grenade_launcher_m203"
-    ],
+    "launchers": [],
     "kits": []
   }
 }

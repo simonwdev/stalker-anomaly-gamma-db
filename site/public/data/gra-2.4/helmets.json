@@ -84,7 +84,8 @@
       "ui_inv_outfit_explosion_protection": "8%",
       "displayName": "helm_ach7ex",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_hardhat_snag",
@@ -106,7 +107,8 @@
       "ui_inv_outfit_explosion_protection": "8%",
       "displayName": "st_helm_hardhat [snag]",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_m50",
@@ -128,7 +130,8 @@
       "ui_inv_outfit_explosion_protection": "5%",
       "displayName": "helm_m50",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_respirator",
@@ -150,7 +153,8 @@
       "ui_inv_outfit_explosion_protection": "0%",
       "displayName": "st_helm_respirator [default]",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_metro",
@@ -172,7 +176,8 @@
       "ui_inv_outfit_explosion_protection": "11%",
       "displayName": "st_helm_metro",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_cloth_mask",
@@ -216,7 +221,8 @@
       "ui_inv_outfit_explosion_protection": "10%",
       "displayName": "st_helm_exo_name",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_respirator_old",
@@ -238,7 +244,8 @@
       "ui_inv_outfit_explosion_protection": "0%",
       "displayName": "st_helm_respirator [old]",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_spartan",
@@ -260,7 +267,8 @@
       "ui_inv_outfit_explosion_protection": "13%",
       "displayName": "helm_spartan",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_battle",
@@ -282,7 +290,8 @@
       "ui_inv_outfit_explosion_protection": "9%",
       "displayName": "st_helm_battle",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_resp",
@@ -304,7 +313,8 @@
       "ui_inv_outfit_explosion_protection": "0%",
       "displayName": "st_helm_resp",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_hardhat",
@@ -326,7 +336,8 @@
       "ui_inv_outfit_explosion_protection": "8%",
       "displayName": "st_helm_hardhat [default]",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_ach7",
@@ -348,7 +359,8 @@
       "ui_inv_outfit_explosion_protection": "6%",
       "displayName": "helm_ach7",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_respirator_gp5",
@@ -370,7 +382,8 @@
       "ui_inv_outfit_explosion_protection": "0%",
       "displayName": "st_helm_respirator_gp5",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_m40",
@@ -392,7 +405,8 @@
       "ui_inv_outfit_explosion_protection": "5%",
       "displayName": "st_helm_m40",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_tactic",
@@ -414,7 +428,8 @@
       "ui_inv_outfit_explosion_protection": "8%",
       "displayName": "st_helm_tactic",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_ranger",
@@ -436,7 +451,8 @@
       "ui_inv_outfit_explosion_protection": "6%",
       "displayName": "helm_ranger",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_ppm88",
@@ -458,7 +474,8 @@
       "ui_inv_outfit_explosion_protection": "0%",
       "displayName": "helm_ppm88",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "helm_protective",
@@ -480,7 +497,8 @@
       "ui_inv_outfit_explosion_protection": "0%",
       "displayName": "st_helm_protective",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     }
   ]
 }

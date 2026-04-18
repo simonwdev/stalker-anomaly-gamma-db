@@ -1687,6 +1687,174 @@
     "displayName": "specops_outfit_name"
   },
   {
+    "id": "ps01",
+    "name": "st_addon_scope",
+    "category": "Scopes",
+    "displayName": "st_addon_scope [ps01]"
+  },
+  {
+    "id": "wpn_addon_scope",
+    "name": "st_addon_scope",
+    "category": "Scopes",
+    "displayName": "st_addon_scope [wpn_addon_scope]"
+  },
+  {
+    "id": "1p29",
+    "name": "st_addon_scope_1p29",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_1p29"
+  },
+  {
+    "id": "ac10632",
+    "name": "st_addon_scope_ac10632",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_ac10632"
+  },
+  {
+    "id": "ac11090",
+    "name": "st_addon_scope_ac11090",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_ac11090"
+  },
+  {
+    "id": "acog",
+    "name": "st_addon_scope_acog",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_acog"
+  },
+  {
+    "id": "c-more",
+    "name": "st_addon_scope_cmore",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_cmore"
+  },
+  {
+    "id": "eot",
+    "name": "st_addon_scope_eotech",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_eotech"
+  },
+  {
+    "id": "wpn_addon_scope_susat",
+    "name": "st_addon_scope_galil_susat",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_galil_susat"
+  },
+  {
+    "id": "kobra",
+    "name": "st_addon_scope_kobra",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_kobra"
+  },
+  {
+    "id": "pso1m21",
+    "name": "st_addon_scope_pso-1m2-01",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_pso-1m2-01"
+  },
+  {
+    "id": "wpn_addon_scope_g43",
+    "name": "st_addon_scope_zf4",
+    "category": "Scopes",
+    "displayName": "st_addon_scope_zf4"
+  },
+  {
+    "id": "wpn_sil_45",
+    "name": "st_addon_sil_45",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_45"
+  },
+  {
+    "id": "wpn_sil_57",
+    "name": "st_addon_sil_57",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_57"
+  },
+  {
+    "id": "wpn_sil_6p9",
+    "name": "st_addon_sil_6p9",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_6p9"
+  },
+  {
+    "id": "wpn_sil_9a91",
+    "name": "st_addon_sil_9a91",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_9a91"
+  },
+  {
+    "id": "wpn_sil_9mm",
+    "name": "st_addon_sil_9mm",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_9mm"
+  },
+  {
+    "id": "wpn_sil_aps",
+    "name": "st_addon_sil_aps",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_aps"
+  },
+  {
+    "id": "wpn_sil_atg",
+    "name": "st_addon_sil_atg",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_atg"
+  },
+  {
+    "id": "wpn_sil_gemtech",
+    "name": "st_addon_sil_gemtech",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_gemtech"
+  },
+  {
+    "id": "wpn_sil_kzrzp",
+    "name": "st_addon_sil_kzrzp",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_kzrzp"
+  },
+  {
+    "id": "wpn_sil_nato",
+    "name": "st_addon_sil_nato",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_nato"
+  },
+  {
+    "id": "wpn_sil_pbs1",
+    "name": "st_addon_sil_pbs1",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_pbs1"
+  },
+  {
+    "id": "wpn_sil_pbs4",
+    "name": "st_addon_sil_pbs4",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_pbs4"
+  },
+  {
+    "id": "wpn_sil_sr25",
+    "name": "st_addon_sil_sr25",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_sr25"
+  },
+  {
+    "id": "wpn_sil_tgp-a",
+    "name": "st_addon_sil_tgp-a",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_tgp-a"
+  },
+  {
+    "id": "wpn_sil_vihr",
+    "name": "st_addon_sil_vihr",
+    "category": "Silencers",
+    "displayName": "st_addon_sil_vihr"
+  },
+  {
+    "id": "wpn_addon_silencer",
+    "name": "st_addon_silencer",
+    "category": "Silencers",
+    "displayName": "st_addon_silencer"
+  },
+  {
     "id": "adrenalin",
     "name": "st_adrenalin",
     "category": "Medicine",
@@ -2562,6 +2730,18 @@
     "category": "Explosives",
     "displayName": "st_grenade_f1",
     "hasNpcWeaponDrop": true
+  },
+  {
+    "id": "wpn_addon_grenade_launcher",
+    "name": "st_grenade_launcher",
+    "category": "Grenade Launchers",
+    "displayName": "st_grenade_launcher"
+  },
+  {
+    "id": "wpn_addon_grenade_launcher_m203",
+    "name": "st_grenade_launcher_m203",
+    "category": "Grenade Launchers",
+    "displayName": "st_grenade_launcher_m203"
   },
   {
     "id": "grenade_rgd5",

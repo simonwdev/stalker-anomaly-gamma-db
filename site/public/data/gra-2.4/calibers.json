@@ -14,6 +14,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       },
@@ -29,6 +32,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "144",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       },
@@ -44,6 +50,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "860",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       },
@@ -59,6 +68,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "96",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       },
@@ -74,6 +86,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "650",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.31",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       },
@@ -89,6 +104,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "160",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       },
@@ -104,6 +122,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "300",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.17",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       },
@@ -119,6 +140,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "320",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       },
@@ -134,6 +158,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "544",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       }
@@ -154,6 +181,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1240",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 4,
         "apValue": 0
       },
@@ -169,6 +199,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "630",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.6",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 5,
         "apValue": 0
       },
@@ -184,6 +217,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.61",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 5,
         "apValue": 0
       },
@@ -199,6 +235,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "350",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 4,
         "apValue": 0
       },
@@ -214,6 +253,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3125",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.6",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 5,
         "apValue": 0
       },
@@ -229,6 +271,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1000",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 4,
         "apValue": 0
       }
@@ -249,6 +294,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "7000",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "1.2",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 5,
         "apValue": 1
       },
@@ -264,6 +312,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1260",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "0.35",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       },
@@ -279,6 +330,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2200",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "1.5",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 5,
         "apValue": 1
       },
@@ -294,6 +348,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1600",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "0.35",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       },
@@ -309,6 +366,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "200",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "1",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 5,
         "apValue": 1
       },
@@ -324,6 +384,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1750",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "0.35",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       }
@@ -344,6 +407,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       },
@@ -359,6 +425,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1750",
         "st_data_export_weapon_degradation": "350%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       },
@@ -374,6 +443,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "250",
         "st_data_export_weapon_degradation": "130%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       }
@@ -394,6 +466,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "624",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.8",
+        "st_data_export_k_ap": "0.23",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       },
@@ -409,6 +484,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "200",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.65",
+        "st_data_export_k_ap": "0.17",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 3,
         "apValue": 0
       },
@@ -424,6 +502,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "160",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.8",
+        "st_data_export_k_ap": "0.23",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       },
@@ -439,6 +520,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "115",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.65",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 3,
         "apValue": 0
       },
@@ -454,6 +538,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "420",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.65",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 3,
         "apValue": 0
       },
@@ -469,6 +556,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "400",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.8",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       }
@@ -489,6 +579,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "855",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -504,6 +597,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2850",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.61",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 5,
         "apValue": 0
       },
@@ -519,6 +615,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "430",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.61",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 5,
         "apValue": 0
       },
@@ -534,6 +633,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.61",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 5,
         "apValue": 0
       },
@@ -549,6 +651,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1000",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -564,6 +669,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "255",
         "st_data_export_weapon_degradation": "130%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.4",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       }
@@ -584,6 +692,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "425",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 4,
         "apValue": 0
       },
@@ -599,6 +710,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.5",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 5,
         "apValue": 0
       },
@@ -614,6 +728,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "635",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.5",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 5,
         "apValue": 0
       },
@@ -629,6 +746,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1380",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 4,
         "apValue": 0
       },
@@ -644,6 +764,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1150",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 4,
         "apValue": 0
       },
@@ -659,6 +782,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3325",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.5",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 5,
         "apValue": 0
       }
@@ -679,6 +805,9 @@
         "st_data_export_projectiles": "9",
         "st_upgr_cost": "750",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.4",
+        "st_data_export_k_ap": "0.038",
+        "st_data_export_k_air_resistance": "2.2",
         "apClass": 2,
         "apValue": 0
       },
@@ -694,6 +823,9 @@
         "st_data_export_projectiles": "9",
         "st_upgr_cost": "415",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "0.38",
+        "st_data_export_k_ap": "0.038",
+        "st_data_export_k_air_resistance": "2.2",
         "apClass": 2,
         "apValue": 0
       },
@@ -709,6 +841,9 @@
         "st_data_export_projectiles": "11",
         "st_upgr_cost": "460",
         "st_data_export_weapon_degradation": "100%",
+        "st_data_export_k_hit": "0.3",
+        "st_data_export_k_ap": "0.038",
+        "st_data_export_k_air_resistance": "2",
         "apClass": 2,
         "apValue": 0
       },
@@ -724,6 +859,9 @@
         "st_data_export_projectiles": "9",
         "st_upgr_cost": "125",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "0.38",
+        "st_data_export_k_ap": "0.038",
+        "st_data_export_k_air_resistance": "2.2",
         "apClass": 2,
         "apValue": 0
       },
@@ -739,6 +877,9 @@
         "st_data_export_projectiles": "9",
         "st_upgr_cost": "50000",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.4",
+        "st_data_export_k_ap": "0.05",
+        "st_data_export_k_air_resistance": "2",
         "apClass": 2,
         "apValue": 0
       }
@@ -759,6 +900,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1050",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.6",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       },
@@ -774,6 +918,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2550",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.47",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -789,6 +936,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "740",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -804,6 +954,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "900",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.6",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       },
@@ -819,6 +972,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "800",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -834,6 +990,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "220",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -849,6 +1008,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "460",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.5",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 5,
         "apValue": 0
       },
@@ -864,6 +1026,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.47",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -879,6 +1044,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "300",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.6",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       }
@@ -899,6 +1067,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1100",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.45",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 3,
         "apValue": 0
       },
@@ -914,6 +1085,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1050",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.45",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 3,
         "apValue": 0
       },
@@ -929,6 +1103,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.52",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 5,
         "apValue": 0
       },
@@ -944,6 +1121,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "320",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.45",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 3,
         "apValue": 0
       },
@@ -959,6 +1139,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "800",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 4,
         "apValue": 0
       },
@@ -974,6 +1157,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "230",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 4,
         "apValue": 0
       },
@@ -989,6 +1175,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "560",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.52",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 5,
         "apValue": 0
       },
@@ -1004,6 +1193,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3220",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.52",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 5,
         "apValue": 0
       },
@@ -1019,6 +1211,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "825",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 4,
         "apValue": 0
       }
@@ -1039,6 +1234,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "235",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       },
@@ -1054,6 +1252,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1300",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       },
@@ -1069,6 +1270,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3000",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.65",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 5,
         "apValue": 0
       },
@@ -1084,6 +1288,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "500",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.65",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 5,
         "apValue": 0
       },
@@ -1099,6 +1306,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2925",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       },
@@ -1114,6 +1324,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       },
@@ -1129,6 +1342,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1540",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       },
@@ -1144,6 +1360,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "400",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       },
@@ -1159,6 +1378,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "6840",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.65",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 5,
         "apValue": 0
       }
@@ -1179,6 +1401,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "188",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.09",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 2,
         "apValue": 0
       },
@@ -1194,6 +1419,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1500",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.38",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 4,
         "apValue": 0
       },
@@ -1209,6 +1437,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "750",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.38",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 4,
         "apValue": 0
       },
@@ -1224,6 +1455,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "630",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.09",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 2,
         "apValue": 0
       },
@@ -1239,6 +1473,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "112",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.17",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 3,
         "apValue": 0
       },
@@ -1254,6 +1491,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "600",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 3,
         "apValue": 0
       },
@@ -1269,6 +1509,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "360",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.17",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 3,
         "apValue": 0
       },
@@ -1284,6 +1527,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "200",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.38",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 4,
         "apValue": 0
       },
@@ -1299,6 +1545,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "400",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.19",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 3,
         "apValue": 0
       }
@@ -1319,6 +1568,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "335",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       },
@@ -1334,6 +1586,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       },
@@ -1349,6 +1604,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2500",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       },
@@ -1364,6 +1622,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "530",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       },
@@ -1379,6 +1640,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       },
@@ -1394,6 +1658,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1100",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       }
@@ -1414,6 +1681,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "870",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       },
@@ -1429,6 +1699,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "650",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.13",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       },
@@ -1444,6 +1717,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "273",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       },
@@ -1459,6 +1735,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "400",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.7",
+        "st_data_export_k_ap": "0.18",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       },
@@ -1474,6 +1753,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "140",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.7",
+        "st_data_export_k_ap": "0.16",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       },
@@ -1489,6 +1771,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "504",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.7",
+        "st_data_export_k_ap": "0.16",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       }
@@ -1509,6 +1794,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1100",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "2.5",
+        "st_data_export_k_ap": "0.4",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 4,
         "apValue": 0
       },
@@ -1524,6 +1812,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "210",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.21",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       },
@@ -1539,6 +1830,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "950",
         "st_data_export_weapon_degradation": "105%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.21",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       },
@@ -1554,6 +1848,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3150",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "1.2",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       },
@@ -1569,6 +1866,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1250",
         "st_data_export_weapon_degradation": "105%",
+        "st_data_export_k_hit": "1.2",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       },
@@ -1584,6 +1884,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "690",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.21",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       },
@@ -1599,6 +1902,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "330",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "1.2",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       }
@@ -1619,6 +1925,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.18",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       },
@@ -1634,6 +1943,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "650",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.4",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -1649,6 +1961,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "250",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.4",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -1664,6 +1979,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "195",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.18",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       },
@@ -1679,6 +1997,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "700",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.18",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       },
@@ -1694,6 +2015,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2083",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.4",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       }
@@ -1714,6 +2038,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "112",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.17",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 3,
         "apValue": 0
       },
@@ -1729,6 +2056,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "360",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.17",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 3,
         "apValue": 0
       },
@@ -1744,6 +2074,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "400",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.19",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 3,
         "apValue": 0
       }
@@ -1764,6 +2097,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "188",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.09",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 2,
         "apValue": 0
       },
@@ -1779,6 +2115,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "630",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.09",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 2,
         "apValue": 0
       },
@@ -1794,6 +2133,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "600",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 3,
         "apValue": 0
       }
@@ -1814,6 +2156,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1500",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.38",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 4,
         "apValue": 0
       },
@@ -1829,6 +2174,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "750",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.38",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 4,
         "apValue": 0
       },
@@ -1844,6 +2192,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "200",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.67",
+        "st_data_export_k_ap": "0.38",
+        "st_data_export_k_air_resistance": "0.75",
         "apClass": 4,
         "apValue": 0
       }
@@ -1864,6 +2215,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "650",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.4",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -1879,6 +2233,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "250",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.4",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -1894,6 +2251,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2083",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.4",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       }
@@ -1914,6 +2274,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.18",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       },
@@ -1929,6 +2292,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "195",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.18",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       },
@@ -1944,6 +2310,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "700",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.74",
+        "st_data_export_k_ap": "0.18",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       }
@@ -1964,6 +2333,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "96",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       },
@@ -1979,6 +2351,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "300",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.17",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       },
@@ -1994,6 +2369,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "320",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       }
@@ -2014,6 +2392,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       },
@@ -2029,6 +2410,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "160",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       },
@@ -2044,6 +2428,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "544",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 3,
         "apValue": 0
       }
@@ -2064,6 +2451,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "144",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       },
@@ -2079,6 +2469,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "860",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       },
@@ -2094,6 +2487,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "650",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.6",
+        "st_data_export_k_ap": "0.31",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       }
@@ -2114,6 +2510,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "240",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "1.2",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       },
@@ -2129,6 +2528,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.2",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       },
@@ -2144,6 +2546,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1975",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "1.2",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.8",
         "apClass": 4,
         "apValue": 0
       }
@@ -2164,6 +2569,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "400",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.7",
+        "st_data_export_k_ap": "0.18",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       },
@@ -2179,6 +2587,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "140",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.7",
+        "st_data_export_k_ap": "0.16",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       },
@@ -2194,6 +2605,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "504",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.7",
+        "st_data_export_k_ap": "0.16",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       }
@@ -2214,6 +2628,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "870",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       },
@@ -2229,6 +2646,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "650",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.13",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       },
@@ -2244,6 +2664,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "273",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.1",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 3,
         "apValue": 0
       }
@@ -2264,6 +2687,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "200",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.65",
+        "st_data_export_k_ap": "0.17",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 3,
         "apValue": 0
       },
@@ -2279,6 +2705,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "115",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.65",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 3,
         "apValue": 0
       },
@@ -2294,6 +2723,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "420",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.65",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 3,
         "apValue": 0
       }
@@ -2314,6 +2746,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "624",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.8",
+        "st_data_export_k_ap": "0.23",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       },
@@ -2329,6 +2764,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "160",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.8",
+        "st_data_export_k_ap": "0.23",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       },
@@ -2344,6 +2782,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "400",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.8",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       }
@@ -2364,6 +2805,9 @@
         "st_data_export_projectiles": "9",
         "st_upgr_cost": "750",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.4",
+        "st_data_export_k_ap": "0.038",
+        "st_data_export_k_air_resistance": "2.2",
         "apClass": 2,
         "apValue": 0
       },
@@ -2379,6 +2823,9 @@
         "st_data_export_projectiles": "9",
         "st_upgr_cost": "415",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "0.38",
+        "st_data_export_k_ap": "0.038",
+        "st_data_export_k_air_resistance": "2.2",
         "apClass": 2,
         "apValue": 0
       },
@@ -2394,6 +2841,9 @@
         "st_data_export_projectiles": "9",
         "st_upgr_cost": "125",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "0.38",
+        "st_data_export_k_ap": "0.038",
+        "st_data_export_k_air_resistance": "2.2",
         "apClass": 2,
         "apValue": 0
       }
@@ -2414,6 +2864,9 @@
         "st_data_export_projectiles": "9",
         "st_upgr_cost": "50000",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.4",
+        "st_data_export_k_ap": "0.05",
+        "st_data_export_k_air_resistance": "2",
         "apClass": 2,
         "apValue": 0
       }
@@ -2434,6 +2887,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "210",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.21",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       },
@@ -2449,6 +2905,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "950",
         "st_data_export_weapon_degradation": "105%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.21",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       },
@@ -2464,6 +2923,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "690",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "0.21",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       }
@@ -2484,6 +2946,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3150",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "1.2",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       },
@@ -2499,6 +2964,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1250",
         "st_data_export_weapon_degradation": "105%",
+        "st_data_export_k_hit": "1.2",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       },
@@ -2514,6 +2982,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "330",
         "st_data_export_weapon_degradation": "700%",
+        "st_data_export_k_hit": "1.2",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 4,
         "apValue": 0
       }
@@ -2534,6 +3005,9 @@
         "st_data_export_projectiles": "11",
         "st_upgr_cost": "460",
         "st_data_export_weapon_degradation": "100%",
+        "st_data_export_k_hit": "0.3",
+        "st_data_export_k_ap": "0.038",
+        "st_data_export_k_air_resistance": "2",
         "apClass": 2,
         "apValue": 0
       }
@@ -2554,6 +3028,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1100",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "2.5",
+        "st_data_export_k_ap": "0.4",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 4,
         "apValue": 0
       }
@@ -2574,6 +3051,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "800",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 4,
         "apValue": 0
       },
@@ -2589,6 +3069,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "230",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 4,
         "apValue": 0
       },
@@ -2604,6 +3087,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "825",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 4,
         "apValue": 0
       }
@@ -2624,6 +3110,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1100",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.45",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 3,
         "apValue": 0
       },
@@ -2639,6 +3128,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1050",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.45",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 3,
         "apValue": 0
       },
@@ -2654,6 +3146,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "320",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.45",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 3,
         "apValue": 0
       }
@@ -2674,6 +3169,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.52",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 5,
         "apValue": 0
       },
@@ -2689,6 +3187,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "560",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.52",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 5,
         "apValue": 0
       },
@@ -2704,6 +3205,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3220",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "0.9",
+        "st_data_export_k_ap": "0.52",
+        "st_data_export_k_air_resistance": "0.2",
         "apClass": 5,
         "apValue": 0
       }
@@ -2724,6 +3228,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "425",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 4,
         "apValue": 0
       },
@@ -2739,6 +3246,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1380",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 4,
         "apValue": 0
       },
@@ -2754,6 +3264,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1150",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 4,
         "apValue": 0
       }
@@ -2774,6 +3287,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.5",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 5,
         "apValue": 0
       },
@@ -2789,6 +3305,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "635",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.5",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 5,
         "apValue": 0
       },
@@ -2804,6 +3323,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3325",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "0.5",
+        "st_data_export_k_air_resistance": "0.4",
         "apClass": 5,
         "apValue": 0
       }
@@ -2824,6 +3346,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "740",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -2839,6 +3364,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "800",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -2854,6 +3382,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "220",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       }
@@ -2874,6 +3405,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1050",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.6",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       },
@@ -2889,6 +3423,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "900",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.6",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       },
@@ -2904,6 +3441,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "300",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.6",
+        "st_data_export_k_ap": "0.15",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 3,
         "apValue": 0
       }
@@ -2924,6 +3464,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2550",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.47",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -2939,6 +3482,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "460",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.5",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 5,
         "apValue": 0
       },
@@ -2954,6 +3500,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.47",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       }
@@ -2974,6 +3523,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "855",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -2989,6 +3541,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1000",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       },
@@ -3004,6 +3559,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "255",
         "st_data_export_weapon_degradation": "130%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.4",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 4,
         "apValue": 0
       }
@@ -3024,6 +3582,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2850",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.61",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 5,
         "apValue": 0
       },
@@ -3039,6 +3600,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "430",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.61",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 5,
         "apValue": 0
       },
@@ -3054,6 +3618,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "0.61",
+        "st_data_export_k_air_resistance": "0.3",
         "apClass": 5,
         "apValue": 0
       }
@@ -3074,6 +3641,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1240",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 4,
         "apValue": 0
       },
@@ -3089,6 +3659,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "350",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 4,
         "apValue": 0
       },
@@ -3104,6 +3677,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1000",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 4,
         "apValue": 0
       }
@@ -3124,6 +3700,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "630",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.6",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 5,
         "apValue": 0
       },
@@ -3139,6 +3718,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.61",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 5,
         "apValue": 0
       },
@@ -3154,6 +3736,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3125",
         "st_data_export_weapon_degradation": "400%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.6",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 5,
         "apValue": 0
       }
@@ -3174,6 +3759,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1060",
         "st_data_export_weapon_degradation": "500%",
+        "st_data_export_k_hit": "1.5",
+        "st_data_export_k_ap": "0.37",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 4,
         "apValue": 0
       },
@@ -3189,6 +3777,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3800",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.5",
+        "st_data_export_k_ap": "0.37",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 4,
         "apValue": 0
       },
@@ -3204,6 +3795,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "4600",
         "st_data_export_weapon_degradation": "500%",
+        "st_data_export_k_hit": "1.5",
+        "st_data_export_k_ap": "0.37",
+        "st_data_export_k_air_resistance": "0.1",
         "apClass": 4,
         "apValue": 0
       }
@@ -3224,6 +3818,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3000",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.65",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 5,
         "apValue": 0
       },
@@ -3239,6 +3836,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "500",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.65",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 5,
         "apValue": 0
       },
@@ -3254,6 +3854,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "6840",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.65",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 5,
         "apValue": 0
       }
@@ -3274,6 +3877,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "235",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       },
@@ -3289,6 +3895,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1300",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       },
@@ -3304,6 +3913,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1540",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       }
@@ -3324,6 +3936,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2925",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       },
@@ -3339,6 +3954,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       },
@@ -3354,6 +3972,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "400",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.18",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 4,
         "apValue": 0
       }
@@ -3374,6 +3995,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1260",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "0.35",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       },
@@ -3389,6 +4013,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1600",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "0.35",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       },
@@ -3404,6 +4031,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1750",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "0.35",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 4,
         "apValue": 0
       }
@@ -3424,6 +4054,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "7000",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "1.2",
+        "st_data_export_k_air_resistance": "0.6",
         "apClass": 5,
         "apValue": 1
       },
@@ -3439,6 +4072,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2200",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "1.5",
+        "st_data_export_k_air_resistance": "0.5",
         "apClass": 5,
         "apValue": 1
       },
@@ -3454,6 +4090,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "200",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.35",
+        "st_data_export_k_ap": "1",
+        "st_data_export_k_air_resistance": "0.7",
         "apClass": 5,
         "apValue": 1
       }
@@ -3474,6 +4113,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "11000",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "1.3",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 5,
         "apValue": 1
       },
@@ -3489,6 +4131,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "720",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1.1",
+        "st_data_export_k_ap": "1.3",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 5,
         "apValue": 1
       },
@@ -3504,6 +4149,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2000",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1.3",
+        "st_data_export_k_ap": "1.4",
+        "st_data_export_k_air_resistance": "0.05",
         "apClass": 5,
         "apValue": 1
       }
@@ -3524,6 +4172,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "335",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       },
@@ -3539,6 +4190,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "700",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       },
@@ -3554,6 +4208,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1100",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.25",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       }
@@ -3574,6 +4231,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "2500",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       },
@@ -3589,6 +4249,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "530",
         "st_data_export_weapon_degradation": "900%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       },
@@ -3604,6 +4267,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.45",
+        "st_data_export_k_air_resistance": "0.25",
         "apClass": 4,
         "apValue": 0
       }
@@ -3624,6 +4290,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "10256",
         "st_data_export_weapon_degradation": "3200%",
+        "st_data_export_k_hit": "2.3",
+        "st_data_export_k_ap": "4.5",
+        "st_data_export_k_air_resistance": "0.01",
         "apClass": 5,
         "apValue": 4
       },
@@ -3639,6 +4308,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "1570",
         "st_data_export_weapon_degradation": "130%",
+        "st_data_export_k_hit": "2",
+        "st_data_export_k_ap": "4",
+        "st_data_export_k_air_resistance": "0.01",
         "apClass": 5,
         "apValue": 4
       },
@@ -3654,6 +4326,9 @@
         "st_data_export_projectiles": "1",
         "st_upgr_cost": "3500",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "2.5",
+        "st_data_export_k_ap": "5",
+        "st_data_export_k_air_resistance": "0.01",
         "apClass": 5,
         "apValue": 5
       }
@@ -3674,6 +4349,9 @@
         "st_data_export_projectiles": "0",
         "st_upgr_cost": "520",
         "st_data_export_weapon_degradation": "110%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "1.25",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 5,
         "apValue": 1
       },
@@ -3689,6 +4367,9 @@
         "st_data_export_projectiles": "0",
         "st_upgr_cost": "200",
         "st_data_export_weapon_degradation": "130%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "1.22",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 5,
         "apValue": 1
       },
@@ -3704,6 +4385,9 @@
         "st_data_export_projectiles": "0",
         "st_upgr_cost": "2200",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "1.25",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 5,
         "apValue": 1
       }
@@ -3724,6 +4408,9 @@
         "st_data_export_projectiles": "0",
         "st_upgr_cost": "665",
         "st_data_export_weapon_degradation": "110%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.305",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 4,
         "apValue": 0
       },
@@ -3739,6 +4426,9 @@
         "st_data_export_projectiles": "0",
         "st_upgr_cost": "1250",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.35",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 4,
         "apValue": 0
       },
@@ -3754,6 +4444,9 @@
         "st_data_export_projectiles": "0",
         "st_upgr_cost": "300",
         "st_data_export_weapon_degradation": "130%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.301",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 4,
         "apValue": 0
       }
@@ -3774,6 +4467,9 @@
         "st_data_export_projectiles": "0",
         "st_upgr_cost": "1250",
         "st_data_export_weapon_degradation": "40%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.35",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 4,
         "apValue": 0
       },
@@ -3789,6 +4485,9 @@
         "st_data_export_projectiles": "0",
         "st_upgr_cost": "230",
         "st_data_export_weapon_degradation": "130%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.27",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 4,
         "apValue": 0
       },
@@ -3804,6 +4503,9 @@
         "st_data_export_projectiles": "0",
         "st_upgr_cost": "480",
         "st_data_export_weapon_degradation": "110%",
+        "st_data_export_k_hit": "1",
+        "st_data_export_k_ap": "0.3",
+        "st_data_export_k_air_resistance": "1",
         "apClass": 4,
         "apValue": 0
       }

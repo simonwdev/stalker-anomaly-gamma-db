@@ -6,7 +6,8 @@
     "st_data_export_description",
     "st_prop_weight",
     "st_upgr_cost",
-    "st_data_export_zoom_factor"
+    "st_data_export_zoom_factor",
+    "st_data_export_magnifications"
   ],
   "items": [
     {
@@ -16,6 +17,7 @@
       "st_prop_weight": "0.27",
       "st_upgr_cost": "8200",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_0kp2",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -27,6 +29,7 @@
       "st_prop_weight": "0.80",
       "st_upgr_cost": "5960",
       "st_data_export_zoom_factor": "15",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_1p29",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -38,6 +41,7 @@
       "st_prop_weight": "0.94",
       "st_upgr_cost": "21000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "3-10",
       "displayName": "st_addon_scope_1p59",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -49,6 +53,7 @@
       "st_prop_weight": "0.60",
       "st_upgr_cost": "10000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_pk1_obzor",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -60,6 +65,7 @@
       "st_prop_weight": "0.50",
       "st_upgr_cost": "3280",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_1p76",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -71,6 +77,7 @@
       "st_prop_weight": "0.70",
       "st_upgr_cost": "8000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "2.8",
       "displayName": "st_addon_scope_1p78gs",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -82,6 +89,7 @@
       "st_prop_weight": "0.30",
       "st_upgr_cost": "22500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_1p87",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -93,6 +101,7 @@
       "st_prop_weight": "1.25",
       "st_upgr_cost": "12280",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1-4",
       "displayName": "st_addon_scope_1pn93",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -104,6 +113,7 @@
       "st_prop_weight": "1.50",
       "st_upgr_cost": "97490",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "3.7",
       "displayName": "st_addon_scope_1pn93n2_1gs",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -115,6 +125,7 @@
       "st_prop_weight": "0.12",
       "st_upgr_cost": "4380",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_ac10632",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -126,6 +137,7 @@
       "st_prop_weight": "0.35",
       "st_upgr_cost": "4380",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_ac11090",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -137,6 +149,7 @@
       "st_prop_weight": "0.51",
       "st_upgr_cost": "10500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "2.8",
       "displayName": "st_addon_scope_acog",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -148,6 +161,7 @@
       "st_prop_weight": "0.60",
       "st_upgr_cost": "45000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "3-9",
       "displayName": "st_addon_scope_ncstar_ado",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -159,6 +173,7 @@
       "st_prop_weight": "0.06",
       "st_upgr_cost": "22500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_aim_acro",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -170,6 +185,7 @@
       "st_prop_weight": "0.11",
       "st_upgr_cost": "7000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_aim_low",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -181,6 +197,7 @@
       "st_prop_weight": "0.13",
       "st_upgr_cost": "6350",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_aimpoint",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -192,6 +209,7 @@
       "st_prop_weight": "0.15",
       "st_upgr_cost": "30950",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_bossxe",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -203,6 +221,7 @@
       "st_prop_weight": "0.42",
       "st_upgr_cost": "58000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_bravo4",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -214,6 +233,7 @@
       "st_prop_weight": "0.14",
       "st_upgr_cost": "3880",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_cmore",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -225,6 +245,7 @@
       "st_prop_weight": "0.70",
       "st_upgr_cost": "14300",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "3.5",
       "displayName": "st_addon_scope_c79",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -236,6 +257,7 @@
       "st_prop_weight": "0.27",
       "st_upgr_cost": "16000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_compm4s",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -247,6 +269,7 @@
       "st_prop_weight": "0.69",
       "st_upgr_cost": "11700",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1-10",
       "displayName": "st_cortex_scope",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -258,6 +281,7 @@
       "st_prop_weight": "0.03",
       "st_upgr_cost": "4280",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_d0cter",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -269,6 +293,7 @@
       "st_prop_weight": "0.06",
       "st_upgr_cost": "21500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_deltapoint",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -280,6 +305,7 @@
       "st_prop_weight": "0.66",
       "st_upgr_cost": "44950",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "6",
       "displayName": "st_addon_scope_devo",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -291,6 +317,7 @@
       "st_prop_weight": "0.26",
       "st_upgr_cost": "7350",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_e0t2",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -302,6 +329,7 @@
       "st_prop_weight": "0.56",
       "st_upgr_cost": "23280",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "3",
       "displayName": "st_addon_scope_e0t2_mag",
       "hasStashDrop": false,
       "hasDisassemble": true
@@ -313,6 +341,7 @@
       "st_prop_weight": "0.42",
       "st_upgr_cost": "145000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1,2",
       "displayName": "st_addon_scope_echo1",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -324,6 +353,7 @@
       "st_prop_weight": "0.34",
       "st_upgr_cost": "4350",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_ekp8_02",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -335,6 +365,7 @@
       "st_prop_weight": "0.38",
       "st_upgr_cost": "4350",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_ekp8_18",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -346,6 +377,7 @@
       "st_prop_weight": "0.35",
       "st_upgr_cost": "5280",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_eotech",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -357,6 +389,7 @@
       "st_prop_weight": "0.32",
       "st_upgr_cost": "7350",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_exps3",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -368,6 +401,7 @@
       "st_prop_weight": "1.40",
       "st_upgr_cost": "253200",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1-10",
       "displayName": "st_addon_scope_gauss_sight",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -379,6 +413,7 @@
       "st_prop_weight": "0.50",
       "st_upgr_cost": "5230",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "3",
       "displayName": "st_addon_scope_gee36",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -390,6 +425,7 @@
       "st_prop_weight": "0.47",
       "st_upgr_cost": "58000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_hamr",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -401,6 +437,7 @@
       "st_prop_weight": "0.43",
       "st_upgr_cost": "22500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_specter_hco",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -412,6 +449,7 @@
       "st_prop_weight": "0.14",
       "st_upgr_cost": "7350",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_he510",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -423,6 +461,7 @@
       "st_prop_weight": "0.27",
       "st_upgr_cost": "25000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_kemper",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -434,6 +473,7 @@
       "st_prop_weight": "0.41",
       "st_upgr_cost": "4350",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_kobra",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -445,6 +485,7 @@
       "st_prop_weight": "0.27",
       "st_upgr_cost": "16950",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_lco1",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -456,6 +497,7 @@
       "st_prop_weight": "0.66",
       "st_upgr_cost": "23000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1-8",
       "displayName": "st_addon_scope_leupold",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -467,6 +509,7 @@
       "st_prop_weight": "0.54",
       "st_upgr_cost": "27280",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1-8",
       "displayName": "st_addon_scope_march_f_shorty",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -478,6 +521,7 @@
       "st_prop_weight": "0.61",
       "st_upgr_cost": "23000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "3-24",
       "displayName": "st_addon_scope_marchf",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -489,6 +533,7 @@
       "st_prop_weight": "0.37",
       "st_upgr_cost": "6580",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_mepro",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -500,6 +545,7 @@
       "st_prop_weight": "0.39",
       "st_upgr_cost": "15000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "2",
       "displayName": "st_addon_scope_monstrum_2x32",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -511,6 +557,7 @@
       "st_prop_weight": "0.30",
       "st_upgr_cost": "7500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_okp-7",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -522,6 +569,7 @@
       "st_prop_weight": "0.16",
       "st_upgr_cost": "14000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_pilad_p1x42",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -533,6 +581,7 @@
       "st_prop_weight": "0.62",
       "st_upgr_cost": "5200",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_pgo7gs",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -544,6 +593,7 @@
       "st_prop_weight": "0.09",
       "st_upgr_cost": "12000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_pk6",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -555,6 +605,7 @@
       "st_prop_weight": "0.65",
       "st_upgr_cost": "3480",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_pka",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -566,6 +617,7 @@
       "st_prop_weight": "0.85",
       "st_upgr_cost": "17350",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1-6",
       "displayName": "st_addon_scope_pn23",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -577,6 +629,7 @@
       "st_prop_weight": "0.33",
       "st_upgr_cost": "8280",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_aimpoint_pro",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -588,6 +641,7 @@
       "st_prop_weight": "0.62",
       "st_upgr_cost": "6160",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope [ps01]",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -599,6 +653,7 @@
       "st_prop_weight": "0.57",
       "st_upgr_cost": "40000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1,6",
       "displayName": "st_addon_scope_valday_ps320",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -610,6 +665,7 @@
       "st_prop_weight": "0.62",
       "st_upgr_cost": "9960",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "6",
       "displayName": "st_addon_scope_pso-1m2-01",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -621,6 +677,7 @@
       "st_prop_weight": "0.60",
       "st_upgr_cost": "6280",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_pso2",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -632,6 +689,7 @@
       "st_prop_weight": "0.30",
       "st_upgr_cost": "4500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_rakurs",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -643,6 +701,7 @@
       "st_prop_weight": "0.62",
       "st_upgr_cost": "69950",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1-6",
       "displayName": "st_addon_scope_razorhd",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -654,6 +713,7 @@
       "st_prop_weight": "0.03",
       "st_upgr_cost": "8120",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_rmr",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -665,6 +725,7 @@
       "st_prop_weight": "0.20",
       "st_upgr_cost": "12950",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_romeo4",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -676,6 +737,7 @@
       "st_prop_weight": "0.39",
       "st_upgr_cost": "22500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_romeo8",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -687,6 +749,7 @@
       "st_prop_weight": "0.10",
       "st_upgr_cost": "7150",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_silen98",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -698,6 +761,7 @@
       "st_prop_weight": "0.24",
       "st_upgr_cost": "85500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_skeet",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -709,6 +773,7 @@
       "st_prop_weight": "0.66",
       "st_upgr_cost": "19000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1,4",
       "displayName": "st_addon_scope_specterDR",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -720,6 +785,7 @@
       "st_prop_weight": "0.47",
       "st_upgr_cost": "14500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_susat",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -731,6 +797,7 @@
       "st_prop_weight": "0.47",
       "st_upgr_cost": "21000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_susatov",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -742,6 +809,7 @@
       "st_prop_weight": "0.06",
       "st_upgr_cost": "85500",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_t12",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -753,6 +821,7 @@
       "st_prop_weight": "0.48",
       "st_upgr_cost": "35000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "1-4",
       "displayName": "st_addon_scope_burris_tac30",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -764,6 +833,7 @@
       "st_prop_weight": "0.43",
       "st_upgr_cost": "20000",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "3",
       "displayName": "st_addon_scope_trihawk_3x30",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -775,6 +845,7 @@
       "st_prop_weight": "0.63",
       "st_upgr_cost": "25280",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "6",
       "displayName": "st_addon_scope_razor_mag",
       "hasStashDrop": false,
       "hasDisassemble": true
@@ -786,6 +857,7 @@
       "st_prop_weight": "0.33",
       "st_upgr_cost": "18950",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_razor",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -797,6 +869,7 @@
       "st_prop_weight": "0.80",
       "st_upgr_cost": "5950",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_usp1",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -808,6 +881,7 @@
       "st_prop_weight": "0.90",
       "st_upgr_cost": "20250",
       "st_data_export_zoom_factor": "",
+      "st_data_export_magnifications": "3.5",
       "displayName": "st_addon_scope_vulcan",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -819,6 +893,7 @@
       "st_prop_weight": "0.62",
       "st_upgr_cost": "1860",
       "st_data_export_zoom_factor": "24",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope [wpn_addon_scope]",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -830,6 +905,7 @@
       "st_prop_weight": "0.40",
       "st_upgr_cost": "1590",
       "st_data_export_zoom_factor": "28",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_zf4 [g43]",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -841,6 +917,7 @@
       "st_prop_weight": "0.30",
       "st_upgr_cost": "1980",
       "st_data_export_zoom_factor": "15",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_po4x34",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -852,6 +929,7 @@
       "st_prop_weight": "0.20",
       "st_upgr_cost": "4950",
       "st_data_export_zoom_factor": "28",
+      "st_data_export_magnifications": "3.5",
       "displayName": "st_addon_scope_pu",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -863,6 +941,7 @@
       "st_prop_weight": "0.58",
       "st_upgr_cost": "2560",
       "st_data_export_zoom_factor": "24",
+      "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_galil_susat",
       "hasStashDrop": false,
       "hasDisassemble": false
@@ -874,6 +953,7 @@
       "st_prop_weight": "0.40",
       "st_upgr_cost": "8500",
       "st_data_export_zoom_factor": "28",
+      "st_data_export_magnifications": "4",
       "displayName": "st_addon_scope_zf4 [zf4]",
       "hasStashDrop": false,
       "hasDisassemble": false

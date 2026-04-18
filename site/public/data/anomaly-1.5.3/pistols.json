@@ -36,7 +36,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_walther_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fn57",
@@ -56,7 +57,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_fn57",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_beretta_camo",
@@ -76,7 +78,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_beretta_camo",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_desert_eagle",
@@ -96,7 +99,8 @@
       "st_data_export_hit_power": "0.6",
       "displayName": "st_wpn_desert_eagle",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sig220",
@@ -116,7 +120,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_sig220",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pm",
@@ -136,7 +141,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_pm",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_colt1911_custom",
@@ -156,7 +162,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_colt1911_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_oc33",
@@ -176,7 +183,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_oc33",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_beretta_modern",
@@ -196,7 +204,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_beretta_modern",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fnx45",
@@ -216,7 +225,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_fnx45",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fnx45_custom",
@@ -236,7 +246,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_fnx45_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_gsh18",
@@ -256,7 +267,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_gsh18",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pm_custom",
@@ -276,7 +288,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_pm_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_colt1911_duty",
@@ -296,7 +309,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_colt1911_duty",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_colt1911_alt",
@@ -316,7 +330,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_colt1911_alt",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_glock_modern",
@@ -336,7 +351,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_glock_modern",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_colt1911_merc",
@@ -356,7 +372,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_colt1911_merc",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_glock",
@@ -376,7 +393,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_glock",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sig220_nimble",
@@ -396,7 +414,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_sig220_nimble",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_mp443",
@@ -416,7 +435,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_grach",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pm_actor",
@@ -436,7 +456,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_pm_actor",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fnp45",
@@ -456,7 +477,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_fnp45",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_usp_match",
@@ -476,7 +498,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_usp_match",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_usp_custom",
@@ -496,7 +519,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_usp_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_usp",
@@ -516,7 +540,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_usp",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_tt33_modern",
@@ -536,7 +561,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_tt33_modern",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_colt1911_camo",
@@ -556,7 +582,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_colt1911_camo",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fort_snag",
@@ -576,7 +603,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_fort [snag]",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_cz75",
@@ -596,7 +624,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_cz75",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fnp45_custom",
@@ -616,7 +645,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_fnp45_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_gsh18_custom",
@@ -636,7 +666,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_gsh18_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_aps",
@@ -656,7 +687,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_aps",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_tt33",
@@ -676,7 +708,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_tt33",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_mp412",
@@ -696,7 +729,8 @@
       "st_data_export_hit_power": "0.6",
       "displayName": "st_wpn_mp412",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sig220_custom",
@@ -716,7 +750,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_sig220_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pmm",
@@ -736,7 +771,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_pmm",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pb_custom",
@@ -756,7 +792,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_pb_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_colt1911",
@@ -776,7 +813,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_colt1911",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_hpsa",
@@ -796,7 +834,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_hpsa",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fnx45_alt",
@@ -816,7 +855,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_fnx45_alt",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_desert_eagle_custom",
@@ -836,7 +876,8 @@
       "st_data_export_hit_power": "0.6",
       "displayName": "st_wpn_desert_eagle_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_usp_nimble",
@@ -856,7 +897,8 @@
       "st_data_export_hit_power": "0.47",
       "displayName": "st_wpn_usp_nimble",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_hpsa_alt",
@@ -876,7 +918,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_hpsa_alt",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_glock_custom",
@@ -896,7 +939,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_glock_custom",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_walther",
@@ -916,7 +960,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_walther",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_desert_eagle_nimble",
@@ -936,7 +981,8 @@
       "st_data_export_hit_power": "0.6",
       "displayName": "st_wpn_desert_eagle_nimble",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_beretta",
@@ -956,7 +1002,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_beretta",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pb",
@@ -976,7 +1023,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_pb",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_beretta_alt",
@@ -996,7 +1044,8 @@
       "st_data_export_hit_power": "0.46",
       "displayName": "st_wpn_beretta_alt",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_colt1911_modern",
@@ -1016,7 +1065,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_colt1911_modern",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_colt1911_new",
@@ -1036,7 +1086,8 @@
       "st_data_export_hit_power": "0.55",
       "displayName": "st_wpn_colt1911_new",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fort",
@@ -1056,7 +1107,8 @@
       "st_data_export_hit_power": "0.45",
       "displayName": "st_wpn_fort [default]",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_desert_eagle_modern",
@@ -1076,7 +1128,8 @@
       "st_data_export_hit_power": "0.6",
       "displayName": "st_wpn_desert_eagle_modern",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     }
   ]
 }

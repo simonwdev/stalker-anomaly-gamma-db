@@ -305,7 +305,8 @@
       "displayName": "st_wpn_mp5sd_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_mp5_alt",
@@ -330,7 +331,8 @@
       "displayName": "st_wpn_mp5_alt",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_mp9",
@@ -407,7 +409,8 @@
       "displayName": "st_wpn_mp5sd_new",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_aug_freedom",
@@ -640,7 +643,8 @@
       "displayName": "st_wpn_mp5_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sr2_m1",

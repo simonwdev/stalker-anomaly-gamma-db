@@ -357,7 +357,8 @@
       "displayName": "st_wpn_svd_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_k98_mauser_kit",

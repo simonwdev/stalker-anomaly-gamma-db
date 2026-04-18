@@ -1,0 +1,30 @@
+{
+  "category": "Grenade Launchers",
+  "headers": [
+    "id",
+    "pda_encyclopedia_name",
+    "st_data_export_description",
+    "st_prop_weight",
+    "st_upgr_cost"
+  ],
+  "items": [
+    {
+      "id": "wpn_addon_grenade_launcher",
+      "pda_encyclopedia_name": "st_grenade_launcher",
+      "st_data_export_description": "st_grenade_launcher_descr",
+      "st_prop_weight": "1.30",
+      "st_upgr_cost": "8500",
+      "displayName": "st_grenade_launcher",
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_addon_grenade_launcher_m203",
+      "pda_encyclopedia_name": "st_grenade_launcher_m203",
+      "st_data_export_description": "st_grenade_launcher_m203_descr",
+      "st_prop_weight": "1.36",
+      "st_upgr_cost": "7200",
+      "displayName": "st_grenade_launcher_m203",
+      "hasDisassemble": false
+    }
+  ]
+}

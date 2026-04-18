@@ -201,7 +201,8 @@
       "displayName": "st_wpn_beretta [modern]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fnx45",
@@ -356,7 +357,8 @@
       "displayName": "st_wpn_colt1911_alt",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_korth_custom",
@@ -511,7 +513,8 @@
       "displayName": "st_wpn_fnp45_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pm_bas",
@@ -614,7 +617,8 @@
       "displayName": "st_wpn_pmm",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_tt33_modern",
@@ -665,7 +669,8 @@
       "displayName": "st_wpn_beretta [modern_deltapoint]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sr1m_gurza_up",
@@ -742,7 +747,8 @@
       "displayName": "st_wpn_beretta [modern_d0cter]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_walther_p99_mod9",
@@ -793,7 +799,8 @@
       "displayName": "st_wpn_colt1911_modern",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_desert_eagle_nimble",
@@ -844,7 +851,8 @@
       "displayName": "st_wpn_beretta [modern_rmr]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_walther_custom",
@@ -921,7 +929,8 @@
       "displayName": "st_wpn_sig220_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_korth",
@@ -1050,7 +1059,8 @@
       "displayName": "st_wpn_hpsa_alt",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_oc33",
@@ -1101,7 +1111,8 @@
       "displayName": "st_wpn_pb_custom",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_fnx45_custom",
@@ -1308,7 +1319,8 @@
       "displayName": "st_wpn_colt1911_merc",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_sig220_nimble",
@@ -1333,7 +1345,8 @@
       "displayName": "st_wpn_sig220_nimble",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_colt1911_n",
@@ -1436,7 +1449,8 @@
       "displayName": "st_wpn_colt1911_new",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_usp_match",
@@ -1773,7 +1787,8 @@
       "displayName": "st_wpn_beretta_alt",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_pm",
@@ -1876,7 +1891,8 @@
       "displayName": "st_wpn_fnx45_alt",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "hasUpgrades": true
     },
     {
       "id": "wpn_cz75",

@@ -1,0 +1,3010 @@
+{
+  "pri_a17_gauss_rifle": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_9a91": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9a91"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_abakan_n": {
+    "scopes": [],
+    "silencers": [],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ],
+    "kits": []
+  },
+  "wpn_ace21": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_adar2_15": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aek": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ],
+    "kits": []
+  },
+  "wpn_aek_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ],
+    "kits": []
+  },
+  "wpn_aek_duty": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ],
+    "kits": []
+  },
+  "wpn_ak": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak101": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak101_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak102": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak103": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak103_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak104": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak104_alfa": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak105": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak105_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": [
+      "shakal",
+      "swamp"
+    ]
+  },
+  "wpn_ak105_bas_shakal": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak105_bas_swamp": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak105_sp": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak12": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ],
+    "kits": []
+  },
+  "wpn_ak12_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ],
+    "kits": []
+  },
+  "wpn_ak12_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [],
+    "kits": [
+      "mono_kit"
+    ]
+  },
+  "wpn_ak12_custom_mono_kit": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_monolit"
+    ],
+    "kits": []
+  },
+  "wpn_ak12_m1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ],
+    "kits": []
+  },
+  "wpn_ak12_mono_com": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak5c_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak5c_bas_5c_tik": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak5c_isg": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74_isg": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74_modern": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74_n": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74_old": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74_pmc": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_atg"
+    ],
+    "launchers": [],
+    "kits": [
+      "pritseldob",
+      "kashtan_rmr"
+    ]
+  },
+  "wpn_ak74_rpk": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74m": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74m_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74m_beard": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": [
+      "pritseldob",
+      "kashtan_rmr"
+    ]
+  },
+  "wpn_ak74m_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74m_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74m_duty": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74m_n": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher"
+    ],
+    "kits": []
+  },
+  "wpn_ak74m_pka": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74u": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74u_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74u_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74u_isg": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74u_m1_isg": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74u_n1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74u_old": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74u_snag": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ak74u_tac": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs4"
+    ],
+    "launchers": [],
+    "kits": [
+      "pritseldob",
+      "kashtan_rmr"
+    ]
+  },
+  "wpn_akm": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_akm_alfa": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_akm_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_akm_isg": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_akms": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_akms_alt": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_akms_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aks": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aks74": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aks74_new": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aps": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aps"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aps_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_apb"
+    ],
+    "launchers": [],
+    "kits": [
+      "apsabigo"
+    ]
+  },
+  "wpn_aps_bas_apsabigo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_apb"
+    ],
+    "launchers": [],
+    "kits": [
+      "apsabigo"
+    ]
+  },
+  "wpn_ar15_freedom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_surfire"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ash12": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_shak12"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aug": {
+    "scopes": [
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aug_a1_bas": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more"
+    ],
+    "silencers": [
+      "wpn_sil_auga"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aug_a1_custom_bas": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more"
+    ],
+    "silencers": [
+      "wpn_sil_auga"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aug_a3": {
+    "scopes": [
+      "ac10632",
+      "acog",
+      "eot",
+      "c-more"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_aug_a3_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_auga"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aug_a3_custom_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_auga"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aug_custom": {
+    "scopes": [
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aug_freedom": {
+    "scopes": [
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aug_merc": {
+    "scopes": [
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_aug_modern": {
+    "scopes": [
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_beretta": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_beretta_alt": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_beretta_camo": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_beretta_modern": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_bizon": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_colt1911": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_colt1911_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_colt1911_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_colt1911_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_colt1911_duty": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_colt1911_merc": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_colt1911_modern": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_colt1911_n": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_colt1911_new": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_colt_kimber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_cz75": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_dvl10": {
+    "scopes": [],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_dvl10_m1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_eft_rsh12": {
+    "scopes": [
+      "0kp2",
+      "compm4s",
+      "ekp8_18",
+      "ac10632",
+      "e0t2",
+      "eot",
+      "aimpoint",
+      "point_aimpro",
+      "exps3",
+      "he510",
+      "rmr",
+      "aim_low",
+      "deltapoint",
+      "d0cter",
+      "c-more"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fal": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fal_aus": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [],
+    "kits": [
+      "kit_aus_tri",
+      "kit_fal_leup",
+      "kit_sa5x_spec"
+    ]
+  },
+  "wpn_fal_sa58_osw": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_famas3": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fn2000": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fn2000_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fn2000_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fn2000_nimble": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fn57": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_57"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fn57_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_57"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fnc": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fnp45": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fnp45_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fnx45": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fnx45_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fnx45_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fort": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_fort_snag": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_g28": {
+    "scopes": [
+      "pn23fore"
+    ],
+    "silencers": [
+      "wpn_sil_g28"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_g3": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_g36": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_g36_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_g36_nimble": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_g36k": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_g43": {
+    "scopes": [
+      "wpn_addon_scope_g43"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_galil": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_galil_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_galil_modern": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_gauss": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_gauss_quest": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_glock": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_glock17": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_osp9"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_glock17_m1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_osp9"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_glock_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_glock_modern": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_gsh18": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_gsh18_custom": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_hk416": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_hk417": {
+    "scopes": [
+      "acog",
+      "eot"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_howa20": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_kac4"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_hpsa": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_hpsa_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_k98": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_k98_mod": {
+    "scopes": [
+      "silen98"
+    ],
+    "silencers": [
+      "wpn_sil_forester"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_k98_mod_silen98": {
+    "scopes": [
+      "silen98"
+    ],
+    "silencers": [
+      "wpn_sil_forester"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_kar98_retrotac": {
+    "scopes": [
+      "pn23fore"
+    ],
+    "silencers": [
+      "wpn_sil_forester"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_karabiner98k": {
+    "scopes": [
+      "silen98"
+    ],
+    "silencers": [
+      "wpn_sil_forester"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_karabiner98k_silen98": {
+    "scopes": [
+      "silen98"
+    ],
+    "silencers": [
+      "wpn_sil_forester"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_kiparis": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_kiparis_m1": {
+    "scopes": [
+      "ac10632",
+      "okep77",
+      "d0cter",
+      "point_aimpro",
+      "aim_low",
+      "rmr",
+      "deltapoint",
+      "compm4s",
+      "rakurs",
+      "aimpoint"
+    ],
+    "silencers": [
+      "wpn_sil_kip"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_kiparis_m2": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_kip"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_kiparis_m3": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_kip"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_kiparis_s": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_kip"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_korth": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_korth_custom": {
+    "scopes": [
+      "d0cter"
+    ],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_krissvektor": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ks23": {
+    "scopes": [],
+    "silencers": [],
+    "launchers": [],
+    "kits": [
+      "23_up"
+    ]
+  },
+  "wpn_ks23_23_up": {
+    "scopes": [],
+    "silencers": [],
+    "launchers": [],
+    "kits": [
+      "23_up"
+    ]
+  },
+  "wpn_ks23_kaban": {
+    "scopes": [],
+    "silencers": [],
+    "launchers": [],
+    "kits": [
+      "kab_up"
+    ]
+  },
+  "wpn_ks23_kaban_kab_up": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_hex23"
+    ],
+    "launchers": [],
+    "kits": [
+      "kab_up"
+    ]
+  },
+  "wpn_l85": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l85_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l85_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l85_m1": {
+    "scopes": [
+      "susatov"
+    ],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l85_m2": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l85_m3": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_l85"
+    ],
+    "kits": []
+  },
+  "wpn_l85_modern": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l85a2": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l85a2_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l85a2_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l85a2_modern": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l96a1": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_l96a1m": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_lr300": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_lr300_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_lr300_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m16": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_m16a2": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_m24": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m4": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_m4_butcher": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m4_ru556": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m4_skryaga": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_kac4"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_m4_tac": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_surfire"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m4a1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m4a1_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m4a1_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m4a1_freedom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m4a1_siber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_m60": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m82": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_m98b": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_mk14": {
+    "scopes": [
+      "wpn_addon_scope_susat"
+    ],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_mp153_m1": {
+    "scopes": [
+      "ac10632",
+      "c-more",
+      "d0cter",
+      "aim_low",
+      "rmr",
+      "deltapoint",
+      "0kp2",
+      "rakurs"
+    ],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_mp5": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_mp5_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_mp5_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_mp5_nimble": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_mp5sd": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_mp5sd_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_mp5sd_new": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_mp7": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_oc33": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aps"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_p90": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_57"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pb": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_6p9"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pb_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_6p9"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pb_bas_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_6p9"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pb_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_6p9"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pkm_zenit_shorty": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgpv"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pkm_zenit_siber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgpv"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pkp_siber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgpv"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pkp_tac_siber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgpv"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pl15": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pl15"
+    ],
+    "launchers": [],
+    "kits": [
+      "lazup_pl15",
+      "pl15_scolaz"
+    ]
+  },
+  "wpn_pl15_pl15_scolaz": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pl15"
+    ],
+    "launchers": [],
+    "kits": [
+      "lazup_pl15",
+      "pl15_scolaz"
+    ]
+  },
+  "wpn_pl15_tan": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pl15"
+    ],
+    "launchers": [],
+    "kits": [
+      "lazup_pl15",
+      "pl15_scolaz"
+    ]
+  },
+  "wpn_pl15_tan_pl15_scolaz": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pl15"
+    ],
+    "launchers": [],
+    "kits": [
+      "lazup_pl15",
+      "pl15_scolaz"
+    ]
+  },
+  "wpn_pm": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pm_actor": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pm_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pm_bas_actor": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pm_bas_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pmm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pm_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pmm": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pmm_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pmm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_pp2000": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ppsh41": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ppsh41_rednew": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ppsh41_woodnew": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ppsh_bas": {
+    "scopes": [
+      "uptacppsh"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ppsh_bas_uptacppsh": {
+    "scopes": [
+      "uptacppsh"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_rem700_aics": {
+    "scopes": [
+      "pn23fore"
+    ],
+    "silencers": [
+      "wpn_sil_timberwolf"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_rem700_mcmillan": {
+    "scopes": [
+      "pn23fore"
+    ],
+    "silencers": [
+      "wpn_sil_timberwolf"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_remington700": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_remington700_bas": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_daniel"
+    ],
+    "launchers": [],
+    "kits": [
+      "archangel",
+      "magpul_pro",
+      "mod_x_gen3",
+      "lapua700"
+    ]
+  },
+  "wpn_remington700_bas_archangel": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_daniel"
+    ],
+    "launchers": [],
+    "kits": [
+      "archangel",
+      "magpul_pro",
+      "mod_x_gen3",
+      "lapua700"
+    ]
+  },
+  "wpn_remington700_bas_lapua700": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_lapu7"
+    ],
+    "launchers": [],
+    "kits": [
+      "archangel",
+      "magpul_pro",
+      "mod_x_gen3",
+      "lapua700"
+    ]
+  },
+  "wpn_remington700_bas_magpul_pro": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_daniel"
+    ],
+    "launchers": [],
+    "kits": [
+      "archangel",
+      "magpul_pro",
+      "mod_x_gen3",
+      "lapua700"
+    ]
+  },
+  "wpn_remington700_bas_mod_x_gen3": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_daniel"
+    ],
+    "launchers": [],
+    "kits": [
+      "archangel",
+      "magpul_pro",
+      "mod_x_gen3",
+      "lapua700"
+    ]
+  },
+  "wpn_rpd": {
+    "scopes": [],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_rpk": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_rpk74": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgp-a"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_rpk74_16": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_geks545"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_saiga12s": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_saiga12s_isg": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_saiga12s_m1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_kek12"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_saiga12s_m2": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_salvo"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_scar": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_scar_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_scar_l_tac": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_scar_new": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_scar_siber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_scar"
+    ],
+    "kits": []
+  },
+  "wpn_scar_siber_black": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_scar"
+    ],
+    "kits": []
+  },
+  "wpn_scar_siber_m1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_scar_siber_m1_black": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_scar_siber_m2": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_scar_siber_m2_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_aac762"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_shak12": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_shak12"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sig220": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sig220_custom": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sig220_n": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [],
+    "kits": [
+      "upg220",
+      "u2p2g0r"
+    ]
+  },
+  "wpn_sig220_n_u2p2g0r": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [],
+    "kits": [
+      "upg220",
+      "u2p2g0r"
+    ]
+  },
+  "wpn_sig220_n_upg220": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [],
+    "kits": [
+      "upg220",
+      "u2p2g0r"
+    ]
+  },
+  "wpn_sig220_nimble": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sig226": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_osp9"
+    ],
+    "launchers": [],
+    "kits": [
+      "226sig_kit"
+    ]
+  },
+  "wpn_sig226_226sig_kit": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_osp9"
+    ],
+    "launchers": [],
+    "kits": [
+      "226sig_kit"
+    ]
+  },
+  "wpn_sig550": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_sig550_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_sig550_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_sig550_luckygun": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_sig550_siber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sig550_sniper": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sig550_tac_siber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_sig552": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sig552_isg_siber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_spec_isg"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sig552_siber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sig552_tac_siber": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_m42k"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sks_b": {
+    "scopes": [
+      "wpn_addon_scope_pu"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sks_tac": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_hexagon"
+    ],
+    "launchers": [],
+    "kits": [
+      "pritseldob",
+      "kashtan_rmr"
+    ]
+  },
+  "wpn_sr1m": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_sr1m"
+    ],
+    "launchers": [],
+    "kits": [
+      "sr1upgr1",
+      "gurza_up"
+    ]
+  },
+  "wpn_sr1m_gurza_up": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_sr1m"
+    ],
+    "launchers": [],
+    "kits": [
+      "sr1upgr1",
+      "gurza_up"
+    ]
+  },
+  "wpn_sr1m_sr1upgr1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_sr1m"
+    ],
+    "launchers": [],
+    "kits": [
+      "sr1upgr1",
+      "gurza_up"
+    ]
+  },
+  "wpn_sr25": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_sr25"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_m203"
+    ],
+    "kits": []
+  },
+  "wpn_sr2_m1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_veresk"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sr2_m2": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_veresk"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sr2_veresk": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_veresk"
+    ],
+    "launchers": [],
+    "kits": [
+      "kp_sr2",
+      "sr2_upkit"
+    ]
+  },
+  "wpn_sr2_veresk_sr2_upkit": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_veresk"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sv98": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_sv98_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_svd": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_svd_custom": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_svd_m1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_svd_nimble": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_kzrzp"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_svds": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_tgpv"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_svds_pmc": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_rotor"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_svu": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_svu_alt": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_svu_nimble": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01",
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_trg": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_57"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ump45": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_ump45_custom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_usp": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_usp_custom": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_45"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_usp_match": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_usp_nimble": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_usp_tac": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_black_box"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_val": {
+    "scopes": [],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_val_modern": {
+    "scopes": [
+      "1p29",
+      "kobra",
+      "ps01"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_val_tac": {
+    "scopes": [],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vepr": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vihr": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_vihr"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vintorez": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vintorez_1pn93": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vintorez_alt": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vintorez_isg": {
+    "scopes": [],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [
+      "wpn_addon_grenade_launcher_monolit"
+    ],
+    "kits": []
+  },
+  "wpn_vintorez_m1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vintorez_m2": {
+    "scopes": [],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": [
+      "pritseldob"
+    ]
+  },
+  "wpn_vintorez_n1": {
+    "scopes": [],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vintorez_nimble": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vityaz": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_pbs1"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vsk94": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9a91"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vssk": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vz61": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vz61_alt": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vz61_camo": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vz61_freedom": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vz61_scorpion": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_scorp"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vz61_scorpion_m1": {
+    "scopes": [
+      "d0cter",
+      "aim_low",
+      "rmr",
+      "deltapoint"
+    ],
+    "silencers": [
+      "wpn_sil_scorp"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_vz61_scorpion_m2": {
+    "scopes": [
+      "d0cter",
+      "aim_low",
+      "rmr",
+      "deltapoint"
+    ],
+    "silencers": [
+      "wpn_sil_scorp"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_wa2000": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_addon_silencer"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_walther": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_walther_custom": {
+    "scopes": [
+      "wpn_addon_scope"
+    ],
+    "silencers": [
+      "wpn_sil_9mm"
+    ],
+    "launchers": [],
+    "kits": []
+  },
+  "wpn_walther_p99": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": [
+      "mod9"
+    ]
+  },
+  "wpn_walther_p99_mod9": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_gemtech"
+    ],
+    "launchers": [],
+    "kits": [
+      "mod9"
+    ]
+  },
+  "wpn_xm8": {
+    "scopes": [],
+    "silencers": [
+      "wpn_sil_nato"
+    ],
+    "launchers": [],
+    "kits": []
+  }
+}

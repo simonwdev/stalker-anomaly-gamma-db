@@ -2,13 +2,13 @@
 novice_outfit_camo,st_data_export_unknown,novice_outfit_camo_name,novice_outfit_camo_description,3.98,11951,0%,9%,10%,8%,13%,0%,0%,0%,14%,0,0,8
 stalker_salamander_outfit,stalker,stalker_salamander_outfit_name,stalker_salamander_outfit_description,6.80,39500,10%,13%,5%,15%,11%,36%,0%,25%,25%,1,2,6
 army_outfit,army,army_outfit_name,army_outfit_description,8,20530,6%,15%,3%,6%,7%,0%,0%,0%,25%,1,1,11
-cs_novice_outfit,csky,csky_novice_outfit_name,csky_novice_outfit_description,3.86,11930,0%,9%,9%,7%,11%,0%,0%,0%,10%,0,0,3
+cs_light_outfit,csky,csky_light_outfit_name,csky_light_outfit_description,8,40250,10%,9%,8%,22%,15%,8%,0%,10%,10%,1,2,12
 bandit_novice_outfit,bandit,bandit_novice_outfit_name,bandit_novice_outfit_description,3.86,10930,0%,9%,9%,7%,11%,0%,0%,0%,10%,0,0,3
 redline_novice_outfit,st_data_export_unknown,redline_novice_outfit_name,redline_novice_outfit_description,4,15951,0%,9%,10%,8%,13%,0%,0%,0%,10%,0,0,15
 bandit_novice_outfit_alt,bandit,bandit_novice_alt_outfit_name,bandit_novice_alt_outfit_description,4.22,12230,5%,12%,10%,10%,15%,0%,0%,0%,20%,0,0,4
 stalker_predator_outfit,stalker,stalker_predator_outfit_name,stalker_predator_outfit_description,4,37000,10%,13%,12%,15%,11%,12%,0%,25%,25%,1,2,10
 isg_lcs_camo_outfit,isg,isg_lcs_camo_outfit_name,isg_lcs_camo_outfit_description,7,41500,12%,9%,12%,20%,15%,13%,0%,15%,10%,2,4,19
-cs_light_outfit,csky,csky_light_outfit_name,csky_light_outfit_description,8,40250,10%,9%,8%,22%,15%,8%,0%,10%,10%,1,2,12
+cs_novice_outfit,csky,csky_novice_outfit_name,csky_novice_outfit_description,3.86,11930,0%,9%,9%,7%,11%,0%,0%,0%,10%,0,0,3
 merc_fighter_outfit,killer,merc_fighter_outfit_name,merc_fighter_outfit_description,6,34280,8%,9%,10%,5%,4%,7%,0%,15%,20%,1,3,15
 merc_wolven_outfit,killer,merc_wolven_outfit_name,merc_wolven_outfit_description,6.30,52700,10%,10%,31%,15%,31%,27%,0%,15%,25%,2,4,10
 stalker_autumn_outfit,stalker,stalker_autumn_outfit_name,stalker_autumn_outfit_description,5.80,43000,10%,13%,12%,15%,51%,12%,0%,25%,25%,0,1,6
