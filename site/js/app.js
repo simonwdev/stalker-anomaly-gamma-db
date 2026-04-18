@@ -27,6 +27,7 @@ export const appDefinition = {
             packs: [],
             activePack: null,
             packLoading: false,
+            globalHiddenFields: [],
 
             // Localisation
             LOCALES,
@@ -251,6 +252,9 @@ export const appDefinition = {
             if (!this.activePack) return "/data";
             return `/data/${this.activePack.id}`;
         },
+        hiddenFields() {
+            return new Set([...this.globalHiddenFields, ...(this.activePack?.hiddenFields || [])]);
+        },
 
         indexById() {
             const map = {};
@@ -319,8 +323,9 @@ export const appDefinition = {
             if (categories.every(c => c === CAT.OUTFITS || c === CAT.HELMETS)) return PROTECTION_FIELDS;
             if (categories.every(c => c === CAT.AMMO)) return [...AMMO_MULTIPLIER_FIELDS, ...AMMO_ONLY_FIELDS];
             if (categories.every(c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS || c === CAT.TACTICAL_KITS)) {
+                const hidden = this.hiddenFields;
                 return ["st_prop_weight", "st_upgr_cost", "st_data_export_zoom_factor"].filter(f =>
-                    this.compareData.some(e => e.item[f] != null && e.item[f] !== "")
+                    !hidden.has(f) && this.compareData.some(e => e.item[f] != null && e.item[f] !== "")
                 );
             }
             // Mixed: find common numeric fields
@@ -411,7 +416,8 @@ export const appDefinition = {
 
         modalStatRows() {
             const isWeapon = WEAPON_CATEGORIES.includes(this.modalCategory);
-            const rows = buildStatRows(this.modalItem, this.modalHeaders).filter(r => !HEAL_FIELDS.has(r.key) && !MODAL_BADGE_KEYS.has(r.key) && !(isWeapon && r.key === "st_upgr_cost"));
+            const hidden = this.hiddenFields;
+            const rows = buildStatRows(this.modalItem, this.modalHeaders).filter(r => !HEAL_FIELDS.has(r.key) && !MODAL_BADGE_KEYS.has(r.key) && !hidden.has(r.key) && !(isWeapon && r.key === "st_upgr_cost") && r.value !== null && r.value !== undefined && r.value !== "");
             const reliIdx = rows.findIndex(r => r.key === "ui_inv_reli");
             if (reliIdx >= 0) {
                 const reliVal = parseFloat(String(rows[reliIdx].value).replace("%", ""));
@@ -812,9 +818,11 @@ export const appDefinition = {
             const raw = this.categoryHeaders[slug] || [];
             const items = this.categoryItems[slug] || [];
 
+            const hidden = this.hiddenFields;
             const filtered = raw.filter((h) => {
                 if (h === "id" || h === "st_upgr_cost" || h === "displayName") return false;
                 if (h === "st_data_export_description") return false;
+                if (hidden.has(h)) return false;
                 if (NAME_TAG_COLS.has(h)) return false;
                 if (HEAL_FIELDS.has(h)) return false;
                 if (items.length > 0) {
@@ -3925,11 +3933,19 @@ export const appDefinition = {
         formatValue(h, val, tableMode) {
             if (val === undefined || val === null || val === "" || val === "--") return "--";
             if (h === "_malfunction_chance") return val.toFixed(2) + "%";
-            if (h === "_cost_per_round") return parseFloat(val).toFixed(1) + " ₽";
+            if (h === "_cost_per_round") {
+                const n = parseFloat(val);
+                return isNaN(n) ? String(val) : `${n.toLocaleString(this.locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ₽`;
+            }
+            if (h === "st_upgr_cost") {
+                const n = parseFloat(val);
+                return isNaN(n) ? String(val) : `${n.toLocaleString(this.locale)} ₽`;
+            }
             if (h === "_compatible_weapons") return String(val);
             if (h === "_num_scopes") return String(val);
             if (h === "ui_ammo_types" || h === "st_data_export_ammo_types_alt") return this.caliberName(val);
             if (h === "ui_st_community") return this.t(val);
+            if (h === "st_data_export_zoom_factor" || h === "st_data_export_magnifications") return `${val}x`;
 
             const s = String(val);
             const isPct = s.includes("%");
@@ -4134,7 +4150,7 @@ export const appDefinition = {
                 `<span class='ammo-tooltip-chip ammo-tooltip-chip-dmg'>DMG ${dmg}</span>`,
             ];
             if (acc != null) chips.push(`<span class='ammo-tooltip-chip ammo-tooltip-chip-acc'>Accuracy ${this.escapeHtml(String(acc))}</span>`);
-            if (cpr != null) chips.push(`<span class='ammo-tooltip-chip ammo-tooltip-chip-cost'>Cost/Round ${this.escapeHtml(cpr)} ₽</span>`);
+            if (cpr != null) chips.push(`<span class='ammo-tooltip-chip ammo-tooltip-chip-cost'>Cost/Round ${this.escapeHtml(this.formatValue('_cost_per_round', cpr))}</span>`);
 
             return {
                 className: "tooltip-ammo-card",
@@ -6508,6 +6524,7 @@ export const appDefinition = {
             const packRes = await fetch("/data/packs.json");
             const manifest = await packRes.json();
             this.packs = manifest.packs;
+            this.globalHiddenFields = manifest.hiddenFields || [];
             this._defaultPackId = manifest.default;
 
             // Determine initial pack: path > legacy query param > localStorage > manifest default

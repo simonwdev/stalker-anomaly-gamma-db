@@ -1,6 +1,8 @@
 {
   "en": {
     "st_data_export_outfit_artefact_count_max": "Maximum belt slots",
+    "st_data_export_magnifications": "Magnification",
+    "st_data_export_zoom_factor": "Zoom Factor",
     "ui_mcm_menu_exo": "Powered Exos",
     "ui_inv_ap_res": "BR Class",
     "ui_st_community": "Faction",
@@ -69,6 +71,8 @@
   },
   "ru": {
     "st_data_export_outfit_artefact_count_max": "Макс. слоты на поясе",
+    "st_data_export_magnifications": "Кратность",
+    "st_data_export_zoom_factor": "Кратность",
     "ui_mcm_menu_exo": "Экзо с питанием",
     "ui_inv_ap_res": "Класс БР",
     "ui_st_community": "Фракция",

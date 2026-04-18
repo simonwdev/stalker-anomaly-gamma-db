@@ -623,6 +623,7 @@ export default {
     return {
       t: this.t,
       tName: this.tName,
+      isFieldHidden: (key) => this.globalHiddenFields.includes(key) || (this.activePack?.hiddenFields || []).includes(key),
       tCat: this.tCat,
       headerLabel: this.headerLabel,
       filterChipStyle: this.filterChipStyle,

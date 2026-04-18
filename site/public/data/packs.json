@@ -1,4 +1,5 @@
 {
+  "hiddenFields": ["st_data_export_zoom_factor"],
   "packs": [
     {
       "id": "gamma-0.9.4",

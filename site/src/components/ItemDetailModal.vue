@@ -358,7 +358,7 @@ export default {
   name: 'ItemDetailModal',
   components: { UpgradeTreeView },
   inject: [
-    't', 'tName', 'tCat', 'headerLabel', 'formatValue', 'displayLabel', 'displayStyle',
+    't', 'tName', 'tCat', 'headerLabel', 'formatValue', 'displayLabel', 'displayStyle', 'isFieldHidden',
     'healDots', 'factionColor', 'factionIcon', 'singularCategory', 'isUnusedAmmo',
     'caliberVariantObjects', 'shortAmmoName', 'formatAmmoStat', 'ammoArrow', 'isAmmoBest',
     'findItemByName', 'modalStatClass', 'modalStatStyle',
@@ -480,8 +480,8 @@ export default {
         `<div class="addon-tt-row"><span class="addon-tt-key">${esc(label)}</span><span class="addon-tt-val ${val ? 'addon-tt-yes' : 'addon-tt-no'}">${val ? '✓' : '✗'}</span></div>`;
       const rows = [];
       if (addon.st_prop_weight) rows.push(kv('st_prop_weight', addon.st_prop_weight));
-      if (addon.st_upgr_cost) rows.push(kv('st_upgr_cost', addon.st_upgr_cost + ' ₽'));
-      if (addon.st_data_export_zoom_factor) rows.push(kv('st_data_export_zoom_factor', addon.st_data_export_zoom_factor + 'x'));
+      if (addon.st_upgr_cost) rows.push(kv('st_upgr_cost', this.formatValue('st_upgr_cost', addon.st_upgr_cost)));
+      if (addon.st_data_export_zoom_factor && !this.isFieldHidden('st_data_export_zoom_factor')) rows.push(kv('st_data_export_zoom_factor', this.formatValue('st_data_export_zoom_factor', addon.st_data_export_zoom_factor)));
       rows.push(bool(this.t('app_label_stash_drop'), addon.hasStashDrop));
       rows.push(bool(this.t('app_label_can_disassemble'), addon.hasDisassemble));
       const name = esc(this.t(addon.pda_encyclopedia_name || addon.id));

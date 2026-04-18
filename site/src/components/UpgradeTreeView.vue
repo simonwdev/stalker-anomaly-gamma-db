@@ -160,7 +160,7 @@ function getPropCategory(prop) {
 
 export default {
     name: "UpgradeTreeView",
-    inject: ["t", "headerLabel"],
+    inject: ["t", "headerLabel", "formatValue"],
     props: {
         nodes: { type: Array, default: () => [] },
     },
@@ -203,7 +203,7 @@ export default {
             return this.nodes.reduce((sum, n) => sum + (n.cost || 0), 0);
         },
         totalCostFormatted() {
-            return this.totalCost.toLocaleString() + " ₽";
+            return this.formatValue("st_upgr_cost", this.totalCost);
         },
         hoverStyle() {
             if (!this.hoverPos) return { display: 'none' };
@@ -324,7 +324,7 @@ export default {
         },
         formatCost(cost) {
             if (!cost) return "";
-            return cost.toLocaleString() + " ₽";
+            return this.formatValue("st_upgr_cost", cost);
         },
         formatStatVal(val) {
             const num = parseFloat(val);
