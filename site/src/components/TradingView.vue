@@ -11,7 +11,7 @@
                 @click="selectTrader(trader.id)"
             >
                 <span class="trading-pill-dot" :style="{ background: trader.color }"></span>
-                {{ trader.label }}
+                {{ t(trader.labelKey) || trader.label }}
             </button>
         </div>
         <div class="trading-search-wrap">
@@ -19,7 +19,7 @@
                 type="text"
                 class="trading-search"
                 v-model="searchQuery"
-                :placeholder="t('app_trading_search') || 'Search items...'"
+                :placeholder="t('app_trading_search')"
             >
             <button v-if="searchQuery" class="trading-search-clear" @click="searchQuery = ''">&times;</button>
         </div>
@@ -29,15 +29,15 @@
     <div class="trading-tabs">
         <button class="trading-tab" :class="{ active: activeTab === 'supplies' }" @click="activeTab = 'supplies'">
             <LucidePackage :size="14" />
-            {{ t('app_trading_supplies') || 'Supplies' }}
+            {{ t('app_trading_supplies') }}
         </button>
         <button class="trading-tab" :class="{ active: activeTab === 'buy' }" @click="activeTab = 'buy'">
             <LucideArrowDownCircle :size="14" />
-            {{ t('app_trading_buy_conditions') || 'Buy Conditions' }}
+            {{ t('app_trading_buy_conditions') }}
         </button>
         <button class="trading-tab" :class="{ active: activeTab === 'sell' }" @click="activeTab = 'sell'">
             <LucideArrowUpCircle :size="14" />
-            {{ t('app_trading_sell_conditions') || 'Sell Conditions' }}
+            {{ t('app_trading_sell_conditions') }}
         </button>
     </div>
 
@@ -51,9 +51,9 @@
         <!-- Trader info card -->
         <div class="trading-info-bar">
             <div class="trading-info-item" v-if="traderData.discounts && traderData.discounts.length">
-                <span class="trading-info-label">{{ t('app_trading_discounts') || 'Discounts' }}</span>
+                <span class="trading-info-label">{{ t('app_trading_discounts') }}</span>
                 <span v-for="d in traderData.discounts" :key="d[0]" class="trading-discount-badge" :class="d[0]">
-                    {{ d[0] }}: {{ (d[1] * 100).toFixed(0) }}%
+                    {{ t('app_trading_discount_' + d[0]) || d[0] }}: {{ (d[1] * 100).toFixed(0) }}%
                 </span>
             </div>
             <div class="trading-info-item" v-if="traderData.buy_supplies && traderData.buy_supplies.length">
@@ -79,15 +79,31 @@
                 <span class="trading-unlock-icon">🔓</span>
                 <template v-if="unlockCondition">
                     <template v-for="(label, i) in unlockCondition" :key="i">
-                        <span v-if="i > 0" class="trading-unlock-or">OR</span>
+                        <span v-if="i > 0" class="trading-unlock-or">{{ t('app_trading_or') || 'OR' }}</span>
                         <span class="trading-unlock-badge">{{ label }}</span>
                     </template>
                 </template>
-                <span v-else class="trading-unlock-base">{{ t('app_trading_base_tier') || 'Base tier' }}</span>
+                <span v-else class="trading-unlock-base">{{ t('app_trading_base_tier') }}</span>
             </div>
             <div class="trading-items-grid" v-if="filteredSupplyItems.length">
-                <div v-for="item in filteredSupplyItems" :key="item[0]" class="trading-item-card">
-                    <div class="trading-item-name">{{ item[0] }}</div>
+                <a
+                    v-for="item in filteredSupplyItems"
+                    :key="item[0]"
+                    class="trading-item-card"
+                    :class="{ 'trading-item-card--linked': !!resolveItem(item[0]) }"
+                    href="#"
+                    @click.prevent="resolveItem(item[0]) && $emit('navigateToItem', resolveItem(item[0]).id)"
+                    @mouseenter="resolveItem(item[0]) && $emit('showItemHover', resolveItem(item[0]), $event)"
+                    @mousemove="$emit('moveItemHover', $event)"
+                    @mouseleave="$emit('hideItemHover')"
+                >
+                    <div class="trading-item-info">
+                        <div class="trading-item-name">
+                            {{ resolveItem(item[0]) ? tName(resolveItem(item[0])) : item[0] }}
+                        </div>
+                        <div class="trading-item-id" v-if="resolveItem(item[0])">{{ item[0] }}</div>
+                        <div class="trading-item-cat" v-if="resolveItem(item[0])">{{ tCat(resolveItem(item[0]).category) }}</div>
+                    </div>
                     <div class="trading-item-stats">
                         <span class="trading-item-qty" v-tooltip="t('app_trading_quantity')">×{{ item[1] }}</span>
                         <span class="trading-item-prob" v-if="item[2] != null" v-tooltip="t('app_trading_probability')">
@@ -95,9 +111,9 @@
                             {{ (item[2] * 100).toFixed(0) }}%
                         </span>
                     </div>
-                </div>
+                </a>
             </div>
-            <div v-else class="trading-empty">{{ t('app_trading_no_results') || 'No matching items found.' }}</div>
+            <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
         </div>
 
         <!-- Buy conditions tab -->
@@ -111,8 +127,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="row in filteredBuyConditions" :key="row[0]">
-                            <td class="trading-cond-item">{{ row[0] }}</td>
+                        <tr
+                            v-for="row in filteredBuyConditions"
+                            :key="row[0]"
+                            :class="{ 'trading-cond-row--linked': !!resolveItem(row[0].replace(/_x$/, '')) }"
+                            @click="resolveItem(row[0].replace(/_x$/, '')) && $emit('navigateToItem', resolveItem(row[0].replace(/_x$/, '')).id)"
+                            @mouseenter="resolveItem(row[0].replace(/_x$/, '')) && $emit('showItemHover', resolveItem(row[0].replace(/_x$/, '')), $event)"
+                            @mousemove="$emit('moveItemHover', $event)"
+                            @mouseleave="$emit('hideItemHover')"
+                        >
+                            <td class="trading-cond-item">
+                                <span class="trading-cond-name">{{ resolveItem(row[0].replace(/_x$/, '')) ? tName(resolveItem(row[0].replace(/_x$/, ''))) : row[0] }}</span>
+                                <span class="trading-cond-id" v-if="resolveItem(row[0].replace(/_x$/, ''))">{{ row[0] }}</span>
+                            </td>
                             <td class="trading-cond-value">
                                 <span class="trading-mult-bar" :style="{ width: Math.min(row[1] * 100, 100) + '%' }"></span>
                                 <span class="trading-mult-label">{{ row[1] }}</span>
@@ -120,7 +147,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div v-else class="trading-empty">{{ t('app_trading_no_results') || 'No matching items found.' }}</div>
+                <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
             </div>
         </div>
 
@@ -135,8 +162,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="row in filteredSellConditions" :key="row[0]">
-                            <td class="trading-cond-item">{{ row[0] }}</td>
+                        <tr
+                            v-for="row in filteredSellConditions"
+                            :key="row[0]"
+                            :class="{ 'trading-cond-row--linked': !!resolveItem(row[0].replace(/_x$/, '')) }"
+                            @click="resolveItem(row[0].replace(/_x$/, '')) && $emit('navigateToItem', resolveItem(row[0].replace(/_x$/, '')).id)"
+                            @mouseenter="resolveItem(row[0].replace(/_x$/, '')) && $emit('showItemHover', resolveItem(row[0].replace(/_x$/, '')), $event)"
+                            @mousemove="$emit('moveItemHover', $event)"
+                            @mouseleave="$emit('hideItemHover')"
+                        >
+                            <td class="trading-cond-item">
+                                <span class="trading-cond-name">{{ resolveItem(row[0].replace(/_x$/, '')) ? tName(resolveItem(row[0].replace(/_x$/, ''))) : row[0] }}</span>
+                                <span class="trading-cond-id" v-if="resolveItem(row[0].replace(/_x$/, ''))">{{ row[0] }}</span>
+                            </td>
                             <td class="trading-cond-value">
                                 <span class="trading-mult-bar" :style="{ width: Math.min(row[1] * 100, 100) + '%' }"></span>
                                 <span class="trading-mult-label">{{ row[1] }}</span>
@@ -144,7 +182,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div v-else class="trading-empty">{{ t('app_trading_no_results') || 'No matching items found.' }}</div>
+                <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
             </div>
         </div>
     </div>
@@ -153,42 +191,44 @@
 
 <script>
 const TRADER_META = [
-    { id: 'stalker_sidorovich', label: 'Sidorovich', color: '#f59e0b' },
-    { id: 'stalker_owl', label: 'Owl', color: '#8b5cf6' },
-    { id: 'stalker_loris', label: 'Loris', color: '#6366f1' },
-    { id: 'stalker_nimble', label: 'Nimble', color: '#ec4899' },
-    { id: 'stalker_basic', label: 'Stalker', color: '#a3a3a3' },
-    { id: 'stalker_butcher', label: 'Butcher', color: '#ef4444' },
-    { id: 'stalker_flea_market', label: 'Flea Market', color: '#f97316' },
-    { id: 'stalker_flea_market_night', label: 'Flea Market (Night)', color: '#c2410c' },
-    { id: 'bandit', label: 'Bandit', color: '#854d0e' },
-    { id: 'bandit_basic', label: 'Bandit (Basic)', color: '#a16207' },
-    { id: 'duty', label: 'Duty', color: '#dc2626' },
-    { id: 'freedom', label: 'Freedom', color: '#16a34a' },
-    { id: 'csky_spore', label: 'Clear Sky', color: '#0ea5e9' },
-    { id: 'ecolog_hermann', label: 'Hermann', color: '#14b8a6' },
-    { id: 'ecolog_sakharov', label: 'Sakharov', color: '#06b6d4' },
-    { id: 'ecolog_spirit', label: 'Spirit', color: '#2dd4bf' },
-    { id: 'military', label: 'Military', color: '#65a30d' },
-    { id: 'military_esc', label: 'Military (Escape)', color: '#4d7c0f' },
-    { id: 'mercenary', label: 'Mercenary', color: '#7c3aed' },
-    { id: 'mercenary_basic', label: 'Mercenary (Basic)', color: '#6d28d9' },
-    { id: 'mercenary_meeker', label: 'Meeker', color: '#a78bfa' },
-    { id: 'monolith', label: 'Monolith', color: '#38bdf8' },
-    { id: 'monolith_basic', label: 'Monolith (Basic)', color: '#0284c7' },
-    { id: 'greh', label: 'Greh', color: '#f43f5e' },
-    { id: 'isg', label: 'ISG', color: '#10b981' },
-    { id: 'isg_mission', label: 'ISG (Mission)', color: '#059669' },
-    { id: 'generic_barman', label: 'Barman', color: '#d97706' },
-    { id: 'generic_mechanic', label: 'Mechanic', color: '#78716c' },
-    { id: 'generic_medic', label: 'Medic', color: '#e11d48' },
+    { id: 'stalker_sidorovich',       labelKey: 'app_trader_sidorovich',       label: 'Sidorovich',          color: '#f59e0b' },
+    { id: 'stalker_owl',              labelKey: 'app_trader_owl',              label: 'Owl',                 color: '#8b5cf6' },
+    { id: 'stalker_loris',            labelKey: 'app_trader_loris',            label: 'Loris',               color: '#6366f1' },
+    { id: 'stalker_nimble',           labelKey: 'app_trader_nimble',           label: 'Nimble',              color: '#ec4899' },
+    { id: 'stalker_basic',            labelKey: 'app_trader_stalker_basic',    label: 'Stalker',             color: '#a3a3a3' },
+    { id: 'stalker_butcher',          labelKey: 'app_trader_butcher',          label: 'Butcher',             color: '#ef4444' },
+    { id: 'stalker_flea_market',      labelKey: 'app_trader_flea_market',      label: 'Flea Market',         color: '#f97316' },
+    { id: 'stalker_flea_market_night',labelKey: 'app_trader_flea_market_night',label: 'Flea Market (Night)', color: '#c2410c' },
+    { id: 'bandit',                   labelKey: 'app_trader_bandit',           label: 'Bandit',              color: '#854d0e' },
+    { id: 'bandit_basic',             labelKey: 'app_trader_bandit_basic',     label: 'Bandit (Basic)',      color: '#a16207' },
+    { id: 'duty',                     labelKey: 'app_trader_duty',             label: 'Duty',                color: '#dc2626' },
+    { id: 'freedom',                  labelKey: 'app_trader_freedom',          label: 'Freedom',             color: '#16a34a' },
+    { id: 'csky_spore',               labelKey: 'app_trader_clear_sky',        label: 'Clear Sky',           color: '#0ea5e9' },
+    { id: 'ecolog_hermann',           labelKey: 'app_trader_hermann',          label: 'Hermann',             color: '#14b8a6' },
+    { id: 'ecolog_sakharov',          labelKey: 'app_trader_sakharov',         label: 'Sakharov',            color: '#06b6d4' },
+    { id: 'ecolog_spirit',            labelKey: 'app_trader_spirit',           label: 'Spirit',              color: '#2dd4bf' },
+    { id: 'military',                 labelKey: 'app_trader_military',         label: 'Military',            color: '#65a30d' },
+    { id: 'military_esc',             labelKey: 'app_trader_military_esc',     label: 'Military (Escape)',   color: '#4d7c0f' },
+    { id: 'mercenary',                labelKey: 'app_trader_mercenary',        label: 'Mercenary',           color: '#7c3aed' },
+    { id: 'mercenary_basic',          labelKey: 'app_trader_mercenary_basic',  label: 'Mercenary (Basic)',   color: '#6d28d9' },
+    { id: 'mercenary_meeker',         labelKey: 'app_trader_meeker',           label: 'Meeker',              color: '#a78bfa' },
+    { id: 'monolith',                 labelKey: 'app_trader_monolith',         label: 'Monolith',            color: '#38bdf8' },
+    { id: 'monolith_basic',           labelKey: 'app_trader_monolith_basic',   label: 'Monolith (Basic)',    color: '#0284c7' },
+    { id: 'greh',                     labelKey: 'app_trader_greh',             label: 'Greh',                color: '#f43f5e' },
+    { id: 'isg',                      labelKey: 'app_trader_isg',              label: 'ISG',                 color: '#10b981' },
+    { id: 'isg_mission',              labelKey: 'app_trader_isg_mission',      label: 'ISG (Mission)',       color: '#059669' },
+    { id: 'generic_barman',           labelKey: 'app_trader_barman',           label: 'Barman',              color: '#d97706' },
+    { id: 'generic_mechanic',         labelKey: 'app_trader_mechanic',         label: 'Mechanic',            color: '#78716c' },
+    { id: 'generic_medic',            labelKey: 'app_trader_medic',            label: 'Medic',               color: '#e11d48' },
 ];
 
 export default {
     props: {
         packId: { type: String, default: null },
+        indexById: { type: Object, default: () => ({}) },
     },
-    inject: ['t'],
+    inject: ['t', 'tName', 'tCat'],
+    emits: ['navigateToItem', 'showItemHover', 'moveItemHover', 'hideItemHover'],
     data() {
         return {
             traders: TRADER_META,
@@ -222,21 +262,36 @@ export default {
             return this.traderData[this.activeTier] || [];
         },
         filteredSupplyItems() {
-            if (!this.searchQuery.trim()) return this.currentSupplyItems;
-            const q = this.searchQuery.toLowerCase();
-            return this.currentSupplyItems.filter(item => item[0].toLowerCase().includes(q));
+            const q = this.searchQuery.trim().toLowerCase();
+            if (!q) return this.currentSupplyItems;
+            return this.currentSupplyItems.filter(item => {
+                if (item[0].toLowerCase().includes(q)) return true;
+                const resolved = this.resolveItem(item[0]);
+                if (resolved && this.tName(resolved).toLowerCase().includes(q)) return true;
+                return false;
+            });
         },
         filteredBuyConditions() {
             const items = this.traderData?.buy_condition || [];
-            if (!this.searchQuery.trim()) return items;
-            const q = this.searchQuery.toLowerCase();
-            return items.filter(r => r[0].toLowerCase().includes(q));
+            const q = this.searchQuery.trim().toLowerCase();
+            if (!q) return items;
+            return items.filter(r => {
+                if (r[0].toLowerCase().includes(q)) return true;
+                const resolved = this.resolveItem(r[0].replace(/_x$/, ''));
+                if (resolved && this.tName(resolved).toLowerCase().includes(q)) return true;
+                return false;
+            });
         },
         filteredSellConditions() {
             const items = this.traderData?.sell_condition || [];
-            if (!this.searchQuery.trim()) return items;
-            const q = this.searchQuery.toLowerCase();
-            return items.filter(r => r[0].toLowerCase().includes(q));
+            const q = this.searchQuery.trim().toLowerCase();
+            if (!q) return items;
+            return items.filter(r => {
+                if (r[0].toLowerCase().includes(q)) return true;
+                const resolved = this.resolveItem(r[0].replace(/_x$/, ''));
+                if (resolved && this.tName(resolved).toLowerCase().includes(q)) return true;
+                return false;
+            });
         },
     },
     watch: {
@@ -249,12 +304,28 @@ export default {
         },
     },
     methods: {
+        resolveItem(id) {
+            return this.indexById[id] || null;
+        },
         selectTrader(id) {
             this.selectedTrader = id;
             this.activeTier = 'supplies_1';
         },
+        tierLabel(key) {
+            if (key === 'supplies_generic') return this.t('app_trading_generic_tier') || 'Generic';
+            const num = key.replace('supplies_', '');
+            return `${this.t('app_trading_level')} ${num}`;
+        },
         parseCondition(raw) {
-            const FACTION = {
+            const FACTION_KEY = {
+                stalker: 'app_faction_stalker', bandit: 'app_faction_bandit',
+                csky: 'app_faction_clear_sky', dolg: 'app_faction_duty',
+                freedom: 'app_faction_freedom', ecolog: 'app_faction_ecolog',
+                army: 'app_faction_military', monolith: 'app_faction_monolith',
+                killer: 'app_faction_mercenary', greh: 'app_faction_greh',
+                isg: 'app_faction_isg',
+            };
+            const FACTION_FALLBACK = {
                 stalker: 'Stalker', bandit: 'Bandit', csky: 'Clear Sky',
                 dolg: 'Duty', freedom: 'Freedom', ecolog: 'Ecologist',
                 army: 'Military', monolith: 'Monolith', killer: 'Mercenary',
@@ -264,37 +335,30 @@ export default {
             const labels = [];
             for (const part of parts) {
                 const p = part.trim();
-                // =actor_goodwill_ge(faction:value)
                 const gw = p.match(/^=actor_goodwill_ge\((\w+):(-?\d+)\)$/);
                 if (gw) {
-                    const faction = FACTION[gw[1]] || gw[1];
-                    labels.push(`${faction} ≥ ${gw[2]}`);
+                    const fKey = FACTION_KEY[gw[1]];
+                    const fName = fKey ? (this.t(fKey) || FACTION_FALLBACK[gw[1]] || gw[1]) : gw[1];
+                    labels.push(`${fName} ≥ ${gw[2]}`);
                     continue;
                 }
-                // =heavy_pockets_functor()
                 if (p === '=heavy_pockets_functor()') {
-                    labels.push('Heavy Pockets');
+                    labels.push(this.t('app_trading_cond_heavy_pockets') || 'Heavy Pockets');
                     continue;
                 }
-                // =toolkit_task_done(n)
                 const tk = p.match(/^=toolkit_task_done\((\d+)\)$/);
-                if (tk) { labels.push(`Toolkit task ${tk[1]} done`); continue; }
-                // =drugkit_task_done()
-                if (p === '=drugkit_task_done()') { labels.push('Drug kit task done'); continue; }
-                // +story_flag style
-                if (p.startsWith('+')) {
-                    labels.push(p.slice(1).replace(/_/g, ' '));
+                if (tk) {
+                    labels.push((this.t('app_trading_cond_toolkit_task') || 'Toolkit task {n} done').replace('{n}', tk[1]));
                     continue;
                 }
-                // fallback — strip = and tidy
+                if (p === '=drugkit_task_done()') {
+                    labels.push(this.t('app_trading_cond_drugkit_task') || 'Drug kit task done');
+                    continue;
+                }
+                if (p.startsWith('+')) { labels.push(p.slice(1).replace(/_/g, ' ')); continue; }
                 labels.push(p.replace(/^=/, '').replace(/_/g, ' ').replace(/\(.*\)/, '').trim());
             }
             return labels;
-        },
-        tierLabel(key) {
-            if (key === 'supplies_generic') return 'Generic';
-            const num = key.replace('supplies_', '');
-            return `${this.t('app_trading_level') || 'Level'} ${num}`;
         },
         async loadTrader() {
             if (!this.packId) return;
@@ -306,8 +370,7 @@ export default {
             }
             this.loading = true;
             try {
-                const url = `/data/${this.packId}/traders/${id}.json`;
-                const resp = await fetch(url);
+                const resp = await fetch(`/data/${this.packId}/traders/${id}.json`);
                 if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
                 const data = await resp.json();
                 this.cache[id] = data;
@@ -371,190 +434,79 @@ export default {
     transition: all 0.15s;
     white-space: nowrap;
 }
-.trading-pill:hover {
-    color: var(--text);
-    border-color: var(--text-secondary);
-}
-.trading-pill.active {
-    background: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
-}
-.trading-pill-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-.trading-pill.active .trading-pill-dot {
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
-}
+.trading-pill:hover { color: var(--text); border-color: var(--text-secondary); }
+.trading-pill.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.trading-pill-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.trading-pill.active .trading-pill-dot { box-shadow: 0 0 0 2px rgba(255,255,255,0.4); }
 
 /* Search */
-.trading-search-wrap {
-    position: relative;
-    margin-left: auto;
-    min-width: 200px;
-}
+.trading-search-wrap { position: relative; margin-left: auto; min-width: 200px; }
 .trading-search {
-    width: 100%;
-    padding: 0.4rem 2rem 0.4rem 0.6rem;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--text);
-    font-size: 0.8rem;
-    outline: none;
+    width: 100%; padding: 0.4rem 2rem 0.4rem 0.6rem;
+    background: var(--card); border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); font-size: 0.8rem; outline: none;
 }
 .trading-search:focus { border-color: var(--accent); }
 .trading-search-clear {
-    position: absolute;
-    right: 0.3rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    cursor: pointer;
-    line-height: 1;
+    position: absolute; right: 0.3rem; top: 50%; transform: translateY(-50%);
+    background: none; border: none; color: var(--text-secondary); font-size: 1.1rem; cursor: pointer; line-height: 1;
 }
 
 /* Tabs */
-.trading-tabs {
-    display: flex;
-    gap: 0;
-    border-bottom: 2px solid var(--border);
-    margin-bottom: 1rem;
-}
+.trading-tabs { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 1rem; }
 .trading-tab {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    padding: 0.55rem 1rem;
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -2px;
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    font-weight: 500;
-    cursor: pointer;
+    display: flex; align-items: center; gap: 0.35rem;
+    padding: 0.55rem 1rem; background: none; border: none;
+    border-bottom: 2px solid transparent; margin-bottom: -2px;
+    color: var(--text-secondary); font-size: 0.8rem; font-weight: 500; cursor: pointer;
     transition: color 0.15s, border-color 0.15s;
 }
 .trading-tab:hover { color: var(--text); }
-.trading-tab.active {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
-}
+.trading-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
 
 /* Info bar */
 .trading-info-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 0.6rem 0.8rem;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    font-size: 0.78rem;
+    display: flex; flex-wrap: wrap; gap: 1rem;
+    padding: 0.6rem 0.8rem; background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; margin-bottom: 1rem; font-size: 0.78rem;
 }
-.trading-info-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.trading-info-label {
-    color: var(--text-secondary);
-    font-weight: 500;
-}
+.trading-info-item { display: flex; align-items: center; gap: 0.5rem; }
+.trading-info-label { color: var(--text-secondary); font-weight: 500; }
 .trading-discount-badge {
-    padding: 0.15rem 0.5rem;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.72rem;
+    padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600; font-size: 0.72rem;
 }
-.trading-discount-badge.buy {
-    background: rgba(34, 197, 94, 0.15);
-    color: #22c55e;
-}
-.trading-discount-badge.sell {
-    background: rgba(239, 68, 68, 0.15);
-    color: #ef4444;
-}
-.trading-tier-count {
-    color: var(--accent);
-    font-weight: 600;
-}
+.trading-discount-badge.buy { background: rgba(34,197,94,0.15); color: #22c55e; }
+.trading-discount-badge.sell { background: rgba(239,68,68,0.15); color: #ef4444; }
+.trading-tier-count { color: var(--accent); font-weight: 600; }
 
 /* Tier tabs */
-.trading-tier-tabs {
-    display: flex;
-    gap: 0.3rem;
-    margin-bottom: 0.75rem;
-    flex-wrap: wrap;
-}
+.trading-tier-tabs { display: flex; gap: 0.3rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
 .trading-tier-btn {
-    padding: 0.3rem 0.7rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: var(--card);
-    color: var(--text-secondary);
-    font-size: 0.72rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s;
+    padding: 0.3rem 0.7rem; border: 1px solid var(--border); border-radius: 6px;
+    background: var(--card); color: var(--text-secondary); font-size: 0.72rem; font-weight: 500; cursor: pointer; transition: all 0.15s;
 }
-.trading-tier-btn:hover {
-    border-color: var(--text-secondary);
-    color: var(--text);
-}
-.trading-tier-btn.active {
-    background: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
-}
+.trading-tier-btn:hover { border-color: var(--text-secondary); color: var(--text); }
+.trading-tier-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
 /* Unlock condition */
 .trading-unlock-condition {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-    padding: 0.45rem 0.7rem;
-    background: rgba(245, 158, 11, 0.08);
-    border: 1px solid rgba(245, 158, 11, 0.25);
-    border-radius: 6px;
-    margin-bottom: 0.75rem;
-    font-size: 0.72rem;
+    display: flex; align-items: center; flex-wrap: wrap; gap: 0.35rem;
+    padding: 0.45rem 0.7rem; background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.25); border-radius: 6px; margin-bottom: 0.75rem; font-size: 0.72rem;
 }
 .trading-unlock-icon { font-size: 0.9rem; flex-shrink: 0; }
 .trading-unlock-badge {
-    padding: 0.15rem 0.5rem;
-    background: rgba(245, 158, 11, 0.15);
-    border: 1px solid rgba(245, 158, 11, 0.35);
-    border-radius: 4px;
-    color: #f59e0b;
-    font-weight: 600;
-    white-space: nowrap;
+    padding: 0.15rem 0.5rem; background: rgba(245,158,11,0.15);
+    border: 1px solid rgba(245,158,11,0.35); border-radius: 4px;
+    color: #f59e0b; font-weight: 600; white-space: nowrap;
 }
-.trading-unlock-or {
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: var(--text-secondary);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-.trading-unlock-base {
-    color: var(--text-secondary);
-    font-style: italic;
-}
+.trading-unlock-or { font-size: 0.65rem; font-weight: 700; color: var(--text-secondary); letter-spacing: 0.05em; text-transform: uppercase; }
+.trading-unlock-base { color: var(--text-secondary); font-style: italic; }
 
 /* Items grid */
 .trading-items-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 0.5rem;
 }
 .trading-item-card {
@@ -565,142 +517,76 @@ export default {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 6px;
-    transition: border-color 0.15s;
+    transition: border-color 0.15s, background 0.15s;
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
 }
-.trading-item-card:hover {
+.trading-item-card--linked {
+    cursor: pointer;
+}
+.trading-item-card--linked:hover {
     border-color: var(--accent);
+    background: var(--color-overlay-white-6);
 }
+.trading-item-info { flex: 1; min-width: 0; }
 .trading-item-name {
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--text);
-    word-break: break-all;
-    min-width: 0;
-    flex: 1;
+    font-size: 0.75rem; font-weight: 500; color: var(--text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.trading-item-id {
+    font-size: 0.62rem; color: var(--text-secondary); opacity: 0.6;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px;
+}
+.trading-item-cat {
+    font-size: 0.62rem; color: var(--accent); margin-top: 1px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .trading-item-stats {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-shrink: 0;
-    margin-left: 0.5rem;
+    display: flex; align-items: center; gap: 0.5rem;
+    flex-shrink: 0; margin-left: 0.5rem;
 }
-.trading-item-qty {
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: var(--accent);
-}
+.trading-item-qty { font-size: 0.72rem; font-weight: 600; color: var(--accent); }
 .trading-item-prob {
-    position: relative;
-    font-size: 0.65rem;
-    color: var(--text-secondary);
-    min-width: 40px;
-    text-align: right;
+    position: relative; font-size: 0.65rem; color: var(--text-secondary); min-width: 40px; text-align: right;
 }
 .prob-bar {
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 2px;
-    background: var(--accent);
-    border-radius: 1px;
-    opacity: 0.5;
+    position: absolute; left: 0; bottom: -2px; height: 2px;
+    background: var(--accent); border-radius: 1px; opacity: 0.5;
 }
 
 /* Conditions table */
-.trading-conditions-table-wrap {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-}
-.trading-conditions-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.75rem;
-}
-.trading-conditions-table thead {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
+.trading-conditions-table-wrap { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.trading-conditions-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+.trading-conditions-table thead { position: sticky; top: 0; z-index: 2; }
 .trading-conditions-table th {
-    padding: 0.5rem 0.7rem;
-    text-align: left;
-    font-weight: 600;
-    color: var(--text-secondary);
-    background: var(--bg);
-    border-bottom: 2px solid var(--border);
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    padding: 0.5rem 0.7rem; text-align: left; font-weight: 600;
+    color: var(--text-secondary); background: var(--bg); border-bottom: 2px solid var(--border);
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em;
 }
-.trading-conditions-table td {
-    padding: 0.4rem 0.7rem;
-    border-bottom: 1px solid var(--border);
-}
-.trading-conditions-table tbody tr:hover {
-    background: var(--color-overlay-white-6);
-}
-.trading-cond-item {
-    font-weight: 500;
-    color: var(--text);
-    word-break: break-all;
-}
-.trading-cond-value {
-    position: relative;
-    min-width: 120px;
-}
-.trading-mult-bar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    background: var(--accent);
-    opacity: 0.1;
-    border-radius: 2px;
-}
-.trading-mult-label {
-    position: relative;
-    font-weight: 600;
-    color: var(--accent);
-    font-size: 0.75rem;
-}
+.trading-conditions-table td { padding: 0.4rem 0.7rem; border-bottom: 1px solid var(--border); }
+.trading-conditions-table tbody tr:hover { background: var(--color-overlay-white-6); }
+.trading-cond-row--linked { cursor: pointer; }
+.trading-cond-row--linked:hover td:first-child .trading-cond-name { color: var(--accent); }
+.trading-cond-item { word-break: break-all; }
+.trading-cond-name { font-weight: 500; color: var(--text); display: block; }
+.trading-cond-id { font-size: 0.62rem; color: var(--text-secondary); opacity: 0.6; display: block; }
+.trading-cond-value { position: relative; min-width: 120px; }
+.trading-mult-bar { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); opacity: 0.1; border-radius: 2px; }
+.trading-mult-label { position: relative; font-weight: 600; color: var(--accent); font-size: 0.75rem; }
 
-/* Empty state */
-.trading-empty {
-    text-align: center;
-    padding: 2rem;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-}
-
-/* Loading */
-.trading-loading {
-    display: flex;
-    justify-content: center;
-    padding: 3rem;
-}
+/* Empty / loading */
+.trading-empty { text-align: center; padding: 2rem; color: var(--text-secondary); font-size: 0.85rem; }
+.trading-loading { display: flex; justify-content: center; padding: 3rem; }
 
 /* Scrollable content area */
-.trading-content {
-    flex: 1;
-    min-height: 0;
-    overflow-y: auto;
-}
+.trading-content { flex: 1; min-height: 0; overflow-y: auto; }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .trading-toolbar {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .trading-search-wrap {
-        margin-left: 0;
-        min-width: 0;
-    }
-    .trading-items-grid {
-        grid-template-columns: 1fr;
-    }
+    .trading-toolbar { flex-direction: column; align-items: stretch; }
+    .trading-search-wrap { margin-left: 0; min-width: 0; }
+    .trading-items-grid { grid-template-columns: 1fr; }
 }
 </style>
 
