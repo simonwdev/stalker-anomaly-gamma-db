@@ -75,9 +75,15 @@
                     {{ tierLabel(key) }}
                 </button>
             </div>
-            <div v-if="traderData.buy_supplies && traderData.buy_supplies.length" class="trading-unlock-condition">
+            <div v-if="unlockCondition || activeTier === 'supplies_1' || activeTier === 'supplies_generic'" class="trading-unlock-condition">
                 <span class="trading-unlock-icon">🔓</span>
-                <span class="trading-unlock-text">{{ unlockCondition }}</span>
+                <template v-if="unlockCondition">
+                    <template v-for="(label, i) in unlockCondition" :key="i">
+                        <span v-if="i > 0" class="trading-unlock-or">OR</span>
+                        <span class="trading-unlock-badge">{{ label }}</span>
+                    </template>
+                </template>
+                <span v-else class="trading-unlock-base">{{ t('app_trading_base_tier') || 'Base tier' }}</span>
             </div>
             <div class="trading-items-grid" v-if="filteredSupplyItems.length">
                 <div v-for="item in filteredSupplyItems" :key="item[0]" class="trading-item-card">
@@ -206,9 +212,10 @@ export default {
             return this.supplyKeys.length;
         },
         unlockCondition() {
-            if (!this.traderData?.buy_supplies) return '';
+            if (!this.traderData?.buy_supplies) return null;
             const match = this.traderData.buy_supplies.find(s => s[0] === this.activeTier);
-            return match ? match[1] : '(base tier)';
+            if (!match || !match[1]) return null;
+            return this.parseCondition(match[1]);
         },
         currentSupplyItems() {
             if (!this.traderData) return [];
@@ -245,6 +252,44 @@ export default {
         selectTrader(id) {
             this.selectedTrader = id;
             this.activeTier = 'supplies_1';
+        },
+        parseCondition(raw) {
+            const FACTION = {
+                stalker: 'Stalker', bandit: 'Bandit', csky: 'Clear Sky',
+                dolg: 'Duty', freedom: 'Freedom', ecolog: 'Ecologist',
+                army: 'Military', monolith: 'Monolith', killer: 'Mercenary',
+                greh: 'Greh', isg: 'ISG',
+            };
+            const parts = raw.split(/ OR /);
+            const labels = [];
+            for (const part of parts) {
+                const p = part.trim();
+                // =actor_goodwill_ge(faction:value)
+                const gw = p.match(/^=actor_goodwill_ge\((\w+):(-?\d+)\)$/);
+                if (gw) {
+                    const faction = FACTION[gw[1]] || gw[1];
+                    labels.push(`${faction} ≥ ${gw[2]}`);
+                    continue;
+                }
+                // =heavy_pockets_functor()
+                if (p === '=heavy_pockets_functor()') {
+                    labels.push('Heavy Pockets');
+                    continue;
+                }
+                // =toolkit_task_done(n)
+                const tk = p.match(/^=toolkit_task_done\((\d+)\)$/);
+                if (tk) { labels.push(`Toolkit task ${tk[1]} done`); continue; }
+                // =drugkit_task_done()
+                if (p === '=drugkit_task_done()') { labels.push('Drug kit task done'); continue; }
+                // +story_flag style
+                if (p.startsWith('+')) {
+                    labels.push(p.slice(1).replace(/_/g, ' '));
+                    continue;
+                }
+                // fallback — strip = and tidy
+                labels.push(p.replace(/^=/, '').replace(/_/g, ' ').replace(/\(.*\)/, '').trim());
+            }
+            return labels;
         },
         tierLabel(key) {
             if (key === 'supplies_generic') return 'Generic';
@@ -475,16 +520,36 @@ export default {
 .trading-unlock-condition {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    padding: 0.4rem 0.7rem;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    padding: 0.45rem 0.7rem;
     background: rgba(245, 158, 11, 0.08);
     border: 1px solid rgba(245, 158, 11, 0.25);
     border-radius: 6px;
     margin-bottom: 0.75rem;
     font-size: 0.72rem;
-    color: var(--text-secondary);
 }
-.trading-unlock-icon { font-size: 0.9rem; }
+.trading-unlock-icon { font-size: 0.9rem; flex-shrink: 0; }
+.trading-unlock-badge {
+    padding: 0.15rem 0.5rem;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    border-radius: 4px;
+    color: #f59e0b;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.trading-unlock-or {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.trading-unlock-base {
+    color: var(--text-secondary);
+    font-style: italic;
+}
 
 /* Items grid */
 .trading-items-grid {
