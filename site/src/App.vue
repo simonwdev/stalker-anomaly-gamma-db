@@ -115,7 +115,15 @@
 
     <main class="content" :class="{ 'content-maps': mapsActive, 'content-trading': tradingActive }">
         <MapsView v-if="mapsActive" :pack-id="activePack?.id" />
-        <TradingView v-if="tradingActive" :pack-id="activePack?.id" />
+        <TradingView
+            v-if="tradingActive"
+            :pack-id="activePack?.id"
+            :index-by-id="indexById"
+            @navigate-to-item="navigateToItem"
+            @show-item-hover="(item, event) => showItemHover(item, event)"
+            @move-item-hover="(event) => moveItemHover(event)"
+            @hide-item-hover="hideItemHover()"
+        />
         <DamageSimulator
             v-if="damageSimActive"
             :weapon-categories="categoryItems"
