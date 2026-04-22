@@ -106,7 +106,12 @@
                     </div>
                     <div class="trading-item-stats">
                         <span class="trading-item-qty" v-tooltip="t('app_trading_quantity')">×{{ item[1] }}</span>
-                        <span class="trading-item-prob" v-if="item[2] != null" v-tooltip="t('app_trading_probability')">
+                        <span
+                            class="trading-item-prob"
+                            v-if="item[2] != null && item[2] < 1"
+                            v-tooltip="t('app_trading_probability')"
+                            :class="{ 'trading-item-prob--low': item[2] < 0.5 }"
+                        >
                             <span class="prob-bar" :style="{ width: (item[2] * 100) + '%' }"></span>
                             {{ (item[2] * 100).toFixed(0) }}%
                         </span>
@@ -566,11 +571,31 @@ export default {
 }
 .trading-item-qty { font-size: 0.72rem; font-weight: 600; color: var(--accent); }
 .trading-item-prob {
-    position: relative; font-size: 0.65rem; color: var(--text-secondary); min-width: 40px; text-align: right;
+    position: relative;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 3px;
+    padding: 0 0.3rem;
+    min-width: 34px;
+    text-align: center;
+    line-height: 1.7;
+}
+.trading-item-prob--low {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.12);
+    border-color: rgba(239, 68, 68, 0.3);
 }
 .prob-bar {
-    position: absolute; left: 0; bottom: -2px; height: 2px;
-    background: var(--accent); border-radius: 1px; opacity: 0.5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background: currentColor;
+    border-radius: 0 0 3px 3px;
+    opacity: 0.5;
 }
 
 /* Conditions table */
