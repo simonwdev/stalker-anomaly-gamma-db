@@ -120,7 +120,7 @@
             :pack-id="activePack?.id"
             :index-by-id="indexById"
             @navigate-to-item="navigateToItem"
-            @show-item-hover="(item, event) => showItemHover(item, event)"
+            @show-item-hover="(id, event) => loadoutItemHover(id, event)"
             @move-item-hover="(event) => moveItemHover(event)"
             @hide-item-hover="hideItemHover()"
         />

@@ -93,7 +93,7 @@
                     :class="{ 'trading-item-card--linked': !!resolveItem(item[0]) }"
                     href="#"
                     @click.prevent="resolveItem(item[0]) && $emit('navigateToItem', resolveItem(item[0]).id)"
-                    @mouseenter="resolveItem(item[0]) && $emit('showItemHover', resolveItem(item[0]), $event)"
+                    @mouseenter="resolveItem(item[0]) && $emit('showItemHover', resolveItem(item[0]).id, $event)"
                     @mousemove="$emit('moveItemHover', $event)"
                     @mouseleave="$emit('hideItemHover')"
                 >
@@ -130,19 +130,20 @@
                         <tr
                             v-for="row in filteredBuyConditions"
                             :key="row[0]"
-                            :class="{ 'trading-cond-row--linked': !!resolveItem(row[0].replace(/_x$/, '')) }"
-                            @click="resolveItem(row[0].replace(/_x$/, '')) && $emit('navigateToItem', resolveItem(row[0].replace(/_x$/, '')).id)"
-                            @mouseenter="resolveItem(row[0].replace(/_x$/, '')) && $emit('showItemHover', resolveItem(row[0].replace(/_x$/, '')), $event)"
+                            :class="{ 'trading-cond-row--linked': !!buyConditionResolved[row[0]], 'trading-cond-row--unlinked': !buyConditionResolved[row[0]] }"
+                            @click="buyConditionResolved[row[0]] && $emit('navigateToItem', buyConditionResolved[row[0]].id)"
+                            @mouseenter="buyConditionResolved[row[0]] && $emit('showItemHover', buyConditionResolved[row[0]].id, $event)"
                             @mousemove="$emit('moveItemHover', $event)"
                             @mouseleave="$emit('hideItemHover')"
                         >
                             <td class="trading-cond-item">
-                                <span class="trading-cond-name">{{ resolveItem(row[0].replace(/_x$/, '')) ? tName(resolveItem(row[0].replace(/_x$/, ''))) : row[0] }}</span>
-                                <span class="trading-cond-id" v-if="resolveItem(row[0].replace(/_x$/, ''))">{{ row[0] }}</span>
+                                <span class="trading-cond-name">{{ buyConditionResolved[row[0]] ? tName(buyConditionResolved[row[0]]) : row[0] }}</span>
+                                <span class="trading-cond-id" v-if="buyConditionResolved[row[0]]">{{ row[0] }}</span>
+                                <span class="trading-cond-cat" v-if="buyConditionResolved[row[0]]">{{ tCat(buyConditionResolved[row[0]].category) }}</span>
                             </td>
                             <td class="trading-cond-value">
                                 <span class="trading-mult-bar" :style="{ width: Math.min(row[1] * 100, 100) + '%' }"></span>
-                                <span class="trading-mult-label">{{ row[1] }}</span>
+                                <span class="trading-mult-label">{{ (row[1] * 100).toFixed(0) }}%</span>
                             </td>
                         </tr>
                     </tbody>
@@ -165,19 +166,20 @@
                         <tr
                             v-for="row in filteredSellConditions"
                             :key="row[0]"
-                            :class="{ 'trading-cond-row--linked': !!resolveItem(row[0].replace(/_x$/, '')) }"
-                            @click="resolveItem(row[0].replace(/_x$/, '')) && $emit('navigateToItem', resolveItem(row[0].replace(/_x$/, '')).id)"
-                            @mouseenter="resolveItem(row[0].replace(/_x$/, '')) && $emit('showItemHover', resolveItem(row[0].replace(/_x$/, '')), $event)"
+                            :class="{ 'trading-cond-row--linked': !!sellConditionResolved[row[0]], 'trading-cond-row--unlinked': !sellConditionResolved[row[0]] }"
+                            @click="sellConditionResolved[row[0]] && $emit('navigateToItem', sellConditionResolved[row[0]].id)"
+                            @mouseenter="sellConditionResolved[row[0]] && $emit('showItemHover', sellConditionResolved[row[0]].id, $event)"
                             @mousemove="$emit('moveItemHover', $event)"
                             @mouseleave="$emit('hideItemHover')"
                         >
                             <td class="trading-cond-item">
-                                <span class="trading-cond-name">{{ resolveItem(row[0].replace(/_x$/, '')) ? tName(resolveItem(row[0].replace(/_x$/, ''))) : row[0] }}</span>
-                                <span class="trading-cond-id" v-if="resolveItem(row[0].replace(/_x$/, ''))">{{ row[0] }}</span>
+                                <span class="trading-cond-name">{{ sellConditionResolved[row[0]] ? tName(sellConditionResolved[row[0]]) : row[0] }}</span>
+                                <span class="trading-cond-id" v-if="sellConditionResolved[row[0]]">{{ row[0] }}</span>
+                                <span class="trading-cond-cat" v-if="sellConditionResolved[row[0]]">{{ tCat(sellConditionResolved[row[0]].category) }}</span>
                             </td>
                             <td class="trading-cond-value">
                                 <span class="trading-mult-bar" :style="{ width: Math.min(row[1] * 100, 100) + '%' }"></span>
-                                <span class="trading-mult-label">{{ row[1] }}</span>
+                                <span class="trading-mult-label">{{ (row[1] * 100).toFixed(0) }}%</span>
                             </td>
                         </tr>
                     </tbody>
@@ -292,6 +294,23 @@ export default {
                 if (resolved && this.tName(resolved).toLowerCase().includes(q)) return true;
                 return false;
             });
+        },
+        // Pre-resolve all condition items into maps to avoid repeated lookups in template
+        buyConditionResolved() {
+            const map = {};
+            for (const r of (this.traderData?.buy_condition || [])) {
+                const id = r[0].replace(/_x$/, '');
+                map[r[0]] = this.resolveItem(id);
+            }
+            return map;
+        },
+        sellConditionResolved() {
+            const map = {};
+            for (const r of (this.traderData?.sell_condition || [])) {
+                const id = r[0].replace(/_x$/, '');
+                map[r[0]] = this.resolveItem(id);
+            }
+            return map;
         },
     },
     watch: {
@@ -410,9 +429,8 @@ export default {
 /* Toolbar */
 .trading-toolbar {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
     margin-bottom: 1rem;
 }
 .trading-trader-pills {
@@ -440,7 +458,7 @@ export default {
 .trading-pill.active .trading-pill-dot { box-shadow: 0 0 0 2px rgba(255,255,255,0.4); }
 
 /* Search */
-.trading-search-wrap { position: relative; margin-left: auto; min-width: 200px; }
+.trading-search-wrap { position: relative; width: 100%; max-width: 320px; flex-shrink: 0; }
 .trading-search {
     width: 100%; padding: 0.4rem 2rem 0.4rem 0.6rem;
     background: var(--card); border: 1px solid var(--border); border-radius: 6px;
@@ -568,9 +586,21 @@ export default {
 .trading-conditions-table tbody tr:hover { background: var(--color-overlay-white-6); }
 .trading-cond-row--linked { cursor: pointer; }
 .trading-cond-row--linked:hover td:first-child .trading-cond-name { color: var(--accent); }
+.trading-cond-row--unlinked .trading-cond-name { color: var(--text-secondary); }
 .trading-cond-item { word-break: break-all; }
 .trading-cond-name { font-weight: 500; color: var(--text); display: block; }
 .trading-cond-id { font-size: 0.62rem; color: var(--text-secondary); opacity: 0.6; display: block; }
+.trading-cond-cat {
+    display: inline-block;
+    margin-top: 2px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--color-accent-tint-12);
+    border-radius: 3px;
+    padding: 0 0.35rem;
+    line-height: 1.6;
+}
 .trading-cond-value { position: relative; min-width: 120px; }
 .trading-mult-bar { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); opacity: 0.1; border-radius: 2px; }
 .trading-mult-label { position: relative; font-weight: 600; color: var(--accent); font-size: 0.75rem; }
@@ -584,8 +614,7 @@ export default {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .trading-toolbar { flex-direction: column; align-items: stretch; }
-    .trading-search-wrap { margin-left: 0; min-width: 0; }
+    .trading-search-wrap { max-width: 100%; }
     .trading-items-grid { grid-template-columns: 1fr; }
 }
 </style>
