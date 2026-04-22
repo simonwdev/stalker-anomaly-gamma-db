@@ -57,8 +57,8 @@
                 </span>
             </div>
             <div class="trading-info-item" v-if="traderData.buy_supplies && traderData.buy_supplies.length">
-                <span class="trading-info-label">Supply Tiers</span>
-                <span class="trading-tier-count">{{ supplyTierCount }} levels</span>
+                <span class="trading-info-label">{{ t('app_trading_supply_tiers') }}</span>
+                <span class="trading-tier-count">{{ supplyTierCount }} {{ t('app_trading_levels') }}</span>
             </div>
         </div>
 
@@ -83,8 +83,8 @@
                 <div v-for="item in filteredSupplyItems" :key="item[0]" class="trading-item-card">
                     <div class="trading-item-name">{{ item[0] }}</div>
                     <div class="trading-item-stats">
-                        <span class="trading-item-qty" v-tooltip="'Quantity'">×{{ item[1] }}</span>
-                        <span class="trading-item-prob" v-if="item[2] != null" v-tooltip="'Probability'">
+                        <span class="trading-item-qty" v-tooltip="t('app_trading_quantity')">×{{ item[1] }}</span>
+                        <span class="trading-item-prob" v-if="item[2] != null" v-tooltip="t('app_trading_probability')">
                             <span class="prob-bar" :style="{ width: (item[2] * 100) + '%' }"></span>
                             {{ (item[2] * 100).toFixed(0) }}%
                         </span>
@@ -100,8 +100,8 @@
                 <table class="trading-conditions-table" v-if="filteredBuyConditions.length">
                     <thead>
                         <tr>
-                            <th>Item</th>
-                            <th>Price Multiplier</th>
+                            <th>{{ t('app_trading_item') }}</th>
+                            <th>{{ t('app_trading_price_multiplier') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -124,8 +124,8 @@
                 <table class="trading-conditions-table" v-if="filteredSellConditions.length">
                     <thead>
                         <tr>
-                            <th>Item</th>
-                            <th>Price Multiplier</th>
+                            <th>{{ t('app_trading_item') }}</th>
+                            <th>{{ t('app_trading_price_multiplier') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -290,9 +290,13 @@ export default {
 <style>
 /* ── Trading View ── */
 .trading-view {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
-    max-width: 1400px;
-    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* Toolbar */
@@ -540,10 +544,9 @@ export default {
 
 /* Conditions table */
 .trading-conditions-table-wrap {
-    max-height: 70vh;
-    overflow-y: auto;
     border: 1px solid var(--border);
     border-radius: 8px;
+    overflow: hidden;
 }
 .trading-conditions-table {
     width: 100%;
@@ -611,6 +614,13 @@ export default {
     display: flex;
     justify-content: center;
     padding: 3rem;
+}
+
+/* Scrollable content area */
+.trading-content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
 }
 
 /* Responsive */

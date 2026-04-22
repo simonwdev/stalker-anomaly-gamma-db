@@ -923,6 +923,12 @@ button.header-link {
 .content.content-maps {
     padding: 0;
 }
+.content.content-trading {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 .content-inner {
     display: flex;
     flex-direction: column;
@@ -6713,4 +6719,4 @@ kbd {
         width: 240px;
     }
 }
-
+
