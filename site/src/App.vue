@@ -553,11 +553,16 @@
     :categoryCounts="categoryCounts"
     :favoriteIds="favoriteIds"
     :recentIds="recentIds"
+    :hasStartingLoadouts="!!fileManifest['starting-loadouts.json']"
     @close="quickNavOpen = false"
     @select-category="selectCategory"
     @select-favorites="selectFavorites()"
     @select-recent="selectRecent()"
     @open-build-planner="openBuildPlanner()"
+    @open-maps="openMaps()"
+    @open-ballistics="openDamageSim()"
+    @open-trading="openTrading()"
+    @open-starting-loadouts="openStartingLoadouts()"
 />
 
 <FooterBar />

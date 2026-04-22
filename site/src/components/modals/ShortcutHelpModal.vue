@@ -19,6 +19,7 @@
                         <div class="shortcut-row"><dt><kbd>C</kbd></dt><dd>{{ t('app_shortcuts_compare') }}</dd></div>
                         <div class="shortcut-row"><dt><kbd>X</kbd></dt><dd>{{ t('app_shortcuts_clear_filters') }}</dd></div>
                         <div class="shortcut-row"><dt><kbd>G</kbd> {{ t('app_shortcuts_then') }} <kbd>B</kbd></dt><dd>{{ t('app_shortcuts_build_planner') }}</dd></div>
+                        <div class="shortcut-row"><dt><kbd>Alt</kbd><kbd>←</kbd> / <kbd>→</kbd></dt><dd>{{ t('app_shortcuts_nav_tabs') }}</dd></div>
                         <div class="shortcut-row"><dt><kbd>Shift</kbd><kbd>/</kbd></dt><dd>{{ t('app_shortcuts_show_help') }}</dd></div>
                     </dl>
                 </div>

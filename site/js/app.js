@@ -1996,6 +1996,7 @@ export const appDefinition = {
 
             this.buildPlannerActive = false;
             this.mapsActive = false;
+            this.tradingActive = false;
             this.damageSimActive = false;
             this.versionCompareActive = false;
             this.startingLoadoutsActive = false;
@@ -6441,6 +6442,29 @@ export const appDefinition = {
                 this.quickNavOpen = !this.quickNavOpen;
                 return;
             }
+
+            // Alt+ArrowLeft / Alt+ArrowRight: cycle through nav-bar tabs
+            if (e.altKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+                e.preventDefault();
+                const NAV_TABS = ['db', 'crafting', 'build-planner', 'ballistics', 'maps', 'trading'];
+                let current;
+                if (this.tradingActive)       current = 'trading';
+                else if (this.mapsActive)      current = 'maps';
+                else if (this.damageSimActive) current = 'ballistics';
+                else if (this.buildPlannerActive) current = 'build-planner';
+                else if (this.isCrafting)      current = 'crafting';
+                else                           current = 'db';
+                const idx = NAV_TABS.indexOf(current);
+                const next = NAV_TABS[(idx + (e.key === 'ArrowRight' ? 1 : -1) + NAV_TABS.length) % NAV_TABS.length];
+                if (next === 'db')            this.openItemDb();
+                else if (next === 'crafting') this.openCrafting();
+                else if (next === 'build-planner') this.openBuildPlanner();
+                else if (next === 'ballistics')    this.openDamageSim();
+                else if (next === 'maps')          this.openMaps();
+                else if (next === 'trading')       this.openTrading();
+                return;
+            }
+
 
             // Escape: always active
             if (e.key === KEYS.ESCAPE) {

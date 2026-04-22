@@ -52,8 +52,9 @@ export default {
         categoryCounts: Object,
         favoriteIds: Array,
         recentIds: Array,
+        hasStartingLoadouts: { type: Boolean, default: false },
     },
-    emits: ["close", "select-category", "open-build-planner", "select-favorites", "select-recent"],
+    emits: ["close", "select-category", "open-build-planner", "open-maps", "open-ballistics", "open-trading", "open-starting-loadouts", "select-favorites", "select-recent"],
     data() {
         return {
             query: "",
@@ -64,6 +65,7 @@ export default {
         allPages() {
             const pages = [];
             const savedGroup = this.t("app_group_saved");
+            const toolsGroup = this.t("app_group_tools");
             pages.push({ id: "favorites", label: this.t("app_cat_favorites"), group: savedGroup, action: "favorites" });
             pages.push({ id: "recent",    label: this.t("app_cat_recent"),    group: savedGroup, action: "recent" });
             for (const group of (this.groupedCategories || [])) {
@@ -72,7 +74,13 @@ export default {
                     pages.push({ id: cat, label: this.tCat(cat), group: groupLabel, action: "category", cat });
                 }
             }
-            pages.push({ id: "build-planner", label: this.t("app_cat_build_planner"), group: this.t("app_group_tools"), action: "build-planner" });
+            pages.push({ id: "build-planner",    label: this.t("app_cat_build_planner"),    group: toolsGroup, action: "build-planner" });
+            pages.push({ id: "ballistics",        label: this.t("app_nav_damage_sim"),       group: toolsGroup, action: "ballistics" });
+            pages.push({ id: "maps",              label: this.t("app_nav_maps"),             group: toolsGroup, action: "maps" });
+            pages.push({ id: "trading",           label: this.t("app_nav_trading"),          group: toolsGroup, action: "trading" });
+            if (this.hasStartingLoadouts) {
+                pages.push({ id: "starting-loadouts", label: this.t("app_cat_starting_loadouts"), group: toolsGroup, action: "starting-loadouts" });
+            }
             return pages;
         },
         filteredPages() {
@@ -126,6 +134,14 @@ export default {
                 this.$emit("select-recent");
             } else if (page.action === "build-planner") {
                 this.$emit("open-build-planner");
+            } else if (page.action === "maps") {
+                this.$emit("open-maps");
+            } else if (page.action === "ballistics") {
+                this.$emit("open-ballistics");
+            } else if (page.action === "trading") {
+                this.$emit("open-trading");
+            } else if (page.action === "starting-loadouts") {
+                this.$emit("open-starting-loadouts");
             }
             this.$emit("close");
         },
