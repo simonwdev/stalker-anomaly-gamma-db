@@ -42,6 +42,7 @@ export function buildPathUrl(state) {
     if (state.buildPlanner && state.pack) return `/db/${state.pack}/build-planner`;
     if (state.damageSim && state.pack) return `/db/${state.pack}/ballistics`;
     if (state.maps && state.pack) return `/db/${state.pack}/maps`;
+    if (state.trading && state.pack) return `/db/${state.pack}/trading`;
     if (state.versionCompare && state.pack) return `/db/${state.pack}/version-compare`;
     if (state.startingLoadouts && state.pack) return `/db/${state.pack}/starting-loadouts`;
     if (state.favorites && state.pack) return `/db/${state.pack}/favorites`;
@@ -53,7 +54,7 @@ export function buildPathUrl(state) {
 }
 
 export function parsePathUrl(pathname) {
-    const result = { pack: null, cat: null, buildPlanner: false, damageSim: false, maps: false, favorites: false, recent: false, versionCompare: false, startingLoadouts: false };
+    const result = { pack: null, cat: null, buildPlanner: false, damageSim: false, maps: false, trading: false, favorites: false, recent: false, versionCompare: false, startingLoadouts: false };
     const path = pathname.replace(/\/+$/, "") || "/";
     if (path === "/build-planner") { result.buildPlanner = true; return result; }
     if (path === "/version-compare") { result.versionCompare = true; return result; }
@@ -63,6 +64,7 @@ export function parsePathUrl(pathname) {
         if (m[2] === "build-planner") result.buildPlanner = true;
         else if (m[2] === "ballistics") result.damageSim = true;
         else if (m[2] === "maps") result.maps = true;
+        else if (m[2] === "trading") result.trading = true;
         else if (m[2] === "version-compare") result.versionCompare = true;
         else if (m[2] === "starting-loadouts") result.startingLoadouts = true;
         else if (m[2] === "favorites") result.favorites = true;

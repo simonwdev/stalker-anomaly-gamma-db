@@ -150,6 +150,7 @@ export const appDefinition = {
             buildPlayerFaction: "stalker",
             buildPlannerActive: false,
             mapsActive: false,
+            tradingActive: false,
             damageSimActive: false,
             versionCompareActive: false,
             startingLoadoutsActive: false,
@@ -2656,6 +2657,7 @@ export const appDefinition = {
         resetViewState() {
             this.buildPlannerActive = false;
             this.mapsActive = false;
+            this.tradingActive = false;
             this.damageSimActive = false;
             this.versionCompareActive = false;
             this.startingLoadoutsActive = false;
@@ -2683,6 +2685,12 @@ export const appDefinition = {
         openMaps() {
             this.resetViewState();
             this.mapsActive = true;
+            this.pushUrlState(true);
+        },
+
+        openTrading() {
+            this.resetViewState();
+            this.tradingActive = true;
             this.pushUrlState(true);
         },
 
@@ -4371,6 +4379,7 @@ export const appDefinition = {
                 buildPlanner: this.buildPlannerActive,
                 damageSim: this.damageSimActive,
                 maps: this.mapsActive,
+                trading: this.tradingActive,
                 favorites: this.favoritesViewActive,
                 recent: this.recentViewActive,
                 versionCompare: this.versionCompareActive,
@@ -4482,6 +4491,9 @@ export const appDefinition = {
                 this.openDamageSim();
             } else if (parsed.maps || legacyCat === "maps") {
                 this.mapsActive = true;
+                this.activeCategory = null;
+            } else if (parsed.trading || legacyCat === "trading") {
+                this.tradingActive = true;
                 this.activeCategory = null;
             } else if (parsed.versionCompare || legacyCat === "version-compare") {
                 this.versionCompareActive = true;
@@ -6683,6 +6695,8 @@ export const appDefinition = {
                 if (!this.buildPlannerActive) await this.openBuildPlanner();
             } else if (parsed.damageSim) {
                 if (!this.damageSimActive) await this.openDamageSim();
+            } else if (parsed.trading) {
+                if (!this.tradingActive) this.openTrading();
             } else if (parsed.favorites) {
                 this.resetViewState();
                 this.favoritesViewActive = true;

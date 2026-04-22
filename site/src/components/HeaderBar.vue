@@ -64,6 +64,10 @@
             <LucideMap :size="16" />
             <span>{{ t('app_nav_maps') }}</span>
         </a>
+        <a class="header-drawer-item" :class="{ active: tradingActive }" :href="navHref('trading')" @click.prevent="$emit('openTrading'); overflowOpen = false">
+            <LucideScale :size="16" />
+            <span>{{ t('app_nav_trading') }}</span>
+        </a>
         <div class="header-drawer-divider"></div>
         <template v-if="packs.length > 1">
             <div class="header-drawer-label">{{ t('app_drawer_pack') || 'Pack' }}</div>
@@ -195,6 +199,10 @@
         <LucideMap :size="14" />
         {{ t('app_nav_maps') }}
     </a>
+    <a class="nav-bar-item" :class="{ active: tradingActive }" :href="navHref('trading')" @click.prevent="$emit('openTrading')">
+        <LucideScale :size="14" />
+        {{ t('app_nav_trading') }}
+    </a>
     <div class="nav-bar-spacer"></div>
     <div class="settings-wrap" v-click-outside="() => settingsOpen = false">
         <button class="settings-btn" @click.stop="settingsOpen = !settingsOpen" v-tooltip="t('app_label_settings')">
@@ -238,6 +246,7 @@ export default {
         craftingActive: { type: Boolean, default: false },
         damageSimActive: { type: Boolean, default: false },
         mapsActive: { type: Boolean, default: false },
+        tradingActive: { type: Boolean, default: false },
         itemDbActive: { type: Boolean, default: false },
         hideNoDrop: { type: Boolean, default: false },
         hideUnusedAmmo: { type: Boolean, default: false },
@@ -247,7 +256,7 @@ export default {
         'toggleSidebarCollapse', 'toggleSidebar', 'switchPack',
         'changeLocale', 'openShortcutHelp', 'clearGlobalQuery',
         'update:globalQuery', 'search', 'escapeSearch', 'selectSearchResult',
-        'openItemDb', 'openMaps', 'openBuildPlanner', 'openCrafting', 'openDamageSim',
+        'openItemDb', 'openMaps', 'openTrading', 'openBuildPlanner', 'openCrafting', 'openDamageSim',
         'toggleHideNoDrop', 'toggleHideUnusedAmmo', 'toggleShowTileIcons',
     ],
     inject: ['t', 'tName', 'tCat', 'navHref'],

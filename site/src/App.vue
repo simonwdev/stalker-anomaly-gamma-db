@@ -54,7 +54,8 @@
     :crafting-active="isCrafting"
     :damage-sim-active="damageSimActive"
     :maps-active="mapsActive"
-    :item-db-active="!buildPlannerActive && !mapsActive && !damageSimActive && !isCrafting"
+    :trading-active="tradingActive"
+    :item-db-active="!buildPlannerActive && !mapsActive && !damageSimActive && !isCrafting && !tradingActive"
     :hide-no-drop="hideNoDrop"
     :hide-unused-ammo="hideUnusedAmmo"
     :show-tile-icons="showTileIcons"
@@ -62,6 +63,7 @@
     @toggle-sidebar="toggleSidebar()"
     @open-item-db="openItemDb()"
     @open-maps="openMaps()"
+    @open-trading="openTrading()"
     @open-build-planner="openBuildPlanner()"
     @open-crafting="openCrafting()"
     @open-damage-sim="openDamageSim()"
@@ -78,7 +80,7 @@
     @select-search-result="(id) => { lastGlobalQuery = globalQuery; globalQuery = ''; navigateToItem(id) }"
 />
 
-<div class="layout" :class="{ 'sidebar-collapsed': sidebarCollapsed, 'sidebar-hidden': buildPlannerActive || mapsActive || damageSimActive }">
+<div class="layout" :class="{ 'sidebar-collapsed': sidebarCollapsed, 'sidebar-hidden': buildPlannerActive || mapsActive || damageSimActive || tradingActive }">
     <SidebarNav
         :translations="translations"
         :sidebar-open="sidebarOpen"
@@ -113,6 +115,7 @@
 
     <main class="content" :class="{ 'content-maps': mapsActive }">
         <MapsView v-if="mapsActive" :pack-id="activePack?.id" />
+        <TradingView v-if="tradingActive" :pack-id="activePack?.id" />
         <DamageSimulator
             v-if="damageSimActive"
             :weapon-categories="categoryItems"
@@ -129,11 +132,11 @@
             @move-build-hover="(event) => moveBuildHover(event)"
             @hide-build-hover="hideBuildHover()"
         />
-        <div v-show="showContentSpinner && !mapsActive" class="loading-screen">
+        <div v-show="showContentSpinner && !mapsActive && !tradingActive" class="loading-screen">
             <div class="loading-spinner"></div>
             <p class="loading-text">{{ t('app_label_loading') }}</p>
         </div>
-        <div v-show="!loading && !mapsActive && !damageSimActive" class="content-inner">
+        <div v-show="!loading && !mapsActive && !damageSimActive && !tradingActive" class="content-inner">
             <FilterBar
                 ref="filterBar"
                 :filter-input="filterInput"
@@ -577,6 +580,7 @@ const DamageSimulator = defineAsyncComponent(() => import('./components/DamageSi
 import ItemHoverPopover from "./components/ItemHoverPopover.vue";
 import ItemComparePopover from "./components/ItemComparePopover.vue";
 const MapsView = defineAsyncComponent(() => import('./components/MapsView.vue'));
+const TradingView = defineAsyncComponent(() => import('./components/TradingView.vue'));
 import ComparePanel from "./components/ComparePanel.vue";
 import CraftingView from "./components/CraftingView.vue";
 import OutfitExchangeView from "./components/OutfitExchangeView.vue";
@@ -610,6 +614,7 @@ export default {
     ItemTable,
     ItemDetailModal,
     MapsView,
+    TradingView,
     OutfitExchangeView,
     QuickNavModal,
     SaveImportModal,

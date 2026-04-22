@@ -5,7 +5,9 @@
  * Replaces the old lucide.createIcons() DOM-scanning approach.
  */
 import {
+  ArrowDownCircle,
   ArrowLeft,
+  ArrowUpCircle,
   ArrowUpDown,
   Bookmark,
   ChevronLeft,
@@ -32,6 +34,7 @@ import {
   Map,
   MapPin,
   MessageCircle,
+  Package,
   Plus,
   Save,
   Scale,
@@ -45,7 +48,9 @@ import {
 } from 'lucide-vue-next';
 
 export const lucideIcons = {
+  LucideArrowDownCircle: ArrowDownCircle,
   LucideArrowLeft: ArrowLeft,
+  LucideArrowUpCircle: ArrowUpCircle,
   LucideArrowUpDown: ArrowUpDown,
   LucideBookmark: Bookmark,
   LucideChevronLeft: ChevronLeft,
@@ -71,6 +76,7 @@ export const lucideIcons = {
   LucideMap: Map,
   LucideMapPin: MapPin,
   LucideMessageCircle: MessageCircle,
+  LucidePackage: Package,
   LucidePlus: Plus,
   LucideSave: Save,
   LucideScale: Scale,
