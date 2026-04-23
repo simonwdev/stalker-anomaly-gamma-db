@@ -116,6 +116,14 @@
                             {{ (item[2] * 100).toFixed(0) }}%
                         </span>
                     </div>
+                    <div class="trading-item-prices" v-if="buyPrice(item[0]) != null || sellPrice(item[0]) != null">
+                        <span class="trading-price trading-price--buy" v-if="buyPrice(item[0]) != null" v-tooltip="t('app_trading_buy_price')">
+                            <LucideArrowDownCircle :size="10" />{{ formatPrice(buyPrice(item[0])) }}
+                        </span>
+                        <span class="trading-price trading-price--sell" v-if="sellPrice(item[0]) != null" v-tooltip="t('app_trading_sell_price')">
+                            <LucideArrowUpCircle :size="10" />{{ formatPrice(sellPrice(item[0])) }}
+                        </span>
+                    </div>
                 </a>
             </div>
             <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
@@ -246,6 +254,10 @@ export default {
             activeTier: 'supplies_1',
             searchQuery: '',
             cache: {},
+            // Price lookup: id -> base cost (st_upgr_cost)
+            priceById: {},
+            // Tracks which category slugs have already been fetched for prices
+            catPriceFetched: {},
         };
     },
     computed: {
@@ -300,6 +312,13 @@ export default {
                 return false;
             });
         },
+        discountMap() {
+            const m = { buy: 1, sell: 1 };
+            for (const d of (this.traderData?.discounts || [])) {
+                m[d[0]] = d[1];
+            }
+            return m;
+        },
         // Pre-resolve all condition items into maps to avoid repeated lookups in template
         buyConditionResolved() {
             const map = {};
@@ -321,13 +340,73 @@ export default {
     watch: {
         packId: {
             immediate: true,
-            handler() { this.cache = {}; this.loadTrader(); },
+            handler() { this.cache = {}; this.priceById = {}; this.catPriceFetched = {}; this.loadTrader(); },
         },
         selectedTrader() {
             this.loadTrader();
         },
     },
     methods: {
+        catSlug(category) {
+            return category.toLowerCase().replace(/ /g, '-');
+        },
+        basePrice(id) {
+            return this.priceById[id] ?? null;
+        },
+        buyPrice(id) {
+            const base = this.basePrice(id);
+            if (base == null) return null;
+            return Math.round(base * this.discountMap.buy);
+        },
+        sellPrice(id) {
+            const base = this.basePrice(id);
+            if (base == null) return null;
+            return Math.round(base * this.discountMap.sell);
+        },
+        formatPrice(val) {
+            if (val == null) return null;
+            return val.toLocaleString() + ' ₽';
+        },
+        async prefetchPrices() {
+            if (!this.packId || !this.traderData) return;
+            // Collect all item IDs across all supply tiers + conditions
+            const ids = new Set();
+            for (const key of Object.keys(this.traderData)) {
+                if (!key.startsWith('supplies_') && key !== 'supplies_generic') continue;
+                for (const row of (this.traderData[key] || [])) ids.add(row[0]);
+            }
+            for (const row of (this.traderData.buy_condition || [])) ids.add(row[0].replace(/_x$/, ''));
+            for (const row of (this.traderData.sell_condition || [])) ids.add(row[0].replace(/_x$/, ''));
+
+            // Group by category slug
+            const slugsNeeded = new Set();
+            for (const id of ids) {
+                const entry = this.indexById[id];
+                if (entry) slugsNeeded.add(this.catSlug(entry.category));
+            }
+
+            // Fetch missing category JSONs
+            const fetches = [];
+            for (const slug of slugsNeeded) {
+                if (this.catPriceFetched[slug]) continue;
+                this.catPriceFetched[slug] = true;
+                fetches.push(
+                    fetch(`/data/${this.packId}/${slug}.json`)
+                        .then(r => r.ok ? r.json() : null)
+                        .then(data => {
+                            if (!data) return;
+                            for (const item of (data.items || [])) {
+                                const cost = parseFloat(item.st_upgr_cost);
+                                if (!isNaN(cost) && cost > 0) {
+                                    this.priceById[item.id] = cost;
+                                }
+                            }
+                        })
+                        .catch(() => {})
+                );
+            }
+            await Promise.all(fetches);
+        },
         resolveItem(id) {
             return this.indexById[id] || null;
         },
@@ -401,6 +480,7 @@ export default {
                 if (this.selectedTrader === id) {
                     this.traderData = data;
                     this.resetTier();
+                    this.prefetchPrices();
                 }
             } catch (e) {
                 console.error('Failed to load trader data:', e);
@@ -534,8 +614,7 @@ export default {
 }
 .trading-item-card {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     padding: 0.5rem 0.7rem;
     background: var(--card);
     border: 1px solid var(--border);
@@ -544,6 +623,7 @@ export default {
     text-decoration: none;
     color: inherit;
     cursor: default;
+    gap: 0.35rem;
 }
 .trading-item-card--linked {
     cursor: pointer;
@@ -567,7 +647,32 @@ export default {
 }
 .trading-item-stats {
     display: flex; align-items: center; gap: 0.5rem;
-    flex-shrink: 0; margin-left: 0.5rem;
+    flex-shrink: 0;
+}
+/* Prices row */
+.trading-item-prices {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+.trading-price {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+}
+.trading-price--buy {
+    color: #22c55e;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+.trading-price--sell {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.25);
 }
 .trading-item-qty { font-size: 0.72rem; font-weight: 600; color: var(--accent); }
 .trading-item-prob {
