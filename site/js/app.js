@@ -5210,6 +5210,8 @@ export const appDefinition = {
                 this.openMaps();
             } else if (entry.action === "ballistics") {
                 this.openDamageSim();
+            } else if (entry.action === "trading") {
+                this.openTrading();
             } else if (entry.action === "attachments") {
                 this.selectCategory(CAT.SCOPES);
             } else if (entry.action === "startingLoadouts") {

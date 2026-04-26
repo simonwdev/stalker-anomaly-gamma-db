@@ -64,7 +64,7 @@
             <LucideMap :size="16" />
             <span>{{ t('app_nav_maps') }}</span>
         </a>
-        <a class="header-drawer-item" :class="{ active: tradingActive }" :href="navHref('trading')" @click.prevent="$emit('openTrading'); overflowOpen = false">
+        <a class="header-drawer-item trading-nav-btn" :class="{ active: tradingActive }" :href="navHref('trading')" @click.prevent="$emit('openTrading'); overflowOpen = false">
             <LucideScale :size="16" />
             <span>{{ t('app_nav_trading') }}</span>
         </a>
@@ -199,7 +199,7 @@
         <LucideMap :size="14" />
         {{ t('app_nav_maps') }}
     </a>
-    <a class="nav-bar-item" :class="{ active: tradingActive }" :href="navHref('trading')" @click.prevent="$emit('openTrading')">
+    <a class="nav-bar-item trading-nav-btn" :class="{ active: tradingActive }" :href="navHref('trading')" @click.prevent="$emit('openTrading')">
         <LucideScale :size="14" />
         {{ t('app_nav_trading') }}
     </a>

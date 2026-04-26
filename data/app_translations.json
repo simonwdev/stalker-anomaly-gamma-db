@@ -556,7 +556,10 @@
     "app_callout_attachments_title": "Weapon Attachments",
     "app_callout_attachments_desc": "Browse scopes, silencers, underbarrel launchers, and tactical kits. See which weapons they fit and compare stats.",
     "app_callout_ballistics_title": "Ballistics Calculator",
-    "app_callout_ballistics_desc": "Compare weapons, ammo, and armor penetration with a full damage breakdown. Select up to 5 loadouts and see how they stack up."
+    "app_callout_ballistics_desc": "Compare weapons, ammo, and armor penetration with a full damage breakdown. Select up to 5 loadouts and see how they stack up.",
+    "app_whats_new_trading": "Browse every trader's stock and prices!",
+    "app_callout_trading_title": "Trading",
+    "app_callout_trading_desc": "Browse every trader's stock, prices, supply tiers, and buy/sell conditions across all factions."
   },
   "ru": {
     "app_group_saved": "Быстрый доступ",
@@ -1114,7 +1117,10 @@
     "app_callout_attachments_title": "Обвесы оружия",
     "app_callout_attachments_desc": "Прицелы, глушители, подствольники и тактические наборы. Смотрите совместимое оружие и сравнивайте характеристики.",
     "app_callout_ballistics_title": "Баллистический калькулятор",
-    "app_callout_ballistics_desc": "Сравнивайте оружие, патроны и бронебойность с полной разбивкой урона. Выберите до 5 наборов и оцените их."
+    "app_callout_ballistics_desc": "Сравнивайте оружие, патроны и бронебойность с полной разбивкой урона. Выберите до 5 наборов и оцените их.",
+    "app_whats_new_trading": "Товары и цены всех торговцев!",
+    "app_callout_trading_title": "Торговля",
+    "app_callout_trading_desc": "Просматривайте товары, цены, уровни снабжения и условия покупки/продажи для каждого торговца."
   },
   "fr": {
     "app_group_saved": "Accès rapide",
@@ -1537,7 +1543,10 @@
     "app_callout_version_compare_title": "Comparaison de versions",
     "app_callout_version_compare_desc": "Consultez tous les changements d'équilibrage entre les versions du mod pack, avec des filtres par catégorie et propriété.",
     "app_callout_crafting_trees_title": "Vue arbre de craft",
-    "app_callout_crafting_trees_desc": "Passez en vue arbre pour voir les chaînes de recettes complètes avec ingrédients et statistiques.",    
+    "app_callout_crafting_trees_desc": "Passez en vue arbre pour voir les chaînes de recettes complètes avec ingrédients et statistiques.",
+    "app_whats_new_trading": "Stocks et prix de chaque marchand !",
+    "app_callout_trading_title": "Commerce",
+    "app_callout_trading_desc": "Parcourez les stocks, prix, niveaux d'approvisionnement et conditions d'achat/vente de chaque marchand.",
     "app_quick_nav_placeholder": "Aller à la page…",
     "app_quick_nav_hint_navigate": "naviguer",
     "app_quick_nav_hint_select": "sélectionner",

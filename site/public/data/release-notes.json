@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-04-26",
+    "entries": [
+      { "type": "added", "text": "Trading view - browse every trader's stock, prices, supply tiers, and buy/sell conditions across all factions.", "highlight": true, "summaryKey": "app_whats_new_trading", "action": "trading", "callout": { "selector": ".trading-nav-btn", "titleKey": "app_callout_trading_title", "descKey": "app_callout_trading_desc" }, "credits": [{ "name": "Evincars", "role": "code" }] }
+    ]
+  },
+  {
     "date": "2026-04-16",
     "entries": [
       { "type": "added", "text": "Crafting tree view - visualize full recipe chains as expandable trees showing every ingredient and sub-recipe.", "credits": [{ "name": "Evincars", "role": "code" }] }
