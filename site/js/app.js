@@ -1818,6 +1818,9 @@ export const appDefinition = {
                     } else if (urlCat === "maps" || pathParsed.maps) {
                         this.mapsActive = true;
                         this.activeCategory = null;
+                    } else if (urlCat === "trading" || pathParsed.trading) {
+                        this.tradingActive = true;
+                        this.activeCategory = null;
                     } else if (urlCat === "version-compare" || pathParsed.versionCompare) {
                         // Defer to restoreUrlState
                     } else if (urlCat === "starting-loadouts" || pathParsed.startingLoadouts) {
