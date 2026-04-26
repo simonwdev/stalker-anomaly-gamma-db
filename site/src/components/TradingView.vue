@@ -108,7 +108,7 @@
                 >
                     <div class="trading-item-info">
                         <div class="trading-item-name">
-                            {{ resolveItem(item[0]) ? tName(resolveItem(item[0])) : item[0] }}
+                            {{ resolveItem(item[0]) ? tName(resolveItem(item[0])) : t(itemsCommon[item[0]]?.name || item[0]) }}
                         </div>
                         <div class="trading-item-id" v-if="resolveItem(item[0])">{{ item[0] }}</div>
                         <div class="trading-item-cat" v-if="resolveItem(item[0])">{{ tCat(resolveItem(item[0]).category) }}</div>
@@ -236,6 +236,8 @@ export default {
             priceById: {},
             // Tracks which category slugs have already been fetched for prices
             catPriceFetched: {},
+            // Universal item data from items-common.json (id -> { name?, price? })
+            itemsCommon: {},
         };
     },
     computed: {
@@ -339,7 +341,7 @@ export default {
             return category.toLowerCase().replace(/ /g, '-');
         },
         basePrice(id) {
-            return this.priceById[id] ?? null;
+            return this.priceById[id] ?? this.itemsCommon[id]?.price ?? null;
         },
         buyPrice(id) {
             const base = this.basePrice(id);
@@ -422,33 +424,57 @@ export default {
                 army: 'Military', monolith: 'Monolith', killer: 'Mercenary',
                 greh: 'Greh', isg: 'ISG',
             };
+
+            const CONDITION_HANDLERS = {
+                actor_goodwill_ge: (args) => {
+                    const [factionRaw, threshold] = args.split(':');
+                    const fKey = FACTION_KEY[factionRaw];
+                    const fName = fKey ? (this.t(fKey) || FACTION_FALLBACK[factionRaw] || factionRaw) : factionRaw;
+                    return `${fName} ≥ ${threshold}`;
+                },
+                heavy_pockets_functor: () => {
+                    return this.t('app_trading_cond_heavy_pockets') || 'Heavy Pockets';
+                },
+                toolkit_task_done: (args) => {
+                    return (this.t('app_trading_cond_toolkit_task') || 'Toolkit task {n} done').replace('{n}', args);
+                },
+                drugkit_task_done: () => {
+                    return this.t('app_trading_cond_drugkit_task') || 'Drug kit task done';
+                },
+                raid_goodwill_check: (args) => {
+                    return CONDITION_HANDLERS.actor_goodwill_ge(args);
+                },
+            };
+
             const parts = raw.split(/ OR /);
             const labels = [];
+
             for (const part of parts) {
                 const p = part.trim();
-                const gw = p.match(/^=actor_goodwill_ge\((\w+):(-?\d+)\)$/);
-                if (gw) {
-                    const fKey = FACTION_KEY[gw[1]];
-                    const fName = fKey ? (this.t(fKey) || FACTION_FALLBACK[gw[1]] || gw[1]) : gw[1];
-                    labels.push(`${fName} ≥ ${gw[2]}`);
+
+                if (p.startsWith('+')) {
+                    labels.push(p.slice(1).replace(/_/g, ' '));
                     continue;
                 }
-                if (p === '=heavy_pockets_functor()') {
-                    labels.push(this.t('app_trading_cond_heavy_pockets') || 'Heavy Pockets');
-                    continue;
+
+                if (p.startsWith('=')) {
+                    const match = p.slice(1).match(/^(\w+)\((.*)\)$/);
+                    if (match) {
+                        const [, fnName, args] = match;
+                        const handler = CONDITION_HANDLERS[fnName];
+                        if (handler) {
+                            labels.push(handler(args));
+                            continue;
+                        }
+                        // Unknown function: humanize name
+                        labels.push(fnName.replace(/_/g, ' ').trim());
+                        continue;
+                    }
                 }
-                const tk = p.match(/^=toolkit_task_done\((\d+)\)$/);
-                if (tk) {
-                    labels.push((this.t('app_trading_cond_toolkit_task') || 'Toolkit task {n} done').replace('{n}', tk[1]));
-                    continue;
-                }
-                if (p === '=drugkit_task_done()') {
-                    labels.push(this.t('app_trading_cond_drugkit_task') || 'Drug kit task done');
-                    continue;
-                }
-                if (p.startsWith('+')) { labels.push(p.slice(1).replace(/_/g, ' ')); continue; }
+
                 labels.push(p.replace(/^=/, '').replace(/_/g, ' ').replace(/\(.*\)/, '').trim());
             }
+
             return labels;
         },
         traderName(trader) {
@@ -457,17 +483,22 @@ export default {
         },
         async loadTradersMeta() {
             if (!this.packId) return;
+            this.itemsCommon = {};
             try {
-                const resp = await fetch(`/data/${this.packId}/traders-meta.json`);
-                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-                this.traders = await resp.json();
+                const [metaResp, commonResp] = await Promise.all([
+                    fetch(`/data/${this.packId}/traders-meta.json`),
+                    fetch(`/data/${this.packId}/items-common.json`),
+                ]);
+                this.traders = await metaResp.json();
+                if (commonResp.ok) this.itemsCommon = await commonResp.json();
+            } catch (e) {
+                console.error('Failed to load traders meta:', e);
+                this.traders = [];
+            } finally {
                 if (!this.selectedTrader || !this.traders.find(t => t.id === this.selectedTrader)) {
                     this.selectedTrader = this.traders[0]?.id ?? null;
                 }
                 this.loadTrader();
-            } catch (e) {
-                console.error('Failed to load traders meta:', e);
-                this.traders = [];
             }
         },
         async loadTrader() {

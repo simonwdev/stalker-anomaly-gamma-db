@@ -41,6 +41,7 @@ const SKIP_FILES = new Set([
   "export_toolkit_map_rates.csv",
   "item_chance_in_stash.csv",
   "export_item_chance_in_stash.csv",
+  "export_items_common_data.csv",
   "export_mutant_profiles.csv",
   "export_npc_armor_profiles.csv",
   "export_addon_weapon_map.csv",
@@ -665,6 +666,34 @@ try {
 } catch (e) {
   if (e.code !== "ENOENT") throw e;
   console.log("No item stash chance CSV found, skipping item-stash-chance.json");
+}
+
+// Generate items-common.json from export_items_common_data.csv
+const ITEMS_COMMON_FILE = join(CSV_DIR, "export_items_common_data.csv");
+try {
+  const icText = readFileSync(ITEMS_COMMON_FILE, "utf-8");
+  const icLines = icText.split(/\r?\n/).filter((l) => l.length > 0);
+  if (icLines.length > 1) {
+    const itemsCommon = {};
+    for (let i = 1; i < icLines.length; i++) {
+      const cols = parseCsvLine(icLines[i]);
+      const id = cols[0]?.trim();
+      const name = cols[3]?.trim();
+      const priceStr = cols[6]?.trim();
+      if (!id) continue;
+      const entry = {};
+      if (name) entry.name = name;
+      const price = parseFloat(priceStr);
+      if (!isNaN(price) && price > 0) entry.price = price;
+      if (Object.keys(entry).length) itemsCommon[id] = entry;
+    }
+    const icOut = join(OUT_DIR, "items-common.json");
+    writeFileSync(icOut, JSON.stringify(itemsCommon, null, 2));
+    console.log(`Wrote ${Object.keys(itemsCommon).length} entries to ${icOut}`);
+  }
+} catch (e) {
+  if (e.code !== "ENOENT") throw e;
+  console.log("No items common data CSV found, skipping items-common.json");
 }
 
 // Generate disassemble.json from export_disassemble_table.csv
