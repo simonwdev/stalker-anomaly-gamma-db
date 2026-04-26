@@ -33,7 +33,7 @@ To regenerate the JSON output for a pack:
 node scripts/generate-index.mjs --pack <pack-id>
 ```
 
-Output is written to `site/data/<pack>/`.
+Output is written to `site/public/data/<pack>/`.
 
 ## Development
 

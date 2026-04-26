@@ -13,16 +13,16 @@
   ],
   "items": [
     {
-      "id": "wpn_knife2",
-      "pda_encyclopedia_name": "st_knife_needle",
-      "st_data_export_description": "st_knife_needle_descr",
-      "st_prop_weight": "0.26",
-      "st_upgr_cost": "3960",
-      "st_data_export_light_attack_power": "45",
-      "st_data_export_heavy_attack_power": "55",
-      "br": "2450",
+      "id": "wpn_axe3",
+      "pda_encyclopedia_name": "st_axe3",
+      "st_data_export_description": "st_axe3_descr",
+      "st_prop_weight": "1.08",
+      "st_upgr_cost": "12455",
+      "st_data_export_light_attack_power": "57.1",
+      "st_data_export_heavy_attack_power": "187",
+      "br": "1620",
       "ui_inv_wrange": "0",
-      "displayName": "st_knife_needle",
+      "displayName": "st_axe3",
       "hasDisassemble": false
     },
     {
@@ -65,16 +65,16 @@
       "hasDisassemble": false
     },
     {
-      "id": "wpn_axe3",
-      "pda_encyclopedia_name": "st_axe3",
-      "st_data_export_description": "st_axe3_descr",
-      "st_prop_weight": "1.08",
-      "st_upgr_cost": "12455",
-      "st_data_export_light_attack_power": "57.1",
-      "st_data_export_heavy_attack_power": "187",
-      "br": "1620",
+      "id": "wpn_knife2",
+      "pda_encyclopedia_name": "st_knife_needle",
+      "st_data_export_description": "st_knife_needle_descr",
+      "st_prop_weight": "0.26",
+      "st_upgr_cost": "3960",
+      "st_data_export_light_attack_power": "45",
+      "st_data_export_heavy_attack_power": "55",
+      "br": "2450",
       "ui_inv_wrange": "0",
-      "displayName": "st_axe3",
+      "displayName": "st_knife_needle",
       "hasDisassemble": false
     },
     {

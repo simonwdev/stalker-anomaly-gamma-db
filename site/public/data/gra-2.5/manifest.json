@@ -13,7 +13,7 @@
   "explosives.json": "6e05e432",
   "food.json": "3bf62ef8",
   "grenade-launchers.json": "b47ed2a0",
-  "helmets.json": "94c6f07e",
+  "helmets.json": "fdde6676",
   "index.json": "2e8a7b1e",
   "item-drops.json": "6c6d2dd7",
   "item-stash-chance.json": "d54a8fe7",
@@ -23,7 +23,7 @@
   "melee.json": "40364a9e",
   "mutant-profiles.json": "43d694d8",
   "npc-armor-profiles.json": "23e023fc",
-  "outfits.json": "063e23b6",
+  "outfits.json": "4329e21b",
   "pistols.json": "a864184f",
   "rifles.json": "7e705d15",
   "scopes.json": "78e5b323",
@@ -32,7 +32,7 @@
   "smgs.json": "8cec9224",
   "snipers.json": "7d04e4da",
   "tactical-kits.json": "3a685373",
-  "translations.json": "f15463ee",
+  "translations.json": "2e0430e1",
   "upgrades.json": "d8779ffe",
   "weapon-addons.json": "6c3681c7"
 }

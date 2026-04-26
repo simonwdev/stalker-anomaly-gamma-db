@@ -276,6 +276,7 @@ cleaning_kit_p,ui\ui_icon_equipment,50,50,250,2750
 cleaning_kit_r5,ui\ui_icon_equipment,50,50,350,2750
 cleaning_kit_r7,ui\ui_icon_equipment,50,50,400,2750
 cleaning_kit_s,ui\ui_icon_equipment,50,50,300,2750
+cleaning_kit_u,ui\ui_icon_equipment,100,50,450,2750
 cocaine,ui\ui_icon_equipment,50,50,600,3300
 compression_bag,ui\ui_icon_equipment,100,100,150,2400
 conserva,ui\ui_icon_equipment,50,50,150,3150
@@ -412,6 +413,7 @@ helm_respirator_old,ui\ui_icon_equipment,100,100,3900,200
 helm_rp_bala,ui\ui_icon_equipment,100,100,4000,100
 helm_spartan,ui\ui_icon_equipment,100,100,4000,1100
 helm_tactic,ui\ui_icon_equipment,100,100,4000,500
+helmet_repair_kit,ui\ui_icon_equipment,100,50,0,2900
 hide_bloodsucker,ui\ui_icon_equipment,50,50,350,1750
 hide_boar,ui\ui_icon_equipment,50,50,500,1750
 hide_burer,ui\ui_icon_equipment,50,50,250,1750
@@ -485,6 +487,7 @@ light_isg_outfit,ui\ui_icon_equipment,100,150,4900,900
 light_loner_outfit,ui\ui_icon_equipment,100,150,4900,450
 light_merc_outfit,ui\ui_icon_equipment,100,150,4900,0
 light_monolit_outfit,ui\ui_icon_equipment,100,150,4900,150
+light_repair_kit,ui\ui_icon_equipment,100,50,100,2900
 light_voen_outfit,ui\ui_icon_equipment,100,150,4900,300
 marijuana,ui\ui_icon_equipment,50,50,50,3000
 meat_bloodsucker,ui\ui_icon_equipment,50,50,250,1650
@@ -517,6 +520,7 @@ meat_snork_b,ui\ui_icon_equipment,50,50,300,1650
 meat_tushkano,ui\ui_icon_equipment,50,50,0,1650
 meat_tushkano_a,ui\ui_icon_equipment,50,50,0,1650
 meat_tushkano_b,ui\ui_icon_equipment,50,50,0,1650
+medium_repair_kit,ui\ui_icon_equipment,100,50,200,2900
 medkit,ui\ui_icon_equipment,50,50,100,3300
 medkit_army,ui\ui_icon_equipment,50,50,150,3300
 medkit_scientic,ui\ui_icon_equipment,50,50,200,3300
@@ -733,6 +737,7 @@ tomato,ui\ui_icon_equipment,50,50,300,3150
 toolkit_p,ui\ui_icon_equipment,100,50,0,2800
 toolkit_r5,ui\ui_icon_equipment,100,50,200,2800
 toolkit_r7,ui\ui_icon_equipment,100,50,300,2800
+toolkit_s,ui\ui_icon_equipment,100,50,100,2800
 travel_outfit,ui\ui_icon_equipment,100,150,4300,300
 trenchcoat_brown_outfit,ui\ui_icon_equipment,100,150,4200,150
 trenchcoat_dolg_brown_outfit,ui\ui_icon_equipment,100,150,4200,450
@@ -756,6 +761,7 @@ upgr_o_1_rad,ui\ui_icon_equipment,100,50,6400,550
 upgr_o_1_run,ui\ui_icon_equipment,100,50,6400,700
 upgr_o_1_shock,ui\ui_icon_equipment,100,50,6400,450
 upgr_o_1_weight,ui\ui_icon_equipment,100,50,6400,750
+upgr_o_2_armor,ui\ui_icon_equipment,100,50,6500,150
 upgr_o_2_arty,ui\ui_icon_equipment,100,50,6500,650
 upgr_o_2_bleed,ui\ui_icon_equipment,100,50,6500,100
 upgr_o_2_burn,ui\ui_icon_equipment,100,50,6500,400
@@ -770,6 +776,20 @@ upgr_o_2_rad,ui\ui_icon_equipment,100,50,6500,550
 upgr_o_2_run,ui\ui_icon_equipment,100,50,6500,700
 upgr_o_2_shock,ui\ui_icon_equipment,100,50,6500,450
 upgr_o_2_weight,ui\ui_icon_equipment,100,50,6500,750
+upgr_o_3_arty,ui\ui_icon_equipment,100,50,6600,650
+upgr_o_3_bleed,ui\ui_icon_equipment,100,50,6600,100
+upgr_o_3_burn,ui\ui_icon_equipment,100,50,6600,400
+upgr_o_3_carry,ui\ui_icon_equipment,100,50,6600,600
+upgr_o_3_chem,ui\ui_icon_equipment,100,50,6600,350
+upgr_o_3_damage,ui\ui_icon_equipment,100,50,6600,200
+upgr_o_3_durability,ui\ui_icon_equipment,100,50,6600,250
+upgr_o_3_health,ui\ui_icon_equipment,100,50,6600,50
+upgr_o_3_power,ui\ui_icon_equipment,100,50,6600,300
+upgr_o_3_psi,ui\ui_icon_equipment,100,50,6600,500
+upgr_o_3_rad,ui\ui_icon_equipment,100,50,6600,550
+upgr_o_3_run,ui\ui_icon_equipment,100,50,6600,700
+upgr_o_3_shock,ui\ui_icon_equipment,100,50,6600,450
+upgr_o_3_weight,ui\ui_icon_equipment,100,50,6600,750
 upgr_w_1_calibre,ui\ui_icon_equipment,100,50,6100,500
 upgr_w_1_dispersion,ui\ui_icon_equipment,100,50,6100,450
 upgr_w_1_firemode,ui\ui_icon_equipment,100,50,6100,700
@@ -798,6 +818,20 @@ upgr_w_2_scope,ui\ui_icon_equipment,100,50,6200,400
 upgr_w_2_scope_mount,ui\ui_icon_equipment,100,50,6200,650
 upgr_w_2_speed,ui\ui_icon_equipment,100,50,6200,250
 upgr_w_2_weight,ui\ui_icon_equipment,100,50,6200,50
+upgr_w_3_calibre,ui\ui_icon_equipment,100,50,6300,500
+upgr_w_3_dispersion,ui\ui_icon_equipment,100,50,6300,450
+upgr_w_3_firemode,ui\ui_icon_equipment,100,50,6300,700
+upgr_w_3_grenade_mount,ui\ui_icon_equipment,100,50,6300,150
+upgr_w_3_inertion,ui\ui_icon_equipment,100,50,6300,550
+upgr_w_3_magazine,ui\ui_icon_equipment,100,50,6300,350
+upgr_w_3_muffle,ui\ui_icon_equipment,100,50,6300,100
+upgr_w_3_recoil,ui\ui_icon_equipment,100,50,6300,300
+upgr_w_3_reliability,ui\ui_icon_equipment,100,50,6300,200
+upgr_w_3_rpm,ui\ui_icon_equipment,100,50,6300,600
+upgr_w_3_scope,ui\ui_icon_equipment,100,50,6300,400
+upgr_w_3_scope_mount,ui\ui_icon_equipment,100,50,6300,650
+upgr_w_3_speed,ui\ui_icon_equipment,100,50,6300,250
+upgr_w_3_weight,ui\ui_icon_equipment,100,50,6300,50
 vodka,ui\ui_icon_equipment,50,50,0,3050
 vodka2,ui\ui_icon_equipment,50,50,50,3050
 vodka_quality,ui\ui_icon_equipment,50,50,100,3050
@@ -864,6 +898,7 @@ wpn_beretta,ui\ui_icon_equipment,100,50,1850,3900
 wpn_beretta_alt,ui\ui_icon_equipment,100,50,2150,3900
 wpn_beretta_camo,ui\ui_icon_equipment,100,50,1950,3900
 wpn_beretta_modern,ui\ui_icon_equipment,100,50,2050,3900
+wpn_binoc_inv,ui\ui_icon_equipment,100,50,700,450
 wpn_bizon,ui\ui_icon_equipment,200,100,1800,1700
 wpn_bm16,ui\ui_icon_equipment,150,50,2350,2750
 wpn_bm16_alt,ui\ui_icon_equipment,150,50,2350,2800

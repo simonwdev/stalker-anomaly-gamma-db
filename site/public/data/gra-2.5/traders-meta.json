@@ -1,0 +1,50 @@
+[
+  {
+    "id": "duty",
+    "labelKey": "app_duty",
+    "label": "bar_barmen_name",
+    "color": "#dc2626"
+  },
+  {
+    "id": "ecolog_sakharov",
+    "labelKey": "app_ecolog_sakharov",
+    "label": "yan_st_sakharov_name",
+    "color": "#06b6d4"
+  },
+  {
+    "id": "freedom",
+    "labelKey": "app_freedom",
+    "label": "mil_Svoboda_trader_name",
+    "color": "#16a34a"
+  },
+  {
+    "id": "generic_mechanic",
+    "labelKey": "app_generic_mechanic",
+    "label": "st_raid_mechanic_name",
+    "color": "#78716c"
+  },
+  {
+    "id": "generic_medic",
+    "labelKey": "app_generic_medic",
+    "label": "st_raid_medic_name",
+    "color": "#e11d48'"
+  },
+  {
+    "id": "stalker_butcher",
+    "labelKey": "app_stalker_butcher",
+    "label": "st_raid_butcher_name",
+    "color": "#44250a"
+  },
+  {
+    "id": "stalker_nimble",
+    "labelKey": "app_stalker_nimble",
+    "label": "st_zat_a2_stalker_nimble_name",
+    "color": "#ecdb9e"
+  },
+  {
+    "id": "stalker_sidorovich",
+    "labelKey": "app_stalker_sidorovich",
+    "label": "escape_trader_name",
+    "color": "'#f59e0b"
+  }
+]

@@ -1,0 +1,6 @@
+~,st_data_export_condition
+supplies_5,=raid_goodwill_check(dolg:1000)
+supplies_4,=raid_goodwill_check(dolg:750)
+supplies_3,=raid_goodwill_check(dolg:500)
+supplies_2,=raid_goodwill_check(dolg:250)
+supplies_1,

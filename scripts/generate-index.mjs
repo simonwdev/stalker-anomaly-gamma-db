@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, cpSync } from "fs";
 import { join } from "path";
 import { createHash } from "crypto";
+import { execFileSync } from "child_process";
 
 // Parse --pack argument (supports both --pack=value and --pack value)
 function parsePackArg(argv) {
@@ -1450,3 +1451,12 @@ const manifestOut = join(OUT_DIR, "manifest.json");
 writeFileSync(manifestOut, JSON.stringify(manifest, null, 2));
 console.log(`Wrote manifest (${Object.keys(manifest).length} entries) to ${manifestOut}`);
 
+try {
+  execFileSync(process.execPath, [
+    join(import.meta.dirname, "generate-traders.mjs"),
+    "--pack", pack
+  ], { stdio: "inherit" });
+} catch (e) {
+  console.error("Failed to run generate-traders.mjs:", e.message);
+  process.exit(1);
+}

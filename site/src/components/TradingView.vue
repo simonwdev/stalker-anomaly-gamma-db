@@ -1,5 +1,5 @@
 <template>
-<div class="trading-view" v-if="packId">
+<div class="trading-view" v-if="packId && traders.length">
     <!-- Trader selector pills -->
     <div class="trading-toolbar">
         <div class="trading-trader-pills">
@@ -11,7 +11,7 @@
                 @click="selectTrader(trader.id)"
             >
                 <span class="trading-pill-dot" :style="{ background: trader.color }"></span>
-                {{ t(trader.labelKey) || trader.label }}
+                {{ traderName(trader) }}
             </button>
         </div>
         <div class="trading-search-wrap">
@@ -205,38 +205,6 @@
 </template>
 
 <script>
-const TRADER_META = [
-    { id: 'stalker_sidorovich',       labelKey: 'app_trader_sidorovich',       label: 'Sidorovich',          color: '#f59e0b' },
-    { id: 'stalker_owl',              labelKey: 'app_trader_owl',              label: 'Owl',                 color: '#8b5cf6' },
-    { id: 'stalker_loris',            labelKey: 'app_trader_loris',            label: 'Loris',               color: '#6366f1' },
-    { id: 'stalker_nimble',           labelKey: 'app_trader_nimble',           label: 'Nimble',              color: '#ec4899' },
-    { id: 'stalker_basic',            labelKey: 'app_trader_stalker_basic',    label: 'Stalker',             color: '#a3a3a3' },
-    { id: 'stalker_butcher',          labelKey: 'app_trader_butcher',          label: 'Butcher',             color: '#ef4444' },
-    { id: 'stalker_flea_market',      labelKey: 'app_trader_flea_market',      label: 'Flea Market',         color: '#f97316' },
-    { id: 'stalker_flea_market_night',labelKey: 'app_trader_flea_market_night',label: 'Flea Market (Night)', color: '#c2410c' },
-    { id: 'bandit',                   labelKey: 'app_trader_bandit',           label: 'Bandit',              color: '#854d0e' },
-    { id: 'bandit_basic',             labelKey: 'app_trader_bandit_basic',     label: 'Bandit (Basic)',      color: '#a16207' },
-    { id: 'duty',                     labelKey: 'app_trader_duty',             label: 'Duty',                color: '#dc2626' },
-    { id: 'freedom',                  labelKey: 'app_trader_freedom',          label: 'Freedom',             color: '#16a34a' },
-    { id: 'csky_spore',               labelKey: 'app_trader_clear_sky',        label: 'Clear Sky',           color: '#0ea5e9' },
-    { id: 'ecolog_hermann',           labelKey: 'app_trader_hermann',          label: 'Hermann',             color: '#14b8a6' },
-    { id: 'ecolog_sakharov',          labelKey: 'app_trader_sakharov',         label: 'Sakharov',            color: '#06b6d4' },
-    { id: 'ecolog_spirit',            labelKey: 'app_trader_spirit',           label: 'Spirit',              color: '#2dd4bf' },
-    { id: 'military',                 labelKey: 'app_trader_military',         label: 'Military',            color: '#65a30d' },
-    { id: 'military_esc',             labelKey: 'app_trader_military_esc',     label: 'Military (Escape)',   color: '#4d7c0f' },
-    { id: 'mercenary',                labelKey: 'app_trader_mercenary',        label: 'Mercenary',           color: '#7c3aed' },
-    { id: 'mercenary_basic',          labelKey: 'app_trader_mercenary_basic',  label: 'Mercenary (Basic)',   color: '#6d28d9' },
-    { id: 'mercenary_meeker',         labelKey: 'app_trader_meeker',           label: 'Meeker',              color: '#a78bfa' },
-    { id: 'monolith',                 labelKey: 'app_trader_monolith',         label: 'Monolith',            color: '#38bdf8' },
-    { id: 'monolith_basic',           labelKey: 'app_trader_monolith_basic',   label: 'Monolith (Basic)',    color: '#0284c7' },
-    { id: 'greh',                     labelKey: 'app_trader_greh',             label: 'Greh',                color: '#f43f5e' },
-    { id: 'isg',                      labelKey: 'app_trader_isg',              label: 'ISG',                 color: '#10b981' },
-    { id: 'isg_mission',              labelKey: 'app_trader_isg_mission',      label: 'ISG (Mission)',       color: '#059669' },
-    { id: 'generic_barman',           labelKey: 'app_trader_barman',           label: 'Barman',              color: '#d97706' },
-    { id: 'generic_mechanic',         labelKey: 'app_trader_mechanic',         label: 'Mechanic',            color: '#78716c' },
-    { id: 'generic_medic',            labelKey: 'app_trader_medic',            label: 'Medic',               color: '#e11d48' },
-];
-
 export default {
     props: {
         packId: { type: String, default: null },
@@ -246,8 +214,8 @@ export default {
     emits: ['navigateToItem', 'showItemHover', 'moveItemHover', 'hideItemHover'],
     data() {
         return {
-            traders: TRADER_META,
-            selectedTrader: 'stalker_sidorovich',
+            traders: [],
+            selectedTrader: null,
             traderData: null,
             loading: false,
             activeTab: 'supplies',
@@ -340,7 +308,7 @@ export default {
     watch: {
         packId: {
             immediate: true,
-            handler() { this.cache = {}; this.priceById = {}; this.catPriceFetched = {}; this.loadTrader(); },
+            handler() { this.cache = {}; this.priceById = {}; this.catPriceFetched = {}; this.loadTradersMeta(); },
         },
         selectedTrader() {
             this.loadTrader();
@@ -462,6 +430,25 @@ export default {
                 labels.push(p.replace(/^=/, '').replace(/_/g, ' ').replace(/\(.*\)/, '').trim());
             }
             return labels;
+        },
+        traderName(trader) {
+            const fromKey = this.t(trader.labelKey);
+            return fromKey !== trader.labelKey ? fromKey : this.t(trader.label);
+        },
+        async loadTradersMeta() {
+            if (!this.packId) return;
+            try {
+                const resp = await fetch(`/data/${this.packId}/traders-meta.json`);
+                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+                this.traders = await resp.json();
+                if (!this.selectedTrader || !this.traders.find(t => t.id === this.selectedTrader)) {
+                    this.selectedTrader = this.traders[0]?.id ?? null;
+                }
+                this.loadTrader();
+            } catch (e) {
+                console.error('Failed to load traders meta:', e);
+                this.traders = [];
+            }
         },
         async loadTrader() {
             if (!this.packId) return;

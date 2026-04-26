@@ -1,0 +1,6 @@
+~,st_data_export_condition
+supplies_5,=actor_goodwill_ge(army:1000) OR =heavy_pockets_functor()
+supplies_4,=actor_goodwill_ge(army:800)
+supplies_3,=actor_goodwill_ge(army:600)
+supplies_2,=actor_goodwill_ge(army:400)
+supplies_1,
