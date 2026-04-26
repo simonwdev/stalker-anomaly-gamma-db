@@ -74,6 +74,15 @@
                 >
                     {{ tierLabel(key) }}
                 </button>
+                <span
+                    class="toggle-switch"
+                    :class="{ on: exclusiveOnly }"
+                    @click="exclusiveOnly = !exclusiveOnly"
+                    v-tooltip="t('app_trading_exclusive_only')"
+                    style="cursor: pointer; align-self: center; margin-left: 0.5rem"
+                >
+                    <span class="toggle-knob"></span>
+                </span>
             </div>
             <div v-if="unlockCondition || activeTier === 'supplies_1' || activeTier === 'supplies_generic'" class="trading-unlock-condition">
                 <span class="trading-unlock-icon">🔓</span>
@@ -220,6 +229,7 @@ export default {
             loading: false,
             activeTab: 'supplies',
             activeTier: 'supplies_1',
+            exclusiveOnly: false,
             searchQuery: '',
             cache: {},
             // Price lookup: id -> base cost (st_upgr_cost)
@@ -248,10 +258,20 @@ export default {
             if (!this.traderData) return [];
             return this.traderData[this.activeTier] || [];
         },
+        exclusiveSupplyItems() {
+            if (!this.traderData) return [];
+            const currentIdx = this.supplyKeys.indexOf(this.activeTier);
+            const priorIds = new Set(
+                this.supplyKeys.slice(0, currentIdx)
+                    .flatMap(k => (this.traderData[k] || []).map(item => item[0]))
+            );
+            return this.currentSupplyItems.filter(item => !priorIds.has(item[0]));
+        },
         filteredSupplyItems() {
+            const base = this.exclusiveOnly ? this.exclusiveSupplyItems : this.currentSupplyItems;
             const q = this.searchQuery.trim().toLowerCase();
-            if (!q) return this.currentSupplyItems;
-            return this.currentSupplyItems.filter(item => {
+            if (!q) return base;
+            return base.filter(item => {
                 if (item[0].toLowerCase().includes(q)) return true;
                 const resolved = this.resolveItem(item[0]);
                 if (resolved && this.tName(resolved).toLowerCase().includes(q)) return true;
@@ -481,6 +501,7 @@ export default {
                 .filter(k => k.startsWith('supplies_'))
                 .sort();
             this.activeTier = keys[0] || 'supplies_1';
+            this.exclusiveOnly = false;
         },
     },
 };
