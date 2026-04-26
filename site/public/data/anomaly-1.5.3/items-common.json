@@ -1,0 +1,7483 @@
+{
+  "1p29": {
+    "name": "st_addon_scope_1p29",
+    "price": 5960
+  },
+  "ac10632": {
+    "name": "st_addon_scope_ac10632",
+    "price": 4380
+  },
+  "ac11090": {
+    "name": "st_addon_scope_ac11090",
+    "price": 4380
+  },
+  "acog": {
+    "name": "st_addon_scope_acog",
+    "price": 4700
+  },
+  "addon": {
+    "name": "st_antirad"
+  },
+  "adrenalin": {
+    "name": "st_adrenalin",
+    "price": 12240
+  },
+  "af_aac": {
+    "name": "st_af_aac_name",
+    "price": 19410
+  },
+  "af_aam": {
+    "name": "st_af_aam_name",
+    "price": 31485
+  },
+  "af_ameba_mica": {
+    "name": "af_ameba_mica",
+    "price": 67760
+  },
+  "af_ameba_slime": {
+    "name": "af_ameba_slime",
+    "price": 33780
+  },
+  "af_ameba_slug": {
+    "name": "af_ameba_slug",
+    "price": 45455
+  },
+  "af_atom": {
+    "name": "st_af_atom_name",
+    "price": 9800
+  },
+  "af_ball": {
+    "name": "st_af_ball_name",
+    "price": 9800
+  },
+  "af_baloon": {
+    "name": "st_af_baloon_name",
+    "price": 47400
+  },
+  "af_baloon_af_aac": {
+    "name": "st_af_baloon_af_aac_name"
+  },
+  "af_baloon_af_aam": {
+    "name": "st_af_baloon_af_aam_name"
+  },
+  "af_baloon_af_iam": {
+    "name": "st_af_baloon_af_iam_name"
+  },
+  "af_baloon_lead_box": {
+    "name": "st_af_baloon_lead_box_name"
+  },
+  "af_bat": {
+    "name": "st_af_bat_name",
+    "price": 30300
+  },
+  "af_black": {
+    "name": "st_af_black_name",
+    "price": 21600
+  },
+  "af_black_angel": {
+    "name": "st_af_black_angel_name",
+    "price": 26700
+  },
+  "af_black_spray": {
+    "name": "st_af_black_spray_name",
+    "price": 55320
+  },
+  "af_black_spray_af_aac": {
+    "name": "st_af_black_spray_af_aac_name"
+  },
+  "af_black_spray_af_aam": {
+    "name": "st_af_black_spray_af_aam_name"
+  },
+  "af_black_spray_af_iam": {
+    "name": "st_af_black_spray_af_iam_name"
+  },
+  "af_black_spray_lead_box": {
+    "name": "st_af_black_spray_lead_box_name"
+  },
+  "af_blood": {
+    "name": "st_af_blood_name",
+    "price": 22200
+  },
+  "af_blood_af_aac": {
+    "name": "st_af_blood_af_aac_name"
+  },
+  "af_blood_af_aam": {
+    "name": "st_af_blood_af_aam_name"
+  },
+  "af_blood_af_iam": {
+    "name": "st_af_blood_af_iam_name"
+  },
+  "af_blood_lead_box": {
+    "name": "st_af_blood_lead_box_name"
+  },
+  "af_bracelet": {
+    "name": "st_af_bracelet_name",
+    "price": 37940
+  },
+  "af_bracelet_af_aac": {
+    "name": "st_af_bracelet_af_aac_name"
+  },
+  "af_bracelet_af_aam": {
+    "name": "st_af_bracelet_af_aam_name"
+  },
+  "af_bracelet_af_iam": {
+    "name": "st_af_bracelet_af_iam_name"
+  },
+  "af_bracelet_lead_box": {
+    "name": "st_af_bracelet_lead_box_name"
+  },
+  "af_camelbak": {
+    "name": "st_af_camelbak_name",
+    "price": 6540
+  },
+  "af_camelbak_up": {
+    "name": "st_af_camelbak_up_name",
+    "price": 17620
+  },
+  "af_cell": {
+    "name": "st_af_cell_name",
+    "price": 23200
+  },
+  "af_chelust": {
+    "name": "st_af_chelust_name",
+    "price": 22400
+  },
+  "af_cocoon": {
+    "name": "st_af_cocoon_name",
+    "price": 17400
+  },
+  "af_compass": {
+    "name": "st_af_compass_name",
+    "price": 74500
+  },
+  "af_compass_af_aac": {
+    "name": "st_af_compass_af_aac_name"
+  },
+  "af_compass_af_aam": {
+    "name": "st_af_compass_af_aam_name"
+  },
+  "af_compass_af_iam": {
+    "name": "st_af_compass_af_iam_name"
+  },
+  "af_compass_lead_box": {
+    "name": "st_af_compass_lead_box_name"
+  },
+  "af_cooler": {
+    "name": "st_af_cooler_name",
+    "price": 6080
+  },
+  "af_cooler_up": {
+    "name": "st_af_cooler_up_name",
+    "price": 16560
+  },
+  "af_cristall": {
+    "name": "st_af_cristall_name",
+    "price": 31800
+  },
+  "af_cristall_af_aac": {
+    "name": "st_af_cristall_af_aac_name"
+  },
+  "af_cristall_af_aam": {
+    "name": "st_af_cristall_af_aam_name"
+  },
+  "af_cristall_af_iam": {
+    "name": "st_af_cristall_af_iam_name"
+  },
+  "af_cristall_flower": {
+    "name": "st_af_cristall_flower_name",
+    "price": 22800
+  },
+  "af_cristall_flower_af_aac": {
+    "name": "st_af_cristall_flower_af_aac_name"
+  },
+  "af_cristall_flower_af_aam": {
+    "name": "st_af_cristall_flower_af_aam_name"
+  },
+  "af_cristall_flower_af_iam": {
+    "name": "st_af_cristall_flower_af_iam_name"
+  },
+  "af_cristall_flower_lead_box": {
+    "name": "st_af_cristall_flower_lead_box_name"
+  },
+  "af_cristall_lead_box": {
+    "name": "st_af_cristall_lead_box_name"
+  },
+  "af_death_lamp": {
+    "name": "st_af_death_lamp_name",
+    "price": 71000
+  },
+  "af_death_lamp_af_aac": {
+    "name": "st_af_death_lamp_af_aac_name"
+  },
+  "af_death_lamp_af_aam": {
+    "name": "st_af_death_lamp_af_aam_name"
+  },
+  "af_death_lamp_af_iam": {
+    "name": "st_af_death_lamp_af_iam_name"
+  },
+  "af_death_lamp_lead_box": {
+    "name": "st_af_death_lamp_lead_box_name"
+  },
+  "af_dragon_eye": {
+    "name": "st_af_dragon_eye_name",
+    "price": 15600
+  },
+  "af_drops": {
+    "name": "af_drops",
+    "price": 30660
+  },
+  "af_dummy_battery": {
+    "name": "st_af_dummy_battery_name",
+    "price": 27200
+  },
+  "af_dummy_battery_af_aac": {
+    "name": "st_af_dummy_battery_af_aac_name"
+  },
+  "af_dummy_battery_af_aam": {
+    "name": "st_af_dummy_battery_af_aam_name"
+  },
+  "af_dummy_battery_af_iam": {
+    "name": "st_af_dummy_battery_af_iam_name"
+  },
+  "af_dummy_battery_lead_box": {
+    "name": "st_af_dummy_battery_lead_box_name"
+  },
+  "af_dummy_dummy": {
+    "name": "st_af_dummy_dummy_name",
+    "price": 37200
+  },
+  "af_dummy_dummy_af_aac": {
+    "name": "st_af_dummy_dummy_af_aac_name"
+  },
+  "af_dummy_dummy_af_aam": {
+    "name": "st_af_dummy_dummy_af_aam_name"
+  },
+  "af_dummy_dummy_af_iam": {
+    "name": "st_af_dummy_dummy_af_iam_name"
+  },
+  "af_dummy_dummy_lead_box": {
+    "name": "st_af_dummy_dummy_lead_box_name"
+  },
+  "af_dummy_glassbeads": {
+    "name": "st_af_dummy_glassbeads_name",
+    "price": 24800
+  },
+  "af_dummy_glassbeads_af_aac": {
+    "name": "st_af_dummy_glassbeads_af_aac_name"
+  },
+  "af_dummy_glassbeads_af_aam": {
+    "name": "st_af_dummy_glassbeads_af_aam_name"
+  },
+  "af_dummy_glassbeads_af_iam": {
+    "name": "st_af_dummy_glassbeads_af_iam_name"
+  },
+  "af_dummy_glassbeads_lead_box": {
+    "name": "st_af_dummy_glassbeads_lead_box_name"
+  },
+  "af_dummy_pellicle": {
+    "name": "af_dummy_pellicle",
+    "price": 90945
+  },
+  "af_dummy_spring": {
+    "name": "af_dummy_spring",
+    "price": 67625
+  },
+  "af_ear": {
+    "name": "st_af_ear_name",
+    "price": 6700
+  },
+  "af_electra_flash": {
+    "name": "st_af_electra_flash_name",
+    "price": 48900
+  },
+  "af_electra_flash_af_aac": {
+    "name": "st_af_electra_flash_af_aac_name"
+  },
+  "af_electra_flash_af_aam": {
+    "name": "st_af_electra_flash_af_aam_name"
+  },
+  "af_electra_flash_af_iam": {
+    "name": "st_af_electra_flash_af_iam_name"
+  },
+  "af_electra_flash_lead_box": {
+    "name": "st_af_electra_flash_lead_box_name"
+  },
+  "af_electra_moonlight": {
+    "name": "st_af_electra_moonlight_name",
+    "price": 43600
+  },
+  "af_electra_moonlight_af_aac": {
+    "name": "st_af_electra_moonlight_af_aac_name"
+  },
+  "af_electra_moonlight_af_aam": {
+    "name": "st_af_electra_moonlight_af_aam_name"
+  },
+  "af_electra_moonlight_af_iam": {
+    "name": "st_af_electra_moonlight_af_iam_name"
+  },
+  "af_electra_moonlight_lead_box": {
+    "name": "st_af_electra_moonlight_lead_box_name"
+  },
+  "af_electra_sparkler": {
+    "name": "st_af_electra_sparkler_name",
+    "price": 21600
+  },
+  "af_electra_sparkler_af_aac": {
+    "name": "st_af_electra_sparkler_af_aac_name"
+  },
+  "af_electra_sparkler_af_aam": {
+    "name": "st_af_electra_sparkler_af_aam_name"
+  },
+  "af_electra_sparkler_af_iam": {
+    "name": "st_af_electra_sparkler_af_iam_name"
+  },
+  "af_electra_sparkler_lead_box": {
+    "name": "st_af_electra_sparkler_lead_box_name"
+  },
+  "af_elektron": {
+    "name": "st_af_elektron_name",
+    "price": 20700
+  },
+  "af_empty": {
+    "name": "st_af_empty_name",
+    "price": 42760
+  },
+  "af_empty_af_aac": {
+    "name": "st_af_empty_af_aac_name"
+  },
+  "af_empty_af_aam": {
+    "name": "st_af_empty_af_aam_name"
+  },
+  "af_empty_af_iam": {
+    "name": "st_af_empty_af_iam_name"
+  },
+  "af_empty_lead_box": {
+    "name": "st_af_empty_lead_box_name"
+  },
+  "af_eye": {
+    "name": "st_af_eye_name",
+    "price": 36900
+  },
+  "af_eye_af_aac": {
+    "name": "st_af_eye_af_aac_name"
+  },
+  "af_eye_af_aam": {
+    "name": "st_af_eye_af_aam_name"
+  },
+  "af_eye_af_iam": {
+    "name": "st_af_eye_af_iam_name"
+  },
+  "af_eye_lead_box": {
+    "name": "st_af_eye_lead_box_name"
+  },
+  "af_fire": {
+    "name": "st_af_fire_name",
+    "price": 46925
+  },
+  "af_fire_af_aac": {
+    "name": "st_af_fire_af_aac_name"
+  },
+  "af_fire_af_aam": {
+    "name": "st_af_fire_af_aam_name"
+  },
+  "af_fire_af_iam": {
+    "name": "st_af_fire_af_iam_name"
+  },
+  "af_fire_lead_box": {
+    "name": "st_af_fire_lead_box_name"
+  },
+  "af_fire_loop": {
+    "name": "st_af_fire_loop_name",
+    "price": 17800
+  },
+  "af_fireball": {
+    "name": "st_af_fireball_name",
+    "price": 46800
+  },
+  "af_fireball_af_aac": {
+    "name": "st_af_fireball_af_aac_name"
+  },
+  "af_fireball_af_aam": {
+    "name": "st_af_fireball_af_aam_name"
+  },
+  "af_fireball_af_iam": {
+    "name": "st_af_fireball_af_iam_name"
+  },
+  "af_fireball_lead_box": {
+    "name": "st_af_fireball_lead_box_name"
+  },
+  "af_fonar": {
+    "name": "st_af_fonar_name",
+    "price": 17800
+  },
+  "af_fountain": {
+    "name": "st_af_fountain_name",
+    "price": 17300
+  },
+  "af_frames": {
+    "name": "st_af_frames_name",
+    "price": 6380
+  },
+  "af_frames_up": {
+    "name": "st_af_frames_up_name",
+    "price": 12660
+  },
+  "af_freon": {
+    "name": "st_af_freon_name",
+    "price": 4580
+  },
+  "af_freon_up": {
+    "name": "st_af_freon_up_name",
+    "price": 11320
+  },
+  "af_full_empty": {
+    "name": "st_af_full_empty_name",
+    "price": 57320
+  },
+  "af_full_empty_af_aac": {
+    "name": "st_af_full_empty_af_aac_name"
+  },
+  "af_full_empty_af_aam": {
+    "name": "st_af_full_empty_af_aam_name"
+  },
+  "af_full_empty_af_iam": {
+    "name": "st_af_full_empty_af_iam_name"
+  },
+  "af_full_empty_lead_box": {
+    "name": "st_af_full_empty_lead_box_name"
+  },
+  "af_fuzz_kolobok": {
+    "name": "st_af_fuzz_kolobok_name",
+    "price": 40600
+  },
+  "af_fuzz_kolobok_af_aac": {
+    "name": "st_af_fuzz_kolobok_af_aac_name"
+  },
+  "af_fuzz_kolobok_af_aam": {
+    "name": "st_af_fuzz_kolobok_af_aam_name"
+  },
+  "af_fuzz_kolobok_af_iam": {
+    "name": "st_af_fuzz_kolobok_af_iam_name"
+  },
+  "af_fuzz_kolobok_lead_box": {
+    "name": "st_af_fuzz_kolobok_lead_box_name"
+  },
+  "af_geliy": {
+    "name": "st_af_geliy_name",
+    "price": 73150
+  },
+  "af_generator": {
+    "name": "st_af_generator_name",
+    "price": 20700
+  },
+  "af_gimlet": {
+    "name": "st_af_gimlet_name",
+    "price": 30700
+  },
+  "af_glass": {
+    "name": "st_af_glass_name",
+    "price": 54400
+  },
+  "af_glass_af_aac": {
+    "name": "st_af_glass_af_aac_name"
+  },
+  "af_glass_af_aam": {
+    "name": "st_af_glass_af_aam_name"
+  },
+  "af_glass_af_iam": {
+    "name": "st_af_glass_af_iam_name"
+  },
+  "af_glass_lead_box": {
+    "name": "st_af_glass_lead_box_name"
+  },
+  "af_gold_fish": {
+    "name": "st_af_gold_fish_name",
+    "price": 66200
+  },
+  "af_gold_fish_af_aac": {
+    "name": "st_af_gold_fish_af_aac_name"
+  },
+  "af_gold_fish_af_aam": {
+    "name": "st_af_gold_fish_af_aam_name"
+  },
+  "af_gold_fish_af_iam": {
+    "name": "st_af_gold_fish_af_iam_name"
+  },
+  "af_gold_fish_lead_box": {
+    "name": "st_af_gold_fish_lead_box_name"
+  },
+  "af_grapes": {
+    "name": "st_af_grapes_name",
+    "price": 18700
+  },
+  "af_gravi": {
+    "name": "st_af_gravi_name",
+    "price": 47500
+  },
+  "af_gravi_af_aac": {
+    "name": "st_af_gravi_af_aac_name"
+  },
+  "af_gravi_af_aam": {
+    "name": "st_af_gravi_af_aam_name"
+  },
+  "af_gravi_af_iam": {
+    "name": "st_af_gravi_af_iam_name"
+  },
+  "af_gravi_lead_box": {
+    "name": "st_af_gravi_lead_box_name"
+  },
+  "af_grid": {
+    "name": "st_af_grid_name",
+    "price": 8450
+  },
+  "af_grid_up": {
+    "name": "st_af_grid_up_name",
+    "price": 16800
+  },
+  "af_iam": {
+    "name": "st_af_iam_name",
+    "price": 11385
+  },
+  "af_ice": {
+    "name": "st_af_ice_name",
+    "price": 51400
+  },
+  "af_ice_af_aac": {
+    "name": "st_af_ice_af_aac_name"
+  },
+  "af_ice_af_aam": {
+    "name": "st_af_ice_af_aam_name"
+  },
+  "af_ice_af_iam": {
+    "name": "st_af_ice_af_iam_name"
+  },
+  "af_ice_lead_box": {
+    "name": "st_af_ice_lead_box_name"
+  },
+  "af_itcher": {
+    "name": "st_af_itcher_name",
+    "price": 18400
+  },
+  "af_itcher_af_aac": {
+    "name": "st_af_itcher_af_aac_name"
+  },
+  "af_itcher_af_aam": {
+    "name": "st_af_itcher_af_aam_name"
+  },
+  "af_itcher_af_iam": {
+    "name": "st_af_itcher_af_iam_name"
+  },
+  "af_itcher_lead_box": {
+    "name": "st_af_itcher_lead_box_name"
+  },
+  "af_kevlar": {
+    "name": "st_af_kevlar_name",
+    "price": 6380
+  },
+  "af_kevlar_up": {
+    "name": "st_af_kevlar_up_name",
+    "price": 13380
+  },
+  "af_kislushka": {
+    "name": "st_af_kislushka_name",
+    "price": 7890
+  },
+  "af_kogot": {
+    "name": "st_af_kogot_name",
+    "price": 7400
+  },
+  "af_lighthouse": {
+    "name": "st_af_lighthouse_name",
+    "price": 24500
+  },
+  "af_lobster_eyes": {
+    "name": "st_af_lobster_eyes_name",
+    "price": 35640
+  },
+  "af_lobster_eyes_af_aac": {
+    "name": "st_af_lobster_eyes_af_aac_name"
+  },
+  "af_lobster_eyes_af_aam": {
+    "name": "st_af_lobster_eyes_af_aam_name"
+  },
+  "af_lobster_eyes_af_iam": {
+    "name": "st_af_lobster_eyes_af_iam_name"
+  },
+  "af_lobster_eyes_lead_box": {
+    "name": "st_af_lobster_eyes_lead_box_name"
+  },
+  "af_medallion": {
+    "name": "st_af_medallion_name",
+    "price": 26900
+  },
+  "af_medusa": {
+    "name": "st_af_medusa_name",
+    "price": 24900
+  },
+  "af_medusa_af_aac": {
+    "name": "st_af_medusa_af_aac_name"
+  },
+  "af_medusa_af_aam": {
+    "name": "st_af_medusa_af_aam_name"
+  },
+  "af_medusa_af_iam": {
+    "name": "st_af_medusa_af_iam_name"
+  },
+  "af_medusa_lead_box": {
+    "name": "st_af_medusa_lead_box_name"
+  },
+  "af_mincer_meat": {
+    "name": "st_af_mincer_meat_name",
+    "price": 31300
+  },
+  "af_mincer_meat_af_aac": {
+    "name": "st_af_mincer_meat_af_aac_name"
+  },
+  "af_mincer_meat_af_aam": {
+    "name": "st_af_mincer_meat_af_aam_name"
+  },
+  "af_mincer_meat_af_iam": {
+    "name": "st_af_mincer_meat_af_iam_name"
+  },
+  "af_mincer_meat_lead_box": {
+    "name": "st_af_mincer_meat_lead_box_name"
+  },
+  "af_misery_bread_af_aac": {
+    "name": "st_af_misery_bread_af_aac_name"
+  },
+  "af_misery_bread_af_aam": {
+    "name": "st_af_misery_bread_af_aam_name"
+  },
+  "af_misery_bread_af_iam": {
+    "name": "st_af_misery_bread_af_iam_name"
+  },
+  "af_misery_bread_lead_box": {
+    "name": "st_af_misery_bread_lead_box_name"
+  },
+  "af_moh": {
+    "name": "st_af_moh_name",
+    "price": 6300
+  },
+  "af_monolith": {
+    "name": "st_af_monolith_name",
+    "price": 59850
+  },
+  "af_night_star": {
+    "name": "st_af_night_star_name",
+    "price": 33200
+  },
+  "af_night_star_af_aac": {
+    "name": "st_af_night_star_af_aac_name"
+  },
+  "af_night_star_af_aam": {
+    "name": "st_af_night_star_af_aam_name"
+  },
+  "af_night_star_af_iam": {
+    "name": "st_af_night_star_af_iam_name"
+  },
+  "af_night_star_lead_box": {
+    "name": "st_af_night_star_lead_box_name"
+  },
+  "af_oasis_heart": {
+    "name": "st_af_oasis_heart_name",
+    "price": 57200
+  },
+  "af_oasis_heart_af_aac": {
+    "name": "st_af_oasis_heart_af_aac_name"
+  },
+  "af_oasis_heart_af_aam": {
+    "name": "st_af_oasis_heart_af_aam_name"
+  },
+  "af_oasis_heart_af_iam": {
+    "name": "st_af_oasis_heart_af_iam_name"
+  },
+  "af_oasis_heart_lead_box": {
+    "name": "st_af_oasis_heart_lead_box_name"
+  },
+  "af_peas": {
+    "name": "st_af_peas_name",
+    "price": 8700
+  },
+  "af_pin": {
+    "name": "st_af_pin_name",
+    "price": 21100
+  },
+  "af_pin_af_aac": {
+    "name": "st_af_pin_af_aac_name"
+  },
+  "af_pin_af_aam": {
+    "name": "st_af_pin_af_aam_name"
+  },
+  "af_pin_af_iam": {
+    "name": "st_af_pin_af_iam_name"
+  },
+  "af_pin_lead_box": {
+    "name": "st_af_pin_lead_box_name"
+  },
+  "af_plates": {
+    "name": "st_af_plates_name",
+    "price": 7860
+  },
+  "af_plates_up": {
+    "name": "st_af_plates_up_name",
+    "price": 16860
+  },
+  "af_quest_b14_twisted": {
+    "name": "st_af_quest_b14_twisted",
+    "price": 9800
+  },
+  "af_quest_b14_twisted_af_aac": {
+    "name": "st_af_quest_b14_twisted_af_aac_name"
+  },
+  "af_quest_b14_twisted_af_aam": {
+    "name": "st_af_quest_b14_twisted_af_aam_name"
+  },
+  "af_quest_b14_twisted_af_iam": {
+    "name": "st_af_quest_b14_twisted_af_iam_name"
+  },
+  "af_quest_b14_twisted_lead_box": {
+    "name": "st_af_quest_b14_twisted_lead_box_name"
+  },
+  "af_repei": {
+    "name": "st_af_repei_name",
+    "price": 10560
+  },
+  "af_ring": {
+    "name": "st_af_ring_name",
+    "price": 42220
+  },
+  "af_ring_af_aac": {
+    "name": "st_af_ring_af_aac_name"
+  },
+  "af_ring_af_aam": {
+    "name": "st_af_ring_af_aam_name"
+  },
+  "af_ring_af_iam": {
+    "name": "st_af_ring_af_iam_name"
+  },
+  "af_ring_lead_box": {
+    "name": "st_af_ring_lead_box_name"
+  },
+  "af_rusty_kristall": {
+    "name": "af_rusty_kristall",
+    "price": 37615
+  },
+  "af_rusty_sea": {
+    "name": "af_rusty_sea_urchin",
+    "price": 52560
+  },
+  "af_rusty_thorn": {
+    "name": "af_rusty_thorn",
+    "price": 22715
+  },
+  "af_sandstone": {
+    "name": "st_af_sandstone_name",
+    "price": 19800
+  },
+  "af_serofim": {
+    "name": "st_af_serofim_name",
+    "price": 9800
+  },
+  "af_signet": {
+    "name": "st_af_signet_name",
+    "price": 11800
+  },
+  "af_skull_miser": {
+    "name": "st_af_skull_miser_name",
+    "price": 7800
+  },
+  "af_soul": {
+    "name": "st_af_soul_name",
+    "price": 26200
+  },
+  "af_soul_af_aac": {
+    "name": "st_af_soul_af_aac_name"
+  },
+  "af_soul_af_aam": {
+    "name": "st_af_soul_af_aam_name"
+  },
+  "af_soul_af_iam": {
+    "name": "st_af_soul_af_iam_name"
+  },
+  "af_soul_lead_box": {
+    "name": "st_af_soul_lead_box_name"
+  },
+  "af_spaika": {
+    "name": "st_af_spaika_name",
+    "price": 19200
+  },
+  "af_sponge": {
+    "name": "st_af_sponge_name",
+    "price": 30320
+  },
+  "af_sponge_af_aac": {
+    "name": "st_af_sponge_af_aac_name"
+  },
+  "af_sponge_af_aam": {
+    "name": "st_af_sponge_af_aam_name"
+  },
+  "af_sponge_af_iam": {
+    "name": "st_af_sponge_af_iam_name"
+  },
+  "af_sponge_lead_box": {
+    "name": "st_af_sponge_lead_box_name"
+  },
+  "af_star_phantom": {
+    "name": "st_af_star_phantom_name",
+    "price": 19000
+  },
+  "af_sun": {
+    "name": "st_af_sun_name",
+    "price": 21800
+  },
+  "af_surge": {
+    "name": "st_af_surge_name",
+    "price": 5460
+  },
+  "af_surge_up": {
+    "name": "st_af_surge_up_name",
+    "price": 10220
+  },
+  "af_tapeworm": {
+    "name": "st_af_tapeworm_name",
+    "price": 12700
+  },
+  "af_vaselisk": {
+    "name": "st_af_vaselisk_name",
+    "price": 64650
+  },
+  "af_vyvert": {
+    "name": "st_af_vyvert_name",
+    "price": 35500
+  },
+  "af_vyvert_af_aac": {
+    "name": "st_af_vyvert_af_aac_name"
+  },
+  "af_vyvert_af_aam": {
+    "name": "st_af_vyvert_af_aam_name"
+  },
+  "af_vyvert_af_iam": {
+    "name": "st_af_vyvert_af_iam_name"
+  },
+  "af_vyvert_lead_box": {
+    "name": "st_af_vyvert_lead_box_name"
+  },
+  "af_zhelch": {
+    "name": "st_af_zhelch_name",
+    "price": 16700
+  },
+  "akvatab": {
+    "name": "st_akvatab",
+    "price": 4524
+  },
+  "ammo_11.43x23_fmj": {
+    "name": "ammo-11.43x23-fmj",
+    "price": 910
+  },
+  "ammo_11.43x23_fmj_bad": {
+    "name": "ammo-11.43x23-fmj",
+    "price": 504
+  },
+  "ammo_11.43x23_fmj_verybad": {
+    "name": "ammo-11.43x23-fmj",
+    "price": 140
+  },
+  "ammo_11.43x23_hydro": {
+    "name": "ammo-11.43x23-hydro",
+    "price": 1596
+  },
+  "ammo_11.43x23_hydro_bad": {
+    "name": "ammo-11.43x23-hydro",
+    "price": 882
+  },
+  "ammo_11.43x23_hydro_verybad": {
+    "name": "ammo-11.43x23-hydro",
+    "price": 273
+  },
+  "ammo_12.7x55_ap": {
+    "name": "ammo_12.7x55_ap",
+    "price": 12500
+  },
+  "ammo_12.7x55_ap_bad": {
+    "name": "ammo_12.7x55_ap",
+    "price": 6880
+  },
+  "ammo_12.7x55_ap_verybad": {
+    "name": "ammo_12.7x55_ap",
+    "price": 2120
+  },
+  "ammo_12.7x55_fmj": {
+    "name": "ammo-12.7x55-fmj",
+    "price": 7500
+  },
+  "ammo_12.7x55_fmj_bad": {
+    "name": "ammo-12.7x55-fmj",
+    "price": 4120
+  },
+  "ammo_12.7x55_fmj_verybad": {
+    "name": "ammo-12.7x55-fmj",
+    "price": 1260
+  },
+  "ammo_12x70_buck": {
+    "name": "ammo-12x70-buck",
+    "price": 750
+  },
+  "ammo_12x70_buck_bad": {
+    "name": "ammo-12x70-buck",
+    "price": 415
+  },
+  "ammo_12x70_buck_self": {
+    "name": "ammo-12x70-buck_self",
+    "price": 460
+  },
+  "ammo_12x70_buck_verybad": {
+    "name": "ammo-12x70-buck",
+    "price": 125
+  },
+  "ammo_12x76_bull": {
+    "name": "ammo-12x76-bull",
+    "price": 5000
+  },
+  "ammo_12x76_dart": {
+    "name": "ammo-12x76-dart",
+    "price": 2000
+  },
+  "ammo_12x76_dart_bad": {
+    "name": "ammo-12x76-dart",
+    "price": 1100
+  },
+  "ammo_12x76_dart_verybad": {
+    "name": "ammo-12x76-dart",
+    "price": 330
+  },
+  "ammo_12x76_zhekan": {
+    "name": "ammo-12x76-zhekan",
+    "price": 1250
+  },
+  "ammo_12x76_zhekan_bad": {
+    "name": "ammo-12x76-zhekan",
+    "price": 690
+  },
+  "ammo_12x76_zhekan_heli": {
+    "name": "ammo-12x76-zhekan",
+    "price": 1250
+  },
+  "ammo_12x76_zhekan_verybad": {
+    "name": "ammo-12x76-zhekan",
+    "price": 210
+  },
+  "ammo_357_hp_mag": {
+    "name": "ammo-357-hp",
+    "price": 1430
+  },
+  "ammo_357_hp_mag_bad": {
+    "name": "ammo-357-hp",
+    "price": 790
+  },
+  "ammo_357_hp_mag_verybad": {
+    "name": "ammo-357-hp",
+    "price": 240
+  },
+  "ammo_4.6x30_fmj": {
+    "name": "ammo-4.6x30-fmj",
+    "price": 1600
+  },
+  "ammo_4.6x30_fmj_bad": {
+    "name": "ammo-4.6x30-fmj",
+    "price": 880
+  },
+  "ammo_4.6x30_fmj_verybad": {
+    "name": "ammo-4.6x30-fmj",
+    "price": 250
+  },
+  "ammo_5.45x39_ap": {
+    "name": "ammo-5.45x39-ap",
+    "price": 3000
+  },
+  "ammo_5.45x39_ap_bad": {
+    "name": "ammo-5.45x39-ap",
+    "price": 1650
+  },
+  "ammo_5.45x39_ap_verybad": {
+    "name": "ammo-5.45x39-ap",
+    "price": 460
+  },
+  "ammo_5.45x39_ep": {
+    "name": "ammo-5.45x39-ep",
+    "price": 1800
+  },
+  "ammo_5.45x39_ep_bad": {
+    "name": "ammo-5.45x39-ep",
+    "price": 1000
+  },
+  "ammo_5.45x39_ep_verybad": {
+    "name": "ammo-5.45x39-ep",
+    "price": 300
+  },
+  "ammo_5.45x39_fmj": {
+    "name": "ammo-5.45x39-fmj",
+    "price": 1350
+  },
+  "ammo_5.45x39_fmj_bad": {
+    "name": "ammo-5.45x39-fmj",
+    "price": 740
+  },
+  "ammo_5.45x39_fmj_verybad": {
+    "name": "ammo-5.45x39-fmj",
+    "price": 220
+  },
+  "ammo_5.56x45_ap": {
+    "name": "ammo-5.56x45-ap",
+    "price": 3330
+  },
+  "ammo_5.56x45_ap_bad": {
+    "name": "ammo-5.56x45-ap",
+    "price": 1830
+  },
+  "ammo_5.56x45_ap_verybad": {
+    "name": "ammo-5.56x45-ap",
+    "price": 560
+  },
+  "ammo_5.56x45_fmj": {
+    "name": "ammo-5.56x45-fmj",
+    "price": 1500
+  },
+  "ammo_5.56x45_fmj_bad": {
+    "name": "ammo-5.56x45-fmj",
+    "price": 825
+  },
+  "ammo_5.56x45_fmj_verybad": {
+    "name": "ammo-5.56x45-fmj",
+    "price": 230
+  },
+  "ammo_5.56x45_ss190": {
+    "name": "ammo-5.56x45-ss190",
+    "price": 2000
+  },
+  "ammo_5.56x45_ss190_bad": {
+    "name": "ammo-5.56x45-ss190",
+    "price": 1100
+  },
+  "ammo_5.56x45_ss190_verybad": {
+    "name": "ammo-5.56x45-ss190",
+    "price": 320
+  },
+  "ammo_5.7x28_ss190": {
+    "name": "ammo-5.7x28-ss190",
+    "price": 1600
+  },
+  "ammo_5.7x28_ss190_bad": {
+    "name": "ammo-5.7x28-ss190",
+    "price": 880
+  },
+  "ammo_5.7x28_ss190_verybad": {
+    "name": "ammo-5.7x28-ss190",
+    "price": 250
+  },
+  "ammo_5.7x28_ss195": {
+    "name": "ammo-5.7x28-ss195",
+    "price": 1275
+  },
+  "ammo_5.7x28_ss195_bad": {
+    "name": "ammo-5.7x28-ss195",
+    "price": 700
+  },
+  "ammo_5.7x28_ss195_verybad": {
+    "name": "ammo-5.7x28-ss195",
+    "price": 195
+  },
+  "ammo_50_bmg": {
+    "name": "ammo-50-bmg",
+    "price": 4000
+  },
+  "ammo_50_bmg_bad": {
+    "name": "ammo-50-bmg",
+    "price": 2150
+  },
+  "ammo_50_bmg_verybad": {
+    "name": "ammo-50-bmg",
+    "price": 500
+  },
+  "ammo_7.62x25_p": {
+    "name": "ammo-7.62x25-p",
+    "price": 750
+  },
+  "ammo_7.62x25_p_bad": {
+    "name": "ammo-7.62x25-p",
+    "price": 420
+  },
+  "ammo_7.62x25_p_verybad": {
+    "name": "ammo-7.62x25-p",
+    "price": 115
+  },
+  "ammo_7.62x25_ps": {
+    "name": "ammo-7.62x25-ps",
+    "price": 1120
+  },
+  "ammo_7.62x25_ps_bad": {
+    "name": "ammo-7.62x25-ps",
+    "price": 624
+  },
+  "ammo_7.62x25_ps_verybad": {
+    "name": "ammo-7.62x25-ps",
+    "price": 160
+  },
+  "ammo_7.62x39_ap": {
+    "name": "ammo-7.62x39_ap",
+    "price": 2580
+  },
+  "ammo_7.62x39_ap_bad": {
+    "name": "ammo-7.62x39_ap",
+    "price": 1420
+  },
+  "ammo_7.62x39_ap_verybad": {
+    "name": "ammo-7.62x39_ap",
+    "price": 430
+  },
+  "ammo_7.62x39_fmj": {
+    "name": "ammo-7.62x39_fmj",
+    "price": 1530
+  },
+  "ammo_7.62x39_fmj_bad": {
+    "name": "ammo-7.62x39_fmj",
+    "price": 855
+  },
+  "ammo_7.62x39_fmj_verybad": {
+    "name": "ammo-7.62x39_fmj",
+    "price": 255
+  },
+  "ammo_7.62x51_ap": {
+    "name": "ammo-7.62x51_ap",
+    "price": 3750
+  },
+  "ammo_7.62x51_ap_bad": {
+    "name": "ammo-7.62x51_ap",
+    "price": 2070
+  },
+  "ammo_7.62x51_ap_verybad": {
+    "name": "ammo-7.62x51_ap",
+    "price": 630
+  },
+  "ammo_7.62x51_fmj": {
+    "name": "ammo-7.62x51_fmj",
+    "price": 2250
+  },
+  "ammo_7.62x51_fmj_bad": {
+    "name": "ammo-7.62x51_fmj",
+    "price": 1240
+  },
+  "ammo_7.62x51_fmj_verybad": {
+    "name": "ammo-7.62x51_fmj",
+    "price": 350
+  },
+  "ammo_7.62x54_7h1": {
+    "name": "ammo-7.62x54-7n1",
+    "price": 1400
+  },
+  "ammo_7.62x54_7h14": {
+    "name": "ammo-7.62x54_7n14",
+    "price": 2350
+  },
+  "ammo_7.62x54_7h14_bad": {
+    "name": "ammo-7.62x54_7n14",
+    "price": 1290
+  },
+  "ammo_7.62x54_7h14_verybad": {
+    "name": "ammo-7.62x54_7n14",
+    "price": 400
+  },
+  "ammo_7.62x54_7h1_bad": {
+    "name": "ammo-7.62x54-7n1",
+    "price": 770
+  },
+  "ammo_7.62x54_7h1_verybad": {
+    "name": "ammo-7.62x54-7n1",
+    "price": 235
+  },
+  "ammo_7.62x54_ap": {
+    "name": "ammo-7.62x54-ap",
+    "price": 3000
+  },
+  "ammo_7.62x54_ap_bad": {
+    "name": "ammo-7.62x54-ap",
+    "price": 1650
+  },
+  "ammo_7.62x54_ap_verybad": {
+    "name": "ammo-7.62x54-ap",
+    "price": 500
+  },
+  "ammo_7.92x33_ap": {
+    "name": "ammo-7.92x33_ap",
+    "price": 3120
+  },
+  "ammo_7.92x33_ap_bad": {
+    "name": "ammo-7.92x33_ap",
+    "price": 1720
+  },
+  "ammo_7.92x33_ap_verybad": {
+    "name": "ammo-7.92x33_ap",
+    "price": 530
+  },
+  "ammo_7.92x33_fmj": {
+    "name": "ammo-7.92x33_fmj",
+    "price": 1980
+  },
+  "ammo_7.92x33_fmj_bad": {
+    "name": "ammo-7.92x33_fmj",
+    "price": 1100
+  },
+  "ammo_7.92x33_fmj_verybad": {
+    "name": "ammo-7.92x33_fmj",
+    "price": 335
+  },
+  "ammo_9x18_ap": {
+    "name": "ammo-9x18-ap",
+    "price": 840
+  },
+  "ammo_9x18_ap_bad": {
+    "name": "ammo-9x18-ap",
+    "price": 480
+  },
+  "ammo_9x18_ap_verybad": {
+    "name": "ammo-9x18-ap",
+    "price": 144
+  },
+  "ammo_9x18_fmj": {
+    "name": "ammo-9x18-fmj",
+    "price": 560
+  },
+  "ammo_9x18_fmj_bad": {
+    "name": "ammo-9x18-fmj",
+    "price": 320
+  },
+  "ammo_9x18_fmj_verybad": {
+    "name": "ammo-9x18-fmj",
+    "price": 96
+  },
+  "ammo_9x18_pmm": {
+    "name": "ammo-9x18-pmm",
+    "price": 960
+  },
+  "ammo_9x18_pmm_bad": {
+    "name": "ammo-9x18-pmm",
+    "price": 544
+  },
+  "ammo_9x18_pmm_verybad": {
+    "name": "ammo-9x18-pmm",
+    "price": 160
+  },
+  "ammo_9x19_ap": {
+    "name": "ammo-9x19-ap",
+    "price": 1300
+  },
+  "ammo_9x19_ap_bad": {
+    "name": "ammo-9x19-ap",
+    "price": 715
+  },
+  "ammo_9x19_ap_verybad": {
+    "name": "ammo-9x19-ap",
+    "price": 200
+  },
+  "ammo_9x19_fmj": {
+    "name": "ammo-9x19-fmj",
+    "price": 645
+  },
+  "ammo_9x19_fmj_bad": {
+    "name": "ammo-9x19-fmj",
+    "price": 360
+  },
+  "ammo_9x19_fmj_verybad": {
+    "name": "ammo-9x19-fmj",
+    "price": 112
+  },
+  "ammo_9x19_pbp": {
+    "name": "ammo-9x19-pbp",
+    "price": 1125
+  },
+  "ammo_9x19_pbp_bad": {
+    "name": "ammo-9x19-pbp",
+    "price": 630
+  },
+  "ammo_9x19_pbp_verybad": {
+    "name": "ammo-9x19-pbp",
+    "price": 188
+  },
+  "ammo_9x39_ap": {
+    "name": "ammo-9x39-ap",
+    "price": 3750
+  },
+  "ammo_9x39_ap_bad": {
+    "name": "ammo-9x39-ap",
+    "price": 2065
+  },
+  "ammo_9x39_ap_verybad": {
+    "name": "ammo-9x39-ap",
+    "price": 635
+  },
+  "ammo_9x39_pab9": {
+    "name": "ammo-9x39-pab9",
+    "price": 2500
+  },
+  "ammo_9x39_pab9_bad": {
+    "name": "ammo-9x39-pab9",
+    "price": 1380
+  },
+  "ammo_9x39_pab9_verybad": {
+    "name": "ammo-9x39-pab9",
+    "price": 425
+  },
+  "ammo_batteries": {
+    "name": "st_energy"
+  },
+  "ammo_batteries_ccell": {
+    "name": "st_energy"
+  },
+  "ammo_batteries_dead": {
+    "name": "st_energy"
+  },
+  "ammo_binoc": {
+    "name": "none"
+  },
+  "ammo_box": {
+    "name": "st_ammo_box",
+    "price": 50
+  },
+  "ammo_dyno": {
+    "name": "-",
+    "price": 216
+  },
+  "ammo_gauss": {
+    "name": "ammo-gauss",
+    "price": 11990
+  },
+  "ammo_gauss_bad": {
+    "name": "ammo-gauss",
+    "price": 2230
+  },
+  "ammo_gauss_cardan": {
+    "name": "ammo-gauss_cardan",
+    "price": 8399
+  },
+  "ammo_gauss_verybad": {
+    "name": "ammo-gauss",
+    "price": 1570
+  },
+  "ammo_knife": {
+    "name": "st_none"
+  },
+  "ammo_knife_2": {
+    "name": "st_none"
+  },
+  "ammo_knife_3": {
+    "name": "st_none"
+  },
+  "ammo_knife_4": {
+    "name": "st_none"
+  },
+  "ammo_knife_5": {
+    "name": "st_none"
+  },
+  "ammo_m209": {
+    "name": "ammo-m209",
+    "price": 2264
+  },
+  "ammo_m209_bad": {
+    "name": "ammo-m209",
+    "price": 665
+  },
+  "ammo_m209_verybad": {
+    "name": "ammo-m209",
+    "price": 300
+  },
+  "ammo_magnum_300": {
+    "name": "ammo-338-lapua",
+    "price": 4250
+  },
+  "ammo_magnum_300_bad": {
+    "name": "ammo-338-lapua",
+    "price": 2330
+  },
+  "ammo_magnum_300_verybad": {
+    "name": "ammo-338-lapua",
+    "price": 720
+  },
+  "ammo_og-7b": {
+    "name": "ammo-og-7b",
+    "price": 2490
+  },
+  "ammo_og-7b_bad": {
+    "name": "ammo-og-7b",
+    "price": 520
+  },
+  "ammo_og-7b_verybad": {
+    "name": "ammo-og-7b",
+    "price": 200
+  },
+  "ammo_pkm_100": {
+    "name": "ammo-7.62x54-r",
+    "price": 6250
+  },
+  "ammo_pkm_100_bad": {
+    "name": "ammo-7.62x54-r",
+    "price": 3430
+  },
+  "ammo_pkm_100_verybad": {
+    "name": "ammo-7.62x54-r",
+    "price": 1060
+  },
+  "ammo_vog-25": {
+    "name": "ammo-vog-25",
+    "price": 2180
+  },
+  "ammo_vog-25_bad": {
+    "name": "ammo-vog-25",
+    "price": 480
+  },
+  "ammo_vog-25_verybad": {
+    "name": "ammo-vog-25",
+    "price": 230
+  },
+  "analgetic": {
+    "name": "st_analgetic",
+    "price": 1360
+  },
+  "antibio_chlor": {
+    "name": "st_antibio_chlor",
+    "price": 521
+  },
+  "antibio_sulfad": {
+    "name": "st_antibio_sulfad",
+    "price": 935
+  },
+  "antiemetic": {
+    "name": "st_antiemetic",
+    "price": 680
+  },
+  "antirad": {
+    "name": "st_antirad",
+    "price": 1860
+  },
+  "antirad_cystamine": {
+    "name": "st_antirad_cystamine",
+    "price": 1080
+  },
+  "antirad_kalium": {
+    "name": "st_antirad_kalium",
+    "price": 3080
+  },
+  "armor_repair_fa": {
+    "name": "st_armor_repair_fa",
+    "price": 1872
+  },
+  "army_bowler": {
+    "name": "st_army_bowler",
+    "price": 6160
+  },
+  "army_isg_spy_pendrive": {
+    "name": "st_army_isg_spy_pendrive_name"
+  },
+  "army_nosorog_outfit": {
+    "name": "army_nosorog_outfit_name",
+    "price": 185000
+  },
+  "army_outfit": {
+    "name": "army_outfit_name",
+    "price": 20530
+  },
+  "army_patch": {
+    "name": "st_army_fp",
+    "price": 650
+  },
+  "artefact_container": {
+    "name": "st_itm_artefact_container_name",
+    "price": 5000
+  },
+  "as_script_grenade": {
+    "price": 500
+  },
+  "attackers_pda": {
+    "name": "attackers_pda_name"
+  },
+  "bad_psy_helmet": {
+    "name": "bad_psy_helmet_name",
+    "price": 44380
+  },
+  "ball_hammer": {
+    "name": "st_ball_hammer",
+    "price": 116
+  },
+  "bandage": {
+    "name": "st_bandage",
+    "price": 1000
+  },
+  "bandit_exo_outfit": {
+    "name": "bandit_exo_outfit_name",
+    "price": 130220
+  },
+  "bandit_exolight_outfit": {
+    "name": "bandit_exolight_outfit_name",
+    "price": 83180
+  },
+  "bandit_nbc_outfit": {
+    "name": "bandit_nbc_outfit_name",
+    "price": 66340
+  },
+  "bandit_novice_outfit": {
+    "name": "bandit_novice_outfit_name",
+    "price": 10930
+  },
+  "bandit_novice_outfit_alt": {
+    "name": "bandit_novice_alt_outfit_name",
+    "price": 12230
+  },
+  "bandit_patch": {
+    "name": "st_bandit_fp",
+    "price": 650
+  },
+  "bandit_ps5_outfit": {
+    "name": "bandit_ps5_outfit_name",
+    "price": 50280
+  },
+  "bandit_scientific_dark_outfit": {
+    "name": "bandit_scientific_dark_outfit_name",
+    "price": 81000
+  },
+  "bandit_scientific_outfit": {
+    "name": "bandit_scientific_outfit_name",
+    "price": 75500
+  },
+  "bandit_sun_outfit": {
+    "name": "bandit_sun_outfit_name",
+    "price": 37020
+  },
+  "banditmerc_outfit": {
+    "name": "banditmerc_outfit_name",
+    "price": 36340
+  },
+  "batteries_dead": {
+    "name": "st_batteries",
+    "price": 624
+  },
+  "beadspread": {
+    "name": "st_beadspread",
+    "price": 430
+  },
+  "beans": {
+    "name": "st_beans",
+    "price": 895
+  },
+  "beer": {
+    "name": "st_beer",
+    "price": 1349
+  },
+  "blackbox_mlr": {
+    "name": "blackbox_mlr"
+  },
+  "bolt": {
+    "name": "st_bolty",
+    "price": 10
+  },
+  "bolt_bullet": {
+    "name": "st_bolt_bullet",
+    "price": 10
+  },
+  "bolts_pack": {
+    "name": "st_bolts_pack",
+    "price": 710
+  },
+  "boots": {
+    "name": "st_boots",
+    "price": 690
+  },
+  "bottle_metal": {
+    "name": "st_bottle_metal",
+    "price": 1264
+  },
+  "box_matches": {
+    "name": "st_box_matches",
+    "price": 662
+  },
+  "bread": {
+    "name": "st_bread",
+    "price": 600
+  },
+  "breadold": {
+    "name": "st_breadold",
+    "price": 500
+  },
+  "broken_detector": {
+    "name": "st_broken_detector",
+    "price": 420
+  },
+  "broken_pda": {
+    "name": "st_broken_pda"
+  },
+  "c-more": {
+    "name": "st_addon_scope_cmore",
+    "price": 3880
+  },
+  "caffeine": {
+    "name": "st_caffeine",
+    "price": 2550
+  },
+  "cards": {
+    "name": "st_cards",
+    "price": 210
+  },
+  "cash": {
+    "name": "st_cash_name"
+  },
+  "charcoal": {
+    "name": "st_charcoal",
+    "price": 1262
+  },
+  "chernobog_notes": {
+    "name": "chernobog_notes_name",
+    "price": 2000
+  },
+  "chili": {
+    "name": "st_chili",
+    "price": 757
+  },
+  "chimera_scan_device": {
+    "name": "chimera_scan_device_name"
+  },
+  "chocolate": {
+    "name": "st_chocolate",
+    "price": 1980
+  },
+  "chocolate_p": {
+    "name": "st_chocolate_p",
+    "price": 1000
+  },
+  "cigar": {
+    "name": "st_cuban_cigar",
+    "price": 1898
+  },
+  "cigar1": {
+    "name": "st_cigar1",
+    "price": 2506
+  },
+  "cigar2": {
+    "name": "st_cigar2",
+    "price": 3092
+  },
+  "cigar3": {
+    "name": "st_cigar3",
+    "price": 3581
+  },
+  "cigarettes": {
+    "name": "st_cigarettes",
+    "price": 1402
+  },
+  "cigarettes_lucky": {
+    "name": "st_cigarettes_lucky",
+    "price": 1663
+  },
+  "cigarettes_russian": {
+    "name": "st_cigarettes_russian",
+    "price": 1208
+  },
+  "cit_doctors_key": {
+    "name": "cit_doctors_key_name"
+  },
+  "cit_doctors_pda": {
+    "name": "cit_doctors_pda_name"
+  },
+  "cleaning_kit_p": {
+    "name": "st_cleaning_kit_p",
+    "price": 2654
+  },
+  "cleaning_kit_r5": {
+    "name": "st_cleaning_kit_r5",
+    "price": 3502
+  },
+  "cleaning_kit_r7": {
+    "name": "st_cleaning_kit_r7",
+    "price": 4104
+  },
+  "cleaning_kit_s": {
+    "name": "st_cleaning_kit_s",
+    "price": 2954
+  },
+  "cleaning_kit_u": {
+    "name": "st_cleaning_kit_u",
+    "price": 11139
+  },
+  "cocaine": {
+    "name": "st_cocaine",
+    "price": 4542
+  },
+  "compression_bag": {
+    "name": "st_compression_bag",
+    "price": 510
+  },
+  "conserva": {
+    "name": "st_conserva",
+    "price": 620
+  },
+  "contact_lost_pda": {
+    "name": "contact_lost_pda_name"
+  },
+  "cooking": {
+    "name": "st_cooking",
+    "price": 2310
+  },
+  "corn": {
+    "name": "st_corn",
+    "price": 650
+  },
+  "cs_exo_outfit": {
+    "name": "cs_exo_outfit_name",
+    "price": 150000
+  },
+  "cs_exolight_outfit": {
+    "name": "cs_exolight_outfit_name",
+    "price": 90625
+  },
+  "cs_heavy_outfit": {
+    "name": "csky_heavy_outfit_name",
+    "price": 56280
+  },
+  "cs_light_novice_outfit": {
+    "name": "csky_light_novice_outfit_name",
+    "price": 32340
+  },
+  "cs_light_outfit": {
+    "name": "csky_light_outfit_name",
+    "price": 40250
+  },
+  "cs_medium_outfit": {
+    "name": "csky_medium_outfit_name",
+    "price": 47120
+  },
+  "cs_nbc_outfit": {
+    "name": "cs_nbc_outfit_name",
+    "price": 63995
+  },
+  "cs_novice_outfit": {
+    "name": "csky_novice_outfit_name",
+    "price": 11930
+  },
+  "cs_scientific_outfit": {
+    "name": "cs_scientific_outfit_name",
+    "price": 71100
+  },
+  "cs_scientific_outfit_good": {
+    "name": "cs_scientific_outfit_good_name",
+    "price": 120400
+  },
+  "cs_stalker_outfit": {
+    "name": "cs_stalker_outfit_name",
+    "price": 39995
+  },
+  "cs_stalker_proto_exo_outfit": {
+    "name": "cs_stalker_proto_exo_outfit_name",
+    "price": 59995
+  },
+  "csky_patch": {
+    "name": "st_clearsky_fp",
+    "price": 650
+  },
+  "cutlery": {
+    "name": "st_cutlery",
+    "price": 370
+  },
+  "decoder": {
+    "name": "item_decoder_name",
+    "price": 50
+  },
+  "decryption_radio": {
+    "name": "decryption_radio_name"
+  },
+  "detector_advanced": {
+    "name": "st_detector2",
+    "price": 7480
+  },
+  "detector_anomaly": {
+    "name": "st_detector8",
+    "price": 2700
+  },
+  "detector_elite": {
+    "name": "st_detector3",
+    "price": 46880
+  },
+  "detector_geiger": {
+    "name": "st_geiger_dead",
+    "price": 2700
+  },
+  "detector_radio": {
+    "name": "st_detector9",
+    "price": 2700
+  },
+  "detector_scientific": {
+    "name": "st_detector4",
+    "price": 98680
+  },
+  "detector_simple": {
+    "name": "st_detector1",
+    "price": 3460
+  },
+  "device_flash_snag": {
+    "name": "st_device_flash_snag",
+    "price": 100
+  },
+  "device_flashlight": {
+    "name": "st_device_flashlight",
+    "price": 2440
+  },
+  "device_pda_1": {
+    "name": "st_pda_1_name",
+    "price": 4000
+  },
+  "device_pda_2": {
+    "name": "st_pda_2_name",
+    "price": 25000
+  },
+  "device_pda_3": {
+    "name": "st_pda_3_name",
+    "price": 50000
+  },
+  "device_pda_port_bandit_leader": {
+    "name": "st_device_pda_port_bandit_leader"
+  },
+  "device_pda_zat_b5_dealer": {
+    "name": "st_device_pda_zat_b5_dealer_name"
+  },
+  "device_torch_dummy": {
+    "name": "st_device_torch_name",
+    "price": 4390
+  },
+  "device_torch_nv_1": {
+    "name": "st_device_torch_nv_1_name",
+    "price": 19650
+  },
+  "device_torch_nv_2": {
+    "name": "st_device_torch_nv_2_name",
+    "price": 24553
+  },
+  "device_torch_nv_3": {
+    "name": "st_device_torch_nv_3_name",
+    "price": 31431
+  },
+  "device_weather_radar": {
+    "name": "st_weather_radar",
+    "price": 34000
+  },
+  "dolg_exo_outfit": {
+    "name": "dolg_exo_outfit_name",
+    "price": 131080
+  },
+  "dolg_exolight_outfit": {
+    "name": "dolg_exolight_outfit_name",
+    "price": 90580
+  },
+  "dolg_heavy_outfit": {
+    "name": "dolg_heavy_outfit_name",
+    "price": 79960
+  },
+  "dolg_heavy_proto_exo_outfit": {
+    "name": "dolg_heavy_proto_exo_outfit_name",
+    "price": 85280
+  },
+  "dolg_heavy_redline_outfit": {
+    "name": "dolg_heavy_redline_outfit_name",
+    "price": 85800
+  },
+  "dolg_nosorog_outfit": {
+    "name": "dolg_nosorog_outfit_name",
+    "price": 200000
+  },
+  "dolg_novice_outfit": {
+    "name": "dolg_novice_outfit_name",
+    "price": 14130
+  },
+  "dolg_outfit": {
+    "name": "dolg_outfit_name",
+    "price": 46280
+  },
+  "dolg_pantsir_outfit": {
+    "name": "dolg_pantsir_outfit_name",
+    "price": 67800
+  },
+  "dolg_patch": {
+    "name": "st_dolg_fp",
+    "price": 650
+  },
+  "dolg_proto_exo_outfit": {
+    "name": "dolg_proto_exo_outfit_name",
+    "price": 65280
+  },
+  "dolg_red_outfit": {
+    "name": "dolg_red_outfit_name",
+    "price": 55000
+  },
+  "dolg_scientific_outfit": {
+    "name": "dolg_scientific_outfit_name",
+    "price": 79400
+  },
+  "dolg_scientific_red_outfit": {
+    "name": "dolg_scientific_red_outfit_name",
+    "price": 85000
+  },
+  "dolg_scientific_wood_outfit": {
+    "name": "dolg_scientific_wood_outfit_name",
+    "price": 95000
+  },
+  "dolg_scout_outfit": {
+    "name": "dolg_scout_outfit_name",
+    "price": 42500
+  },
+  "dolg_specops_red_outfit": {
+    "name": "dolg_specops_red_outfit_name",
+    "price": 65700
+  },
+  "dolg_voin_outfit": {
+    "name": "dolg_voin_outfit_name",
+    "price": 51700
+  },
+  "drekavac_notes": {
+    "name": "drekavac_notes_name",
+    "price": 1000
+  },
+  "drink_crow": {
+    "name": "st_drink_crow",
+    "price": 5660
+  },
+  "drug_anabiotic": {
+    "name": "st_drug_anabiotic",
+    "price": 2650
+  },
+  "drug_antidot": {
+    "name": "st_drug_antidot",
+    "price": 3360
+  },
+  "drug_booster": {
+    "name": "st_drug_booster",
+    "price": 2382
+  },
+  "drug_coagulant": {
+    "name": "st_drug_coagulant",
+    "price": 3350
+  },
+  "drug_psy_blockade": {
+    "name": "st_drug_psy_blockade",
+    "price": 4450
+  },
+  "drug_radioprotector": {
+    "name": "st_drug_radioprotector",
+    "price": 1720
+  },
+  "drug_sleepingpills": {
+    "name": "st_sleepingpills",
+    "price": 2100
+  },
+  "drx_agr_u_documents": {
+    "name": "drx_agr_u_documents_name"
+  },
+  "drx_jup_u_documents": {
+    "name": "drx_jup_u_documents_name"
+  },
+  "drx_sl_quest_item_1": {
+    "name": "drx_sl_quest_item_1_name"
+  },
+  "drx_sl_quest_item_2": {
+    "name": "drx_sl_quest_item_2_name"
+  },
+  "drx_sl_quest_item_3": {
+    "name": "drx_sl_quest_item_3_name"
+  },
+  "drx_x16_documents": {
+    "name": "drx_x16_documents_name"
+  },
+  "drx_x18_documents": {
+    "name": "drx_x18_documents_name"
+  },
+  "drx_x19_documents": {
+    "name": "drx_x19_documents_name"
+  },
+  "drx_x8_documents": {
+    "name": "drx_x8_documents_name"
+  },
+  "duct_tape": {
+    "name": "st_duct_tape",
+    "price": 190
+  },
+  "e_syringe": {
+    "name": "st_e_syringe",
+    "price": 285
+  },
+  "ecolog_exo_outfit": {
+    "name": "ecolog_exo_outfit_name",
+    "price": 155000
+  },
+  "ecolog_guard_outfit": {
+    "name": "ecologist_guard_outfit_name",
+    "price": 52080
+  },
+  "ecolog_outfit_blue": {
+    "name": "st_ecologist_outfit_blue_name",
+    "price": 159780
+  },
+  "ecolog_outfit_green": {
+    "name": "st_ecologist_outfit_grn_name",
+    "price": 168480
+  },
+  "ecolog_outfit_orange": {
+    "name": "st_ecologist_outfit_orange_name",
+    "price": 143500
+  },
+  "ecolog_outfit_red": {
+    "name": "st_ecologist_outfit_red_name",
+    "price": 182720
+  },
+  "ecolog_outfit_white": {
+    "name": "st_ecologist_outfit_white_name",
+    "price": 149780
+  },
+  "ecolog_outfit_yello": {
+    "name": "st_ecologist_outfit_yello_name",
+    "price": 153000
+  },
+  "ecolog_patch": {
+    "name": "st_ecolog_fp",
+    "price": 650
+  },
+  "ecolog_proto_exo_outfit": {
+    "name": "ecolog_proto_exo_outfit_name",
+    "price": 114995
+  },
+  "energy_drink": {
+    "name": "st_energy_drink",
+    "price": 610
+  },
+  "eot": {
+    "name": "st_addon_scope_eotech",
+    "price": 5280
+  },
+  "equ_military_pack": {
+    "name": "st_equ_milpack_name",
+    "price": 15000
+  },
+  "equ_small_military_pack": {
+    "name": "st_equ_smilpack_name",
+    "price": 7500
+  },
+  "equ_small_pack": {
+    "name": "st_equ_smallpack_name",
+    "price": 4500
+  },
+  "equ_tourist_pack": {
+    "name": "st_equ_touristpack_name",
+    "price": 20000
+  },
+  "exo_dolg_outfit": {
+    "name": "exo_dolg_outfit_name",
+    "price": 83200
+  },
+  "exo_dolg_red_outfit": {
+    "name": "exo_dolg_red_outfit_name",
+    "price": 93400
+  },
+  "exo_dolg_urban_outfit": {
+    "name": "exo_dolg_urban_outfit_name",
+    "price": 103900
+  },
+  "exo_dolg_wood_outfit": {
+    "name": "exo_dolg_wood_outfit_name",
+    "price": 101300
+  },
+  "exo_merc_grass_outfit": {
+    "name": "exo_merc_grass_outfit_name",
+    "price": 90400
+  },
+  "exo_merc_urban_outfit": {
+    "name": "exo_merc_urban_outfit_name",
+    "price": 95200
+  },
+  "exo_merc_wood_outfit": {
+    "name": "exo_merc_wood_outfit_name",
+    "price": 103000
+  },
+  "exo_outfit": {
+    "name": "exo_outfit_name",
+    "price": 129680
+  },
+  "exo_repair_kit": {
+    "name": "st_exo_repair_kit",
+    "price": 25360
+  },
+  "exo_wood_outfit": {
+    "name": "exo_wood_outfit_name",
+    "price": 94300
+  },
+  "exolight_outfit": {
+    "name": "exolight_outfit_name",
+    "price": 85680
+  },
+  "explo_balon_gas": {
+    "name": "st_balon_gas",
+    "price": 8000
+  },
+  "explo_balon_gas_empty": {
+    "name": "st_balon_gas_empty",
+    "price": 316
+  },
+  "explo_jerrycan_fuel": {
+    "name": "st_jerrycan_fuel",
+    "price": 6500
+  },
+  "explo_jerrycan_fuel_empty": {
+    "name": "st_jerrycan_fuel_empty",
+    "price": 187
+  },
+  "explo_metalcan_powder": {
+    "name": "st_metalcan_powder",
+    "price": 672
+  },
+  "explosive_barrel": {
+    "price": 500
+  },
+  "explosive_barrel_low": {
+    "price": 500
+  },
+  "explosive_dinamit": {
+    "price": 50
+  },
+  "explosive_fuelcan": {
+    "price": 500
+  },
+  "explosive_gaz_balon": {
+    "price": 500
+  },
+  "explosive_grenade": {
+    "price": 500
+  },
+  "explosive_hide": {
+    "price": 500
+  },
+  "explosive_mobiltank": {
+    "name": "st_jerrycan_item",
+    "price": 500
+  },
+  "explosive_particle": {
+    "price": 500
+  },
+  "explosive_tank": {
+    "name": "st_jerrycan_item",
+    "price": 50
+  },
+  "fieldcooker": {
+    "name": "st_fieldcooker",
+    "price": 10155
+  },
+  "fieldcraft_plate_attch": {
+    "name": "fieldcraft_plate_attch_name",
+    "price": 1912
+  },
+  "flashlight_broken": {
+    "name": "st_flashlight_broken",
+    "price": 560
+  },
+  "flask": {
+    "name": "st_flask",
+    "price": 658
+  },
+  "freedom_exo_vineleaf_outfit": {
+    "name": "freedom_exo_vineleaf_outfit_name",
+    "price": 79700
+  },
+  "freedom_nosorog_outfit": {
+    "name": "freedom_nosorog_outfit_name",
+    "price": 185000
+  },
+  "freedom_patch": {
+    "name": "st_freedom_fp",
+    "price": 650
+  },
+  "ghillie_outfit": {
+    "name": "ghillie_outfit_name",
+    "price": 128710
+  },
+  "gl_fake_missile_ammo_m209": {
+    "name": "."
+  },
+  "gl_fake_missile_ammo_vog-25": {
+    "name": "."
+  },
+  "gl_fake_missile_ammo_vog-25p": {
+    "name": "."
+  },
+  "gl_test_shell": {
+    "name": ".",
+    "price": 150
+  },
+  "gl_test_shell_ammo_m209": {
+    "name": ".",
+    "price": 150
+  },
+  "gl_test_shell_ammo_vog-25": {
+    "name": ".",
+    "price": 150
+  },
+  "gl_test_shell_ammo_vog-25p": {
+    "name": ".",
+    "price": 150
+  },
+  "gloves": {
+    "name": "st_gloves",
+    "price": 690
+  },
+  "glucose": {
+    "name": "st_glucose",
+    "price": 2760
+  },
+  "glucose_s": {
+    "name": "st_glucose_s",
+    "price": 1440
+  },
+  "glue_a": {
+    "name": "st_glue_a",
+    "price": 2468
+  },
+  "glue_b": {
+    "name": "st_glue_b",
+    "price": 1308
+  },
+  "glue_e": {
+    "name": "st_glue_e",
+    "price": 3896
+  },
+  "good_psy_helmet": {
+    "name": "good_psy_helmet_name",
+    "price": 64380
+  },
+  "grease": {
+    "name": "st_grease",
+    "price": 1195
+  },
+  "greh_armored_camo_outfit": {
+    "name": "greh_armored_camo_outfit_name",
+    "price": 46380
+  },
+  "greh_armored_outfit": {
+    "name": "greh_armored_outfit_name",
+    "price": 41280
+  },
+  "greh_exo_outfit": {
+    "name": "greh_exo_outfit_name",
+    "price": 139510
+  },
+  "greh_patch": {
+    "name": "st_greh_fp",
+    "price": 650
+  },
+  "greh_ps5_outfit": {
+    "name": "greh_ps5_outfit_name",
+    "price": 47280
+  },
+  "greh_trenchcoat_outfit": {
+    "name": "greh_trenchcoat_outfit_name",
+    "price": 44670
+  },
+  "grenade_f1": {
+    "name": "st_grenade_f1",
+    "price": 1900
+  },
+  "grenade_gd-05": {
+    "name": "st_grenade_thermite",
+    "price": 1789
+  },
+  "grenade_rgd5": {
+    "name": "st_grenade_rgd5",
+    "price": 1550
+  },
+  "grenade_smoke": {
+    "name": "st_grenade_smoke",
+    "price": 590
+  },
+  "grooming": {
+    "name": "st_grooming",
+    "price": 160
+  },
+  "guitar_a": {
+    "name": "st_guitar_name",
+    "price": 3220
+  },
+  "gun_oil": {
+    "name": "st_gun_oil",
+    "price": 1830
+  },
+  "gun_oil_ru": {
+    "name": "st_gun_oil_ru",
+    "price": 1300
+  },
+  "gun_oil_ru_d": {
+    "name": "st_gun_oil_ru_d",
+    "price": 1675
+  },
+  "hand_rolling_tobacco": {
+    "name": "st_hand_rolling_tobacco",
+    "price": 2801
+  },
+  "hand_watch": {
+    "name": "st_hand_watch",
+    "price": 3546
+  },
+  "harmonica_a": {
+    "name": "st_harmonica_name",
+    "price": 655
+  },
+  "hb_isg_dushman_intel": {
+    "name": "st_hb_isg_dushman_intel_name"
+  },
+  "headlamp": {
+    "name": "st_headlamp",
+    "price": 660
+  },
+  "heavy_repair_kit": {
+    "name": "st_exolight_repair_kit",
+    "price": 19360
+  },
+  "heavy_sewing_thread": {
+    "name": "st_heavy_sewing_thread",
+    "price": 2100
+  },
+  "helicopter_missile": {
+    "name": "\"VOG-25\"",
+    "price": 200
+  },
+  "helm_ach7": {
+    "name": "helm_ach7",
+    "price": 13700
+  },
+  "helm_ach7ex": {
+    "name": "helm_ach7ex",
+    "price": 17500
+  },
+  "helm_bandana": {
+    "name": "st_helm_bandana",
+    "price": 230
+  },
+  "helm_battle": {
+    "name": "st_helm_battle",
+    "price": 27520
+  },
+  "helm_cloth_mask": {
+    "name": "st_helm_cloth_mask",
+    "price": 450
+  },
+  "helm_exo": {
+    "name": "st_helm_exo_name",
+    "price": 30520
+  },
+  "helm_hardhat": {
+    "name": "st_helm_hardhat",
+    "price": 10640
+  },
+  "helm_hardhat_snag": {
+    "name": "st_helm_hardhat",
+    "price": 15820
+  },
+  "helm_m40": {
+    "name": "st_helm_m40",
+    "price": 15920
+  },
+  "helm_m50": {
+    "name": "helm_m50",
+    "price": 20700
+  },
+  "helm_metro": {
+    "name": "st_helm_metro",
+    "price": 33440
+  },
+  "helm_ppm88": {
+    "name": "helm_ppm88",
+    "price": 18500
+  },
+  "helm_protective": {
+    "name": "st_helm_protective",
+    "price": 17720
+  },
+  "helm_ranger": {
+    "name": "helm_ranger",
+    "price": 24300
+  },
+  "helm_resp": {
+    "name": "st_helm_resp",
+    "price": 4220
+  },
+  "helm_respirator": {
+    "name": "st_helm_respirator",
+    "price": 6120
+  },
+  "helm_respirator_gp5": {
+    "name": "st_helm_respirator_gp5",
+    "price": 10120
+  },
+  "helm_respirator_old": {
+    "name": "st_helm_respirator",
+    "price": 7120
+  },
+  "helm_rp_bala": {
+    "name": "st_helm_rp_bala",
+    "price": 550
+  },
+  "helm_spartan": {
+    "name": "helm_spartan",
+    "price": 37000
+  },
+  "helm_tactic": {
+    "name": "st_helm_tactic",
+    "price": 22440
+  },
+  "helmet_repair_kit": {
+    "name": "st_helmet_repair_kit",
+    "price": 8820
+  },
+  "hide_bloodsucker": {
+    "name": "st_hide_bloodsucker_name",
+    "price": 2020
+  },
+  "hide_boar": {
+    "name": "st_hide_boar_name",
+    "price": 730
+  },
+  "hide_burer": {
+    "name": "st_hide_burer_name",
+    "price": 2540
+  },
+  "hide_chimera": {
+    "name": "st_hide_chimera_name",
+    "price": 3284
+  },
+  "hide_controller": {
+    "name": "st_hide_controller_name",
+    "price": 3040
+  },
+  "hide_flesh": {
+    "name": "st_hide_flesh_name",
+    "price": 640
+  },
+  "hide_lurker": {
+    "name": "st_hide_lurker_name",
+    "price": 730
+  },
+  "hide_pseudodog": {
+    "name": "st_hide_pseudodog_name",
+    "price": 940
+  },
+  "hide_pseudogiant": {
+    "name": "st_hide_pseudogiant_name",
+    "price": 4090
+  },
+  "hide_psy_dog": {
+    "name": "st_hide_psy_dog_name",
+    "price": 1570
+  },
+  "hide_psysucker": {
+    "name": "st_hide_psysucker_name",
+    "price": 2020
+  },
+  "hybrid_outfit": {
+    "name": "hybrid_outfit_name",
+    "price": 90000
+  },
+  "ied": {
+    "name": "st_ied",
+    "price": 3690
+  },
+  "ied_blow": {
+    "name": "st_ied",
+    "price": 3690
+  },
+  "ied_new": {
+    "name": "st_ied",
+    "price": 3690
+  },
+  "ied_new_blow": {
+    "name": "st_ied",
+    "price": 3690
+  },
+  "ied_rpg": {
+    "name": "st_ied_rpg",
+    "price": 2990
+  },
+  "ied_rpg_new": {
+    "name": "st_ied_rpg",
+    "price": 2990
+  },
+  "isg_camo_outfit": {
+    "name": "isg_merc_outfit_name",
+    "price": 48280
+  },
+  "isg_exo_outfit": {
+    "name": "isg_exo_outfit_name",
+    "price": 139510
+  },
+  "isg_exolight_outfit": {
+    "name": "isg_exolight_outfit_name",
+    "price": 88880
+  },
+  "isg_lcs_camo_outfit": {
+    "name": "isg_lcs_camo_outfit_name",
+    "price": 41500
+  },
+  "isg_lcs_outfit": {
+    "name": "isg_lcs_outfit_name",
+    "price": 39280
+  },
+  "isg_lcs_urban_outfit": {
+    "name": "isg_lcs_urban_outfit_name",
+    "price": 45280
+  },
+  "isg_nosorog_outfit": {
+    "name": "isg_nosorog_outfit_name",
+    "price": 190000
+  },
+  "isg_outfit": {
+    "name": "isg_outfit_name",
+    "price": 44280
+  },
+  "isg_patch": {
+    "name": "st_isg_fp",
+    "price": 650
+  },
+  "isg_proto_exo_outfit": {
+    "name": "isg_proto_exo_outfit_name",
+    "price": 54120
+  },
+  "isg_scientific_outfit": {
+    "name": "isg_scientific_outfit_name",
+    "price": 73200
+  },
+  "item_pda_map_mlr": {
+    "name": "item_pda_map_mlr_name",
+    "price": 150
+  },
+  "itm_actor_backpack": {
+    "name": "st_itm_actor_backpack_name",
+    "price": 650
+  },
+  "itm_actor_backpack_mlr": {
+    "name": "st_itm_actor_backpack_name",
+    "price": 900
+  },
+  "itm_advancedkit": {
+    "name": "st_itm_advancedkit_name",
+    "price": 10000
+  },
+  "itm_ammokit": {
+    "name": "st_itm_ammokit",
+    "price": 8800
+  },
+  "itm_backpack": {
+    "name": "st_itm_backpack_name",
+    "price": 2000
+  },
+  "itm_basickit": {
+    "name": "st_itm_basickit_name",
+    "price": 7000
+  },
+  "itm_deployable_mgun": {
+    "name": "st_itm_deployable_mgun_name",
+    "price": 23700
+  },
+  "itm_drugkit": {
+    "name": "st_itm_drugkit",
+    "price": 6600
+  },
+  "itm_expertkit": {
+    "name": "st_itm_expertkit_name",
+    "price": 14000
+  },
+  "itm_guide_usb_1": {
+    "name": "st_memory_stick_name",
+    "price": 1
+  },
+  "itm_guide_usb_2": {
+    "name": "st_memory_stick_name",
+    "price": 1
+  },
+  "itm_mapkit_1": {
+    "name": "st_itm_mapkit_1",
+    "price": 3000
+  },
+  "itm_mapkit_2": {
+    "name": "st_itm_mapkit_2",
+    "price": 3000
+  },
+  "itm_mapkit_3": {
+    "name": "st_itm_mapkit_3",
+    "price": 3000
+  },
+  "itm_mapkit_4": {
+    "name": "st_itm_mapkit_4",
+    "price": 3000
+  },
+  "itm_mapkit_5": {
+    "name": "st_itm_mapkit_5",
+    "price": 3000
+  },
+  "itm_mapkit_6": {
+    "name": "st_itm_mapkit_6",
+    "price": 3000
+  },
+  "itm_mapkit_7": {
+    "name": "st_itm_mapkit_7",
+    "price": 3000
+  },
+  "itm_mapkit_8": {
+    "name": "st_itm_mapkit_8",
+    "price": 3000
+  },
+  "itm_mapkit_9": {
+    "name": "st_itm_mapkit_9",
+    "price": 3000
+  },
+  "itm_pda_common": {
+    "name": "st_pda_name"
+  },
+  "itm_pda_personal": {
+    "name": "st_perspda"
+  },
+  "itm_pda_rare": {
+    "name": "st_pda_name"
+  },
+  "itm_pda_uncommon": {
+    "name": "st_pda_name"
+  },
+  "itm_sleepbag": {
+    "name": "st_itm_sleepbag_name",
+    "price": 2580
+  },
+  "itm_tent": {
+    "name": "st_itm_tent_name",
+    "price": 4580
+  },
+  "itm_tent_bag": {
+    "name": "st_itm_tent_bag",
+    "price": 510
+  },
+  "jar": {
+    "name": "st_jar",
+    "price": 290
+  },
+  "jewelry_box": {
+    "name": "st_jewelry_box",
+    "price": 7490
+  },
+  "jgut": {
+    "name": "st_jgut_zhgut",
+    "price": 1750
+  },
+  "joint": {
+    "name": "st_joint",
+    "price": 380
+  },
+  "journal": {
+    "name": "st_journal",
+    "price": 160
+  },
+  "jup_a9_conservation_info": {
+    "name": "jup_a9_conservation_info"
+  },
+  "jup_a9_delivery_info": {
+    "name": "jup_a9_delivery_info"
+  },
+  "jup_a9_evacuation_info": {
+    "name": "jup_a9_evacuation_info"
+  },
+  "jup_a9_losses_info": {
+    "name": "jup_a9_losses_info"
+  },
+  "jup_a9_meeting_info": {
+    "name": "jup_a9_meeting_info"
+  },
+  "jup_a9_power_info": {
+    "name": "jup_a9_power_info"
+  },
+  "jup_a9_way_info": {
+    "name": "jup_a9_way_info"
+  },
+  "jup_b10_notes_01": {
+    "name": "st_jup_b10_notes_01_name"
+  },
+  "jup_b10_notes_02": {
+    "name": "st_jup_b10_notes_02_name"
+  },
+  "jup_b10_notes_03": {
+    "name": "st_jup_b10_notes_03_name"
+  },
+  "jup_b10_ufo_memory": {
+    "name": "st_jup_b10_ufo_memory_name"
+  },
+  "jup_b10_ufo_memory_2": {
+    "name": "st_jup_b10_ufo_memory_2_name"
+  },
+  "jup_b1_half_artifact": {
+    "name": "jup_b1_half_artifact",
+    "price": 24200
+  },
+  "jup_b1_half_artifact_af_aac": {
+    "name": "st_jup_b1_half_artifact_af_aac_name"
+  },
+  "jup_b1_half_artifact_af_aam": {
+    "name": "st_jup_b1_half_artifact_af_aam_name"
+  },
+  "jup_b1_half_artifact_af_iam": {
+    "name": "st_jup_b1_half_artifact_af_iam_name"
+  },
+  "jup_b1_half_artifact_lead_box": {
+    "name": "st_jup_b1_half_artifact_lead_box_name"
+  },
+  "jup_b200_tech_materials_acetone": {
+    "name": "jup_b200_tech_materials_acetone"
+  },
+  "jup_b200_tech_materials_capacitor": {
+    "name": "jup_b200_tech_materials_capacitor"
+  },
+  "jup_b200_tech_materials_textolite": {
+    "name": "jup_b200_tech_materials_textolite"
+  },
+  "jup_b200_tech_materials_transistor": {
+    "name": "jup_b200_tech_materials_transistor"
+  },
+  "jup_b200_tech_materials_wire": {
+    "name": "jup_b200_tech_materials_wire"
+  },
+  "jup_b202_bandit_pda": {
+    "name": "st_jup_b202_bandit_pda",
+    "price": 100
+  },
+  "jup_b205_sokolov_note": {
+    "name": "st_jup_b205_sokolov_note_name"
+  },
+  "jup_b206_plant": {
+    "name": "st_jup_b206_plant_name"
+  },
+  "jup_b207_merc_pda_with_contract": {
+    "name": "st_jup_b207_merc_pda_with_contract_name"
+  },
+  "jup_b209_monster_scanner": {
+    "name": "jup_b209_monster_scanner"
+  },
+  "jup_b32_scanner_device": {
+    "name": "st_jup_b32_scanner_device_name"
+  },
+  "jup_b46_duty_founder_pda": {
+    "name": "st_jup_b46_duty_founder_pda_name",
+    "price": 20
+  },
+  "jup_b47_jupiter_products_info": {
+    "name": "jup_b47_jupiter_products_info"
+  },
+  "jup_b47_merc_pda": {
+    "name": "jup_b47_merc_pda"
+  },
+  "jup_b9_blackbox": {
+    "name": "jup_b9_blackbox"
+  },
+  "jupiter_documents": {
+    "name": "jupiter_documents_name"
+  },
+  "kerosene": {
+    "name": "st_kerosene",
+    "price": 3500
+  },
+  "killer_patch": {
+    "name": "st_merc_fp",
+    "price": 650
+  },
+  "kit_hunt": {
+    "name": "st_kit_hunt",
+    "price": 8043
+  },
+  "kobra": {
+    "name": "st_addon_scope_kobra",
+    "price": 3780
+  },
+  "kolbasa": {
+    "name": "st_kolbasa",
+    "price": 874
+  },
+  "lead_box": {
+    "name": "st_lead_box_name",
+    "price": 3630
+  },
+  "lead_box_closed": {
+    "name": "st_lead_box_closed_name"
+  },
+  "lead_box_closed_dummy": {
+    "name": "st_lead_box_closed_name"
+  },
+  "lead_box_dummy": {
+    "name": "st_lead_box_name",
+    "price": 3630
+  },
+  "lead_box_half": {
+    "name": "st_lead_box_half_name"
+  },
+  "lead_box_half_dummy": {
+    "name": "st_lead_box_half_name"
+  },
+  "leatherman_tool": {
+    "name": "st_leatherman_tool",
+    "price": 4000
+  },
+  "letter_ecologist_report_1_of_3": {
+    "name": "st_ecologist_report_1_of_3_name",
+    "price": 785
+  },
+  "letter_ecologist_report_2_of_3": {
+    "name": "st_ecologist_report_2_of_3_name",
+    "price": 785
+  },
+  "letter_ecologist_report_3_of_3": {
+    "name": "st_ecologist_report_3_of_3_name",
+    "price": 785
+  },
+  "letter_freedom_manual_1_of_2": {
+    "name": "st_freedom_manual_1_of_2_name",
+    "price": 165
+  },
+  "letter_freedom_manual_2_of_2": {
+    "name": "st_freedom_manual_1_of_2_name",
+    "price": 165
+  },
+  "letter_letter_to_outside": {
+    "name": "st_letter_to_outside_name",
+    "price": 145
+  },
+  "letter_memoirs_1_of_2": {
+    "name": "st_memoirs_1_of_2_name",
+    "price": 140
+  },
+  "letter_memoirs_2_of_2": {
+    "name": "st_memoirs_2_of_2_name",
+    "price": 140
+  },
+  "letter_mercenary": {
+    "name": "st_letter_mercenary_name",
+    "price": 165
+  },
+  "letter_military_log": {
+    "name": "st_letter_military_log_name",
+    "price": 780
+  },
+  "letter_military_stalker": {
+    "name": "st_letter_military_stalker_name",
+    "price": 195
+  },
+  "letter_monolith_prayer_1_of_3": {
+    "name": "st_monolith_prayer_1_of_3_name",
+    "price": 345
+  },
+  "letter_monolith_prayer_2_of_3": {
+    "name": "st_monolith_prayer_2_of_3_name",
+    "price": 345
+  },
+  "letter_monolith_prayer_3_of_3": {
+    "name": "st_monolith_prayer_3_of_3_name",
+    "price": 345
+  },
+  "letter_monolithian_thoughts": {
+    "name": "st_monolithian_thoughts_name",
+    "price": 255
+  },
+  "letter_stalker_letter_1_of_2": {
+    "name": "st_stalker_letter_1_of_2_name",
+    "price": 135
+  },
+  "letter_stalker_letter_2_of_2": {
+    "name": "st_stalker_letter_2_of_2_name",
+    "price": 135
+  },
+  "letter_stalker_letter_3": {
+    "name": "st_letter_stalker_letter_3_name",
+    "price": 161
+  },
+  "light_dolg_outfit": {
+    "name": "light_dolg_outfit_name",
+    "price": 56280
+  },
+  "light_freedom_outfit": {
+    "name": "light_freedom_outfit_name",
+    "price": 53280
+  },
+  "light_isg_outfit": {
+    "name": "light_isg_outfit_name",
+    "price": 57280
+  },
+  "light_loner_outfit": {
+    "name": "light_loner_outfit_name",
+    "price": 51280
+  },
+  "light_merc_outfit": {
+    "name": "light_merc_outfit_name",
+    "price": 53280
+  },
+  "light_monolit_outfit": {
+    "name": "light_monolit_outfit_name",
+    "price": 54280
+  },
+  "light_repair_kit": {
+    "name": "st_light_repair_kit",
+    "price": 13360
+  },
+  "light_voen_outfit": {
+    "name": "light_voen_outfit_name",
+    "price": 55280
+  },
+  "lx8_history_2_documents": {
+    "name": "lx8_history_2_documents_name"
+  },
+  "lx8_history_3_documents": {
+    "name": "lx8_history_3_documents_name"
+  },
+  "lx8_history_documents": {
+    "name": "lx8_history_documents_name"
+  },
+  "lx8_service_instruction": {
+    "name": "st_lx8_service_instruction_name"
+  },
+  "main_story_1_quest_case": {
+    "name": "item_quest_case_02_name",
+    "price": 1000
+  },
+  "main_story_2_lab_x18_documents": {
+    "name": "item_doc_x18_name"
+  },
+  "main_story_3_lab_x16_documents": {
+    "name": "item_doc_x16_name"
+  },
+  "main_story_4_lab_x10_documents": {
+    "name": "item_doc_x10_name"
+  },
+  "main_story_5_lab_x8_documents": {
+    "name": "item_doc_x8_name"
+  },
+  "main_story_6_jup_ug_documents": {
+    "name": "item_doc_jup_ug_name"
+  },
+  "main_story_7_mon_con_documents": {
+    "name": "item_doc_mon_con_name"
+  },
+  "mar_base_owl_stalker_trader_task_1_pda": {
+    "name": "st_pda_name"
+  },
+  "marijuana": {
+    "name": "st_marijuana",
+    "price": 1040
+  },
+  "marker": {
+    "name": "st_af_electra_flash_name",
+    "price": 48900
+  },
+  "matches": {
+    "name": "st_matches",
+    "price": 320
+  },
+  "meat_bloodsucker": {
+    "name": "st_meat_bloodsucker",
+    "price": 1422
+  },
+  "meat_bloodsucker_a": {
+    "name": "st_meat_bloodsucker",
+    "price": 3722
+  },
+  "meat_bloodsucker_b": {
+    "name": "st_meat_bloodsucker",
+    "price": 1922
+  },
+  "meat_boar": {
+    "name": "st_meat_boar",
+    "price": 1034
+  },
+  "meat_boar_a": {
+    "name": "st_meat_boar",
+    "price": 3534
+  },
+  "meat_boar_b": {
+    "name": "st_meat_boar",
+    "price": 1734
+  },
+  "meat_chimera": {
+    "name": "st_meat_chimera",
+    "price": 2203
+  },
+  "meat_chimera_a": {
+    "name": "st_meat_chimera",
+    "price": 5303
+  },
+  "meat_chimera_b": {
+    "name": "st_meat_chimera",
+    "price": 3103
+  },
+  "meat_dog": {
+    "name": "st_meat_dog",
+    "price": 644
+  },
+  "meat_dog_a": {
+    "name": "st_meat_dog",
+    "price": 1244
+  },
+  "meat_dog_b": {
+    "name": "st_meat_dog",
+    "price": 844
+  },
+  "meat_flesh": {
+    "name": "st_meat_flesh",
+    "price": 950
+  },
+  "meat_flesh_a": {
+    "name": "st_meat_flesh",
+    "price": 3150
+  },
+  "meat_flesh_b": {
+    "name": "st_meat_flesh",
+    "price": 1550
+  },
+  "meat_lurker": {
+    "name": "st_meat_lurker",
+    "price": 2203
+  },
+  "meat_lurker_a": {
+    "name": "st_meat_lurker",
+    "price": 4103
+  },
+  "meat_lurker_b": {
+    "name": "st_meat_lurker",
+    "price": 2803
+  },
+  "meat_pseudodog": {
+    "name": "st_meat_pseudodog",
+    "price": 802
+  },
+  "meat_pseudodog_a": {
+    "name": "st_meat_pseudodog",
+    "price": 2502
+  },
+  "meat_pseudodog_b": {
+    "name": "st_meat_pseudodog",
+    "price": 1202
+  },
+  "meat_psysucker": {
+    "name": "st_meat_psysucker",
+    "price": 1700
+  },
+  "meat_psysucker_a": {
+    "name": "st_meat_psysucker",
+    "price": 3600
+  },
+  "meat_psysucker_b": {
+    "name": "st_meat_psysucker",
+    "price": 2400
+  },
+  "meat_snork": {
+    "name": "st_meat_snork",
+    "price": 866
+  },
+  "meat_snork_a": {
+    "name": "st_meat_snork",
+    "price": 2966
+  },
+  "meat_snork_b": {
+    "name": "st_meat_snork",
+    "price": 1366
+  },
+  "meat_tushkano": {
+    "name": "st_meat_tushkano",
+    "price": 322
+  },
+  "meat_tushkano_a": {
+    "name": "st_meat_tushkano",
+    "price": 822
+  },
+  "meat_tushkano_b": {
+    "name": "st_meat_tushkano",
+    "price": 622
+  },
+  "medium_repair_kit": {
+    "name": "st_medium_repair_kit",
+    "price": 17360
+  },
+  "medkit": {
+    "name": "st_medkit",
+    "price": 2500
+  },
+  "medkit_ai1": {
+    "name": "st_medkit_ai1",
+    "price": 12624
+  },
+  "medkit_ai2": {
+    "name": "st_medkit_ai2",
+    "price": 20342
+  },
+  "medkit_ai3": {
+    "name": "st_medkit_ai3",
+    "price": 27782
+  },
+  "medkit_army": {
+    "name": "st_medkit_army",
+    "price": 4500
+  },
+  "medkit_scientic": {
+    "name": "st_medkit_science",
+    "price": 6500
+  },
+  "medkit_script": {
+    "name": "st_medkit",
+    "price": 300
+  },
+  "meinkampf": {
+    "name": "st_meinkampf",
+    "price": 360
+  },
+  "merc_ace_outfit": {
+    "name": "ace_outfit_name",
+    "price": 135000
+  },
+  "merc_combat_scientific_outfit": {
+    "name": "merc_combat_scientific_outfit_name",
+    "price": 95000
+  },
+  "merc_coyote_outfit": {
+    "name": "merc_coyote_outfit_name",
+    "price": 51500
+  },
+  "merc_exo_outfit": {
+    "name": "merc_exo_outfit_name",
+    "price": 142610
+  },
+  "merc_exolight_outfit": {
+    "name": "merc_exolight_outfit_name",
+    "price": 93890
+  },
+  "merc_fighter_outfit": {
+    "name": "merc_fighter_outfit_name",
+    "price": 34280
+  },
+  "merc_jackal_outfit": {
+    "name": "merc_jackal_outfit_name",
+    "price": 43500
+  },
+  "merc_nighthunter_outfit": {
+    "name": "merc_nighthunter_outfit_name",
+    "price": 57500
+  },
+  "merc_nosorog_outfit": {
+    "name": "merc_nosorog_outfit_name",
+    "price": 195000
+  },
+  "merc_outfit": {
+    "name": "merc_outfit_name",
+    "price": 38280
+  },
+  "merc_scientific_armored_outfit": {
+    "name": "merc_scientific_armored_outfit_name",
+    "price": 89000
+  },
+  "merc_scientific_outfit": {
+    "name": "merc_scientific_outfit_name",
+    "price": 76600
+  },
+  "merc_scout_outfit": {
+    "name": "merc_scout_outfit_name",
+    "price": 28500
+  },
+  "merc_sun_outfit": {
+    "name": "merc_sun_outfit_name",
+    "price": 45280
+  },
+  "merc_sunset_outfit": {
+    "name": "merc_sunset_outfit_name",
+    "price": 47000
+  },
+  "merc_wolven_outfit": {
+    "name": "merc_wolven_outfit_name",
+    "price": 52700
+  },
+  "military_bandit_outfit": {
+    "name": "military_bandit_outfit_name",
+    "price": 72700
+  },
+  "military_exo_outfit": {
+    "name": "military_exo_outfit_name",
+    "price": 139510
+  },
+  "military_exolight_outfit": {
+    "name": "military_exolight_outfit_name",
+    "price": 83480
+  },
+  "military_freedom_outfit": {
+    "name": "military_freedom_outfit_name",
+    "price": 73700
+  },
+  "military_merc_outfit": {
+    "name": "military_merc_outfit_name",
+    "price": 78700
+  },
+  "military_monolit_outfit": {
+    "name": "military_monolit_outfit_name",
+    "price": 71700
+  },
+  "military_outfit": {
+    "name": "military_outfit_name",
+    "price": 70700
+  },
+  "military_proto_exo_outfit": {
+    "name": "military_proto_exo_outfit_name",
+    "price": 74700
+  },
+  "military_sky_outfit": {
+    "name": "military_sky_outfit_name",
+    "price": 74700
+  },
+  "mine": {
+    "name": "st_mine_name",
+    "price": 1790
+  },
+  "mine_actor": {
+    "price": 1500
+  },
+  "mine_blow": {
+    "price": 1500
+  },
+  "mine_new": {
+    "name": "st_mine_name",
+    "price": 1790
+  },
+  "mine_new_blow": {
+    "name": "nil",
+    "price": 1500
+  },
+  "mine_proximity": {
+    "price": 1500
+  },
+  "mineral_water": {
+    "name": "st_mineral_water",
+    "price": 1719
+  },
+  "mint": {
+    "name": "st_mint",
+    "price": 250
+  },
+  "mirror": {
+    "name": "st_mirror",
+    "price": 280
+  },
+  "mlr_strelok_item_01": {
+    "name": "mlr_strelok_item_01"
+  },
+  "mlr_x8_copybook": {
+    "name": "mlr_x8_copybook"
+  },
+  "mlr_x8_copybook_2": {
+    "name": "mlr_x8_copybook_2"
+  },
+  "mlr_x8_documents": {
+    "name": "mlr_x8_documents"
+  },
+  "money_10": {
+    "name": "st_roubles_10_name",
+    "price": 10
+  },
+  "money_100": {
+    "name": "st_roubles_100_name",
+    "price": 100
+  },
+  "money_1000": {
+    "name": "st_roubles_1000_name",
+    "price": 1000
+  },
+  "money_1000_5000": {
+    "name": "st_roubles",
+    "price": 500
+  },
+  "money_100_200": {
+    "name": "st_roubles",
+    "price": 100
+  },
+  "money_10_50": {
+    "name": "st_roubles",
+    "price": 10
+  },
+  "money_200_300": {
+    "name": "st_roubles",
+    "price": 100
+  },
+  "money_300_400": {
+    "name": "st_roubles",
+    "price": 100
+  },
+  "money_400_500": {
+    "name": "st_roubles",
+    "price": 100
+  },
+  "money_50": {
+    "name": "st_roubles_50_name",
+    "price": 50
+  },
+  "money_500": {
+    "name": "st_roubles_500_name",
+    "price": 500
+  },
+  "money_5000": {
+    "name": "st_roubles_5000_name",
+    "price": 5000
+  },
+  "money_5000_end": {
+    "name": "st_roubles",
+    "price": 5000
+  },
+  "money_500_600": {
+    "name": "st_roubles",
+    "price": 500
+  },
+  "money_50_100": {
+    "name": "st_roubles",
+    "price": 50
+  },
+  "money_600_700": {
+    "name": "st_roubles",
+    "price": 500
+  },
+  "money_700_800": {
+    "name": "st_roubles",
+    "price": 500
+  },
+  "money_800_900": {
+    "name": "st_roubles",
+    "price": 500
+  },
+  "money_900_1000": {
+    "name": "st_roubles",
+    "price": 500
+  },
+  "monolith_exo_outfit": {
+    "name": "monolith_exo_outfit_name",
+    "price": 154280
+  },
+  "monolith_exolight_outfit": {
+    "name": "monolith_exolight_outfit_name",
+    "price": 92580
+  },
+  "monolith_nbc_outfit": {
+    "name": "monolith_nbc_outfit_name",
+    "price": 68120
+  },
+  "monolith_nosorog_outfit": {
+    "name": "monolith_nosorog_outfit_name",
+    "price": 190000
+  },
+  "monolith_outfit": {
+    "name": "monolith_outfit_name",
+    "price": 45120
+  },
+  "monolith_patch": {
+    "name": "st_monolith_fp",
+    "price": 650
+  },
+  "monolith_proto_exo_outfit": {
+    "name": "monolith_proto_exo_outfit_name",
+    "price": 54120
+  },
+  "monolith_scientific_light_outfit": {
+    "name": "monolith_scientific_light_outfit_name",
+    "price": 85000
+  },
+  "monolith_scientific_outfit": {
+    "name": "monolith_scientific_outfit_name",
+    "price": 73400
+  },
+  "monolith_shard": {
+    "name": "item_monolith_shard_name"
+  },
+  "monolith_trenchcoat_outfit": {
+    "name": "monolith_trenchcoat_outfit_name",
+    "price": 44670
+  },
+  "morphine": {
+    "name": "st_morphine",
+    "price": 1640
+  },
+  "mre": {
+    "name": "st_mre",
+    "price": 3200
+  },
+  "mutant_part_boar_chop": {
+    "name": "mutant_boar_chop",
+    "price": 669
+  },
+  "mutant_part_boar_leg": {
+    "name": "mutant_boar_leg",
+    "price": 670
+  },
+  "mutant_part_brain_burer": {
+    "name": "mutant_brain_burer",
+    "price": 1750
+  },
+  "mutant_part_burer_hand": {
+    "name": "mutant_burer_hand",
+    "price": 2940
+  },
+  "mutant_part_cat_claw": {
+    "name": "mutant_cat_claw",
+    "price": 325
+  },
+  "mutant_part_cat_tail": {
+    "name": "mutant_cat_tail",
+    "price": 690
+  },
+  "mutant_part_cat_thyroid": {
+    "name": "mutant_cat_thyroid",
+    "price": 415
+  },
+  "mutant_part_chimera_claw": {
+    "name": "mutant_chimera_claw",
+    "price": 790
+  },
+  "mutant_part_chimera_kogot": {
+    "name": "mutant_chimera_cogot",
+    "price": 3740
+  },
+  "mutant_part_chimera_meat": {
+    "name": "mutant_chimera_meat",
+    "price": 1408
+  },
+  "mutant_part_controller_glass": {
+    "name": "mutant_part_controller_brain_tissue",
+    "price": 4790
+  },
+  "mutant_part_controller_hand": {
+    "name": "mutant_controller_hand",
+    "price": 4180
+  },
+  "mutant_part_crow_beak": {
+    "name": "st_mutant_part_crow_beak",
+    "price": 1630
+  },
+  "mutant_part_dog_heart": {
+    "name": "mutant_dog_heart",
+    "price": 361
+  },
+  "mutant_part_dog_liver": {
+    "name": "mutant_dog_liver",
+    "price": 375
+  },
+  "mutant_part_dog_meat": {
+    "name": "mutant_dog_meat",
+    "price": 209
+  },
+  "mutant_part_dog_tail": {
+    "name": "mutant_dog_tail",
+    "price": 620
+  },
+  "mutant_part_fang_psevdodog": {
+    "name": "mutant_fang_psevdodog",
+    "price": 250
+  },
+  "mutant_part_flesh_eye": {
+    "name": "mutant_flesh_eye",
+    "price": 640
+  },
+  "mutant_part_flesh_meat": {
+    "name": "mutant_flesh_meat",
+    "price": 504
+  },
+  "mutant_part_fracture_hand": {
+    "name": "mutant_fracture_hand",
+    "price": 560
+  },
+  "mutant_part_general_meat": {
+    "name": "default",
+    "price": 1
+  },
+  "mutant_part_heart_bloodsucker": {
+    "name": "mutant_heart_bloodsucker",
+    "price": 620
+  },
+  "mutant_part_heart_chimera": {
+    "name": "mutant_heart_chimera",
+    "price": 1400
+  },
+  "mutant_part_krovosos_jaw": {
+    "name": "mutant_krovosos_jaw",
+    "price": 1380
+  },
+  "mutant_part_krovosos_meat": {
+    "name": "mutant_krovosos_meat",
+    "price": 917
+  },
+  "mutant_part_lurker_eye": {
+    "name": "mutant_lurker_eye",
+    "price": 640
+  },
+  "mutant_part_lurker_meat": {
+    "name": "mutant_lurker_meat",
+    "price": 1408
+  },
+  "mutant_part_lurker_tail": {
+    "name": "mutant_lurker_tail",
+    "price": 640
+  },
+  "mutant_part_pseudogigant_eye": {
+    "name": "mutant_pseudogigant_eye",
+    "price": 5620
+  },
+  "mutant_part_pseudogigant_hand": {
+    "name": "mutant_pseudogigant_hand",
+    "price": 5340
+  },
+  "mutant_part_psevdodog_meat": {
+    "name": "mutant_psevdodog_meat",
+    "price": 529
+  },
+  "mutant_part_psevdodog_tail": {
+    "name": "mutant_psevdodog_tail",
+    "price": 690
+  },
+  "mutant_part_psysucker_hand": {
+    "name": "mutant_psysucker_hand",
+    "price": 640
+  },
+  "mutant_part_psysucker_meat": {
+    "name": "mutant_psysucker_meat",
+    "price": 1100
+  },
+  "mutant_part_snork_hand": {
+    "name": "mutant_snork_hand",
+    "price": 452
+  },
+  "mutant_part_snork_leg": {
+    "name": "mutant_snork_leg",
+    "price": 790
+  },
+  "mutant_part_snork_mask": {
+    "name": "mutant_snork_mask",
+    "price": 1060
+  },
+  "mutant_part_tushkano_head": {
+    "name": "mutant_tushkano_head",
+    "price": 510
+  },
+  "mutant_part_tushkano_meat": {
+    "name": "mutant_tushkano_meat",
+    "price": 166
+  },
+  "mutant_part_tusk_boar": {
+    "name": "mutant_tusk_boar",
+    "price": 375
+  },
+  "mutant_part_zombi_hand": {
+    "name": "mutant_zombi_hand",
+    "price": 620
+  },
+  "nbc_dolg_outfit": {
+    "name": "nbc_dolg_outfit_name",
+    "price": 69280
+  },
+  "nbc_freedom_outfit": {
+    "name": "nbc_freedom_outfit_name",
+    "price": 68700
+  },
+  "nbc_merc_outfit": {
+    "name": "nbc_merc_outfit_name",
+    "price": 68280
+  },
+  "nbc_outfit": {
+    "name": "nbc_outfit_name",
+    "price": 63280
+  },
+  "nomad_outfit": {
+    "name": "nomad_outfit_name",
+    "price": 67000
+  },
+  "novice_outfit": {
+    "name": "novice_outfit_name",
+    "price": 9930
+  },
+  "novice_outfit_camo": {
+    "name": "novice_outfit_camo_name",
+    "price": 11951
+  },
+  "novice_outfit_tourist": {
+    "name": "novice_outfit_tourist_name",
+    "price": 22930
+  },
+  "nuts": {
+    "name": "st_nuts",
+    "price": 1283
+  },
+  "picture_woman": {
+    "name": "st_picture_woman",
+    "price": 90
+  },
+  "porn": {
+    "name": "st_porn",
+    "price": 330
+  },
+  "porn2": {
+    "name": "st_porn2",
+    "price": 420
+  },
+  "powder_poltergeist": {
+    "name": "st_powder_poltergeist",
+    "price": 2760
+  },
+  "pri_a15_documents": {
+    "name": "st_vodka",
+    "price": 100
+  },
+  "pri_a15_wpn_ak74": {
+    "name": "st_wpn_ak74",
+    "price": 4000
+  },
+  "pri_a15_wpn_ak74u": {
+    "name": "st_wpn_ak74u",
+    "price": 2100
+  },
+  "pri_a15_wpn_svu": {
+    "name": "st_wpn_svu",
+    "price": 17500
+  },
+  "pri_a15_wpn_wincheaster1300": {
+    "name": "st_wpn_wincheaster1300",
+    "price": 1250
+  },
+  "pri_a17_gauss_rifle": {
+    "name": "st_wpn_umirotvoritel",
+    "price": 85860
+  },
+  "pri_a19_american_experiment_info": {
+    "name": "st_pri_a19_american_experiment_info_name"
+  },
+  "pri_a19_lab_x10_info": {
+    "name": "st_pri_a19_lab_x10_info_name"
+  },
+  "pri_a19_lab_x16_info": {
+    "name": "st_pri_a19_lab_x16_info_name"
+  },
+  "pri_a19_lab_x18_info": {
+    "name": "st_pri_a19_lab_x18_info_name"
+  },
+  "pri_a19_lab_x7_info": {
+    "name": "st_pri_a19_lab_x7_info_name"
+  },
+  "pri_a25_antenna_grenade": {
+    "price": 500
+  },
+  "pri_a25_enter_door_explosive_grenade": {
+    "price": 500
+  },
+  "pri_a25_explosive_charge_item": {
+    "name": "pri_a25_explosive_name",
+    "price": 20
+  },
+  "pri_b35_lab_x8_key": {
+    "name": "st_pri_b35_lab_x8_key_name"
+  },
+  "pri_b36_monolith_hiding_place_pda": {
+    "name": "st_pri_b36_monolith_hiding_place_pda_name"
+  },
+  "pri_decoder_documents": {
+    "name": "item_docs_hiden_pri_name"
+  },
+  "protein": {
+    "name": "st_protein",
+    "price": 1000
+  },
+  "prt_i_ammo": {
+    "name": "st_prt_i_ammo",
+    "price": 52
+  },
+  "prt_i_capacitors": {
+    "name": "st_prt_i_capacitors",
+    "price": 193
+  },
+  "prt_i_ceramic": {
+    "name": "st_prt_i_ceramic",
+    "price": 46
+  },
+  "prt_i_copper": {
+    "name": "st_prt_i_copper",
+    "price": 134
+  },
+  "prt_i_fasteners": {
+    "name": "st_prt_i_fasteners",
+    "price": 73
+  },
+  "prt_i_glass": {
+    "name": "st_prt_i_glass",
+    "price": 24
+  },
+  "prt_i_leather": {
+    "name": "st_prt_i_leather",
+    "price": 54
+  },
+  "prt_i_paper": {
+    "name": "st_prt_i_paper",
+    "price": 61
+  },
+  "prt_i_plastic": {
+    "name": "st_prt_i_plastic",
+    "price": 144
+  },
+  "prt_i_resistors": {
+    "name": "st_prt_i_resistors",
+    "price": 140
+  },
+  "prt_i_rubber": {
+    "name": "st_prt_i_rubber",
+    "price": 22
+  },
+  "prt_i_scrap": {
+    "name": "st_prt_i_scrap",
+    "price": 50
+  },
+  "prt_i_textolite": {
+    "name": "st_prt_i_textolite",
+    "price": 178
+  },
+  "prt_i_transistors": {
+    "name": "st_prt_i_transistors",
+    "price": 240
+  },
+  "prt_i_wood": {
+    "name": "st_prt_i_wood",
+    "price": 132
+  },
+  "prt_o_ballistic_1": {
+    "name": "st_prt_o_ballistic_1",
+    "price": 750
+  },
+  "prt_o_ballistic_10": {
+    "name": "st_prt_o_ballistic_10",
+    "price": 750
+  },
+  "prt_o_ballistic_11": {
+    "name": "st_prt_o_ballistic_11",
+    "price": 750
+  },
+  "prt_o_ballistic_12": {
+    "name": "st_prt_o_ballistic_12",
+    "price": 750
+  },
+  "prt_o_ballistic_13": {
+    "name": "st_prt_o_ballistic_13",
+    "price": 750
+  },
+  "prt_o_ballistic_14": {
+    "name": "st_prt_o_ballistic_14",
+    "price": 750
+  },
+  "prt_o_ballistic_15": {
+    "name": "st_prt_o_ballistic_15",
+    "price": 750
+  },
+  "prt_o_ballistic_16": {
+    "name": "st_prt_o_ballistic_16",
+    "price": 750
+  },
+  "prt_o_ballistic_17": {
+    "name": "st_prt_o_ballistic_17",
+    "price": 750
+  },
+  "prt_o_ballistic_18": {
+    "name": "st_prt_o_ballistic_18",
+    "price": 750
+  },
+  "prt_o_ballistic_19": {
+    "name": "st_prt_o_ballistic_19",
+    "price": 750
+  },
+  "prt_o_ballistic_2": {
+    "name": "st_prt_o_ballistic_2",
+    "price": 750
+  },
+  "prt_o_ballistic_20": {
+    "name": "st_prt_o_ballistic_20",
+    "price": 750
+  },
+  "prt_o_ballistic_3": {
+    "name": "st_prt_o_ballistic_3",
+    "price": 750
+  },
+  "prt_o_ballistic_4": {
+    "name": "st_prt_o_ballistic_4",
+    "price": 750
+  },
+  "prt_o_ballistic_5": {
+    "name": "st_prt_o_ballistic_5",
+    "price": 750
+  },
+  "prt_o_ballistic_6": {
+    "name": "st_prt_o_ballistic_6",
+    "price": 750
+  },
+  "prt_o_ballistic_7": {
+    "name": "st_prt_o_ballistic_7",
+    "price": 750
+  },
+  "prt_o_ballistic_8": {
+    "name": "st_prt_o_ballistic_8",
+    "price": 750
+  },
+  "prt_o_ballistic_9": {
+    "name": "st_prt_o_ballistic_9",
+    "price": 750
+  },
+  "prt_o_fabrics_1": {
+    "name": "st_prt_o_fabrics_1",
+    "price": 200
+  },
+  "prt_o_fabrics_2": {
+    "name": "st_prt_o_fabrics_2",
+    "price": 200
+  },
+  "prt_o_fabrics_3": {
+    "name": "st_prt_o_fabrics_3",
+    "price": 200
+  },
+  "prt_o_fabrics_4": {
+    "name": "st_prt_o_fabrics_4",
+    "price": 200
+  },
+  "prt_o_retardant_1": {
+    "name": "st_prt_o_retardant_1",
+    "price": 550
+  },
+  "prt_o_retardant_10": {
+    "name": "st_prt_o_retardant_10",
+    "price": 550
+  },
+  "prt_o_retardant_11": {
+    "name": "st_prt_o_retardant_11",
+    "price": 550
+  },
+  "prt_o_retardant_12": {
+    "name": "st_prt_o_retardant_12",
+    "price": 550
+  },
+  "prt_o_retardant_13": {
+    "name": "st_prt_o_retardant_13",
+    "price": 550
+  },
+  "prt_o_retardant_14": {
+    "name": "st_prt_o_retardant_14",
+    "price": 550
+  },
+  "prt_o_retardant_15": {
+    "name": "st_prt_o_retardant_15",
+    "price": 550
+  },
+  "prt_o_retardant_16": {
+    "name": "st_prt_o_retardant_16",
+    "price": 550
+  },
+  "prt_o_retardant_17": {
+    "name": "st_prt_o_retardant_17",
+    "price": 550
+  },
+  "prt_o_retardant_18": {
+    "name": "st_prt_o_retardant_18",
+    "price": 550
+  },
+  "prt_o_retardant_19": {
+    "name": "st_prt_o_retardant_19",
+    "price": 550
+  },
+  "prt_o_retardant_2": {
+    "name": "st_prt_o_retardant_2",
+    "price": 550
+  },
+  "prt_o_retardant_20": {
+    "name": "st_prt_o_retardant_20",
+    "price": 550
+  },
+  "prt_o_retardant_3": {
+    "name": "st_prt_o_retardant_3",
+    "price": 550
+  },
+  "prt_o_retardant_4": {
+    "name": "st_prt_o_retardant_4",
+    "price": 550
+  },
+  "prt_o_retardant_5": {
+    "name": "st_prt_o_retardant_5",
+    "price": 550
+  },
+  "prt_o_retardant_6": {
+    "name": "st_prt_o_retardant_6",
+    "price": 550
+  },
+  "prt_o_retardant_7": {
+    "name": "st_prt_o_retardant_7",
+    "price": 550
+  },
+  "prt_o_retardant_8": {
+    "name": "st_prt_o_retardant_8",
+    "price": 550
+  },
+  "prt_o_retardant_9": {
+    "name": "st_prt_o_retardant_9",
+    "price": 550
+  },
+  "prt_o_support_1": {
+    "name": "st_prt_o_support_1",
+    "price": 5000
+  },
+  "prt_w_barrel_1": {
+    "name": "st_barrel_1",
+    "price": 800
+  },
+  "prt_w_barrel_10": {
+    "name": "st_barrel_10",
+    "price": 800
+  },
+  "prt_w_barrel_11": {
+    "name": "st_barrel_11",
+    "price": 800
+  },
+  "prt_w_barrel_12": {
+    "name": "st_barrel_12",
+    "price": 800
+  },
+  "prt_w_barrel_13": {
+    "name": "st_barrel_13",
+    "price": 800
+  },
+  "prt_w_barrel_2": {
+    "name": "st_barrel_2",
+    "price": 800
+  },
+  "prt_w_barrel_3": {
+    "name": "st_barrel_3",
+    "price": 800
+  },
+  "prt_w_barrel_4": {
+    "name": "st_barrel_4",
+    "price": 800
+  },
+  "prt_w_barrel_5": {
+    "name": "st_barrel_5",
+    "price": 800
+  },
+  "prt_w_barrel_6": {
+    "name": "st_barrel_6",
+    "price": 800
+  },
+  "prt_w_barrel_7": {
+    "name": "st_barrel_7",
+    "price": 800
+  },
+  "prt_w_barrel_8": {
+    "name": "st_barrel_8",
+    "price": 800
+  },
+  "prt_w_barrel_9": {
+    "name": "st_barrel_9",
+    "price": 800
+  },
+  "prt_w_bolt_1": {
+    "name": "st_bolt_1",
+    "price": 600
+  },
+  "prt_w_bolt_10": {
+    "name": "st_bolt_10",
+    "price": 600
+  },
+  "prt_w_bolt_11": {
+    "name": "st_bolt_11",
+    "price": 600
+  },
+  "prt_w_bolt_12": {
+    "name": "st_bolt_12",
+    "price": 600
+  },
+  "prt_w_bolt_13": {
+    "name": "st_bolt_13",
+    "price": 600
+  },
+  "prt_w_bolt_14": {
+    "name": "st_bolt_14",
+    "price": 600
+  },
+  "prt_w_bolt_15": {
+    "name": "st_bolt_15",
+    "price": 600
+  },
+  "prt_w_bolt_16": {
+    "name": "st_bolt_16",
+    "price": 600
+  },
+  "prt_w_bolt_17": {
+    "name": "st_bolt_17",
+    "price": 600
+  },
+  "prt_w_bolt_2": {
+    "name": "st_bolt_2",
+    "price": 600
+  },
+  "prt_w_bolt_3": {
+    "name": "st_bolt_3",
+    "price": 600
+  },
+  "prt_w_bolt_4": {
+    "name": "st_bolt_4",
+    "price": 600
+  },
+  "prt_w_bolt_5": {
+    "name": "st_bolt_5",
+    "price": 600
+  },
+  "prt_w_bolt_6": {
+    "name": "st_bolt_6",
+    "price": 600
+  },
+  "prt_w_bolt_7": {
+    "name": "st_bolt_7",
+    "price": 600
+  },
+  "prt_w_bolt_8": {
+    "name": "st_bolt_8",
+    "price": 600
+  },
+  "prt_w_bolt_9": {
+    "name": "st_bolt_9",
+    "price": 600
+  },
+  "prt_w_bolt_carrier_1": {
+    "name": "st_bolt_carrier_1",
+    "price": 700
+  },
+  "prt_w_bolt_carrier_10": {
+    "name": "st_bolt_carrier_10",
+    "price": 700
+  },
+  "prt_w_bolt_carrier_11": {
+    "name": "st_bolt_carrier_11",
+    "price": 700
+  },
+  "prt_w_bolt_carrier_2": {
+    "name": "st_bolt_carrier_2",
+    "price": 700
+  },
+  "prt_w_bolt_carrier_3": {
+    "name": "st_bolt_carrier_3",
+    "price": 700
+  },
+  "prt_w_bolt_carrier_4": {
+    "name": "st_bolt_carrier_4",
+    "price": 700
+  },
+  "prt_w_bolt_carrier_5": {
+    "name": "st_bolt_carrier_5",
+    "price": 700
+  },
+  "prt_w_bolt_carrier_6": {
+    "name": "st_bolt_carrier_6",
+    "price": 700
+  },
+  "prt_w_bolt_carrier_7": {
+    "name": "st_bolt_carrier_7",
+    "price": 700
+  },
+  "prt_w_bolt_carrier_8": {
+    "name": "st_bolt_carrier_8",
+    "price": 700
+  },
+  "prt_w_bolt_carrier_9": {
+    "name": "st_bolt_carrier_9",
+    "price": 700
+  },
+  "prt_w_gas_tube_1": {
+    "name": "st_gas_tube_1",
+    "price": 750
+  },
+  "prt_w_gas_tube_10": {
+    "name": "st_gas_tube_10",
+    "price": 750
+  },
+  "prt_w_gas_tube_11": {
+    "name": "st_gas_tube_11",
+    "price": 750
+  },
+  "prt_w_gas_tube_2": {
+    "name": "st_gas_tube_2",
+    "price": 750
+  },
+  "prt_w_gas_tube_3": {
+    "name": "st_gas_tube_3",
+    "price": 750
+  },
+  "prt_w_gas_tube_4": {
+    "name": "st_gas_tube_4",
+    "price": 750
+  },
+  "prt_w_gas_tube_5": {
+    "name": "st_gas_tube_5",
+    "price": 750
+  },
+  "prt_w_gas_tube_6": {
+    "name": "st_gas_tube_6",
+    "price": 750
+  },
+  "prt_w_gas_tube_7": {
+    "name": "st_gas_tube_7",
+    "price": 750
+  },
+  "prt_w_gas_tube_8": {
+    "name": "st_gas_tube_8",
+    "price": 750
+  },
+  "prt_w_gas_tube_9": {
+    "name": "st_gas_tube_9",
+    "price": 750
+  },
+  "prt_w_p_barrel_1": {
+    "name": "st_prt_w_p_barrel_1",
+    "price": 750
+  },
+  "prt_w_p_barrel_2": {
+    "name": "st_prt_w_p_barrel_2",
+    "price": 750
+  },
+  "prt_w_p_barrel_3": {
+    "name": "st_prt_w_p_barrel_3",
+    "price": 750
+  },
+  "prt_w_p_barrel_4": {
+    "name": "st_prt_w_p_barrel_4",
+    "price": 750
+  },
+  "prt_w_p_barrel_5": {
+    "name": "st_prt_w_p_barrel_5",
+    "price": 750
+  },
+  "prt_w_p_barrel_6": {
+    "name": "st_prt_w_p_barrel_6",
+    "price": 750
+  },
+  "prt_w_p_barrel_7": {
+    "name": "st_prt_w_p_barrel_7",
+    "price": 750
+  },
+  "prt_w_p_spring_1": {
+    "name": "st_prt_w_p_spring_1",
+    "price": 850
+  },
+  "prt_w_p_spring_2": {
+    "name": "st_prt_w_p_spring_2",
+    "price": 850
+  },
+  "prt_w_p_spring_3": {
+    "name": "st_prt_w_p_spring_3",
+    "price": 850
+  },
+  "prt_w_p_spring_4": {
+    "name": "st_prt_w_p_spring_4",
+    "price": 850
+  },
+  "prt_w_p_spring_5": {
+    "name": "st_prt_w_p_spring_5",
+    "price": 850
+  },
+  "prt_w_p_spring_6": {
+    "name": "st_prt_w_p_spring_6",
+    "price": 850
+  },
+  "prt_w_p_trigger_1": {
+    "name": "st_prt_w_p_trigger_1",
+    "price": 650
+  },
+  "prt_w_p_trigger_2": {
+    "name": "st_prt_w_p_trigger_2",
+    "price": 650
+  },
+  "prt_w_p_trigger_3": {
+    "name": "st_prt_w_p_trigger_3",
+    "price": 650
+  },
+  "prt_w_p_trigger_4": {
+    "name": "st_prt_w_p_trigger_4",
+    "price": 650
+  },
+  "prt_w_trigger_components_1": {
+    "name": "st_trigger_components_1",
+    "price": 900
+  },
+  "prt_w_trigger_components_2": {
+    "name": "st_trigger_components_2",
+    "price": 900
+  },
+  "prt_w_trigger_components_3": {
+    "name": "st_trigger_components_3",
+    "price": 900
+  },
+  "prt_w_trigger_components_4": {
+    "name": "st_trigger_components_4",
+    "price": 900
+  },
+  "prt_w_trigger_components_5": {
+    "name": "st_trigger_components_5",
+    "price": 900
+  },
+  "prt_w_trigger_components_6": {
+    "name": "st_trigger_components_6",
+    "price": 900
+  },
+  "ps01": {
+    "name": "st_addon_scope",
+    "price": 6160
+  },
+  "pso1m21": {
+    "name": "st_addon_scope_pso-1m2-01",
+    "price": 6640
+  },
+  "quest_package_1": {
+    "name": "quest_package_name"
+  },
+  "quest_package_2": {
+    "name": "quest_package_name"
+  },
+  "quest_package_3": {
+    "name": "quest_package_name"
+  },
+  "quest_package_4": {
+    "name": "quest_package_name"
+  },
+  "quest_package_5": {
+    "name": "quest_package_name"
+  },
+  "quest_package_6": {
+    "name": "quest_package_name"
+  },
+  "quest_package_7": {
+    "name": "quest_package_name"
+  },
+  "quest_package_8": {
+    "name": "quest_package_name"
+  },
+  "radio": {
+    "name": "st_radio",
+    "price": 770
+  },
+  "radio2": {
+    "name": "st_radio2",
+    "price": 840
+  },
+  "radio_connections_pda": {
+    "name": "st_pda_name"
+  },
+  "raisins": {
+    "name": "st_raisins",
+    "price": 520
+  },
+  "ramrod_tool": {
+    "name": "st_ramrod_tool",
+    "price": 2300
+  },
+  "rasp_tool": {
+    "name": "st_rasp_tool",
+    "price": 1800
+  },
+  "ration_ru": {
+    "name": "st_ration_ru",
+    "price": 8000
+  },
+  "ration_ukr": {
+    "name": "st_ration_ukr",
+    "price": 7300
+  },
+  "rebirth": {
+    "name": "st_rebirth",
+    "price": 6690
+  },
+  "recipe_advanced_1": {
+    "name": "st_recipe_advanced_1",
+    "price": 500
+  },
+  "recipe_advanced_2": {
+    "name": "st_recipe_advanced_2",
+    "price": 500
+  },
+  "recipe_advanced_3": {
+    "name": "st_recipe_advanced_3",
+    "price": 500
+  },
+  "recipe_advanced_4": {
+    "name": "st_recipe_advanced_4",
+    "price": 500
+  },
+  "recipe_ammo_1": {
+    "name": "st_recipe_ammo_1",
+    "price": 500
+  },
+  "recipe_ammo_2": {
+    "name": "st_recipe_ammo_2",
+    "price": 500
+  },
+  "recipe_ammo_3": {
+    "name": "st_recipe_ammo_3",
+    "price": 500
+  },
+  "recipe_ammo_4": {
+    "name": "st_recipe_ammo_4",
+    "price": 500
+  },
+  "recipe_basic_1": {
+    "name": "st_recipe_basic_1",
+    "price": 500
+  },
+  "recipe_basic_2": {
+    "name": "st_recipe_basic_2",
+    "price": 500
+  },
+  "recipe_basic_3": {
+    "name": "st_recipe_basic_3",
+    "price": 500
+  },
+  "recipe_basic_4": {
+    "name": "st_recipe_basic_4",
+    "price": 500
+  },
+  "recipe_cooking_1": {
+    "name": "st_recipe_cooking_1",
+    "price": 500
+  },
+  "recipe_drug_1": {
+    "name": "st_recipe_drug_1",
+    "price": 500
+  },
+  "recipe_drug_2": {
+    "name": "st_recipe_drug_2",
+    "price": 500
+  },
+  "recipe_drug_3": {
+    "name": "st_recipe_drug_3",
+    "price": 500
+  },
+  "recipe_drug_4": {
+    "name": "st_recipe_drug_4",
+    "price": 500
+  },
+  "recipe_expert_1": {
+    "name": "st_recipe_expert_1",
+    "price": 500
+  },
+  "recipe_expert_2": {
+    "name": "st_recipe_expert_2",
+    "price": 500
+  },
+  "recipe_expert_3": {
+    "name": "st_recipe_expert_3",
+    "price": 500
+  },
+  "recipe_expert_4": {
+    "name": "st_recipe_expert_4",
+    "price": 500
+  },
+  "recover_mutant_data_device": {
+    "name": "recover_mutant_data_device_name",
+    "price": 50
+  },
+  "redline_novice_outfit": {
+    "name": "redline_novice_outfit_name",
+    "price": 15951
+  },
+  "renegade_exo_outfit": {
+    "name": "renegade_exo_outfit_name",
+    "price": 140660
+  },
+  "renegade_patch": {
+    "name": "st_renegade_fp",
+    "price": 650
+  },
+  "renegade_scientific_outfit": {
+    "name": "renegade_scientific_outfit_name",
+    "price": 76000
+  },
+  "renegademerc_outfit": {
+    "name": "renegademerc_outfit_name",
+    "price": 41340
+  },
+  "rioc_duty_item": {
+    "name": "st_rioc_duty"
+  },
+  "rioc_ecolog_item": {
+    "name": "st_rioc_ecolog"
+  },
+  "rioc_sid_item_1": {
+    "name": "st_rioc_sid",
+    "price": 1000
+  },
+  "rioc_sid_item_2": {
+    "name": "st_rioc_sid"
+  },
+  "rope": {
+    "name": "st_rope",
+    "price": 190
+  },
+  "roubles": {
+    "name": "st_roubles",
+    "price": 9
+  },
+  "rpg_blow": {
+    "price": 2990
+  },
+  "rpg_new_blow": {
+    "price": 2990
+  },
+  "salicidic_acid": {
+    "name": "st_salicidic_acid",
+    "price": 980
+  },
+  "salmon": {
+    "name": "st_salmon",
+    "price": 500
+  },
+  "sausage": {
+    "name": "st_sausage",
+    "price": 657
+  },
+  "scientific_outfit": {
+    "name": "scientific_outfit_name",
+    "price": 75400
+  },
+  "sewing_kit_a": {
+    "name": "st_sewing_kit_a",
+    "price": 8660
+  },
+  "sewing_kit_b": {
+    "name": "st_sewing_kit_b",
+    "price": 4360
+  },
+  "sewing_kit_h": {
+    "name": "st_sewing_kit_h",
+    "price": 13420
+  },
+  "sewing_thread": {
+    "name": "st_sewing_thread",
+    "price": 600
+  },
+  "sharpening_stones": {
+    "name": "st_sharpening_stones",
+    "price": 1860
+  },
+  "shovel_mili": {
+    "name": "st_shovel_mili",
+    "price": 390
+  },
+  "shovel_old": {
+    "name": "st_shovel_old",
+    "price": 260
+  },
+  "solvent": {
+    "name": "st_solvent",
+    "price": 1754
+  },
+  "special_delivery_case": {
+    "name": "special_delivery_case_name"
+  },
+  "specops_bandit_outfit": {
+    "name": "specops_bandit_outfit_name",
+    "price": 48600
+  },
+  "specops_dolg_outfit": {
+    "name": "specops_dolg_outfit_name",
+    "price": 52600
+  },
+  "specops_merc_outfit": {
+    "name": "specops_merc_outfit_name",
+    "price": 49600
+  },
+  "specops_outfit": {
+    "name": "specops_outfit_name",
+    "price": 44600
+  },
+  "stalker_autumn_outfit": {
+    "name": "stalker_autumn_outfit_name",
+    "price": 43000
+  },
+  "stalker_bear_outfit": {
+    "name": "stalker_bear_outfit_name",
+    "price": 36900
+  },
+  "stalker_drought_outfit": {
+    "name": "stalker_drought_outfit_name",
+    "price": 47500
+  },
+  "stalker_graphite_outfit": {
+    "name": "stalker_graphite_outfit_name",
+    "price": 37000
+  },
+  "stalker_outfit": {
+    "name": "stalker_outfit_name",
+    "price": 34280
+  },
+  "stalker_patch": {
+    "name": "st_stalker_fp",
+    "price": 650
+  },
+  "stalker_predator_outfit": {
+    "name": "stalker_predator_outfit_name",
+    "price": 37000
+  },
+  "stalker_proto_exo_outfit": {
+    "name": "stalker_proto_exo_outfit_name",
+    "price": 59280
+  },
+  "stalker_salamander_outfit": {
+    "name": "stalker_salamander_outfit_name",
+    "price": 39500
+  },
+  "stalker_tigerstripe_outfit": {
+    "name": "stalker_tigerstripe_outfit_name",
+    "price": 38900
+  },
+  "stationary_mgun": {
+    "name": "MountedWeapon"
+  },
+  "steel_wool": {
+    "name": "st_steel_wool",
+    "price": 744
+  },
+  "stimpack": {
+    "name": "st_stim_impro",
+    "price": 3000
+  },
+  "stimpack_army": {
+    "name": "st_stim_military",
+    "price": 5000
+  },
+  "stimpack_scientic": {
+    "name": "st_stim_scientic",
+    "price": 6000
+  },
+  "stitch_decoder": {
+    "name": "stitch_decoder_name"
+  },
+  "strelok_notes": {
+    "name": "strelok_notes_name"
+  },
+  "strelok_pendrive": {
+    "name": "st_strelok_pendrive_name"
+  },
+  "survival_kit": {
+    "name": "st_survival_kit",
+    "price": 7500
+  },
+  "svoboda_exo_outfit": {
+    "name": "svoboda_exo_outfit_name",
+    "price": 141222
+  },
+  "svoboda_exolight_outfit": {
+    "name": "svoboda_exolight_outfit_name",
+    "price": 88880
+  },
+  "svoboda_heavy_outfit": {
+    "name": "svoboda_heavy_outfit_name",
+    "price": 51300
+  },
+  "svoboda_heavy_outfit_2": {
+    "name": "svoboda_heavy_outfit_2_name",
+    "price": 56450
+  },
+  "svoboda_light_outfit": {
+    "name": "svoboda_light_outfit_name",
+    "price": 44700
+  },
+  "svoboda_light_proto_exo_outfit": {
+    "name": "svoboda_light_proto_exo_outfit_name",
+    "price": 64700
+  },
+  "svoboda_novice_outfit": {
+    "name": "svoboda_novice_outfit_name",
+    "price": 10930
+  },
+  "svoboda_scientific_outfit": {
+    "name": "svoboda_scientific_outfit_name",
+    "price": 78400
+  },
+  "swiss_knife": {
+    "name": "st_swiss",
+    "price": 900
+  },
+  "synthrope": {
+    "name": "st_synthrope",
+    "price": 780
+  },
+  "tarpaulin": {
+    "name": "st_tarpaulin",
+    "price": 630
+  },
+  "tch_detector": {
+    "name": "st_detector1",
+    "price": 100
+  },
+  "tch_fuel_1_ico": {
+    "name": "st_fuel_tier_1"
+  },
+  "tch_fuel_2_ico": {
+    "name": "st_fuel_tier_2"
+  },
+  "tch_helmet": {
+    "name": "st_helmet",
+    "price": 1500
+  },
+  "tch_letter": {
+    "name": "st_recipe",
+    "price": 500
+  },
+  "tch_mapkit": {
+    "name": "st_itm_mapkit",
+    "price": 3000
+  },
+  "tch_meal_1_ico": {
+    "name": "\"tch_upgr\""
+  },
+  "tch_meal_2_ico": {
+    "name": "\"tch_upgr\""
+  },
+  "tch_money": {
+    "name": "st_conserva"
+  },
+  "tch_part": {
+    "name": "st_wpn_spareparts"
+  },
+  "tch_part_con": {
+    "name": "st_wpn_spareparts"
+  },
+  "tch_quest": {
+    "name": "st_pda_name"
+  },
+  "tch_repair": {
+    "name": "default",
+    "price": 1
+  },
+  "tch_upgr_ico": {
+    "name": "\"tch_upgr\""
+  },
+  "tea": {
+    "name": "st_tea",
+    "price": 4473
+  },
+  "test_container": {
+    "name": "st_itm_backpack_name",
+    "price": 2000
+  },
+  "tetanus": {
+    "name": "st_tetanus",
+    "price": 1940
+  },
+  "tobacco": {
+    "name": "st_tobacco",
+    "price": 3268
+  },
+  "tomato": {
+    "name": "st_tomato",
+    "price": 576
+  },
+  "toolkit_1": {
+    "name": "st_toolkit_1_name"
+  },
+  "toolkit_2": {
+    "name": "st_toolkit_2_name"
+  },
+  "toolkit_3": {
+    "name": "st_toolkit_3_name"
+  },
+  "toolkit_p": {
+    "name": "st_repair_kit_p",
+    "price": 15660
+  },
+  "toolkit_r5": {
+    "name": "st_repair_kit_r5",
+    "price": 20420
+  },
+  "toolkit_r7": {
+    "name": "st_repair_kit_r7",
+    "price": 23080
+  },
+  "toolkit_s": {
+    "name": "st_repair_kit_s",
+    "price": 17660
+  },
+  "travel_outfit": {
+    "name": "travel_outfit_name",
+    "price": 74700
+  },
+  "trenchcoat_brown_outfit": {
+    "name": "trenchcoat_brown_outfit_name",
+    "price": 44670
+  },
+  "trenchcoat_dolg_brown_outfit": {
+    "name": "trenchcoat_dolg_brown_outfit_name",
+    "price": 44670
+  },
+  "trenchcoat_freedom_brown_outfit": {
+    "name": "trenchcoat_freedom_brown_outfit_name",
+    "price": 44670
+  },
+  "trenchcoat_green_outfit": {
+    "name": "trenchcoat_green_outfit_name",
+    "price": 45370
+  },
+  "trenchcoat_outfit": {
+    "name": "trenchcoat_outfit_name",
+    "price": 23320
+  },
+  "tushonka": {
+    "name": "st_tushonka",
+    "price": 990
+  },
+  "underwear": {
+    "name": "st_underwear",
+    "price": 390
+  },
+  "upgr_o_1_armor": {
+    "name": "st_upgr_o_armor",
+    "price": 1850
+  },
+  "upgr_o_1_arty": {
+    "name": "st_upgr_o_arty",
+    "price": 3220
+  },
+  "upgr_o_1_bleed": {
+    "name": "st_upgr_o_bleed",
+    "price": 5750
+  },
+  "upgr_o_1_burn": {
+    "name": "st_upgr_o_burn",
+    "price": 1350
+  },
+  "upgr_o_1_carry": {
+    "name": "st_upgr_o_carry",
+    "price": 3750
+  },
+  "upgr_o_1_chem": {
+    "name": "st_upgr_o_chem",
+    "price": 1450
+  },
+  "upgr_o_1_damage": {
+    "name": "st_upgr_o_damage",
+    "price": 1550
+  },
+  "upgr_o_1_durability": {
+    "name": "st_upgr_o_durability",
+    "price": 1050
+  },
+  "upgr_o_1_health": {
+    "name": "st_upgr_o_health",
+    "price": 4750
+  },
+  "upgr_o_1_power": {
+    "name": "st_upgr_o_power",
+    "price": 1950
+  },
+  "upgr_o_1_psi": {
+    "name": "st_upgr_o_psi",
+    "price": 2250
+  },
+  "upgr_o_1_rad": {
+    "name": "st_upgr_o_rad",
+    "price": 1750
+  },
+  "upgr_o_1_run": {
+    "name": "st_upgr_o_run",
+    "price": 2950
+  },
+  "upgr_o_1_shock": {
+    "name": "st_upgr_o_shock",
+    "price": 1640
+  },
+  "upgr_o_1_weight": {
+    "name": "st_upgr_o_weight",
+    "price": 2150
+  },
+  "upgr_o_2_armor": {
+    "name": "st_upgr_o_armor",
+    "price": 5200
+  },
+  "upgr_o_2_arty": {
+    "name": "st_upgr_o_arty",
+    "price": 4900
+  },
+  "upgr_o_2_bleed": {
+    "name": "st_upgr_o_bleed",
+    "price": 6750
+  },
+  "upgr_o_2_burn": {
+    "name": "st_upgr_o_burn",
+    "price": 2900
+  },
+  "upgr_o_2_carry": {
+    "name": "st_upgr_o_carry",
+    "price": 5500
+  },
+  "upgr_o_2_chem": {
+    "name": "st_upgr_o_chem",
+    "price": 2500
+  },
+  "upgr_o_2_damage": {
+    "name": "st_upgr_o_damage",
+    "price": 5600
+  },
+  "upgr_o_2_durability": {
+    "name": "st_upgr_o_durability",
+    "price": 2400
+  },
+  "upgr_o_2_health": {
+    "name": "st_upgr_o_health",
+    "price": 6900
+  },
+  "upgr_o_2_power": {
+    "name": "st_upgr_o_power",
+    "price": 5300
+  },
+  "upgr_o_2_psi": {
+    "name": "st_upgr_o_psi",
+    "price": 4100
+  },
+  "upgr_o_2_rad": {
+    "name": "st_upgr_o_rad",
+    "price": 4200
+  },
+  "upgr_o_2_run": {
+    "name": "st_upgr_o_run",
+    "price": 3700
+  },
+  "upgr_o_2_shock": {
+    "name": "st_upgr_o_shock",
+    "price": 2700
+  },
+  "upgr_o_2_weight": {
+    "name": "st_upgr_o_weight",
+    "price": 3800
+  },
+  "upgr_o_3_armor": {
+    "name": "st_upgr_o_armor",
+    "price": 7500
+  },
+  "upgr_o_3_arty": {
+    "name": "st_upgr_o_arty",
+    "price": 7800
+  },
+  "upgr_o_3_bleed": {
+    "name": "st_upgr_o_bleed",
+    "price": 10500
+  },
+  "upgr_o_3_burn": {
+    "name": "st_upgr_o_burn",
+    "price": 4500
+  },
+  "upgr_o_3_carry": {
+    "name": "st_upgr_o_carry",
+    "price": 7500
+  },
+  "upgr_o_3_chem": {
+    "name": "st_upgr_o_chem",
+    "price": 5500
+  },
+  "upgr_o_3_damage": {
+    "name": "st_upgr_o_damage",
+    "price": 7500
+  },
+  "upgr_o_3_durability": {
+    "name": "st_upgr_o_durability",
+    "price": 7300
+  },
+  "upgr_o_3_health": {
+    "name": "st_upgr_o_health",
+    "price": 12100
+  },
+  "upgr_o_3_power": {
+    "name": "st_upgr_o_power",
+    "price": 7600
+  },
+  "upgr_o_3_psi": {
+    "name": "st_upgr_o_psi",
+    "price": 6500
+  },
+  "upgr_o_3_rad": {
+    "name": "st_upgr_o_rad",
+    "price": 7100
+  },
+  "upgr_o_3_run": {
+    "name": "st_upgr_o_run",
+    "price": 8100
+  },
+  "upgr_o_3_shock": {
+    "name": "st_upgr_o_shock",
+    "price": 4900
+  },
+  "upgr_o_3_weight": {
+    "name": "st_upgr_o_weight",
+    "price": 8400
+  },
+  "upgr_w_1_calibre": {
+    "name": "st_upgr_w_calibre",
+    "price": 4750
+  },
+  "upgr_w_1_dispersion": {
+    "name": "st_upgr_w_dispersion",
+    "price": 2650
+  },
+  "upgr_w_1_firemode": {
+    "name": "st_upgr_w_firemode",
+    "price": 3550
+  },
+  "upgr_w_1_grenade_mount": {
+    "name": "st_upgr_w_grenade_mount",
+    "price": 3950
+  },
+  "upgr_w_1_inertion": {
+    "name": "st_upgr_w_inertion",
+    "price": 2350
+  },
+  "upgr_w_1_magazine": {
+    "name": "st_upgr_w_magazine",
+    "price": 4150
+  },
+  "upgr_w_1_muffle": {
+    "name": "st_upgr_w_muffle",
+    "price": 2750
+  },
+  "upgr_w_1_recoil": {
+    "name": "st_upgr_w_recoil",
+    "price": 1050
+  },
+  "upgr_w_1_reliability": {
+    "name": "st_upgr_w_reliability",
+    "price": 2350
+  },
+  "upgr_w_1_rpm": {
+    "name": "st_upgr_w_rpm",
+    "price": 2750
+  },
+  "upgr_w_1_scope": {
+    "name": "st_upgr_w_scope",
+    "price": 3650
+  },
+  "upgr_w_1_scope_mount": {
+    "name": "st_upgr_w_scope_mount",
+    "price": 1850
+  },
+  "upgr_w_1_speed": {
+    "name": "st_upgr_w_speed",
+    "price": 1950
+  },
+  "upgr_w_1_weight": {
+    "name": "st_upgr_w_weight",
+    "price": 2150
+  },
+  "upgr_w_2_calibre": {
+    "name": "st_upgr_w_calibre",
+    "price": 7200
+  },
+  "upgr_w_2_dispersion": {
+    "name": "st_upgr_w_dispersion",
+    "price": 5100
+  },
+  "upgr_w_2_firemode": {
+    "name": "st_upgr_w_firemode",
+    "price": 4000
+  },
+  "upgr_w_2_grenade_mount": {
+    "name": "st_upgr_w_grenade_mount",
+    "price": 6000
+  },
+  "upgr_w_2_inertion": {
+    "name": "st_upgr_w_inertion",
+    "price": 5300
+  },
+  "upgr_w_2_magazine": {
+    "name": "st_upgr_w_magazine",
+    "price": 7000
+  },
+  "upgr_w_2_muffle": {
+    "name": "st_upgr_w_muffle",
+    "price": 4100
+  },
+  "upgr_w_2_recoil": {
+    "name": "st_upgr_w_recoil",
+    "price": 4400
+  },
+  "upgr_w_2_reliability": {
+    "name": "st_upgr_w_reliability",
+    "price": 3900
+  },
+  "upgr_w_2_rpm": {
+    "name": "st_upgr_w_rpm",
+    "price": 4200
+  },
+  "upgr_w_2_scope": {
+    "name": "st_upgr_w_scope",
+    "price": 6700
+  },
+  "upgr_w_2_scope_mount": {
+    "name": "st_upgr_w_scope_mount",
+    "price": 3800
+  },
+  "upgr_w_2_speed": {
+    "name": "st_upgr_w_speed",
+    "price": 3400
+  },
+  "upgr_w_2_weight": {
+    "name": "st_upgr_w_weight",
+    "price": 3900
+  },
+  "upgr_w_3_calibre": {
+    "name": "st_upgr_w_calibre",
+    "price": 10500
+  },
+  "upgr_w_3_dispersion": {
+    "name": "st_upgr_w_dispersion",
+    "price": 6900
+  },
+  "upgr_w_3_firemode": {
+    "name": "st_upgr_w_firemode",
+    "price": 8100
+  },
+  "upgr_w_3_grenade_mount": {
+    "name": "st_upgr_w_grenade_mount",
+    "price": 7900
+  },
+  "upgr_w_3_inertion": {
+    "name": "st_upgr_w_inertion",
+    "price": 7500
+  },
+  "upgr_w_3_magazine": {
+    "name": "st_upgr_w_magazine",
+    "price": 8500
+  },
+  "upgr_w_3_muffle": {
+    "name": "st_upgr_w_muffle",
+    "price": 6500
+  },
+  "upgr_w_3_recoil": {
+    "name": "st_upgr_w_recoil",
+    "price": 5400
+  },
+  "upgr_w_3_reliability": {
+    "name": "st_upgr_w_reliability",
+    "price": 6500
+  },
+  "upgr_w_3_rpm": {
+    "name": "st_upgr_w_rpm",
+    "price": 7100
+  },
+  "upgr_w_3_scope": {
+    "name": "st_upgr_w_scope",
+    "price": 9500
+  },
+  "upgr_w_3_scope_mount": {
+    "name": "st_upgr_w_scope_mount",
+    "price": 7200
+  },
+  "upgr_w_3_speed": {
+    "name": "st_upgr_w_speed",
+    "price": 6700
+  },
+  "upgr_w_3_weight": {
+    "name": "st_upgr_w_weight",
+    "price": 7300
+  },
+  "vodka": {
+    "name": "st_vodka",
+    "price": 946
+  },
+  "vodka2": {
+    "name": "st_vodka2",
+    "price": 1516
+  },
+  "vodka_quality": {
+    "name": "st_vodka_quality",
+    "price": 2663
+  },
+  "vodka_script": {
+    "name": "st_vodka",
+    "price": 946
+  },
+  "vodnik_notes": {
+    "name": "vodnik_notes_name",
+    "price": 1000
+  },
+  "walkie": {
+    "name": "st_walkie",
+    "price": 630
+  },
+  "wastelander_outfit": {
+    "name": "wastelander_outfit_name",
+    "price": 82000
+  },
+  "water_drink": {
+    "name": "st_water_drink",
+    "price": 613
+  },
+  "welding_goggles": {
+    "name": "st_welding_goggles",
+    "price": 440
+  },
+  "wpn_9a91": {
+    "name": "st_wpn_9a91",
+    "price": 28860
+  },
+  "wpn_9a91_1p29": {
+    "name": "st_wpn_9a91",
+    "price": 28860
+  },
+  "wpn_9a91_kobra": {
+    "name": "st_wpn_9a91",
+    "price": 28860
+  },
+  "wpn_9a91_ps01": {
+    "name": "st_wpn_9a91",
+    "price": 28860
+  },
+  "wpn_9a91_pso1m21": {
+    "name": "st_wpn_9a91",
+    "price": 28860
+  },
+  "wpn_abakan": {
+    "name": "st_wpn_abakan",
+    "price": 35850
+  },
+  "wpn_abakan_1p29": {
+    "name": "st_wpn_abakan",
+    "price": 35850
+  },
+  "wpn_abakan_camo": {
+    "name": "st_wpn_abakan_camo",
+    "price": 40860
+  },
+  "wpn_abakan_camo_1p29": {
+    "name": "st_wpn_abakan_camo",
+    "price": 40860
+  },
+  "wpn_abakan_camo_kobra": {
+    "name": "st_wpn_abakan_camo",
+    "price": 40860
+  },
+  "wpn_abakan_camo_ps01": {
+    "name": "st_wpn_abakan_camo",
+    "price": 40860
+  },
+  "wpn_abakan_kobra": {
+    "name": "st_wpn_abakan",
+    "price": 35850
+  },
+  "wpn_abakan_ps01": {
+    "name": "st_wpn_abakan",
+    "price": 35850
+  },
+  "wpn_ace21": {
+    "name": "st_wpn_ace21",
+    "price": 31580
+  },
+  "wpn_ace21_ac10632": {
+    "name": "st_wpn_ace21",
+    "price": 31580
+  },
+  "wpn_ace21_acog": {
+    "name": "st_wpn_ace21",
+    "price": 31580
+  },
+  "wpn_ace21_eot": {
+    "name": "st_wpn_ace21",
+    "price": 31580
+  },
+  "wpn_addon_grenade_launcher": {
+    "name": "st_grenade_launcher",
+    "price": 8500
+  },
+  "wpn_addon_grenade_launcher_m203": {
+    "name": "st_grenade_launcher_m203",
+    "price": 7200
+  },
+  "wpn_addon_scope": {
+    "name": "st_addon_scope",
+    "price": 1860
+  },
+  "wpn_addon_scope_g43": {
+    "name": "st_addon_scope_zf4",
+    "price": 1590
+  },
+  "wpn_addon_scope_galil": {
+    "name": "st_addon_scope_galil",
+    "price": 2560
+  },
+  "wpn_addon_scope_mosin": {
+    "name": "st_addon_scope_pu",
+    "price": 1250
+  },
+  "wpn_addon_scope_po4x34": {
+    "name": "st_addon_scope_po4x34",
+    "price": 1980
+  },
+  "wpn_addon_scope_pu": {
+    "name": "st_addon_scope_pu",
+    "price": 1250
+  },
+  "wpn_addon_scope_susat": {
+    "name": "st_addon_scope_galil_susat",
+    "price": 2560
+  },
+  "wpn_addon_scope_zf4": {
+    "name": "st_addon_scope_zf4",
+    "price": 1590
+  },
+  "wpn_addon_silencer": {
+    "name": "st_addon_silencer",
+    "price": 400
+  },
+  "wpn_aek": {
+    "name": "st_wpn_aek971",
+    "price": 38950
+  },
+  "wpn_aek_1p29": {
+    "name": "st_wpn_aek971",
+    "price": 38950
+  },
+  "wpn_aek_camo": {
+    "name": "st_wpn_aek971_camo",
+    "price": 45760
+  },
+  "wpn_aek_camo_1p29": {
+    "name": "st_wpn_aek971_camo",
+    "price": 45760
+  },
+  "wpn_aek_camo_kobra": {
+    "name": "st_wpn_aek971_camo",
+    "price": 45760
+  },
+  "wpn_aek_camo_ps01": {
+    "name": "st_wpn_aek971_camo",
+    "price": 45760
+  },
+  "wpn_aek_duty": {
+    "name": "st_wpn_aek973",
+    "price": 41580
+  },
+  "wpn_aek_duty_1p29": {
+    "name": "st_wpn_aek973",
+    "price": 41580
+  },
+  "wpn_aek_duty_kobra": {
+    "name": "st_wpn_aek973",
+    "price": 41580
+  },
+  "wpn_aek_duty_ps01": {
+    "name": "st_wpn_aek973",
+    "price": 41580
+  },
+  "wpn_aek_kobra": {
+    "name": "st_wpn_aek971",
+    "price": 38950
+  },
+  "wpn_aek_ps01": {
+    "name": "st_wpn_aek971",
+    "price": 38950
+  },
+  "wpn_ak": {
+    "name": "st_wpn_ak",
+    "price": 22650
+  },
+  "wpn_ak101": {
+    "name": "st_wpn_ak101",
+    "price": 33850
+  },
+  "wpn_ak101_1p29": {
+    "name": "st_wpn_ak101",
+    "price": 33850
+  },
+  "wpn_ak101_ac10632": {
+    "name": "st_wpn_ak101",
+    "price": 33850
+  },
+  "wpn_ak101_acog": {
+    "name": "st_wpn_ak101",
+    "price": 33850
+  },
+  "wpn_ak101_camo": {
+    "name": "st_wpn_ak101_camo",
+    "price": 38380
+  },
+  "wpn_ak101_camo_1p29": {
+    "name": "st_wpn_ak101_camo",
+    "price": 38380
+  },
+  "wpn_ak101_camo_ac10632": {
+    "name": "st_wpn_ak101_camo",
+    "price": 38380
+  },
+  "wpn_ak101_camo_acog": {
+    "name": "st_wpn_ak101_camo",
+    "price": 38380
+  },
+  "wpn_ak101_camo_eot": {
+    "name": "st_wpn_ak101_camo",
+    "price": 38380
+  },
+  "wpn_ak101_camo_kobra": {
+    "name": "st_wpn_ak101_camo",
+    "price": 38380
+  },
+  "wpn_ak101_camo_ps01": {
+    "name": "st_wpn_ak101_camo",
+    "price": 38380
+  },
+  "wpn_ak101_eot": {
+    "name": "st_wpn_ak101",
+    "price": 33850
+  },
+  "wpn_ak101_kobra": {
+    "name": "st_wpn_ak101",
+    "price": 33850
+  },
+  "wpn_ak101_ps01": {
+    "name": "st_wpn_ak101",
+    "price": 33850
+  },
+  "wpn_ak102": {
+    "name": "st_wpn_ak102",
+    "price": 26690
+  },
+  "wpn_ak102_1p29": {
+    "name": "st_wpn_ak102",
+    "price": 26690
+  },
+  "wpn_ak102_ac10632": {
+    "name": "st_wpn_ak102",
+    "price": 26690
+  },
+  "wpn_ak102_acog": {
+    "name": "st_wpn_ak102",
+    "price": 26690
+  },
+  "wpn_ak102_eot": {
+    "name": "st_wpn_ak102",
+    "price": 26690
+  },
+  "wpn_ak102_kobra": {
+    "name": "st_wpn_ak102",
+    "price": 26690
+  },
+  "wpn_ak102_ps01": {
+    "name": "st_wpn_ak102",
+    "price": 26690
+  },
+  "wpn_ak103": {
+    "name": "st_wpn_ak103",
+    "price": 33860
+  },
+  "wpn_ak103_1p29": {
+    "name": "st_wpn_ak103",
+    "price": 33860
+  },
+  "wpn_ak103_camo": {
+    "name": "st_wpn_ak103_camo",
+    "price": 38980
+  },
+  "wpn_ak103_camo_1p29": {
+    "name": "st_wpn_ak103_camo",
+    "price": 38980
+  },
+  "wpn_ak103_camo_kobra": {
+    "name": "st_wpn_ak103_camo",
+    "price": 38980
+  },
+  "wpn_ak103_camo_ps01": {
+    "name": "st_wpn_ak103_camo",
+    "price": 38980
+  },
+  "wpn_ak103_kobra": {
+    "name": "st_wpn_ak103",
+    "price": 33860
+  },
+  "wpn_ak103_ps01": {
+    "name": "st_wpn_ak103",
+    "price": 33860
+  },
+  "wpn_ak104": {
+    "name": "st_wpn_ak104",
+    "price": 26550
+  },
+  "wpn_ak104_1p29": {
+    "name": "st_wpn_ak104",
+    "price": 26550
+  },
+  "wpn_ak104_kobra": {
+    "name": "st_wpn_ak104",
+    "price": 26550
+  },
+  "wpn_ak104_ps01": {
+    "name": "st_wpn_ak104",
+    "price": 26550
+  },
+  "wpn_ak105": {
+    "name": "st_wpn_ak105",
+    "price": 24480
+  },
+  "wpn_ak105_1p29": {
+    "name": "st_wpn_ak105",
+    "price": 24480
+  },
+  "wpn_ak105_kobra": {
+    "name": "st_wpn_ak105",
+    "price": 24480
+  },
+  "wpn_ak105_ps01": {
+    "name": "st_wpn_ak105",
+    "price": 24480
+  },
+  "wpn_ak12": {
+    "name": "st_wpn_ak12",
+    "price": 36880
+  },
+  "wpn_ak12_ac10632": {
+    "name": "st_wpn_ak12",
+    "price": 36880
+  },
+  "wpn_ak12_acog": {
+    "name": "st_wpn_ak12",
+    "price": 36880
+  },
+  "wpn_ak12_eot": {
+    "name": "st_wpn_ak12",
+    "price": 36880
+  },
+  "wpn_ak74": {
+    "name": "st_wpn_ak74",
+    "price": 26950
+  },
+  "wpn_ak74_1p29": {
+    "name": "st_wpn_ak74",
+    "price": 26950
+  },
+  "wpn_ak74_alt": {
+    "name": "st_wpn_ak74_alt",
+    "price": 30380
+  },
+  "wpn_ak74_alt_1p29": {
+    "name": "st_wpn_ak74_alt",
+    "price": 30380
+  },
+  "wpn_ak74_alt_kobra": {
+    "name": "st_wpn_ak74_alt",
+    "price": 30380
+  },
+  "wpn_ak74_alt_ps01": {
+    "name": "st_wpn_ak74_alt",
+    "price": 30380
+  },
+  "wpn_ak74_custom": {
+    "name": "st_wpn_ak74_custom",
+    "price": 31580
+  },
+  "wpn_ak74_custom_1p29": {
+    "name": "st_wpn_ak74_custom",
+    "price": 31580
+  },
+  "wpn_ak74_custom_kobra": {
+    "name": "st_wpn_ak74_custom",
+    "price": 31580
+  },
+  "wpn_ak74_custom_ps01": {
+    "name": "st_wpn_ak74_custom",
+    "price": 31580
+  },
+  "wpn_ak74_kobra": {
+    "name": "st_wpn_ak74",
+    "price": 26950
+  },
+  "wpn_ak74_modern": {
+    "name": "st_wpn_ak74_modern",
+    "price": 29560
+  },
+  "wpn_ak74_modern_1p29": {
+    "name": "st_wpn_ak74_modern",
+    "price": 29560
+  },
+  "wpn_ak74_modern_kobra": {
+    "name": "st_wpn_ak74_modern",
+    "price": 29560
+  },
+  "wpn_ak74_modern_ps01": {
+    "name": "st_wpn_ak74_modern",
+    "price": 29560
+  },
+  "wpn_ak74_old": {
+    "name": "st_wpn_ak74_old",
+    "price": 23580
+  },
+  "wpn_ak74_ps01": {
+    "name": "st_wpn_ak74",
+    "price": 26950
+  },
+  "wpn_ak74_rpk": {
+    "name": "st_wpn_ak74_eot",
+    "price": 33680
+  },
+  "wpn_ak74m": {
+    "name": "st_wpn_ak74m",
+    "price": 30980
+  },
+  "wpn_ak74m_1p29": {
+    "name": "st_wpn_ak74m",
+    "price": 30980
+  },
+  "wpn_ak74m_alt": {
+    "name": "st_wpn_ak74m_alt",
+    "price": 31850
+  },
+  "wpn_ak74m_alt_1p29": {
+    "name": "st_wpn_ak74m_alt",
+    "price": 31850
+  },
+  "wpn_ak74m_alt_kobra": {
+    "name": "st_wpn_ak74m_alt",
+    "price": 31850
+  },
+  "wpn_ak74m_alt_ps01": {
+    "name": "st_wpn_ak74m_alt",
+    "price": 31850
+  },
+  "wpn_ak74m_camo": {
+    "name": "st_wpn_ak74m_camo",
+    "price": 38360
+  },
+  "wpn_ak74m_camo_1p29": {
+    "name": "st_wpn_ak74m_camo",
+    "price": 38360
+  },
+  "wpn_ak74m_camo_kobra": {
+    "name": "st_wpn_ak74m_camo",
+    "price": 38360
+  },
+  "wpn_ak74m_camo_ps01": {
+    "name": "st_wpn_ak74m_camo",
+    "price": 38360
+  },
+  "wpn_ak74m_custom": {
+    "name": "st_wpn_ak74m_custom",
+    "price": 33980
+  },
+  "wpn_ak74m_custom_1p29": {
+    "name": "st_wpn_ak74m_custom",
+    "price": 33980
+  },
+  "wpn_ak74m_custom_kobra": {
+    "name": "st_wpn_ak74m_custom",
+    "price": 33980
+  },
+  "wpn_ak74m_custom_ps01": {
+    "name": "st_wpn_ak74m_custom",
+    "price": 33980
+  },
+  "wpn_ak74m_duty": {
+    "name": "st_wpn_ak74m_duty",
+    "price": 38580
+  },
+  "wpn_ak74m_duty_1p29": {
+    "name": "st_wpn_ak74m_duty",
+    "price": 38580
+  },
+  "wpn_ak74m_duty_kobra": {
+    "name": "st_wpn_ak74m_duty",
+    "price": 38580
+  },
+  "wpn_ak74m_duty_ps01": {
+    "name": "st_wpn_ak74m_duty",
+    "price": 38580
+  },
+  "wpn_ak74m_kobra": {
+    "name": "st_wpn_ak74m",
+    "price": 30980
+  },
+  "wpn_ak74m_pka": {
+    "name": "st_wpn_ak74m_pk-a",
+    "price": 40680
+  },
+  "wpn_ak74m_ps01": {
+    "name": "st_wpn_ak74m",
+    "price": 30980
+  },
+  "wpn_ak74u": {
+    "name": "st_wpn_ak74u",
+    "price": 20870
+  },
+  "wpn_ak74u_1p29": {
+    "name": "st_wpn_ak74u",
+    "price": 20870
+  },
+  "wpn_ak74u_camo": {
+    "name": "st_wpn_ak74u_camo",
+    "price": 24550
+  },
+  "wpn_ak74u_camo_1p29": {
+    "name": "st_wpn_ak74u_camo",
+    "price": 24550
+  },
+  "wpn_ak74u_camo_kobra": {
+    "name": "st_wpn_ak74u_camo",
+    "price": 24550
+  },
+  "wpn_ak74u_camo_ps01": {
+    "name": "st_wpn_ak74u_camo",
+    "price": 24550
+  },
+  "wpn_ak74u_custom": {
+    "name": "st_wpn_ak74u_custom",
+    "price": 23880
+  },
+  "wpn_ak74u_custom_1p29": {
+    "name": "st_wpn_ak74u_custom",
+    "price": 23880
+  },
+  "wpn_ak74u_custom_kobra": {
+    "name": "st_wpn_ak74u_custom",
+    "price": 23880
+  },
+  "wpn_ak74u_custom_ps01": {
+    "name": "st_wpn_ak74u_custom",
+    "price": 23880
+  },
+  "wpn_ak74u_kobra": {
+    "name": "st_wpn_ak74u",
+    "price": 20870
+  },
+  "wpn_ak74u_old": {
+    "name": "st_wpn_ak74u_old",
+    "price": 17860
+  },
+  "wpn_ak74u_ps01": {
+    "name": "st_wpn_ak74u",
+    "price": 20870
+  },
+  "wpn_ak74u_snag": {
+    "name": "st_wpn_ak74u_snag",
+    "price": 28950
+  },
+  "wpn_akm": {
+    "name": "st_wpn_akm",
+    "price": 28780
+  },
+  "wpn_akm_1p29": {
+    "name": "st_wpn_akm",
+    "price": 28780
+  },
+  "wpn_akm_kobra": {
+    "name": "st_wpn_akm",
+    "price": 28780
+  },
+  "wpn_akm_ps01": {
+    "name": "st_wpn_akm",
+    "price": 28780
+  },
+  "wpn_akms": {
+    "name": "st_wpn_akms",
+    "price": 28780
+  },
+  "wpn_akms_1p29": {
+    "name": "st_wpn_akms",
+    "price": 28780
+  },
+  "wpn_akms_alt": {
+    "name": "st_wpn_akms_alt",
+    "price": 26540
+  },
+  "wpn_akms_alt_1p29": {
+    "name": "st_wpn_akms_alt",
+    "price": 26540
+  },
+  "wpn_akms_alt_kobra": {
+    "name": "st_wpn_akms_alt",
+    "price": 26540
+  },
+  "wpn_akms_alt_ps01": {
+    "name": "st_wpn_akms_alt",
+    "price": 26540
+  },
+  "wpn_akms_kobra": {
+    "name": "st_wpn_akms",
+    "price": 28780
+  },
+  "wpn_akms_ps01": {
+    "name": "st_wpn_akms",
+    "price": 28780
+  },
+  "wpn_aks": {
+    "name": "st_wpn_aks",
+    "price": 22650
+  },
+  "wpn_aks74": {
+    "name": "st_wpn_aks74",
+    "price": 25860
+  },
+  "wpn_aks74_1p29": {
+    "name": "st_wpn_aks74",
+    "price": 25860
+  },
+  "wpn_aks74_kobra": {
+    "name": "st_wpn_aks74",
+    "price": 25860
+  },
+  "wpn_aks74_new": {
+    "name": "st_wpn_aks74_new",
+    "price": 26880
+  },
+  "wpn_aks74_new_1p29": {
+    "name": "st_wpn_aks74_new",
+    "price": 26880
+  },
+  "wpn_aks74_new_kobra": {
+    "name": "st_wpn_aks74_new",
+    "price": 26880
+  },
+  "wpn_aks74_new_ps01": {
+    "name": "st_wpn_aks74_new",
+    "price": 26880
+  },
+  "wpn_aks74_ps01": {
+    "name": "st_wpn_aks74",
+    "price": 25860
+  },
+  "wpn_aps": {
+    "name": "st_wpn_aps",
+    "price": 9380
+  },
+  "wpn_ash12": {
+    "name": "st_wpn_ash12",
+    "price": 37100
+  },
+  "wpn_ash12_ac10632": {
+    "name": "st_wpn_ash12",
+    "price": 37100
+  },
+  "wpn_ash12_acog": {
+    "name": "st_wpn_ash12",
+    "price": 37100
+  },
+  "wpn_ash12_c-more": {
+    "name": "st_wpn_ash12",
+    "price": 37100
+  },
+  "wpn_ash12_eot": {
+    "name": "st_wpn_ash12",
+    "price": 37100
+  },
+  "wpn_aug": {
+    "name": "st_wpn_aug",
+    "price": 40680
+  },
+  "wpn_aug_a3": {
+    "name": "st_wpn_aug_a3",
+    "price": 43600
+  },
+  "wpn_aug_a3_ac10632": {
+    "name": "st_wpn_aug_a3",
+    "price": 43600
+  },
+  "wpn_aug_a3_acog": {
+    "name": "st_wpn_aug_a3",
+    "price": 43600
+  },
+  "wpn_aug_a3_c-more": {
+    "name": "st_wpn_aug_a3",
+    "price": 43600
+  },
+  "wpn_aug_a3_eot": {
+    "name": "st_wpn_aug_a3",
+    "price": 43600
+  },
+  "wpn_aug_custom": {
+    "name": "st_wpn_aug_custom",
+    "price": 46580
+  },
+  "wpn_aug_freedom": {
+    "name": "st_wpn_aug_freedom",
+    "price": 43380
+  },
+  "wpn_aug_merc": {
+    "name": "st_wpn_aug_merc",
+    "price": 45180
+  },
+  "wpn_aug_modern": {
+    "name": "st_wpn_aug_modern",
+    "price": 42580
+  },
+  "wpn_axe": {
+    "name": "st_axe",
+    "price": 10550
+  },
+  "wpn_axe2": {
+    "name": "st_axe2",
+    "price": 11455
+  },
+  "wpn_axe3": {
+    "name": "st_axe3",
+    "price": 12455
+  },
+  "wpn_beretta": {
+    "name": "st_wpn_beretta",
+    "price": 7120
+  },
+  "wpn_beretta_alt": {
+    "name": "st_wpn_beretta_alt",
+    "price": 8290
+  },
+  "wpn_beretta_camo": {
+    "name": "st_wpn_beretta_camo",
+    "price": 11650
+  },
+  "wpn_beretta_modern": {
+    "name": "st_wpn_beretta_modern",
+    "price": 9390
+  },
+  "wpn_binoc": {
+    "name": "st_binocular_name",
+    "price": 1580
+  },
+  "wpn_binoc_inv": {
+    "name": "st_binocular_name",
+    "price": 1580
+  },
+  "wpn_bizon": {
+    "name": "st_wpn_bizon",
+    "price": 18560
+  },
+  "wpn_bizon_1p29": {
+    "name": "st_wpn_bizon",
+    "price": 18560
+  },
+  "wpn_bizon_kobra": {
+    "name": "st_wpn_bizon",
+    "price": 18560
+  },
+  "wpn_bizon_ps01": {
+    "name": "st_wpn_bizon",
+    "price": 18560
+  },
+  "wpn_bm16": {
+    "name": "st_wpn_bm16",
+    "price": 10650
+  },
+  "wpn_bm16_alt": {
+    "name": "st_wpn_bm16_alt",
+    "price": 12850
+  },
+  "wpn_bm16_full": {
+    "name": "st_wpn_bm16_full",
+    "price": 15480
+  },
+  "wpn_bm16_full_alt": {
+    "name": "st_wpn_bm16_full_alt",
+    "price": 18250
+  },
+  "wpn_colt1911": {
+    "name": "st_wpn_colt1911",
+    "price": 8560
+  },
+  "wpn_colt1911_alt": {
+    "name": "st_wpn_colt1911_alt",
+    "price": 11280
+  },
+  "wpn_colt1911_camo": {
+    "name": "st_wpn_colt1911_camo",
+    "price": 13880
+  },
+  "wpn_colt1911_custom": {
+    "name": "st_wpn_colt1911_custom",
+    "price": 12550
+  },
+  "wpn_colt1911_duty": {
+    "name": "st_wpn_colt1911_duty",
+    "price": 14580
+  },
+  "wpn_colt1911_merc": {
+    "name": "st_wpn_colt1911_merc",
+    "price": 14860
+  },
+  "wpn_colt1911_modern": {
+    "name": "st_wpn_colt1911_modern",
+    "price": 12380
+  },
+  "wpn_colt1911_new": {
+    "name": "st_wpn_colt1911_new",
+    "price": 10480
+  },
+  "wpn_colt_kimber": {
+    "name": "st_wpn_colt_kimber",
+    "price": 15860
+  },
+  "wpn_cz52": {
+    "name": "st_wpn_cz52",
+    "price": 9850
+  },
+  "wpn_cz75": {
+    "name": "st_wpn_cz75",
+    "price": 9850
+  },
+  "wpn_cz75_auto": {
+    "name": "st_wpn_cz75_auto",
+    "price": 11650
+  },
+  "wpn_desert_eagle": {
+    "name": "st_wpn_desert_eagle",
+    "price": 19680
+  },
+  "wpn_desert_eagle_custom": {
+    "name": "st_wpn_desert_eagle_custom",
+    "price": 23580
+  },
+  "wpn_desert_eagle_modern": {
+    "name": "st_wpn_desert_eagle_modern",
+    "price": 22250
+  },
+  "wpn_desert_eagle_nimble": {
+    "name": "st_wpn_desert_eagle_nimble",
+    "price": 25880
+  },
+  "wpn_fake_missile": {
+    "name": "ammo-vog-25",
+    "price": 150
+  },
+  "wpn_fake_missile1": {
+    "name": "ammo-vog-25p",
+    "price": 150
+  },
+  "wpn_fake_missile2": {
+    "name": "ammo-m209",
+    "price": 150
+  },
+  "wpn_fal": {
+    "name": "st_wpn_fal",
+    "price": 31300
+  },
+  "wpn_fal_ac10632": {
+    "name": "st_wpn_fal",
+    "price": 31300
+  },
+  "wpn_fal_acog": {
+    "name": "st_wpn_fal",
+    "price": 31300
+  },
+  "wpn_fal_c-more": {
+    "name": "st_wpn_fal",
+    "price": 31300
+  },
+  "wpn_fal_eot": {
+    "name": "st_wpn_fal",
+    "price": 31300
+  },
+  "wpn_famas3": {
+    "name": "st_wpn_famas3",
+    "price": 44900
+  },
+  "wpn_famas3_ac10632": {
+    "name": "st_wpn_famas3",
+    "price": 44900
+  },
+  "wpn_famas3_acog": {
+    "name": "st_wpn_famas3",
+    "price": 44900
+  },
+  "wpn_famas3_eot": {
+    "name": "st_wpn_famas3",
+    "price": 44900
+  },
+  "wpn_fn2000": {
+    "name": "st_wpn_fn2000",
+    "price": 45880
+  },
+  "wpn_fn2000_camo": {
+    "name": "st_wpn_fn2000_camo",
+    "price": 53650
+  },
+  "wpn_fn2000_custom": {
+    "name": "st_wpn_fn2000_custom",
+    "price": 49350
+  },
+  "wpn_fn2000_nimble": {
+    "name": "st_wpn_fn2000_nimble",
+    "price": 48550
+  },
+  "wpn_fn57": {
+    "name": "st_wpn_fn57",
+    "price": 15280
+  },
+  "wpn_fnc": {
+    "name": "st_wpn_fnc",
+    "price": 27000
+  },
+  "wpn_fnp45": {
+    "name": "st_wpn_fnp45",
+    "price": 14860
+  },
+  "wpn_fnp45_custom": {
+    "name": "st_wpn_fnp45_custom",
+    "price": 17550
+  },
+  "wpn_fnx45": {
+    "name": "st_wpn_fnx45",
+    "price": 15880
+  },
+  "wpn_fnx45_alt": {
+    "name": "st_wpn_fnx45_alt",
+    "price": 12850
+  },
+  "wpn_fnx45_custom": {
+    "name": "st_wpn_fnx45_custom",
+    "price": 18650
+  },
+  "wpn_fort": {
+    "name": "st_wpn_fort",
+    "price": 5660
+  },
+  "wpn_fort500": {
+    "name": "st_wpn_fort500",
+    "price": 17700
+  },
+  "wpn_fort_snag": {
+    "name": "st_wpn_fort",
+    "price": 5660
+  },
+  "wpn_g3": {
+    "name": "st_wpn_g3",
+    "price": 39880
+  },
+  "wpn_g36": {
+    "name": "st_wpn_g36",
+    "price": 43880
+  },
+  "wpn_g36_camo": {
+    "name": "st_wpn_g36_camo",
+    "price": 48850
+  },
+  "wpn_g36_nimble": {
+    "name": "st_wpn_g36",
+    "price": 43880
+  },
+  "wpn_g36k": {
+    "name": "st_wpn_g36k",
+    "price": 33860
+  },
+  "wpn_g3_ac10632": {
+    "name": "st_wpn_g3",
+    "price": 39880
+  },
+  "wpn_g3_acog": {
+    "name": "st_wpn_g3",
+    "price": 39880
+  },
+  "wpn_g3_eot": {
+    "name": "st_wpn_g3",
+    "price": 39880
+  },
+  "wpn_g3sg1": {
+    "name": "st_wpn_g3sg1",
+    "price": 43980
+  },
+  "wpn_g43": {
+    "name": "st_wpn_g43",
+    "price": 23980
+  },
+  "wpn_galil": {
+    "name": "st_wpn_galil",
+    "price": 38580
+  },
+  "wpn_galil_custom": {
+    "name": "st_wpn_galil_custom",
+    "price": 41480
+  },
+  "wpn_galil_modern": {
+    "name": "st_wpn_galil_modern",
+    "price": 43680
+  },
+  "wpn_gauss": {
+    "name": "st_wpn_gauss",
+    "price": 85860
+  },
+  "wpn_gauss_quest": {
+    "name": "lttz_ll_wpn_gauss_quest_name",
+    "price": 85860
+  },
+  "wpn_glock": {
+    "name": "st_wpn_glock",
+    "price": 10960
+  },
+  "wpn_glock_custom": {
+    "name": "st_wpn_glock_custom",
+    "price": 13580
+  },
+  "wpn_glock_modern": {
+    "name": "st_wpn_glock_modern",
+    "price": 15680
+  },
+  "wpn_groza": {
+    "name": "st_wpn_groza",
+    "price": 36860
+  },
+  "wpn_groza_nimble": {
+    "name": "st_wpn_groza_nimble",
+    "price": 38580
+  },
+  "wpn_gsh18": {
+    "name": "st_wpn_gsh18",
+    "price": 9680
+  },
+  "wpn_gsh18_custom": {
+    "name": "st_wpn_gsh18_custom",
+    "price": 11580
+  },
+  "wpn_hk416": {
+    "name": "st_wpn_hk416",
+    "price": 49580
+  },
+  "wpn_hk416_ac10632": {
+    "name": "st_wpn_hk416",
+    "price": 49580
+  },
+  "wpn_hk416_acog": {
+    "name": "st_wpn_hk416",
+    "price": 49580
+  },
+  "wpn_hk416_eot": {
+    "name": "st_wpn_hk416",
+    "price": 49580
+  },
+  "wpn_hk417": {
+    "name": "st_wpn_hk417",
+    "price": 35000
+  },
+  "wpn_hk417_acog": {
+    "name": "st_wpn_hk417",
+    "price": 35000
+  },
+  "wpn_hk417_eot": {
+    "name": "st_wpn_hk417",
+    "price": 35000
+  },
+  "wpn_hpsa": {
+    "name": "st_wpn_hpsa",
+    "price": 8650
+  },
+  "wpn_hpsa_alt": {
+    "name": "st_wpn_hpsa_alt",
+    "price": 9960
+  },
+  "wpn_k98": {
+    "name": "st_wpn_k98",
+    "price": 22590
+  },
+  "wpn_kiparis": {
+    "name": "st_wpn_kiparis",
+    "price": 16880
+  },
+  "wpn_knife": {
+    "name": "st_knife_6x4",
+    "price": 2085
+  },
+  "wpn_knife2": {
+    "name": "st_knife_needle",
+    "price": 3960
+  },
+  "wpn_knife3": {
+    "name": "st_knife_hunting",
+    "price": 6825
+  },
+  "wpn_knife4": {
+    "name": "st_knife_swat",
+    "price": 12425
+  },
+  "wpn_knife5": {
+    "name": "st_knife_combat",
+    "price": 15585
+  },
+  "wpn_l85": {
+    "name": "st_wpn_l85",
+    "price": 33860
+  },
+  "wpn_l85_alt": {
+    "name": "st_wpn_l85_alt",
+    "price": 35680
+  },
+  "wpn_l85_custom": {
+    "name": "st_wpn_l85_custom",
+    "price": 40580
+  },
+  "wpn_l85_modern": {
+    "name": "st_wpn_l85_modern",
+    "price": 38980
+  },
+  "wpn_l85a2": {
+    "name": "st_wpn_l85a2",
+    "price": 35860
+  },
+  "wpn_l85a2_alt": {
+    "name": "st_wpn_l85a2_alt",
+    "price": 36980
+  },
+  "wpn_l85a2_custom": {
+    "name": "st_wpn_l85a2_custom",
+    "price": 41560
+  },
+  "wpn_l85a2_modern": {
+    "name": "st_wpn_l85a2_modern",
+    "price": 38580
+  },
+  "wpn_l96a1": {
+    "name": "st_wpn_l96a1",
+    "price": 65880
+  },
+  "wpn_l96a1m": {
+    "name": "st_wpn_l96a1m",
+    "price": 76580
+  },
+  "wpn_lr300": {
+    "name": "st_wpn_lr300",
+    "price": 26480
+  },
+  "wpn_lr300_ac10632": {
+    "name": "st_wpn_lr300",
+    "price": 26480
+  },
+  "wpn_lr300_acog": {
+    "name": "st_wpn_lr300",
+    "price": 26480
+  },
+  "wpn_lr300_camo": {
+    "name": "st_wpn_lr300_camo",
+    "price": 36880
+  },
+  "wpn_lr300_camo_ac10632": {
+    "name": "st_wpn_lr300_camo",
+    "price": 36880
+  },
+  "wpn_lr300_camo_acog": {
+    "name": "st_wpn_lr300_camo",
+    "price": 36880
+  },
+  "wpn_lr300_camo_eot": {
+    "name": "st_wpn_lr300_camo",
+    "price": 36880
+  },
+  "wpn_lr300_custom": {
+    "name": "st_wpn_lr300_custom",
+    "price": 33550
+  },
+  "wpn_lr300_custom_ac10632": {
+    "name": "st_wpn_lr300_custom",
+    "price": 33550
+  },
+  "wpn_lr300_custom_acog": {
+    "name": "st_wpn_lr300_custom",
+    "price": 33550
+  },
+  "wpn_lr300_custom_eot": {
+    "name": "st_wpn_lr300_custom",
+    "price": 33550
+  },
+  "wpn_lr300_eot": {
+    "name": "st_wpn_lr300",
+    "price": 26480
+  },
+  "wpn_m16": {
+    "name": "st_wpn_m16",
+    "price": 35690
+  },
+  "wpn_m16_ac10632": {
+    "name": "st_wpn_m16",
+    "price": 35690
+  },
+  "wpn_m16_acog": {
+    "name": "st_wpn_m16",
+    "price": 35690
+  },
+  "wpn_m16_eot": {
+    "name": "st_wpn_m16",
+    "price": 35690
+  },
+  "wpn_m16a2": {
+    "name": "st_wpn_m16a2",
+    "price": 35880
+  },
+  "wpn_m24": {
+    "name": "st_wpn_m24",
+    "price": 76680
+  },
+  "wpn_m249": {
+    "name": "st_wpn_m249",
+    "price": 56580
+  },
+  "wpn_m249_ac10632": {
+    "name": "st_wpn_m249",
+    "price": 56580
+  },
+  "wpn_m249_acog": {
+    "name": "st_wpn_m249",
+    "price": 56580
+  },
+  "wpn_m249_eot": {
+    "name": "st_wpn_m249",
+    "price": 56580
+  },
+  "wpn_m4": {
+    "name": "st_wpn_m4",
+    "price": 35560
+  },
+  "wpn_m4_ac10632": {
+    "name": "st_wpn_m4",
+    "price": 35560
+  },
+  "wpn_m4_acog": {
+    "name": "st_wpn_m4",
+    "price": 35560
+  },
+  "wpn_m4_eot": {
+    "name": "st_wpn_m4",
+    "price": 35560
+  },
+  "wpn_m4a1": {
+    "name": "st_wpn_m4a1",
+    "price": 29560
+  },
+  "wpn_m4a1_ac10632": {
+    "name": "st_wpn_m4a1",
+    "price": 29560
+  },
+  "wpn_m4a1_acog": {
+    "name": "st_wpn_m4a1",
+    "price": 29560
+  },
+  "wpn_m4a1_camo": {
+    "name": "st_wpn_m4a1_camo",
+    "price": 38680
+  },
+  "wpn_m4a1_camo_ac10632": {
+    "name": "st_wpn_m4a1_camo",
+    "price": 38680
+  },
+  "wpn_m4a1_camo_acog": {
+    "name": "st_wpn_m4a1_camo",
+    "price": 38680
+  },
+  "wpn_m4a1_camo_eot": {
+    "name": "st_wpn_m4a1_camo",
+    "price": 38680
+  },
+  "wpn_m4a1_custom": {
+    "name": "st_wpn_m4a1_custom",
+    "price": 35980
+  },
+  "wpn_m4a1_custom_ac10632": {
+    "name": "st_wpn_m4a1_custom",
+    "price": 35980
+  },
+  "wpn_m4a1_custom_acog": {
+    "name": "st_wpn_m4a1_custom",
+    "price": 35980
+  },
+  "wpn_m4a1_custom_eot": {
+    "name": "st_wpn_m4a1_custom",
+    "price": 35980
+  },
+  "wpn_m4a1_eot": {
+    "name": "st_wpn_m4a1",
+    "price": 29560
+  },
+  "wpn_m4a1_freedom": {
+    "name": "st_wpn_m4a1_freedom",
+    "price": 33350
+  },
+  "wpn_m4a1_freedom_ac10632": {
+    "name": "st_wpn_m4a1_freedom",
+    "price": 33350
+  },
+  "wpn_m4a1_freedom_acog": {
+    "name": "st_wpn_m4a1_freedom",
+    "price": 33350
+  },
+  "wpn_m4a1_freedom_eot": {
+    "name": "st_wpn_m4a1_freedom",
+    "price": 33350
+  },
+  "wpn_m60": {
+    "name": "st_wpn_m60",
+    "price": 67000
+  },
+  "wpn_m79": {
+    "name": "st_wpn_m79",
+    "price": 26840
+  },
+  "wpn_m82": {
+    "name": "st_wpn_m82",
+    "price": 50000
+  },
+  "wpn_m98b": {
+    "name": "st_wpn_m98b",
+    "price": 88980
+  },
+  "wpn_mine": {
+    "name": "st_wpn_mine_name",
+    "price": 1000
+  },
+  "wpn_mk14": {
+    "name": "st_wpn_mk14",
+    "price": 40000
+  },
+  "wpn_mk14_ac10632": {
+    "name": "st_wpn_mk14",
+    "price": 40000
+  },
+  "wpn_mk14_acog": {
+    "name": "st_wpn_mk14",
+    "price": 40000
+  },
+  "wpn_mk14_c-more": {
+    "name": "st_wpn_mk14",
+    "price": 40000
+  },
+  "wpn_mk14_eot": {
+    "name": "st_wpn_mk14",
+    "price": 40000
+  },
+  "wpn_mosin": {
+    "name": "st_wpn_mosin",
+    "price": 21560
+  },
+  "wpn_mossberg590": {
+    "name": "st_wpn_mossberg590",
+    "price": 24850
+  },
+  "wpn_mp133": {
+    "name": "st_wpn_mp133",
+    "price": 19960
+  },
+  "wpn_mp153": {
+    "name": "st_wpn_mp153",
+    "price": 30580
+  },
+  "wpn_mp412": {
+    "name": "st_wpn_mp412",
+    "price": 14680
+  },
+  "wpn_mp443": {
+    "name": "st_wpn_grach",
+    "price": 11580
+  },
+  "wpn_mp5": {
+    "name": "st_wpn_mp5",
+    "price": 20380
+  },
+  "wpn_mp5_ac10632": {
+    "name": "st_wpn_mp5",
+    "price": 20380
+  },
+  "wpn_mp5_acog": {
+    "name": "st_wpn_mp5",
+    "price": 20380
+  },
+  "wpn_mp5_alt": {
+    "name": "st_wpn_mp5_alt",
+    "price": 22350
+  },
+  "wpn_mp5_alt_ac10632": {
+    "name": "st_wpn_mp5_alt",
+    "price": 22350
+  },
+  "wpn_mp5_alt_acog": {
+    "name": "st_wpn_mp5_alt",
+    "price": 22350
+  },
+  "wpn_mp5_alt_eot": {
+    "name": "st_wpn_mp5_alt",
+    "price": 22350
+  },
+  "wpn_mp5_custom": {
+    "name": "st_wpn_mp5_custom",
+    "price": 23680
+  },
+  "wpn_mp5_custom_ac10632": {
+    "name": "st_wpn_mp5_custom",
+    "price": 23680
+  },
+  "wpn_mp5_custom_acog": {
+    "name": "st_wpn_mp5_custom",
+    "price": 23680
+  },
+  "wpn_mp5_custom_eot": {
+    "name": "st_wpn_mp5_custom",
+    "price": 23680
+  },
+  "wpn_mp5_eot": {
+    "name": "st_wpn_mp5",
+    "price": 20380
+  },
+  "wpn_mp5_nimble": {
+    "name": "st_wpn_mp5_nimble",
+    "price": 28950
+  },
+  "wpn_mp5_nimble_ac10632": {
+    "name": "st_wpn_mp5_nimble",
+    "price": 28950
+  },
+  "wpn_mp5_nimble_acog": {
+    "name": "st_wpn_mp5_nimble",
+    "price": 28950
+  },
+  "wpn_mp5_nimble_eot": {
+    "name": "st_wpn_mp5_nimble",
+    "price": 28950
+  },
+  "wpn_mp5sd": {
+    "name": "st_wpn_mp5sd",
+    "price": 21880
+  },
+  "wpn_mp5sd_ac10632": {
+    "name": "st_wpn_mp5sd",
+    "price": 21880
+  },
+  "wpn_mp5sd_acog": {
+    "name": "st_wpn_mp5sd",
+    "price": 21880
+  },
+  "wpn_mp5sd_custom": {
+    "name": "st_wpn_mp5sd_custom",
+    "price": 24560
+  },
+  "wpn_mp5sd_custom_ac10632": {
+    "name": "st_wpn_mp5sd_custom",
+    "price": 24560
+  },
+  "wpn_mp5sd_custom_acog": {
+    "name": "st_wpn_mp5sd_custom",
+    "price": 24560
+  },
+  "wpn_mp5sd_custom_eot": {
+    "name": "st_wpn_mp5sd_custom",
+    "price": 24560
+  },
+  "wpn_mp5sd_eot": {
+    "name": "st_wpn_mp5sd",
+    "price": 21880
+  },
+  "wpn_mp5sd_new": {
+    "name": "st_wpn_mp5sd_new",
+    "price": 22650
+  },
+  "wpn_mp5sd_new_ac10632": {
+    "name": "st_wpn_mp5sd_new",
+    "price": 22650
+  },
+  "wpn_mp5sd_new_acog": {
+    "name": "st_wpn_mp5sd_new",
+    "price": 22650
+  },
+  "wpn_mp5sd_new_eot": {
+    "name": "st_wpn_mp5sd_new",
+    "price": 22650
+  },
+  "wpn_mp7": {
+    "name": "st_wpn_mp7",
+    "price": 23300
+  },
+  "wpn_mp7_ac10632": {
+    "name": "st_wpn_mp7",
+    "price": 23300
+  },
+  "wpn_mp7_acog": {
+    "name": "st_wpn_mp7",
+    "price": 23300
+  },
+  "wpn_mp7_c-more": {
+    "name": "st_wpn_mp7",
+    "price": 23300
+  },
+  "wpn_mp7_eot": {
+    "name": "st_wpn_mp7",
+    "price": 23300
+  },
+  "wpn_oc33": {
+    "name": "st_wpn_oc33",
+    "price": 8860
+  },
+  "wpn_p90": {
+    "name": "st_wpn_p90",
+    "price": 39880
+  },
+  "wpn_p90_ac10632": {
+    "name": "st_wpn_p90",
+    "price": 39880
+  },
+  "wpn_p90_acog": {
+    "name": "st_wpn_p90",
+    "price": 39880
+  },
+  "wpn_p90_eot": {
+    "name": "st_wpn_p90",
+    "price": 39880
+  },
+  "wpn_pb": {
+    "name": "st_wpn_pb",
+    "price": 6580
+  },
+  "wpn_pb_custom": {
+    "name": "st_wpn_pb_custom",
+    "price": 8190
+  },
+  "wpn_pkm": {
+    "name": "st_wpn_rp",
+    "price": 53850
+  },
+  "wpn_pkm_zulus": {
+    "name": "st_wpn_pkm_zulus",
+    "price": 58960
+  },
+  "wpn_pkp": {
+    "name": "st_wpn_pkp",
+    "price": 61880
+  },
+  "wpn_pm": {
+    "name": "st_wpn_pm",
+    "price": 4890
+  },
+  "wpn_pm_actor": {
+    "name": "st_wpn_pm_actor",
+    "price": 7130
+  },
+  "wpn_pm_custom": {
+    "name": "st_wpn_pm_custom",
+    "price": 6890
+  },
+  "wpn_pmm": {
+    "name": "st_wpn_pmm",
+    "price": 7580
+  },
+  "wpn_pp2000": {
+    "name": "st_wpn_pp2000",
+    "price": 19650
+  },
+  "wpn_pp2000_ac10632": {
+    "name": "st_wpn_pp2000",
+    "price": 19650
+  },
+  "wpn_pp2000_acog": {
+    "name": "st_wpn_pp2000",
+    "price": 19650
+  },
+  "wpn_pp2000_eot": {
+    "name": "st_wpn_pp2000",
+    "price": 19650
+  },
+  "wpn_ppsh41": {
+    "name": "st_wpn_ppsh41",
+    "price": 15840
+  },
+  "wpn_ppsh41_rednew": {
+    "name": "st_wpn_ppsh41_camo",
+    "price": 20580
+  },
+  "wpn_ppsh41_woodnew": {
+    "name": "st_wpn_ppsh41_new",
+    "price": 18180
+  },
+  "wpn_protecta": {
+    "name": "st_wpn_protecta",
+    "price": 28550
+  },
+  "wpn_protecta_aim": {
+    "name": "st_wpn_protecta_aim",
+    "price": 33780
+  },
+  "wpn_protecta_camo": {
+    "name": "st_wpn_protecta_camo",
+    "price": 33850
+  },
+  "wpn_protecta_custom": {
+    "name": "st_wpn_protecta_custom",
+    "price": 30650
+  },
+  "wpn_protecta_nimble": {
+    "name": "st_wpn_protecta_nimble",
+    "price": 32680
+  },
+  "wpn_remington700": {
+    "name": "st_wpn_remington700",
+    "price": 33000
+  },
+  "wpn_remington870": {
+    "name": "st_wpn_remington870",
+    "price": 23600
+  },
+  "wpn_remington870_ac10632": {
+    "name": "st_wpn_remington870",
+    "price": 23600
+  },
+  "wpn_remington870_c-more": {
+    "name": "st_wpn_remington870",
+    "price": 23600
+  },
+  "wpn_remington870_eot": {
+    "name": "st_wpn_remington870",
+    "price": 23600
+  },
+  "wpn_rg-6": {
+    "name": "st_wpn_rg6",
+    "price": 38850
+  },
+  "wpn_rpd": {
+    "name": "st_wpn_rpd",
+    "price": 24580
+  },
+  "wpn_rpg7": {
+    "name": "st_wpn_rpg7",
+    "price": 29800
+  },
+  "wpn_rpg7_missile": {
+    "name": "\"Og-7b\"",
+    "price": 200
+  },
+  "wpn_rpk": {
+    "name": "st_wpn_rpk",
+    "price": 35860
+  },
+  "wpn_rpk74": {
+    "name": "st_wpn_rpk74",
+    "price": 38980
+  },
+  "wpn_rpk74_1p29": {
+    "name": "st_wpn_rpk74",
+    "price": 38980
+  },
+  "wpn_rpk74_kobra": {
+    "name": "st_wpn_rpk74",
+    "price": 38980
+  },
+  "wpn_rpk74_ps01": {
+    "name": "st_wpn_rpk74",
+    "price": 38980
+  },
+  "wpn_saiga12s": {
+    "name": "st_wpn_saiga12s",
+    "price": 31680
+  },
+  "wpn_saiga12s_1p29": {
+    "name": "st_wpn_saiga12s",
+    "price": 31680
+  },
+  "wpn_saiga12s_kobra": {
+    "name": "st_wpn_saiga12s",
+    "price": 31680
+  },
+  "wpn_saiga12s_ps01": {
+    "name": "st_wpn_saiga12s",
+    "price": 31680
+  },
+  "wpn_scar": {
+    "name": "st_wpn_scar",
+    "price": 55880
+  },
+  "wpn_scar_ac10632": {
+    "name": "st_wpn_scar",
+    "price": 55880
+  },
+  "wpn_scar_acog": {
+    "name": "st_wpn_scar",
+    "price": 55880
+  },
+  "wpn_scar_custom": {
+    "name": "st_wpn_scar_custom",
+    "price": 63580
+  },
+  "wpn_scar_custom_ac10632": {
+    "name": "st_wpn_scar_custom",
+    "price": 63580
+  },
+  "wpn_scar_custom_acog": {
+    "name": "st_wpn_scar_custom",
+    "price": 63580
+  },
+  "wpn_scar_custom_eot": {
+    "name": "st_wpn_scar_custom",
+    "price": 63580
+  },
+  "wpn_scar_eot": {
+    "name": "st_wpn_scar",
+    "price": 55880
+  },
+  "wpn_scar_new": {
+    "name": "st_wpn_scar_new",
+    "price": 58880
+  },
+  "wpn_scar_new_ac10632": {
+    "name": "st_wpn_scar_new",
+    "price": 58880
+  },
+  "wpn_scar_new_acog": {
+    "name": "st_wpn_scar_new",
+    "price": 58880
+  },
+  "wpn_scar_new_eot": {
+    "name": "st_wpn_scar_new",
+    "price": 58880
+  },
+  "wpn_sig220": {
+    "name": "st_wpn_sig220",
+    "price": 12980
+  },
+  "wpn_sig220_custom": {
+    "name": "st_wpn_sig220_custom",
+    "price": 15880
+  },
+  "wpn_sig220_nimble": {
+    "name": "st_wpn_sig220_nimble",
+    "price": 18560
+  },
+  "wpn_sig550": {
+    "name": "st_wpn_sig550",
+    "price": 43580
+  },
+  "wpn_sig550_ac10632": {
+    "name": "st_wpn_sig550",
+    "price": 43580
+  },
+  "wpn_sig550_acog": {
+    "name": "st_wpn_sig550",
+    "price": 43580
+  },
+  "wpn_sig550_camo": {
+    "name": "st_wpn_sig550_camo",
+    "price": 50860
+  },
+  "wpn_sig550_camo_ac10632": {
+    "name": "st_wpn_sig550_camo",
+    "price": 50860
+  },
+  "wpn_sig550_camo_acog": {
+    "name": "st_wpn_sig550_camo",
+    "price": 50860
+  },
+  "wpn_sig550_camo_eot": {
+    "name": "st_wpn_sig550_camo",
+    "price": 50860
+  },
+  "wpn_sig550_custom": {
+    "name": "st_wpn_sig550_custom",
+    "price": 45860
+  },
+  "wpn_sig550_custom_ac10632": {
+    "name": "st_wpn_sig550_custom",
+    "price": 45860
+  },
+  "wpn_sig550_custom_acog": {
+    "name": "st_wpn_sig550_custom",
+    "price": 45860
+  },
+  "wpn_sig550_custom_eot": {
+    "name": "st_wpn_sig550_custom",
+    "price": 45860
+  },
+  "wpn_sig550_eot": {
+    "name": "st_wpn_sig550",
+    "price": 43580
+  },
+  "wpn_sig550_luckygun": {
+    "name": "st_wpn_sig550_strelok",
+    "price": 51980
+  },
+  "wpn_sig550_luckygun_ac10632": {
+    "name": "st_wpn_sig550_strelok",
+    "price": 51980
+  },
+  "wpn_sig550_luckygun_acog": {
+    "name": "st_wpn_sig550_strelok",
+    "price": 51980
+  },
+  "wpn_sig550_luckygun_eot": {
+    "name": "st_wpn_sig550_strelok",
+    "price": 51980
+  },
+  "wpn_sig550_sniper": {
+    "name": "st_wpn_sig550_sniper",
+    "price": 49560
+  },
+  "wpn_sig552": {
+    "name": "st_wpn_sig552",
+    "price": 32580
+  },
+  "wpn_sig552_ac10632": {
+    "name": "st_wpn_sig552",
+    "price": 32580
+  },
+  "wpn_sig552_acog": {
+    "name": "st_wpn_sig552",
+    "price": 32580
+  },
+  "wpn_sig552_eot": {
+    "name": "st_wpn_sig552",
+    "price": 32580
+  },
+  "wpn_sil_45": {
+    "name": "st_addon_sil_45",
+    "price": 1800
+  },
+  "wpn_sil_57": {
+    "name": "st_addon_sil_57",
+    "price": 1900
+  },
+  "wpn_sil_6p9": {
+    "name": "st_addon_sil_6p9",
+    "price": 1000
+  },
+  "wpn_sil_9a91": {
+    "name": "st_addon_sil_9a91",
+    "price": 2300
+  },
+  "wpn_sil_9mm": {
+    "name": "st_addon_sil_9mm",
+    "price": 1480
+  },
+  "wpn_sil_aps": {
+    "name": "st_addon_sil_aps",
+    "price": 1000
+  },
+  "wpn_sil_atg": {
+    "name": "st_addon_sil_atg",
+    "price": 2500
+  },
+  "wpn_sil_gemtech": {
+    "name": "st_addon_sil_gemtech",
+    "price": 2100
+  },
+  "wpn_sil_kzrzp": {
+    "name": "st_addon_sil_kzrzp",
+    "price": 2600
+  },
+  "wpn_sil_nato": {
+    "name": "st_addon_sil_nato",
+    "price": 2200
+  },
+  "wpn_sil_pbs1": {
+    "name": "st_addon_sil_pbs1",
+    "price": 2200
+  },
+  "wpn_sil_pbs4": {
+    "name": "st_addon_sil_pbs4",
+    "price": 2300
+  },
+  "wpn_sil_sr25": {
+    "name": "st_addon_sil_sr25",
+    "price": 2350
+  },
+  "wpn_sil_tgp-a": {
+    "name": "st_addon_sil_tgp-a",
+    "price": 2000
+  },
+  "wpn_sil_vihr": {
+    "name": "st_addon_sil_vihr",
+    "price": 2300
+  },
+  "wpn_sks": {
+    "name": "st_wpn_sks",
+    "price": 19580
+  },
+  "wpn_sks_modern": {
+    "name": "st_wpn_sks_modern",
+    "price": 22960
+  },
+  "wpn_spas12": {
+    "name": "st_wpn_spas12",
+    "price": 29390
+  },
+  "wpn_spas12_custom": {
+    "name": "st_wpn_spas12_custom",
+    "price": 32580
+  },
+  "wpn_spas12_nimble": {
+    "name": "st_wpn_spas12_nimble",
+    "price": 34860
+  },
+  "wpn_sr25": {
+    "name": "st_wpn_sr25",
+    "price": 50780
+  },
+  "wpn_sv98": {
+    "name": "st_wpn_sv98",
+    "price": 58580
+  },
+  "wpn_sv98_custom": {
+    "name": "st_wpn_sv98_custom",
+    "price": 63680
+  },
+  "wpn_svd": {
+    "name": "st_wpn_svd",
+    "price": 40550
+  },
+  "wpn_svd_1p29": {
+    "name": "st_wpn_svd",
+    "price": 40550
+  },
+  "wpn_svd_custom": {
+    "name": "st_wpn_svd_custom",
+    "price": 45360
+  },
+  "wpn_svd_custom_1p29": {
+    "name": "st_wpn_svd_custom",
+    "price": 45360
+  },
+  "wpn_svd_custom_kobra": {
+    "name": "st_wpn_svd_custom",
+    "price": 45360
+  },
+  "wpn_svd_custom_ps01": {
+    "name": "st_wpn_svd_custom",
+    "price": 45360
+  },
+  "wpn_svd_kobra": {
+    "name": "st_wpn_svd",
+    "price": 40550
+  },
+  "wpn_svd_nimble": {
+    "name": "st_wpn_svd_nimble",
+    "price": 55880
+  },
+  "wpn_svd_ps01": {
+    "name": "st_wpn_svd",
+    "price": 40550
+  },
+  "wpn_svt40": {
+    "name": "st_wpn_svt40",
+    "price": 24850
+  },
+  "wpn_svt40_modern": {
+    "name": "st_wpn_svt40_modern",
+    "price": 26350
+  },
+  "wpn_svu": {
+    "name": "st_wpn_svu",
+    "price": 43860
+  },
+  "wpn_svu_1p29": {
+    "name": "st_wpn_svu",
+    "price": 43860
+  },
+  "wpn_svu_alt": {
+    "name": "st_wpn_svu_alt",
+    "price": 48850
+  },
+  "wpn_svu_alt_1p29": {
+    "name": "st_wpn_svu_alt",
+    "price": 48850
+  },
+  "wpn_svu_alt_kobra": {
+    "name": "st_wpn_svu_alt",
+    "price": 48850
+  },
+  "wpn_svu_alt_ps01": {
+    "name": "st_wpn_svu_alt",
+    "price": 48850
+  },
+  "wpn_svu_kobra": {
+    "name": "st_wpn_svu",
+    "price": 43860
+  },
+  "wpn_svu_nimble": {
+    "name": "st_wpn_svu_nimble",
+    "price": 48580
+  },
+  "wpn_svu_nimble_1p29": {
+    "name": "st_wpn_svu_nimble",
+    "price": 48580
+  },
+  "wpn_svu_nimble_kobra": {
+    "name": "st_wpn_svu_nimble",
+    "price": 48580
+  },
+  "wpn_svu_nimble_ps01": {
+    "name": "st_wpn_svu_nimble",
+    "price": 48580
+  },
+  "wpn_svu_ps01": {
+    "name": "st_wpn_svu",
+    "price": 43860
+  },
+  "wpn_toz34": {
+    "name": "st_wpn_toz34",
+    "price": 14800
+  },
+  "wpn_toz34_bull": {
+    "name": "st_wpn_toz34_bull",
+    "price": 98950
+  },
+  "wpn_toz34_custom": {
+    "name": "st_wpn_toz34_custom",
+    "price": 16680
+  },
+  "wpn_toz34_decor": {
+    "name": "st_wpn_toz34_decor",
+    "price": 18550
+  },
+  "wpn_toz34_mark4": {
+    "name": "st_wpn_toz34_mark4",
+    "price": 36860
+  },
+  "wpn_toz34_obrez": {
+    "name": "st_wpn_toz34_obrez",
+    "price": 9860
+  },
+  "wpn_toz34_obrez_custom": {
+    "name": "st_wpn_toz34_obrez_custom",
+    "price": 12690
+  },
+  "wpn_toz34_obrez_decor": {
+    "name": "st_wpn_toz34_obrez_decor",
+    "price": 13880
+  },
+  "wpn_trg": {
+    "name": "st_trg_sako",
+    "price": 71880
+  },
+  "wpn_tt33": {
+    "name": "st_wpn_tt33",
+    "price": 9860
+  },
+  "wpn_tt33_modern": {
+    "name": "st_wpn_tt33_modern",
+    "price": 12350
+  },
+  "wpn_type63": {
+    "name": "st_wpn_type63",
+    "price": 17880
+  },
+  "wpn_ump45": {
+    "name": "st_wpn_ump45",
+    "price": 28980
+  },
+  "wpn_ump45_ac10632": {
+    "name": "st_wpn_ump45",
+    "price": 28980
+  },
+  "wpn_ump45_acog": {
+    "name": "st_wpn_ump45",
+    "price": 28980
+  },
+  "wpn_ump45_custom": {
+    "name": "st_wpn_ump45_custom",
+    "price": 33880
+  },
+  "wpn_ump45_custom_ac10632": {
+    "name": "st_wpn_ump45_custom",
+    "price": 33880
+  },
+  "wpn_ump45_custom_acog": {
+    "name": "st_wpn_ump45_custom",
+    "price": 33880
+  },
+  "wpn_ump45_custom_eot": {
+    "name": "st_wpn_ump45_custom",
+    "price": 33880
+  },
+  "wpn_ump45_eot": {
+    "name": "st_wpn_ump45",
+    "price": 28980
+  },
+  "wpn_upd": {
+    "name": "st_upd",
+    "price": 3880
+  },
+  "wpn_usas12": {
+    "name": "st_wpn_usas12",
+    "price": 38660
+  },
+  "wpn_usp": {
+    "name": "st_wpn_usp",
+    "price": 10960
+  },
+  "wpn_usp_custom": {
+    "name": "st_wpn_usp_custom",
+    "price": 13580
+  },
+  "wpn_usp_match": {
+    "name": "st_wpn_usp_match",
+    "price": 15360
+  },
+  "wpn_usp_nimble": {
+    "name": "st_wpn_usp_nimble",
+    "price": 17690
+  },
+  "wpn_val": {
+    "name": "st_wpn_val",
+    "price": 38860
+  },
+  "wpn_val_1p29": {
+    "name": "st_wpn_val",
+    "price": 38860
+  },
+  "wpn_val_kobra": {
+    "name": "st_wpn_val",
+    "price": 38860
+  },
+  "wpn_val_modern": {
+    "name": "st_wpn_val_modern",
+    "price": 41580
+  },
+  "wpn_val_modern_1p29": {
+    "name": "st_wpn_val_modern",
+    "price": 41580
+  },
+  "wpn_val_modern_kobra": {
+    "name": "st_wpn_val_modern",
+    "price": 41580
+  },
+  "wpn_val_modern_ps01": {
+    "name": "st_wpn_val_modern",
+    "price": 41580
+  },
+  "wpn_val_pso1m21": {
+    "name": "st_wpn_val",
+    "price": 38860
+  },
+  "wpn_vepr": {
+    "name": "st_wpn_vepr12",
+    "price": 36980
+  },
+  "wpn_vepr_1p29": {
+    "name": "st_wpn_vepr12",
+    "price": 36980
+  },
+  "wpn_vepr_kobra": {
+    "name": "st_wpn_vepr12",
+    "price": 36980
+  },
+  "wpn_vepr_ps01": {
+    "name": "st_wpn_vepr12",
+    "price": 36980
+  },
+  "wpn_vihr": {
+    "name": "st_wpn_vihr",
+    "price": 30580
+  },
+  "wpn_vihr_1p29": {
+    "name": "st_wpn_vihr",
+    "price": 30580
+  },
+  "wpn_vihr_kobra": {
+    "name": "st_wpn_vihr",
+    "price": 30580
+  },
+  "wpn_vihr_ps01": {
+    "name": "st_wpn_vihr",
+    "price": 30580
+  },
+  "wpn_vihr_pso1m21": {
+    "name": "st_wpn_vihr",
+    "price": 30580
+  },
+  "wpn_vintorez": {
+    "name": "st_wpn_vintorez",
+    "price": 40580
+  },
+  "wpn_vintorez_1p29": {
+    "name": "st_wpn_vintorez",
+    "price": 40580
+  },
+  "wpn_vintorez_1pn93": {
+    "name": "st_wpn_vintorez",
+    "price": 55880
+  },
+  "wpn_vintorez_alt": {
+    "name": "st_wpn_vintorez_alt",
+    "price": 41860
+  },
+  "wpn_vintorez_alt_1p29": {
+    "name": "st_wpn_vintorez_alt",
+    "price": 41860
+  },
+  "wpn_vintorez_alt_kobra": {
+    "name": "st_wpn_vintorez_alt",
+    "price": 41860
+  },
+  "wpn_vintorez_alt_pso1m21": {
+    "name": "st_wpn_vintorez_alt",
+    "price": 41860
+  },
+  "wpn_vintorez_kobra": {
+    "name": "st_wpn_vintorez",
+    "price": 40580
+  },
+  "wpn_vintorez_nimble": {
+    "name": "st_wpn_vintorez_nimble",
+    "price": 51850
+  },
+  "wpn_vintorez_pso1m21": {
+    "name": "st_wpn_vintorez",
+    "price": 40580
+  },
+  "wpn_vityaz": {
+    "name": "st_wpn_vityaz",
+    "price": 20880
+  },
+  "wpn_vityaz_ac10632": {
+    "name": "st_wpn_vityaz",
+    "price": 20880
+  },
+  "wpn_vityaz_acog": {
+    "name": "st_wpn_vityaz",
+    "price": 20880
+  },
+  "wpn_vityaz_eot": {
+    "name": "st_wpn_vityaz",
+    "price": 20880
+  },
+  "wpn_vsk94": {
+    "name": "st_wpn_vsk94",
+    "price": 33960
+  },
+  "wpn_vsk94_1p29": {
+    "name": "st_wpn_vsk94",
+    "price": 33960
+  },
+  "wpn_vsk94_kobra": {
+    "name": "st_wpn_vsk94",
+    "price": 33960
+  },
+  "wpn_vsk94_pso1m21": {
+    "name": "st_wpn_vsk94",
+    "price": 33960
+  },
+  "wpn_vssk": {
+    "name": "st_wpn_vssk",
+    "price": 95680
+  },
+  "wpn_vz61": {
+    "name": "st_wpn_vz61",
+    "price": 15680
+  },
+  "wpn_vz61_alt": {
+    "name": "st_wpn_vz61_alt",
+    "price": 13960
+  },
+  "wpn_vz61_camo": {
+    "name": "st_wpn_vz61_camo",
+    "price": 18960
+  },
+  "wpn_vz61_freedom": {
+    "name": "st_wpn_vz61_freedom",
+    "price": 17980
+  },
+  "wpn_wa2000": {
+    "name": "st_wpn_wa2000",
+    "price": 90000
+  },
+  "wpn_walther": {
+    "name": "st_wpn_walther",
+    "price": 4890
+  },
+  "wpn_walther_custom": {
+    "name": "st_wpn_walther_custom",
+    "price": 5680
+  },
+  "wpn_wincheaster1300": {
+    "name": "st_wpn_toz194",
+    "price": 19580
+  },
+  "wpn_wincheaster1300_trapper": {
+    "name": "st_wpn_toz194",
+    "price": 19580
+  },
+  "wpn_xm8": {
+    "name": "st_wpn_xm8",
+    "price": 43880
+  },
+  "wpn_xm8_ac10632": {
+    "name": "st_wpn_xm8",
+    "price": 43880
+  },
+  "wpn_xm8_ac11090": {
+    "name": "st_wpn_xm8",
+    "price": 43880
+  },
+  "wpn_xm8_acog": {
+    "name": "st_wpn_xm8",
+    "price": 43880
+  },
+  "wpn_xm8_c-more": {
+    "name": "st_wpn_xm8",
+    "price": 43880
+  },
+  "wpn_xm8_eot": {
+    "name": "st_wpn_xm8",
+    "price": 43880
+  },
+  "x8_documents": {
+    "name": "item_doc_x8_ll_name"
+  },
+  "yadylin": {
+    "name": "st_yadylin",
+    "price": 816
+  },
+  "yantar_deployable_mgun": {
+    "name": "MountedWeapon"
+  },
+  "zat_a23_access_card": {
+    "name": "st_zat_a23_access_card"
+  },
+  "zat_a23_gauss_rifle_docs": {
+    "name": "st_zat_a23_gauss_rifle_docs"
+  },
+  "zat_a23_labx8_key": {
+    "name": "st_zat_a23_labx8_key_name"
+  },
+  "zat_b12_documents_1": {
+    "name": "st_zat_b12_documents_1"
+  },
+  "zat_b12_documents_2": {
+    "name": "st_zat_b12_documents_2"
+  },
+  "zat_b12_key_1": {
+    "name": "st_zat_b12_key_1"
+  },
+  "zat_b12_key_2": {
+    "name": "st_zat_b12_key_2"
+  },
+  "zat_b20_noah_pda": {
+    "name": "st_zat_b20_noah_pda_name",
+    "price": 2000
+  },
+  "zat_b22_medic_pda": {
+    "name": "zat_b22_medic_pda",
+    "price": 20
+  },
+  "zat_b33_safe_container": {
+    "name": "zat_b33_safe_container_name"
+  },
+  "zat_b39_joker_pda": {
+    "name": "zat_b39_joker_pda_name"
+  },
+  "zat_b40_notebook": {
+    "name": "st_zat_b40_notebook_name",
+    "price": 100
+  },
+  "zat_b40_pda_1": {
+    "name": "st_zat_b40_pda_1_name",
+    "price": 20
+  },
+  "zat_b40_pda_2": {
+    "name": "st_zat_b40_pda_2_name",
+    "price": 20
+  },
+  "zat_b40_sarge_pda": {
+    "name": "st_zat_b40_sarge_pda_name"
+  },
+  "zat_b44_barge_pda": {
+    "name": "zat_b44_barge_pda_name",
+    "price": 2000
+  },
+  "zat_b57_gas": {
+    "name": "st_zat_b57_gas_name"
+  }
+}

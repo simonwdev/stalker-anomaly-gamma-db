@@ -19,26 +19,6 @@
   ],
   "items": [
     {
-      "id": "wpn_rpg7",
-      "pda_encyclopedia_name": "st_wpn_rpg7",
-      "st_data_export_description": "st_wpn_rpg7_descr",
-      "st_prop_weight": "6.30",
-      "st_upgr_cost": "29800",
-      "ui_mm_repair": "N/A",
-      "st_data_export_single_handed": "N",
-      "ui_inv_accuracy": "77%",
-      "ui_inv_handling": "70%",
-      "ui_inv_damage": "200",
-      "ui_inv_rate_of_fire": "20",
-      "ui_ammo_count": "1",
-      "ui_ammo_types": "ammo-og-7b;ammo-og-7b;ammo-og-7b",
-      "st_data_export_ammo_types_alt": "",
-      "st_data_export_hit_power": "3",
-      "displayName": "st_wpn_rpg7",
-      "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
-    },
-    {
       "id": "wpn_m79",
       "pda_encyclopedia_name": "st_wpn_m79",
       "st_data_export_description": "st_wpn_m79_descr",
@@ -76,6 +56,26 @@
       "st_data_export_hit_power": "0.75",
       "displayName": "st_wpn_rg6",
       "hasNpcWeaponDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_rpg7",
+      "pda_encyclopedia_name": "st_wpn_rpg7",
+      "st_data_export_description": "st_wpn_rpg7_descr",
+      "st_prop_weight": "6.30",
+      "st_upgr_cost": "29800",
+      "ui_mm_repair": "N/A",
+      "st_data_export_single_handed": "N",
+      "ui_inv_accuracy": "77%",
+      "ui_inv_handling": "70%",
+      "ui_inv_damage": "200",
+      "ui_inv_rate_of_fire": "20",
+      "ui_ammo_count": "1",
+      "ui_ammo_types": "ammo-og-7b;ammo-og-7b;ammo-og-7b",
+      "st_data_export_ammo_types_alt": "",
+      "st_data_export_hit_power": "3",
+      "displayName": "st_wpn_rpg7",
+      "hasNpcWeaponDrop": true,
       "hasDisassemble": false
     }
   ]

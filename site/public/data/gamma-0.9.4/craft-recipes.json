@@ -3,31 +3,6 @@
     "label": "Devices",
     "items": [
       {
-        "id": "detector_simple",
-        "pda_encyclopedia_name": "st_detector1",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_2",
-        "recipeReqName": "st_gamma_recipe_basic_2",
-        "ingredients": [
-          {
-            "name": "st_broken_detector",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_resistors",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_transistors",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_capacitors",
-            "amount": "x6"
-          }
-        ]
-      },
-      {
         "id": "detector_advanced",
         "pda_encyclopedia_name": "st_detector2",
         "toolTier": 1,
@@ -49,6 +24,81 @@
           {
             "name": "st_prt_i_capacitors",
             "amount": "x10"
+          }
+        ]
+      },
+      {
+        "id": "detector_geiger",
+        "pda_encyclopedia_name": "st_geiger_dead",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_2",
+        "recipeReqName": "st_gamma_recipe_basic_2",
+        "ingredients": [
+          {
+            "name": "st_broken_detector",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_resistors",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_i_capacitors",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_i_transistors",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "detector_grizzly",
+        "pda_encyclopedia_name": "st_grizzly",
+        "toolTier": 2,
+        "recipeReq": "recipe_advanced_2",
+        "recipeReqName": "st_gamma_recipe_advanced_2",
+        "ingredients": [
+          {
+            "name": "st_detector2",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_resistors",
+            "amount": "x14"
+          },
+          {
+            "name": "st_prt_i_transistors",
+            "amount": "x14"
+          },
+          {
+            "name": "st_prt_i_capacitors",
+            "amount": "x14"
+          }
+        ]
+      },
+      {
+        "id": "detector_radio",
+        "pda_encyclopedia_name": "st_detector9",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_2",
+        "recipeReqName": "st_gamma_recipe_basic_2",
+        "ingredients": [
+          {
+            "name": "st_walkie",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_resistors",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_capacitors",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_i_transistors",
+            "amount": "x2"
           }
         ]
       },
@@ -78,27 +128,77 @@
         ]
       },
       {
-        "id": "detector_radio",
-        "pda_encyclopedia_name": "st_detector9",
+        "id": "detector_simple",
+        "pda_encyclopedia_name": "st_detector1",
         "toolTier": 1,
         "recipeReq": "recipe_basic_2",
         "recipeReqName": "st_gamma_recipe_basic_2",
         "ingredients": [
           {
-            "name": "st_walkie",
-            "amount": "x2"
+            "name": "st_broken_detector",
+            "amount": "x1"
           },
           {
             "name": "st_prt_i_resistors",
             "amount": "x4"
           },
           {
+            "name": "st_prt_i_transistors",
+            "amount": "x4"
+          },
+          {
             "name": "st_prt_i_capacitors",
-            "amount": "x3"
+            "amount": "x6"
+          }
+        ]
+      },
+      {
+        "id": "device_pda_2",
+        "pda_encyclopedia_name": "st_pda_2_name",
+        "toolTier": 2,
+        "recipeReq": "recipe_advanced_2",
+        "recipeReqName": "st_gamma_recipe_advanced_2",
+        "ingredients": [
+          {
+            "name": "st_pda_1_name",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_resistors",
+            "amount": "x8"
           },
           {
             "name": "st_prt_i_transistors",
-            "amount": "x2"
+            "amount": "x10"
+          },
+          {
+            "name": "st_prt_i_capacitors",
+            "amount": "x8"
+          }
+        ]
+      },
+      {
+        "id": "device_pda_3",
+        "pda_encyclopedia_name": "st_pda_3_name",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_2",
+        "recipeReqName": "st_gamma_recipe_expert_2",
+        "ingredients": [
+          {
+            "name": "st_pda_2_name",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_resistors",
+            "amount": "x13"
+          },
+          {
+            "name": "st_prt_i_transistors",
+            "amount": "x15"
+          },
+          {
+            "name": "st_prt_i_capacitors",
+            "amount": "x16"
           }
         ]
       },
@@ -199,106 +299,6 @@
           {
             "name": "st_prt_i_transistors",
             "amount": "x20"
-          }
-        ]
-      },
-      {
-        "id": "detector_geiger",
-        "pda_encyclopedia_name": "st_geiger_dead",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_2",
-        "recipeReqName": "st_gamma_recipe_basic_2",
-        "ingredients": [
-          {
-            "name": "st_broken_detector",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_resistors",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_i_capacitors",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_i_transistors",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "detector_grizzly",
-        "pda_encyclopedia_name": "st_grizzly",
-        "toolTier": 2,
-        "recipeReq": "recipe_advanced_2",
-        "recipeReqName": "st_gamma_recipe_advanced_2",
-        "ingredients": [
-          {
-            "name": "st_detector2",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_resistors",
-            "amount": "x14"
-          },
-          {
-            "name": "st_prt_i_transistors",
-            "amount": "x14"
-          },
-          {
-            "name": "st_prt_i_capacitors",
-            "amount": "x14"
-          }
-        ]
-      },
-      {
-        "id": "device_pda_2",
-        "pda_encyclopedia_name": "st_pda_2_name",
-        "toolTier": 2,
-        "recipeReq": "recipe_advanced_2",
-        "recipeReqName": "st_gamma_recipe_advanced_2",
-        "ingredients": [
-          {
-            "name": "st_pda_1_name",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_resistors",
-            "amount": "x8"
-          },
-          {
-            "name": "st_prt_i_transistors",
-            "amount": "x10"
-          },
-          {
-            "name": "st_prt_i_capacitors",
-            "amount": "x8"
-          }
-        ]
-      },
-      {
-        "id": "device_pda_3",
-        "pda_encyclopedia_name": "st_pda_3_name",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_2",
-        "recipeReqName": "st_gamma_recipe_expert_2",
-        "ingredients": [
-          {
-            "name": "st_pda_2_name",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_resistors",
-            "amount": "x13"
-          },
-          {
-            "name": "st_prt_i_transistors",
-            "amount": "x15"
-          },
-          {
-            "name": "st_prt_i_capacitors",
-            "amount": "x16"
           }
         ]
       }
@@ -675,27 +675,6 @@
         ]
       },
       {
-        "id": "wpn_binoc_inv",
-        "pda_encyclopedia_name": "st_binocular_name",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_1",
-        "recipeReqName": "st_gamma_recipe_basic_1",
-        "ingredients": [
-          {
-            "name": "st_welding_goggles",
-            "amount": "x2"
-          },
-          {
-            "name": "st_mirror",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
         "id": "compression_bag",
         "pda_encyclopedia_name": "st_compression_bag",
         "toolTier": 1,
@@ -734,6 +713,31 @@
         ]
       },
       {
+        "id": "device_metal_torch",
+        "pda_encyclopedia_name": "st_placeable_metal_torch",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_lead_box_name",
+            "amount": "x1"
+          },
+          {
+            "name": "st_device_flashlight",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_capacitors",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
         "id": "equ_military_pack",
         "pda_encyclopedia_name": "st_equ_milpack_name",
         "toolTier": 2,
@@ -759,31 +763,6 @@
         ]
       },
       {
-        "id": "equ_small_pack",
-        "pda_encyclopedia_name": "st_equ_smallpack_name",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_1",
-        "recipeReqName": "st_gamma_recipe_basic_1",
-        "ingredients": [
-          {
-            "name": "st_sewing_thread",
-            "amount": "x8"
-          },
-          {
-            "name": "st_itm_backpack_name",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_3",
-            "amount": "x8"
-          },
-          {
-            "name": "st_prt_o_fabrics_2",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
         "id": "equ_small_military_pack",
         "pda_encyclopedia_name": "st_equ_smilpack_name",
         "toolTier": 2,
@@ -805,6 +784,31 @@
           {
             "name": "st_prt_o_fabrics_3",
             "amount": "x10"
+          }
+        ]
+      },
+      {
+        "id": "equ_small_pack",
+        "pda_encyclopedia_name": "st_equ_smallpack_name",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_1",
+        "recipeReqName": "st_gamma_recipe_basic_1",
+        "ingredients": [
+          {
+            "name": "st_sewing_thread",
+            "amount": "x8"
+          },
+          {
+            "name": "st_itm_backpack_name",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_3",
+            "amount": "x8"
+          },
+          {
+            "name": "st_prt_o_fabrics_2",
+            "amount": "x4"
           }
         ]
       },
@@ -976,31 +980,6 @@
         ]
       },
       {
-        "id": "device_metal_torch",
-        "pda_encyclopedia_name": "st_placeable_metal_torch",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_lead_box_name",
-            "amount": "x1"
-          },
-          {
-            "name": "st_device_flashlight",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_capacitors",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
         "id": "radio_item",
         "pda_encyclopedia_name": "st_placeable_radio",
         "toolTier": 1,
@@ -1022,6 +1001,27 @@
           {
             "name": "st_prt_i_resistors",
             "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "wpn_binoc_inv",
+        "pda_encyclopedia_name": "st_binocular_name",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_1",
+        "recipeReqName": "st_gamma_recipe_basic_1",
+        "ingredients": [
+          {
+            "name": "st_welding_goggles",
+            "amount": "x2"
+          },
+          {
+            "name": "st_mirror",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x4"
           }
         ]
       }
@@ -1574,27 +1574,352 @@
         ]
       },
       {
-        "id": "upgr_o_3_armor",
-        "pda_encyclopedia_name": "st_upgr_o_armor",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
+        "id": "upgr_o_1_arty",
+        "pda_encyclopedia_name": "st_upgr_o_arty",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
         "ingredients": [
           {
-            "name": "st_prt_o_ballistic_11",
-            "amount": "x3"
+            "name": "st_prt_o_retardant_19",
+            "amount": "x1"
           },
           {
-            "name": "st_prt_o_ballistic_13",
+            "name": "st_prt_o_retardant_12",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_3",
             "amount": "x2"
           },
           {
-            "name": "st_prt_o_ballistic_15",
+            "name": "st_prt_i_scrap",
             "amount": "x3"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_bleed",
+        "pda_encyclopedia_name": "st_upgr_o_bleed",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_analgetic",
+            "amount": "x2"
+          },
+          {
+            "name": "st_batteries",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_transistors",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_burn",
+        "pda_encyclopedia_name": "st_upgr_o_burn",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_retardant_1",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_9",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_14",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_1",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_carry",
+        "pda_encyclopedia_name": "st_upgr_o_carry",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_ballistic_14",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_ballistic_16",
+            "amount": "x1"
           },
           {
             "name": "st_prt_i_scrap",
-            "amount": "x4"
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_chem",
+        "pda_encyclopedia_name": "st_upgr_o_chem",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_retardant_2",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_3",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_8",
+            "amount": "x1"
+          },
+          {
+            "name": "st_sewing_thread",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_damage",
+        "pda_encyclopedia_name": "st_upgr_o_damage",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_ballistic_12",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_ballistic_14",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_ballistic_16",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_durability",
+        "pda_encyclopedia_name": "st_upgr_o_durability",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_fabrics_2",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_o_ballistic_20",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_4",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_health",
+        "pda_encyclopedia_name": "st_upgr_o_health",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_stim_impro",
+            "amount": "x1"
+          },
+          {
+            "name": "st_batteries",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_copper",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_power",
+        "pda_encyclopedia_name": "st_upgr_o_power",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_ballistic_19",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_9",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_1",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_psi",
+        "pda_encyclopedia_name": "st_upgr_o_psi",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_retardant_20",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_12",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_18",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_rad",
+        "pda_encyclopedia_name": "st_upgr_o_rad",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_helm_respirator",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_15",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_16",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_3",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_run",
+        "pda_encyclopedia_name": "st_upgr_o_run",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_prt_i_copper",
+            "amount": "x8"
+          },
+          {
+            "name": "st_prt_i_transistors",
+            "amount": "x8"
+          },
+          {
+            "name": "st_prt_i_capacitors",
+            "amount": "x8"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x8"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_shock",
+        "pda_encyclopedia_name": "st_upgr_o_shock",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_retardant_12",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_17",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_19",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_4",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_1_weight",
+        "pda_encyclopedia_name": "st_upgr_o_weight",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_ballistic_13",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_o_fabrics_4",
+            "amount": "x1"
           }
         ]
       },
@@ -1616,31 +1941,6 @@
           {
             "name": "st_prt_o_ballistic_15",
             "amount": "x3"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x3"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_arty",
-        "pda_encyclopedia_name": "st_upgr_o_arty",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_retardant_19",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_12",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_3",
-            "amount": "x2"
           },
           {
             "name": "st_prt_i_scrap",
@@ -1674,31 +1974,6 @@
         ]
       },
       {
-        "id": "upgr_o_3_arty",
-        "pda_encyclopedia_name": "st_upgr_o_arty",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_retardant_19",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_12",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_fabrics_3",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x7"
-          }
-        ]
-      },
-      {
         "id": "upgr_o_2_bleed",
         "pda_encyclopedia_name": "st_upgr_o_bleed",
         "toolTier": 2,
@@ -1724,106 +1999,6 @@
         ]
       },
       {
-        "id": "upgr_o_1_bleed",
-        "pda_encyclopedia_name": "st_upgr_o_bleed",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_analgetic",
-            "amount": "x2"
-          },
-          {
-            "name": "st_batteries",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_transistors",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_3_bleed",
-        "pda_encyclopedia_name": "st_upgr_o_bleed",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_rebirth",
-            "amount": "x1"
-          },
-          {
-            "name": "st_batteries",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_transistors",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_3_burn",
-        "pda_encyclopedia_name": "st_upgr_o_burn",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_retardant_1",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_9",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_14",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_fabrics_1",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_burn",
-        "pda_encyclopedia_name": "st_upgr_o_burn",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_retardant_1",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_9",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_14",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_1",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
         "id": "upgr_o_2_burn",
         "pda_encyclopedia_name": "st_upgr_o_burn",
         "toolTier": 2,
@@ -1845,56 +2020,6 @@
           {
             "name": "st_prt_o_fabrics_1",
             "amount": "x3"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_carry",
-        "pda_encyclopedia_name": "st_upgr_o_carry",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_ballistic_14",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_ballistic_16",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_3_carry",
-        "pda_encyclopedia_name": "st_upgr_o_carry",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_ballistic_14",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_ballistic_16",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x4"
           }
         ]
       },
@@ -1949,81 +2074,6 @@
         ]
       },
       {
-        "id": "upgr_o_3_chem",
-        "pda_encyclopedia_name": "st_upgr_o_chem",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_retardant_2",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_3",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_8",
-            "amount": "x3"
-          },
-          {
-            "name": "st_sewing_thread",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_chem",
-        "pda_encyclopedia_name": "st_upgr_o_chem",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_retardant_2",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_3",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_8",
-            "amount": "x1"
-          },
-          {
-            "name": "st_sewing_thread",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_3_damage",
-        "pda_encyclopedia_name": "st_upgr_o_damage",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_ballistic_12",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_ballistic_14",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_ballistic_16",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
         "id": "upgr_o_2_damage",
         "pda_encyclopedia_name": "st_upgr_o_damage",
         "toolTier": 2,
@@ -2045,31 +2095,6 @@
           {
             "name": "st_prt_i_scrap",
             "amount": "x3"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_damage",
-        "pda_encyclopedia_name": "st_upgr_o_damage",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_ballistic_12",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_ballistic_14",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_ballistic_16",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x2"
           }
         ]
       },
@@ -2099,56 +2124,6 @@
         ]
       },
       {
-        "id": "upgr_o_3_durability",
-        "pda_encyclopedia_name": "st_upgr_o_durability",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_fabrics_2",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_o_ballistic_20",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_4",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_durability",
-        "pda_encyclopedia_name": "st_upgr_o_durability",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_fabrics_2",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_o_ballistic_20",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_4",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
         "id": "upgr_o_2_health",
         "pda_encyclopedia_name": "st_upgr_o_health",
         "toolTier": 2,
@@ -2174,106 +2149,6 @@
         ]
       },
       {
-        "id": "upgr_o_1_health",
-        "pda_encyclopedia_name": "st_upgr_o_health",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_stim_impro",
-            "amount": "x1"
-          },
-          {
-            "name": "st_batteries",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_copper",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_3_health",
-        "pda_encyclopedia_name": "st_upgr_o_health",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_stim_scientic",
-            "amount": "x1"
-          },
-          {
-            "name": "st_batteries",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_copper",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_power",
-        "pda_encyclopedia_name": "st_upgr_o_power",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_ballistic_19",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_9",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_1",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_3_power",
-        "pda_encyclopedia_name": "st_upgr_o_power",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_ballistic_19",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_9",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_fabrics_1",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
         "id": "upgr_o_2_power",
         "pda_encyclopedia_name": "st_upgr_o_power",
         "toolTier": 2,
@@ -2295,56 +2170,6 @@
           {
             "name": "st_prt_i_fasteners",
             "amount": "x3"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_psi",
-        "pda_encyclopedia_name": "st_upgr_o_psi",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_retardant_20",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_12",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_18",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_3_psi",
-        "pda_encyclopedia_name": "st_upgr_o_psi",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_retardant_20",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_12",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_18",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x4"
           }
         ]
       },
@@ -2399,106 +2224,6 @@
         ]
       },
       {
-        "id": "upgr_o_3_rad",
-        "pda_encyclopedia_name": "st_upgr_o_rad",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_helm_respirator",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_15",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_16",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_fabrics_3",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_rad",
-        "pda_encyclopedia_name": "st_upgr_o_rad",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_helm_respirator",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_15",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_16",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_3",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_3_run",
-        "pda_encyclopedia_name": "st_upgr_o_run",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_prt_i_copper",
-            "amount": "x12"
-          },
-          {
-            "name": "st_prt_i_transistors",
-            "amount": "x12"
-          },
-          {
-            "name": "st_prt_i_capacitors",
-            "amount": "x12"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x12"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_run",
-        "pda_encyclopedia_name": "st_upgr_o_run",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_i_copper",
-            "amount": "x8"
-          },
-          {
-            "name": "st_prt_i_transistors",
-            "amount": "x8"
-          },
-          {
-            "name": "st_prt_i_capacitors",
-            "amount": "x8"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x8"
-          }
-        ]
-      },
-      {
         "id": "upgr_o_2_run",
         "pda_encyclopedia_name": "st_upgr_o_run",
         "toolTier": 2,
@@ -2520,31 +2245,6 @@
           {
             "name": "st_prt_i_fasteners",
             "amount": "x10"
-          }
-        ]
-      },
-      {
-        "id": "upgr_o_1_shock",
-        "pda_encyclopedia_name": "st_upgr_o_shock",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_retardant_12",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_17",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_retardant_19",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_4",
-            "amount": "x2"
           }
         ]
       },
@@ -2574,31 +2274,6 @@
         ]
       },
       {
-        "id": "upgr_o_3_shock",
-        "pda_encyclopedia_name": "st_upgr_o_shock",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_retardant_12",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_17",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_retardant_19",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_o_fabrics_4",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
         "id": "upgr_o_2_weight",
         "pda_encyclopedia_name": "st_upgr_o_weight",
         "toolTier": 2,
@@ -2620,6 +2295,356 @@
           {
             "name": "st_prt_o_fabrics_4",
             "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_armor",
+        "pda_encyclopedia_name": "st_upgr_o_armor",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_ballistic_11",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_ballistic_13",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_o_ballistic_15",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_arty",
+        "pda_encyclopedia_name": "st_upgr_o_arty",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_retardant_19",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_12",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_fabrics_3",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x7"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_bleed",
+        "pda_encyclopedia_name": "st_upgr_o_bleed",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_rebirth",
+            "amount": "x1"
+          },
+          {
+            "name": "st_batteries",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_transistors",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_burn",
+        "pda_encyclopedia_name": "st_upgr_o_burn",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_retardant_1",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_9",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_14",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_fabrics_1",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_carry",
+        "pda_encyclopedia_name": "st_upgr_o_carry",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_ballistic_14",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_ballistic_16",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_chem",
+        "pda_encyclopedia_name": "st_upgr_o_chem",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_retardant_2",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_3",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_8",
+            "amount": "x3"
+          },
+          {
+            "name": "st_sewing_thread",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_damage",
+        "pda_encyclopedia_name": "st_upgr_o_damage",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_ballistic_12",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_ballistic_14",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_ballistic_16",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_durability",
+        "pda_encyclopedia_name": "st_upgr_o_durability",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_fabrics_2",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_o_ballistic_20",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_4",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_health",
+        "pda_encyclopedia_name": "st_upgr_o_health",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_stim_scientic",
+            "amount": "x1"
+          },
+          {
+            "name": "st_batteries",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_copper",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_power",
+        "pda_encyclopedia_name": "st_upgr_o_power",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_ballistic_19",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_9",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_fabrics_1",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_psi",
+        "pda_encyclopedia_name": "st_upgr_o_psi",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_retardant_20",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_12",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_18",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_rad",
+        "pda_encyclopedia_name": "st_upgr_o_rad",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_helm_respirator",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_retardant_15",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_16",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_fabrics_3",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_run",
+        "pda_encyclopedia_name": "st_upgr_o_run",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_i_copper",
+            "amount": "x12"
+          },
+          {
+            "name": "st_prt_i_transistors",
+            "amount": "x12"
+          },
+          {
+            "name": "st_prt_i_capacitors",
+            "amount": "x12"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x12"
+          }
+        ]
+      },
+      {
+        "id": "upgr_o_3_shock",
+        "pda_encyclopedia_name": "st_upgr_o_shock",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_prt_o_retardant_12",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_17",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_retardant_19",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_o_fabrics_4",
+            "amount": "x4"
           }
         ]
       },
@@ -2649,31 +2674,6 @@
         ]
       },
       {
-        "id": "upgr_o_1_weight",
-        "pda_encyclopedia_name": "st_upgr_o_weight",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_prt_o_ballistic_13",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_o_fabrics_4",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
         "id": "upgr_w_1_calibre",
         "pda_encyclopedia_name": "st_upgr_w_calibre",
         "toolTier": 1,
@@ -2695,106 +2695,6 @@
           {
             "name": "st_toolkit_r7_new",
             "amount": "x1"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_2_calibre",
-        "pda_encyclopedia_name": "st_upgr_w_calibre",
-        "toolTier": 2,
-        "recipeReq": "recipe_advanced_3",
-        "recipeReqName": "st_gamma_recipe_advanced_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_calibre",
-            "amount": "x1"
-          },
-          {
-            "name": "st_toolkit_p_new",
-            "amount": "x2"
-          },
-          {
-            "name": "st_toolkit_r5_new",
-            "amount": "x2"
-          },
-          {
-            "name": "st_toolkit_r7_new",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_calibre",
-        "pda_encyclopedia_name": "st_upgr_w_calibre",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_calibre",
-            "amount": "x1"
-          },
-          {
-            "name": "st_toolkit_p_new",
-            "amount": "x2"
-          },
-          {
-            "name": "st_toolkit_r5_new",
-            "amount": "x2"
-          },
-          {
-            "name": "st_toolkit_r7_new",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_dispersion",
-        "pda_encyclopedia_name": "st_upgr_w_dispersion",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_dispersion",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_2",
-            "amount": "x8"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x8"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_2_dispersion",
-        "pda_encyclopedia_name": "st_upgr_w_dispersion",
-        "toolTier": 2,
-        "recipeReq": "recipe_advanced_3",
-        "recipeReqName": "st_gamma_recipe_advanced_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_dispersion",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_2",
-            "amount": "x8"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x7"
           }
         ]
       },
@@ -2824,31 +2724,6 @@
         ]
       },
       {
-        "id": "upgr_w_2_firemode",
-        "pda_encyclopedia_name": "st_upgr_w_firemode",
-        "toolTier": 2,
-        "recipeReq": "recipe_advanced_3",
-        "recipeReqName": "st_gamma_recipe_advanced_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_firemode",
-            "amount": "x1"
-          },
-          {
-            "name": "st_trigger_components_1",
-            "amount": "x5"
-          },
-          {
-            "name": "st_trigger_components_2",
-            "amount": "x5"
-          },
-          {
-            "name": "st_trigger_components_3",
-            "amount": "x5"
-          }
-        ]
-      },
-      {
         "id": "upgr_w_1_firemode",
         "pda_encyclopedia_name": "st_upgr_w_firemode",
         "toolTier": 1,
@@ -2874,52 +2749,6 @@
         ]
       },
       {
-        "id": "upgr_w_3_firemode",
-        "pda_encyclopedia_name": "st_upgr_w_firemode",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_firemode",
-            "amount": "x1"
-          },
-          {
-            "name": "st_trigger_components_1",
-            "amount": "x6"
-          },
-          {
-            "name": "st_trigger_components_2",
-            "amount": "x6"
-          },
-          {
-            "name": "st_trigger_components_3",
-            "amount": "x6"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_grenade_mount",
-        "pda_encyclopedia_name": "st_upgr_w_grenade_mount",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_grenade_mount",
-            "amount": "x1"
-          },
-          {
-            "name": "st_grenade_launcher",
-            "amount": "x1"
-          },
-          {
-            "name": "st_grenade_launcher_m203",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
         "id": "upgr_w_1_grenade_mount",
         "pda_encyclopedia_name": "st_upgr_w_grenade_mount",
         "toolTier": 1,
@@ -2940,77 +2769,6 @@
           },
           {
             "name": "st_grooming",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_2_grenade_mount",
-        "pda_encyclopedia_name": "st_upgr_w_grenade_mount",
-        "toolTier": 2,
-        "recipeReq": "recipe_advanced_3",
-        "recipeReqName": "st_gamma_recipe_advanced_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_grenade_mount",
-            "amount": "x1"
-          },
-          {
-            "name": "st_grenade_launcher",
-            "amount": "x1"
-          },
-          {
-            "name": "st_grenade_launcher_m203",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_inertion",
-        "pda_encyclopedia_name": "st_upgr_w_inertion",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_inertion",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x10"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x10"
-          },
-          {
-            "name": "st_ball_hammer",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_2_inertion",
-        "pda_encyclopedia_name": "st_upgr_w_inertion",
-        "toolTier": 2,
-        "recipeReq": "recipe_advanced_3",
-        "recipeReqName": "st_gamma_recipe_advanced_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_inertion",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x8"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x8"
-          },
-          {
-            "name": "st_ball_hammer",
             "amount": "x1"
           }
         ]
@@ -3041,31 +2799,6 @@
         ]
       },
       {
-        "id": "upgr_w_2_magazine",
-        "pda_encyclopedia_name": "st_upgr_w_magazine",
-        "toolTier": 2,
-        "recipeReq": "recipe_advanced_3",
-        "recipeReqName": "st_gamma_recipe_advanced_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_magazine",
-            "amount": "x1"
-          },
-          {
-            "name": "st_toolkit_p_new",
-            "amount": "x2"
-          },
-          {
-            "name": "st_toolkit_r5_new",
-            "amount": "x3"
-          },
-          {
-            "name": "st_toolkit_r7_new",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
         "id": "upgr_w_1_magazine",
         "pda_encyclopedia_name": "st_upgr_w_magazine",
         "toolTier": 1,
@@ -3079,31 +2812,6 @@
           {
             "name": "st_toolkit_p_new",
             "amount": "x1"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_magazine",
-        "pda_encyclopedia_name": "st_upgr_w_magazine",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_magazine",
-            "amount": "x1"
-          },
-          {
-            "name": "st_toolkit_p_new",
-            "amount": "x3"
-          },
-          {
-            "name": "st_toolkit_r5_new",
-            "amount": "x2"
-          },
-          {
-            "name": "st_toolkit_r7_new",
-            "amount": "x2"
           }
         ]
       },
@@ -3133,27 +2841,319 @@
         ]
       },
       {
-        "id": "upgr_w_3_muffle",
-        "pda_encyclopedia_name": "st_upgr_w_muffle",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
+        "id": "upgr_w_1_recoil",
+        "pda_encyclopedia_name": "st_upgr_w_recoil",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
         "ingredients": [
           {
-            "name": "st_upgr_w_muffle",
+            "name": "st_rasp_tool",
+            "amount": "x2"
+          },
+          {
+            "name": "st_gas_tube_3",
+            "amount": "x4"
+          },
+          {
+            "name": "st_gas_tube_4",
+            "amount": "x4"
+          },
+          {
+            "name": "st_gas_tube_11",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_1_reliability",
+        "pda_encyclopedia_name": "st_upgr_w_reliability",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_rasp_tool",
+            "amount": "x2"
+          },
+          {
+            "name": "st_bolt_1",
             "amount": "x1"
           },
           {
-            "name": "st_addon_sil_9mm",
+            "name": "st_bolt_2",
+            "amount": "x1"
+          },
+          {
+            "name": "st_bolt_12",
+            "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_1_rpm",
+        "pda_encyclopedia_name": "st_upgr_w_rpm",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_leatherman_tool",
+            "amount": "x1"
+          },
+          {
+            "name": "st_gas_tube_1",
+            "amount": "x4"
+          },
+          {
+            "name": "st_gas_tube_2",
+            "amount": "x4"
+          },
+          {
+            "name": "st_gas_tube_8",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_1_scope",
+        "pda_encyclopedia_name": "st_upgr_w_scope",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_swiss",
+            "amount": "x2"
+          },
+          {
+            "name": "st_addon_scope_1p29",
+            "amount": "x2"
+          },
+          {
+            "name": "st_addon_scope_kobra",
+            "amount": "x2"
+          },
+          {
+            "name": "st_addon_scope_ac10632",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_1_scope_mount",
+        "pda_encyclopedia_name": "st_upgr_w_scope_mount",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_swiss",
             "amount": "x3"
           },
           {
-            "name": "st_addon_sil_tgp-a",
+            "name": "st_prt_i_scrap",
+            "amount": "x6"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x6"
+          },
+          {
+            "name": "st_ball_hammer",
+            "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_1_speed",
+        "pda_encyclopedia_name": "st_upgr_w_speed",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_ramrod_tool",
+            "amount": "x2"
+          },
+          {
+            "name": "st_barrel_8",
+            "amount": "x1"
+          },
+          {
+            "name": "st_barrel_9",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_w_p_barrel_1",
+            "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_1_weight",
+        "pda_encyclopedia_name": "st_upgr_w_weight",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_3",
+        "recipeReqName": "st_gamma_recipe_basic_3",
+        "ingredients": [
+          {
+            "name": "st_ramrod_tool",
+            "amount": "x2"
+          },
+          {
+            "name": "st_toolkit_p_new",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_2_calibre",
+        "pda_encyclopedia_name": "st_upgr_w_calibre",
+        "toolTier": 2,
+        "recipeReq": "recipe_advanced_3",
+        "recipeReqName": "st_gamma_recipe_advanced_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_calibre",
+            "amount": "x1"
+          },
+          {
+            "name": "st_toolkit_p_new",
+            "amount": "x2"
+          },
+          {
+            "name": "st_toolkit_r5_new",
+            "amount": "x2"
+          },
+          {
+            "name": "st_toolkit_r7_new",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_2_dispersion",
+        "pda_encyclopedia_name": "st_upgr_w_dispersion",
+        "toolTier": 2,
+        "recipeReq": "recipe_advanced_3",
+        "recipeReqName": "st_gamma_recipe_advanced_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_dispersion",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_2",
+            "amount": "x8"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x7"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_2_firemode",
+        "pda_encyclopedia_name": "st_upgr_w_firemode",
+        "toolTier": 2,
+        "recipeReq": "recipe_advanced_3",
+        "recipeReqName": "st_gamma_recipe_advanced_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_firemode",
+            "amount": "x1"
+          },
+          {
+            "name": "st_trigger_components_1",
+            "amount": "x5"
+          },
+          {
+            "name": "st_trigger_components_2",
+            "amount": "x5"
+          },
+          {
+            "name": "st_trigger_components_3",
+            "amount": "x5"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_2_grenade_mount",
+        "pda_encyclopedia_name": "st_upgr_w_grenade_mount",
+        "toolTier": 2,
+        "recipeReq": "recipe_advanced_3",
+        "recipeReqName": "st_gamma_recipe_advanced_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_grenade_mount",
+            "amount": "x1"
+          },
+          {
+            "name": "st_grenade_launcher",
+            "amount": "x1"
+          },
+          {
+            "name": "st_grenade_launcher_m203",
+            "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_2_inertion",
+        "pda_encyclopedia_name": "st_upgr_w_inertion",
+        "toolTier": 2,
+        "recipeReq": "recipe_advanced_3",
+        "recipeReqName": "st_gamma_recipe_advanced_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_inertion",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x8"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x8"
+          },
+          {
+            "name": "st_ball_hammer",
+            "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_2_magazine",
+        "pda_encyclopedia_name": "st_upgr_w_magazine",
+        "toolTier": 2,
+        "recipeReq": "recipe_advanced_3",
+        "recipeReqName": "st_gamma_recipe_advanced_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_magazine",
+            "amount": "x1"
+          },
+          {
+            "name": "st_toolkit_p_new",
+            "amount": "x2"
+          },
+          {
+            "name": "st_toolkit_r5_new",
             "amount": "x3"
           },
           {
-            "name": "st_addon_sil_nato",
-            "amount": "x3"
+            "name": "st_toolkit_r7_new",
+            "amount": "x2"
           }
         ]
       },
@@ -3208,106 +3208,6 @@
         ]
       },
       {
-        "id": "upgr_w_1_recoil",
-        "pda_encyclopedia_name": "st_upgr_w_recoil",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_rasp_tool",
-            "amount": "x2"
-          },
-          {
-            "name": "st_gas_tube_3",
-            "amount": "x4"
-          },
-          {
-            "name": "st_gas_tube_4",
-            "amount": "x4"
-          },
-          {
-            "name": "st_gas_tube_11",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_recoil",
-        "pda_encyclopedia_name": "st_upgr_w_recoil",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_recoil",
-            "amount": "x1"
-          },
-          {
-            "name": "st_gas_tube_3",
-            "amount": "x5"
-          },
-          {
-            "name": "st_gas_tube_4",
-            "amount": "x6"
-          },
-          {
-            "name": "st_gas_tube_11",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_1_reliability",
-        "pda_encyclopedia_name": "st_upgr_w_reliability",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_rasp_tool",
-            "amount": "x2"
-          },
-          {
-            "name": "st_bolt_1",
-            "amount": "x1"
-          },
-          {
-            "name": "st_bolt_2",
-            "amount": "x1"
-          },
-          {
-            "name": "st_bolt_12",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_reliability",
-        "pda_encyclopedia_name": "st_upgr_w_reliability",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_reliability",
-            "amount": "x1"
-          },
-          {
-            "name": "st_bolt_1",
-            "amount": "x4"
-          },
-          {
-            "name": "st_bolt_2",
-            "amount": "x4"
-          },
-          {
-            "name": "st_bolt_12",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
         "id": "upgr_w_2_reliability",
         "pda_encyclopedia_name": "st_upgr_w_reliability",
         "toolTier": 2,
@@ -3328,56 +3228,6 @@
           },
           {
             "name": "st_bolt_12",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_rpm",
-        "pda_encyclopedia_name": "st_upgr_w_rpm",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_rpm",
-            "amount": "x1"
-          },
-          {
-            "name": "st_gas_tube_1",
-            "amount": "x6"
-          },
-          {
-            "name": "st_gas_tube_2",
-            "amount": "x7"
-          },
-          {
-            "name": "st_gas_tube_8",
-            "amount": "x5"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_1_rpm",
-        "pda_encyclopedia_name": "st_upgr_w_rpm",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_leatherman_tool",
-            "amount": "x1"
-          },
-          {
-            "name": "st_gas_tube_1",
-            "amount": "x4"
-          },
-          {
-            "name": "st_gas_tube_2",
-            "amount": "x4"
-          },
-          {
-            "name": "st_gas_tube_8",
             "amount": "x4"
           }
         ]
@@ -3408,56 +3258,6 @@
         ]
       },
       {
-        "id": "upgr_w_1_scope",
-        "pda_encyclopedia_name": "st_upgr_w_scope",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_swiss",
-            "amount": "x2"
-          },
-          {
-            "name": "st_addon_scope_1p29",
-            "amount": "x2"
-          },
-          {
-            "name": "st_addon_scope_kobra",
-            "amount": "x2"
-          },
-          {
-            "name": "st_addon_scope_ac10632",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_scope",
-        "pda_encyclopedia_name": "st_upgr_w_scope",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_scope",
-            "amount": "x1"
-          },
-          {
-            "name": "st_addon_scope_1p29",
-            "amount": "x2"
-          },
-          {
-            "name": "st_addon_scope_kobra",
-            "amount": "x2"
-          },
-          {
-            "name": "st_addon_scope_ac10632",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
         "id": "upgr_w_2_scope",
         "pda_encyclopedia_name": "st_upgr_w_scope",
         "toolTier": 2,
@@ -3479,56 +3279,6 @@
           {
             "name": "st_addon_scope_ac10632",
             "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_scope_mount",
-        "pda_encyclopedia_name": "st_upgr_w_scope_mount",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_scope_mount",
-            "amount": "x1"
-          },
-          {
-            "name": "st_swiss",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x6"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x6"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_1_scope_mount",
-        "pda_encyclopedia_name": "st_upgr_w_scope_mount",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_swiss",
-            "amount": "x3"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x6"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x6"
-          },
-          {
-            "name": "st_ball_hammer",
-            "amount": "x1"
           }
         ]
       },
@@ -3583,56 +3333,6 @@
         ]
       },
       {
-        "id": "upgr_w_1_speed",
-        "pda_encyclopedia_name": "st_upgr_w_speed",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
-        "ingredients": [
-          {
-            "name": "st_ramrod_tool",
-            "amount": "x2"
-          },
-          {
-            "name": "st_barrel_8",
-            "amount": "x1"
-          },
-          {
-            "name": "st_barrel_9",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_w_p_barrel_1",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
-        "id": "upgr_w_3_speed",
-        "pda_encyclopedia_name": "st_upgr_w_speed",
-        "toolTier": 3,
-        "recipeReq": "recipe_expert_3",
-        "recipeReqName": "st_gamma_recipe_expert_3",
-        "ingredients": [
-          {
-            "name": "st_upgr_w_speed",
-            "amount": "x1"
-          },
-          {
-            "name": "st_barrel_8",
-            "amount": "x4"
-          },
-          {
-            "name": "st_barrel_9",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_w_p_barrel_1",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
         "id": "upgr_w_2_weight",
         "pda_encyclopedia_name": "st_upgr_w_weight",
         "toolTier": 2,
@@ -3658,23 +3358,323 @@
         ]
       },
       {
-        "id": "upgr_w_1_weight",
-        "pda_encyclopedia_name": "st_upgr_w_weight",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_3",
-        "recipeReqName": "st_gamma_recipe_basic_3",
+        "id": "upgr_w_3_calibre",
+        "pda_encyclopedia_name": "st_upgr_w_calibre",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
         "ingredients": [
           {
-            "name": "st_ramrod_tool",
-            "amount": "x2"
-          },
-          {
-            "name": "st_toolkit_p_new",
+            "name": "st_upgr_w_calibre",
             "amount": "x1"
           },
           {
-            "name": "st_prt_i_fasteners",
+            "name": "st_toolkit_p_new",
             "amount": "x2"
+          },
+          {
+            "name": "st_toolkit_r5_new",
+            "amount": "x2"
+          },
+          {
+            "name": "st_toolkit_r7_new",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_dispersion",
+        "pda_encyclopedia_name": "st_upgr_w_dispersion",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_dispersion",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_2",
+            "amount": "x8"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x8"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_firemode",
+        "pda_encyclopedia_name": "st_upgr_w_firemode",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_firemode",
+            "amount": "x1"
+          },
+          {
+            "name": "st_trigger_components_1",
+            "amount": "x6"
+          },
+          {
+            "name": "st_trigger_components_2",
+            "amount": "x6"
+          },
+          {
+            "name": "st_trigger_components_3",
+            "amount": "x6"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_grenade_mount",
+        "pda_encyclopedia_name": "st_upgr_w_grenade_mount",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_grenade_mount",
+            "amount": "x1"
+          },
+          {
+            "name": "st_grenade_launcher",
+            "amount": "x1"
+          },
+          {
+            "name": "st_grenade_launcher_m203",
+            "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_inertion",
+        "pda_encyclopedia_name": "st_upgr_w_inertion",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_inertion",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x10"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x10"
+          },
+          {
+            "name": "st_ball_hammer",
+            "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_magazine",
+        "pda_encyclopedia_name": "st_upgr_w_magazine",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_magazine",
+            "amount": "x1"
+          },
+          {
+            "name": "st_toolkit_p_new",
+            "amount": "x3"
+          },
+          {
+            "name": "st_toolkit_r5_new",
+            "amount": "x2"
+          },
+          {
+            "name": "st_toolkit_r7_new",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_muffle",
+        "pda_encyclopedia_name": "st_upgr_w_muffle",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_muffle",
+            "amount": "x1"
+          },
+          {
+            "name": "st_addon_sil_9mm",
+            "amount": "x3"
+          },
+          {
+            "name": "st_addon_sil_tgp-a",
+            "amount": "x3"
+          },
+          {
+            "name": "st_addon_sil_nato",
+            "amount": "x3"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_recoil",
+        "pda_encyclopedia_name": "st_upgr_w_recoil",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_recoil",
+            "amount": "x1"
+          },
+          {
+            "name": "st_gas_tube_3",
+            "amount": "x5"
+          },
+          {
+            "name": "st_gas_tube_4",
+            "amount": "x6"
+          },
+          {
+            "name": "st_gas_tube_11",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_reliability",
+        "pda_encyclopedia_name": "st_upgr_w_reliability",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_reliability",
+            "amount": "x1"
+          },
+          {
+            "name": "st_bolt_1",
+            "amount": "x4"
+          },
+          {
+            "name": "st_bolt_2",
+            "amount": "x4"
+          },
+          {
+            "name": "st_bolt_12",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_rpm",
+        "pda_encyclopedia_name": "st_upgr_w_rpm",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_rpm",
+            "amount": "x1"
+          },
+          {
+            "name": "st_gas_tube_1",
+            "amount": "x6"
+          },
+          {
+            "name": "st_gas_tube_2",
+            "amount": "x7"
+          },
+          {
+            "name": "st_gas_tube_8",
+            "amount": "x5"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_scope",
+        "pda_encyclopedia_name": "st_upgr_w_scope",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_scope",
+            "amount": "x1"
+          },
+          {
+            "name": "st_addon_scope_1p29",
+            "amount": "x2"
+          },
+          {
+            "name": "st_addon_scope_kobra",
+            "amount": "x2"
+          },
+          {
+            "name": "st_addon_scope_ac10632",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_scope_mount",
+        "pda_encyclopedia_name": "st_upgr_w_scope_mount",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_scope_mount",
+            "amount": "x1"
+          },
+          {
+            "name": "st_swiss",
+            "amount": "x3"
+          },
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x6"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x6"
+          }
+        ]
+      },
+      {
+        "id": "upgr_w_3_speed",
+        "pda_encyclopedia_name": "st_upgr_w_speed",
+        "toolTier": 3,
+        "recipeReq": "recipe_expert_3",
+        "recipeReqName": "st_gamma_recipe_expert_3",
+        "ingredients": [
+          {
+            "name": "st_upgr_w_speed",
+            "amount": "x1"
+          },
+          {
+            "name": "st_barrel_8",
+            "amount": "x4"
+          },
+          {
+            "name": "st_barrel_9",
+            "amount": "x4"
+          },
+          {
+            "name": "st_prt_w_p_barrel_1",
+            "amount": "x4"
           }
         ]
       },
@@ -4033,6 +4033,27 @@
         ]
       },
       {
+        "id": "drug_sleepingpills",
+        "pda_encyclopedia_name": "st_sleepingpills",
+        "toolTier": 4,
+        "recipeReq": "recipe_drug_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_drug_psy_blockade",
+            "amount": "x4"
+          },
+          {
+            "name": "st_joint",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_plastic",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
         "id": "glucose",
         "pda_encyclopedia_name": "st_glucose",
         "toolTier": 4,
@@ -4256,27 +4277,6 @@
         ]
       },
       {
-        "id": "drug_sleepingpills",
-        "pda_encyclopedia_name": "st_sleepingpills",
-        "toolTier": 4,
-        "recipeReq": "recipe_drug_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_drug_psy_blockade",
-            "amount": "x4"
-          },
-          {
-            "name": "st_joint",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_plastic",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
         "id": "stimpack",
         "pda_encyclopedia_name": "st_stim_impro",
         "toolTier": 4,
@@ -4467,6 +4467,23 @@
         ]
       },
       {
+        "id": "ammo_12.7x55_ap",
+        "pda_encyclopedia_name": "ammo_12.7x55_ap",
+        "toolTier": 5,
+        "recipeReq": "recipe_ammo_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "ammo_12.7x55_ap",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_ammo",
+            "amount": "x7"
+          }
+        ]
+      },
+      {
         "id": "ammo_12.7x55_fmj",
         "pda_encyclopedia_name": "ammo-12.7x55-fmj",
         "toolTier": 5,
@@ -4531,23 +4548,6 @@
           {
             "name": "st_prt_i_ammo",
             "amount": "x3"
-          }
-        ]
-      },
-      {
-        "id": "ammo_magnum_300",
-        "pda_encyclopedia_name": "ammo-338-lapua",
-        "toolTier": 5,
-        "recipeReq": "recipe_ammo_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "ammo-338-lapua",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_ammo",
-            "amount": "x7"
           }
         ]
       },
@@ -4824,14 +4824,14 @@
         ]
       },
       {
-        "id": "ammo_7.62x54_ap",
-        "pda_encyclopedia_name": "ammo-7.62x54-ap",
+        "id": "ammo_7.62x54_7h14",
+        "pda_encyclopedia_name": "ammo-7.62x54_7n14",
         "toolTier": 5,
         "recipeReq": "recipe_ammo_0",
         "recipeReqName": "",
         "ingredients": [
           {
-            "name": "ammo-7.62x54-ap",
+            "name": "ammo-7.62x54_7n14",
             "amount": "x2"
           },
           {
@@ -4841,31 +4841,14 @@
         ]
       },
       {
-        "id": "ammo_pkm_100",
-        "pda_encyclopedia_name": "ammo-7.62x54-r",
+        "id": "ammo_7.62x54_ap",
+        "pda_encyclopedia_name": "ammo-7.62x54-ap",
         "toolTier": 5,
         "recipeReq": "recipe_ammo_0",
         "recipeReqName": "",
         "ingredients": [
           {
             "name": "ammo-7.62x54-ap",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_ammo",
-            "amount": "x7"
-          }
-        ]
-      },
-      {
-        "id": "ammo_7.62x54_7h14",
-        "pda_encyclopedia_name": "ammo-7.62x54_7n14",
-        "toolTier": 5,
-        "recipeReq": "recipe_ammo_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "ammo-7.62x54_7n14",
             "amount": "x2"
           },
           {
@@ -5083,6 +5066,23 @@
         ]
       },
       {
+        "id": "ammo_magnum_300",
+        "pda_encyclopedia_name": "ammo-338-lapua",
+        "toolTier": 5,
+        "recipeReq": "recipe_ammo_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "ammo-338-lapua",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_ammo",
+            "amount": "x7"
+          }
+        ]
+      },
+      {
         "id": "ammo_og-7b",
         "pda_encyclopedia_name": "ammo-og-7b",
         "toolTier": 5,
@@ -5096,6 +5096,23 @@
           {
             "name": "st_ied_rpg",
             "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "ammo_pkm_100",
+        "pda_encyclopedia_name": "ammo-7.62x54-r",
+        "toolTier": 5,
+        "recipeReq": "recipe_ammo_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "ammo-7.62x54-ap",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_ammo",
+            "amount": "x7"
           }
         ]
       },
@@ -5117,23 +5134,6 @@
           {
             "name": "st_powder_mag",
             "amount": "x1"
-          }
-        ]
-      },
-      {
-        "id": "ammo_12.7x55_ap",
-        "pda_encyclopedia_name": "ammo_12.7x55_ap",
-        "toolTier": 5,
-        "recipeReq": "recipe_ammo_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "ammo_12.7x55_ap",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_ammo",
-            "amount": "x7"
           }
         ]
       },
@@ -5332,27 +5332,6 @@
         ]
       },
       {
-        "id": "af_cristall_flower",
-        "pda_encyclopedia_name": "st_af_cristall_flower_name",
-        "toolTier": 6,
-        "recipeReq": "recipe_basic_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_af_black_angel_name",
-            "amount": "x1"
-          },
-          {
-            "name": "mutant_dog_heart",
-            "amount": "x1"
-          },
-          {
-            "name": "mutant_snork_leg",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
         "id": "af_cristall",
         "pda_encyclopedia_name": "st_af_cristall_name",
         "toolTier": 6,
@@ -5370,6 +5349,27 @@
           {
             "name": "mutant_zombi_hand",
             "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "af_cristall_flower",
+        "pda_encyclopedia_name": "st_af_cristall_flower_name",
+        "toolTier": 6,
+        "recipeReq": "recipe_basic_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_af_black_angel_name",
+            "amount": "x1"
+          },
+          {
+            "name": "mutant_dog_heart",
+            "amount": "x1"
+          },
+          {
+            "name": "mutant_snork_leg",
+            "amount": "x1"
           }
         ]
       },
@@ -5538,31 +5538,6 @@
         ]
       },
       {
-        "id": "af_fire_loop",
-        "pda_encyclopedia_name": "st_af_fire_loop_name",
-        "toolTier": 6,
-        "recipeReq": "recipe_expert_4",
-        "recipeReqName": "st_gamma_recipe_expert_4",
-        "ingredients": [
-          {
-            "name": "st_af_fire_name",
-            "amount": "x1"
-          },
-          {
-            "name": "st_af_fireball_name",
-            "amount": "x1"
-          },
-          {
-            "name": "mutant_heart_chimera",
-            "amount": "x6"
-          },
-          {
-            "name": "mutant_controller_hand",
-            "amount": "x6"
-          }
-        ]
-      },
-      {
         "id": "af_fire",
         "pda_encyclopedia_name": "st_af_fire_name",
         "toolTier": 6,
@@ -5584,6 +5559,31 @@
           {
             "name": "mutant_chimera_cogot",
             "amount": "x3"
+          }
+        ]
+      },
+      {
+        "id": "af_fire_loop",
+        "pda_encyclopedia_name": "st_af_fire_loop_name",
+        "toolTier": 6,
+        "recipeReq": "recipe_expert_4",
+        "recipeReqName": "st_gamma_recipe_expert_4",
+        "ingredients": [
+          {
+            "name": "st_af_fire_name",
+            "amount": "x1"
+          },
+          {
+            "name": "st_af_fireball_name",
+            "amount": "x1"
+          },
+          {
+            "name": "mutant_heart_chimera",
+            "amount": "x6"
+          },
+          {
+            "name": "mutant_controller_hand",
+            "amount": "x6"
           }
         ]
       },
@@ -5996,48 +5996,6 @@
     "label": "Furniture",
     "items": [
       {
-        "id": "prop_ammo_box",
-        "pda_encyclopedia_name": "st_placeable_ammo_box",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_prt_i_wood",
-            "amount": "x4"
-          },
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
-        "id": "decor_arti_display",
-        "pda_encyclopedia_name": "st_placeable_arti_display",
-        "toolTier": 3,
-        "recipeReq": "recipe_advanced_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_leatherman_tool",
-            "amount": "x1"
-          },
-          {
-            "name": "st_af_surge_name",
-            "amount": "x1"
-          },
-          {
-            "name": "st_af_frames_name",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
         "id": "blue_box_item",
         "pda_encyclopedia_name": "st_placeable_blue_box",
         "toolTier": 1,
@@ -6072,19 +6030,23 @@
         ]
       },
       {
-        "id": "exo_repair_kit_item",
-        "pda_encyclopedia_name": "st_placeable_exo_kit",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_0",
+        "id": "decor_arti_display",
+        "pda_encyclopedia_name": "st_placeable_arti_display",
+        "toolTier": 3,
+        "recipeReq": "recipe_advanced_0",
         "recipeReqName": "",
         "ingredients": [
           {
-            "name": "st_prt_i_scrap",
-            "amount": "x5"
+            "name": "st_leatherman_tool",
+            "amount": "x1"
           },
           {
-            "name": "st_prt_i_wood",
-            "amount": "x5"
+            "name": "st_af_surge_name",
+            "amount": "x1"
+          },
+          {
+            "name": "st_af_frames_name",
+            "amount": "x1"
           }
         ]
       },
@@ -6152,6 +6114,23 @@
         ]
       },
       {
+        "id": "exo_repair_kit_item",
+        "pda_encyclopedia_name": "st_placeable_exo_kit",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x5"
+          },
+          {
+            "name": "st_prt_i_wood",
+            "amount": "x5"
+          }
+        ]
+      },
+      {
         "id": "piano_item",
         "pda_encyclopedia_name": "st_placeable_piano",
         "toolTier": 1,
@@ -6194,86 +6173,23 @@
         ]
       },
       {
-        "id": "radio_item",
-        "pda_encyclopedia_name": "st_placeable_radio",
+        "id": "prop_ammo_box",
+        "pda_encyclopedia_name": "st_placeable_ammo_box",
         "toolTier": 1,
         "recipeReq": "recipe_basic_0",
         "recipeReqName": "",
         "ingredients": [
           {
-            "name": "st_radio2",
-            "amount": "x1"
+            "name": "st_prt_i_wood",
+            "amount": "x4"
           },
           {
-            "name": "st_prt_i_copper",
+            "name": "st_prt_i_scrap",
             "amount": "x2"
           },
           {
-            "name": "st_prt_i_transistors",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_resistors",
-            "amount": "x2"
-          }
-        ]
-      },
-      {
-        "id": "sumka6_item",
-        "pda_encyclopedia_name": "st_placeable_sumka6",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_sewing_thread",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_1",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_2",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_o_fabrics_3",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
-        "id": "weapon_rack_item",
-        "pda_encyclopedia_name": "st_placeable_weapon_rack",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x10"
-          },
-          {
-            "name": "st_prt_i_wood",
-            "amount": "x12"
-          }
-        ]
-      },
-      {
-        "id": "workshop_item",
-        "pda_encyclopedia_name": "st_placeable_workshop",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x12"
-          },
-          {
-            "name": "st_prt_i_wood",
-            "amount": "x12"
+            "name": "st_prt_i_fasteners",
+            "amount": "x4"
           }
         ]
       },
@@ -6340,6 +6256,23 @@
           },
           {
             "name": "st_prop_bed_1",
+            "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "prop_clock_1",
+        "pda_encyclopedia_name": "st_prop_prop_clock_1",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_copper",
             "amount": "x1"
           }
         ]
@@ -6425,23 +6358,6 @@
         ]
       },
       {
-        "id": "prop_clock_1",
-        "pda_encyclopedia_name": "st_prop_prop_clock_1",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x1"
-          },
-          {
-            "name": "st_prt_i_copper",
-            "amount": "x1"
-          }
-        ]
-      },
-      {
         "id": "prop_stove1",
         "pda_encyclopedia_name": "st_prop_stove1",
         "toolTier": 1,
@@ -6505,6 +6421,90 @@
           {
             "name": "st_prt_i_transistors",
             "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "radio_item",
+        "pda_encyclopedia_name": "st_placeable_radio",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_radio2",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_copper",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_transistors",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_i_resistors",
+            "amount": "x2"
+          }
+        ]
+      },
+      {
+        "id": "sumka6_item",
+        "pda_encyclopedia_name": "st_placeable_sumka6",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_sewing_thread",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_1",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_2",
+            "amount": "x1"
+          },
+          {
+            "name": "st_prt_o_fabrics_3",
+            "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "weapon_rack_item",
+        "pda_encyclopedia_name": "st_placeable_weapon_rack",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x10"
+          },
+          {
+            "name": "st_prt_i_wood",
+            "amount": "x12"
+          }
+        ]
+      },
+      {
+        "id": "workshop_item",
+        "pda_encyclopedia_name": "st_placeable_workshop",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x12"
+          },
+          {
+            "name": "st_prt_i_wood",
+            "amount": "x12"
           }
         ]
       }
@@ -8481,23 +8481,6 @@
         ]
       },
       {
-        "id": "prop_pccase",
-        "pda_encyclopedia_name": "st_prop_case",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x6"
-          },
-          {
-            "name": "st_prt_i_fasteners",
-            "amount": "x4"
-          }
-        ]
-      },
-      {
         "id": "prop_chair",
         "pda_encyclopedia_name": "st_prop_chair",
         "toolTier": 1,
@@ -8511,6 +8494,27 @@
           {
             "name": "st_prt_i_fasteners",
             "amount": "x1"
+          }
+        ]
+      },
+      {
+        "id": "prop_clock_1",
+        "pda_encyclopedia_name": "st_prop_prop_clock_1",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x4"
+          },
+          {
+            "name": "st_cutlery",
+            "amount": "x2"
+          },
+          {
+            "name": "st_prt_i_copper",
+            "amount": "x2"
           }
         ]
       },
@@ -8713,6 +8717,23 @@
         ]
       },
       {
+        "id": "prop_pccase",
+        "pda_encyclopedia_name": "st_prop_case",
+        "toolTier": 1,
+        "recipeReq": "recipe_basic_0",
+        "recipeReqName": "",
+        "ingredients": [
+          {
+            "name": "st_prt_i_scrap",
+            "amount": "x6"
+          },
+          {
+            "name": "st_prt_i_fasteners",
+            "amount": "x4"
+          }
+        ]
+      },
+      {
         "id": "prop_poster_vertical_item",
         "pda_encyclopedia_name": "st_prop_poster_vertical_item",
         "toolTier": 1,
@@ -8726,27 +8747,6 @@
           {
             "name": "st_prt_i_scrap",
             "amount": "x1"
-          }
-        ]
-      },
-      {
-        "id": "prop_clock_1",
-        "pda_encyclopedia_name": "st_prop_prop_clock_1",
-        "toolTier": 1,
-        "recipeReq": "recipe_basic_0",
-        "recipeReqName": "",
-        "ingredients": [
-          {
-            "name": "st_prt_i_scrap",
-            "amount": "x4"
-          },
-          {
-            "name": "st_cutlery",
-            "amount": "x2"
-          },
-          {
-            "name": "st_prt_i_copper",
-            "amount": "x2"
           }
         ]
       },

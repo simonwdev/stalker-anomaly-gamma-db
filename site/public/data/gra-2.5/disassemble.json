@@ -395,16 +395,6 @@
       "amount": "x1"
     }
   ],
-  "explo_balon_gas": [
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_scrap",
-      "amount": "x1"
-    }
-  ],
   "bandage": [
     {
       "name": "st_prt_o_fabrics_3",
@@ -499,32 +489,6 @@
       "amount": "x1"
     }
   ],
-  "detector_simple": [
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x1"
-    }
-  ],
   "detector_advanced": [
     {
       "name": "st_prt_i_capacitors",
@@ -544,6 +508,32 @@
     },
     {
       "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "detector_anomaly": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
       "amount": "x1"
     }
   ],
@@ -569,29 +559,7 @@
       "amount": "x1"
     }
   ],
-  "detector_scientific": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x4"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x4"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x4"
-    },
-    {
-      "name": "st_prt_i_scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    }
-  ],
-  "detector_anomaly": [
+  "detector_geiger": [
     {
       "name": "st_prt_i_resistors",
       "amount": "x2"
@@ -639,6 +607,54 @@
       "amount": "x1"
     }
   ],
+  "detector_scientific": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "detector_simple": [
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    }
+  ],
   "device_flashlight": [
     {
       "name": "st_prt_i_fasteners",
@@ -654,6 +670,72 @@
     },
     {
       "name": "st_prt_i_resistors",
+      "amount": "x1"
+    }
+  ],
+  "device_pda_1": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "device_pda_2": [
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
+  "device_pda_3": [
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
       "amount": "x1"
     }
   ],
@@ -749,24 +831,6 @@
       "amount": "x1"
     }
   ],
-  "letter_ecologist_report_1_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x3"
-    }
-  ],
-  "letter_ecologist_report_2_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x3"
-    }
-  ],
-  "letter_ecologist_report_3_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x3"
-    }
-  ],
   "equ_military_pack": [
     {
       "name": "st_prt_o_fabrics_4",
@@ -781,10 +845,10 @@
       "amount": "x2"
     }
   ],
-  "equ_small_pack": [
+  "equ_small_military_pack": [
     {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x2"
     },
     {
       "name": "st_prt_o_fabrics_2",
@@ -795,10 +859,10 @@
       "amount": "x1"
     }
   ],
-  "equ_small_military_pack": [
+  "equ_small_pack": [
     {
-      "name": "st_prt_o_fabrics_4",
-      "amount": "x2"
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
     },
     {
       "name": "st_prt_o_fabrics_2",
@@ -833,13 +897,13 @@
       "amount": "x1"
     }
   ],
-  "heavy_repair_kit": [
-    {
-      "name": "st_prt_i_scrap",
-      "amount": "x2"
-    },
+  "explo_balon_gas": [
     {
       "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
       "amount": "x1"
     }
   ],
@@ -860,44 +924,6 @@
     },
     {
       "name": "st_prt_i_resistors",
-      "amount": "x1"
-    }
-  ],
-  "letter_freedom_manual_1_of_2": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_freedom_manual_2_of_2": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "detector_geiger": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_scrap",
       "amount": "x1"
     }
   ],
@@ -1015,6 +1041,16 @@
       "amount": "x1"
     }
   ],
+  "heavy_repair_kit": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
   "ied_new": [
     {
       "name": "st_prt_i_scrap",
@@ -1091,6 +1127,72 @@
       "amount": "x3"
     }
   ],
+  "itm_pda_common": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    }
+  ],
+  "itm_pda_rare": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    }
+  ],
+  "itm_pda_uncommon": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    }
+  ],
   "itm_sleepbag": [
     {
       "name": "st_prt_o_fabrics_3",
@@ -1145,6 +1247,54 @@
       "amount": "x2"
     }
   ],
+  "letter_ecologist_report_1_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "letter_ecologist_report_2_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "letter_ecologist_report_3_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "letter_freedom_manual_1_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_freedom_manual_2_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_letter_to_outside": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_memoirs_1_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_memoirs_2_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
   "letter_mercenary": [
     {
       "name": "st_prt_i_paper",
@@ -1163,13 +1313,43 @@
       "amount": "x1"
     }
   ],
-  "letter_stalker_letter_3": [
+  "letter_monolith_prayer_1_of_3": [
     {
       "name": "st_prt_i_paper",
       "amount": "x1"
     }
   ],
-  "letter_letter_to_outside": [
+  "letter_monolith_prayer_2_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_monolith_prayer_3_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_monolithian_thoughts": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_stalker_letter_1_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_stalker_letter_2_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_stalker_letter_3": [
     {
       "name": "st_prt_i_paper",
       "amount": "x1"
@@ -1226,18 +1406,6 @@
     }
   ],
   "meinkampf": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_memoirs_1_of_2": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_memoirs_2_of_2": [
     {
       "name": "st_prt_i_paper",
       "amount": "x1"
@@ -1307,165 +1475,9 @@
       "amount": "x1"
     }
   ],
-  "letter_monolith_prayer_1_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_monolith_prayer_2_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_monolith_prayer_3_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_monolithian_thoughts": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
   "morphine": [
     {
       "name": "st_e_syringe",
-      "amount": "x1"
-    }
-  ],
-  "device_pda_1": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    }
-  ],
-  "device_pda_2": [
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x3"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    }
-  ],
-  "device_pda_3": [
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x4"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    }
-  ],
-  "itm_pda_common": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x1"
-    }
-  ],
-  "itm_pda_uncommon": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x1"
-    }
-  ],
-  "itm_pda_rare": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_capacitors",
       "amount": "x1"
     }
   ],
@@ -1657,18 +1669,6 @@
       "amount": "x1"
     }
   ],
-  "letter_stalker_letter_1_of_2": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_stalker_letter_2_of_2": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
   "stimpack": [
     {
       "name": "st_e_syringe",
@@ -1771,17 +1771,143 @@
       "amount": "x1"
     }
   ],
-  "upgr_o_3_armor": [
+  "upgr_o_1_arty": [
     {
       "name": "st_prt_o_fabrics_3",
       "amount": "x1"
     },
     {
-      "name": "st_prt_o_retardant_5",
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_bleed": [
+    {
+      "name": "st_prt_o_fabrics_3",
       "amount": "x1"
     },
     {
-      "name": "st_prt_o_retardant_6",
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_burn": [
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_carry": [
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_chem": [
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_damage": [
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_durability": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_health": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_power": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_psi": [
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_rad": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_run": [
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_shock": [
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_1_weight": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
       "amount": "x1"
     }
   ],
@@ -1799,16 +1925,6 @@
       "amount": "x1"
     }
   ],
-  "upgr_o_1_arty": [
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
   "upgr_o_2_arty": [
     {
       "name": "st_prt_o_retardant_6",
@@ -1820,44 +1936,6 @@
     },
     {
       "name": "st_prt_o_retardant_8",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_3_arty": [
-    {
-      "name": "st_prt_o_retardant_6",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_ballistic_10",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_3_bleed": [
-    {
-      "name": "st_prt_o_retardant_4",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_ballistic_10",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_1_bleed": [
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
       "amount": "x1"
     }
   ],
@@ -1889,62 +1967,6 @@
       "amount": "x1"
     }
   ],
-  "upgr_o_3_burn": [
-    {
-      "name": "st_prt_o_retardant_13",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_ballistic_9",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_10",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_1_burn": [
-    {
-      "name": "st_prt_o_fabrics_2",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_1_carry": [
-    {
-      "name": "st_prt_o_fabrics_2",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_3_carry": [
-    {
-      "name": "st_prt_o_retardant_13",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_ballistic_9",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_10",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    }
-  ],
   "upgr_o_2_carry": [
     {
       "name": "st_prt_o_retardant_2",
@@ -1956,24 +1978,6 @@
     },
     {
       "name": "st_prt_o_retardant_7",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_3_chem": [
-    {
-      "name": "st_prt_o_retardant_13",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_ballistic_9",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_10",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_3",
       "amount": "x1"
     }
   ],
@@ -1991,26 +1995,6 @@
       "amount": "x1"
     }
   ],
-  "upgr_o_1_chem": [
-    {
-      "name": "st_prt_o_fabrics_2",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_1_damage": [
-    {
-      "name": "st_prt_o_fabrics_2",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
   "upgr_o_2_damage": [
     {
       "name": "st_prt_o_retardant_11",
@@ -2022,24 +2006,6 @@
     },
     {
       "name": "st_prt_o_retardant_6",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_3_damage": [
-    {
-      "name": "st_prt_o_retardant_13",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_ballistic_9",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_10",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_3",
       "amount": "x1"
     }
   ],
@@ -2057,30 +2023,6 @@
       "amount": "x1"
     }
   ],
-  "upgr_o_1_durability": [
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_3_durability": [
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_6",
-      "amount": "x1"
-    }
-  ],
   "upgr_o_2_health": [
     {
       "name": "st_prt_o_retardant_15",
@@ -2095,30 +2037,6 @@
       "amount": "x1"
     }
   ],
-  "upgr_o_3_health": [
-    {
-      "name": "st_prt_o_ballistic_9",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_4",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_1_health": [
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
   "upgr_o_2_power": [
     {
       "name": "st_prt_o_retardant_6",
@@ -2130,62 +2048,6 @@
     },
     {
       "name": "st_prt_o_retardant_10",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_3_power": [
-    {
-      "name": "st_prt_o_retardant_11",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_ballistic_13",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_6",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_1_power": [
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_3_psi": [
-    {
-      "name": "st_prt_o_ballistic_15",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_12",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_10",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_1_psi": [
-    {
-      "name": "st_prt_o_fabrics_2",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
       "amount": "x1"
     }
   ],
@@ -2217,9 +2079,219 @@
       "amount": "x1"
     }
   ],
-  "upgr_o_1_rad": [
+  "upgr_o_2_run": [
+    {
+      "name": "st_prt_o_retardant_11",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_2",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_1",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_2_shock": [
     {
       "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_5",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_19",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_2_weight": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_5",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_armor": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_5",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_6",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_arty": [
+    {
+      "name": "st_prt_o_retardant_6",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_10",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_bleed": [
+    {
+      "name": "st_prt_o_retardant_4",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_10",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_burn": [
+    {
+      "name": "st_prt_o_retardant_13",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_9",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_10",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_carry": [
+    {
+      "name": "st_prt_o_retardant_13",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_9",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_10",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_chem": [
+    {
+      "name": "st_prt_o_retardant_13",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_9",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_10",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_damage": [
+    {
+      "name": "st_prt_o_retardant_13",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_9",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_10",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_durability": [
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_6",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_health": [
+    {
+      "name": "st_prt_o_ballistic_9",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_3",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_4",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_power": [
+    {
+      "name": "st_prt_o_retardant_11",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_ballistic_13",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_6",
+      "amount": "x1"
+    }
+  ],
+  "upgr_o_3_psi": [
+    {
+      "name": "st_prt_o_ballistic_15",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_12",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_o_retardant_10",
       "amount": "x1"
     },
     {
@@ -2245,16 +2317,6 @@
       "amount": "x1"
     }
   ],
-  "upgr_o_1_run": [
-    {
-      "name": "st_prt_o_fabrics_2",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
   "upgr_o_3_run": [
     {
       "name": "st_prt_o_retardant_15",
@@ -2266,30 +2328,6 @@
     },
     {
       "name": "st_prt_o_ballistic_19",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_2_run": [
-    {
-      "name": "st_prt_o_retardant_11",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_2",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_1",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_1_shock": [
-    {
-      "name": "st_prt_o_fabrics_2",
       "amount": "x1"
     },
     {
@@ -2315,20 +2353,6 @@
       "amount": "x1"
     }
   ],
-  "upgr_o_2_shock": [
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_5",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_ballistic_19",
-      "amount": "x1"
-    }
-  ],
   "upgr_o_3_weight": [
     {
       "name": "st_prt_o_ballistic_18",
@@ -2344,30 +2368,6 @@
     },
     {
       "name": "st_prt_o_retardant_2",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_2_weight": [
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_retardant_5",
-      "amount": "x1"
-    }
-  ],
-  "upgr_o_1_weight": [
-    {
-      "name": "st_prt_o_fabrics_3",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_o_fabrics_1",
       "amount": "x1"
     }
   ],

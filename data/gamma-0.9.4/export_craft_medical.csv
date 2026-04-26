@@ -15,6 +15,7 @@ drug_antidot,st_drug_antidot,4,recipe_drug_0,,st_antibio_chlor,x2,st_antibio_sul
 drug_booster,st_drug_booster,4,recipe_drug_0,,st_protein,x1,st_vodka,x1,st_jar,x1,,
 drug_psy_blockade,st_drug_psy_blockade,4,recipe_drug_0,,st_bottle_metal,x3,st_antiemetic,x6,st_prt_i_plastic,x1,,
 drug_radioprotector,st_drug_radioprotector,4,recipe_drug_0,,st_antibio_chlor,x1,st_bottle_metal,x1,st_prt_i_plastic,x1,,
+drug_sleepingpills,st_sleepingpills,4,recipe_drug_0,,st_drug_psy_blockade,x4,st_joint,x1,st_prt_i_plastic,x2,,
 glucose,st_glucose,4,recipe_drug_0,,st_glucose_s,x1,st_caffeine,x2,st_e_syringe,x1,,
 glucose_s,st_glucose_s,4,recipe_drug_0,,st_protein,x1,st_caffeine,x1,st_e_syringe,x1,,
 jgut,st_jgut_zhgut,4,recipe_drug_0,,st_bandage,x2,st_prt_o_fabrics_2,x1,,,,
@@ -26,7 +27,6 @@ medkit_scientic,st_medkit_science,4,recipe_drug_0,,st_medkit_army,x2,st_antirad_
 morphine,st_morphine,4,recipe_drug_0,,st_salicidic_acid,x1,st_antiemetic,x1,st_e_syringe,x1,,
 rebirth,st_rebirth,4,recipe_drug_0,,st_akvatab,x2,st_tetanus,x1,st_stim_military,x1,,
 salicidic_acid,st_salicidic_acid,4,recipe_drug_0,,st_analgetic,x1,st_caffeine,x1,st_e_syringe,x1,,
-drug_sleepingpills,st_sleepingpills,4,recipe_drug_0,,st_drug_psy_blockade,x4,st_joint,x1,st_prt_i_plastic,x2,,
 stimpack,st_stim_impro,4,recipe_drug_0,,st_medkit,x1,st_analgetic,x1,st_e_syringe,x1,st_prt_i_plastic,x1
 stimpack_army,st_stim_military,4,recipe_drug_0,,st_medkit_army,x1,st_salicidic_acid,x1,st_e_syringe,x1,st_prt_i_plastic,x1
 stimpack_scientic,st_stim_scientic,4,recipe_drug_0,,st_medkit_science,x1,st_morphine,x1,st_e_syringe,x1,st_prt_i_plastic,x1

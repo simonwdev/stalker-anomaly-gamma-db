@@ -6,40 +6,6 @@
   ],
   "items": [
     {
-      "id": "e0t2",
-      "pda_encyclopedia_name": "st_addon_scope_e0t2",
-      "sources": [
-        {
-          "name": "st_addon_scope_e0t2_mag",
-          "amount": "1"
-        }
-      ]
-    },
-    {
-      "id": "magnifier",
-      "pda_encyclopedia_name": "st_addon_scope_mag",
-      "sources": [
-        {
-          "name": "st_addon_scope_e0t2_mag",
-          "amount": "1"
-        },
-        {
-          "name": "st_addon_scope_razor_mag",
-          "amount": "1"
-        }
-      ]
-    },
-    {
-      "id": "uh2",
-      "pda_encyclopedia_name": "st_addon_scope_razor",
-      "sources": [
-        {
-          "name": "st_addon_scope_razor_mag",
-          "amount": "1"
-        }
-      ]
-    },
-    {
       "id": "bandage",
       "pda_encyclopedia_name": "st_bandage",
       "sources": [
@@ -68,6 +34,16 @@
         {
           "name": "st_armor_repair_fa",
           "amount": "2"
+        }
+      ]
+    },
+    {
+      "id": "e0t2",
+      "pda_encyclopedia_name": "st_addon_scope_e0t2",
+      "sources": [
+        {
+          "name": "st_addon_scope_e0t2_mag",
+          "amount": "1"
         }
       ]
     },
@@ -176,22 +152,26 @@
       ]
     },
     {
+      "id": "magnifier",
+      "pda_encyclopedia_name": "st_addon_scope_mag",
+      "sources": [
+        {
+          "name": "st_addon_scope_e0t2_mag",
+          "amount": "1"
+        },
+        {
+          "name": "st_addon_scope_razor_mag",
+          "amount": "1"
+        }
+      ]
+    },
+    {
       "id": "medkit_army",
       "pda_encyclopedia_name": "st_medkit_army",
       "sources": [
         {
           "name": "st_survival_kit",
           "amount": "1"
-        }
-      ]
-    },
-    {
-      "id": "powder_3",
-      "pda_encyclopedia_name": "st_powder_mag",
-      "sources": [
-        {
-          "name": "st_metalcan_powder",
-          "amount": "2"
         }
       ]
     },
@@ -212,6 +192,16 @@
         {
           "name": "st_metalcan_powder",
           "amount": "3"
+        }
+      ]
+    },
+    {
+      "id": "powder_3",
+      "pda_encyclopedia_name": "st_powder_mag",
+      "sources": [
+        {
+          "name": "st_metalcan_powder",
+          "amount": "2"
         }
       ]
     },
@@ -1719,6 +1709,16 @@
       "sources": [
         {
           "name": "st_kit_hunt",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "uh2",
+      "pda_encyclopedia_name": "st_addon_scope_razor",
+      "sources": [
+        {
+          "name": "st_addon_scope_razor_mag",
           "amount": "1"
         }
       ]

@@ -1,8 +1,8 @@
 ~,pda_encyclopedia_name,st_data_export_description,st_prop_weight,st_upgr_cost,st_data_export_light_attack_power,st_data_export_heavy_attack_power,BR,ui_inv_wrange
-wpn_axe3,st_axe3,st_axe3_descr,1.08,12455,57.1,187,1620,0
-wpn_knife3,st_knife_hunting,st_knife_hunting_descr,0.30,6825,42,71,2840,0
 wpn_axe,st_axe,st_axe_descr,1.01,10550,160,52.5,920,0
-wpn_knife4,st_knife_swat,st_knife_swat_descr,0.37,12425,54,78,1780,0
-wpn_knife2,st_knife_needle,st_knife_needle_descr,0.26,3960,45,55,2450,0
-wpn_knife5,st_knife_combat,st_knife_combat_descr,0.28,15585,48,87,1620,0
+wpn_axe3,st_axe3,st_axe3_descr,1.08,12455,57.1,187,1620,0
 wpn_knife,st_knife_6x4,st_knife_6x4_descr,0.18,2085,30.5,52.5,920,0
+wpn_knife2,st_knife_needle,st_knife_needle_descr,0.26,3960,45,55,2450,0
+wpn_knife3,st_knife_hunting,st_knife_hunting_descr,0.30,6825,42,71,2840,0
+wpn_knife4,st_knife_swat,st_knife_swat_descr,0.37,12425,54,78,1780,0
+wpn_knife5,st_knife_combat,st_knife_combat_descr,0.28,15585,48,87,1620,0
