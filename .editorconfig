@@ -1,0 +1,20 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# Build/data scripts use 2-space indent
+[scripts/*.{js,mjs,cjs}]
+indent_size = 2
+
+# JSON data files (translations, dictionaries, generated output)
+[*.json]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false

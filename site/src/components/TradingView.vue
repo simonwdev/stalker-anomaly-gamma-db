@@ -4,7 +4,7 @@
     <div class="trading-toolbar">
         <div class="trading-trader-pills">
             <button
-                v-for="trader in traders"
+                v-for="trader in displayTraders"
                 :key="trader.id"
                 class="trading-pill"
                 :class="{ active: selectedTrader === trader.id }"
@@ -199,6 +199,11 @@ export default {
         };
     },
     computed: {
+        displayTraders() {
+            return [...this.traders].sort((a, b) =>
+                this.traderName(a).localeCompare(this.traderName(b))
+            );
+        },
         supplyKeys() {
             if (!this.traderData) return [];
             return Object.keys(this.traderData)
@@ -257,36 +262,30 @@ export default {
                 if (r[1] != null) map[r[0].replace(/_x$/, '')] = r[1];
             return map;
         },
-						priceItems() {
-						    const buyMap = {};
-						    for (const r of (this.traderData?.buy_condition || []))
-						        buyMap[r[0].replace(/_x$/, '')] = r[1];
-						    const sellMap = {};
-						    for (const r of (this.traderData?.sell_condition || []))
-						        sellMap[r[0].replace(/_x$/, '')] = r[1];
+        priceItems() {
+            const buyMap = this.buyConditionMap;
+            const sellMap = this.sellConditionMap;
 
-						    const ids = new Set();
-						    // Add all items from all supply tiers
-						    for (const key of this.supplyKeys) {
-						        for (const row of (this.traderData[key] || []))
-						            ids.add(row[0]);
-						    }
-						    // Add all items from buy_condition
-						    for (const id of Object.keys(buyMap))
-						        ids.add(id);
+            const ids = new Set();
+            for (const key of this.supplyKeys) {
+                for (const row of (this.traderData[key] || []))
+                    ids.add(row[0]);
+            }
+            for (const id of Object.keys(buyMap))
+                ids.add(id);
 
-						    const q = this.searchQuery.trim().toLowerCase();
+            const q = this.searchQuery.trim().toLowerCase();
 
-						    return [...ids]
-						        .map(id => ({ id, buy: buyMap[id] ?? null, sell: sellMap[id] ?? null }))
-						        .filter(({ id }) => {
-						            if (!q) return true;
-						            if (id.toLowerCase().includes(q)) return true;
-						            const resolved = this.resolveItem(id);
-						            return resolved && this.tName(resolved).toLowerCase().includes(q);
-						        })
-						        .sort((a, b) => this.itemDisplayName(a.id).localeCompare(this.itemDisplayName(b.id)));
-						},
+            return [...ids]
+                .map(id => ({ id, buy: buyMap[id] ?? null, sell: sellMap[id] ?? null }))
+                .filter(({ id }) => {
+                    if (!q) return true;
+                    if (id.toLowerCase().includes(q)) return true;
+                    const resolved = this.resolveItem(id);
+                    return resolved && this.tName(resolved).toLowerCase().includes(q);
+                })
+                .sort((a, b) => this.itemDisplayName(a.id).localeCompare(this.itemDisplayName(b.id)));
+        },
     },
     watch: {
         packId: {
@@ -459,7 +458,8 @@ export default {
                 this.traders = [];
             }
             if (!this.selectedTrader || !this.traders.find(t => t.id === this.selectedTrader)) {
-                this.selectedTrader = this.traders[0]?.id ?? null;
+                const preferred = this.traders.find(t => t.id === 'stalker_sidorovich');
+                this.selectedTrader = preferred?.id ?? this.traders[0]?.id ?? null;
             }
             this.loadTrader();
             // items-common is optional — never let a missing file wipe traders

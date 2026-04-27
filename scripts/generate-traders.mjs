@@ -13,16 +13,6 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
-const args = process.argv.slice(2);
-let pack = 'gamma-0.9.4';
-const packIdx = args.indexOf('--pack');
-if (packIdx !== -1 && args[packIdx + 1]) {
-  pack = args[packIdx + 1];
-}
-
-const srcDir = path.join(ROOT, 'data', pack, 'traders');
-const outDir = path.join(ROOT, 'site', 'public', 'data', pack, 'traders');
-
 function coerce(val) {
   if (val === '') return '';
   if (!isNaN(val)) return Number(val);
@@ -90,53 +80,67 @@ function processTraderDir(traderPath) {
   return traderData;
 }
 
-// Main
-if (!fs.existsSync(srcDir)) {
-  console.error(`Source directory not found: ${srcDir}`);
-  process.exit(1);
-}
+export function generateTraders(pack) {
+  const srcDir = path.join(ROOT, 'data', pack, 'traders');
+  const outDir = path.join(ROOT, 'site', 'public', 'data', pack, 'traders');
 
-fs.mkdirSync(outDir, { recursive: true });
-
-const traderDirs = fs.readdirSync(srcDir, { withFileTypes: true })
-  .filter(d => d.isDirectory())
-  .map(d => d.name);
-
-let totalFiles = 0;
-for (const traderName of traderDirs) {
-  const traderPath = path.join(srcDir, traderName);
-  const traderData = processTraderDir(traderPath);
-  const outFile = path.join(outDir, `${traderName}.json`);
-  fs.writeFileSync(outFile, JSON.stringify(traderData, null, 2));
-  const csvCount = Object.keys(traderData).length;
-  totalFiles += csvCount;
-  console.log(`  ${traderName}: ${csvCount} CSV files → ${traderName}.json`);
-}
-
-console.log(`\nDone! Processed ${totalFiles} CSV files from ${traderDirs.length} traders → ${outDir}`);
-
-// Generate traders-meta.json alongside other pack-level JSON files
-const metaOutFile = path.join(outDir, '..', 'traders-meta.json');
-
-// Preserve any colors the user has already set manually
-let colorMap = {};
-try {
-  const existing = JSON.parse(fs.readFileSync(metaOutFile, 'utf-8'));
-  for (const entry of existing) {
-    if (entry.id && entry.color) colorMap[entry.id] = entry.color;
+  if (!fs.existsSync(srcDir)) {
+    console.error(`Source directory not found: ${srcDir}`);
+    process.exit(1);
   }
-} catch { /* file doesn't exist yet or is malformed — start fresh */ }
 
-const tradersMeta = traderDirs.map(id => {
-  const dataFile = path.join(srcDir, id, 'data.csv');
-  let label = '';
+  fs.mkdirSync(outDir, { recursive: true });
+
+  const traderDirs = fs.readdirSync(srcDir, { withFileTypes: true })
+    .filter(d => d.isDirectory())
+    .map(d => d.name);
+
+  let totalFiles = 0;
+  for (const traderName of traderDirs) {
+    const traderPath = path.join(srcDir, traderName);
+    const traderData = processTraderDir(traderPath);
+    const outFile = path.join(outDir, `${traderName}.json`);
+    fs.writeFileSync(outFile, JSON.stringify(traderData, null, 2));
+    const csvCount = Object.keys(traderData).length;
+    totalFiles += csvCount;
+    console.log(`  ${traderName}: ${csvCount} CSV files → ${traderName}.json`);
+  }
+
+  console.log(`\nDone! Processed ${totalFiles} CSV files from ${traderDirs.length} traders → ${outDir}`);
+
+  // Generate traders-meta.json alongside other pack-level JSON files
+  const metaOutFile = path.join(outDir, '..', 'traders-meta.json');
+
+  // Preserve any colors the user has already set manually
+  let colorMap = {};
   try {
-    const data = parseCSV(fs.readFileSync(dataFile, 'utf-8'), 'data');
-    label = data.name ?? '';
-  } catch { /* no data.csv — leave label empty */ }
-  return { id, labelKey: `app_${id}`, label, color: colorMap[id] ?? '' };
-});
+    const existing = JSON.parse(fs.readFileSync(metaOutFile, 'utf-8'));
+    for (const entry of existing) {
+      if (entry.id && entry.color) colorMap[entry.id] = entry.color;
+    }
+  } catch { /* file doesn't exist yet or is malformed — start fresh */ }
 
-fs.writeFileSync(metaOutFile, JSON.stringify(tradersMeta, null, 2));
-console.log(`Wrote traders-meta.json (${tradersMeta.length} entries) → ${metaOutFile}`);
+  const tradersMeta = traderDirs.map(id => {
+    const dataFile = path.join(srcDir, id, 'data.csv');
+    let label = '';
+    try {
+      const data = parseCSV(fs.readFileSync(dataFile, 'utf-8'), 'data');
+      label = data.name ?? '';
+    } catch { /* no data.csv — leave label empty */ }
+    return { id, labelKey: `app_${id}`, label, color: colorMap[id] ?? '' };
+  });
 
+  fs.writeFileSync(metaOutFile, JSON.stringify(tradersMeta, null, 2));
+  console.log(`Wrote traders-meta.json (${tradersMeta.length} entries) → ${metaOutFile}`);
+}
+
+// Run as a script when invoked directly: `node scripts/generate-traders.mjs --pack <id>`
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const args = process.argv.slice(2);
+  let pack = 'gamma-0.9.4';
+  const packIdx = args.indexOf('--pack');
+  if (packIdx !== -1 && args[packIdx + 1]) {
+    pack = args[packIdx + 1];
+  }
+  generateTraders(pack);
+}
