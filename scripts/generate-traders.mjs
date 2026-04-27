@@ -115,3 +115,28 @@ for (const traderName of traderDirs) {
 
 console.log(`\nDone! Processed ${totalFiles} CSV files from ${traderDirs.length} traders → ${outDir}`);
 
+// Generate traders-meta.json alongside other pack-level JSON files
+const metaOutFile = path.join(outDir, '..', 'traders-meta.json');
+
+// Preserve any colors the user has already set manually
+let colorMap = {};
+try {
+  const existing = JSON.parse(fs.readFileSync(metaOutFile, 'utf-8'));
+  for (const entry of existing) {
+    if (entry.id && entry.color) colorMap[entry.id] = entry.color;
+  }
+} catch { /* file doesn't exist yet or is malformed — start fresh */ }
+
+const tradersMeta = traderDirs.map(id => {
+  const dataFile = path.join(srcDir, id, 'data.csv');
+  let label = '';
+  try {
+    const data = parseCSV(fs.readFileSync(dataFile, 'utf-8'), 'data');
+    label = data.name ?? '';
+  } catch { /* no data.csv — leave label empty */ }
+  return { id, labelKey: `app_${id}`, label, color: colorMap[id] ?? '' };
+});
+
+fs.writeFileSync(metaOutFile, JSON.stringify(tradersMeta, null, 2));
+console.log(`Wrote traders-meta.json (${tradersMeta.length} entries) → ${metaOutFile}`);
+

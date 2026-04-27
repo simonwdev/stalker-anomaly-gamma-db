@@ -1,184 +1,320 @@
 {
   "buy_condition": [
     [
-      "blue_box_item",
-      0.1
+      "adrenalin",
+      1
     ],
     [
-      "case_item",
-      0.1
+      "af_ah_e1",
+      1
     ],
     [
-      "device_gas_lamp",
-      0.1
+      "af_ah_e2",
+      1
     ],
     [
-      "device_light_altar",
-      0.1
+      "af_ah_f1",
+      1
     ],
     [
-      "device_metal_torch",
-      0.1
+      "af_ah_g1",
+      1
     ],
     [
-      "exo_repair_kit_item",
-      0.1
+      "af_ah_g2",
+      1
+    ],
+    [
+      "af_ah_h1",
+      1
+    ],
+    [
+      "af_ah_h2",
+      1
+    ],
+    [
+      "af_ah_o1",
+      1
+    ],
+    [
+      "af_ah_o2",
+      1
+    ],
+    [
+      "af_ah_r1",
+      1
+    ],
+    [
+      "af_ah_r2",
+      1
+    ],
+    [
+      "af_ah_r3",
+      1
+    ],
+    [
+      "af_ah_r4",
+      1
+    ],
+    [
+      "af_ah_r5",
+      1
+    ],
+    [
+      "af_ah_s1",
+      1
+    ],
+    [
+      "af_black",
+      1
+    ],
+    [
+      "af_tlf_lost_soul",
+      1
+    ],
+    [
+      "af_tlf_prometheus",
+      1
+    ],
+    [
+      "akvatab",
+      1
+    ],
+    [
+      "ammo_knife_6",
+      1
+    ],
+    [
+      "analgetic",
+      1
+    ],
+    [
+      "animation_hit_bolt",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife2",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife3",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife4",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife5",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife6",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife7",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife8",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife9",
+      1
+    ],
+    [
+      "antibio_chlor",
+      1
+    ],
+    [
+      "antibio_sulfad",
+      1
+    ],
+    [
+      "antiemetic",
+      1
+    ],
+    [
+      "antirad",
+      1
+    ],
+    [
+      "antirad_cystamine",
+      1
+    ],
+    [
+      "antirad_kalium",
+      1
+    ],
+    [
+      "bandage",
+      1
+    ],
+    [
+      "caffeine",
+      1
+    ],
+    [
+      "cocaine",
+      1
+    ],
+    [
+      "drug_anabiotic",
+      1
+    ],
+    [
+      "drug_antidot",
+      1
+    ],
+    [
+      "drug_booster",
+      1
+    ],
+    [
+      "drug_coagulant",
+      1
+    ],
+    [
+      "drug_psy_blockade",
+      1
+    ],
+    [
+      "drug_radioprotector",
+      1
+    ],
+    [
+      "drug_sleepingpills",
+      1
+    ],
+    [
+      "e_syringe",
+      1
+    ],
+    [
+      "exo_dolg_red_outfit",
+      1
+    ],
+    [
+      "fieldcraft_plate_attch",
+      1
+    ],
+    [
+      "glucose",
+      1
+    ],
+    [
+      "glucose_s",
+      1
+    ],
+    [
+      "items_anm_dummy",
+      1
     ],
     [
       "itm_drugkit",
       2
     ],
     [
-      "piano_item",
-      0.1
+      "itm_tent_bag",
+      1
     ],
     [
-      "pistol_shelf_item",
-      0.1
+      "itm_xcvb_1",
+      1
     ],
     [
-      "prop_ammo_box",
-      0.1
+      "itm_xcvb_2",
+      1
     ],
     [
-      "prop_bed_1",
-      0.1
+      "itm_xcvb_3",
+      1
     ],
     [
-      "prop_bed_2",
-      0.1
+      "jgut",
+      1
     ],
     [
-      "prop_bed_3",
-      0.1
+      "marker",
+      1
     ],
     [
-      "prop_board_map",
-      0.1
+      "medkit",
+      1
     ],
     [
-      "prop_bong",
-      0.1
+      "medkit_ai1",
+      1
     ],
     [
-      "prop_cans_tuna",
-      0.1
+      "medkit_ai2",
+      1
     ],
     [
-      "prop_chair",
-      0.1
+      "medkit_ai3",
+      1
     ],
     [
-      "prop_clock_1",
-      0.1
+      "medkit_army",
+      1
     ],
     [
-      "prop_couch_1",
-      0.1
+      "medkit_scientic",
+      1
     ],
     [
-      "prop_counter_1",
-      0.1
+      "monolith_shard",
+      1
     ],
     [
-      "prop_dish1",
-      0.1
+      "morphine",
+      1
     ],
     [
-      "prop_dish2",
-      0.1
+      "powder_poltergeist",
+      1
     ],
     [
-      "prop_fan",
-      0.1
+      "protein",
+      1
     ],
     [
-      "prop_fridge",
-      0.1
+      "rebirth",
+      1
     ],
     [
-      "prop_keyboard",
-      0.1
+      "salicidic_acid",
+      1
     ],
     [
-      "prop_lamp1",
-      0.1
+      "stimpack",
+      1
     ],
     [
-      "prop_lamp2",
-      0.1
+      "stimpack_army",
+      1
     ],
     [
-      "prop_laptop_item",
-      0.1
+      "stimpack_scientic",
+      1
     ],
     [
-      "prop_med_case_1",
-      0.1
+      "survival_kit",
+      1
     ],
     [
-      "prop_mice_pad",
-      0.1
+      "tetanus",
+      1
     ],
     [
-      "prop_monitor",
-      0.1
-    ],
-    [
-      "prop_mug",
-      0.1
-    ],
-    [
-      "prop_pccase",
-      0.1
-    ],
-    [
-      "prop_poster_vertical_item",
-      0.1
-    ],
-    [
-      "prop_shelf_1",
-      0.1
-    ],
-    [
-      "prop_shelf_2",
-      0.1
-    ],
-    [
-      "prop_stove1",
-      0.1
-    ],
-    [
-      "prop_stove2",
-      0.1
-    ],
-    [
-      "prop_table_1",
-      0.1
-    ],
-    [
-      "prop_table_2",
-      0.1
-    ],
-    [
-      "prop_tv",
-      0.1
-    ],
-    [
-      "radio_item",
-      0.1
-    ],
-    [
-      "sumka6_item",
-      0.1
-    ],
-    [
-      "weapon_rack_item",
-      0.1
-    ],
-    [
-      "workshop_item",
-      0.1
+      "yadylin",
+      1
     ]
   ],
   "buy_supplies": [
@@ -188,7 +324,7 @@
     ]
   ],
   "data": {
-    "name": "bar_dolg_medic_name"
+    "name": "st_data_export_trader_medic"
   },
   "discounts": [
     [
@@ -202,8 +338,320 @@
   ],
   "sell_condition": [
     [
+      "adrenalin",
+      1
+    ],
+    [
+      "af_ah_e1",
+      1
+    ],
+    [
+      "af_ah_e2",
+      1
+    ],
+    [
+      "af_ah_f1",
+      1
+    ],
+    [
+      "af_ah_g1",
+      1
+    ],
+    [
+      "af_ah_g2",
+      1
+    ],
+    [
+      "af_ah_h1",
+      1
+    ],
+    [
+      "af_ah_h2",
+      1
+    ],
+    [
+      "af_ah_o1",
+      1
+    ],
+    [
+      "af_ah_o2",
+      1
+    ],
+    [
+      "af_ah_r1",
+      1
+    ],
+    [
+      "af_ah_r2",
+      1
+    ],
+    [
+      "af_ah_r3",
+      1
+    ],
+    [
+      "af_ah_r4",
+      1
+    ],
+    [
+      "af_ah_r5",
+      1
+    ],
+    [
+      "af_ah_s1",
+      1
+    ],
+    [
+      "af_black",
+      1
+    ],
+    [
+      "af_tlf_lost_soul",
+      1
+    ],
+    [
+      "af_tlf_prometheus",
+      1
+    ],
+    [
+      "akvatab",
+      1
+    ],
+    [
+      "ammo_knife_6",
+      1
+    ],
+    [
+      "analgetic",
+      1
+    ],
+    [
+      "animation_hit_bolt",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife2",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife3",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife4",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife5",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife6",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife7",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife8",
+      1
+    ],
+    [
+      "animation_hit_wpn_knife9",
+      1
+    ],
+    [
+      "antibio_chlor",
+      1
+    ],
+    [
+      "antibio_sulfad",
+      1
+    ],
+    [
+      "antiemetic",
+      1
+    ],
+    [
+      "antirad",
+      1
+    ],
+    [
+      "antirad_cystamine",
+      1
+    ],
+    [
+      "antirad_kalium",
+      1
+    ],
+    [
+      "bandage",
+      1
+    ],
+    [
+      "caffeine",
+      1
+    ],
+    [
+      "cocaine",
+      1
+    ],
+    [
+      "drug_anabiotic",
+      1
+    ],
+    [
+      "drug_antidot",
+      1
+    ],
+    [
+      "drug_booster",
+      1
+    ],
+    [
+      "drug_coagulant",
+      1
+    ],
+    [
+      "drug_psy_blockade",
+      1
+    ],
+    [
+      "drug_radioprotector",
+      1
+    ],
+    [
+      "drug_sleepingpills",
+      1
+    ],
+    [
+      "e_syringe",
+      1
+    ],
+    [
+      "exo_dolg_red_outfit",
+      1
+    ],
+    [
+      "fieldcraft_plate_attch",
+      1
+    ],
+    [
+      "glucose",
+      1
+    ],
+    [
+      "glucose_s",
+      1
+    ],
+    [
+      "items_anm_dummy",
+      1
+    ],
+    [
       "itm_drugkit",
       2
+    ],
+    [
+      "itm_tent_bag",
+      1
+    ],
+    [
+      "itm_xcvb_1",
+      1
+    ],
+    [
+      "itm_xcvb_2",
+      1
+    ],
+    [
+      "itm_xcvb_3",
+      1
+    ],
+    [
+      "jgut",
+      1
+    ],
+    [
+      "marker",
+      1
+    ],
+    [
+      "medkit",
+      1
+    ],
+    [
+      "medkit_ai1",
+      1
+    ],
+    [
+      "medkit_ai2",
+      1
+    ],
+    [
+      "medkit_ai3",
+      1
+    ],
+    [
+      "medkit_army",
+      1
+    ],
+    [
+      "medkit_scientic",
+      1
+    ],
+    [
+      "monolith_shard",
+      1
+    ],
+    [
+      "morphine",
+      1
+    ],
+    [
+      "powder_poltergeist",
+      1
+    ],
+    [
+      "protein",
+      1
+    ],
+    [
+      "rebirth",
+      1
+    ],
+    [
+      "salicidic_acid",
+      1
+    ],
+    [
+      "stimpack",
+      1
+    ],
+    [
+      "stimpack_army",
+      1
+    ],
+    [
+      "stimpack_scientic",
+      1
+    ],
+    [
+      "survival_kit",
+      1
+    ],
+    [
+      "tetanus",
+      1
+    ],
+    [
+      "yadylin",
+      1
     ]
   ],
   "supplies_1": [

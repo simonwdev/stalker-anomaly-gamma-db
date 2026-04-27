@@ -1,0 +1,6 @@
+~,st_data_export_condition
+supplies_5,=raid_goodwill_check(freedom:1000)
+supplies_4,=raid_goodwill_check(freedom:750)
+supplies_3,=raid_goodwill_check(freedom:500)
+supplies_2,=raid_goodwill_check(freedom:250)
+supplies_1,

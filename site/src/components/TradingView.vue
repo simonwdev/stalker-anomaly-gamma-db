@@ -1,5 +1,5 @@
 <template>
-<div class="trading-view" v-if="packId">
+<div class="trading-view" v-if="packId && traders.length">
     <!-- Trader selector pills -->
     <div class="trading-toolbar">
         <div class="trading-trader-pills">
@@ -11,7 +11,7 @@
                 @click="selectTrader(trader.id)"
             >
                 <span class="trading-pill-dot" :style="{ background: trader.color }"></span>
-                {{ t(trader.labelKey) || trader.label }}
+                {{ traderName(trader) }}
             </button>
         </div>
         <div class="trading-search-wrap">
@@ -31,13 +31,9 @@
             <LucidePackage :size="14" />
             {{ t('app_trading_supplies') }}
         </button>
-        <button class="trading-tab" :class="{ active: activeTab === 'buy' }" @click="activeTab = 'buy'">
+        <button class="trading-tab" :class="{ active: activeTab === 'prices' }" @click="activeTab = 'prices'">
             <LucideArrowDownCircle :size="14" />
-            {{ t('app_trading_buy_conditions') }}
-        </button>
-        <button class="trading-tab" :class="{ active: activeTab === 'sell' }" @click="activeTab = 'sell'">
-            <LucideArrowUpCircle :size="14" />
-            {{ t('app_trading_sell_conditions') }}
+            {{ t('app_trading_prices') }}
         </button>
     </div>
 
@@ -74,6 +70,15 @@
                 >
                     {{ tierLabel(key) }}
                 </button>
+                <span
+                    class="toggle-switch"
+                    :class="{ on: exclusiveOnly }"
+                    @click="exclusiveOnly = !exclusiveOnly"
+                    v-tooltip="t('app_trading_exclusive_only')"
+                    style="cursor: pointer; align-self: center; margin-left: 0.5rem"
+                >
+                    <span class="toggle-knob"></span>
+                </span>
             </div>
             <div v-if="unlockCondition || activeTier === 'supplies_1' || activeTier === 'supplies_generic'" class="trading-unlock-condition">
                 <span class="trading-unlock-icon">🔓</span>
@@ -98,10 +103,10 @@
                     @mouseleave="$emit('hideItemHover')"
                 >
                     <div class="trading-item-info">
-                        <div class="trading-item-name">
-                            {{ resolveItem(item[0]) ? tName(resolveItem(item[0])) : item[0] }}
+                        <div class="trading-item-name" v-tooltip="itemDisplayName(item[0])">
+                            {{ itemDisplayName(item[0]) }}
                         </div>
-                        <div class="trading-item-id" v-if="resolveItem(item[0])">{{ item[0] }}</div>
+                        <div class="trading-item-id" v-if="resolveItem(item[0]) || itemsCommon[item[0]]">{{ item[0] }}</div>
                         <div class="trading-item-cat" v-if="resolveItem(item[0])">{{ tCat(resolveItem(item[0]).category) }}</div>
                     </div>
                     <div class="trading-item-stats">
@@ -129,114 +134,44 @@
             <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
         </div>
 
-        <!-- Buy conditions tab -->
-        <div v-if="activeTab === 'buy'" class="trading-conditions">
-            <div class="trading-conditions-table-wrap">
-                <table class="trading-conditions-table" v-if="filteredBuyConditions.length">
-                    <thead>
-                        <tr>
-                            <th>{{ t('app_trading_item') }}</th>
-                            <th>{{ t('app_trading_price_multiplier') }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr
-                            v-for="row in filteredBuyConditions"
-                            :key="row[0]"
-                            :class="{ 'trading-cond-row--linked': !!buyConditionResolved[row[0]], 'trading-cond-row--unlinked': !buyConditionResolved[row[0]] }"
-                            @click="buyConditionResolved[row[0]] && $emit('navigateToItem', buyConditionResolved[row[0]].id)"
-                            @mouseenter="buyConditionResolved[row[0]] && $emit('showItemHover', buyConditionResolved[row[0]].id, $event)"
-                            @mousemove="$emit('moveItemHover', $event)"
-                            @mouseleave="$emit('hideItemHover')"
-                        >
-                            <td class="trading-cond-item">
-                                <span class="trading-cond-name">{{ buyConditionResolved[row[0]] ? tName(buyConditionResolved[row[0]]) : row[0] }}</span>
-                                <span class="trading-cond-id" v-if="buyConditionResolved[row[0]]">{{ row[0] }}</span>
-                                <span class="trading-cond-cat" v-if="buyConditionResolved[row[0]]">{{ tCat(buyConditionResolved[row[0]].category) }}</span>
-                            </td>
-                            <td class="trading-cond-value">
-                                <span class="trading-mult-bar" :style="{ width: Math.min(row[1] * 100, 100) + '%' }"></span>
-                                <span class="trading-mult-label">{{ (row[1] * 100).toFixed(0) }}%</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
+        <!-- Prices tab -->
+        <div v-if="activeTab === 'prices'" class="trading-conditions">
+            <div class="trading-items-grid" v-if="priceItems.length">
+                <a
+                    v-for="item in priceItems"
+                    :key="item.id"
+                    class="trading-item-card"
+                    :class="{ 'trading-item-card--linked': !!resolveItem(item.id) }"
+                    href="#"
+                    @click.prevent="resolveItem(item.id) && $emit('navigateToItem', resolveItem(item.id).id)"
+                    @mouseenter="resolveItem(item.id) && $emit('showItemHover', resolveItem(item.id).id, $event)"
+                    @mousemove="$emit('moveItemHover', $event)"
+                    @mouseleave="$emit('hideItemHover')"
+                >
+                    <div class="trading-item-info">
+                        <div class="trading-item-name" v-tooltip="itemDisplayName(item.id)">
+                            {{ itemDisplayName(item.id) }}
+                        </div>
+                        <div class="trading-item-id" v-if="resolveItem(item.id) || itemsCommon[item.id]">{{ item.id }}</div>
+                        <div class="trading-item-cat" v-if="resolveItem(item.id)">{{ tCat(resolveItem(item.id).category) }}</div>
+                    </div>
+                    <div class="trading-item-prices" v-if="buyPrice(item.id) != null || sellPrice(item.id) != null">
+                        <span class="trading-price trading-price--buy" v-if="buyPrice(item.id) != null" v-tooltip="t('app_trading_buy_price')">
+                            <LucideArrowDownCircle :size="10" />{{ formatPrice(buyPrice(item.id)) }}
+                        </span>
+                        <span class="trading-price trading-price--sell" v-if="sellPrice(item.id) != null" v-tooltip="t('app_trading_sell_price')">
+                            <LucideArrowUpCircle :size="10" />{{ formatPrice(sellPrice(item.id)) }}
+                        </span>
+                    </div>
+                </a>
             </div>
-        </div>
-
-        <!-- Sell conditions tab -->
-        <div v-if="activeTab === 'sell'" class="trading-conditions">
-            <div class="trading-conditions-table-wrap">
-                <table class="trading-conditions-table" v-if="filteredSellConditions.length">
-                    <thead>
-                        <tr>
-                            <th>{{ t('app_trading_item') }}</th>
-                            <th>{{ t('app_trading_price_multiplier') }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr
-                            v-for="row in filteredSellConditions"
-                            :key="row[0]"
-                            :class="{ 'trading-cond-row--linked': !!sellConditionResolved[row[0]], 'trading-cond-row--unlinked': !sellConditionResolved[row[0]] }"
-                            @click="sellConditionResolved[row[0]] && $emit('navigateToItem', sellConditionResolved[row[0]].id)"
-                            @mouseenter="sellConditionResolved[row[0]] && $emit('showItemHover', sellConditionResolved[row[0]].id, $event)"
-                            @mousemove="$emit('moveItemHover', $event)"
-                            @mouseleave="$emit('hideItemHover')"
-                        >
-                            <td class="trading-cond-item">
-                                <span class="trading-cond-name">{{ sellConditionResolved[row[0]] ? tName(sellConditionResolved[row[0]]) : row[0] }}</span>
-                                <span class="trading-cond-id" v-if="sellConditionResolved[row[0]]">{{ row[0] }}</span>
-                                <span class="trading-cond-cat" v-if="sellConditionResolved[row[0]]">{{ tCat(sellConditionResolved[row[0]].category) }}</span>
-                            </td>
-                            <td class="trading-cond-value">
-                                <span class="trading-mult-bar" :style="{ width: Math.min(row[1] * 100, 100) + '%' }"></span>
-                                <span class="trading-mult-label">{{ (row[1] * 100).toFixed(0) }}%</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
-            </div>
+            <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
         </div>
     </div>
 </div>
 </template>
 
 <script>
-const TRADER_META = [
-    { id: 'stalker_sidorovich',       labelKey: 'app_trader_sidorovich',       label: 'Sidorovich',          color: '#f59e0b' },
-    { id: 'stalker_owl',              labelKey: 'app_trader_owl',              label: 'Owl',                 color: '#8b5cf6' },
-    { id: 'stalker_loris',            labelKey: 'app_trader_loris',            label: 'Loris',               color: '#6366f1' },
-    { id: 'stalker_nimble',           labelKey: 'app_trader_nimble',           label: 'Nimble',              color: '#ec4899' },
-    { id: 'stalker_basic',            labelKey: 'app_trader_stalker_basic',    label: 'Stalker',             color: '#a3a3a3' },
-    { id: 'stalker_butcher',          labelKey: 'app_trader_butcher',          label: 'Butcher',             color: '#ef4444' },
-    { id: 'stalker_flea_market',      labelKey: 'app_trader_flea_market',      label: 'Flea Market',         color: '#f97316' },
-    { id: 'stalker_flea_market_night',labelKey: 'app_trader_flea_market_night',label: 'Flea Market (Night)', color: '#c2410c' },
-    { id: 'bandit',                   labelKey: 'app_trader_bandit',           label: 'Bandit',              color: '#854d0e' },
-    { id: 'bandit_basic',             labelKey: 'app_trader_bandit_basic',     label: 'Bandit (Basic)',      color: '#a16207' },
-    { id: 'duty',                     labelKey: 'app_trader_duty',             label: 'Duty',                color: '#dc2626' },
-    { id: 'freedom',                  labelKey: 'app_trader_freedom',          label: 'Freedom',             color: '#16a34a' },
-    { id: 'csky_spore',               labelKey: 'app_trader_clear_sky',        label: 'Clear Sky',           color: '#0ea5e9' },
-    { id: 'ecolog_hermann',           labelKey: 'app_trader_hermann',          label: 'Hermann',             color: '#14b8a6' },
-    { id: 'ecolog_sakharov',          labelKey: 'app_trader_sakharov',         label: 'Sakharov',            color: '#06b6d4' },
-    { id: 'ecolog_spirit',            labelKey: 'app_trader_spirit',           label: 'Spirit',              color: '#2dd4bf' },
-    { id: 'military',                 labelKey: 'app_trader_military',         label: 'Military',            color: '#65a30d' },
-    { id: 'military_esc',             labelKey: 'app_trader_military_esc',     label: 'Military (Escape)',   color: '#4d7c0f' },
-    { id: 'mercenary',                labelKey: 'app_trader_mercenary',        label: 'Mercenary',           color: '#7c3aed' },
-    { id: 'mercenary_basic',          labelKey: 'app_trader_mercenary_basic',  label: 'Mercenary (Basic)',   color: '#6d28d9' },
-    { id: 'mercenary_meeker',         labelKey: 'app_trader_meeker',           label: 'Meeker',              color: '#a78bfa' },
-    { id: 'monolith',                 labelKey: 'app_trader_monolith',         label: 'Monolith',            color: '#38bdf8' },
-    { id: 'monolith_basic',           labelKey: 'app_trader_monolith_basic',   label: 'Monolith (Basic)',    color: '#0284c7' },
-    { id: 'greh',                     labelKey: 'app_trader_greh',             label: 'Greh',                color: '#f43f5e' },
-    { id: 'isg',                      labelKey: 'app_trader_isg',              label: 'ISG',                 color: '#10b981' },
-    { id: 'isg_mission',              labelKey: 'app_trader_isg_mission',      label: 'ISG (Mission)',       color: '#059669' },
-    { id: 'generic_barman',           labelKey: 'app_trader_barman',           label: 'Barman',              color: '#d97706' },
-    { id: 'generic_mechanic',         labelKey: 'app_trader_mechanic',         label: 'Mechanic',            color: '#78716c' },
-    { id: 'generic_medic',            labelKey: 'app_trader_medic',            label: 'Medic',               color: '#e11d48' },
-];
-
 export default {
     props: {
         packId: { type: String, default: null },
@@ -246,18 +181,21 @@ export default {
     emits: ['navigateToItem', 'showItemHover', 'moveItemHover', 'hideItemHover'],
     data() {
         return {
-            traders: TRADER_META,
-            selectedTrader: 'stalker_sidorovich',
+            traders: [],
+            selectedTrader: null,
             traderData: null,
             loading: false,
             activeTab: 'supplies',
             activeTier: 'supplies_1',
+            exclusiveOnly: false,
             searchQuery: '',
             cache: {},
             // Price lookup: id -> base cost (st_upgr_cost)
             priceById: {},
             // Tracks which category slugs have already been fetched for prices
             catPriceFetched: {},
+            // Universal item data from items-common.json (id -> { name?, price? })
+            itemsCommon: {},
         };
     },
     computed: {
@@ -280,34 +218,22 @@ export default {
             if (!this.traderData) return [];
             return this.traderData[this.activeTier] || [];
         },
+        exclusiveSupplyItems() {
+            if (!this.traderData) return [];
+            const currentIdx = this.supplyKeys.indexOf(this.activeTier);
+            const priorIds = new Set(
+                this.supplyKeys.slice(0, currentIdx)
+                    .flatMap(k => (this.traderData[k] || []).map(item => item[0]))
+            );
+            return this.currentSupplyItems.filter(item => !priorIds.has(item[0]));
+        },
         filteredSupplyItems() {
+            const base = this.exclusiveOnly ? this.exclusiveSupplyItems : this.currentSupplyItems;
             const q = this.searchQuery.trim().toLowerCase();
-            if (!q) return this.currentSupplyItems;
-            return this.currentSupplyItems.filter(item => {
+            if (!q) return base;
+            return base.filter(item => {
                 if (item[0].toLowerCase().includes(q)) return true;
                 const resolved = this.resolveItem(item[0]);
-                if (resolved && this.tName(resolved).toLowerCase().includes(q)) return true;
-                return false;
-            });
-        },
-        filteredBuyConditions() {
-            const items = this.traderData?.buy_condition || [];
-            const q = this.searchQuery.trim().toLowerCase();
-            if (!q) return items;
-            return items.filter(r => {
-                if (r[0].toLowerCase().includes(q)) return true;
-                const resolved = this.resolveItem(r[0].replace(/_x$/, ''));
-                if (resolved && this.tName(resolved).toLowerCase().includes(q)) return true;
-                return false;
-            });
-        },
-        filteredSellConditions() {
-            const items = this.traderData?.sell_condition || [];
-            const q = this.searchQuery.trim().toLowerCase();
-            if (!q) return items;
-            return items.filter(r => {
-                if (r[0].toLowerCase().includes(q)) return true;
-                const resolved = this.resolveItem(r[0].replace(/_x$/, ''));
                 if (resolved && this.tName(resolved).toLowerCase().includes(q)) return true;
                 return false;
             });
@@ -319,28 +245,53 @@ export default {
             }
             return m;
         },
-        // Pre-resolve all condition items into maps to avoid repeated lookups in template
-        buyConditionResolved() {
+        buyConditionMap() {
             const map = {};
-            for (const r of (this.traderData?.buy_condition || [])) {
-                const id = r[0].replace(/_x$/, '');
-                map[r[0]] = this.resolveItem(id);
-            }
+            for (const r of (this.traderData?.buy_condition || []))
+                if (r[1] != null) map[r[0].replace(/_x$/, '')] = r[1];
             return map;
         },
-        sellConditionResolved() {
+        sellConditionMap() {
             const map = {};
-            for (const r of (this.traderData?.sell_condition || [])) {
-                const id = r[0].replace(/_x$/, '');
-                map[r[0]] = this.resolveItem(id);
-            }
+            for (const r of (this.traderData?.sell_condition || []))
+                if (r[1] != null) map[r[0].replace(/_x$/, '')] = r[1];
             return map;
         },
+						priceItems() {
+						    const buyMap = {};
+						    for (const r of (this.traderData?.buy_condition || []))
+						        buyMap[r[0].replace(/_x$/, '')] = r[1];
+						    const sellMap = {};
+						    for (const r of (this.traderData?.sell_condition || []))
+						        sellMap[r[0].replace(/_x$/, '')] = r[1];
+
+						    const ids = new Set();
+						    // Add all items from all supply tiers
+						    for (const key of this.supplyKeys) {
+						        for (const row of (this.traderData[key] || []))
+						            ids.add(row[0]);
+						    }
+						    // Add all items from buy_condition
+						    for (const id of Object.keys(buyMap))
+						        ids.add(id);
+
+						    const q = this.searchQuery.trim().toLowerCase();
+
+						    return [...ids]
+						        .map(id => ({ id, buy: buyMap[id] ?? null, sell: sellMap[id] ?? null }))
+						        .filter(({ id }) => {
+						            if (!q) return true;
+						            if (id.toLowerCase().includes(q)) return true;
+						            const resolved = this.resolveItem(id);
+						            return resolved && this.tName(resolved).toLowerCase().includes(q);
+						        })
+						        .sort((a, b) => this.itemDisplayName(a.id).localeCompare(this.itemDisplayName(b.id)));
+						},
     },
     watch: {
         packId: {
             immediate: true,
-            handler() { this.cache = {}; this.priceById = {}; this.catPriceFetched = {}; this.loadTrader(); },
+            handler() { this.cache = {}; this.priceById = {}; this.catPriceFetched = {}; this.loadTradersMeta(); },
         },
         selectedTrader() {
             this.loadTrader();
@@ -351,17 +302,17 @@ export default {
             return category.toLowerCase().replace(/ /g, '-');
         },
         basePrice(id) {
-            return this.priceById[id] ?? null;
+            return this.priceById[id] ?? this.itemsCommon[id]?.price ?? null;
         },
         buyPrice(id) {
             const base = this.basePrice(id);
             if (base == null) return null;
-            return Math.round(base * this.discountMap.buy);
+            return Math.round(base * this.discountMap.sell * (this.buyConditionMap[id] ?? 1));
         },
         sellPrice(id) {
             const base = this.basePrice(id);
             if (base == null) return null;
-            return Math.round(base * this.discountMap.sell);
+            return Math.round(base * this.discountMap.buy * (this.sellConditionMap[id] ?? 1));
         },
         formatPrice(val) {
             if (val == null) return null;
@@ -410,6 +361,10 @@ export default {
         resolveItem(id) {
             return this.indexById[id] || null;
         },
+        itemDisplayName(id) {
+            const resolved = this.resolveItem(id);
+            return resolved ? this.tName(resolved) : this.t(this.itemsCommon[id]?.name || id);
+        },
         selectTrader(id) {
             this.selectedTrader = id;
             this.activeTier = 'supplies_1';
@@ -434,34 +389,89 @@ export default {
                 army: 'Military', monolith: 'Monolith', killer: 'Mercenary',
                 greh: 'Greh', isg: 'ISG',
             };
+
+            const CONDITION_HANDLERS = {
+                actor_goodwill_ge: (args) => {
+                    const [factionRaw, threshold] = args.split(':');
+                    const fKey = FACTION_KEY[factionRaw];
+                    const fName = fKey ? (this.t(fKey) || FACTION_FALLBACK[factionRaw] || factionRaw) : factionRaw;
+                    return `${fName} ≥ ${threshold}`;
+                },
+                heavy_pockets_functor: () => {
+                    return this.t('app_trading_cond_heavy_pockets') || 'Heavy Pockets';
+                },
+                toolkit_task_done: (args) => {
+                    return (this.t('app_trading_cond_toolkit_task') || 'Toolkit task {n} done').replace('{n}', args);
+                },
+                drugkit_task_done: () => {
+                    return this.t('app_trading_cond_drugkit_task') || 'Drug kit task done';
+                },
+                raid_goodwill_check: (args) => {
+                    return CONDITION_HANDLERS.actor_goodwill_ge(args);
+                },
+            };
+
             const parts = raw.split(/ OR /);
             const labels = [];
+
             for (const part of parts) {
                 const p = part.trim();
-                const gw = p.match(/^=actor_goodwill_ge\((\w+):(-?\d+)\)$/);
-                if (gw) {
-                    const fKey = FACTION_KEY[gw[1]];
-                    const fName = fKey ? (this.t(fKey) || FACTION_FALLBACK[gw[1]] || gw[1]) : gw[1];
-                    labels.push(`${fName} ≥ ${gw[2]}`);
+
+                if (p.startsWith('+')) {
+                    labels.push(p.slice(1).replace(/_/g, ' '));
                     continue;
                 }
-                if (p === '=heavy_pockets_functor()') {
-                    labels.push(this.t('app_trading_cond_heavy_pockets') || 'Heavy Pockets');
-                    continue;
+
+                if (p.startsWith('=')) {
+                    const match = p.slice(1).match(/^(\w+)\((.*)\)$/);
+                    if (match) {
+                        const [, fnName, args] = match;
+                        const handler = CONDITION_HANDLERS[fnName];
+                        if (handler) {
+                            labels.push(handler(args));
+                            continue;
+                        }
+                        // Unknown function: humanize name
+                        labels.push(fnName.replace(/_/g, ' ').trim());
+                        continue;
+                    }
                 }
-                const tk = p.match(/^=toolkit_task_done\((\d+)\)$/);
-                if (tk) {
-                    labels.push((this.t('app_trading_cond_toolkit_task') || 'Toolkit task {n} done').replace('{n}', tk[1]));
-                    continue;
-                }
-                if (p === '=drugkit_task_done()') {
-                    labels.push(this.t('app_trading_cond_drugkit_task') || 'Drug kit task done');
-                    continue;
-                }
-                if (p.startsWith('+')) { labels.push(p.slice(1).replace(/_/g, ' ')); continue; }
+
                 labels.push(p.replace(/^=/, '').replace(/_/g, ' ').replace(/\(.*\)/, '').trim());
             }
+
             return labels;
+        },
+        traderName(trader) {
+            const fromKey = this.t(trader.labelKey);
+            return fromKey !== trader.labelKey ? fromKey : this.t(trader.label);
+        },
+        async loadTradersMeta() {
+            if (!this.packId) return;
+            this.itemsCommon = {};
+            const pack = this.packId;
+            try {
+                const resp = await fetch(`/data/${pack}/traders-meta.json`);
+                if (!resp.ok) throw new Error(resp.status);
+                this.traders = await resp.json();
+            } catch (e) {
+                console.error('Failed to load traders meta:', e);
+                this.traders = [];
+            }
+            if (!this.selectedTrader || !this.traders.find(t => t.id === this.selectedTrader)) {
+                this.selectedTrader = this.traders[0]?.id ?? null;
+            }
+            this.loadTrader();
+            // items-common is optional — never let a missing file wipe traders
+            try {
+                const commonResp = await fetch(`/data/${pack}/items-common.json`);
+                if (commonResp.ok) {
+                    const ct = commonResp.headers.get('content-type') || '';
+                    if (ct.includes('application/json') || ct.includes('text/plain')) {
+                        this.itemsCommon = await commonResp.json();
+                    }
+                }
+            } catch { /* optional — ignore */ }
         },
         async loadTrader() {
             if (!this.packId) return;
@@ -494,6 +504,7 @@ export default {
                 .filter(k => k.startsWith('supplies_'))
                 .sort();
             this.activeTier = keys[0] || 'supplies_1';
+            this.exclusiveOnly = false;
         },
     },
 };

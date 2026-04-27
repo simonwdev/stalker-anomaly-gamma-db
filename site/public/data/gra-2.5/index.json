@@ -312,22 +312,10 @@
     "displayName": "af-vyvert"
   },
   {
-    "id": "ammo_12.7x55_ap_bad",
-    "name": "ammo_12.7x55_ap",
-    "category": "Ammo",
-    "displayName": "ammo_12.7x55_ap [bad]"
-  },
-  {
     "id": "ammo_12.7x55_ap",
     "name": "ammo_12.7x55_ap",
     "category": "Ammo",
-    "displayName": "ammo_12.7x55_ap [default]"
-  },
-  {
-    "id": "ammo_12.7x55_ap_verybad",
-    "name": "ammo_12.7x55_ap",
-    "category": "Ammo",
-    "displayName": "ammo_12.7x55_ap [verybad]"
+    "displayName": "ammo_12.7x55_ap"
   },
   {
     "id": "ammo_20x70_buck",
@@ -366,16 +354,10 @@
     "displayName": "ammo_9x21_sp10"
   },
   {
-    "id": "ammo_pg_26_bad",
-    "name": "ammo_pg_26",
-    "category": "Ammo",
-    "displayName": "ammo_pg_26 [bad]"
-  },
-  {
     "id": "ammo_pg_26",
     "name": "ammo_pg_26",
     "category": "Ammo",
-    "displayName": "ammo_pg_26 [default]"
+    "displayName": "ammo_pg_26"
   },
   {
     "id": "ammo_vog-30",
@@ -384,76 +366,28 @@
     "displayName": "ammo_vog_30"
   },
   {
-    "id": "ammo_11.43x23_fmj_bad",
-    "name": "ammo-11.43x23-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-11.43x23-fmj [bad]"
-  },
-  {
     "id": "ammo_11.43x23_fmj",
     "name": "ammo-11.43x23-fmj",
     "category": "Ammo",
-    "displayName": "ammo-11.43x23-fmj [default]"
-  },
-  {
-    "id": "ammo_11.43x23_fmj_verybad",
-    "name": "ammo-11.43x23-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-11.43x23-fmj [verybad]"
-  },
-  {
-    "id": "ammo_11.43x23_hydro_bad",
-    "name": "ammo-11.43x23-hydro",
-    "category": "Ammo",
-    "displayName": "ammo-11.43x23-hydro [bad]"
+    "displayName": "ammo-11.43x23-fmj"
   },
   {
     "id": "ammo_11.43x23_hydro",
     "name": "ammo-11.43x23-hydro",
     "category": "Ammo",
-    "displayName": "ammo-11.43x23-hydro [default]"
-  },
-  {
-    "id": "ammo_11.43x23_hydro_verybad",
-    "name": "ammo-11.43x23-hydro",
-    "category": "Ammo",
-    "displayName": "ammo-11.43x23-hydro [verybad]"
-  },
-  {
-    "id": "ammo_12.7x55_fmj_bad",
-    "name": "ammo-12.7x55-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-12.7x55-fmj [bad]"
+    "displayName": "ammo-11.43x23-hydro"
   },
   {
     "id": "ammo_12.7x55_fmj",
     "name": "ammo-12.7x55-fmj",
     "category": "Ammo",
-    "displayName": "ammo-12.7x55-fmj [default]"
-  },
-  {
-    "id": "ammo_12.7x55_fmj_verybad",
-    "name": "ammo-12.7x55-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-12.7x55-fmj [verybad]"
-  },
-  {
-    "id": "ammo_12x70_buck_bad",
-    "name": "ammo-12x70-buck",
-    "category": "Ammo",
-    "displayName": "ammo-12x70-buck [bad]"
+    "displayName": "ammo-12.7x55-fmj"
   },
   {
     "id": "ammo_12x70_buck",
     "name": "ammo-12x70-buck",
     "category": "Ammo",
-    "displayName": "ammo-12x70-buck [default]"
-  },
-  {
-    "id": "ammo_12x70_buck_verybad",
-    "name": "ammo-12x70-buck",
-    "category": "Ammo",
-    "displayName": "ammo-12x70-buck [verybad]"
+    "displayName": "ammo-12x70-buck"
   },
   {
     "id": "ammo_12x70_buck_self",
@@ -474,634 +408,214 @@
     "displayName": "ammo-12x76-bull"
   },
   {
-    "id": "ammo_12x76_dart_bad",
-    "name": "ammo-12x76-dart",
-    "category": "Ammo",
-    "displayName": "ammo-12x76-dart [bad]"
-  },
-  {
     "id": "ammo_12x76_dart",
     "name": "ammo-12x76-dart",
     "category": "Ammo",
-    "displayName": "ammo-12x76-dart [default]"
-  },
-  {
-    "id": "ammo_12x76_dart_verybad",
-    "name": "ammo-12x76-dart",
-    "category": "Ammo",
-    "displayName": "ammo-12x76-dart [verybad]"
-  },
-  {
-    "id": "ammo_12x76_zhekan_bad",
-    "name": "ammo-12x76-zhekan",
-    "category": "Ammo",
-    "displayName": "ammo-12x76-zhekan [bad]"
+    "displayName": "ammo-12x76-dart"
   },
   {
     "id": "ammo_12x76_zhekan",
     "name": "ammo-12x76-zhekan",
     "category": "Ammo",
-    "displayName": "ammo-12x76-zhekan [default]"
-  },
-  {
-    "id": "ammo_12x76_zhekan_verybad",
-    "name": "ammo-12x76-zhekan",
-    "category": "Ammo",
-    "displayName": "ammo-12x76-zhekan [verybad]"
-  },
-  {
-    "id": "ammo_magnum_300_bad",
-    "name": "ammo-338-lapua",
-    "category": "Ammo",
-    "displayName": "ammo-338-lapua [bad]"
+    "displayName": "ammo-12x76-zhekan"
   },
   {
     "id": "ammo_magnum_300",
     "name": "ammo-338-lapua",
     "category": "Ammo",
-    "displayName": "ammo-338-lapua [default]"
-  },
-  {
-    "id": "ammo_magnum_300_verybad",
-    "name": "ammo-338-lapua",
-    "category": "Ammo",
-    "displayName": "ammo-338-lapua [verybad]"
-  },
-  {
-    "id": "ammo_357_hp_mag_bad",
-    "name": "ammo-357-hp",
-    "category": "Ammo",
-    "displayName": "ammo-357-hp [bad]"
+    "displayName": "ammo-338-lapua"
   },
   {
     "id": "ammo_357_hp_mag",
     "name": "ammo-357-hp",
     "category": "Ammo",
-    "displayName": "ammo-357-hp [default]"
-  },
-  {
-    "id": "ammo_357_hp_mag_verybad",
-    "name": "ammo-357-hp",
-    "category": "Ammo",
-    "displayName": "ammo-357-hp [verybad]"
-  },
-  {
-    "id": "ammo_4.6x30_fmj_bad",
-    "name": "ammo-4.6x30-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-4.6x30-fmj [bad]"
+    "displayName": "ammo-357-hp"
   },
   {
     "id": "ammo_4.6x30_fmj",
     "name": "ammo-4.6x30-fmj",
     "category": "Ammo",
-    "displayName": "ammo-4.6x30-fmj [default]"
-  },
-  {
-    "id": "ammo_4.6x30_fmj_verybad",
-    "name": "ammo-4.6x30-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-4.6x30-fmj [verybad]"
-  },
-  {
-    "id": "ammo_5.45x39_ap_bad",
-    "name": "ammo-5.45x39-ap",
-    "category": "Ammo",
-    "displayName": "ammo-5.45x39-ap [bad]"
+    "displayName": "ammo-4.6x30-fmj"
   },
   {
     "id": "ammo_5.45x39_ap",
     "name": "ammo-5.45x39-ap",
     "category": "Ammo",
-    "displayName": "ammo-5.45x39-ap [default]"
-  },
-  {
-    "id": "ammo_5.45x39_ap_verybad",
-    "name": "ammo-5.45x39-ap",
-    "category": "Ammo",
-    "displayName": "ammo-5.45x39-ap [verybad]"
-  },
-  {
-    "id": "ammo_5.45x39_ep_bad",
-    "name": "ammo-5.45x39-ep",
-    "category": "Ammo",
-    "displayName": "ammo-5.45x39-ep [bad]"
+    "displayName": "ammo-5.45x39-ap"
   },
   {
     "id": "ammo_5.45x39_ep",
     "name": "ammo-5.45x39-ep",
     "category": "Ammo",
-    "displayName": "ammo-5.45x39-ep [default]"
-  },
-  {
-    "id": "ammo_5.45x39_ep_verybad",
-    "name": "ammo-5.45x39-ep",
-    "category": "Ammo",
-    "displayName": "ammo-5.45x39-ep [verybad]"
-  },
-  {
-    "id": "ammo_5.45x39_fmj_bad",
-    "name": "ammo-5.45x39-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-5.45x39-fmj [bad]"
+    "displayName": "ammo-5.45x39-ep"
   },
   {
     "id": "ammo_5.45x39_fmj",
     "name": "ammo-5.45x39-fmj",
     "category": "Ammo",
-    "displayName": "ammo-5.45x39-fmj [default]"
-  },
-  {
-    "id": "ammo_5.45x39_fmj_verybad",
-    "name": "ammo-5.45x39-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-5.45x39-fmj [verybad]"
-  },
-  {
-    "id": "ammo_5.56x45_ap_bad",
-    "name": "ammo-5.56x45-ap",
-    "category": "Ammo",
-    "displayName": "ammo-5.56x45-ap [bad]"
+    "displayName": "ammo-5.45x39-fmj"
   },
   {
     "id": "ammo_5.56x45_ap",
     "name": "ammo-5.56x45-ap",
     "category": "Ammo",
-    "displayName": "ammo-5.56x45-ap [default]"
-  },
-  {
-    "id": "ammo_5.56x45_ap_verybad",
-    "name": "ammo-5.56x45-ap",
-    "category": "Ammo",
-    "displayName": "ammo-5.56x45-ap [verybad]"
-  },
-  {
-    "id": "ammo_5.56x45_fmj_bad",
-    "name": "ammo-5.56x45-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-5.56x45-fmj [bad]"
+    "displayName": "ammo-5.56x45-ap"
   },
   {
     "id": "ammo_5.56x45_fmj",
     "name": "ammo-5.56x45-fmj",
     "category": "Ammo",
-    "displayName": "ammo-5.56x45-fmj [default]"
-  },
-  {
-    "id": "ammo_5.56x45_fmj_verybad",
-    "name": "ammo-5.56x45-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-5.56x45-fmj [verybad]"
-  },
-  {
-    "id": "ammo_5.56x45_ss190_bad",
-    "name": "ammo-5.56x45-ss190",
-    "category": "Ammo",
-    "displayName": "ammo-5.56x45-ss190 [bad]"
+    "displayName": "ammo-5.56x45-fmj"
   },
   {
     "id": "ammo_5.56x45_ss190",
     "name": "ammo-5.56x45-ss190",
     "category": "Ammo",
-    "displayName": "ammo-5.56x45-ss190 [default]"
-  },
-  {
-    "id": "ammo_5.56x45_ss190_verybad",
-    "name": "ammo-5.56x45-ss190",
-    "category": "Ammo",
-    "displayName": "ammo-5.56x45-ss190 [verybad]"
-  },
-  {
-    "id": "ammo_5.7x28_ss190_bad",
-    "name": "ammo-5.7x28-ss190",
-    "category": "Ammo",
-    "displayName": "ammo-5.7x28-ss190 [bad]"
+    "displayName": "ammo-5.56x45-ss190"
   },
   {
     "id": "ammo_5.7x28_ss190",
     "name": "ammo-5.7x28-ss190",
     "category": "Ammo",
-    "displayName": "ammo-5.7x28-ss190 [default]"
-  },
-  {
-    "id": "ammo_5.7x28_ss190_verybad",
-    "name": "ammo-5.7x28-ss190",
-    "category": "Ammo",
-    "displayName": "ammo-5.7x28-ss190 [verybad]"
-  },
-  {
-    "id": "ammo_5.7x28_ss195_bad",
-    "name": "ammo-5.7x28-ss195",
-    "category": "Ammo",
-    "displayName": "ammo-5.7x28-ss195 [bad]"
+    "displayName": "ammo-5.7x28-ss190"
   },
   {
     "id": "ammo_5.7x28_ss195",
     "name": "ammo-5.7x28-ss195",
     "category": "Ammo",
-    "displayName": "ammo-5.7x28-ss195 [default]"
-  },
-  {
-    "id": "ammo_5.7x28_ss195_verybad",
-    "name": "ammo-5.7x28-ss195",
-    "category": "Ammo",
-    "displayName": "ammo-5.7x28-ss195 [verybad]"
-  },
-  {
-    "id": "ammo_50_bmg_bad",
-    "name": "ammo-50-bmg",
-    "category": "Ammo",
-    "displayName": "ammo-50-bmg [bad]"
+    "displayName": "ammo-5.7x28-ss195"
   },
   {
     "id": "ammo_50_bmg",
     "name": "ammo-50-bmg",
     "category": "Ammo",
-    "displayName": "ammo-50-bmg [default]"
-  },
-  {
-    "id": "ammo_50_bmg_verybad",
-    "name": "ammo-50-bmg",
-    "category": "Ammo",
-    "displayName": "ammo-50-bmg [verybad]"
-  },
-  {
-    "id": "ammo_7.62x25_p_bad",
-    "name": "ammo-7.62x25-p",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x25-p [bad]"
+    "displayName": "ammo-50-bmg"
   },
   {
     "id": "ammo_7.62x25_p",
     "name": "ammo-7.62x25-p",
     "category": "Ammo",
-    "displayName": "ammo-7.62x25-p [default]"
-  },
-  {
-    "id": "ammo_7.62x25_p_verybad",
-    "name": "ammo-7.62x25-p",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x25-p [verybad]"
-  },
-  {
-    "id": "ammo_7.62x25_ps_bad",
-    "name": "ammo-7.62x25-ps",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x25-ps [bad]"
+    "displayName": "ammo-7.62x25-p"
   },
   {
     "id": "ammo_7.62x25_ps",
     "name": "ammo-7.62x25-ps",
     "category": "Ammo",
-    "displayName": "ammo-7.62x25-ps [default]"
-  },
-  {
-    "id": "ammo_7.62x25_ps_verybad",
-    "name": "ammo-7.62x25-ps",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x25-ps [verybad]"
-  },
-  {
-    "id": "ammo_7.62x39_ap_bad",
-    "name": "ammo-7.62x39_ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x39_ap [bad]"
+    "displayName": "ammo-7.62x25-ps"
   },
   {
     "id": "ammo_7.62x39_ap",
     "name": "ammo-7.62x39_ap",
     "category": "Ammo",
-    "displayName": "ammo-7.62x39_ap [default]"
-  },
-  {
-    "id": "ammo_7.62x39_ap_verybad",
-    "name": "ammo-7.62x39_ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x39_ap [verybad]"
-  },
-  {
-    "id": "ammo_7.62x39_fmj_bad",
-    "name": "ammo-7.62x39_fmj",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x39_fmj [bad]"
+    "displayName": "ammo-7.62x39_ap"
   },
   {
     "id": "ammo_7.62x39_fmj",
     "name": "ammo-7.62x39_fmj",
     "category": "Ammo",
-    "displayName": "ammo-7.62x39_fmj [default]"
-  },
-  {
-    "id": "ammo_7.62x39_fmj_verybad",
-    "name": "ammo-7.62x39_fmj",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x39_fmj [verybad]"
-  },
-  {
-    "id": "ammo_7.62x51_ap_bad",
-    "name": "ammo-7.62x51_ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x51_ap [bad]"
+    "displayName": "ammo-7.62x39_fmj"
   },
   {
     "id": "ammo_7.62x51_ap",
     "name": "ammo-7.62x51_ap",
     "category": "Ammo",
-    "displayName": "ammo-7.62x51_ap [default]"
-  },
-  {
-    "id": "ammo_7.62x51_ap_verybad",
-    "name": "ammo-7.62x51_ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x51_ap [verybad]"
-  },
-  {
-    "id": "ammo_7.62x51_fmj_bad",
-    "name": "ammo-7.62x51_fmj",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x51_fmj [bad]"
+    "displayName": "ammo-7.62x51_ap"
   },
   {
     "id": "ammo_7.62x51_fmj",
     "name": "ammo-7.62x51_fmj",
     "category": "Ammo",
-    "displayName": "ammo-7.62x51_fmj [default]"
-  },
-  {
-    "id": "ammo_7.62x51_fmj_verybad",
-    "name": "ammo-7.62x51_fmj",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x51_fmj [verybad]"
-  },
-  {
-    "id": "ammo_7.62x54_7h14_bad",
-    "name": "ammo-7.62x54_7n14",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54_7n14 [bad]"
+    "displayName": "ammo-7.62x51_fmj"
   },
   {
     "id": "ammo_7.62x54_7h14",
     "name": "ammo-7.62x54_7n14",
     "category": "Ammo",
-    "displayName": "ammo-7.62x54_7n14 [default]"
-  },
-  {
-    "id": "ammo_7.62x54_7h14_verybad",
-    "name": "ammo-7.62x54_7n14",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54_7n14 [verybad]"
-  },
-  {
-    "id": "ammo_7.62x54_7h1_bad",
-    "name": "ammo-7.62x54-7n1",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54-7n1 [bad]"
+    "displayName": "ammo-7.62x54_7n14"
   },
   {
     "id": "ammo_7.62x54_7h1",
     "name": "ammo-7.62x54-7n1",
     "category": "Ammo",
-    "displayName": "ammo-7.62x54-7n1 [default]"
-  },
-  {
-    "id": "ammo_7.62x54_7h1_verybad",
-    "name": "ammo-7.62x54-7n1",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54-7n1 [verybad]"
-  },
-  {
-    "id": "ammo_7.62x54_ap_bad",
-    "name": "ammo-7.62x54-ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54-ap [bad]"
+    "displayName": "ammo-7.62x54-7n1"
   },
   {
     "id": "ammo_7.62x54_ap",
     "name": "ammo-7.62x54-ap",
     "category": "Ammo",
-    "displayName": "ammo-7.62x54-ap [default]"
-  },
-  {
-    "id": "ammo_7.62x54_ap_verybad",
-    "name": "ammo-7.62x54-ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54-ap [verybad]"
-  },
-  {
-    "id": "ammo_pkm_100_bad",
-    "name": "ammo-7.62x54-r",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54-r [bad]"
+    "displayName": "ammo-7.62x54-ap"
   },
   {
     "id": "ammo_pkm_100",
     "name": "ammo-7.62x54-r",
     "category": "Ammo",
-    "displayName": "ammo-7.62x54-r [default]"
-  },
-  {
-    "id": "ammo_pkm_100_verybad",
-    "name": "ammo-7.62x54-r",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54-r [verybad]"
-  },
-  {
-    "id": "ammo_7.92x33_ap_bad",
-    "name": "ammo-7.92x33_ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.92x33_ap [bad]"
+    "displayName": "ammo-7.62x54-r"
   },
   {
     "id": "ammo_7.92x33_ap",
     "name": "ammo-7.92x33_ap",
     "category": "Ammo",
-    "displayName": "ammo-7.92x33_ap [default]"
-  },
-  {
-    "id": "ammo_7.92x33_ap_verybad",
-    "name": "ammo-7.92x33_ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.92x33_ap [verybad]"
-  },
-  {
-    "id": "ammo_7.92x33_fmj_bad",
-    "name": "ammo-7.92x33_fmj",
-    "category": "Ammo",
-    "displayName": "ammo-7.92x33_fmj [bad]"
+    "displayName": "ammo-7.92x33_ap"
   },
   {
     "id": "ammo_7.92x33_fmj",
     "name": "ammo-7.92x33_fmj",
     "category": "Ammo",
-    "displayName": "ammo-7.92x33_fmj [default]"
-  },
-  {
-    "id": "ammo_7.92x33_fmj_verybad",
-    "name": "ammo-7.92x33_fmj",
-    "category": "Ammo",
-    "displayName": "ammo-7.92x33_fmj [verybad]"
-  },
-  {
-    "id": "ammo_9x18_ap_bad",
-    "name": "ammo-9x18-ap",
-    "category": "Ammo",
-    "displayName": "ammo-9x18-ap [bad]"
+    "displayName": "ammo-7.92x33_fmj"
   },
   {
     "id": "ammo_9x18_ap",
     "name": "ammo-9x18-ap",
     "category": "Ammo",
-    "displayName": "ammo-9x18-ap [default]"
-  },
-  {
-    "id": "ammo_9x18_ap_verybad",
-    "name": "ammo-9x18-ap",
-    "category": "Ammo",
-    "displayName": "ammo-9x18-ap [verybad]"
-  },
-  {
-    "id": "ammo_9x18_fmj_bad",
-    "name": "ammo-9x18-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-9x18-fmj [bad]"
+    "displayName": "ammo-9x18-ap"
   },
   {
     "id": "ammo_9x18_fmj",
     "name": "ammo-9x18-fmj",
     "category": "Ammo",
-    "displayName": "ammo-9x18-fmj [default]"
-  },
-  {
-    "id": "ammo_9x18_fmj_verybad",
-    "name": "ammo-9x18-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-9x18-fmj [verybad]"
-  },
-  {
-    "id": "ammo_9x18_pmm_bad",
-    "name": "ammo-9x18-pmm",
-    "category": "Ammo",
-    "displayName": "ammo-9x18-pmm [bad]"
+    "displayName": "ammo-9x18-fmj"
   },
   {
     "id": "ammo_9x18_pmm",
     "name": "ammo-9x18-pmm",
     "category": "Ammo",
-    "displayName": "ammo-9x18-pmm [default]"
-  },
-  {
-    "id": "ammo_9x18_pmm_verybad",
-    "name": "ammo-9x18-pmm",
-    "category": "Ammo",
-    "displayName": "ammo-9x18-pmm [verybad]"
-  },
-  {
-    "id": "ammo_9x19_ap_bad",
-    "name": "ammo-9x19-ap",
-    "category": "Ammo",
-    "displayName": "ammo-9x19-ap [bad]"
+    "displayName": "ammo-9x18-pmm"
   },
   {
     "id": "ammo_9x19_ap",
     "name": "ammo-9x19-ap",
     "category": "Ammo",
-    "displayName": "ammo-9x19-ap [default]"
-  },
-  {
-    "id": "ammo_9x19_ap_verybad",
-    "name": "ammo-9x19-ap",
-    "category": "Ammo",
-    "displayName": "ammo-9x19-ap [verybad]"
-  },
-  {
-    "id": "ammo_9x19_fmj_bad",
-    "name": "ammo-9x19-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-9x19-fmj [bad]"
+    "displayName": "ammo-9x19-ap"
   },
   {
     "id": "ammo_9x19_fmj",
     "name": "ammo-9x19-fmj",
     "category": "Ammo",
-    "displayName": "ammo-9x19-fmj [default]"
-  },
-  {
-    "id": "ammo_9x19_fmj_verybad",
-    "name": "ammo-9x19-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-9x19-fmj [verybad]"
-  },
-  {
-    "id": "ammo_9x19_pbp_bad",
-    "name": "ammo-9x19-pbp",
-    "category": "Ammo",
-    "displayName": "ammo-9x19-pbp [bad]"
+    "displayName": "ammo-9x19-fmj"
   },
   {
     "id": "ammo_9x19_pbp",
     "name": "ammo-9x19-pbp",
     "category": "Ammo",
-    "displayName": "ammo-9x19-pbp [default]"
-  },
-  {
-    "id": "ammo_9x19_pbp_verybad",
-    "name": "ammo-9x19-pbp",
-    "category": "Ammo",
-    "displayName": "ammo-9x19-pbp [verybad]"
-  },
-  {
-    "id": "ammo_9x39_ap_bad",
-    "name": "ammo-9x39-ap",
-    "category": "Ammo",
-    "displayName": "ammo-9x39-ap [bad]"
+    "displayName": "ammo-9x19-pbp"
   },
   {
     "id": "ammo_9x39_ap",
     "name": "ammo-9x39-ap",
     "category": "Ammo",
-    "displayName": "ammo-9x39-ap [default]"
-  },
-  {
-    "id": "ammo_9x39_ap_verybad",
-    "name": "ammo-9x39-ap",
-    "category": "Ammo",
-    "displayName": "ammo-9x39-ap [verybad]"
-  },
-  {
-    "id": "ammo_9x39_pab9_bad",
-    "name": "ammo-9x39-pab9",
-    "category": "Ammo",
-    "displayName": "ammo-9x39-pab9 [bad]"
+    "displayName": "ammo-9x39-ap"
   },
   {
     "id": "ammo_9x39_pab9",
     "name": "ammo-9x39-pab9",
     "category": "Ammo",
-    "displayName": "ammo-9x39-pab9 [default]"
-  },
-  {
-    "id": "ammo_9x39_pab9_verybad",
-    "name": "ammo-9x39-pab9",
-    "category": "Ammo",
-    "displayName": "ammo-9x39-pab9 [verybad]"
-  },
-  {
-    "id": "ammo_gauss_bad",
-    "name": "ammo-gauss",
-    "category": "Ammo",
-    "displayName": "ammo-gauss [bad]"
+    "displayName": "ammo-9x39-pab9"
   },
   {
     "id": "ammo_gauss",
     "name": "ammo-gauss",
     "category": "Ammo",
-    "displayName": "ammo-gauss [default]"
-  },
-  {
-    "id": "ammo_gauss_verybad",
-    "name": "ammo-gauss",
-    "category": "Ammo",
-    "displayName": "ammo-gauss [verybad]"
+    "displayName": "ammo-gauss"
   },
   {
     "id": "ammo_gauss_cardan",
@@ -1112,8 +626,9 @@
   {
     "id": "ammo_m209_bad",
     "name": "ammo-m209",
-    "category": "Ammo",
-    "displayName": "ammo-m209 [bad]"
+    "category": "Explosives",
+    "displayName": "ammo-m209 [bad]",
+    "hasNpcWeaponDrop": false
   },
   {
     "id": "ammo_m209",
@@ -1124,32 +639,22 @@
   {
     "id": "ammo_m209_verybad",
     "name": "ammo-m209",
-    "category": "Ammo",
-    "displayName": "ammo-m209 [verybad]"
-  },
-  {
-    "id": "ammo_og-7b_bad",
-    "name": "ammo-og-7b",
-    "category": "Ammo",
-    "displayName": "ammo-og-7b [bad]"
+    "category": "Explosives",
+    "displayName": "ammo-m209 [verybad]",
+    "hasNpcWeaponDrop": false
   },
   {
     "id": "ammo_og-7b",
     "name": "ammo-og-7b",
     "category": "Ammo",
-    "displayName": "ammo-og-7b [default]"
-  },
-  {
-    "id": "ammo_og-7b_verybad",
-    "name": "ammo-og-7b",
-    "category": "Ammo",
-    "displayName": "ammo-og-7b [verybad]"
+    "displayName": "ammo-og-7b"
   },
   {
     "id": "ammo_vog-25_bad",
     "name": "ammo-vog-25",
-    "category": "Ammo",
-    "displayName": "ammo-vog-25 [bad]"
+    "category": "Explosives",
+    "displayName": "ammo-vog-25 [bad]",
+    "hasNpcWeaponDrop": false
   },
   {
     "id": "ammo_vog-25",
@@ -1160,8 +665,9 @@
   {
     "id": "ammo_vog-25_verybad",
     "name": "ammo-vog-25",
-    "category": "Ammo",
-    "displayName": "ammo-vog-25 [verybad]"
+    "category": "Explosives",
+    "displayName": "ammo-vog-25 [verybad]",
+    "hasNpcWeaponDrop": false
   },
   {
     "id": "army_nosorog_outfit",

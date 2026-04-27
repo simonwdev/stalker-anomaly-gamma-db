@@ -395,16 +395,6 @@
       "amount": "x1"
     }
   ],
-  "explo_balon_gas": [
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_scrap",
-      "amount": "x1"
-    }
-  ],
   "bandage": [
     {
       "name": "st_prt_o_fabrics_3",
@@ -499,32 +489,6 @@
       "amount": "x1"
     }
   ],
-  "detector_simple": [
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_scrap",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x1"
-    }
-  ],
   "detector_advanced": [
     {
       "name": "st_prt_i_transistors",
@@ -537,6 +501,32 @@
     {
       "name": "st_prt_i_resistors",
       "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "detector_anomaly": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
     },
     {
       "name": "st_prt_i_fasteners",
@@ -569,29 +559,7 @@
       "amount": "x1"
     }
   ],
-  "detector_scientific": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x4"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x4"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x4"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_scrap",
-      "amount": "x1"
-    }
-  ],
-  "detector_anomaly": [
+  "detector_geiger": [
     {
       "name": "st_prt_i_resistors",
       "amount": "x2"
@@ -639,6 +607,54 @@
       "amount": "x1"
     }
   ],
+  "detector_scientific": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    }
+  ],
+  "detector_simple": [
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    }
+  ],
   "device_flashlight": [
     {
       "name": "st_prt_i_fasteners",
@@ -650,6 +666,72 @@
     },
     {
       "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    }
+  ],
+  "device_pda_1": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    }
+  ],
+  "device_pda_2": [
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x3"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    }
+  ],
+  "device_pda_3": [
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x4"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
       "amount": "x1"
     },
     {
@@ -731,24 +813,6 @@
       "amount": "x1"
     }
   ],
-  "letter_ecologist_report_1_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x3"
-    }
-  ],
-  "letter_ecologist_report_2_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x3"
-    }
-  ],
-  "letter_ecologist_report_3_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x3"
-    }
-  ],
   "equ_military_pack": [
     {
       "name": "st_prt_o_fabrics_4",
@@ -763,10 +827,10 @@
       "amount": "x2"
     }
   ],
-  "equ_small_pack": [
+  "equ_small_military_pack": [
     {
-      "name": "st_prt_o_fabrics_1",
-      "amount": "x1"
+      "name": "st_prt_o_fabrics_4",
+      "amount": "x2"
     },
     {
       "name": "st_prt_o_fabrics_3",
@@ -777,10 +841,10 @@
       "amount": "x1"
     }
   ],
-  "equ_small_military_pack": [
+  "equ_small_pack": [
     {
-      "name": "st_prt_o_fabrics_4",
-      "amount": "x2"
+      "name": "st_prt_o_fabrics_1",
+      "amount": "x1"
     },
     {
       "name": "st_prt_o_fabrics_3",
@@ -815,13 +879,13 @@
       "amount": "x1"
     }
   ],
-  "heavy_repair_kit": [
-    {
-      "name": "st_prt_i_scrap",
-      "amount": "x2"
-    },
+  "explo_balon_gas": [
     {
       "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_scrap",
       "amount": "x1"
     }
   ],
@@ -842,44 +906,6 @@
     },
     {
       "name": "st_prt_i_resistors",
-      "amount": "x1"
-    }
-  ],
-  "letter_freedom_manual_1_of_2": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_freedom_manual_2_of_2": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "detector_geiger": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_scrap",
       "amount": "x1"
     }
   ],
@@ -997,6 +1023,16 @@
       "amount": "x1"
     }
   ],
+  "heavy_repair_kit": [
+    {
+      "name": "st_prt_i_scrap",
+      "amount": "x2"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    }
+  ],
   "ied_new": [
     {
       "name": "st_prt_i_scrap",
@@ -1073,6 +1109,72 @@
       "amount": "x3"
     }
   ],
+  "itm_pda_common": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    }
+  ],
+  "itm_pda_rare": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    }
+  ],
+  "itm_pda_uncommon": [
+    {
+      "name": "st_prt_i_resistors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_fasteners",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_copper",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_capacitors",
+      "amount": "x1"
+    },
+    {
+      "name": "st_prt_i_transistors",
+      "amount": "x1"
+    }
+  ],
   "itm_sleepbag": [
     {
       "name": "st_prt_o_fabrics_3",
@@ -1127,6 +1229,54 @@
       "amount": "x2"
     }
   ],
+  "letter_ecologist_report_1_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "letter_ecologist_report_2_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "letter_ecologist_report_3_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x3"
+    }
+  ],
+  "letter_freedom_manual_1_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_freedom_manual_2_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_letter_to_outside": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_memoirs_1_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_memoirs_2_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
   "letter_mercenary": [
     {
       "name": "st_prt_i_paper",
@@ -1145,13 +1295,43 @@
       "amount": "x1"
     }
   ],
-  "letter_stalker_letter_3": [
+  "letter_monolith_prayer_1_of_3": [
     {
       "name": "st_prt_i_paper",
       "amount": "x1"
     }
   ],
-  "letter_letter_to_outside": [
+  "letter_monolith_prayer_2_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_monolith_prayer_3_of_3": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_monolithian_thoughts": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_stalker_letter_1_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_stalker_letter_2_of_2": [
+    {
+      "name": "st_prt_i_paper",
+      "amount": "x1"
+    }
+  ],
+  "letter_stalker_letter_3": [
     {
       "name": "st_prt_i_paper",
       "amount": "x1"
@@ -1213,18 +1393,6 @@
       "amount": "x1"
     }
   ],
-  "letter_memoirs_1_of_2": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_memoirs_2_of_2": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
   "mine_new": [
     {
       "name": "st_prt_i_fasteners",
@@ -1245,165 +1413,9 @@
       "amount": "x1"
     }
   ],
-  "letter_monolith_prayer_1_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_monolith_prayer_2_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_monolith_prayer_3_of_3": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_monolithian_thoughts": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
   "morphine": [
     {
       "name": "st_e_syringe",
-      "amount": "x1"
-    }
-  ],
-  "device_pda_1": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    }
-  ],
-  "device_pda_2": [
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x3"
-    },
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    }
-  ],
-  "device_pda_3": [
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x4"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x2"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    }
-  ],
-  "itm_pda_uncommon": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x1"
-    }
-  ],
-  "itm_pda_rare": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_transistors",
-      "amount": "x1"
-    }
-  ],
-  "itm_pda_common": [
-    {
-      "name": "st_prt_i_resistors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_fasteners",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_copper",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_capacitors",
-      "amount": "x1"
-    },
-    {
-      "name": "st_prt_i_transistors",
       "amount": "x1"
     }
   ],
@@ -1592,18 +1604,6 @@
     },
     {
       "name": "st_prt_o_fabrics_4",
-      "amount": "x1"
-    }
-  ],
-  "letter_stalker_letter_1_of_2": [
-    {
-      "name": "st_prt_i_paper",
-      "amount": "x1"
-    }
-  ],
-  "letter_stalker_letter_2_of_2": [
-    {
-      "name": "st_prt_i_paper",
       "amount": "x1"
     }
   ],

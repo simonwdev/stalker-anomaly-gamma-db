@@ -13,6 +13,45 @@
   ],
   "items": [
     {
+      "id": "wpn_axe",
+      "pda_encyclopedia_name": "st_axe",
+      "st_data_export_description": "st_axe_descr",
+      "st_prop_weight": "1.01",
+      "st_upgr_cost": "10550",
+      "st_data_export_light_attack_power": "160",
+      "st_data_export_heavy_attack_power": "52.5",
+      "br": "920",
+      "ui_inv_wrange": "0",
+      "displayName": "st_axe",
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_axe3",
+      "pda_encyclopedia_name": "st_axe3",
+      "st_data_export_description": "st_axe3_descr",
+      "st_prop_weight": "1.08",
+      "st_upgr_cost": "12455",
+      "st_data_export_light_attack_power": "57.1",
+      "st_data_export_heavy_attack_power": "187",
+      "br": "1620",
+      "ui_inv_wrange": "0",
+      "displayName": "st_axe3",
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_knife",
+      "pda_encyclopedia_name": "st_knife_6x4",
+      "st_data_export_description": "st_knife_6x4_descr",
+      "st_prop_weight": "0.18",
+      "st_upgr_cost": "2085",
+      "st_data_export_light_attack_power": "30.5",
+      "st_data_export_heavy_attack_power": "52.5",
+      "br": "920",
+      "ui_inv_wrange": "0",
+      "displayName": "st_knife_6x4",
+      "hasDisassemble": false
+    },
+    {
       "id": "wpn_knife2",
       "pda_encyclopedia_name": "st_knife_needle",
       "st_data_export_description": "st_knife_needle_descr",
@@ -39,19 +78,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "wpn_axe",
-      "pda_encyclopedia_name": "st_axe",
-      "st_data_export_description": "st_axe_descr",
-      "st_prop_weight": "1.01",
-      "st_upgr_cost": "10550",
-      "st_data_export_light_attack_power": "160",
-      "st_data_export_heavy_attack_power": "52.5",
-      "br": "920",
-      "ui_inv_wrange": "0",
-      "displayName": "st_axe",
-      "hasDisassemble": false
-    },
-    {
       "id": "wpn_knife4",
       "pda_encyclopedia_name": "st_knife_swat",
       "st_data_export_description": "st_knife_swat_descr",
@@ -65,19 +91,6 @@
       "hasDisassemble": false
     },
     {
-      "id": "wpn_axe3",
-      "pda_encyclopedia_name": "st_axe3",
-      "st_data_export_description": "st_axe3_descr",
-      "st_prop_weight": "1.08",
-      "st_upgr_cost": "12455",
-      "st_data_export_light_attack_power": "57.1",
-      "st_data_export_heavy_attack_power": "187",
-      "br": "1620",
-      "ui_inv_wrange": "0",
-      "displayName": "st_axe3",
-      "hasDisassemble": false
-    },
-    {
       "id": "wpn_knife5",
       "pda_encyclopedia_name": "st_knife_combat",
       "st_data_export_description": "st_knife_combat_descr",
@@ -88,19 +101,6 @@
       "br": "1620",
       "ui_inv_wrange": "0",
       "displayName": "st_knife_combat",
-      "hasDisassemble": false
-    },
-    {
-      "id": "wpn_knife",
-      "pda_encyclopedia_name": "st_knife_6x4",
-      "st_data_export_description": "st_knife_6x4_descr",
-      "st_prop_weight": "0.18",
-      "st_upgr_cost": "2085",
-      "st_data_export_light_attack_power": "30.5",
-      "st_data_export_heavy_attack_power": "52.5",
-      "br": "920",
-      "ui_inv_wrange": "0",
-      "displayName": "st_knife_6x4",
       "hasDisassemble": false
     }
   ]

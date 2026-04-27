@@ -4,8 +4,8 @@ af_black_spray,st_af_black_spray_name,6,recipe_advanced_4,st_gamma_recipe_advanc
 af_blood,st_af_blood_name,6,recipe_basic_0,,st_af_sandstone_name,x1,mutant_psevdodog_meat,x1,mutant_zombi_hand,x1,,
 af_bracelet,st_af_bracelet_name,6,recipe_basic_4,st_gamma_recipe_basic_4,st_af_blood_name,x1,mutant_krovosos_meat,x1,,,,
 af_compass,st_af_compass_name,6,recipe_expert_4,st_gamma_recipe_expert_4,st_af_full_empty_name,x1,st_af_black_spray_name,x1,mutant_part_controller_brain_tissue,x4,mutant_heart_chimera,x4
-af_cristall_flower,st_af_cristall_flower_name,6,recipe_basic_0,,st_af_black_angel_name,x1,mutant_dog_heart,x1,mutant_snork_leg,x1,,
 af_cristall,st_af_cristall_name,6,recipe_basic_4,st_gamma_recipe_basic_4,st_af_dummy_glassbeads_name,x1,mutant_fang_psevdodog,x1,mutant_zombi_hand,x2,,
+af_cristall_flower,st_af_cristall_flower_name,6,recipe_basic_0,,st_af_black_angel_name,x1,mutant_dog_heart,x1,mutant_snork_leg,x1,,
 af_dummy_battery,st_af_dummy_battery_name,6,recipe_basic_0,,st_af_generator_name,x1,mutant_cat_tail,x1,mutant_dog_liver,x1,,
 af_dummy_dummy,st_af_dummy_dummy_name,6,recipe_basic_4,st_gamma_recipe_basic_4,st_af_dummy_battery_name,x1,mutant_brain_burer,x1,,,,
 af_dummy_glassbeads,st_af_dummy_glassbeads_name,6,recipe_basic_0,,st_af_sun_name,x1,mutant_cat_tail,x1,mutant_tusk_boar,x1,,
@@ -14,8 +14,8 @@ af_electra_moonlight,st_af_electra_moonlight_name,6,recipe_basic_4,st_gamma_reci
 af_electra_sparkler,st_af_electra_sparkler_name,6,recipe_basic_0,,st_af_fonar_name,x1,mutant_cat_thyroid,x1,mutant_cat_claw,x1,,
 af_empty,st_af_empty_name,6,recipe_basic_4,st_gamma_recipe_basic_4,st_af_medusa_name,x1,mutant_fang_psevdodog,x1,mutant_snork_mask,x1,,
 af_eye,st_af_eye_name,6,recipe_basic_4,st_gamma_recipe_basic_4,st_af_blood_name,x1,mutant_lurker_eye,x2,mutant_flesh_eye,x1,,
-af_fire_loop,st_af_fire_loop_name,6,recipe_expert_4,st_gamma_recipe_expert_4,st_af_fire_name,x1,st_af_fireball_name,x1,mutant_heart_chimera,x6,mutant_controller_hand,x6
 af_fire,st_af_fire_name,6,recipe_advanced_4,st_gamma_recipe_advanced_4,st_af_pin_name,x1,st_af_eye_name,x1,mutant_chimera_claw,x2,mutant_chimera_cogot,x3
+af_fire_loop,st_af_fire_loop_name,6,recipe_expert_4,st_gamma_recipe_expert_4,st_af_fire_name,x1,st_af_fireball_name,x1,mutant_heart_chimera,x6,mutant_controller_hand,x6
 af_fireball,st_af_fireball_name,6,recipe_advanced_4,st_gamma_recipe_advanced_4,st_af_cristall_name,x1,st_af_lobster_eyes_name,x1,mutant_pseudogigant_eye,x3,,
 af_full_empty,st_af_full_empty_name,6,recipe_advanced_4,st_gamma_recipe_advanced_4,st_af_empty_name,x1,st_af_vyvert_name,x1,mutant_pseudogigant_hand,x4,,
 af_fuzz_kolobok,st_af_fuzz_kolobok_name,6,recipe_basic_4,st_gamma_recipe_basic_4,st_af_soul_name,x1,mutant_krovosos_meat,x1,,,,
