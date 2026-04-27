@@ -27,7 +27,7 @@
     "id": "generic_medic",
     "labelKey": "app_generic_medic",
     "label": "st_raid_medic_name",
-    "color": "#e11d48'"
+    "color": "#e11d48"
   },
   {
     "id": "stalker_butcher",
@@ -45,6 +45,6 @@
     "id": "stalker_sidorovich",
     "labelKey": "app_stalker_sidorovich",
     "label": "escape_trader_name",
-    "color": "'#f59e0b"
+    "color": "#f59e0b"
   }
 ]

@@ -3110,7 +3110,6 @@ st_data_export_body_bonearmor
 st_data_export_bonus_mutant_part_chance
 st_data_export_can_be_cooked
 st_data_export_can_be_crafted
-st_data_export_can_be_looted_by_npc
 st_data_export_condition
 st_data_export_description
 st_data_export_disassemble_amount
@@ -3142,7 +3141,6 @@ st_data_export_k_hit
 st_data_export_light_attack_power
 st_data_export_magnifications
 st_data_export_max_uses
-st_data_export_outfit_artefact_count_max
 st_data_export_power_restore_max
 st_data_export_price_multiplier
 st_data_export_probability
@@ -3167,7 +3165,6 @@ st_data_export_stash_type_common
 st_data_export_stash_type_rare
 st_data_export_thirst
 st_data_export_tool_tier
-st_data_export_unknown
 st_data_export_used_in_cooking
 st_data_export_used_in_crafting
 st_data_export_value
@@ -5858,17 +5855,13 @@ ui_inv_damage
 ui_inv_effect_time
 ui_inv_handling
 ui_inv_outfit_additional_weight
-ui_inv_outfit_artefact_count
 ui_inv_outfit_burn_protection
 ui_inv_outfit_chemical_burn_protection
-ui_inv_outfit_durability_anomaly
-ui_inv_outfit_durability_physical
 ui_inv_outfit_explosion_protection
 ui_inv_outfit_fire_wound_protection
 ui_inv_outfit_power_restore
 ui_inv_outfit_radiation_protection
 ui_inv_outfit_shock_protection
-ui_inv_outfit_speed
 ui_inv_outfit_strike_protection
 ui_inv_outfit_telepatic_protection
 ui_inv_outfit_wound_protection
@@ -5879,7 +5872,6 @@ ui_inv_reli
 ui_inv_satiety
 ui_inv_wrange
 ui_mm_repair
-ui_st_community
 ui_st_rank
 vodnik_notes_desc
 vodnik_notes_name
