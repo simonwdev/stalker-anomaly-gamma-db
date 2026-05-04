@@ -9,3 +9,16 @@ id = "9497e56fc1ce4a198567c2ebb567374c"
 [[env.preview.kv_namespaces]]
 binding = "BUILDS"
 id = "23a36247ba85455694ec2a55c9712464"
+
+# Presence counter — Durable Object lives in the separate `stalker-gamma-presence`
+# Worker (deploy via worker-presence/wrangler.toml). Pages can only bind to a
+# DO class defined in another Worker, hence `script_name`.
+[[durable_objects.bindings]]
+name = "PRESENCE"
+class_name = "PresenceDO"
+script_name = "stalker-gamma-presence"
+
+[[env.preview.durable_objects.bindings]]
+name = "PRESENCE"
+class_name = "PresenceDO"
+script_name = "stalker-gamma-presence"

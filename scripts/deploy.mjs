@@ -8,6 +8,9 @@ if (!existsSync(distDir)) {
   process.exit(1);
 }
 
-execSync('npx wrangler pages deploy', {
-  stdio: 'inherit',
-});
+const preview = process.argv.includes('--preview');
+const cmd = preview
+  ? 'npx wrangler pages deploy --branch=preview'
+  : 'npx wrangler pages deploy';
+
+execSync(cmd, { stdio: 'inherit' });

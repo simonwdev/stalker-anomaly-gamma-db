@@ -204,6 +204,7 @@
         {{ t('app_nav_trading') }}
     </a>
     <div class="nav-bar-spacer"></div>
+    <OnlineCounter class="nav-bar-online" />
     <div class="settings-wrap" v-click-outside="() => settingsOpen = false">
         <button class="settings-btn" @click.stop="settingsOpen = !settingsOpen" v-tooltip="t('app_label_settings')">
             <LucideSettings :size="16" />
@@ -229,8 +230,10 @@
 
 <script>
 import { iconMap } from '../icons.js';
+import OnlineCounter from './OnlineCounter.vue';
 
 export default {
+    components: { OnlineCounter },
     props: {
         translations: { type: Object, default: null },
         activePack: { type: Object, default: null },
@@ -304,6 +307,10 @@ export default {
 </script>
 
 <style>
+.nav-bar-online {
+    margin-right: 0.5rem;
+}
+
 /* ── Right drawer (mobile overflow) ── */
 .header-drawer-backdrop {
     position: fixed;
