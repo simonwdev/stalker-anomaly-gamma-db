@@ -133,22 +133,24 @@
                         <span class="sort-btn-dir">{{ sortAsc ? '\u25B2' : '\u25BC' }}</span>
                     </button>
                     <div class="sort-menu" v-show="sortMenuOpen" @click.stop>
-                        <div class="sort-menu-header">{{ t('app_label_sort_by') }}</div>
-                        <button
-                            v-for="h in sortableFields"
-                            :key="h"
-                            class="sort-menu-item"
-                            :class="{ active: sortCol === h }"
-                            @click="onPickSort(h)"
-                        >
-                            <span class="sort-menu-check">{{ sortCol === h ? '\u2713' : '' }}</span>
-                            <span>{{ headerLabel(h) }}</span>
-                        </button>
-                        <div class="sort-menu-divider"></div>
                         <button class="sort-menu-item" @click="$emit('toggleSortDir')">
                             <span class="sort-menu-check">{{ sortAsc ? '\u25B2' : '\u25BC' }}</span>
                             <span>{{ sortAsc ? 'Ascending' : 'Descending' }}</span>
                         </button>
+                        <div class="sort-menu-divider"></div>
+                        <div class="sort-menu-header">{{ t('app_label_sort_by') }}</div>
+                        <div class="sort-menu-scroll">
+                            <button
+                                v-for="h in sortableFields"
+                                :key="h"
+                                class="sort-menu-item"
+                                :class="{ active: sortCol === h }"
+                                @click="onPickSort(h)"
+                            >
+                                <span class="sort-menu-check">{{ sortCol === h ? '\u2713' : '' }}</span>
+                                <span>{{ headerLabel(h) }}</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="sort-wrap" v-show="isToolkitRates" v-click-outside="closeSortMenu">
@@ -158,20 +160,22 @@
                         <span class="sort-btn-dir">{{ toolkitSortAsc ? '\u25B2' : '\u25BC' }}</span>
                     </button>
                     <div class="sort-menu" v-show="sortMenuOpen" @click.stop>
-                        <div class="sort-menu-header">{{ t('app_label_sort_by') }}</div>
-                        <button class="sort-menu-item" :class="{ active: toolkitSortCol === '_name' }" @click="$emit('toggleToolkitSort', '_name'); sortMenuOpen = false">
-                            <span class="sort-menu-check">{{ toolkitSortCol === '_name' ? '\u2713' : '' }}</span>
-                            <span>{{ t('app_label_map') }}</span>
-                        </button>
-                        <button v-for="tt in (toolkitRates ? toolkitRates.toolTypes : [])" :key="tt" class="sort-menu-item" :class="{ active: toolkitSortCol === tt }" @click="$emit('toggleToolkitSort', tt); sortMenuOpen = false">
-                            <span class="sort-menu-check">{{ toolkitSortCol === tt ? '\u2713' : '' }}</span>
-                            <span>{{ t(tt) }}</span>
-                        </button>
-                        <div class="sort-menu-divider"></div>
                         <button class="sort-menu-item" @click="$emit('toggleToolkitSortDir')">
                             <span class="sort-menu-check">{{ toolkitSortAsc ? '\u25B2' : '\u25BC' }}</span>
                             <span>{{ toolkitSortAsc ? 'Ascending' : 'Descending' }}</span>
                         </button>
+                        <div class="sort-menu-divider"></div>
+                        <div class="sort-menu-header">{{ t('app_label_sort_by') }}</div>
+                        <div class="sort-menu-scroll">
+                            <button class="sort-menu-item" :class="{ active: toolkitSortCol === '_name' }" @click="$emit('toggleToolkitSort', '_name'); sortMenuOpen = false">
+                                <span class="sort-menu-check">{{ toolkitSortCol === '_name' ? '\u2713' : '' }}</span>
+                                <span>{{ t('app_label_map') }}</span>
+                            </button>
+                            <button v-for="tt in (toolkitRates ? toolkitRates.toolTypes : [])" :key="tt" class="sort-menu-item" :class="{ active: toolkitSortCol === tt }" @click="$emit('toggleToolkitSort', tt); sortMenuOpen = false">
+                                <span class="sort-menu-check">{{ toolkitSortCol === tt ? '\u2713' : '' }}</span>
+                                <span>{{ t(tt) }}</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <button v-if="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCrafting && favoriteIds.length > 0"

@@ -912,6 +912,15 @@ export const appDefinition = {
                     }
                     return { ...def, values: [...vals].sort() };
                 }
+                if (def.type === "discrete" && Array.isArray(def.values)) {
+                    const present = new Set();
+                    for (const item of items) {
+                        const v = item[def.key];
+                        if (v !== undefined && v !== null && v !== "") present.add(String(v));
+                    }
+                    const filtered = def.values.filter(v => present.has(String(v)));
+                    return filtered.length > 0 ? { ...def, values: filtered } : null;
+                }
                 return def;
             }).filter(Boolean);
 

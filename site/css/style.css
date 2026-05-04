@@ -1887,6 +1887,10 @@ input.range-input {
     background: var(--border);
     margin: 0.3rem 0.5rem;
 }
+.sort-menu-scroll {
+    max-height: 16rem;
+    overflow-y: auto;
+}
 
 /* Active filter chips row */
 .active-filters {
