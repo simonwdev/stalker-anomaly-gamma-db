@@ -1,0 +1,422 @@
+{
+  "category": "Silencers",
+  "headers": [
+    "id",
+    "pda_encyclopedia_name",
+    "st_data_export_description",
+    "st_prop_weight",
+    "st_upgr_cost"
+  ],
+  "items": [
+    {
+      "id": "wpn_addon_silencer",
+      "pda_encyclopedia_name": "st_addon_silencer",
+      "st_data_export_description": "st_addon_silencer_descr",
+      "st_prop_weight": "0.20",
+      "st_upgr_cost": "400",
+      "displayName": "st_addon_silencer",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_45",
+      "pda_encyclopedia_name": "st_addon_sil_45",
+      "st_data_export_description": "st_addon_sil_45_descr",
+      "st_prop_weight": "0.54",
+      "st_upgr_cost": "1800",
+      "displayName": "st_addon_sil_45",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_57",
+      "pda_encyclopedia_name": "st_addon_sil_57",
+      "st_data_export_description": "st_addon_sil_57_descr",
+      "st_prop_weight": "0.30",
+      "st_upgr_cost": "1900",
+      "displayName": "st_addon_sil_57",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_6p9",
+      "pda_encyclopedia_name": "st_addon_sil_6p9",
+      "st_data_export_description": "st_addon_sil_6p9_descr",
+      "st_prop_weight": "0.10",
+      "st_upgr_cost": "1000",
+      "displayName": "st_addon_sil_6p9",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_9a91",
+      "pda_encyclopedia_name": "st_addon_sil_9a91",
+      "st_data_export_description": "st_addon_sil_9a91_descr",
+      "st_prop_weight": "0.70",
+      "st_upgr_cost": "2300",
+      "displayName": "st_addon_sil_9a91",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_9mm",
+      "pda_encyclopedia_name": "st_addon_sil_9mm",
+      "st_data_export_description": "st_addon_sil_9mm_descr",
+      "st_prop_weight": "0.20",
+      "st_upgr_cost": "1480",
+      "displayName": "st_addon_sil_9mm",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_aac762",
+      "pda_encyclopedia_name": "st_addon_sil_aac762",
+      "st_data_export_description": "st_addon_sil_aac762_descr",
+      "st_prop_weight": "0.57",
+      "st_upgr_cost": "12000",
+      "displayName": "st_addon_sil_aac762",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_apb",
+      "pda_encyclopedia_name": "st_addon_sil_apb",
+      "st_data_export_description": "st_addon_sil_apb_descr",
+      "st_prop_weight": "0.20",
+      "st_upgr_cost": "800",
+      "displayName": "st_addon_sil_apb",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_aps",
+      "pda_encyclopedia_name": "st_addon_sil_aps",
+      "st_data_export_description": "st_addon_sil_aps_descr",
+      "st_prop_weight": "0.20",
+      "st_upgr_cost": "1000",
+      "displayName": "st_addon_sil_aps",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_ash12",
+      "pda_encyclopedia_name": "st_addon_sil_ash12",
+      "st_data_export_description": "st_addon_sil_ash12_descr",
+      "st_prop_weight": "0.90",
+      "st_upgr_cost": "5100",
+      "displayName": "st_addon_sil_ash12",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_atg",
+      "pda_encyclopedia_name": "st_addon_sil_atg",
+      "st_data_export_description": "st_addon_sil_atg_descr",
+      "st_prop_weight": "0.70",
+      "st_upgr_cost": "2500",
+      "displayName": "st_addon_sil_atg",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_auga",
+      "pda_encyclopedia_name": "st_addon_sil_auga",
+      "st_data_export_description": "st_addon_sil_auga_descr",
+      "st_prop_weight": "0.58",
+      "st_upgr_cost": "17150",
+      "displayName": "st_addon_sil_auga",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_black_box",
+      "pda_encyclopedia_name": "st_addon_sil_black_box",
+      "st_data_export_description": "st_addon_sil_black_box_descr",
+      "st_prop_weight": "0.45",
+      "st_upgr_cost": "2400",
+      "displayName": "st_addon_sil_black_box",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_daniel",
+      "pda_encyclopedia_name": "st_addon_sil_daniel",
+      "st_data_export_description": "st_addon_sil_daniel_descr",
+      "st_prop_weight": "0.49",
+      "st_upgr_cost": "8100",
+      "displayName": "st_addon_sil_daniel",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_forester",
+      "pda_encyclopedia_name": "st_addon_sil_forester",
+      "st_data_export_description": "st_addon_sil_forester_descr",
+      "st_prop_weight": "0.50",
+      "st_upgr_cost": "5100",
+      "displayName": "st_addon_sil_forester",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_geks545",
+      "pda_encyclopedia_name": "st_addon_sil_geks545",
+      "st_data_export_description": "st_addon_sil_geks545_descr",
+      "st_prop_weight": "0.46",
+      "st_upgr_cost": "2000",
+      "displayName": "st_addon_sil_geks545",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_gemtech",
+      "pda_encyclopedia_name": "st_addon_sil_gemtech",
+      "st_data_export_description": "st_addon_sil_gemtech_descr",
+      "st_prop_weight": "0.50",
+      "st_upgr_cost": "2100",
+      "displayName": "st_addon_sil_gemtech",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_grot",
+      "pda_encyclopedia_name": "st_addon_sil_grot",
+      "st_data_export_description": "st_addon_sil_grot_descr",
+      "st_prop_weight": "0.38",
+      "st_upgr_cost": "10000",
+      "displayName": "st_addon_sil_grot",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_hex23",
+      "pda_encyclopedia_name": "st_addon_sil_hex23",
+      "st_data_export_description": "st_addon_sil_hex23_descr",
+      "st_prop_weight": "1.48",
+      "st_upgr_cost": "18000",
+      "displayName": "st_addon_sil_hex23",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_hexagon",
+      "pda_encyclopedia_name": "st_addon_sil_hexagon",
+      "st_data_export_description": "st_addon_sil_hexagon_descr",
+      "st_prop_weight": "0.52",
+      "st_upgr_cost": "3200",
+      "displayName": "st_addon_sil_hexagon",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_kac4",
+      "pda_encyclopedia_name": "st_addon_sil_kac4",
+      "st_data_export_description": "st_addon_sil_kac4_descr",
+      "st_prop_weight": "0.68",
+      "st_upgr_cost": "20100",
+      "displayName": "st_addon_sil_kac4",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_kek12",
+      "pda_encyclopedia_name": "st_addon_sil_kek12",
+      "st_data_export_description": "st_addon_sil_kek12_descr",
+      "st_prop_weight": "0.49",
+      "st_upgr_cost": "3800",
+      "displayName": "st_addon_sil_kek12",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_kzrzp",
+      "pda_encyclopedia_name": "st_addon_sil_kzrzp",
+      "st_data_export_description": "st_addon_sil_kzrzp_descr",
+      "st_prop_weight": "0.55",
+      "st_upgr_cost": "2600",
+      "displayName": "st_addon_sil_kzrzp",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_lapu7",
+      "pda_encyclopedia_name": "st_addon_sil_lapu7",
+      "st_data_export_description": "st_addon_sil_lapu7_descr",
+      "st_prop_weight": "0.56",
+      "st_upgr_cost": "15300",
+      "displayName": "st_addon_sil_lapu7",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_m42k",
+      "pda_encyclopedia_name": "st_addon_sil_m42k",
+      "st_data_export_description": "st_addon_sil_m42k_descr",
+      "st_prop_weight": "0.50",
+      "st_upgr_cost": "12150",
+      "displayName": "st_addon_sil_m42k",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_nato",
+      "pda_encyclopedia_name": "st_addon_sil_nato",
+      "st_data_export_description": "st_addon_sil_nato_descr",
+      "st_prop_weight": "0.55",
+      "st_upgr_cost": "2200",
+      "displayName": "st_addon_sil_nato",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_osp9",
+      "pda_encyclopedia_name": "st_addon_sil_osp9",
+      "st_data_export_description": "st_addon_sil_osp9_descr",
+      "st_prop_weight": "0.30",
+      "st_upgr_cost": "2500",
+      "displayName": "st_addon_sil_osp9",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_pbs1",
+      "pda_encyclopedia_name": "st_addon_sil_pbs1",
+      "st_data_export_description": "st_addon_sil_pbs1_descr",
+      "st_prop_weight": "0.64",
+      "st_upgr_cost": "2200",
+      "displayName": "st_addon_sil_pbs1",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_pbs4",
+      "pda_encyclopedia_name": "st_addon_sil_pbs4",
+      "st_data_export_description": "st_addon_sil_pbs4_descr",
+      "st_prop_weight": "0.58",
+      "st_upgr_cost": "2300",
+      "displayName": "st_addon_sil_pbs4",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_pl15",
+      "pda_encyclopedia_name": "st_addon_sil_pl15",
+      "st_data_export_description": "st_addon_sil_pl15_descr",
+      "st_prop_weight": "0.48",
+      "st_upgr_cost": "10100",
+      "displayName": "st_addon_sil_pl15",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_pmm",
+      "pda_encyclopedia_name": "st_addon_sil_pmm",
+      "st_data_export_description": "st_addon_sil_pmm_descr",
+      "st_prop_weight": "0.20",
+      "st_upgr_cost": "1580",
+      "displayName": "st_addon_sil_pmm",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_rotor",
+      "pda_encyclopedia_name": "st_addon_sil_rotor",
+      "st_data_export_description": "st_addon_sil_rotor_descr",
+      "st_prop_weight": "0.90",
+      "st_upgr_cost": "5600",
+      "displayName": "st_addon_sil_rotor",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_salvo",
+      "pda_encyclopedia_name": "st_addon_sil_salvo",
+      "st_data_export_description": "st_addon_sil_salvo_descr",
+      "st_prop_weight": "1.00",
+      "st_upgr_cost": "6200",
+      "displayName": "st_addon_sil_salvo",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_spec_isg",
+      "pda_encyclopedia_name": "st_addon_sil_spec_isg",
+      "st_data_export_description": "st_addon_sil_spec_isg_descr",
+      "st_prop_weight": "0.40",
+      "st_upgr_cost": "12100",
+      "displayName": "st_addon_sil_spec_isg",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_sr1m",
+      "pda_encyclopedia_name": "st_addon_sil_sr1m",
+      "st_data_export_description": "st_addon_sil_sr1m_descr",
+      "st_prop_weight": "0.49",
+      "st_upgr_cost": "4100",
+      "displayName": "st_addon_sil_sr1m",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_sr25",
+      "pda_encyclopedia_name": "st_addon_sil_sr25",
+      "st_data_export_description": "st_addon_sil_sr25_descr",
+      "st_prop_weight": "0.56",
+      "st_upgr_cost": "2350",
+      "displayName": "st_addon_sil_sr25",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_surfire",
+      "pda_encyclopedia_name": "st_addon_sil_surfire",
+      "st_data_export_description": "st_addon_sil_surfire_descr",
+      "st_prop_weight": "0.50",
+      "st_upgr_cost": "18325",
+      "displayName": "st_addon_sil_surfire",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_tgp-a",
+      "pda_encyclopedia_name": "st_addon_sil_tgp-a",
+      "st_data_export_description": "st_addon_sil_tgp-a_descr",
+      "st_prop_weight": "0.80",
+      "st_upgr_cost": "2000",
+      "displayName": "st_addon_sil_tgp-a",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_tgpv",
+      "pda_encyclopedia_name": "st_addon_sil_tgpv",
+      "st_data_export_description": "st_addon_sil_tgpv_descr",
+      "st_prop_weight": "0.55",
+      "st_upgr_cost": "8000",
+      "displayName": "st_addon_sil_tgpv",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_veresk",
+      "pda_encyclopedia_name": "st_addon_sil_veresk",
+      "st_data_export_description": "st_addon_sil_veresk_descr",
+      "st_prop_weight": "0.48",
+      "st_upgr_cost": "13100",
+      "displayName": "st_addon_sil_veresk",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    },
+    {
+      "id": "wpn_sil_vihr",
+      "pda_encyclopedia_name": "st_addon_sil_vihr",
+      "st_data_export_description": "st_addon_sil_vihr_descr",
+      "st_prop_weight": "0.70",
+      "st_upgr_cost": "2300",
+      "displayName": "st_addon_sil_vihr",
+      "hasStashDrop": false,
+      "hasDisassemble": false
+    }
+  ]
+}

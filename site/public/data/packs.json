@@ -4,6 +4,8 @@
     {
       "id": "gamma-0.9.4",
       "name": "GAMMA 0.9.4",
+      "status": "old",
+      "statusColor": "#f87171",
       "baseCarryWeight": 33,
       "links": [
         { "url": "https://discord.gg/stalker-gamma", "icon": "discord", "label": "Discord" },
@@ -14,8 +16,6 @@
     {
       "id": "gamma-0.9.5",
       "name": "GAMMA 0.9.5",
-      "status": "preview",
-      "statusColor": "#f87171",
       "baseCarryWeight": 33,
       "links": [
         { "url": "https://discord.gg/stalker-gamma", "icon": "discord", "label": "Discord" },
@@ -51,5 +51,5 @@
       ]
     }
   ],
-  "default": "gamma-0.9.4"
+  "default": "gamma-0.9.5"
 }

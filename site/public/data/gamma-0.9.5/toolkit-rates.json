@@ -1,0 +1,374 @@
+{
+  "toolTypes": [
+    "st_itm_basickit_name",
+    "st_itm_advancedkit_name",
+    "st_itm_expertkit_name",
+    "st_itm_drugkit",
+    "st_itm_ammokit"
+  ],
+  "maps": [
+    {
+      "id": "jupiter",
+      "name": "jupiter",
+      "rates": {
+        "st_itm_basickit_name": 9,
+        "st_itm_advancedkit_name": 54,
+        "st_itm_expertkit_name": 30,
+        "st_itm_drugkit": 4,
+        "st_itm_ammokit": 4
+      }
+    },
+    {
+      "id": "jupiter_underground",
+      "name": "jupiter_underground",
+      "rates": {
+        "st_itm_basickit_name": 0,
+        "st_itm_advancedkit_name": 80,
+        "st_itm_expertkit_name": 20,
+        "st_itm_drugkit": 0,
+        "st_itm_ammokit": 0
+      }
+    },
+    {
+      "id": "k00_marsh",
+      "name": "k00_marsh",
+      "rates": {
+        "st_itm_basickit_name": 40,
+        "st_itm_advancedkit_name": 0,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 30,
+        "st_itm_ammokit": 30
+      }
+    },
+    {
+      "id": "k01_darkscape",
+      "name": "k01_darkscape",
+      "rates": {
+        "st_itm_basickit_name": 48,
+        "st_itm_advancedkit_name": 6,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 23,
+        "st_itm_ammokit": 23
+      }
+    },
+    {
+      "id": "k02_trucks_cemetery",
+      "name": "k02_trucks_cemetery",
+      "rates": {
+        "st_itm_basickit_name": 27,
+        "st_itm_advancedkit_name": 51,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 11,
+        "st_itm_ammokit": 11
+      }
+    },
+    {
+      "id": "l01_escape",
+      "name": "l01_escape",
+      "rates": {
+        "st_itm_basickit_name": 40,
+        "st_itm_advancedkit_name": 0,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 30,
+        "st_itm_ammokit": 30
+      }
+    },
+    {
+      "id": "l02_garbage",
+      "name": "l02_garbage",
+      "rates": {
+        "st_itm_basickit_name": 43,
+        "st_itm_advancedkit_name": 5,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 26,
+        "st_itm_ammokit": 26
+      }
+    },
+    {
+      "id": "l03_agroprom",
+      "name": "l03_agroprom",
+      "rates": {
+        "st_itm_basickit_name": 48,
+        "st_itm_advancedkit_name": 9,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 22,
+        "st_itm_ammokit": 22
+      }
+    },
+    {
+      "id": "l03u_agr_underground",
+      "name": "l03u_agr_underground",
+      "rates": {
+        "st_itm_basickit_name": 15,
+        "st_itm_advancedkit_name": 39,
+        "st_itm_expertkit_name": 33,
+        "st_itm_drugkit": 6,
+        "st_itm_ammokit": 6
+      }
+    },
+    {
+      "id": "l04_darkvalley",
+      "name": "l04_darkvalley",
+      "rates": {
+        "st_itm_basickit_name": 49,
+        "st_itm_advancedkit_name": 5,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 23,
+        "st_itm_ammokit": 23
+      }
+    },
+    {
+      "id": "l04u_labx18",
+      "name": "l04u_labx18",
+      "rates": {
+        "st_itm_basickit_name": 0,
+        "st_itm_advancedkit_name": 50,
+        "st_itm_expertkit_name": 50,
+        "st_itm_drugkit": 0,
+        "st_itm_ammokit": 0
+      }
+    },
+    {
+      "id": "l05_bar",
+      "name": "l05_bar",
+      "rates": {
+        "st_itm_basickit_name": 42,
+        "st_itm_advancedkit_name": 0,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 29,
+        "st_itm_ammokit": 29
+      }
+    },
+    {
+      "id": "l06_rostok",
+      "name": "l06_rostok",
+      "rates": {
+        "st_itm_basickit_name": 40,
+        "st_itm_advancedkit_name": 25,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 18,
+        "st_itm_ammokit": 18
+      }
+    },
+    {
+      "id": "l07_military",
+      "name": "l07_military",
+      "rates": {
+        "st_itm_basickit_name": 27,
+        "st_itm_advancedkit_name": 51,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 11,
+        "st_itm_ammokit": 11
+      }
+    },
+    {
+      "id": "l08_yantar",
+      "name": "l08_yantar",
+      "rates": {
+        "st_itm_basickit_name": 34,
+        "st_itm_advancedkit_name": 37,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 14,
+        "st_itm_ammokit": 14
+      }
+    },
+    {
+      "id": "l08u_brainlab",
+      "name": "l08u_brainlab",
+      "rates": {
+        "st_itm_basickit_name": 15,
+        "st_itm_advancedkit_name": 39,
+        "st_itm_expertkit_name": 33,
+        "st_itm_drugkit": 6,
+        "st_itm_ammokit": 6
+      }
+    },
+    {
+      "id": "l09_deadcity",
+      "name": "l09_deadcity",
+      "rates": {
+        "st_itm_basickit_name": 48,
+        "st_itm_advancedkit_name": 9,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 22,
+        "st_itm_ammokit": 22
+      }
+    },
+    {
+      "id": "l10_limansk",
+      "name": "l10_limansk",
+      "rates": {
+        "st_itm_basickit_name": 17,
+        "st_itm_advancedkit_name": 57,
+        "st_itm_expertkit_name": 13,
+        "st_itm_drugkit": 7,
+        "st_itm_ammokit": 7
+      }
+    },
+    {
+      "id": "l10_radar",
+      "name": "l10_radar",
+      "rates": {
+        "st_itm_basickit_name": 5,
+        "st_itm_advancedkit_name": 91,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 2,
+        "st_itm_ammokit": 2
+      }
+    },
+    {
+      "id": "l10_red_forest",
+      "name": "l10_red_forest",
+      "rates": {
+        "st_itm_basickit_name": 5,
+        "st_itm_advancedkit_name": 82,
+        "st_itm_expertkit_name": 10,
+        "st_itm_drugkit": 2,
+        "st_itm_ammokit": 2
+      }
+    },
+    {
+      "id": "l10u_bunker",
+      "name": "l10u_bunker",
+      "rates": {
+        "st_itm_basickit_name": 0,
+        "st_itm_advancedkit_name": 50,
+        "st_itm_expertkit_name": 50,
+        "st_itm_drugkit": 0,
+        "st_itm_ammokit": 0
+      }
+    },
+    {
+      "id": "l11_hospital",
+      "name": "l11_hospital",
+      "rates": {
+        "st_itm_basickit_name": 0,
+        "st_itm_advancedkit_name": 50,
+        "st_itm_expertkit_name": 50,
+        "st_itm_drugkit": 0,
+        "st_itm_ammokit": 0
+      }
+    },
+    {
+      "id": "l11_pripyat",
+      "name": "l11_pripyat",
+      "rates": {
+        "st_itm_basickit_name": 6,
+        "st_itm_advancedkit_name": 31,
+        "st_itm_expertkit_name": 57,
+        "st_itm_drugkit": 3,
+        "st_itm_ammokit": 3
+      }
+    },
+    {
+      "id": "l12_stancia",
+      "name": "l12_stancia",
+      "rates": {
+        "st_itm_basickit_name": 0,
+        "st_itm_advancedkit_name": 29,
+        "st_itm_expertkit_name": 71,
+        "st_itm_drugkit": 0,
+        "st_itm_ammokit": 0
+      }
+    },
+    {
+      "id": "l12_stancia_2",
+      "name": "l12_stancia_2",
+      "rates": {
+        "st_itm_basickit_name": 0,
+        "st_itm_advancedkit_name": 33,
+        "st_itm_expertkit_name": 67,
+        "st_itm_drugkit": 0,
+        "st_itm_ammokit": 0
+      }
+    },
+    {
+      "id": "l12u_control_monolith",
+      "name": "l12u_control_monolith",
+      "rates": {
+        "st_itm_basickit_name": 0,
+        "st_itm_advancedkit_name": 20,
+        "st_itm_expertkit_name": 80,
+        "st_itm_drugkit": 0,
+        "st_itm_ammokit": 0
+      }
+    },
+    {
+      "id": "l12u_sarcofag",
+      "name": "l12u_sarcofag",
+      "rates": {
+        "st_itm_basickit_name": 0,
+        "st_itm_advancedkit_name": 20,
+        "st_itm_expertkit_name": 80,
+        "st_itm_drugkit": 0,
+        "st_itm_ammokit": 0
+      }
+    },
+    {
+      "id": "l13_generators",
+      "name": "l13_generators",
+      "rates": {
+        "st_itm_basickit_name": 0,
+        "st_itm_advancedkit_name": 22,
+        "st_itm_expertkit_name": 78,
+        "st_itm_drugkit": 0,
+        "st_itm_ammokit": 0
+      }
+    },
+    {
+      "id": "l13u_warlab",
+      "name": "l13u_warlab",
+      "rates": {
+        "st_itm_basickit_name": 0,
+        "st_itm_advancedkit_name": 20,
+        "st_itm_expertkit_name": 80,
+        "st_itm_drugkit": 0,
+        "st_itm_ammokit": 0
+      }
+    },
+    {
+      "id": "labx8",
+      "name": "labx8",
+      "rates": {
+        "st_itm_basickit_name": 15,
+        "st_itm_advancedkit_name": 39,
+        "st_itm_expertkit_name": 33,
+        "st_itm_drugkit": 6,
+        "st_itm_ammokit": 6
+      }
+    },
+    {
+      "id": "pripyat",
+      "name": "pripyat",
+      "rates": {
+        "st_itm_basickit_name": 6,
+        "st_itm_advancedkit_name": 31,
+        "st_itm_expertkit_name": 57,
+        "st_itm_drugkit": 3,
+        "st_itm_ammokit": 3
+      }
+    },
+    {
+      "id": "y04_pole",
+      "name": "y04_pole",
+      "rates": {
+        "st_itm_basickit_name": 25,
+        "st_itm_advancedkit_name": 0,
+        "st_itm_expertkit_name": 0,
+        "st_itm_drugkit": 38,
+        "st_itm_ammokit": 38
+      }
+    },
+    {
+      "id": "zaton",
+      "name": "zaton",
+      "rates": {
+        "st_itm_basickit_name": 9,
+        "st_itm_advancedkit_name": 54,
+        "st_itm_expertkit_name": 30,
+        "st_itm_drugkit": 4,
+        "st_itm_ammokit": 4
+      }
+    }
+  ]
+}

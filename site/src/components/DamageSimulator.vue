@@ -869,7 +869,7 @@ export default defineComponent({
     async loadStartingLoadouts(): Promise<void> {
       if (this.startingLoadoutIds) return;
       try {
-        const packId = new URL(window.location.href).pathname.match(/\/db\/([^/]+)/)?.[1] || 'gamma-0.9.4';
+        const packId = new URL(window.location.href).pathname.match(/\/db\/([^/]+)/)?.[1] || 'gamma-0.9.5';
         const res = await fetch(`/data/${packId}/starting-loadouts.json`);
         if (!res.ok) return;
         const data = await res.json();

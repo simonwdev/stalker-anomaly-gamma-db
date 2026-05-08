@@ -25,8 +25,8 @@ const ScopParser = new Function("LZO1X", scopSrc + "\nreturn ScopParser;")(LZO1X
 const ScocParser = new Function(scocSrc + "\nreturn ScocParser;")();
 
 // Load game data
-const index = JSON.parse(fs.readFileSync(path.join(root, "site/public/data/gamma-0.9.4/index.json"), "utf8"));
-const translations = JSON.parse(fs.readFileSync(path.join(root, "site/public/data/gamma-0.9.4/translations.json"), "utf8"));
+const index = JSON.parse(fs.readFileSync(path.join(root, "site/public/data/gamma-0.9.5/index.json"), "utf8"));
+const translations = JSON.parse(fs.readFileSync(path.join(root, "site/public/data/gamma-0.9.5/translations.json"), "utf8"));
 const catMap = {};
 for (const entry of index) catMap[entry.id] = entry.category;
 const knownIds = new Set(index.map(e => e.id));
@@ -34,7 +34,7 @@ const knownIds = new Set(index.map(e => e.id));
 // Load weapon data for ammo type resolution
 const weaponData = {};
 for (const slug of ["rifles", "shotguns", "smgs", "snipers", "launchers", "pistols", "melee"]) {
-    const d = JSON.parse(fs.readFileSync(path.join(root, `site/public/data/gamma-0.9.4/${slug}.json`), "utf8"));
+    const d = JSON.parse(fs.readFileSync(path.join(root, `site/public/data/gamma-0.9.5/${slug}.json`), "utf8"));
     for (const item of d.items) weaponData[item.id] = item;
 }
 

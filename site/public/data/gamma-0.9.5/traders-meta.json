@@ -1,0 +1,176 @@
+[
+  {
+    "id": "bandit",
+    "labelKey": "app_bandit",
+    "label": "val_smart_terrain_7_4_bandit_trader_stalker_name",
+    "color": ""
+  },
+  {
+    "id": "bandit_basic",
+    "labelKey": "app_bandit_basic",
+    "label": "jup_cont_trader_bandit_name",
+    "color": ""
+  },
+  {
+    "id": "csky_spore",
+    "labelKey": "app_csky_spore",
+    "label": "mar_base_owl_stalker_trader_name",
+    "color": ""
+  },
+  {
+    "id": "duty",
+    "labelKey": "app_duty",
+    "label": "bar_petrenko_name",
+    "color": ""
+  },
+  {
+    "id": "ecolog_hermann",
+    "labelKey": "app_ecolog_hermann",
+    "label": "jup_b6_scientist_nuclear_physicist",
+    "color": ""
+  },
+  {
+    "id": "ecolog_sakharov",
+    "labelKey": "app_ecolog_sakharov",
+    "label": "yan_st_sakharov_name",
+    "color": ""
+  },
+  {
+    "id": "ecolog_spirit",
+    "labelKey": "app_ecolog_spirit",
+    "label": "yan_povar_army_mlr_name",
+    "color": ""
+  },
+  {
+    "id": "freedom",
+    "labelKey": "app_freedom",
+    "label": "mil_Svoboda_trader_name",
+    "color": ""
+  },
+  {
+    "id": "generic_barman",
+    "labelKey": "app_generic_barman",
+    "label": "bar_barmen_name",
+    "color": ""
+  },
+  {
+    "id": "generic_mechanic",
+    "labelKey": "app_generic_mechanic",
+    "label": "st_data_export_trader_mechanic",
+    "color": ""
+  },
+  {
+    "id": "generic_medic",
+    "labelKey": "app_generic_medic",
+    "label": "st_data_export_trader_medic",
+    "color": ""
+  },
+  {
+    "id": "greh",
+    "labelKey": "app_greh",
+    "label": "red_greh_trader_name",
+    "color": ""
+  },
+  {
+    "id": "isg",
+    "labelKey": "app_isg",
+    "label": "ds_domik_isg_leader_name",
+    "color": ""
+  },
+  {
+    "id": "isg_mission",
+    "labelKey": "app_isg_mission",
+    "label": "jup_depo_isg_tech_name",
+    "color": ""
+  },
+  {
+    "id": "mercenary",
+    "labelKey": "app_mercenary",
+    "label": "cit_killers_merc_trader_stalker_name",
+    "color": ""
+  },
+  {
+    "id": "mercenary_basic",
+    "labelKey": "app_mercenary_basic",
+    "label": "zat_stancia_trader_merc_name",
+    "color": ""
+  },
+  {
+    "id": "mercenary_meeker",
+    "labelKey": "app_mercenary_meeker",
+    "label": "pri_special_trader_mlr_name",
+    "color": ""
+  },
+  {
+    "id": "military",
+    "labelKey": "app_military",
+    "label": "agr_smart_terrain_1_6_army_trader_stalker_name",
+    "color": ""
+  },
+  {
+    "id": "military_esc",
+    "labelKey": "app_military_esc",
+    "label": "esc_3_16_military_trader_name",
+    "color": ""
+  },
+  {
+    "id": "monolith",
+    "labelKey": "app_monolith",
+    "label": "pri_monolith_monolith_trader_stalker_name",
+    "color": ""
+  },
+  {
+    "id": "monolith_basic",
+    "labelKey": "app_monolith_basic",
+    "label": "trader_monolith_kbo_name",
+    "color": ""
+  },
+  {
+    "id": "stalker_basic",
+    "labelKey": "app_stalker_basic",
+    "label": "trader_pri_a15_mlr_name",
+    "color": ""
+  },
+  {
+    "id": "stalker_butcher",
+    "labelKey": "app_stalker_butcher",
+    "label": "hunter_gar_trader_name",
+    "color": ""
+  },
+  {
+    "id": "stalker_flea_market",
+    "labelKey": "app_stalker_flea_market",
+    "label": "st_data_export_trader_stalker_flea_market",
+    "color": ""
+  },
+  {
+    "id": "stalker_flea_market_night",
+    "labelKey": "app_stalker_flea_market_night",
+    "label": "st_data_export_trader_stalker_flea_market_night",
+    "color": ""
+  },
+  {
+    "id": "stalker_loris",
+    "labelKey": "app_stalker_loris",
+    "label": "esc_main_base_trader_mlr_name",
+    "color": ""
+  },
+  {
+    "id": "stalker_nimble",
+    "labelKey": "app_stalker_nimble",
+    "label": "st_zat_a2_stalker_nimble_name",
+    "color": ""
+  },
+  {
+    "id": "stalker_owl",
+    "labelKey": "app_stalker_owl",
+    "label": "st_zat_b30_owl_stalker_trader_name",
+    "color": ""
+  },
+  {
+    "id": "stalker_sidorovich",
+    "labelKey": "app_stalker_sidorovich",
+    "label": "escape_trader_name",
+    "color": ""
+  }
+]

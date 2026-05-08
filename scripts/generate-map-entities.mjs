@@ -4,7 +4,7 @@
  * coordinates (1024×2634 image space) using global_rect from game_maps_single.ltx
  * and level_bounds from the dump.
  *
- * Usage: node scripts/generate-map-entities.mjs --pack gamma-0.9.4
+ * Usage: node scripts/generate-map-entities.mjs --pack gamma-0.9.5
  * Output: site/public/data/<pack>/map_entities.json
  */
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'fs';
@@ -16,7 +16,7 @@ const root = resolve(__dirname, '..');
 
 // ── Args ────────────────────────────────────────────────────────────────
 const args = process.argv.slice(2);
-let pack = 'gamma-0.9.4';
+let pack = 'gamma-0.9.5';
 const packIdx = args.indexOf('--pack');
 if (packIdx !== -1 && args[packIdx + 1]) pack = args[packIdx + 1];
 
