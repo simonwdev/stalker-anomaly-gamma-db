@@ -2,10 +2,8 @@
   "hiddenFields": ["st_data_export_zoom_factor"],
   "packs": [
     {
-      "id": "gamma-0.9.4",
-      "name": "GAMMA 0.9.4",
-      "status": "old",
-      "statusColor": "#f87171",
+      "id": "gamma-0.9.5",
+      "name": "GAMMA 0.9.5",
       "baseCarryWeight": 33,
       "links": [
         { "url": "https://discord.gg/stalker-gamma", "icon": "discord", "label": "Discord" },
@@ -14,8 +12,10 @@
       ]
     },
     {
-      "id": "gamma-0.9.5",
-      "name": "GAMMA 0.9.5",
+      "id": "gamma-0.9.4",
+      "name": "GAMMA 0.9.4",
+      "status": "old",
+      "statusColor": "#f87171",
       "baseCarryWeight": 33,
       "links": [
         { "url": "https://discord.gg/stalker-gamma", "icon": "discord", "label": "Discord" },
@@ -35,16 +35,16 @@
       ]
     },
     {
-      "id": "gra-2.4",
-      "name": "Grim Raid 2.4",
+      "id": "gra-2.5",
+      "name": "Grim Raid 2.5",
       "baseCarryWeight": 33,
       "links": [
         { "url": "https://discord.gg/Bgwax9zwJ", "icon": "discord", "label": "Discord" }
       ]
     },
     {
-      "id": "gra-2.5",
-      "name": "Grim Raid 2.5",
+      "id": "gra-2.4",
+      "name": "Grim Raid 2.4",
       "baseCarryWeight": 33,
       "links": [
         { "url": "https://discord.gg/Bgwax9zwJ", "icon": "discord", "label": "Discord" }
