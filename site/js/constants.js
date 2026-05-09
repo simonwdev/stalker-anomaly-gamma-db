@@ -121,6 +121,9 @@ export const WEAPON_STAT_FIELDS = [
     "ui_inv_bspeed", "ui_inv_reli", "ui_inv_recoil",
 ];
 export const AMMO_MULTIPLIER_FIELDS = new Set(["ui_inv_damage", "ui_inv_accuracy", "ui_inv_wrange", "ui_inv_bspeed"]);
+// Packs that mirror GAMMA 0.9.5+ UI removal of gun-level Damage and Max Range stats
+export const PACKS_HIDE_GUN_DAMAGE_RANGE = new Set(["gamma-0.9.5"]);
+export const HIDDEN_GUN_DAMAGE_RANGE_FIELDS = new Set(["ui_inv_damage", "ui_inv_wrange"]);
 export const AMMO_ONLY_FIELDS = ["st_data_export_ap", "st_data_export_projectiles", "st_data_export_falloff", "st_data_export_impulse", "st_data_export_weapon_degradation"];
 export const GRENADE_STAT_FIELDS = ["st_data_export_blast_power", "st_detonation_radius", "st_data_export_fragments", "st_data_fragment_damage", "st_detonation_time"];
 export const PRIMARY_WEAPON_SLUGS = ["rifles", "shotguns", "smgs", "snipers", "launchers"];

@@ -7,6 +7,7 @@ import {
     PROTECTION_FIELDS, RESTORATION_FIELDS, BASE_RESIST_CAP, CAP_FIELD_MAP,
     CAT, BUILD_SLOT_CATEGORIES, isBackpack, MAX_SAVED_BUILDS,
     WEAPON_STAT_FIELDS, AMMO_MULTIPLIER_FIELDS, AMMO_ONLY_FIELDS, GRENADE_STAT_FIELDS,
+    PACKS_HIDE_GUN_DAMAGE_RANGE, HIDDEN_GUN_DAMAGE_RANGE_FIELDS,
     PRIMARY_WEAPON_SLUGS, SIDEARM_SLUGS, GRENADE_SLUG, SLOT_COLORS,
     LOCALES, CHART_COLORS,
     SINGULAR_TYPE, SINGULAR_CATEGORY, CATEGORY_KEYS,
@@ -256,6 +257,13 @@ export const appDefinition = {
         hiddenFields() {
             return new Set([...this.globalHiddenFields, ...(this.activePack?.hiddenFields || [])]);
         },
+        hiddenWeaponStatFields() {
+            return PACKS_HIDE_GUN_DAMAGE_RANGE.has(this.activePack?.id) ? HIDDEN_GUN_DAMAGE_RANGE_FIELDS : new Set();
+        },
+        weaponStatFields() {
+            const hidden = this.hiddenWeaponStatFields;
+            return hidden.size ? WEAPON_STAT_FIELDS.filter(f => !hidden.has(f)) : WEAPON_STAT_FIELDS;
+        },
 
         indexById() {
             const map = {};
@@ -320,7 +328,7 @@ export const appDefinition = {
         compareRadarFields() {
             if (this.compareData.length === 0) return [];
             const categories = this.compareData.map(e => e.category);
-            if (categories.every(c => WEAPON_CATEGORIES.includes(c))) return WEAPON_STAT_FIELDS;
+            if (categories.every(c => WEAPON_CATEGORIES.includes(c))) return this.weaponStatFields;
             if (categories.every(c => c === CAT.OUTFITS || c === CAT.HELMETS)) return PROTECTION_FIELDS;
             if (categories.every(c => c === CAT.AMMO)) return [...AMMO_MULTIPLIER_FIELDS, ...AMMO_ONLY_FIELDS];
             if (categories.every(c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS || c === CAT.TACTICAL_KITS)) {
@@ -418,7 +426,8 @@ export const appDefinition = {
         modalStatRows() {
             const isWeapon = WEAPON_CATEGORIES.includes(this.modalCategory);
             const hidden = this.hiddenFields;
-            const rows = buildStatRows(this.modalItem, this.modalHeaders).filter(r => !HEAL_FIELDS.has(r.key) && !MODAL_BADGE_KEYS.has(r.key) && !hidden.has(r.key) && !(isWeapon && r.key === "st_upgr_cost") && r.value !== null && r.value !== undefined && r.value !== "");
+            const hiddenWeaponStats = isWeapon ? this.hiddenWeaponStatFields : null;
+            const rows = buildStatRows(this.modalItem, this.modalHeaders).filter(r => !HEAL_FIELDS.has(r.key) && !MODAL_BADGE_KEYS.has(r.key) && !hidden.has(r.key) && !(isWeapon && r.key === "st_upgr_cost") && !(hiddenWeaponStats && hiddenWeaponStats.has(r.key)) && r.value !== null && r.value !== undefined && r.value !== "");
             const reliIdx = rows.findIndex(r => r.key === "ui_inv_reli");
             if (reliIdx >= 0) {
                 const reliVal = parseFloat(String(rows[reliIdx].value).replace("%", ""));
@@ -820,10 +829,13 @@ export const appDefinition = {
             const items = this.categoryItems[slug] || [];
 
             const hidden = this.hiddenFields;
+            const isWeaponCategory = WEAPON_CATEGORIES.includes(this.activeCategory) || this.activeCategory === CAT.ALL_WEAPONS;
+            const hiddenWeaponStats = isWeaponCategory ? this.hiddenWeaponStatFields : null;
             const filtered = raw.filter((h) => {
                 if (h === "id" || h === "st_upgr_cost" || h === "displayName") return false;
                 if (h === "st_data_export_description") return false;
                 if (hidden.has(h)) return false;
+                if (hiddenWeaponStats && hiddenWeaponStats.has(h)) return false;
                 if (NAME_TAG_COLS.has(h)) return false;
                 if (HEAL_FIELDS.has(h)) return false;
                 if (items.length > 0) {
@@ -833,8 +845,7 @@ export const appDefinition = {
                 return true;
             });
 
-            const isWeapon = WEAPON_CATEGORIES.includes(this.activeCategory) || this.activeCategory === CAT.ALL_WEAPONS;
-            if (raw.includes("st_upgr_cost") && !isWeapon) {
+            if (raw.includes("st_upgr_cost") && !isWeaponCategory) {
                 filtered.push("st_upgr_cost");
                 if (this.activeCategory === CAT.AMMO) filtered.push("_cost_per_round");
             }
@@ -859,7 +870,7 @@ export const appDefinition = {
             }
 
             // Inject scope count for weapon categories
-            if (isWeapon && this.weaponAddonsCache) {
+            if (isWeaponCategory && this.weaponAddonsCache) {
                 filtered.push("_num_scopes");
             }
 
@@ -1401,7 +1412,7 @@ export const appDefinition = {
             }
 
             const stats = [];
-            for (const field of WEAPON_STAT_FIELDS) {
+            for (const field of this.weaponStatFields) {
                 const base = parseNum(weapon[field]);
                 let modifier = null;
                 let effective = base;
@@ -3021,7 +3032,7 @@ export const appDefinition = {
             if (this._buildWeaponRadarChart) { this._buildWeaponRadarChart.destroy(); this._buildWeaponRadarChart = null; }
 
             const AP_FIELD = "st_data_export_ap";
-            const fields = [...WEAPON_STAT_FIELDS, AP_FIELD];
+            const fields = [...this.weaponStatFields, AP_FIELD];
             const parseNum = (v) => {
                 if (v == null || v === "") return null;
                 return parseFloat(String(v).replace(/%$/, "")) || 0;
