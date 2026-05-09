@@ -3872,9 +3872,11 @@ export const appDefinition = {
                     const eff = Math.round(parseFloat(wpn["ui_inv_damage"]) * mult * 10) / 10;
                     return `${mult.toFixed(dec.raw)} (${eff.toFixed(dec.eff)})`;
                 }
-                if (key === "ui_inv_wrange" && wpn["ui_inv_wrange"] && String(val).includes("%")) {
+                if (key === "ui_inv_wrange" && String(val).includes("%")) {
                     const dec = this.ammoColDecimals("ui_inv_wrange");
-                    const eff = Math.round(parseFloat(wpn["ui_inv_wrange"]) * pct / 100);
+                    const baseRange = parseFloat(wpn["ui_inv_wrange"]);
+                    if (!baseRange) return `${pct.toFixed(dec.raw)}%`;
+                    const eff = Math.round(baseRange * pct / 100);
                     return `${pct.toFixed(dec.raw)}% (${eff} ${this.tUnit("ui_inv_wrange")})`;
                 }
                 if (key === "ui_inv_bspeed" && wpn["ui_inv_bspeed"] && String(val).includes("%")) {
@@ -5980,11 +5982,12 @@ export const appDefinition = {
             const slotType = this.getItemSlotType(item);
             if (slotType === "weapon" || slotType === "sidearm" || slotType === "grenade") {
                 const searchSlugs = slotType === "sidearm" ? SIDEARM_SLUGS : slotType === "grenade" ? [GRENADE_SLUG] : PRIMARY_WEAPON_SLUGS;
+                const hiddenWeaponStats = slotType === "grenade" ? null : this.hiddenWeaponStatFields;
                 for (const slug of searchSlugs) {
                     const items = this.categoryItems[slug] || [];
                     if (items.some(i => i.id === item.id)) {
                         const headers = this.categoryHeaders[slug] || [];
-                        return headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id");
+                        return headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id" && !(hiddenWeaponStats && hiddenWeaponStats.has(h)));
                     }
                 }
                 return [];
