@@ -6,8 +6,8 @@
  * Pass --merge-translations to merge new keys into existing translation files instead.
  *
  * Usage:
- *   node scripts/import-game-exports.mjs --pack gamma-0.9.4 --src "C:\Stalker_GAMMA\overwrite\bin"
- *   node scripts/import-game-exports.mjs --pack gamma-0.9.4 --src "C:\Stalker_GAMMA\overwrite\bin" --merge-translations
+ *   node scripts/import-game-exports.mjs --pack gamma-0.9.5 --src "C:\Stalker_GAMMA\overwrite\bin"
+ *   node scripts/import-game-exports.mjs --pack gamma-0.9.5 --src "C:\Stalker_GAMMA\overwrite\bin" --merge-translations
  */
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, copyFileSync } from "fs";

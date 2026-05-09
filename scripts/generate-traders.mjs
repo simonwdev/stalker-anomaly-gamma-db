@@ -3,7 +3,7 @@
  * Converts trader CSV files from data/<pack>/traders/ into JSON
  * and writes them to site/public/data/<pack>/traders/.
  *
- * Usage: node scripts/generate-traders.mjs [--pack gamma-0.9.4]
+ * Usage: node scripts/generate-traders.mjs [--pack gamma-0.9.5]
  */
 
 import fs from 'node:fs';
@@ -137,7 +137,7 @@ export function generateTraders(pack) {
 // Run as a script when invoked directly: `node scripts/generate-traders.mjs --pack <id>`
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2);
-  let pack = 'gamma-0.9.4';
+  let pack = 'gamma-0.9.5';
   const packIdx = args.indexOf('--pack');
   if (packIdx !== -1 && args[packIdx + 1]) {
     pack = args[packIdx + 1];

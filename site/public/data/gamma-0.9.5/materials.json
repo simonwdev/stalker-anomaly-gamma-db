@@ -6,40 +6,6 @@
   ],
   "items": [
     {
-      "id": "e0t2",
-      "pda_encyclopedia_name": "st_addon_scope_e0t2",
-      "sources": [
-        {
-          "name": "st_addon_scope_e0t2_mag",
-          "amount": "1"
-        }
-      ]
-    },
-    {
-      "id": "magnifier",
-      "pda_encyclopedia_name": "st_addon_scope_mag",
-      "sources": [
-        {
-          "name": "st_addon_scope_e0t2_mag",
-          "amount": "1"
-        },
-        {
-          "name": "st_addon_scope_razor_mag",
-          "amount": "1"
-        }
-      ]
-    },
-    {
-      "id": "uh2",
-      "pda_encyclopedia_name": "st_addon_scope_razor",
-      "sources": [
-        {
-          "name": "st_addon_scope_razor_mag",
-          "amount": "1"
-        }
-      ]
-    },
-    {
       "id": "bandage",
       "pda_encyclopedia_name": "st_bandage",
       "sources": [
@@ -72,9 +38,23 @@
       ]
     },
     {
+      "id": "e0t2",
+      "pda_encyclopedia_name": "st_addon_scope_e0t2",
+      "sources": [
+        {
+          "name": "st_addon_scope_e0t2_mag",
+          "amount": "1"
+        }
+      ]
+    },
+    {
       "id": "e_syringe",
       "pda_encyclopedia_name": "st_e_syringe",
       "sources": [
+        {
+          "name": "st_itm_drugkit",
+          "amount": "3"
+        },
         {
           "name": "st_medkit",
           "amount": "2"
@@ -176,22 +156,36 @@
       ]
     },
     {
+      "id": "magnifier",
+      "pda_encyclopedia_name": "st_addon_scope_mag",
+      "sources": [
+        {
+          "name": "st_addon_scope_e0t2_mag",
+          "amount": "1"
+        },
+        {
+          "name": "st_addon_scope_razor_mag",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "medkit_ai1",
+      "pda_encyclopedia_name": "st_medkit_ai1",
+      "sources": [
+        {
+          "name": "st_itm_drugkit",
+          "amount": "1"
+        }
+      ]
+    },
+    {
       "id": "medkit_army",
       "pda_encyclopedia_name": "st_medkit_army",
       "sources": [
         {
           "name": "st_survival_kit",
           "amount": "1"
-        }
-      ]
-    },
-    {
-      "id": "powder_3",
-      "pda_encyclopedia_name": "st_powder_mag",
-      "sources": [
-        {
-          "name": "st_metalcan_powder",
-          "amount": "2"
         }
       ]
     },
@@ -212,6 +206,16 @@
         {
           "name": "st_metalcan_powder",
           "amount": "3"
+        }
+      ]
+    },
+    {
+      "id": "powder_3",
+      "pda_encyclopedia_name": "st_powder_mag",
+      "sources": [
+        {
+          "name": "st_metalcan_powder",
+          "amount": "2"
         }
       ]
     },
@@ -416,10 +420,6 @@
       "pda_encyclopedia_name": "st_prt_i_fasteners",
       "sources": [
         {
-          "name": "st_fieldcooker",
-          "amount": "3"
-        },
-        {
           "name": "st_af_cooler_up_name",
           "amount": "2"
         },
@@ -437,6 +437,10 @@
         },
         {
           "name": "st_af_surge_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_cooking",
           "amount": "2"
         },
         {
@@ -481,10 +485,6 @@
         },
         {
           "name": "st_broken_detector",
-          "amount": "1"
-        },
-        {
-          "name": "st_cooking",
           "amount": "1"
         },
         {
@@ -582,6 +582,14 @@
       "pda_encyclopedia_name": "st_prt_i_paper",
       "sources": [
         {
+          "name": "st_porn",
+          "amount": "6"
+        },
+        {
+          "name": "st_porn2",
+          "amount": "6"
+        },
+        {
           "name": "st_ecologist_report_1_of_3_name",
           "amount": "3"
         },
@@ -628,6 +636,10 @@
         {
           "name": "st_itm_mapkit_9",
           "amount": "3"
+        },
+        {
+          "name": "st_itm_drugkit",
+          "amount": "2"
         },
         {
           "name": "st_freedom_manual_1_of_2_name",
@@ -738,14 +750,6 @@
           "amount": "1"
         },
         {
-          "name": "st_porn",
-          "amount": "1"
-        },
-        {
-          "name": "st_porn2",
-          "amount": "1"
-        },
-        {
           "name": "st_recipe_drug_1",
           "amount": "1"
         },
@@ -780,7 +784,27 @@
       "pda_encyclopedia_name": "st_prt_i_plastic",
       "sources": [
         {
+          "name": "st_itm_drugkit",
+          "amount": "4"
+        },
+        {
           "name": "st_af_freon_up_name",
+          "amount": "2"
+        },
+        {
+          "name": "st_device_glowstick",
+          "amount": "2"
+        },
+        {
+          "name": "st_device_glowstick_blue",
+          "amount": "2"
+        },
+        {
+          "name": "st_device_glowstick_orange",
+          "amount": "2"
+        },
+        {
+          "name": "st_device_glowstick_red",
           "amount": "2"
         },
         {
@@ -792,11 +816,11 @@
           "amount": "2"
         },
         {
-          "name": "st_af_freon_name",
-          "amount": "1"
+          "name": "st_tarpaulin",
+          "amount": "2"
         },
         {
-          "name": "st_cooking",
+          "name": "st_af_freon_name",
           "amount": "1"
         },
         {
@@ -948,11 +972,23 @@
       "pda_encyclopedia_name": "st_prt_i_scrap",
       "sources": [
         {
+          "name": "st_fieldcooker",
+          "amount": "4"
+        },
+        {
+          "name": "st_cooking",
+          "amount": "3"
+        },
+        {
           "name": "st_exo_repair_kit",
           "amount": "3"
         },
         {
-          "name": "st_fieldcooker",
+          "name": "st_shovel_mili",
+          "amount": "3"
+        },
+        {
+          "name": "st_shovel_old",
           "amount": "3"
         },
         {
@@ -1001,14 +1037,6 @@
         },
         {
           "name": "st_prt_o_support_1",
-          "amount": "2"
-        },
-        {
-          "name": "st_shovel_mili",
-          "amount": "2"
-        },
-        {
-          "name": "st_shovel_old",
           "amount": "2"
         },
         {
@@ -1291,23 +1319,23 @@
       "sources": [
         {
           "name": "st_guitar_name",
-          "amount": "4"
+          "amount": "10"
         },
         {
           "name": "st_itms_campfire_name",
-          "amount": "2"
+          "amount": "4"
         },
         {
           "name": "st_shovel_mili",
-          "amount": "2"
+          "amount": "4"
         },
         {
           "name": "st_shovel_old",
-          "amount": "2"
+          "amount": "4"
         },
         {
           "name": "st_ball_hammer",
-          "amount": "1"
+          "amount": "3"
         }
       ]
     },
@@ -1477,6 +1505,10 @@
         },
         {
           "name": "st_itm_backpack_name",
+          "amount": "1"
+        },
+        {
+          "name": "st_tarpaulin",
           "amount": "1"
         },
         {
@@ -1719,6 +1751,16 @@
       "sources": [
         {
           "name": "st_kit_hunt",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": "uh2",
+      "pda_encyclopedia_name": "st_addon_scope_razor",
+      "sources": [
+        {
+          "name": "st_addon_scope_razor_mag",
           "amount": "1"
         }
       ]

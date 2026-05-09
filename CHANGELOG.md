@@ -81,7 +81,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
-- URLs are now path-based (`/db/gamma-0.9.4/rifles`) instead of query-based for cleaner shareable links and proper Cloudflare analytics tracking
+- URLs are now path-based (`/db/gamma-0.9.5/rifles`) instead of query-based for cleaner shareable links and proper Cloudflare analytics tracking
 - Browser back/forward navigation now works correctly between categories and views
 - Save file import in the build planner — drag and drop .scop/.scoc save files to auto-populate your loadout, inventory, and stash contents with item hover previews
 

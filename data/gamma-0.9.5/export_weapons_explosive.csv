@@ -1,4 +1,4 @@
-~,Pda_encyclopedia_name,St_data_export_description,St_prop_weight,St_upgr_cost,Ui_mm_repair,St_data_export_single_handed,Ui_inv_accuracy,Ui_inv_handling,Ui_inv_damage,Ui_inv_rate_of_fire,Ui_ammo_count,Ui_inv_wrange,Ui_inv_bspeed,Ui_inv_reli,Ui_inv_recoil,Ui_ammo_types,St_data_export_ammo_types_alt,BR1,BR2,BR3,BR4,BR5,BR6,BR7
-wpn_rpg7,st_wpn_rpg7,st_wpn_rpg7_descr,6.30,29800,N/A,N,77%,70%,0,200,1,1000,50,91%,25,ammo-og-7b,,,,,,,,125
-wpn_m79,st_wpn_m79,st_wpn_m79_descr,2.70,26840,N/A,N,49%,77%,0,200,1,500,206,91%,26,ammo-m209,,,,,35,,,
-wpn_rg-6,st_wpn_rg6,st_wpn_rg6_descr,6.20,38850,N/A,N,49%,77%,0,115,6,500,53,91%,32,ammo-vog-25,,,,27,35,,,
+~,pda_encyclopedia_name,st_data_export_description,st_prop_weight,st_upgr_cost,ui_mm_repair,st_data_export_single_handed,ui_inv_accuracy,ui_inv_handling,ui_inv_rate_of_fire,ui_ammo_count,ui_inv_wrange,ui_inv_bspeed,ui_inv_reli,ui_inv_recoil,ui_ammo_types,st_data_export_ammo_types_alt,st_data_export_hit_power,BR1,BR2,BR3,BR4,BR5,BR6,BR7
+wpn_m79,st_wpn_m79,st_wpn_m79_descr,2.70,26840,N/A,N,49%,77%,200,1,0,206,91%,inf,ammo-m209,,0.8,,,,35,,,
+wpn_rg-6,st_wpn_rg6,st_wpn_rg6_descr,6.20,38850,N/A,N,49%,77%,115,6,0,53,91%,inf,ammo-vog-25,,0.75,,,27,35,,,
+wpn_rpg7,st_wpn_rpg7,st_wpn_rpg7_descr,6.30,29800,N/A,N,77%,70%,200,1,0,50,91%,inf,ammo-og-7b,,3,,,,,,,125

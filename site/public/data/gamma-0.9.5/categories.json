@@ -4,10 +4,12 @@
   "Belt Attachments",
   "Food",
   "Explosives",
+  "Grenade Launchers",
   "Medicine",
-  "Mutant Parts",
   "Outfits",
   "Helmets",
+  "Scopes",
+  "Silencers",
   "Launchers",
   "Melee",
   "Pistols",
@@ -15,7 +17,7 @@
   "Shotguns",
   "SMGs",
   "Snipers",
-  "Recipes",
+  "Tactical Kits",
   "Materials",
   "Outfit Exchange"
 ]

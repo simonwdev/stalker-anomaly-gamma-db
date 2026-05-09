@@ -1,0 +1,6 @@
+~,st_data_export_condition
+supplies_5,=actor_goodwill_ge(stalker:2000) OR =heavy_pockets_functor() OR =actor_goodwill_ge(dolg:2000)
+supplies_4,=actor_goodwill_ge(stalker:1500) OR =actor_goodwill_ge(dolg:1500)
+supplies_3,=actor_goodwill_ge(stalker:1000) OR =actor_goodwill_ge(dolg:1000)
+supplies_2,=actor_goodwill_ge(stalker:500) OR =actor_goodwill_ge(dolg:500)
+supplies_1,
