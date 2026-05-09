@@ -16,6 +16,7 @@
       "name": "GAMMA 0.9.4",
       "status": "old",
       "statusColor": "#f87171",
+      "deprecated": true,
       "baseCarryWeight": 33,
       "links": [
         { "url": "https://discord.gg/stalker-gamma", "icon": "discord", "label": "Discord" },
@@ -48,6 +49,7 @@
       "baseCarryWeight": 33,
       "status": "old",
       "statusColor": "#f87171",
+      "deprecated": true,
       "links": [
         { "url": "https://discord.gg/Bgwax9zwJ", "icon": "discord", "label": "Discord" }
       ]

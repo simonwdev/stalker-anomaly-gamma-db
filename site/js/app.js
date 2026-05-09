@@ -6582,7 +6582,16 @@ export const appDefinition = {
             const legacyUrlPack = new URLSearchParams(window.location.search).get("pack");
             const urlPack = parsedPath.pack || legacyUrlPack;
             const savedPack = localStorage.getItem("selectedPack");
-            const targetId = urlPack || savedPack || manifest.default;
+            const savedPackEntry = savedPack ? this.packs.find((p) => p.id === savedPack) : null;
+            let resolvedSavedPack = null;
+            if (savedPackEntry && !savedPackEntry.deprecated) {
+                resolvedSavedPack = savedPack;
+            } else if (savedPackEntry?.deprecated) {
+                const family = savedPack.split("-")[0];
+                const successor = this.packs.find((p) => !p.deprecated && p.id.split("-")[0] === family);
+                resolvedSavedPack = successor?.id || null;
+            }
+            const targetId = urlPack || resolvedSavedPack || manifest.default;
             this.activePack = this.packs.find((p) => p.id === targetId) || this.packs[0];
 
             // URL will be updated after state restoration below

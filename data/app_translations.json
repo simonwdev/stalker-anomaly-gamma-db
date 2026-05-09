@@ -540,6 +540,7 @@
     "app_callout_ballistics_title": "Ballistics Calculator",
     "app_callout_ballistics_desc": "Compare weapons, ammo, and armor penetration with a full damage breakdown. Select up to 5 loadouts and see how they stack up.",
     "app_whats_new_trading": "Browse every trader's stock and prices!",
+    "app_whats_new_gamma_095": "GAMMA 0.9.5 is here!",
     "app_callout_trading_title": "Trading",
     "app_callout_trading_desc": "Browse every trader's stock, prices, supply tiers, and buy/sell conditions across all factions."
   },
@@ -1083,6 +1084,7 @@
     "app_callout_ballistics_title": "Баллистический калькулятор",
     "app_callout_ballistics_desc": "Сравнивайте оружие, патроны и бронебойность с полной разбивкой урона. Выберите до 5 наборов и оцените их.",
     "app_whats_new_trading": "Товары и цены всех торговцев!",
+    "app_whats_new_gamma_095": "GAMMA 0.9.5 уже здесь!",
     "app_callout_trading_title": "Торговля",
     "app_callout_trading_desc": "Просматривайте товары, цены, уровни снабжения и условия покупки/продажи для каждого торговца."
   },
