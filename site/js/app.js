@@ -314,7 +314,13 @@ export const appDefinition = {
 
         compareStatRows() {
             const rows = [];
+            const categories = this.compareData.map(e => e.category);
+            const isAttachment = categories.length > 0 && categories.every(
+                c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS || c === CAT.TACTICAL_KITS
+            );
             for (const h of this.compareHeaders) {
+                // Weight is always identical for attachments — exclude it from the comparison
+                if (isAttachment && h === 'st_prop_weight') continue;
                 const values = this.compareData.map((entry) => {
                     const val = entry.item[h];
                     return val !== undefined && val !== null && val !== "" ? val : "--";
@@ -333,7 +339,8 @@ export const appDefinition = {
             if (categories.every(c => c === CAT.AMMO)) return [...AMMO_MULTIPLIER_FIELDS, ...AMMO_ONLY_FIELDS];
             if (categories.every(c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS || c === CAT.TACTICAL_KITS)) {
                 const hidden = this.hiddenFields;
-                return ["st_prop_weight", "st_upgr_cost", "st_data_export_zoom_factor"].filter(f =>
+                // Weight excluded — it's always the same across attachments
+                return ["st_upgr_cost", "st_data_export_zoom_factor"].filter(f =>
                     !hidden.has(f) && this.compareData.some(e => e.item[f] != null && e.item[f] !== "")
                 );
             }
