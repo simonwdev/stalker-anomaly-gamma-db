@@ -6562,6 +6562,66 @@ export const appDefinition = {
             }
         });
 
+        // Touch swipe gesture: swipe left/right to cycle nav tabs (mobile/tablet)
+        {
+            const NAV_TABS = ['db', 'crafting', 'build-planner', 'ballistics', 'maps', 'trading'];
+            let swipeTouchStartX = 0;
+            let swipeTouchStartY = 0;
+            let swipeTouchStartTarget = null;
+
+            const SWIPE_MIN_X = 70;       // minimum horizontal distance in px
+            const SWIPE_RATIO = 1.5;      // horizontal must be at least 1.5× vertical
+
+            const isModalOpen = () =>
+                this.modalOpen || this.quickNavOpen || this.buildPickerOpen ||
+                this.buildSaveModalOpen || this.buildImportCodeModalOpen ||
+                this.saveImportModalOpen || this.shortcutHelpOpen;
+
+            const onTouchStart = (e) => {
+                swipeTouchStartX = e.touches[0].clientX;
+                swipeTouchStartY = e.touches[0].clientY;
+                swipeTouchStartTarget = e.target;
+            };
+
+            const onTouchEnd = (e) => {
+                if (isModalOpen()) return;
+                // Block if the swipe started inside the sidebar, header, or any overlay
+                if (swipeTouchStartTarget?.closest(
+                    '.sidebar, .site-header, .nav-bar, .modal, .modal-backdrop, ' +
+                    '.header-drawer, .header-drawer-backdrop, .mobile-search-overlay'
+                )) return;
+
+                const dx = e.changedTouches[0].clientX - swipeTouchStartX;
+                const dy = e.changedTouches[0].clientY - swipeTouchStartY;
+
+                if (Math.abs(dx) < SWIPE_MIN_X) return;
+                if (Math.abs(dx) < Math.abs(dy) * SWIPE_RATIO) return;
+
+                let current;
+                if (this.tradingActive)          current = 'trading';
+                else if (this.mapsActive)         current = 'maps';
+                else if (this.damageSimActive)    current = 'ballistics';
+                else if (this.buildPlannerActive) current = 'build-planner';
+                else if (this.isCrafting)         current = 'crafting';
+                else                              current = 'db';
+
+                const idx = NAV_TABS.indexOf(current);
+                // swipe left (dx < 0) → next tab; swipe right (dx > 0) → prev tab
+                const direction = dx < 0 ? 1 : -1;
+                const next = NAV_TABS[(idx + direction + NAV_TABS.length) % NAV_TABS.length];
+
+                if (next === 'db')             this.openItemDb();
+                else if (next === 'crafting')  this.openCrafting();
+                else if (next === 'build-planner') this.openBuildPlanner();
+                else if (next === 'ballistics')    this.openDamageSim();
+                else if (next === 'maps')          this.openMaps();
+                else if (next === 'trading')        this.openTrading();
+            };
+
+            document.addEventListener('touchstart', onTouchStart, { passive: true });
+            document.addEventListener('touchend',   onTouchEnd,   { passive: true });
+        }
+
         // 0. Backward-compat: redirect legacy query-param URLs to path-based URLs
         // Pack-dependent paths (db categories, favorites, recent) are redirected later
         // in mounted() after the pack is known. Only pack-independent paths redirect here.
