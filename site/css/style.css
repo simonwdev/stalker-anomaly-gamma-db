@@ -1484,14 +1484,50 @@ a.tile-card-name:hover {
     position: relative;
     text-decoration: none;
 }
+.release-notes-btn.has-unseen,
+.header-mobile-items.has-unseen {
+    color: var(--accent);
+}
 .release-notes-badge {
     position: absolute;
-    top: 2px;
-    right: 2px;
-    width: 6px;
-    height: 6px;
+    top: 0;
+    right: 0;
+    width: 9px;
+    height: 9px;
     background: var(--accent);
     border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--color-surface-3);
+    animation: release-notes-pulse 2s ease-out infinite;
+    pointer-events: none;
+}
+@keyframes release-notes-pulse {
+    0% {
+        box-shadow:
+            0 0 0 2px var(--color-surface-3),
+            0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent);
+    }
+    70% {
+        box-shadow:
+            0 0 0 2px var(--color-surface-3),
+            0 0 0 7px color-mix(in srgb, var(--accent) 0%, transparent);
+    }
+    100% {
+        box-shadow:
+            0 0 0 2px var(--color-surface-3),
+            0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent);
+    }
+}
+/* Suppress pulse for the inline drawer-list variant — user is already engaged */
+.header-drawer-item .release-notes-badge {
+    animation: none;
+    box-shadow: none;
+    width: 8px;
+    height: 8px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .release-notes-badge {
+        animation: none;
+    }
 }
 .settings-menu {
     position: absolute;

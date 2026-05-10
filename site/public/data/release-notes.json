@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-05-10",
+    "entries": [
+      { "type": "added", "text": "Ballistics calculator now supports mutant shots-to-kill." }
+    ]
+  },
+  {
     "date": "2026-05-09",
     "entries": [
       { "type": "added", "text": "GAMMA 0.9.5 has been released and is now the default mod pack.", "highlight": true, "summaryKey": "app_whats_new_gamma_095" }
