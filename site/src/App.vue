@@ -47,6 +47,7 @@
     :LOCALES="LOCALES"
     :global-query="globalQuery"
     :global-results="globalResults"
+    :global-crafting-results="globalCraftingResults"
     :has-unseen-release-notes="hasUnseenReleaseNotes"
     :sidebar-collapsed="sidebarCollapsed"
     :sidebar-open="sidebarOpen"
@@ -78,6 +79,7 @@
     @search="debouncedGlobalSearch()"
     @escape-search="() => { if (globalQuery.trim()) lastGlobalQuery = globalQuery; globalQuery = '' }"
     @select-search-result="(id) => { lastGlobalQuery = globalQuery; globalQuery = ''; navigateToItem(id) }"
+    @select-crafting-search-result="(result) => selectCraftingSearchResult(result)"
 />
 
 <div class="layout" :class="{ 'sidebar-collapsed': sidebarCollapsed, 'sidebar-hidden': buildPlannerActive || mapsActive || damageSimActive || tradingActive }">

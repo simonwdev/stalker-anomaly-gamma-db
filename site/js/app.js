@@ -47,6 +47,7 @@ export const appDefinition = {
             globalQuery: "",
             lastGlobalQuery: "",
             globalResults: [],
+            globalCraftingResults: [],
             filterQuery: "",
             filterInput: "",
             fuse: null,
@@ -1922,6 +1923,7 @@ export const appDefinition = {
             this.calibers = {};
             this.globalQuery = "";
             this.globalResults = [];
+            this.globalCraftingResults = [];
             this.filterQuery = "";
             this.activeCategory = null;
             this.buildPlannerActive = false;
@@ -1991,21 +1993,73 @@ export const appDefinition = {
         globalSearch() {
             if (!this.globalQuery.trim()) {
                 this.globalResults = [];
+                this.globalCraftingResults = [];
                 return;
             }
             const q = this.globalQuery.trim();
             const pool = this.globalSearchFilter(this.index);
+
+            // 1. ID exact / prefix match
             const idHits = this.idMatchItems(pool, q);
             if (idHits) {
                 this.globalResults = idHits;
+                this.globalCraftingResults = this._searchCraftingTrees(q);
                 return;
             }
+
+            // 2. Normalized name match — strips spaces, hyphens, underscores, dots
+            //    so "ai2" matches "AI-2 Medkit", "allwe" matches "All Weapons", etc.
+            const qNorm = q.toLowerCase().replace(/[\s\-_.]/g, '');
+            const normHits = qNorm.length >= 2
+                ? pool.filter(i => (i.localeName || '').toLowerCase().replace(/[\s\-_.]/g, '').includes(qNorm))
+                : [];
+
+            // 3. Fuse fuzzy match
             const poolSet = new Set(pool);
-            this.globalResults = this.fuse
+            const fuseHits = this.fuse
                 .search(q)
                 .slice(0, 50)
-                .map((r) => r.item)
+                .map(r => r.item)
                 .filter(i => poolSet.has(i));
+
+            // 4. Merge: normalized hits first, then fuse (deduped), max 50
+            const seen = new Set(normHits.map(i => i.id));
+            const merged = [...normHits];
+            for (const item of fuseHits) {
+                if (!seen.has(item.id)) { seen.add(item.id); merged.push(item); }
+            }
+            this.globalResults = merged.slice(0, 50);
+
+            // 5. Crafting results
+            this.globalCraftingResults = this._searchCraftingTrees(q);
+        },
+
+        /** Search crafting trees by normalized name. Returns result objects for the dropdown. */
+        _searchCraftingTrees(q) {
+            if (!this.craftingTrees.length) return [];
+            const qNorm = q.toLowerCase().replace(/[\s\-_.]/g, '');
+            if (qNorm.length < 2) return [];
+            const CRAFT_CHIP_LABELS = {
+                device: 'app_craft_chip_device', equipment: 'app_craft_chip_equipment',
+                repair: 'app_craft_chip_repair', upgrades: 'app_craft_chip_upgrades',
+                medical: 'app_craft_chip_medical', ammo: 'app_craft_chip_ammo',
+                artefact: 'app_craft_chip_artefact', furniture: 'app_craft_chip_furniture',
+                decoration: 'app_craft_chip_decoration',
+            };
+            return this.craftingTrees
+                .filter(tree => {
+                    const name = this.t(tree.name).toLowerCase().replace(/[\s\-_.]/g, '');
+                    return name.includes(qNorm);
+                })
+                .slice(0, 8)
+                .map(tree => ({
+                    _craftingResult: true,
+                    id: tree.id,
+                    treeName: tree.name,
+                    displayName: this.t(tree.name),
+                    craftCategory: tree.craftCategory,
+                    craftCategoryLabel: this.t(CRAFT_CHIP_LABELS[tree.craftCategory] || 'app_craft_chip_all'),
+                }));
         },
 
         async selectCategory(cat) {
@@ -4672,6 +4726,20 @@ export const appDefinition = {
         clearGlobalQuery() {
             if (this.globalQuery.trim()) this.lastGlobalQuery = this.globalQuery;
             this.globalQuery = "";
+            this.globalResults = [];
+            this.globalCraftingResults = [];
+        },
+
+        async selectCraftingSearchResult(result) {
+            const q = this.globalQuery.trim();
+            this.lastGlobalQuery = this.globalQuery;
+            this.globalQuery = "";
+            this.globalResults = [];
+            this.globalCraftingResults = [];
+            await this.selectCategory(CAT.CRAFTING);
+            this.craftingCategory = result.craftCategory || 'all';
+            this.filterInput = q;
+            this.filterQuery = q;
         },
 
         // Build Planner methods

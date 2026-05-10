@@ -835,6 +835,23 @@ button.header-link {
     flex-shrink: 0;
     margin-left: 0.5rem;
 }
+.search-cat-badge--crafting {
+    color: var(--accent);
+    background: var(--color-accent-tint-15);
+}
+.search-dropdown-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0.2rem 0;
+}
+.search-crafting-result {
+    opacity: 0.92;
+}
+.srch-hl {
+    background: transparent;
+    color: var(--accent);
+    font-weight: 600;
+}
 
 /* Layout */
 .layout {

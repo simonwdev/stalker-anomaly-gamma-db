@@ -123,10 +123,17 @@
         >
         <div class="search-dropdown" v-show="globalQuery.trim()">
             <a v-for="item in globalResults" :key="item.id" href="#" @click.prevent="$emit('selectSearchResult', item.id)">
-                <span>{{ tName(item) }}<template v-if="!tName(item).includes('[')"> <small class="search-id-hint">[{{ item.id }}]</small></template></span>
+                <span v-html="highlightMatch(tName(item), globalQuery)"></span><template v-if="!tName(item).includes('[')"> <small class="search-id-hint">[{{ item.id }}]</small></template>
                 <span class="search-cat-badge">{{ tCat(item.category) }}</span>
             </a>
-            <p v-show="globalResults.length === 0 && globalQuery.trim()" class="no-results">{{ t('app_label_no_results') }}</p>
+            <template v-if="globalCraftingResults.length > 0">
+                <div class="search-dropdown-divider" v-if="globalResults.length > 0"></div>
+                <a v-for="cr in globalCraftingResults" :key="'craft-' + cr.id" href="#" class="search-crafting-result" @click.prevent="$emit('selectCraftingSearchResult', cr)">
+                    <span v-html="highlightMatch(cr.displayName, globalQuery)"></span>
+                    <span class="search-cat-badge search-cat-badge--crafting">{{ t('app_cat_crafting') }} › {{ cr.craftCategoryLabel }}</span>
+                </a>
+            </template>
+            <p v-show="globalResults.length === 0 && globalCraftingResults.length === 0 && globalQuery.trim()" class="no-results">{{ t('app_label_no_results') }}</p>
         </div>
     </div>
     <div class="header-utils header-desktop-items">
@@ -169,10 +176,17 @@
             <button class="mobile-search-close" @click="closeMobileSearch()">&times;</button>
             <div class="search-dropdown" v-show="globalQuery.trim()" style="position:absolute;top:100%;left:0;right:0">
                 <a v-for="item in globalResults" :key="item.id" href="#" @click.prevent="$emit('selectSearchResult', item.id); closeMobileSearch()">
-                    <span>{{ tName(item) }}<template v-if="!tName(item).includes('[')"> <small class="search-id-hint">[{{ item.id }}]</small></template></span>
+                    <span v-html="highlightMatch(tName(item), globalQuery)"></span><template v-if="!tName(item).includes('[')"> <small class="search-id-hint">[{{ item.id }}]</small></template>
                     <span class="search-cat-badge">{{ tCat(item.category) }}</span>
                 </a>
-                <p v-show="globalResults.length === 0 && globalQuery.trim()" class="no-results">{{ t('app_label_no_results') }}</p>
+                <template v-if="globalCraftingResults.length > 0">
+                    <div class="search-dropdown-divider" v-if="globalResults.length > 0"></div>
+                    <a v-for="cr in globalCraftingResults" :key="'craft-' + cr.id" href="#" class="search-crafting-result" @click.prevent="$emit('selectCraftingSearchResult', cr); closeMobileSearch()">
+                        <span v-html="highlightMatch(cr.displayName, globalQuery)"></span>
+                        <span class="search-cat-badge search-cat-badge--crafting">{{ t('app_cat_crafting') }} › {{ cr.craftCategoryLabel }}</span>
+                    </a>
+                </template>
+                <p v-show="globalResults.length === 0 && globalCraftingResults.length === 0 && globalQuery.trim()" class="no-results">{{ t('app_label_no_results') }}</p>
             </div>
         </div>
     </div>
@@ -242,6 +256,7 @@ export default {
         LOCALES: { type: Array, default: () => [] },
         globalQuery: { type: String, default: '' },
         globalResults: { type: Array, default: () => [] },
+        globalCraftingResults: { type: Array, default: () => [] },
         hasUnseenReleaseNotes: { type: Boolean, default: false },
         sidebarCollapsed: { type: Boolean, default: false },
         sidebarOpen: { type: Boolean, default: false },
@@ -261,6 +276,7 @@ export default {
         'update:globalQuery', 'search', 'escapeSearch', 'selectSearchResult',
         'openItemDb', 'openMaps', 'openTrading', 'openBuildPlanner', 'openCrafting', 'openDamageSim',
         'toggleHideNoDrop', 'toggleHideUnusedAmmo', 'toggleShowTileIcons',
+        'selectSearchResult', 'selectCraftingSearchResult',
     ],
     inject: ['t', 'tName', 'tCat', 'navHref'],
     computed: {
@@ -301,6 +317,38 @@ export default {
         closeMobileSearch() {
             this.mobileSearchOpen = false;
             this.$emit('clearGlobalQuery');
+        },
+
+        /**
+         * Returns an HTML string with <mark> around matched chars.
+         * Normalises separators (spaces, hyphens, underscores, dots) before matching
+         * so "ai2" highlights the right span in "AI-2 Medkit".
+         */
+        highlightMatch(text, query) {
+            if (!text || !query || !query.trim()) return this._esc(text || '');
+            const q = query.trim();
+            const isSep = (c) => c === ' ' || c === '-' || c === '_' || c === '.';
+            const stripSep = (s) => s.toLowerCase().split('').filter(c => !isSep(c)).join('');
+            const qNorm = stripSep(q);
+            const textNorm = stripSep(text);
+            const pos = qNorm.length >= 1 ? textNorm.indexOf(qNorm) : -1;
+            if (pos === -1) return this._esc(text);
+            // Map normalized start/end back to original string positions
+            let normIdx = 0, firstOrig = -1, lastOrig = -1;
+            for (let i = 0; i < text.length; i++) {
+                if (!isSep(text[i])) {
+                    if (normIdx === pos) firstOrig = i;
+                    if (normIdx === pos + qNorm.length - 1) lastOrig = i;
+                    normIdx++;
+                }
+            }
+            if (firstOrig === -1 || lastOrig === -1) return this._esc(text);
+            return this._esc(text.slice(0, firstOrig)) +
+                   '<mark class="srch-hl">' + this._esc(text.slice(firstOrig, lastOrig + 1)) + '</mark>' +
+                   this._esc(text.slice(lastOrig + 1));
+        },
+        _esc(s) {
+            return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
         },
     },
 };
