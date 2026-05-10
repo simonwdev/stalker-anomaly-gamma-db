@@ -136,9 +136,22 @@ export function stalkerArmorGroup(hitzone) {
 
 /**
  * Calculate damage against a mutant target.
+ *
+ * Order of operations matches what happens in-game:
+ *   1. Raw damage = hit_power * k_hit * pellets
+ *   2. Distance falloff via k_air_resistance
+ *   3. Engine-side mutant armor (xray base_monster.cpp:449-468):
+ *        if ap > skin_armor: damage *= max((ap - skin_armor)/ap, hit_fraction)
+ *        else:               damage *= hit_fraction
+ *      ap is the raw ammo k_ap (NOT the *10 form grok_bo uses for NPC AP).
+ *   4. grok_bo modifiers (mutant_on_before_hit line 495):
+ *        * mutant_mult * ammo_mult * spec_monster_mult * bone_mult * cqc * barrel * difficulty
+ *   5. Final damage subtracted from 1.0 normalised HP (engine clamps all entities to MAX_HEALTH=1.0).
+ *
  * @param {object} params
  * @param {number} params.hitPower - weapon hit_power
  * @param {number} params.kHit - ammo k_hit
+ * @param {number} params.kAp - ammo k_ap (raw, used for engine pen check)
  * @param {number} params.pellets - ammo projectile count
  * @param {number} params.kAirRes - ammo k_air_resistance
  * @param {number} params.distance - metres
@@ -147,13 +160,12 @@ export function stalkerArmorGroup(hitzone) {
  * @param {string} params.ammoId - ammo section ID
  * @param {string} params.mutantId - mutant section ID
  * @param {string} params.hitzone - "head", "torso", "limbs", "rear"
- * @param {object} params.mutantProfile - mutant profile from JSON
+ * @param {object} params.mutantProfile - mutant profile from JSON (skin_armor, hit_fraction, hitzone_*)
  * @param {object} params.gbo - GBO constants
  * @param {boolean} [params.isCqc=false] - melee weapon hit
- * @returns {{ damage: number, boneMult: number, critMult: number, ammoMult: number, specMult: number }}
  */
 export function calcMutantDamage(params) {
-  const { hitPower, kHit, pellets, kAirRes, distance, barrelCond, difficulty,
+  const { hitPower, kHit, kAp = 0, pellets, kAirRes, distance, barrelCond, difficulty,
           ammoId, mutantId, hitzone, mutantProfile, gbo, isCqc = false } = params;
 
   const rawDmg = hitPower * kHit * pellets;
@@ -178,7 +190,21 @@ export function calcMutantDamage(params) {
 
   const finalBoneMult = boneMult * critMult;
 
-  const damage = (rawDmg / airDiv) * mutantMult * ammoMult * specMult * finalBoneMult * cqcMult * barrel * diffMult;
+  // Engine-side pen formula (base_monster.cpp:449-468). Falls back to hit_fraction floor.
+  const skinArmor = mutantProfile.skin_armor || 0;
+  const hitFraction = mutantProfile.hit_fraction || 0;
+  let penMult;
+  let penetrated;
+  if (kAp > skinArmor) {
+    penMult = Math.max((kAp - skinArmor) / kAp, hitFraction);
+    penetrated = true;
+  } else {
+    penMult = hitFraction;
+    penetrated = false;
+  }
+
+  const postEngine = (rawDmg / airDiv) * penMult;
+  const damage = postEngine * mutantMult * ammoMult * specMult * finalBoneMult * cqcMult * barrel * diffMult;
 
   return {
     damage,
@@ -187,11 +213,48 @@ export function calcMutantDamage(params) {
     ammoMult,
     specMult,
     mutantMult,
+    penMult,
+    penetrated,
+    ap: kAp,
+    skinArmor,
+    hitFraction,
     rawDmg,
     airDiv,
     barrel,
     diffMult,
   };
+}
+
+/**
+ * Shots to kill a mutant. HP is universally 1.0 (engine clamps via MAX_HEALTH=1.0f),
+ * mutant damage has no armor degradation between shots, so this is a simple division.
+ */
+export function mutantShotsToKill(damagePerShot) {
+  if (!damagePerShot || damagePerShot <= 0) return Infinity;
+  return Math.ceil(1.0 / damagePerShot);
+}
+
+// Known mutant species keywords. Sorted longest-first so prefix-overlapping
+// species (psysucker vs bloodsucker, pseudodog vs dog, baba_yaga vs yaga)
+// resolve to the more specific match.
+export const MUTANT_SPECIES = [
+  "psycontroller", "bibliotekar", "bloodsucker", "controller",
+  "poltergeist", "tushkanchik", "baba_yaga", "pseudodog",
+  "psysucker", "fracture", "chimera", "tushkano",
+  "lurker", "gigant", "snork", "burer", "flesh",
+  "zombie", "zombi", "karlik", "borya", "boar",
+  "rat", "dog", "cat",
+];
+
+/**
+ * Pick the most specific known species name for a mutant section id.
+ * Returns null when no known species keyword is found.
+ */
+export function extractMutantSpecies(id) {
+  for (const sp of MUTANT_SPECIES) {
+    if (id.includes(sp)) return sp;
+  }
+  return null;
 }
 
 /**

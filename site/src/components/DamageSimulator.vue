@@ -66,6 +66,7 @@
         <div class="damage-sim-slot damage-sim-target-slot" :class="selectedMutant ? 'filled' : 'empty'" @click="mutantPickerOpen = true">
           <template v-if="selectedMutant">
             <span class="damage-sim-slot-name">{{ mutantDisplayName(selectedMutant.id) }}</span>
+            <span class="damage-sim-slot-meta">{{ mutantSubLabel(selectedMutant) }}</span>
             <button class="damage-sim-slot-remove" @click.stop="selectedMutantId = ''">&times;</button>
           </template>
           <template v-else>
@@ -133,7 +134,7 @@
           </thead>
           <tbody v-if="targetType === 'stalker'">
             <tr>
-              <td class="damage-sim-table-label">{{ t('app_sim_result_ap') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_ap') }}</div></td>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_ap') }}<LucideCircleHelp class="damage-sim-info-icon" :size="12" v-tooltip="t('app_sim_help_ap')" /><div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_ap') }}</div></td>
               <td v-for="ar in activeResults" :key="'ap'+ar.idx">
                 <span class="damage-sim-table-val">{{ fmt(ar.result.stalker?.ap) }}</span>
                 <span class="damage-sim-table-vs">vs</span>
@@ -145,7 +146,7 @@
               </td>
             </tr>
             <tr>
-              <td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_damage') }}</div></td>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}<LucideCircleHelp class="damage-sim-info-icon" :size="12" v-tooltip="t('app_sim_help_damage')" /><div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_damage') }}</div></td>
               <td v-for="ar in activeResults" :key="'dmg'+ar.idx">
                 <span class="damage-sim-table-val damage-sim-table-val-primary" :class="compareClass(ar.idx, 'damage')">{{ fmt(ar.result.stalker?.armor?.damage) }}</span>
                 <span v-if="hasComparison && compareDelta(ar.idx, 'damage')" class="damage-sim-compare-tag" :class="compareClass(ar.idx, 'damage')">{{ compareDelta(ar.idx, 'damage') }}</span>
@@ -153,7 +154,7 @@
               </td>
             </tr>
             <tr>
-              <td class="damage-sim-table-label">{{ t('app_sim_result_stk') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_stk') }}</div></td>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_stk') }}<LucideCircleHelp class="damage-sim-info-icon" :size="12" v-tooltip="t('app_sim_help_stk')" /><div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_stk') }}</div></td>
               <td v-for="ar in activeResults" :key="'stk'+ar.idx">
                 <span class="damage-sim-table-val damage-sim-table-val-primary" :class="compareClass(ar.idx, 'stk')">{{ ar.result.stalker?.stk?.stk }}</span>
                 <span v-if="ar.result.stalker?.stk?.minStk !== ar.result.stalker?.stk?.maxStk" class="damage-sim-table-sub">({{ ar.result.stalker?.stk?.minStk }}&ndash;{{ ar.result.stalker?.stk?.maxStk }})</span>
@@ -161,7 +162,7 @@
               </td>
             </tr>
             <tr v-if="activeResults.some(ar => ar.result.stalker?.stp > 1)">
-              <td class="damage-sim-table-label">{{ t('app_sim_result_stp') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_stp') }}</div></td>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_stp') }}<LucideCircleHelp class="damage-sim-info-icon" :size="12" v-tooltip="t('app_sim_help_stp')" /><div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_stp') }}</div></td>
               <td v-for="ar in activeResults" :key="'stp'+ar.idx">
                 <span class="damage-sim-table-val">{{ ar.result.stalker?.stp }}</span>
               </td>
@@ -169,11 +170,36 @@
           </tbody>
           <tbody v-if="targetType === 'mutant'">
             <tr>
-              <td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}<div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_damage_mutant') }}</div></td>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_ap_skin') }}<LucideCircleHelp class="damage-sim-info-icon" :size="12" v-tooltip="t('app_sim_help_ap_skin')" /><div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_ap_skin') }}</div></td>
+              <td v-for="ar in activeResults" :key="'apsk'+ar.idx">
+                <span class="damage-sim-table-val">{{ fmt(ar.result.mutant?.ap) }}</span>
+                <span class="damage-sim-table-vs">vs</span>
+                <span class="damage-sim-table-val">{{ fmt(ar.result.mutant?.skinArmor) }}</span>
+                <span class="damage-sim-pen-icon" :class="ar.result.mutant?.penetrated ? 'pen' : 'nopen'" v-tooltip="ar.result.mutant?.penetrated ? t('app_sim_result_pen') : t('app_sim_result_no_pen_mutant_tip')">
+                  <svg v-if="ar.result.mutant?.penetrated" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg v-else width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="damage-sim-table-label">{{ t('app_sim_ammo_mult') }}<LucideCircleHelp class="damage-sim-info-icon" :size="12" v-tooltip="t('app_sim_help_ammo_mult_mutant')" /><div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_ammo_mult_mutant') }}</div></td>
+              <td v-for="ar in activeResults" :key="'amult'+ar.idx">
+                <span class="damage-sim-table-val" :class="ammoMultClass(ar.result.mutant?.ammoMult)">× {{ ar.result.mutant?.ammoMult }}</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_damage') }}<LucideCircleHelp class="damage-sim-info-icon" :size="12" v-tooltip="t('app_sim_help_damage_mutant')" /><div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_damage_mutant') }}</div></td>
               <td v-for="ar in activeResults" :key="'dmg'+ar.idx">
                 <span class="damage-sim-table-val damage-sim-table-val-primary" :class="compareClass(ar.idx, 'damage')">{{ fmt(ar.result.mutant?.damage) }}</span>
                 <span v-if="hasComparison && compareDelta(ar.idx, 'damage')" class="damage-sim-compare-tag" :class="compareClass(ar.idx, 'damage')">{{ compareDelta(ar.idx, 'damage') }}</span>
                 <div v-if="ar.result.mutant?.critMult > 1" class="damage-sim-crit-badge">{{ t('app_sim_result_crit') }} x{{ ar.result.mutant.critMult }}</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="damage-sim-table-label">{{ t('app_sim_result_stk') }}<LucideCircleHelp class="damage-sim-info-icon" :size="12" v-tooltip="t('app_sim_help_stk_mutant')" /><div v-if="showHelp" class="damage-sim-help-text">{{ t('app_sim_help_stk_mutant') }}</div></td>
+              <td v-for="ar in activeResults" :key="'stk'+ar.idx">
+                <span class="damage-sim-table-val damage-sim-table-val-primary" :class="compareClass(ar.idx, 'stk')">{{ Number.isFinite(ar.result.mutant?.stk) ? ar.result.mutant.stk : '∞' }}</span>
+                <span v-if="hasComparison && compareDelta(ar.idx, 'stk')" class="damage-sim-compare-tag" :class="compareClass(ar.idx, 'stk')">{{ compareDelta(ar.idx, 'stk') }}</span>
               </td>
             </tr>
           </tbody>
@@ -286,7 +312,12 @@
     </template>
   </ItemPickerModal>
 
-  <ItemPickerModal :open="mutantPickerOpen" :title="t('app_sim_target_mutant')" :placeholder="t('app_sim_search_mutant')" :empty-text="t('app_sim_no_results')" :items="uniqueMutants" :label-fn="(m: any) => mutantDisplayName(m.id)" @close="mutantPickerOpen = false" @select="selectMutant" />
+  <ItemPickerModal :open="mutantPickerOpen" :title="t('app_sim_target_mutant')" :placeholder="t('app_sim_search_mutant')" :empty-text="t('app_sim_no_results')" :items="uniqueMutants" :label-fn="(m: any) => mutantDisplayName(m.id)" @close="mutantPickerOpen = false" @select="selectMutant">
+    <template #item="{ item }">
+      <span class="build-picker-item-name">{{ mutantDisplayName(item.id) }}</span>
+      <span class="build-picker-item-type">{{ mutantSubLabel(item) }}</span>
+    </template>
+  </ItemPickerModal>
 
   <ItemPickerModal :open="npcPickerOpen" :title="t('app_sim_armor_profile')" :placeholder="t('app_sim_search_armor')" :empty-text="t('app_sim_no_results')" :items="uniqueNpcProfiles" :label-fn="(p: any) => npcProfileLabel(p)" @close="npcPickerOpen = false" @select="selectNpcProfile">
     <template #item="{ item }">
@@ -300,7 +331,8 @@
 
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue';
-import { calcMutantDamage, calcStalkerDetailed, stalkerArmorCalc,
+import { calcMutantDamage, mutantShotsToKill, extractMutantSpecies,
+         calcStalkerDetailed, stalkerArmorCalc,
          stalkerShotsToKill, stalkerArmorGroup, shotsToPen, resolveHpNoPenPenalty,
          stalkerBoneDamageMult, resolveFactionRes, barrelConditionCorrected } from '../../js/damage-calc.js';
 import ItemPickerModal from './modals/ItemPickerModal.vue';
@@ -434,10 +466,15 @@ export default defineComponent({
     },
 
     uniqueMutants(): MutantProfile[] {
+      // Dedupe by stat signature: two sections with identical
+      // (skin_armor, hit_fraction, hitzone_*) are functionally the same target.
+      // Skip base m_<X>_e sections (they have skin=0 & hit_fraction=0 because they
+      // don't define protections_sect — picking one as a representative gives bogus stats).
       const seen = new Map<string, MutantProfile>();
       for (const m of this.mutantProfiles) {
-        const type = this.extractMutantType(m.id);
-        if (!seen.has(type)) seen.set(type, m);
+        if (m.skin_armor === 0 && m.hit_fraction === 0) continue;
+        const key = `${m.skin_armor}_${m.hit_fraction}_${m.hitzone_head}_${m.hitzone_torso}_${m.hitzone_limbs}_${m.hitzone_rear}`;
+        if (!seen.has(key)) seen.set(key, m);
       }
       return [...seen.values()].sort((a, b) => this.mutantDisplayName(a.id).localeCompare(this.mutantDisplayName(b.id)));
     },
@@ -711,10 +748,12 @@ export default defineComponent({
         if (!this.selectedMutant) return null;
         const hitPower = parseFloat(weapon.st_data_export_hit_power || '');
         const kHit = parseFloat(ammo.st_data_export_k_hit || '');
+        const kAp = parseFloat(ammo.st_data_export_k_ap || '');
         const kAirRes = parseFloat(ammo.st_data_export_k_air_resistance || '');
         const pellets = parseInt(ammo.st_data_export_projectiles || '1') || 1;
         if (isNaN(hitPower) || isNaN(kHit)) return null;
-        return { mutant: calcMutantDamage({ hitPower, kHit, pellets, kAirRes, distance: this.distance, barrelCond: this.barrelCondition, difficulty: this.difficulty, ammoId: ammo.id, mutantId: this.selectedMutant.id, hitzone: this.hitzone, mutantProfile: this.selectedMutant, gbo }) };
+        const mutantResult = calcMutantDamage({ hitPower, kHit, kAp: isNaN(kAp) ? 0 : kAp, pellets, kAirRes, distance: this.distance, barrelCond: this.barrelCondition, difficulty: this.difficulty, ammoId: ammo.id, mutantId: this.selectedMutant.id, hitzone: this.hitzone, mutantProfile: this.selectedMutant, gbo });
+        return { mutant: { ...mutantResult, stk: mutantShotsToKill(mutantResult.damage) } };
       }
 
       if (this.targetType === 'stalker') {
@@ -743,6 +782,7 @@ export default defineComponent({
       if (!res) return undefined;
       if (this.targetType === 'mutant') {
         if (stat === 'damage') return res.mutant?.damage;
+        if (stat === 'stk') return res.mutant?.stk;
       } else {
         if (stat === 'damage') return res.stalker?.armor?.damage;
         if (stat === 'stk') return res.stalker?.stk?.stk;
@@ -1168,13 +1208,25 @@ export default defineComponent({
       if (Math.abs(n) < 0.0001) return '0';
       return n < 1 ? n.toFixed(4) : n.toFixed(2);
     },
-    extractMutantType(id: string): string {
-      const match = id.match(/(?:m_|agru_|arena_)?([\w]+?)(?:_\d+|_normal|_strong|_weak|_e)?$/);
-      return match ? match[1] : id;
-    },
     mutantDisplayName(id: string): string {
-      const type = this.extractMutantType(id);
-      return type.charAt(0).toUpperCase() + type.slice(1).replace(/_/g, ' ');
+      const species = extractMutantSpecies(id);
+      const base = species || id.replace(/_/g, ' ');
+      return base.charAt(0).toUpperCase() + base.slice(1).replace(/_/g, ' ');
+    },
+    ammoMultClass(mult: number | undefined): string {
+      // Highlight ammo multipliers that meaningfully shift the calc.
+      // Default mutant_ammo_mult is 0.85; overrides above 1.0 are damage bonuses
+      // (HP-style rounds), below 0.85 are penalties (rare). 1.5× and up is huge.
+      if (mult == null) return '';
+      if (mult >= 1.5) return 'damage-sim-better';
+      if (mult < 0.85) return 'damage-sim-worse';
+      return '';
+    },
+    mutantSubLabel(m: MutantProfile): string {
+      // Used for disambiguation when stat-signature dedup keeps multiple
+      // entries with the same display name (e.g., 3 poltergeist sub-types).
+      // Surface the most useful stats for STK comparison.
+      return `Skin ${m.skin_armor} · Hit Frac ${m.hit_fraction} · Head ×${m.hitzone_head}`;
     },
     npcProfileLabel(p: NpcArmorProfile): string {
       const items = p.visual_item_id || '';
@@ -1821,6 +1873,19 @@ export default defineComponent({
 }
 .damage-sim-table-label .damage-sim-help-text::before {
   display: none;
+}
+
+/* Per-row info icon — hover for tooltip with help text */
+.damage-sim-info-icon {
+  display: inline-block;
+  margin-left: 0.35rem;
+  vertical-align: -2px;
+  color: rgba(160, 184, 208, 0.55);
+  cursor: help;
+  transition: color 0.15s;
+}
+.damage-sim-info-icon:hover {
+  color: #8db8d8;
 }
 
 /* Detail toggle */
