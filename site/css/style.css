@@ -812,7 +812,8 @@ button.header-link {
     text-decoration: none;
     transition: background 0.15s;
 }
-.search-dropdown a:hover {
+.search-dropdown a:hover,
+.search-dropdown a.search-active {
     background: var(--color-overlay-border-50);
     text-decoration: none;
 }
