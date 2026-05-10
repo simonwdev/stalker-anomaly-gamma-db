@@ -2030,13 +2030,28 @@ export const appDefinition = {
             }
             this.globalResults = merged.slice(0, 50);
 
-            // 5. Crafting results
+            // 5. Crafting results (from already-loaded trees or raw recipe data)
             this.globalCraftingResults = this._searchCraftingTrees(q);
+
+            // Lazy-load craft recipes the first time user searches (before visiting Crafting tab)
+            if (!this.craftRecipes && this.fileManifest && this.fileManifest['craft-recipes.json']) {
+                const capturedQ = q;
+                this.fetchCraftRecipes().then(craftData => {
+                    if (!craftData) return;
+                    this.craftRecipes = craftData;
+                    if (this.craftingTrees.length === 0) {
+                        this.buildCraftingTreeData(craftData);
+                    }
+                    // Only update if the search query hasn't changed
+                    if (this.globalQuery.trim() === capturedQ) {
+                        this.globalCraftingResults = this._searchCraftingTrees(capturedQ);
+                    }
+                }).catch(() => {});
+            }
         },
 
         /** Search crafting trees by normalized name. Returns result objects for the dropdown. */
         _searchCraftingTrees(q) {
-            if (!this.craftingTrees.length) return [];
             const qNorm = q.toLowerCase().replace(/[\s\-_.]/g, '');
             if (qNorm.length < 2) return [];
             const CRAFT_CHIP_LABELS = {
@@ -2046,19 +2061,41 @@ export const appDefinition = {
                 artefact: 'app_craft_chip_artefact', furniture: 'app_craft_chip_furniture',
                 decoration: 'app_craft_chip_decoration',
             };
-            return this.craftingTrees
-                .filter(tree => {
-                    const name = this.t(tree.name).toLowerCase().replace(/[\s\-_.]/g, '');
-                    return name.includes(qNorm);
-                })
-                .slice(0, 8)
-                .map(tree => ({
-                    _craftingResult: true,
+
+            let candidates = [];
+
+            if (this.craftingTrees.length) {
+                // Trees already built — preferred, has full resolved data
+                candidates = this.craftingTrees.map(tree => ({
                     id: tree.id,
-                    treeName: tree.name,
+                    name: tree.name,
                     displayName: this.t(tree.name),
                     craftCategory: tree.craftCategory,
-                    craftCategoryLabel: this.t(CRAFT_CHIP_LABELS[tree.craftCategory] || 'app_craft_chip_all'),
+                }));
+            } else if (this.craftRecipes) {
+                // craftRecipes loaded but trees not yet built — search raw recipe data
+                for (const [cat, catData] of Object.entries(this.craftRecipes)) {
+                    for (const r of catData.items || []) {
+                        candidates.push({
+                            id: r.id,
+                            name: r.pda_encyclopedia_name,
+                            displayName: this.t(r.pda_encyclopedia_name),
+                            craftCategory: cat,
+                        });
+                    }
+                }
+            }
+
+            return candidates
+                .filter(c => c.displayName.toLowerCase().replace(/[\s\-_.]/g, '').includes(qNorm))
+                .slice(0, 8)
+                .map(c => ({
+                    _craftingResult: true,
+                    id: c.id,
+                    treeName: c.name,
+                    displayName: c.displayName,
+                    craftCategory: c.craftCategory,
+                    craftCategoryLabel: this.t(CRAFT_CHIP_LABELS[c.craftCategory] || 'app_craft_chip_all'),
                 }));
         },
 

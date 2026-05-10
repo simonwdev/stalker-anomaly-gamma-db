@@ -849,7 +849,7 @@ button.header-link {
 }
 .srch-hl {
     background: transparent;
-    color: var(--accent);
+    color: var(--color-red-bright);
     font-weight: 600;
 }
 

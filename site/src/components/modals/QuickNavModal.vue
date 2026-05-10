@@ -237,7 +237,7 @@ export default {
 <style scoped>
 .quick-nav-highlight {
     background: transparent;
-    color: var(--accent);
+    color: var(--color-red-bright);
     font-weight: 600;
 }
 </style>
