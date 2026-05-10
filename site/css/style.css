@@ -4049,6 +4049,9 @@ input.range-input {
     flex-shrink: 0;
     font-size: 0.8rem;
     color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 .shortcut-row dd {
     margin: 0;
@@ -4071,6 +4074,24 @@ input.range-input {
     color: var(--accent);
     background: var(--color-accent-tint-15);
     border-color: var(--color-accent-tint-35);
+}
+.shortcut-row--touch {
+    opacity: 0.7;
+}
+.shortcut-row--touch dt {
+    font-size: 0.75rem;
+    letter-spacing: 0.01em;
+}
+/* On non-touch devices: dim the swipe row since it doesn't apply */
+@media (hover: hover) and (pointer: fine) {
+    .shortcut-row--touch-highlight {
+        opacity: 0.45;
+        background: transparent;
+    }
+    .shortcut-row--touch-highlight dt,
+    .shortcut-row--touch-highlight dd {
+        color: var(--text-secondary);
+    }
 }
 kbd {
     display: inline-block;
