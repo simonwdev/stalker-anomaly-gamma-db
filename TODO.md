@@ -23,4 +23,3 @@
 ## Interactive Maps
 - [x] Interactive maps using Leaflet.js or similar
 - [x] Map overlays for stashes, NPCs, etc.
-test
