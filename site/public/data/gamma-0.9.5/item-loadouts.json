@@ -1,0 +1,1940 @@
+{
+  "cash": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "device_pda_1": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "bandage": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "jgut": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "batteries_dead": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "flask": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "vodka": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "tushonka": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "box_matches": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "swiss_knife": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "grooming": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "itm_actor_backpack": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "itm_backpack": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "detector_simple": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "detector_radio": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "wpn_knife": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "bolts_pack": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "picture_woman": [
+    {
+      "faction": "shared",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "itm_sleepbag": [
+    {
+      "faction": "shared",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "beer": [
+    {
+      "faction": "shared",
+      "cost": 35,
+      "selectable": true
+    }
+  ],
+  "bread": [
+    {
+      "faction": "shared",
+      "cost": 5,
+      "selectable": true
+    }
+  ],
+  "energy_drink": [
+    {
+      "faction": "shared",
+      "cost": 20,
+      "selectable": true
+    }
+  ],
+  "kolbasa": [
+    {
+      "faction": "shared",
+      "cost": 15,
+      "selectable": true
+    }
+  ],
+  "mineral_water": [
+    {
+      "faction": "shared",
+      "cost": 35,
+      "selectable": true
+    }
+  ],
+  "device_flashlight": [
+    {
+      "faction": "shared",
+      "cost": 150,
+      "selectable": true
+    }
+  ],
+  "device_torch_dummy": [
+    {
+      "faction": "shared",
+      "cost": 300,
+      "selectable": true
+    }
+  ],
+  "device_glowstick": [
+    {
+      "faction": "shared",
+      "cost": 20,
+      "selectable": true
+    }
+  ],
+  "armor_repair_fa": [
+    {
+      "faction": "shared",
+      "cost": 35,
+      "selectable": true
+    }
+  ],
+  "cooking": [
+    {
+      "faction": "shared",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "yadylin": [
+    {
+      "faction": "shared",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "drug_sleepingpills": [
+    {
+      "faction": "shared",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "drug_radioprotector": [
+    {
+      "faction": "shared",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "antirad_cystamine": [
+    {
+      "faction": "shared",
+      "cost": 20,
+      "selectable": true
+    }
+  ],
+  "caffeine": [
+    {
+      "faction": "shared",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "antirad": [
+    {
+      "faction": "shared",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "antirad_kalium": [
+    {
+      "faction": "shared",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "drug_psy_blockade": [
+    {
+      "faction": "shared",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "glucose_s": [
+    {
+      "faction": "shared",
+      "cost": 15,
+      "selectable": true
+    }
+  ],
+  "medkit": [
+    {
+      "faction": "shared",
+      "cost": 75,
+      "selectable": true
+    }
+  ],
+  "drug_anabiotic": [
+    {
+      "faction": "shared",
+      "cost": 100,
+      "selectable": true
+    }
+  ],
+  "akvatab": [
+    {
+      "faction": "shared",
+      "cost": 100,
+      "selectable": true
+    }
+  ],
+  "drug_antidot": [
+    {
+      "faction": "shared",
+      "cost": 100,
+      "selectable": true
+    }
+  ],
+  "tetanus": [
+    {
+      "faction": "shared",
+      "cost": 60,
+      "selectable": true
+    }
+  ],
+  "salicidic_acid": [
+    {
+      "faction": "shared",
+      "cost": 10,
+      "selectable": true
+    }
+  ],
+  "helm_hardhat": [
+    {
+      "faction": "shared",
+      "cost": 175,
+      "selectable": true
+    }
+  ],
+  "wpn_binoc_inv": [
+    {
+      "faction": "shared",
+      "cost": 100,
+      "selectable": true
+    }
+  ],
+  "wpn_toz34": [
+    {
+      "faction": "shared",
+      "cost": 650,
+      "selectable": true
+    }
+  ],
+  "stalker_patch": [
+    {
+      "faction": "stalker",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "zombied",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "bolt": [
+    {
+      "faction": "stalker",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "bandit",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "ecolog",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "dolg",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "freedom",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "killer",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "army",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "monolith",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "csky",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "renegade",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "greh",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "isg",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "zombied",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "cigarettes_russian": [
+    {
+      "faction": "stalker",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "bandit",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "ecolog",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "dolg",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "army",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "renegade",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "zombied",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "helm_resp": [
+    {
+      "faction": "stalker",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "ecolog",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "wpn_ithacam37_stakeout_20x70": [
+    {
+      "faction": "stalker",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 550,
+      "selectable": true
+    }
+  ],
+  "wpn_sks_b": [
+    {
+      "faction": "stalker",
+      "cost": 1000,
+      "selectable": true
+    },
+    {
+      "faction": "bandit",
+      "cost": 1000,
+      "selectable": true
+    },
+    {
+      "faction": "dolg",
+      "cost": 1000,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 1000,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 1000,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 1000,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 1000,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 1000,
+      "selectable": true
+    }
+  ],
+  "wpn_mosin": [
+    {
+      "faction": "stalker",
+      "cost": 800,
+      "selectable": true
+    },
+    {
+      "faction": "bandit",
+      "cost": 800,
+      "selectable": true
+    },
+    {
+      "faction": "dolg",
+      "cost": 800,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 800,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 800,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 800,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 800,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 800,
+      "selectable": true
+    }
+  ],
+  "wpn_ppsh41": [
+    {
+      "faction": "stalker",
+      "cost": 650,
+      "selectable": true
+    },
+    {
+      "faction": "bandit",
+      "cost": 650,
+      "selectable": true
+    },
+    {
+      "faction": "dolg",
+      "cost": 650,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 650,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 650,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 650,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 650,
+      "selectable": true
+    }
+  ],
+  "wpn_vityaz": [
+    {
+      "faction": "stalker",
+      "cost": 500,
+      "selectable": true
+    },
+    {
+      "faction": "bandit",
+      "cost": 500,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 500,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 500,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 500,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 500,
+      "selectable": true
+    }
+  ],
+  "wpn_kiparis": [
+    {
+      "faction": "stalker",
+      "cost": 300,
+      "selectable": true
+    },
+    {
+      "faction": "bandit",
+      "cost": 300,
+      "selectable": true
+    },
+    {
+      "faction": "dolg",
+      "cost": 300,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 300,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 300,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 300,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 300,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 300,
+      "selectable": true
+    }
+  ],
+  "wpn_toz34_obrez": [
+    {
+      "faction": "stalker",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "bandit",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "dolg",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 550,
+      "selectable": true
+    }
+  ],
+  "wpn_toz106_m1": [
+    {
+      "faction": "stalker",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "bandit",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "ecolog",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "dolg",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "freedom",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "killer",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 375,
+      "selectable": true
+    }
+  ],
+  "wpn_m45a1": [
+    {
+      "faction": "stalker",
+      "cost": 150,
+      "selectable": true
+    },
+    {
+      "faction": "ecolog",
+      "cost": 150,
+      "selectable": true
+    },
+    {
+      "faction": "killer",
+      "cost": 150,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 150,
+      "selectable": true
+    }
+  ],
+  "wpn_tt33": [
+    {
+      "faction": "stalker",
+      "cost": 120,
+      "selectable": true
+    },
+    {
+      "faction": "bandit",
+      "cost": 120,
+      "selectable": true
+    },
+    {
+      "faction": "dolg",
+      "cost": 120,
+      "selectable": true
+    },
+    {
+      "faction": "freedom",
+      "cost": 120,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 120,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 120,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 120,
+      "selectable": true
+    }
+  ],
+  "wpn_pb": [
+    {
+      "faction": "stalker",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "dolg",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 90,
+      "selectable": true
+    }
+  ],
+  "wpn_aps": [
+    {
+      "faction": "stalker",
+      "cost": 220,
+      "selectable": true
+    },
+    {
+      "faction": "bandit",
+      "cost": 220,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 220,
+      "selectable": true
+    }
+  ],
+  "wpn_mp443": [
+    {
+      "faction": "stalker",
+      "cost": 150,
+      "selectable": true
+    },
+    {
+      "faction": "bandit",
+      "cost": 150,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 150,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 150,
+      "selectable": true
+    }
+  ],
+  "novice_outfit": [
+    {
+      "faction": "stalker",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "stalker_salamander_outfit": [
+    {
+      "faction": "stalker",
+      "cost": 500,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 500,
+      "selectable": true
+    }
+  ],
+  "joint": [
+    {
+      "faction": "stalker",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 90,
+      "selectable": true
+    }
+  ],
+  "ammo_9x18_ap": [
+    {
+      "faction": "stalker",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "zombied",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "bandit_patch": [
+    {
+      "faction": "bandit",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "helm_cloth_mask": [
+    {
+      "faction": "bandit",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "wpn_eft_mts_255": [
+    {
+      "faction": "bandit",
+      "cost": 600,
+      "selectable": true
+    },
+    {
+      "faction": "dolg",
+      "cost": 600,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 600,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 600,
+      "selectable": true
+    }
+  ],
+  "wpn_colt1911": [
+    {
+      "faction": "bandit",
+      "cost": 125,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 125,
+      "selectable": true
+    }
+  ],
+  "wpn_pm": [
+    {
+      "faction": "bandit",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "ecolog",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "freedom",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "killer",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 90,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 90,
+      "selectable": true
+    }
+  ],
+  "bandit_novice_outfit": [
+    {
+      "faction": "bandit",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "banditmerc_outfit": [
+    {
+      "faction": "bandit",
+      "cost": 500,
+      "selectable": true
+    }
+  ],
+  "ammo_9x18_pmm": [
+    {
+      "faction": "bandit",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "ecolog_patch": [
+    {
+      "faction": "ecolog",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "wpn_k98": [
+    {
+      "faction": "ecolog",
+      "cost": 750,
+      "selectable": true
+    },
+    {
+      "faction": "freedom",
+      "cost": 750,
+      "selectable": true
+    },
+    {
+      "faction": "killer",
+      "cost": 750,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 750,
+      "selectable": true
+    }
+  ],
+  "wpn_mp5": [
+    {
+      "faction": "ecolog",
+      "cost": 500,
+      "selectable": true
+    },
+    {
+      "faction": "freedom",
+      "cost": 500,
+      "selectable": true
+    },
+    {
+      "faction": "killer",
+      "cost": 500,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 500,
+      "selectable": true
+    }
+  ],
+  "wpn_vz61": [
+    {
+      "faction": "ecolog",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "freedom",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "killer",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 375,
+      "selectable": true
+    },
+    {
+      "faction": "isg",
+      "cost": 325,
+      "selectable": true
+    }
+  ],
+  "wpn_bm16": [
+    {
+      "faction": "ecolog",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "freedom",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "killer",
+      "cost": 550,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 550,
+      "selectable": true
+    }
+  ],
+  "wpn_usp": [
+    {
+      "faction": "ecolog",
+      "cost": 250,
+      "selectable": true
+    },
+    {
+      "faction": "killer",
+      "cost": 250,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 250,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 250,
+      "selectable": true
+    }
+  ],
+  "wpn_beretta_camo": [
+    {
+      "faction": "ecolog",
+      "cost": 250,
+      "selectable": true
+    },
+    {
+      "faction": "freedom",
+      "cost": 250,
+      "selectable": true
+    }
+  ],
+  "wpn_walther": [
+    {
+      "faction": "ecolog",
+      "cost": 200,
+      "selectable": true
+    },
+    {
+      "faction": "freedom",
+      "cost": 200,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 200,
+      "selectable": true
+    }
+  ],
+  "ammo_11.43x23_hydro": [
+    {
+      "faction": "ecolog",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "novice_outfit_camo": [
+    {
+      "faction": "ecolog",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "isg",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "ghillie_outfit": [
+    {
+      "faction": "ecolog",
+      "cost": 650,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 500,
+      "selectable": true
+    }
+  ],
+  "stimpack_scientic": [
+    {
+      "faction": "ecolog",
+      "cost": 100,
+      "selectable": true
+    }
+  ],
+  "dolg_patch": [
+    {
+      "faction": "dolg",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "helm_respirator_old": [
+    {
+      "faction": "dolg",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "freedom",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "killer",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "wpn_pp2000": [
+    {
+      "faction": "dolg",
+      "cost": 500,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 500,
+      "selectable": true
+    }
+  ],
+  "wpn_sig220": [
+    {
+      "faction": "dolg",
+      "cost": 225,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 225,
+      "selectable": true
+    }
+  ],
+  "wpn_fort17": [
+    {
+      "faction": "dolg",
+      "cost": 150,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 150,
+      "selectable": true
+    }
+  ],
+  "wpn_pl15": [
+    {
+      "faction": "dolg",
+      "cost": 225,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 225,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 225,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 225,
+      "selectable": true
+    },
+    {
+      "faction": "isg",
+      "cost": 225,
+      "selectable": true
+    }
+  ],
+  "wpn_sr1m": [
+    {
+      "faction": "dolg",
+      "cost": 200,
+      "selectable": true
+    },
+    {
+      "faction": "army",
+      "cost": 200,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 200,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 200,
+      "selectable": true
+    },
+    {
+      "faction": "isg",
+      "cost": 200,
+      "selectable": true
+    }
+  ],
+  "ammo_9x21": [
+    {
+      "faction": "dolg",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "dolg_novice_outfit": [
+    {
+      "faction": "dolg",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "nbc_dolg_outfit": [
+    {
+      "faction": "dolg",
+      "cost": 650,
+      "selectable": true
+    }
+  ],
+  "freedom_patch": [
+    {
+      "faction": "freedom",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "cigarettes": [
+    {
+      "faction": "freedom",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "killer",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "csky",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "isg",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "wpn_fnp45": [
+    {
+      "faction": "freedom",
+      "cost": 175,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 175,
+      "selectable": true
+    }
+  ],
+  "wpn_sig226": [
+    {
+      "faction": "freedom",
+      "cost": 250,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 250,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 250,
+      "selectable": true
+    },
+    {
+      "faction": "isg",
+      "cost": 250,
+      "selectable": true
+    }
+  ],
+  "ammo_9x19_ap": [
+    {
+      "faction": "freedom",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "svoboda_novice_outfit": [
+    {
+      "faction": "freedom",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "nbc_freedom_outfit": [
+    {
+      "faction": "freedom",
+      "cost": 650,
+      "selectable": true
+    }
+  ],
+  "marijuana": [
+    {
+      "faction": "freedom",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "cocaine": [
+    {
+      "faction": "freedom",
+      "cost": 75,
+      "selectable": true
+    }
+  ],
+  "stimpack_army": [
+    {
+      "faction": "freedom",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "killer_patch": [
+    {
+      "faction": "killer",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "wpn_fn57": [
+    {
+      "faction": "killer",
+      "cost": 200,
+      "selectable": true
+    },
+    {
+      "faction": "isg",
+      "cost": 200,
+      "selectable": true
+    }
+  ],
+  "wpn_beretta": [
+    {
+      "faction": "killer",
+      "cost": 150,
+      "selectable": true
+    },
+    {
+      "faction": "isg",
+      "cost": 150,
+      "selectable": true
+    }
+  ],
+  "wpn_glock": [
+    {
+      "faction": "killer",
+      "cost": 175,
+      "selectable": true
+    },
+    {
+      "faction": "monolith",
+      "cost": 175,
+      "selectable": true
+    },
+    {
+      "faction": "csky",
+      "cost": 175,
+      "selectable": true
+    }
+  ],
+  "ammo_5.7x28_ss190": [
+    {
+      "faction": "killer",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "merc_fighter_outfit": [
+    {
+      "faction": "killer",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "merc_scout_outfit": [
+    {
+      "faction": "killer",
+      "cost": 600,
+      "selectable": true
+    }
+  ],
+  "army_patch": [
+    {
+      "faction": "army",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "wpn_bizon": [
+    {
+      "faction": "army",
+      "cost": 400,
+      "selectable": true
+    }
+  ],
+  "wpn_oc33": [
+    {
+      "faction": "army",
+      "cost": 250,
+      "selectable": true
+    },
+    {
+      "faction": "renegade",
+      "cost": 250,
+      "selectable": true
+    },
+    {
+      "faction": "isg",
+      "cost": 250,
+      "selectable": true
+    }
+  ],
+  "army_outfit": [
+    {
+      "faction": "army",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "ration_ukr": [
+    {
+      "faction": "army",
+      "cost": 100,
+      "selectable": true
+    }
+  ],
+  "monolith_patch": [
+    {
+      "faction": "monolith",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "cigar3": [
+    {
+      "faction": "monolith",
+      "cost": 0,
+      "selectable": false
+    },
+    {
+      "faction": "greh",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "helm_ranger": [
+    {
+      "faction": "monolith",
+      "cost": 50,
+      "selectable": true
+    },
+    {
+      "faction": "greh",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "wpn_vintorez_n1": [
+    {
+      "faction": "monolith",
+      "cost": 1000,
+      "selectable": true
+    }
+  ],
+  "ammo_9x39_pab9": [
+    {
+      "faction": "monolith",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "monolith_nbc_outfit": [
+    {
+      "faction": "monolith",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "monolith_outfit": [
+    {
+      "faction": "monolith",
+      "cost": 650,
+      "selectable": true
+    }
+  ],
+  "wpn_ak12_m1": [
+    {
+      "faction": "monolith",
+      "cost": 700,
+      "selectable": true
+    }
+  ],
+  "csky_patch": [
+    {
+      "faction": "csky",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "wpn_winchester1873": [
+    {
+      "faction": "csky",
+      "cost": 600,
+      "selectable": true
+    }
+  ],
+  "ammo_9x19_pbp": [
+    {
+      "faction": "csky",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "ammo_357_hp_mag": [
+    {
+      "faction": "csky",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "cs_novice_outfit": [
+    {
+      "faction": "csky",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "cs_light_outfit": [
+    {
+      "faction": "csky",
+      "cost": 400,
+      "selectable": true
+    }
+  ],
+  "tea": [
+    {
+      "faction": "csky",
+      "cost": 40,
+      "selectable": true
+    }
+  ],
+  "drink_crow": [
+    {
+      "faction": "csky",
+      "cost": 60,
+      "selectable": true
+    }
+  ],
+  "renegade_patch": [
+    {
+      "faction": "renegade",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "redline_novice_outfit": [
+    {
+      "faction": "renegade",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "af_fire_loop": [
+    {
+      "faction": "greh",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "greh_patch": [
+    {
+      "faction": "greh",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "wpn_toz34_mark4_23": [
+    {
+      "faction": "greh",
+      "cost": 900,
+      "selectable": true
+    }
+  ],
+  "ammo_23x75_barrikada": [
+    {
+      "faction": "greh",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "greh_armored_outfit": [
+    {
+      "faction": "greh",
+      "cost": 150,
+      "selectable": true
+    }
+  ],
+  "greh_ps5_outfit": [
+    {
+      "faction": "greh",
+      "cost": 150,
+      "selectable": true
+    }
+  ],
+  "isg_patch": [
+    {
+      "faction": "isg",
+      "cost": 0,
+      "selectable": false
+    }
+  ],
+  "device_pda_3": [
+    {
+      "faction": "isg",
+      "cost": 300,
+      "selectable": true
+    }
+  ],
+  "helm_respirator_gp5": [
+    {
+      "faction": "isg",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "helm_ach7ex": [
+    {
+      "faction": "isg",
+      "cost": 200,
+      "selectable": true
+    }
+  ],
+  "wpn_mossberg590_rail": [
+    {
+      "faction": "isg",
+      "cost": 1050,
+      "selectable": true
+    }
+  ],
+  "wpn_aug_freedom": [
+    {
+      "faction": "isg",
+      "cost": 400,
+      "selectable": true
+    }
+  ],
+  "wpn_sil_9mm": [
+    {
+      "faction": "isg",
+      "cost": 50,
+      "selectable": true
+    }
+  ],
+  "wpn_mp5sd": [
+    {
+      "faction": "isg",
+      "cost": 700,
+      "selectable": true
+    }
+  ],
+  "wpn_sil_pl15": [
+    {
+      "faction": "isg",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "wpn_sil_gemtech": [
+    {
+      "faction": "isg",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "ammo_9x19_fmj": [
+    {
+      "faction": "isg",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "ammo_9x18_fmj": [
+    {
+      "faction": "isg",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "ammo_11.43x23_fmj": [
+    {
+      "faction": "isg",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "ammo_12x76_zhekan": [
+    {
+      "faction": "isg",
+      "cost": 75,
+      "selectable": true
+    }
+  ],
+  "af_spaika": [
+    {
+      "faction": "isg",
+      "cost": 75,
+      "selectable": true
+    }
+  ],
+  "af_repei": [
+    {
+      "faction": "isg",
+      "cost": 75,
+      "selectable": true
+    }
+  ],
+  "isg_lcs_camo_outfit": [
+    {
+      "faction": "isg",
+      "cost": 450,
+      "selectable": true
+    }
+  ],
+  "medkit_army": [
+    {
+      "faction": "isg",
+      "cost": 75,
+      "selectable": true
+    }
+  ],
+  "morphine": [
+    {
+      "faction": "isg",
+      "cost": 25,
+      "selectable": true
+    }
+  ],
+  "mre": [
+    {
+      "faction": "isg",
+      "cost": 25,
+      "selectable": true
+    }
+  ]
+}

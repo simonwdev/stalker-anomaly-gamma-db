@@ -1,0 +1,6642 @@
+{
+  "points": [
+    1700,
+    1400,
+    1100
+  ],
+  "factions": [
+    {
+      "id": "stalker",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "stalker_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes_russian",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_resp",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_ithacam37_stakeout_20x70",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sks_b",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 1000,
+          "difficultyLock": 1
+        },
+        {
+          "id": "wpn_mosin",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 800,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_ppsh41",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vityaz",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_kiparis",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34_obrez",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_m45a1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_tt33",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 120,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pb",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_aps",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 220,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_mp443",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "novice_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "stalker_salamander_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "joint",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x18_ap",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "bandit",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "bandit_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes_russian",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_cloth_mask",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sks_b",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 1000,
+          "difficultyLock": 1
+        },
+        {
+          "id": "wpn_mosin",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 800,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_ppsh41",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vityaz",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_kiparis",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34_obrez",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_eft_mts_255",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 600,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_colt1911",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 125,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_tt33",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 120,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_aps",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 220,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pm",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_mp443",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandit_novice_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "banditmerc_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x18_pmm",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "ecolog",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "ecolog_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes_russian",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_resp",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_k98",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 750,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_mp5",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vz61",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_bm16",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_m45a1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_usp",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pm",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_beretta_camo",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_walther",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_11.43x23_hydro",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "novice_outfit_camo",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "ghillie_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        },
+        {
+          "id": "stimpack_scientic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "dolg",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "dolg_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes_russian",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_respirator_old",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sks_b",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 1000,
+          "difficultyLock": 1
+        },
+        {
+          "id": "wpn_mosin",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 800,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_ppsh41",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pp2000",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_kiparis",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34_obrez",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_eft_mts_255",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 600,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sig220",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 225,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_tt33",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 120,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pb",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_fort17",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pl15",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 225,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sr1m",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x21",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "dolg_novice_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "nbc_dolg_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "freedom",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "freedom_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_respirator_old",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_k98",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 750,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_mp5",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vz61",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_bm16",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_fnp45",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sig226",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_tt33",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 120,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pm",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_beretta_camo",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_walther",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x19_ap",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "svoboda_novice_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "nbc_freedom_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        },
+        {
+          "id": "marijuana",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "cocaine",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "stimpack_army",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "killer",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "killer_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_respirator_old",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_k98",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 750,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_mp5",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vz61",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_bm16",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_fn57",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_m45a1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_usp",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pm",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_beretta",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_glock",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_5.7x28_ss190",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "merc_fighter_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "merc_scout_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 600,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "army",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "army_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes_russian",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_respirator_old",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sks_b",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 1000,
+          "difficultyLock": 1
+        },
+        {
+          "id": "wpn_mosin",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 800,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_ppsh41",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vityaz",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_bizon",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 400,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_kiparis",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34_obrez",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sig220",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 225,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_tt33",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 120,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pb",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_oc33",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pl15",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 225,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sr1m",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x18_pmm",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "army_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "ration_ukr",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "monolith",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "monolith_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigar3",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_ranger",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sks_b",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 1000,
+          "difficultyLock": 1
+        },
+        {
+          "id": "wpn_mosin",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 800,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vintorez_n1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 1000,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pp2000",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_kiparis",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34_obrez",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_fnp45",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sig226",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pb",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_glock",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pl15",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 225,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sr1m",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x39_pab9",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "monolith_nbc_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "monolith_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_ak12_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 700,
+          "difficultyLock": 1
+        }
+      ]
+    },
+    {
+      "id": "csky",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "csky_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_resp",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_k98",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 750,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_winchester1873",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 600,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_mp5",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vz61",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_bm16",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_colt1911",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 125,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_usp",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pm",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_glock",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_walther",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x19_pbp",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_357_hp_mag",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "cs_novice_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "cs_light_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 400,
+          "difficultyLock": null
+        },
+        {
+          "id": "tea",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 40,
+          "difficultyLock": null
+        },
+        {
+          "id": "drink_crow",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 60,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "renegade",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "renegade_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes_russian",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_resp",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sks_b",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 1000,
+          "difficultyLock": 1
+        },
+        {
+          "id": "wpn_mosin",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 800,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_ppsh41",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vityaz",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_kiparis",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34_obrez",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_eft_mts_255",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 600,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sig226",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_tt33",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 120,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pb",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_oc33",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_mp443",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x18_ap",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "redline_novice_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "ghillie_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "greh",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "af_fire_loop",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "greh_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigar3",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_ranger",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sks_b",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 1000,
+          "difficultyLock": 1
+        },
+        {
+          "id": "wpn_mosin",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 800,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34_mark4_23",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 900,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_ppsh41",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vityaz",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_kiparis",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34_obrez",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_eft_mts_255",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 600,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_usp",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_fort17",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pm",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pl15",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 225,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sr1m",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_23x75_barrikada",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "greh_armored_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "greh_ps5_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "isg",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "isg_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_3",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_respirator_gp5",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_ach7ex",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_mossberg590_rail",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 1050,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_aug_freedom",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 400,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sil_9mm",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_mp5sd",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 700,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pl15",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 225,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sil_pl15",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vz61",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 325,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_fn57",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sig226",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_oc33",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 250,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_beretta",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sr1m",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 200,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sil_gemtech",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x19_fmj",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x18_fmj",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_11.43x23_fmj",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_12x76_zhekan",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "af_spaika",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "af_repei",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "novice_outfit_camo",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "isg_lcs_camo_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 450,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit_army",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "morphine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "mre",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        }
+      ]
+    },
+    {
+      "id": "zombied",
+      "money": 5000,
+      "items": [
+        {
+          "id": "cash",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_pda_1",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bandage",
+          "selectable": false,
+          "quantity": 3,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "jgut",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "batteries_dead",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "flask",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "vodka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "tushonka",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "box_matches",
+          "selectable": false,
+          "quantity": 4,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "swiss_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "grooming",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_actor_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_backpack",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_simple",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "detector_radio",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_knife",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolts_pack",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "picture_woman",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "itm_sleepbag",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "beer",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "bread",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 5,
+          "difficultyLock": null
+        },
+        {
+          "id": "energy_drink",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "kolbasa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "mineral_water",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_flashlight",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_torch_dummy",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "device_glowstick",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "armor_repair_fa",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 35,
+          "difficultyLock": null
+        },
+        {
+          "id": "cooking",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "yadylin",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_sleepingpills",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_radioprotector",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_cystamine",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 20,
+          "difficultyLock": null
+        },
+        {
+          "id": "caffeine",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "antirad_kalium",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 25,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_psy_blockade",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "glucose_s",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 15,
+          "difficultyLock": null
+        },
+        {
+          "id": "medkit",
+          "selectable": true,
+          "quantity": 4,
+          "cost": 75,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_anabiotic",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "akvatab",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "drug_antidot",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "tetanus",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 60,
+          "difficultyLock": null
+        },
+        {
+          "id": "salicidic_acid",
+          "selectable": true,
+          "quantity": 2,
+          "cost": 10,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_hardhat",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 175,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_binoc_inv",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 100,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": 1
+        },
+        {
+          "id": "stalker_patch",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "bolt",
+          "selectable": false,
+          "quantity": 1,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "cigarettes_russian",
+          "selectable": false,
+          "quantity": 2,
+          "cost": 0,
+          "difficultyLock": null
+        },
+        {
+          "id": "helm_resp",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_ithacam37_stakeout_20x70",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_sks_b",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 1000,
+          "difficultyLock": 1
+        },
+        {
+          "id": "wpn_mosin",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 800,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_ppsh41",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 650,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_vityaz",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_kiparis",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 300,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_toz34_obrez",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 550,
+          "difficultyLock": 2
+        },
+        {
+          "id": "wpn_toz106_m1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 375,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_m45a1",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_tt33",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 120,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_pb",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_aps",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 220,
+          "difficultyLock": null
+        },
+        {
+          "id": "wpn_mp443",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 150,
+          "difficultyLock": null
+        },
+        {
+          "id": "novice_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 50,
+          "difficultyLock": null
+        },
+        {
+          "id": "stalker_salamander_outfit",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 500,
+          "difficultyLock": null
+        },
+        {
+          "id": "joint",
+          "selectable": true,
+          "quantity": 1,
+          "cost": 90,
+          "difficultyLock": null
+        },
+        {
+          "id": "ammo_9x18_ap",
+          "selectable": true,
+          "quantity": 3,
+          "cost": 50,
+          "difficultyLock": null
+        }
+      ]
+    }
+  ],
+  "shared": [
+    {
+      "id": "cash",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "device_pda_1",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "bandage",
+      "selectable": false,
+      "quantity": 3,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "jgut",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "batteries_dead",
+      "selectable": false,
+      "quantity": 2,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "flask",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "vodka",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "tushonka",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "box_matches",
+      "selectable": false,
+      "quantity": 4,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "swiss_knife",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "grooming",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "itm_actor_backpack",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "itm_backpack",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "detector_simple",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "detector_radio",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "wpn_knife",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "bolts_pack",
+      "selectable": false,
+      "quantity": 2,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "picture_woman",
+      "selectable": false,
+      "quantity": 1,
+      "cost": 0,
+      "difficultyLock": null
+    },
+    {
+      "id": "itm_sleepbag",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 50,
+      "difficultyLock": null
+    },
+    {
+      "id": "beer",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 35,
+      "difficultyLock": null
+    },
+    {
+      "id": "bread",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 5,
+      "difficultyLock": null
+    },
+    {
+      "id": "energy_drink",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 20,
+      "difficultyLock": null
+    },
+    {
+      "id": "kolbasa",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 15,
+      "difficultyLock": null
+    },
+    {
+      "id": "mineral_water",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 35,
+      "difficultyLock": null
+    },
+    {
+      "id": "device_flashlight",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 150,
+      "difficultyLock": null
+    },
+    {
+      "id": "device_torch_dummy",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 300,
+      "difficultyLock": null
+    },
+    {
+      "id": "device_glowstick",
+      "selectable": true,
+      "quantity": 4,
+      "cost": 20,
+      "difficultyLock": null
+    },
+    {
+      "id": "armor_repair_fa",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 35,
+      "difficultyLock": null
+    },
+    {
+      "id": "cooking",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 25,
+      "difficultyLock": null
+    },
+    {
+      "id": "yadylin",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 25,
+      "difficultyLock": null
+    },
+    {
+      "id": "drug_sleepingpills",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 25,
+      "difficultyLock": null
+    },
+    {
+      "id": "drug_radioprotector",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 25,
+      "difficultyLock": null
+    },
+    {
+      "id": "antirad_cystamine",
+      "selectable": true,
+      "quantity": 3,
+      "cost": 20,
+      "difficultyLock": null
+    },
+    {
+      "id": "caffeine",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 25,
+      "difficultyLock": null
+    },
+    {
+      "id": "antirad",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 25,
+      "difficultyLock": null
+    },
+    {
+      "id": "antirad_kalium",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 25,
+      "difficultyLock": null
+    },
+    {
+      "id": "drug_psy_blockade",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 50,
+      "difficultyLock": null
+    },
+    {
+      "id": "glucose_s",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 15,
+      "difficultyLock": null
+    },
+    {
+      "id": "medkit",
+      "selectable": true,
+      "quantity": 4,
+      "cost": 75,
+      "difficultyLock": null
+    },
+    {
+      "id": "drug_anabiotic",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 100,
+      "difficultyLock": null
+    },
+    {
+      "id": "akvatab",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 100,
+      "difficultyLock": null
+    },
+    {
+      "id": "drug_antidot",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 100,
+      "difficultyLock": null
+    },
+    {
+      "id": "tetanus",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 60,
+      "difficultyLock": null
+    },
+    {
+      "id": "salicidic_acid",
+      "selectable": true,
+      "quantity": 2,
+      "cost": 10,
+      "difficultyLock": null
+    },
+    {
+      "id": "helm_hardhat",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 175,
+      "difficultyLock": null
+    },
+    {
+      "id": "wpn_binoc_inv",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 100,
+      "difficultyLock": null
+    },
+    {
+      "id": "wpn_toz34",
+      "selectable": true,
+      "quantity": 1,
+      "cost": 650,
+      "difficultyLock": 1
+    }
+  ],
+  "ammoPerWeapon": {
+    "wpn_tt33_modern": "ammo_7.62x25_ps",
+    "wpn_ppsh41": "ammo_7.62x25_ps",
+    "wpn_mosin": "ammo_7.62x54_7h1",
+    "wpn_toz34_mark4_23": "ammo_23x75_shrapnel",
+    "wpn_vintorez_n1": "ammo_9x39_pab9"
+  },
+  "ammoCount": {
+    "ammo_9x18_fmj": 48,
+    "ammo_9x19_fmj": 48,
+    "ammo_5.7x28_ss195": 48,
+    "ammo_7.62x25_ps": 48,
+    "ammo_11.43x23_fmj": 48,
+    "ammo_5.45x39_fmj": 48,
+    "ammo_5.56x45_fmj": 48,
+    "ammo_9x39_pab9": 48,
+    "ammo_12x70_buck": 20,
+    "ammo_7.62x39_fmj": 25,
+    "ammo_7.92x33_fmj": 30,
+    "ammo_7.62x54_7h1": 30,
+    "ammo_23x75_shrapnel": 40
+  }
+}
