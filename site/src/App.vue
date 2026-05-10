@@ -170,9 +170,6 @@
                 :is-outfit-exchange="isOutfitExchange"
                 :is-crafting="isCrafting"
                 :crafting-item-count="craftingFilteredCount"
-                :crafting-artefact-view="isCrafting && craftingCategory === 'artefact'"
-                :crafting-graph-view="craftingGraphView"
-                :crafting-expand-label="craftingExpandLabel"
                 :is-toolkit-rates="isToolkitRates"
                 :outfit-exchange="outfitExchange"
                 :filtered-exchanges="filteredExchanges"
@@ -205,8 +202,6 @@
                 @download-data="(format) => downloadData(format)"
                 @toggle-hide-no-drop="toggleHideNoDrop()"
                 @toggle-hide-unused-ammo="toggleHideUnusedAmmo()"
-                @set-crafting-graph-view="setCraftingGraphView"
-                @toggle-crafting-expand="toggleCraftingExpand"
                 @toggle-show-tile-icons="toggleShowTileIcons()"
             />
             <div v-if="favoritesViewActive && favoriteIds.length === 0" class="favorites-empty">
@@ -244,8 +239,6 @@
                 :filtered-crafting-trees="filteredCraftingTrees"
                 :crafting-tree-expand-all="craftingTreeExpandAll"
                 :crafting-tree-expanded="craftingTreeExpanded"
-                :graph-view-open="craftingGraphView"
-                :tree-view-expand-all="_craftingTreeViewExpandAll"
                 @toggle-tree-node="toggleTreeNode"
                 @navigate-to-item="navigateToItem"
             />

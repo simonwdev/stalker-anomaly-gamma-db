@@ -1,8 +1,8 @@
 <template>
     <div v-if="isCrafting" class="crafting-view">
 
-        <!-- Inner view mode tabs -->
-        <div class="crafting-inner-tabs">
+        <!-- Inner view mode tabs (only for non-materials categories) -->
+        <div v-if="craftingCategory !== 'materials'" class="crafting-inner-tabs">
             <button :class="{ active: craftingViewMode === 'list' }" @click="setInnerTab('list')">
                 <LucideLayoutGrid :size="13" />
                 <span>{{ t('app_label_list_view') }}</span>
@@ -45,15 +45,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Graph tree view -->
-            <CraftingTreesTreeView
-                v-else-if="graphViewOpen"
-                :all-crafting-trees="allCraftingTrees"
-                :filtered-crafting-trees="filteredCraftingTrees"
-                :expand-all="treeViewExpandAll"
-                @navigate-to-item="(id) => $emit('navigateToItem', id)"
-            />
 
             <!-- Tile card view (all categories including artefacts) -->
             <div v-else class="tile-grid" ref="tileGrid">
@@ -119,7 +110,6 @@
 </template>
 
 <script>
-import CraftingTreesTreeView from "./crafting-trees-page/CraftingTreesTreeView.vue";
 import CraftingInnerTreeView from "./crafting-trees-page/CraftingInnerTreeView.vue";
 import CraftingRecipeCard from "./CraftingRecipeCard.vue";
 
@@ -134,7 +124,7 @@ const PAGE_SIZE = 30;
 
 export default {
     name: "CraftingView",
-    components: { CraftingTreesTreeView, CraftingInnerTreeView, CraftingRecipeCard },
+    components: { CraftingInnerTreeView, CraftingRecipeCard },
     inject: ["t", "tName", "tItemName", "findItemByName", "findFullItemByName", "headerLabel", "formatValue", "cellValue", "statClass", "getItemFields"],
     props: {
         isCrafting: Boolean,
@@ -145,8 +135,6 @@ export default {
         filteredCraftingTrees: { type: Array, default: () => [] },
         craftingTreeExpandAll: { type: Boolean, default: false },
         craftingTreeExpanded: { type: Set, default: () => new Set() },
-        graphViewOpen: { type: Boolean, default: false },
-        treeViewExpandAll: { type: Boolean, default: true },
     },
     emits: ["navigateToItem", "expandAllTrees", "collapseAllTrees", "toggleTreeNode"],
     data() {
@@ -190,9 +178,10 @@ export default {
         },
         craftingCategory() {
             this.visibleCount = PAGE_SIZE;
-        },
-        graphViewOpen() {
-            this.$nextTick(() => this._setupObserver());
+            // Reset to list view when switching to materials (no tree tab there)
+            if (this.craftingCategory === 'materials') {
+                this.craftingViewMode = 'list';
+            }
         },
         craftingViewMode() {
             this.$nextTick(() => this._setupObserver());
