@@ -186,19 +186,6 @@
                 </button>
                 <span class="item-count" v-if="!isOutfitExchange && !isCrafting">{{ sortedItems.length }} {{ t('app_label_items') }}</span>
                 <span class="item-count" v-if="isCrafting">{{ craftingItemCount }} {{ t('app_label_recipes') }}</span>
-                <div class="view-toggle" v-if="craftingArtefactView">
-                    <button :class="{ active: !craftingGraphView }" @click="$emit('setCraftingGraphView', false)" v-tooltip="t('app_label_tile_view')">
-                        <LucideLayoutGrid :size="14" />
-                        <span class="view-toggle-label">{{ t('app_label_tile_view') }}</span>
-                    </button>
-                    <button :class="{ active: craftingGraphView }" @click="$emit('setCraftingGraphView', true)" v-tooltip="t('app_label_tree_view')">
-                        <LucideList :size="14" />
-                        <span class="view-toggle-label">{{ t('app_label_tree_view') }}</span>
-                    </button>
-                </div>
-                <button v-if="craftingArtefactView" class="crafting-expand-toggle-btn" @click="$emit('toggleCraftingExpand')">
-                    {{ craftingExpandLabel }}
-                </button>
                 <span class="item-count" v-if="isOutfitExchange && outfitExchange">{{ filteredExchanges.length }} {{ t('app_label_exchanges') }}</span>
                 <div class="view-toggle" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCrafting && !isToolkitRates">
                     <button :class="{ active: viewMode === 'table' }" @click="$emit('setViewMode', 'table')" v-tooltip="t('app_label_table_view')">
@@ -263,9 +250,6 @@ export default {
         isOutfitExchange: { type: Boolean, default: false },
         isCrafting: { type: Boolean, default: false },
         craftingItemCount: { type: Number, default: 0 },
-        craftingArtefactView: { type: Boolean, default: false },
-        craftingGraphView: { type: Boolean, default: false },
-        craftingExpandLabel: { type: String, default: "" },
         isToolkitRates: { type: Boolean, default: false },
         outfitExchange: { type: Object, default: null },
         filteredExchanges: { type: Array, default: () => [] },
@@ -299,8 +283,6 @@ export default {
         'downloadData',
         'toggleHideNoDrop',
         'toggleHideUnusedAmmo',
-        'setCraftingGraphView',
-        'toggleCraftingExpand',
     ],
     data() {
         return {

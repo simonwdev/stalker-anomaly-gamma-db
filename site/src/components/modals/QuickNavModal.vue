@@ -9,7 +9,7 @@
                 ref="searchInput"
                 type="text"
                 v-model="query"
-                placeholder="Search..."
+                :placeholder="t('app_quick_nav_placeholder')"
                 class="quick-nav-input"
                 @keydown.escape.stop="$emit('close')"
                 @keydown.up.prevent="moveUp"
@@ -26,7 +26,11 @@
                 @click="selectPage(page)"
                 @mouseenter="activeIdx = idx"
             >
-                <span class="quick-nav-item-label">{{ page.label }}</span>
+                <span class="quick-nav-item-label">
+                    <template v-for="(part, pi) in highlightLabel(page.label)" :key="pi">
+                        <mark v-if="part.match" class="quick-nav-highlight">{{ part.text }}</mark><template v-else>{{ part.text }}</template>
+                    </template>
+                </span>
                 <span class="quick-nav-item-group">{{ page.group }}</span>
             </button>
             <div v-if="filteredPages.length === 0" class="quick-nav-empty">{{ t('app_label_no_results') }}</div>
@@ -53,8 +57,23 @@ export default {
         favoriteIds: Array,
         recentIds: Array,
         hasStartingLoadouts: { type: Boolean, default: false },
+        hasToolkitRates: { type: Boolean, default: false },
+        craftingRecipeCategories: { type: Array, default: () => [] },
+        craftingDisassemblyCategories: { type: Array, default: () => [] },
     },
-    emits: ["close", "select-category", "open-build-planner", "open-maps", "open-ballistics", "open-trading", "open-starting-loadouts", "select-favorites", "select-recent"],
+    emits: [
+        "close",
+        "select-category",
+        "select-crafting-category",
+        "open-build-planner",
+        "open-maps",
+        "open-ballistics",
+        "open-trading",
+        "open-starting-loadouts",
+        "open-version-compare",
+        "select-favorites",
+        "select-recent",
+    ],
     data() {
         return {
             query: "",
@@ -64,32 +83,58 @@ export default {
     computed: {
         allPages() {
             const pages = [];
-            const savedGroup = this.t("app_group_saved");
-            const toolsGroup = this.t("app_group_tools");
+            const savedGroup   = this.t("app_group_saved");
+            const toolsGroup   = this.t("app_group_tools");
+            const craftGroup   = this.t("app_group_crafting");
+
+            // Saved
             pages.push({ id: "favorites", label: this.t("app_cat_favorites"), group: savedGroup, action: "favorites" });
             pages.push({ id: "recent",    label: this.t("app_cat_recent"),    group: savedGroup, action: "recent" });
+
+            // Item DB categories
             for (const group of (this.groupedCategories || [])) {
                 const groupLabel = this.t(group.name);
                 for (const cat of group.categories) {
                     pages.push({ id: cat, label: this.tCat(cat), group: groupLabel, action: "category", cat });
                 }
             }
-            pages.push({ id: "build-planner",    label: this.t("app_cat_build_planner"),    group: toolsGroup, action: "build-planner" });
-            pages.push({ id: "ballistics",        label: this.t("app_nav_damage_sim"),       group: toolsGroup, action: "ballistics" });
-            pages.push({ id: "maps",              label: this.t("app_nav_maps"),             group: toolsGroup, action: "maps" });
-            pages.push({ id: "trading",           label: this.t("app_nav_trading"),          group: toolsGroup, action: "trading" });
+
+            // Crafting main entry
+            pages.push({ id: "crafting", label: this.t("app_cat_crafting"), group: craftGroup, action: "category", cat: "Crafting" });
+            // Crafting recipe sub-categories
+            for (const c of (this.craftingRecipeCategories || [])) {
+                pages.push({ id: "craft-" + c.key, label: this.t(c.label), group: craftGroup, action: "crafting-category", cat: c.key });
+            }
+            // Crafting disassembly sub-categories
+            for (const c of (this.craftingDisassemblyCategories || [])) {
+                pages.push({ id: "craft-dis-" + c.key, label: this.t(c.label), group: craftGroup, action: "crafting-category", cat: c.key });
+            }
+
+            // Tools
+            pages.push({ id: "build-planner",   label: this.t("app_cat_build_planner"),    group: toolsGroup, action: "build-planner" });
+            pages.push({ id: "ballistics",       label: this.t("app_nav_damage_sim"),       group: toolsGroup, action: "ballistics" });
+            pages.push({ id: "maps",             label: this.t("app_nav_maps"),             group: toolsGroup, action: "maps" });
+            pages.push({ id: "trading",          label: this.t("app_nav_trading"),          group: toolsGroup, action: "trading" });
+            pages.push({ id: "version-compare",  label: this.t("app_cat_version_compare"),  group: toolsGroup, action: "version-compare" });
             if (this.hasStartingLoadouts) {
                 pages.push({ id: "starting-loadouts", label: this.t("app_cat_starting_loadouts"), group: toolsGroup, action: "starting-loadouts" });
             }
+            if (this.hasToolkitRates) {
+                pages.push({ id: "toolkit-rates", label: this.t("app_cat_toolkit_rates"), group: toolsGroup, action: "category", cat: "Toolkit Rates" });
+            }
+
             return pages;
         },
+
         filteredPages() {
             const q = this.query.trim().toLowerCase();
             if (!q) return this.allPages;
-            return this.allPages.filter(p =>
-                p.label.toLowerCase().includes(q) ||
-                (p.group && p.group.toLowerCase().includes(q))
-            );
+            const qNorm = q.replace(/\s+/g, '');
+            return this.allPages.filter(p => {
+                const labelNorm = p.label.toLowerCase().replace(/\s+/g, '');
+                const groupNorm = (p.group || '').toLowerCase().replace(/\s+/g, '');
+                return labelNorm.includes(qNorm) || groupNorm.includes(qNorm);
+            });
         },
     },
     watch: {
@@ -128,6 +173,9 @@ export default {
         selectPage(page) {
             if (page.action === "category") {
                 this.$emit("select-category", page.cat);
+            } else if (page.action === "crafting-category") {
+                this.$emit("select-category", "Crafting");
+                this.$emit("select-crafting-category", page.cat);
             } else if (page.action === "favorites") {
                 this.$emit("select-favorites");
             } else if (page.action === "recent") {
@@ -140,12 +188,56 @@ export default {
                 this.$emit("open-ballistics");
             } else if (page.action === "trading") {
                 this.$emit("open-trading");
+            } else if (page.action === "version-compare") {
+                this.$emit("open-version-compare");
             } else if (page.action === "starting-loadouts") {
                 this.$emit("open-starting-loadouts");
             }
             this.$emit("close");
         },
+
+        /**
+         * Returns [{text, match}] parts for a label given current query.
+         * Matching ignores spaces so "allwe" matches "All Weapons".
+         * Spaces that fall within the matched span are included as matched.
+         */
+        highlightLabel(label) {
+            const q = this.query.trim().toLowerCase();
+            if (!q) return [{ text: label, match: false }];
+
+            const qNorm = q.replace(/\s+/g, '');
+            const labelNorm = label.toLowerCase().replace(/\s+/g, '');
+            const matchStart = labelNorm.indexOf(qNorm);
+            if (matchStart === -1) return [{ text: label, match: false }];
+            const matchEnd = matchStart + qNorm.length; // exclusive
+
+            // Find the original-string indices that correspond to matchStart and matchEnd-1
+            let firstOrig = -1, lastOrig = -1;
+            let normIdx = 0;
+            for (let i = 0; i < label.length; i++) {
+                if (label[i] !== ' ') {
+                    if (normIdx === matchStart) firstOrig = i;
+                    if (normIdx === matchEnd - 1) lastOrig = i;
+                    normIdx++;
+                }
+            }
+            if (firstOrig === -1 || lastOrig === -1) return [{ text: label, match: false }];
+
+            // Everything from firstOrig..lastOrig (inclusive) is the highlight span
+            const parts = [];
+            if (firstOrig > 0)   parts.push({ text: label.slice(0, firstOrig),        match: false });
+            parts.push(          { text: label.slice(firstOrig, lastOrig + 1),         match: true  });
+            if (lastOrig < label.length - 1) parts.push({ text: label.slice(lastOrig + 1), match: false });
+            return parts;
+        },
     },
 };
 </script>
 
+<style scoped>
+.quick-nav-highlight {
+    background: transparent;
+    color: var(--color-red-bright);
+    font-weight: 600;
+}
+</style>

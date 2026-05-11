@@ -47,6 +47,7 @@
     :LOCALES="LOCALES"
     :global-query="globalQuery"
     :global-results="globalResults"
+    :global-crafting-results="globalCraftingResults"
     :has-unseen-release-notes="hasUnseenReleaseNotes"
     :sidebar-collapsed="sidebarCollapsed"
     :sidebar-open="sidebarOpen"
@@ -78,6 +79,7 @@
     @search="debouncedGlobalSearch()"
     @escape-search="() => { if (globalQuery.trim()) lastGlobalQuery = globalQuery; globalQuery = '' }"
     @select-search-result="(id) => { lastGlobalQuery = globalQuery; globalQuery = ''; navigateToItem(id) }"
+    @select-crafting-search-result="(result) => selectCraftingSearchResult(result)"
 />
 
 <div class="layout" :class="{ 'sidebar-collapsed': sidebarCollapsed, 'sidebar-hidden': buildPlannerActive || mapsActive || damageSimActive || tradingActive }">
@@ -170,9 +172,6 @@
                 :is-outfit-exchange="isOutfitExchange"
                 :is-crafting="isCrafting"
                 :crafting-item-count="craftingFilteredCount"
-                :crafting-artefact-view="isCrafting && craftingCategory === 'artefact'"
-                :crafting-graph-view="craftingGraphView"
-                :crafting-expand-label="craftingExpandLabel"
                 :is-toolkit-rates="isToolkitRates"
                 :outfit-exchange="outfitExchange"
                 :filtered-exchanges="filteredExchanges"
@@ -205,8 +204,6 @@
                 @download-data="(format) => downloadData(format)"
                 @toggle-hide-no-drop="toggleHideNoDrop()"
                 @toggle-hide-unused-ammo="toggleHideUnusedAmmo()"
-                @set-crafting-graph-view="setCraftingGraphView"
-                @toggle-crafting-expand="toggleCraftingExpand"
                 @toggle-show-tile-icons="toggleShowTileIcons()"
             />
             <div v-if="favoritesViewActive && favoriteIds.length === 0" class="favorites-empty">
@@ -244,8 +241,6 @@
                 :filtered-crafting-trees="filteredCraftingTrees"
                 :crafting-tree-expand-all="craftingTreeExpandAll"
                 :crafting-tree-expanded="craftingTreeExpanded"
-                :graph-view-open="craftingGraphView"
-                :tree-view-expand-all="_craftingTreeViewExpandAll"
                 @toggle-tree-node="toggleTreeNode"
                 @navigate-to-item="navigateToItem"
             />
@@ -562,14 +557,19 @@
     :favoriteIds="favoriteIds"
     :recentIds="recentIds"
     :hasStartingLoadouts="!!fileManifest['starting-loadouts.json']"
+    :hasToolkitRates="!!fileManifest['toolkit-rates.json']"
+    :craftingRecipeCategories="craftingRecipeCategories"
+    :craftingDisassemblyCategories="craftingDisassemblyCategories"
     @close="quickNavOpen = false"
     @select-category="selectCategory"
+    @select-crafting-category="selectCraftingCategory"
     @select-favorites="selectFavorites()"
     @select-recent="selectRecent()"
     @open-build-planner="openBuildPlanner()"
     @open-maps="openMaps()"
     @open-ballistics="openDamageSim()"
     @open-trading="openTrading()"
+    @open-version-compare="openVersionCompare()"
     @open-starting-loadouts="openStartingLoadouts()"
 />
 

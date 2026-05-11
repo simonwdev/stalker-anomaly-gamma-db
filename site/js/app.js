@@ -47,6 +47,7 @@ export const appDefinition = {
             globalQuery: "",
             lastGlobalQuery: "",
             globalResults: [],
+            globalCraftingResults: [],
             filterQuery: "",
             filterInput: "",
             fuse: null,
@@ -314,7 +315,13 @@ export const appDefinition = {
 
         compareStatRows() {
             const rows = [];
+            const categories = this.compareData.map(e => e.category);
+            const isAttachment = categories.length > 0 && categories.every(
+                c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS || c === CAT.TACTICAL_KITS
+            );
             for (const h of this.compareHeaders) {
+                // Weight is always identical for attachments — exclude it from the comparison
+                if (isAttachment && h === 'st_prop_weight') continue;
                 const values = this.compareData.map((entry) => {
                     const val = entry.item[h];
                     return val !== undefined && val !== null && val !== "" ? val : "--";
@@ -333,7 +340,8 @@ export const appDefinition = {
             if (categories.every(c => c === CAT.AMMO)) return [...AMMO_MULTIPLIER_FIELDS, ...AMMO_ONLY_FIELDS];
             if (categories.every(c => c === CAT.SCOPES || c === CAT.SILENCERS || c === CAT.GRENADE_LAUNCHERS || c === CAT.TACTICAL_KITS)) {
                 const hidden = this.hiddenFields;
-                return ["st_prop_weight", "st_upgr_cost", "st_data_export_zoom_factor"].filter(f =>
+                // Weight excluded — it's always the same across attachments
+                return ["st_upgr_cost", "st_data_export_zoom_factor"].filter(f =>
                     !hidden.has(f) && this.compareData.some(e => e.item[f] != null && e.item[f] !== "")
                 );
             }
@@ -1915,6 +1923,7 @@ export const appDefinition = {
             this.calibers = {};
             this.globalQuery = "";
             this.globalResults = [];
+            this.globalCraftingResults = [];
             this.filterQuery = "";
             this.activeCategory = null;
             this.buildPlannerActive = false;
@@ -1984,21 +1993,110 @@ export const appDefinition = {
         globalSearch() {
             if (!this.globalQuery.trim()) {
                 this.globalResults = [];
+                this.globalCraftingResults = [];
                 return;
             }
             const q = this.globalQuery.trim();
             const pool = this.globalSearchFilter(this.index);
+
+            // 1. ID exact / prefix match
             const idHits = this.idMatchItems(pool, q);
             if (idHits) {
                 this.globalResults = idHits;
+                this.globalCraftingResults = this._searchCraftingTrees(q);
                 return;
             }
+
+            // 2. Normalized name match — strips spaces, hyphens, underscores, dots
+            //    so "ai2" matches "AI-2 Medkit", "allwe" matches "All Weapons", etc.
+            const qNorm = q.toLowerCase().replace(/[\s\-_.]/g, '');
+            const normHits = qNorm.length >= 2
+                ? pool.filter(i => (i.localeName || '').toLowerCase().replace(/[\s\-_.]/g, '').includes(qNorm))
+                : [];
+
+            // 3. Fuse fuzzy match
             const poolSet = new Set(pool);
-            this.globalResults = this.fuse
+            const fuseHits = this.fuse
                 .search(q)
                 .slice(0, 50)
-                .map((r) => r.item)
+                .map(r => r.item)
                 .filter(i => poolSet.has(i));
+
+            // 4. Merge: normalized hits first, then fuse (deduped), max 50
+            const seen = new Set(normHits.map(i => i.id));
+            const merged = [...normHits];
+            for (const item of fuseHits) {
+                if (!seen.has(item.id)) { seen.add(item.id); merged.push(item); }
+            }
+            this.globalResults = merged.slice(0, 50);
+
+            // 5. Crafting results (from already-loaded trees or raw recipe data)
+            this.globalCraftingResults = this._searchCraftingTrees(q);
+
+            // Lazy-load craft recipes the first time user searches (before visiting Crafting tab)
+            if (!this.craftRecipes && this.fileManifest && this.fileManifest['craft-recipes.json']) {
+                const capturedQ = q;
+                this.fetchCraftRecipes().then(craftData => {
+                    if (!craftData) return;
+                    this.craftRecipes = craftData;
+                    if (this.craftingTrees.length === 0) {
+                        this.buildCraftingTreeData(craftData);
+                    }
+                    // Only update if the search query hasn't changed
+                    if (this.globalQuery.trim() === capturedQ) {
+                        this.globalCraftingResults = this._searchCraftingTrees(capturedQ);
+                    }
+                }).catch(() => {});
+            }
+        },
+
+        /** Search crafting trees by normalized name. Returns result objects for the dropdown. */
+        _searchCraftingTrees(q) {
+            const qNorm = q.toLowerCase().replace(/[\s\-_.]/g, '');
+            if (qNorm.length < 2) return [];
+            const CRAFT_CHIP_LABELS = {
+                device: 'app_craft_chip_device', equipment: 'app_craft_chip_equipment',
+                repair: 'app_craft_chip_repair', upgrades: 'app_craft_chip_upgrades',
+                medical: 'app_craft_chip_medical', ammo: 'app_craft_chip_ammo',
+                artefact: 'app_craft_chip_artefact', furniture: 'app_craft_chip_furniture',
+                decoration: 'app_craft_chip_decoration',
+            };
+
+            let candidates = [];
+
+            if (this.craftingTrees.length) {
+                // Trees already built — preferred, has full resolved data
+                candidates = this.craftingTrees.map(tree => ({
+                    id: tree.id,
+                    name: tree.name,
+                    displayName: this.t(tree.name),
+                    craftCategory: tree.craftCategory,
+                }));
+            } else if (this.craftRecipes) {
+                // craftRecipes loaded but trees not yet built — search raw recipe data
+                for (const [cat, catData] of Object.entries(this.craftRecipes)) {
+                    for (const r of catData.items || []) {
+                        candidates.push({
+                            id: r.id,
+                            name: r.pda_encyclopedia_name,
+                            displayName: this.t(r.pda_encyclopedia_name),
+                            craftCategory: cat,
+                        });
+                    }
+                }
+            }
+
+            return candidates
+                .filter(c => c.displayName.toLowerCase().replace(/[\s\-_.]/g, '').includes(qNorm))
+                .slice(0, 8)
+                .map(c => ({
+                    _craftingResult: true,
+                    id: c.id,
+                    treeName: c.name,
+                    displayName: c.displayName,
+                    craftCategory: c.craftCategory,
+                    craftCategoryLabel: this.t(CRAFT_CHIP_LABELS[c.craftCategory] || 'app_craft_chip_all'),
+                }));
         },
 
         async selectCategory(cat) {
@@ -4665,6 +4763,20 @@ export const appDefinition = {
         clearGlobalQuery() {
             if (this.globalQuery.trim()) this.lastGlobalQuery = this.globalQuery;
             this.globalQuery = "";
+            this.globalResults = [];
+            this.globalCraftingResults = [];
+        },
+
+        async selectCraftingSearchResult(result) {
+            const q = this.globalQuery.trim();
+            this.lastGlobalQuery = this.globalQuery;
+            this.globalQuery = "";
+            this.globalResults = [];
+            this.globalCraftingResults = [];
+            await this.selectCategory(CAT.CRAFTING);
+            this.craftingCategory = result.craftCategory || 'all';
+            this.filterInput = q;
+            this.filterQuery = q;
         },
 
         // Build Planner methods
@@ -6561,6 +6673,66 @@ export const appDefinition = {
                 return;
             }
         });
+
+        // Touch swipe gesture: swipe left/right to cycle nav tabs (mobile/tablet)
+        {
+            const NAV_TABS = ['db', 'crafting', 'build-planner', 'ballistics', 'maps', 'trading'];
+            let swipeTouchStartX = 0;
+            let swipeTouchStartY = 0;
+            let swipeTouchStartTarget = null;
+
+            const SWIPE_MIN_X = 70;       // minimum horizontal distance in px
+            const SWIPE_RATIO = 1.5;      // horizontal must be at least 1.5× vertical
+
+            const isModalOpen = () =>
+                this.modalOpen || this.quickNavOpen || this.buildPickerOpen ||
+                this.buildSaveModalOpen || this.buildImportCodeModalOpen ||
+                this.saveImportModalOpen || this.shortcutHelpOpen;
+
+            const onTouchStart = (e) => {
+                swipeTouchStartX = e.touches[0].clientX;
+                swipeTouchStartY = e.touches[0].clientY;
+                swipeTouchStartTarget = e.target;
+            };
+
+            const onTouchEnd = (e) => {
+                if (isModalOpen()) return;
+                // Block if the swipe started inside the sidebar, header, or any overlay
+                if (swipeTouchStartTarget?.closest(
+                    '.sidebar, .site-header, .nav-bar, .modal, .modal-backdrop, ' +
+                    '.header-drawer, .header-drawer-backdrop, .mobile-search-overlay'
+                )) return;
+
+                const dx = e.changedTouches[0].clientX - swipeTouchStartX;
+                const dy = e.changedTouches[0].clientY - swipeTouchStartY;
+
+                if (Math.abs(dx) < SWIPE_MIN_X) return;
+                if (Math.abs(dx) < Math.abs(dy) * SWIPE_RATIO) return;
+
+                let current;
+                if (this.tradingActive)          current = 'trading';
+                else if (this.mapsActive)         current = 'maps';
+                else if (this.damageSimActive)    current = 'ballistics';
+                else if (this.buildPlannerActive) current = 'build-planner';
+                else if (this.isCrafting)         current = 'crafting';
+                else                              current = 'db';
+
+                const idx = NAV_TABS.indexOf(current);
+                // swipe left (dx < 0) → next tab; swipe right (dx > 0) → prev tab
+                const direction = dx < 0 ? 1 : -1;
+                const next = NAV_TABS[(idx + direction + NAV_TABS.length) % NAV_TABS.length];
+
+                if (next === 'db')             this.openItemDb();
+                else if (next === 'crafting')  this.openCrafting();
+                else if (next === 'build-planner') this.openBuildPlanner();
+                else if (next === 'ballistics')    this.openDamageSim();
+                else if (next === 'maps')          this.openMaps();
+                else if (next === 'trading')        this.openTrading();
+            };
+
+            document.addEventListener('touchstart', onTouchStart, { passive: true });
+            document.addEventListener('touchend',   onTouchEnd,   { passive: true });
+        }
 
         // 0. Backward-compat: redirect legacy query-param URLs to path-based URLs
         // Pack-dependent paths (db categories, favorites, recent) are redirected later
