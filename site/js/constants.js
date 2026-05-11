@@ -165,24 +165,27 @@ export const CATEGORY_GROUPS = [
 ];
 
 export const KEYS = {
-    SEARCH: '/',
+    SEARCH: ['/', 's'],
     ESCAPE: 'Escape',
     TOGGLE_VIEW: 'v',
-    TOGGLE_SIDEBAR: 's',
+    TOGGLE_SIDEBAR: 'b',
     COMPARE: 'c',
     HELP: '?',
     FILTERS: 'F',
-    PREV_CATEGORY: '[',
-    NEXT_CATEGORY: ']',
+    PREV_CATEGORY: ['[', ',', 'h'],
+    NEXT_CATEGORY: [']', '.', 'l'],
     FAVORITE: 'f',
     PIN: 'p',
-    PREV_ITEM: 'ArrowLeft',
-    NEXT_ITEM: 'ArrowRight',
+    PREV_ITEM: ['ArrowLeft', 'h'],
+    NEXT_ITEM: ['ArrowRight', 'l'],
     CLEAR_FILTERS: 'x',
     CHORD_GO: 'g',
     CHORD_BUILD: 'b',
     QUICK_NAV: 'k',
 };
+
+export const matchesKey = (key, binding) =>
+    Array.isArray(binding) ? binding.includes(key) : key === binding;
 export const CHORD_TIMEOUT = 500;
 
 export const FACTION_ICONS = {

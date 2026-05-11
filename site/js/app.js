@@ -12,7 +12,7 @@ import {
     LOCALES, CHART_COLORS,
     SINGULAR_TYPE, SINGULAR_CATEGORY, CATEGORY_KEYS,
     WEAPON_CATEGORIES, WEAPON_CATEGORY_SLUGS, VIRTUAL_CATEGORIES, CRAFTING_SUBCATEGORIES, CATEGORY_GROUPS,
-    KEYS, CHORD_TIMEOUT,
+    KEYS, CHORD_TIMEOUT, matchesKey,
     FACTION_ICONS, FACTION_COLORS, FACTION_LIST,
 } from './constants.js';
 import {
@@ -6618,8 +6618,8 @@ export const appDefinition = {
 
             // Modal-context shortcuts
             if (this.modalOpen && this.modalItem) {
-                if (e.key === KEYS.PREV_ITEM) { this.navigateModal(-1); return; }
-                if (e.key === KEYS.NEXT_ITEM) { this.navigateModal(1); return; }
+                if (matchesKey(e.key, KEYS.PREV_ITEM)) { this.navigateModal(-1); return; }
+                if (matchesKey(e.key, KEYS.NEXT_ITEM)) { this.navigateModal(1); return; }
                 if (e.key === KEYS.FAVORITE) { this.toggleFavorite(this.modalItem.id); return; }
                 if (e.key === KEYS.PIN) { this.togglePin(this.modalItem.id); return; }
                 return;
@@ -6642,7 +6642,7 @@ export const appDefinition = {
             }
 
             // Global single-key shortcuts
-            if (e.key === KEYS.SEARCH) {
+            if (matchesKey(e.key, KEYS.SEARCH)) {
                 e.preventDefault();
                 if (!this.globalQuery && this.lastGlobalQuery) {
                     this.globalQuery = this.lastGlobalQuery;
@@ -6668,8 +6668,8 @@ export const appDefinition = {
                 this.filterInput = "";
                 return;
             }
-            if (e.key === KEYS.PREV_CATEGORY || e.key === KEYS.NEXT_CATEGORY) {
-                this.navigateCategory(e.key === KEYS.PREV_CATEGORY ? -1 : 1);
+            if (matchesKey(e.key, KEYS.PREV_CATEGORY) || matchesKey(e.key, KEYS.NEXT_CATEGORY)) {
+                this.navigateCategory(matchesKey(e.key, KEYS.PREV_CATEGORY) ? -1 : 1);
                 return;
             }
         });
