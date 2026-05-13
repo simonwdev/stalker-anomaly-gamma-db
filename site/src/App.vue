@@ -119,7 +119,8 @@
     <main class="content" :class="{ 'content-maps': mapsActive }">
         <MapsView v-if="mapsMounted" v-show="mapsActive" :pack-id="activePack?.id" :visible="mapsActive" />
         <TradingView
-            v-if="tradingActive"
+            v-if="tradingMounted"
+            v-show="tradingActive"
             :pack-id="activePack?.id"
             :index-by-id="indexById"
             @navigate-to-item="navigateToItem"
@@ -128,7 +129,8 @@
             @hide-item-hover="hideItemHover()"
         />
         <DamageSimulator
-            v-if="damageSimActive"
+            v-if="damageSimMounted"
+            v-show="damageSimActive"
             :weapon-categories="categoryItems"
             :ammo-items="categoryItems['ammo'] || []"
             :mutant-profiles="mutantProfilesCache || []"
@@ -290,7 +292,8 @@
 
             <!-- Build Planner view -->
             <BuildPlanner
-                v-if="buildPlannerActive"
+                v-if="buildPlannerMounted"
+                v-show="buildPlannerActive"
                 ref="buildPlanner"
                 :build-player-name="buildPlayerName"
                 :build-player-faction="buildPlayerFaction"

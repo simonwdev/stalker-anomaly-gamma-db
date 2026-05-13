@@ -153,10 +153,13 @@ export const appDefinition = {
             buildPlayerName: "Stalker",
             buildPlayerFaction: "stalker",
             buildPlannerActive: false,
+            buildPlannerMounted: false,
             mapsActive: false,
             mapsMounted: false,
             tradingActive: false,
+            tradingMounted: false,
             damageSimActive: false,
+            damageSimMounted: false,
             versionCompareActive: false,
             startingLoadoutsActive: false,
             startingLoadoutsCache: null,
@@ -1861,6 +1864,7 @@ export const appDefinition = {
                         this.activeCategory = null;
                     } else if (urlCat === "trading" || pathParsed.trading) {
                         this.tradingActive = true;
+                        this.tradingMounted = true;
                         this.activeCategory = null;
                     } else if (urlCat === "version-compare" || pathParsed.versionCompare) {
                         // Defer to restoreUrlState
@@ -2828,6 +2832,7 @@ export const appDefinition = {
         openTrading() {
             this.resetViewState();
             this.tradingActive = true;
+            this.tradingMounted = true;
             this.pushUrlState(true);
         },
 
@@ -4643,6 +4648,7 @@ export const appDefinition = {
                 this.activeCategory = null;
             } else if (parsed.trading || legacyCat === "trading") {
                 this.tradingActive = true;
+                this.tradingMounted = true;
                 this.activeCategory = null;
             } else if (parsed.versionCompare || legacyCat === "version-compare") {
                 this.versionCompareActive = true;
@@ -4822,6 +4828,7 @@ export const appDefinition = {
         async openBuildPlanner() {
             this.resetViewState();
             this.buildPlannerActive = true;
+            this.buildPlannerMounted = true;
 
             // Load equipment category data
             const cats = ["outfits", "helmets", "belt-attachments", "artefacts", ...WEAPON_CATEGORY_SLUGS, GRENADE_SLUG, "ammo"];
@@ -4859,6 +4866,7 @@ export const appDefinition = {
         async openDamageSim() {
             this.resetViewState();
             this.damageSimActive = true;
+            this.damageSimMounted = true;
 
             const cats = [...WEAPON_CATEGORY_SLUGS, "ammo"];
             await Promise.all([
