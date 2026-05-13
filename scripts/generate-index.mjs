@@ -309,6 +309,31 @@ for (const file of files) {
   console.log(`${file}: ${items.length} items (${config.category})`);
 }
 
+// ── Merge synthetic (hand-authored) items into category data + index ─────────
+// These are entries the game exporter doesn't emit — e.g. meta artefacts like
+// Lucifer that the game spawns dynamically rather than placing in the world.
+const syntheticPath = join(CSV_DIR, "synthetic-items.json");
+if (existsSync(syntheticPath)) {
+  const synthetic = JSON.parse(readFileSync(syntheticPath, "utf-8"));
+  for (const entry of synthetic.items ?? []) {
+    const slug = categorySlug(entry.category);
+    const catEntry = categoryData.get(slug);
+    if (!catEntry) {
+      console.warn(`Synthetic item: category "${entry.category}" not loaded yet, skipping ${entry.fields?.id}`);
+      continue;
+    }
+    const item = entry.fields;
+    if (seen.has(item.id)) {
+      console.warn(`Synthetic item ${item.id} collides with an exporter entry; skipping`);
+      continue;
+    }
+    seen.add(item.id);
+    catEntry.items.push(item);
+    index.push({ id: item.id, name: item.pda_encyclopedia_name || item.displayName, category: entry.category });
+    console.log(`Synthetic item: ${item.id} → ${entry.category}`);
+  }
+}
+
 // ── Split tactical/conversion kits out of the Scopes category ────────────────
 // The game exporter lumps all weapon addons (optics + body kits) into the scopes
 // CSV. These IDs are weapon conversion / body-kit items, not optical sights.

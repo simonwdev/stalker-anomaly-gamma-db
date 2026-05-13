@@ -115,21 +115,25 @@ const HIT_TYPE_CLS = {
 // to a human-readable unit. Scale is skipped when the data already supplies
 // `unit`, when the value isn't a number, or when no `scale` is configured.
 const STAT_FORMAT = {
-    health_per_tick:                  { labelKey: 'app_perk_stat_health_per_tick',         scale: 100, unit: '%/tick' },
+    // Raw fractional values from the engine are applied every 100ms (the actor
+    // update cycle in perk_based_artefacts.script: actor_on_update_timer = 0.1).
+    // Multiplying by 1000 (= 100 for fraction->% × 10 ticks/sec) yields a
+    // player-facing per-second rate, which matches the felt pace of the game.
+    health_per_tick:                  { labelKey: 'app_perk_stat_health_per_tick',         scale: 1000, unit: '%/s' },
     health_per_second:                { labelKey: 'app_perk_stat_health_per_tick' },
-    power_per_tick:                   { labelKey: 'app_perk_stat_stamina_per_tick',        scale: 100, unit: '%/tick' },
+    power_per_tick:                   { labelKey: 'app_perk_stat_stamina_per_tick',        scale: 1000, unit: '%/s' },
     power_regen:                      { labelKey: 'app_perk_stat_stamina_regen' },
-    psy_per_tick:                     { labelKey: 'app_perk_stat_psy_per_tick',            scale: 100, unit: '%/tick' },
-    psy_drain_per_tick:               { labelKey: 'app_perk_stat_psy_drain_per_tick',      scale: 100, unit: '%/tick' },
-    psy_boost_per_tick:               { labelKey: 'app_perk_stat_psy_boost_per_tick',      scale: 100, unit: '%/tick' },
+    psy_per_tick:                     { labelKey: 'app_perk_stat_psy_per_tick',            scale: 1000, unit: '%/s' },
+    psy_drain_per_tick:               { labelKey: 'app_perk_stat_psy_drain_per_tick',      scale: 1000, unit: '%/s' },
+    psy_boost_per_tick:               { labelKey: 'app_perk_stat_psy_boost_per_tick',      scale: 1000, unit: '%/s' },
     psy_recovery:                     { labelKey: 'app_perk_stat_psy_recovery' },
-    bleeding_cure:                    { labelKey: 'app_perk_stat_bleeding_cure',           scale: 100, unit: '%/tick' },
-    satiety_drain_per_tick:           { labelKey: 'app_perk_stat_hunger_drain_per_tick',   scale: 100, unit: '%/tick' },
-    radiation_cure_per_tick:          { labelKey: 'app_perk_stat_radiation_cure_per_tick', scale: 100, unit: '%/tick' },
-    sprint_speed:                     { labelKey: 'app_perk_stat_sprint_speed',            scale: 100, unit: '%' },
-    speed:                            { labelKey: 'app_perk_stat_speed',                   scale: 100, unit: '%' },
-    companion_heal:                   { labelKey: 'app_perk_stat_companion_heal',          scale: 100, unit: '%/tick' },
-    pda_detector_nvg_charge_per_tick: { labelKey: 'app_perk_stat_device_charge_per_tick',  scale: 100, unit: '%/tick' },
+    bleeding_cure:                    { labelKey: 'app_perk_stat_bleeding_cure',           scale: 1000, unit: '%/s' },
+    satiety_drain_per_tick:           { labelKey: 'app_perk_stat_hunger_drain_per_tick',   scale: 1000, unit: '%/s' },
+    radiation_cure_per_tick:          { labelKey: 'app_perk_stat_radiation_cure_per_tick', scale: 1000, unit: '%/s' },
+    sprint_speed:                     { labelKey: 'app_perk_stat_sprint_speed',            scale: 100,  unit: '%' },
+    speed:                            { labelKey: 'app_perk_stat_speed',                   scale: 100,  unit: '%' },
+    companion_heal:                   { labelKey: 'app_perk_stat_companion_heal',          scale: 1000, unit: '%/s' },
+    pda_detector_nvg_charge_per_tick: { labelKey: 'app_perk_stat_device_charge_per_tick',  scale: 1000, unit: '%/s' },
     health_drain:                     { labelKey: 'app_perk_stat_health_drain' },
     power_drain:                      { labelKey: 'app_perk_stat_stamina_drain' },
     carry_weight_bonus:               { labelKey: 'app_perk_stat_carry_weight_bonus' },

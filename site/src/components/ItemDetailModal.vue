@@ -101,12 +101,12 @@
                                 </template>
                             </div>
                         </div>
-                        <div v-if="parsedPerk" class="modal-perk-block">
+                        <div v-if="parsedPerk || (modalItem && pbaConstants[modalItem.id])" class="modal-perk-block">
                             <div class="modal-perk-title">
                                 <span class="modal-perk-tag">{{ t('app_label_perk') }}</span>
-                                <span v-if="parsedPerk.name" class="modal-perk-name">{{ parsedPerk.name }}</span>
+                                <span v-if="parsedPerk?.name" class="modal-perk-name">{{ parsedPerk.name }}</span>
                             </div>
-                            <ul v-if="parsedPerk.items.length" class="modal-perk-items">
+                            <ul v-if="parsedPerk?.items?.length" class="modal-perk-items">
                                 <li v-for="(it, i) in parsedPerk.items" :key="i" :class="'modal-perk-' + it.kind">{{ it.text }}</li>
                             </ul>
                             <PerkDetails

@@ -2718,6 +2718,12 @@
     "displayName": "st_af_lobster_eyes_name"
   },
   {
+    "id": "af_lucifer",
+    "name": "st_af_lucifer_name",
+    "category": "Artefacts",
+    "displayName": "st_af_lucifer_name"
+  },
+  {
     "id": "af_medallion",
     "name": "st_af_medallion_name",
     "category": "Artefacts",

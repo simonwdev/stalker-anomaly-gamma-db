@@ -10,11 +10,11 @@
     "cooldown": null,
     "scaling": null,
     "passive": [
-      { "stat": "power_per_tick", "value": 2, "unit": "%/tick x current radiation", "perCount": true },
+      { "stat": "power_per_tick", "value": 20, "unit": "%/s x current radiation", "perCount": true },
       { "stat": "radiation_cure_per_tick", "value": -0.00005, "perCount": true }
     ],
     "synergy": null,
-    "notes": "Stamina regen scales with both your current radiation level and belt count. Also bleeds off a small flat amount of radiation per tick per copy."
+    "notes": "Stamina regen scales with both your current radiation level and belt count. Also bleeds off a small flat amount of radiation per second per copy."
   },
 
   "af_ball": {
@@ -192,10 +192,10 @@
       "values": [1, 2, 3, 4, 5]
     },
     "passive": [
-      { "stat": "health_per_second", "value": 1, "unit": "%/s x food's satiety value", "scope": "while the effect is active" }
+      { "stat": "health_per_second", "value": 10, "unit": "%/s x food's satiety value", "scope": "while the effect is active" }
     ],
     "synergy": null,
-    "notes": "Eating food gives a regen tick of (1% x satiety_value) of max HP each second for (1 x belt count) seconds. Higher-satiety foods heal more per tick; more copies on the belt extend the effect window."
+    "notes": "Eating food restores (10% x satiety_value) of max HP per second for (1 x belt count) seconds. Higher-satiety foods heal faster; more copies on the belt extend the heal window."
   },
 
   "af_kislushka": {
@@ -311,10 +311,10 @@
     "scaling": null,
     "passive": [
       { "stat": "outgoing_damage", "value": "x0.5" },
-      { "stat": "delayed_bleed_to_enemy", "value": 0.14, "unit": "% of original hit", "perCount": true, "scope": "applied 7s after the hit" }
+      { "stat": "bleed_to_enemy", "value": 9.8, "unit": "% of original hit", "perCount": true, "scope": "accumulated over 7s, ticking every 100ms" }
     ],
     "synergy": null,
-    "notes": "Your direct hits to NPCs and monsters do 50% damage. The original hit's power x 0.14% x belt count is applied to the target as a single delayed tick 7 seconds later. Trade direct damage for guaranteed follow-through that scales with belt count."
+    "notes": "Your direct hits to NPCs and monsters do 50% damage. For 7 seconds after the hit, a fraction of the original hit power (0.14% x belt count per 100ms tick) is applied to the target every cycle, totalling roughly 9.8% x belt count of the original hit. Trade direct damage for a steady follow-through that scales with belt count."
   },
 
   "af_sandstone": {
