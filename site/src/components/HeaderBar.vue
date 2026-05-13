@@ -126,27 +126,24 @@
         >
         <div class="search-dropdown" ref="searchDropdown" v-show="globalQuery.trim()">
             <a
-                v-for="(item, idx) in globalResults" :key="item.id" href="#"
+                v-for="(item, idx) in globalResults" :key="'item-' + item.id" href="#"
                 :class="{ 'search-active': activeSearchIdx === idx }"
-                @click.prevent="$emit('selectSearchResult', item.id)"
+                @click.prevent="$emit('selectSearchResultInSection', { id: item.id, category: item.category })"
                 @mouseenter="activeSearchIdx = idx"
             >
                 <span v-html="highlightMatch(tName(item), globalQuery)"></span><template v-if="!tName(item).includes('[')"> <small class="search-id-hint">[{{ item.id }}]</small></template>
-                <span class="search-cat-badge">{{ tCat(item.category) }}</span>
+                <span class="search-cat-badge">{{ t('app_nav_item_db') }} › {{ tCat(item.category) }}</span>
             </a>
-            <template v-if="globalCraftingResults.length > 0">
-                <div class="search-dropdown-divider" v-if="globalResults.length > 0"></div>
-                <a
-                    v-for="(cr, cidx) in globalCraftingResults" :key="'craft-' + cr.id" href="#"
-                    class="search-crafting-result"
-                    :class="{ 'search-active': activeSearchIdx === globalResults.length + cidx }"
-                    @click.prevent="$emit('selectCraftingSearchResult', cr)"
-                    @mouseenter="activeSearchIdx = globalResults.length + cidx"
-                >
-                    <span v-html="highlightMatch(cr.displayName, globalQuery)"></span>
-                    <span class="search-cat-badge search-cat-badge--crafting">{{ t('app_cat_crafting') }} › {{ cr.craftCategoryLabel }}</span>
-                </a>
-            </template>
+            <a
+                v-for="(cr, cidx) in globalCraftingResults" :key="'craft-' + cr.id" href="#"
+                class="search-crafting-result"
+                :class="{ 'search-active': activeSearchIdx === globalResults.length + cidx }"
+                @click.prevent="$emit('selectCraftingSearchResult', cr)"
+                @mouseenter="activeSearchIdx = globalResults.length + cidx"
+            >
+                <span v-html="highlightMatch(cr.displayName, globalQuery)"></span>
+                <span class="search-cat-badge search-cat-badge--crafting">{{ t('app_cat_crafting') }} › {{ cr.craftCategoryLabel }}</span>
+            </a>
             <p v-show="globalResults.length === 0 && globalCraftingResults.length === 0 && globalQuery.trim()" class="no-results">{{ t('app_label_no_results') }}</p>
         </div>
     </div>
@@ -193,27 +190,24 @@
             <button class="mobile-search-close" @click="closeMobileSearch()">&times;</button>
             <div class="search-dropdown" ref="mobileSearchDropdown" v-show="globalQuery.trim()" style="position:absolute;top:100%;left:0;right:0">
                 <a
-                    v-for="(item, idx) in globalResults" :key="item.id" href="#"
+                    v-for="(item, idx) in globalResults" :key="'item-' + item.id" href="#"
                     :class="{ 'search-active': activeSearchIdx === idx }"
-                    @click.prevent="$emit('selectSearchResult', item.id); closeMobileSearch()"
+                    @click.prevent="$emit('selectSearchResultInSection', { id: item.id, category: item.category }); closeMobileSearch()"
                     @mouseenter="activeSearchIdx = idx"
                 >
                     <span v-html="highlightMatch(tName(item), globalQuery)"></span><template v-if="!tName(item).includes('[')"> <small class="search-id-hint">[{{ item.id }}]</small></template>
-                    <span class="search-cat-badge">{{ tCat(item.category) }}</span>
+                    <span class="search-cat-badge">{{ t('app_nav_item_db') }} › {{ tCat(item.category) }}</span>
                 </a>
-                <template v-if="globalCraftingResults.length > 0">
-                    <div class="search-dropdown-divider" v-if="globalResults.length > 0"></div>
-                    <a
-                        v-for="(cr, cidx) in globalCraftingResults" :key="'craft-' + cr.id" href="#"
-                        class="search-crafting-result"
-                        :class="{ 'search-active': activeSearchIdx === globalResults.length + cidx }"
-                        @click.prevent="$emit('selectCraftingSearchResult', cr); closeMobileSearch()"
-                        @mouseenter="activeSearchIdx = globalResults.length + cidx"
-                    >
-                        <span v-html="highlightMatch(cr.displayName, globalQuery)"></span>
-                        <span class="search-cat-badge search-cat-badge--crafting">{{ t('app_cat_crafting') }} › {{ cr.craftCategoryLabel }}</span>
-                    </a>
-                </template>
+                <a
+                    v-for="(cr, cidx) in globalCraftingResults" :key="'craft-' + cr.id" href="#"
+                    class="search-crafting-result"
+                    :class="{ 'search-active': activeSearchIdx === globalResults.length + cidx }"
+                    @click.prevent="$emit('selectCraftingSearchResult', cr); closeMobileSearch()"
+                    @mouseenter="activeSearchIdx = globalResults.length + cidx"
+                >
+                    <span v-html="highlightMatch(cr.displayName, globalQuery)"></span>
+                    <span class="search-cat-badge search-cat-badge--crafting">{{ t('app_cat_crafting') }} › {{ cr.craftCategoryLabel }}</span>
+                </a>
                 <p v-show="globalResults.length === 0 && globalCraftingResults.length === 0 && globalQuery.trim()" class="no-results">{{ t('app_label_no_results') }}</p>
             </div>
         </div>
@@ -302,6 +296,7 @@ export default {
         'toggleSidebarCollapse', 'toggleSidebar', 'switchPack',
         'changeLocale', 'openShortcutHelp', 'clearGlobalQuery',
         'update:globalQuery', 'search', 'escapeSearch', 'selectSearchResult',
+        'selectSearchResultInSection',
         'openItemDb', 'openMaps', 'openTrading', 'openBuildPlanner', 'openCrafting', 'openDamageSim',
         'toggleHideNoDrop', 'toggleHideUnusedAmmo', 'toggleShowTileIcons',
         'selectCraftingSearchResult',
@@ -383,7 +378,8 @@ export default {
             const total = this.globalResults.length + this.globalCraftingResults.length;
             if (total === 0 || this.activeSearchIdx < 0) return;
             if (this.activeSearchIdx < this.globalResults.length) {
-                this.$emit('selectSearchResult', this.globalResults[this.activeSearchIdx].id);
+                const item = this.globalResults[this.activeSearchIdx];
+                this.$emit('selectSearchResultInSection', { id: item.id, category: item.category });
             } else {
                 const cr = this.globalCraftingResults[this.activeSearchIdx - this.globalResults.length];
                 this.$emit('selectCraftingSearchResult', cr);

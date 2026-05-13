@@ -4787,6 +4787,15 @@ export const appDefinition = {
             this.globalCraftingResults = [];
         },
 
+        async navigateToItemInSection(id, category) {
+            if (this.globalQuery.trim()) this.lastGlobalQuery = this.globalQuery;
+            this.globalQuery = "";
+            this.globalResults = [];
+            this.globalCraftingResults = [];
+            await this.selectCategory(category);
+            this.navigateToItem(id);
+        },
+
         async selectCraftingSearchResult(result) {
             const q = this.globalQuery.trim();
             this.lastGlobalQuery = this.globalQuery;

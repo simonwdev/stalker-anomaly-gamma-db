@@ -79,6 +79,7 @@
     @search="debouncedGlobalSearch()"
     @escape-search="() => { if (globalQuery.trim()) lastGlobalQuery = globalQuery; globalQuery = '' }"
     @select-search-result="(id) => { lastGlobalQuery = globalQuery; globalQuery = ''; navigateToItem(id) }"
+    @select-search-result-in-section="({ id, category }) => navigateToItemInSection(id, category)"
     @select-crafting-search-result="(result) => selectCraftingSearchResult(result)"
 />
 
