@@ -235,6 +235,7 @@
 
     /* ── Special / icon colors ──────────────────────────── */
     --color-heart:              #e25555;   /* acknowledgements heart icon  */
+    --color-coffee:             #a07a52;   /* donate coffee icon           */
 
     /* ── Map NPC role colors ────────────────────────────── */
     --color-map-trader:         #ffd54f;

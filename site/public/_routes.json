@@ -8,6 +8,7 @@
     "/js/*",
     "/acknowledgements/*",
     "/contact/*",
+    "/donate/*",
     "/release-notes/*"
   ]
 }
