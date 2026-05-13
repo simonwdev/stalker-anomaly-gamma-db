@@ -1,4 +1,7 @@
-﻿/img/icons/*
+﻿/sw.js
+  Cache-Control: no-store
+
+/img/icons/*
   Cache-Control: public, max-age=31536000, immutable
 
 /img/*

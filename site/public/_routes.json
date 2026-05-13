@@ -2,6 +2,7 @@
   "version": 1,
   "include": ["/*"],
   "exclude": [
+    "/sw.js",
     "/data/*",
     "/img/*",
     "/css/*",
