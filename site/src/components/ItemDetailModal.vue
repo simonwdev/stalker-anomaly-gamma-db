@@ -101,6 +101,15 @@
                                 </template>
                             </div>
                         </div>
+                        <div v-if="parsedPerk" class="modal-perk-block">
+                            <div class="modal-perk-title">
+                                <span class="modal-perk-tag">{{ t('app_label_perk') }}</span>
+                                <span v-if="parsedPerk.name" class="modal-perk-name">{{ parsedPerk.name }}</span>
+                            </div>
+                            <ul v-if="parsedPerk.items.length" class="modal-perk-items">
+                                <li v-for="(it, i) in parsedPerk.items" :key="i" :class="'modal-perk-' + it.kind">{{ it.text }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -385,6 +394,7 @@ export default {
     modalUpgradeNodes: { type: Array, default: null },
     modalUsedByWeapons: Array,
     parsedDescription: Object,
+    parsedPerk: Object,
     modalWeaponAddons: { type: Object, default: () => ({ scopes: [], silencers: [], launchers: [] }) },
     modalAddonCompatibleWeapons: { type: Array, default: () => [] },
     favoriteIds: Array,
@@ -498,6 +508,81 @@ export default {
 </script>
 
 <style scoped>
+.modal-perk-block {
+    margin: 0.6rem 0 0.25rem;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--color-accent-gold);
+    border-radius: 4px;
+    background: var(--color-surface-3);
+}
+.modal-perk-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.45rem;
+}
+.modal-perk-tag {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent-gold);
+    background: var(--color-accent-tint-18);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+}
+.modal-perk-name {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+.modal-perk-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.modal-perk-items li {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+.modal-perk-bullet {
+    position: relative;
+    padding-left: 1rem;
+}
+.modal-perk-bullet::before {
+    content: "•";
+    position: absolute;
+    left: 0.3rem;
+    color: var(--text-tertiary);
+}
+.modal-perk-section {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 0.35rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+}
+.modal-perk-sub {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.78rem;
+}
+.modal-perk-sub::before {
+    content: "›";
+    position: absolute;
+    left: 0.7rem;
+    color: var(--text-tertiary);
+}
 .modal-sticky-bar {
     position: sticky;
     top: -0.75rem;

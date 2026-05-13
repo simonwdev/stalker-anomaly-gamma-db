@@ -8,7 +8,7 @@
             <span v-if="item.hasNpcWeaponDrop === false" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
             <span v-if="isUnusedAmmo(item)" class="badge-unused" v-tooltip="t('app_tooltip_unused_ammo')">{{ t('app_badge_unused') }}</span>
             <span v-if="item.Type" class="badge-flag badge-type">{{ t(singularType(item.Type)) }}</span>
-            <span v-if="item['st_data_export_has_perk'] === 'Y'" class="badge-flag badge-perk">{{ t('app_badge_perk') }}</span>
+            <span v-if="item['st_data_export_has_perk'] === 'Y'" class="badge-flag badge-perk">{{ perkBadgeText(item) }}</span>
             <span v-if="item['st_data_export_is_junk'] === 'Y'" class="badge-flag badge-junk">{{ t('app_badge_junk') }}</span>
             <span v-if="item['st_data_export_can_be_crafted'] === 'Y'" class="badge-flag badge-craftable">{{ t('app_badge_craftable') }}</span>
             <span v-if="item['ui_mcm_menu_exo'] === 'Y'" class="badge-flag badge-powered">{{ t('app_badge_powered') }}</span>
@@ -89,10 +89,16 @@ export default {
         'isUnusedAmmo', 'openAmmoFromCaliber',
         'showWeaponListPopover',
         'hideWeaponListPopover',
+        'parsePerk',
     ],
     methods: {
         isFavorited(id) { return this.favoriteIds.includes(id); },
         isPinned(id) { return this.pinnedIds.includes(id); },
+        perkBadgeText(item) {
+            const name = this.parsePerk?.(item)?.name;
+            const label = this.t('app_badge_perk');
+            return name ? `${label}: ${name}` : label;
+        },
     },
 };
 </script>

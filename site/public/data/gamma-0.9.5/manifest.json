@@ -2,7 +2,7 @@
   "addon-weapons.json": "5f18b0cf",
   "ammo-weapons.json": "0ff619e3",
   "ammo.json": "f522005f",
-  "artefacts.json": "1c50c6ec",
+  "artefacts.json": "497c3cb2",
   "ballistic-ranges.json": "5d331847",
   "belt-attachments.json": "4b3c21a1",
   "calibers.json": "fd765750",
@@ -42,7 +42,7 @@
   "tactical-kits.json": "db3255a6",
   "toolkit-rates.json": "022b557e",
   "traders-meta.json": "c0957f24",
-  "translations.json": "76f598d7",
+  "translations.json": "0807e0fb",
   "upgrades.json": "686c1124",
   "weapon-addons.json": "db28fa66"
 }

@@ -470,6 +470,7 @@
     :modal-upgrade-nodes="modalUpgradeNodes"
     :modal-used-by-weapons="modalUsedByWeapons"
     :parsed-description="parsedDescription"
+    :parsed-perk="parsedPerk"
     :modal-weapon-addons="modalWeaponAddons"
     :modal-addon-compatible-weapons="modalAddonCompatibleWeapons"
     :favorite-ids="favoriteIds"
@@ -680,6 +681,7 @@ export default {
       buildSlotColor: this.buildSlotColor,
       buildStatFormatted: this.buildStatFormatted,
       parseDescription: this.parseDescription,
+      parsePerk: this.parsePerk,
       getItemFields: this.getItemFields,
       getItemCategoryLabel: this.getItemCategoryLabel,
       buildHoverDiff: this.buildHoverDiff,

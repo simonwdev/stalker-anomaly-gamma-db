@@ -53,7 +53,7 @@ if (!existsSync(destDir)) {
   process.exit(1);
 }
 
-const TRANSLATION_FILES = new Set(["en_us.csv", "ru_ru.csv", "fr_fr.csv"]);
+const TRANSLATION_FILES = new Set(["en_us.csv", "ru_ru.csv", "fr_fr.csv", "translation_keys.csv"]);
 
 const srcFiles = readdirSync(srcDir).filter((f) => f.endsWith(".csv"));
 if (srcFiles.length === 0) {
@@ -71,15 +71,20 @@ for (const file of srcFiles) {
   if (mergeTranslations && TRANSLATION_FILES.has(file)) {
     // Read as latin1 (binary-safe) to preserve Windows-1251 bytes.
     // The generation script handles the actual Win-1251 → UTF-8 decoding.
+    // translation_keys.csv has one bare key per line (no comma); the others
+    // have "key,value" rows. Extract the key with the first-comma rule, or
+    // fall back to the whole line for bare-key files.
+    const keyOf = (line) => {
+      const sep = line.indexOf(",");
+      return sep > 0 ? line.slice(0, sep) : line;
+    };
+
     const existing = new Map();
     if (existsSync(destPath)) {
       const text = readFileSync(destPath, "latin1");
       for (const line of text.split(/\r?\n/)) {
         if (!line.trim()) continue;
-        const sep = line.indexOf(",");
-        if (sep > 0) {
-          existing.set(line.slice(0, sep), line);
-        }
+        existing.set(keyOf(line), line);
       }
     }
 
@@ -88,9 +93,7 @@ for (const file of srcFiles) {
     let added = 0;
     for (const line of srcText.split(/\r?\n/)) {
       if (!line.trim()) continue;
-      const sep = line.indexOf(",");
-      if (sep <= 0) continue;
-      const key = line.slice(0, sep);
+      const key = keyOf(line);
       if (key === "Translation Key") continue;
       if (!existing.has(key)) {
         existing.set(key, line);

@@ -395,6 +395,11 @@ export const appDefinition = {
             return this.parseDescription(this.modalItem);
         },
 
+        parsedPerk() {
+            if (!this.modalItem?.st_data_export_perk_description) return null;
+            return this.parsePerk(this.modalItem);
+        },
+
         modalWeaponAddons() {
             if (!this.modalItem || !this.weaponAddonsCache) return { scopes: [], silencers: [], launchers: [], kits: [] };
             const addons = this.weaponAddonsCache[this.modalItem.id];
@@ -6056,6 +6061,30 @@ export const appDefinition = {
         inventorySlotTypeLabel(slotType) {
             const map = { outfit: "app_type_outfit", helmet: "app_type_helmet", backpack: "app_type_backpack", belt: "app_type_belt_attachment", artifact: "app_type_artefact", weapon: "app_build_weapon", sidearm: "app_build_sidearm", grenade: "app_build_grenade", ammo: "app_build_ammo" };
             return this.t(map[slotType]) || slotType;
+        },
+
+        parsePerk(item) {
+            const key = item?.st_data_export_perk_description;
+            if (!key) return null;
+            const raw = this.t(key);
+            if (!raw || raw === key) return null;
+            const NL = /\x5cn/g;
+            const lines = raw.split(NL).map(l => l.trim()).filter(Boolean);
+            if (!lines.length) return null;
+            const first = lines[0].replace(/^perk\s*:\s*/i, "").trim();
+            const items = [];
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i];
+                if (/^[••]/.test(line)) {
+                    items.push({ kind: "bullet", text: line.replace(/^[••]\s*/, "").trim() });
+                } else if (/^[-–—]/.test(line)) {
+                    items.push({ kind: "sub", text: line.replace(/^[-–—]\s*/, "").trim() });
+                } else if (line) {
+                    items.push({ kind: "section", text: line.replace(/:\s*$/, "").trim() });
+                }
+            }
+            if (!first && !items.length) return null;
+            return { name: first, items };
         },
 
         parseDescription(item) {
