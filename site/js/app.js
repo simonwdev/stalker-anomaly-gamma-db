@@ -4460,6 +4460,11 @@ export const appDefinition = {
             return `/db/${pack}#${itemId}`;
         },
 
+        itemExists(itemId) {
+            if (!itemId) return false;
+            return this.index?.some(i => i.id === itemId) ?? false;
+        },
+
         categoryHref(category) {
             return this.navHref(categorySlug(category));
         },

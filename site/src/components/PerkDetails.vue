@@ -5,9 +5,14 @@
         <span v-for="(c, i) in cooldownChips" :key="'c' + i" class="perk-chip perk-chip-cooldown" v-tooltip="c.tooltip">
             <LucideTimer :size="11" />{{ c.label }}
         </span>
-        <a v-for="syn in synergyChips" :key="'s' + syn.id" class="perk-chip perk-chip-synergy" :href="itemHref(syn.id)" @click.prevent="$emit('navigateToItem', syn.id)">
-            <LucideLink :size="11" />{{ syn.label }}
-        </a>
+        <template v-for="syn in synergyChips" :key="'s' + syn.id">
+            <a v-if="syn.exists" class="perk-chip perk-chip-synergy" :href="itemHref(syn.id)" @click.prevent="$emit('navigateToItem', syn.id)">
+                <LucideLink :size="11" />{{ syn.label }}
+            </a>
+            <span v-else class="perk-chip perk-chip-synergy perk-chip-synergy-static">
+                <LucideLink :size="11" />{{ syn.label }}
+            </span>
+        </template>
     </div>
 
     <div v-if="entry.scaling && Array.isArray(entry.scaling.values)" class="perk-details-scaling">
@@ -28,6 +33,12 @@
                 <span v-if="b.label" class="perk-details-passive-label">{{ b.label }}:</span>
                 <span class="perk-details-passive-value">{{ b.value }}</span>
                 <span v-if="b.suffix" class="perk-details-passive-suffix">{{ b.suffix }}</span>
+                <div v-if="b.perCountValues" class="perk-details-passive-stack">
+                    <div v-for="(v, i) in b.perCountValues" :key="i" class="perk-details-passive-stack-cell">
+                        <div class="perk-details-passive-stack-key">{{ i + 1 }}</div>
+                        <div class="perk-details-passive-stack-val">{{ v }}</div>
+                    </div>
+                </div>
             </li>
         </template>
     </ul>
@@ -98,6 +109,67 @@ const HIT_TYPE_CLS = {
     explosion: 'hit-explosion',
 };
 
+// Per-stat display rules. `labelKey` translates the engine stat name to a
+// player-facing string; `scale` + `unit` convert raw fractional values (game
+// stats are usually fractions of max — e.g. 0.001/tick of a 1.0 health bar)
+// to a human-readable unit. Scale is skipped when the data already supplies
+// `unit`, when the value isn't a number, or when no `scale` is configured.
+const STAT_FORMAT = {
+    health_per_tick:                  { labelKey: 'app_perk_stat_health_per_tick',         scale: 100, unit: '%/tick' },
+    health_per_second:                { labelKey: 'app_perk_stat_health_per_tick' },
+    power_per_tick:                   { labelKey: 'app_perk_stat_stamina_per_tick',        scale: 100, unit: '%/tick' },
+    power_regen:                      { labelKey: 'app_perk_stat_stamina_regen' },
+    psy_per_tick:                     { labelKey: 'app_perk_stat_psy_per_tick',            scale: 100, unit: '%/tick' },
+    psy_drain_per_tick:               { labelKey: 'app_perk_stat_psy_drain_per_tick',      scale: 100, unit: '%/tick' },
+    psy_boost_per_tick:               { labelKey: 'app_perk_stat_psy_boost_per_tick',      scale: 100, unit: '%/tick' },
+    psy_recovery:                     { labelKey: 'app_perk_stat_psy_recovery' },
+    bleeding_cure:                    { labelKey: 'app_perk_stat_bleeding_cure',           scale: 100, unit: '%/tick' },
+    satiety_drain_per_tick:           { labelKey: 'app_perk_stat_hunger_drain_per_tick',   scale: 100, unit: '%/tick' },
+    radiation_cure_per_tick:          { labelKey: 'app_perk_stat_radiation_cure_per_tick', scale: 100, unit: '%/tick' },
+    sprint_speed:                     { labelKey: 'app_perk_stat_sprint_speed',            scale: 100, unit: '%' },
+    speed:                            { labelKey: 'app_perk_stat_speed',                   scale: 100, unit: '%' },
+    companion_heal:                   { labelKey: 'app_perk_stat_companion_heal',          scale: 100, unit: '%/tick' },
+    pda_detector_nvg_charge_per_tick: { labelKey: 'app_perk_stat_device_charge_per_tick',  scale: 100, unit: '%/tick' },
+    health_drain:                     { labelKey: 'app_perk_stat_health_drain' },
+    power_drain:                      { labelKey: 'app_perk_stat_stamina_drain' },
+    carry_weight_bonus:               { labelKey: 'app_perk_stat_carry_weight_bonus' },
+    primary_hit_power:                { labelKey: 'app_perk_stat_primary_hit_power' },
+    elemental_hit_power:              { labelKey: 'app_perk_stat_elemental_hit_power' },
+    incoming_damage:                  { labelKey: 'app_perk_stat_incoming_damage' },
+    outgoing_damage:                  { labelKey: 'app_perk_stat_outgoing_damage' },
+    bleed_dot_duration:               { labelKey: 'app_perk_stat_bleed_duration' },
+    light_range_min:                  { labelKey: 'app_perk_stat_light_range_min' },
+    light_range_max:                  { labelKey: 'app_perk_stat_light_range_max' },
+    blink_half_interval:              { labelKey: 'app_perk_stat_blink_interval' },
+    sleep_buildup:                    { labelKey: 'app_perk_stat_sleep_buildup' },
+    instant_death:                    { labelKey: 'app_perk_stat_instant_death' },
+    // Scaling-block stat names — only label translation; values keep `scaling.unit`.
+    reflect_chance:                   { labelKey: 'app_perk_stat_reflect_chance' },
+    damage_reduction:                 { labelKey: 'app_perk_stat_damage_reduction' },
+    damage_reduction_by_stacks:       { labelKey: 'app_perk_stat_damage_reduction' },
+    instakill_chance:                 { labelKey: 'app_perk_stat_instakill_chance' },
+    low_health_threshold:             { labelKey: 'app_perk_stat_low_health_threshold' },
+    effect_duration:                  { labelKey: 'app_perk_stat_effect_duration' },
+    damage_multiplier:                { labelKey: 'app_perk_stat_damage_multiplier' },
+    money_items_spawned:              { labelKey: 'app_perk_stat_money_items_spawned' },
+    stun_duration:                    { labelKey: 'app_perk_stat_stun_duration' },
+};
+
+// Max artefacts allowed on the belt in GAMMA. The source script's scaling
+// tables iterate `for artefact_count = 1, 5`, so 5 is the canonical cap.
+const MAX_BELT = 5;
+
+function formatScaledNumber(n) {
+    const rounded = Math.round(n * 1000) / 1000;
+    return String(rounded);
+}
+
+function appendUnit(value, unit) {
+    if (!unit) return value;
+    const flush = /^[%×x]/.test(unit);
+    return flush ? value + unit : value + ' ' + unit;
+}
+
 function isPlainObject(v) {
     return v !== null && typeof v === 'object' && !Array.isArray(v);
 }
@@ -117,7 +189,7 @@ function capitalizeFirst(s) {
 
 export default {
     name: 'PerkDetails',
-    inject: ['t', 'itemHref'],
+    inject: ['t', 'itemHref', 'itemExists'],
     props: {
         itemId: { type: String, required: true },
         pbaConstants: { type: Object, default: () => ({}) },
@@ -168,13 +240,18 @@ export default {
             if (!Array.isArray(syn)) return [];
             return syn
                 .filter((s) => typeof s === 'string' && s.startsWith('af_'))
-                .map((id) => ({ id, label: humanizeKey(id.replace(/^af_/, '')) }));
+                .map((id) => ({
+                    id,
+                    label: humanizeKey(id.replace(/^af_/, '')),
+                    exists: this.itemExists ? this.itemExists(id) : true,
+                }));
         },
         scalingLabel() {
             const s = this.entry?.scaling;
             if (!s) return '';
-            const stat = humanizeKey(s.stat || 'scaling');
-            return stat;
+            const fmt = STAT_FORMAT[s.stat];
+            if (fmt?.labelKey) return this.t(fmt.labelKey);
+            return humanizeKey(s.stat || 'scaling');
         },
         compactedScalingValues() {
             const s = this.entry?.scaling;
@@ -236,11 +313,7 @@ export default {
     },
     methods: {
         formatScalingCell(v) {
-            const unit = this.entry?.scaling?.unit;
-            if (!unit) return String(v);
-            // % and × multiplier sit flush; word/letter units get a hair space.
-            const flush = unit === '%' || unit === 'x' || unit === '×';
-            return flush ? `${v}${unit}` : `${v} ${unit}`;
+            return appendUnit(String(v), this.entry?.scaling?.unit);
         },
         scalingKeyLabel(i) {
             const s = this.entry?.scaling;
@@ -268,20 +341,49 @@ export default {
             }
             // Leaf bullet: has stat + (value or formula)
             if (node.stat && (node.value !== undefined || node.formula !== undefined)) {
-                const label = humanizeKey(node.stat);
+                const fmt = STAT_FORMAT[node.stat] || {};
+                const label = fmt.labelKey ? this.t(fmt.labelKey) : humanizeKey(node.stat);
+                const isNumeric = typeof node.value === 'number';
+                const renderValue = (raw) => {
+                    if (typeof raw === 'number' && fmt.scale != null && !node.unit) {
+                        return appendUnit(formatScaledNumber(raw * fmt.scale), fmt.unit);
+                    }
+                    return appendUnit(String(raw), node.unit);
+                };
                 let value;
-                if (node.value !== undefined) value = String(node.value);
-                else value = node.formula;
-                if (node.unit) value += ' ' + node.unit;
+                if (node.value !== undefined) {
+                    value = renderValue(node.value);
+                } else {
+                    value = appendUnit(node.formula, node.unit);
+                }
                 const suffixParts = [];
                 if (node.perCount) suffixParts.push(this.t('app_perk_per_count'));
                 if (node.condition) suffixParts.push('(' + node.condition + ')');
                 if (node.scope) suffixParts.push('[' + node.scope + ']');
+                // Per-stack scaling table — only for numeric perCount values (linear stacking).
+                // Pad each cell to the row's max decimal count so the numbers line up.
+                let perCountValues = null;
+                if (node.perCount && isNumeric) {
+                    const useStatFmt = fmt.scale != null && !node.unit;
+                    const cellUnit = useStatFmt ? fmt.unit : node.unit;
+                    const scaledNums = [];
+                    for (let n = 1; n <= MAX_BELT; n++) {
+                        const v = useStatFmt ? node.value * n * fmt.scale : node.value * n;
+                        scaledNums.push(Math.round(v * 1000) / 1000);
+                    }
+                    const decimals = Math.max(0, ...scaledNums.map((v) => {
+                        const s = String(v);
+                        const dot = s.indexOf('.');
+                        return dot === -1 ? 0 : s.length - dot - 1;
+                    }));
+                    perCountValues = scaledNums.map((v) => appendUnit(v.toFixed(decimals), cellUnit));
+                }
                 out.push({
                     kind: 'bullet',
                     label,
                     value,
                     suffix: suffixParts.length ? suffixParts.join(' ') : null,
+                    perCountValues,
                 });
                 return;
             }
@@ -368,6 +470,12 @@ export default {
     text-decoration: none;
 }
 .perk-chip-synergy:hover { background: rgba(220, 100, 100, 0.28); }
+
+.perk-chip-synergy-static {
+    cursor: default;
+    opacity: 0.75;
+}
+.perk-chip-synergy-static:hover { background: rgba(200, 80, 80, 0.18); }
 
 .perk-details-scaling {
     margin: 0.5rem 0;
@@ -465,6 +573,35 @@ export default {
     color: #888;
     margin-left: 0.3rem;
     font-size: 0.75rem;
+}
+
+.perk-details-passive-stack {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+    margin-left: 0.1rem;
+}
+
+.perk-details-passive-stack-cell {
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+}
+
+.perk-details-passive-stack-key {
+    font-size: 0.6rem;
+    color: #777;
+    line-height: 1;
+}
+
+.perk-details-passive-stack-val {
+    font-size: 0.72rem;
+    color: #d8d8d8;
+    font-variant-numeric: tabular-nums;
+    margin-top: 0.08rem;
 }
 
 .perk-details-disclosure {

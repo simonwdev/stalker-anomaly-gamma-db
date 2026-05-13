@@ -697,6 +697,7 @@ export default {
       keepWeaponListPopover: this.keepWeaponListPopover,
       navHref: this.navHref,
       itemHref: this.itemHref,
+      itemExists: this.itemExists,
       categoryHref: this.categoryHref,
       craftingHref: this.craftingHref,
       showItemHover: this.showItemHover,

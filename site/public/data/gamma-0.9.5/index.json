@@ -4418,7 +4418,7 @@
     "displayName": "st_wpn_ak12_m1 [m1]",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -4708,7 +4708,7 @@
     "displayName": "st_wpn_aps",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -4758,7 +4758,7 @@
     "displayName": "st_wpn_aug_9mm",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -4858,8 +4858,8 @@
     "displayName": "st_wpn_beretta_new [default]",
     "hasNpcWeaponDrop": false,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
-    "unobtainable": true
+    "inStartingLoadout": true,
+    "unobtainable": false
   },
   {
     "id": "wpn_beretta_m9_upgr_kit",
@@ -4878,7 +4878,7 @@
     "displayName": "st_wpn_beretta_px4",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -4888,7 +4888,7 @@
     "displayName": "st_wpn_bizon",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -4898,7 +4898,7 @@
     "displayName": "st_wpn_bm16",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -4988,8 +4988,8 @@
     "displayName": "st_wpn_colt1911_n [default]",
     "hasNpcWeaponDrop": false,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
-    "unobtainable": true
+    "inStartingLoadout": true,
+    "unobtainable": false
   },
   {
     "id": "wpn_colt1911_duty",
@@ -5068,7 +5068,7 @@
     "displayName": "st_wpn_eft_mts_255",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -5158,7 +5158,7 @@
     "displayName": "st_wpn_fn57",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -5178,7 +5178,7 @@
     "displayName": "st_wpn_fnp45",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -5228,7 +5228,7 @@
     "displayName": "st_wpn_fort17 [fort17]",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -5378,7 +5378,7 @@
     "displayName": "st_wpn_glock",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -5418,7 +5418,7 @@
     "displayName": "st_wpn_grach",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -5568,7 +5568,7 @@
     "displayName": "st_wpn_ithacam37_stakeout [20x70]",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -5598,7 +5598,7 @@
     "displayName": "st_wpn_k98",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -5638,7 +5638,7 @@
     "displayName": "st_wpn_kiparis",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -5908,8 +5908,8 @@
     "displayName": "st_wpn_m45a1",
     "hasNpcWeaponDrop": false,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
-    "unobtainable": true
+    "inStartingLoadout": true,
+    "unobtainable": false
   },
   {
     "id": "wpn_lr300_camo",
@@ -6018,8 +6018,8 @@
     "displayName": "st_wpn_mk23",
     "hasNpcWeaponDrop": false,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
-    "unobtainable": true
+    "inStartingLoadout": true,
+    "unobtainable": false
   },
   {
     "id": "wpn_mk47",
@@ -6048,7 +6048,7 @@
     "displayName": "st_wpn_mosin_k",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -6068,7 +6068,7 @@
     "displayName": "st_wpn_mossberg590a1 [rail]",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -6128,7 +6128,7 @@
     "displayName": "st_wpn_mp5 [default]",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -6158,7 +6158,7 @@
     "displayName": "st_wpn_mp5sd",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -6188,7 +6188,7 @@
     "displayName": "st_wpn_oc33_new",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -6248,7 +6248,7 @@
     "displayName": "st_wpn_pb_new",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -6318,8 +6318,8 @@
     "displayName": "st_wpn_pl15",
     "hasNpcWeaponDrop": false,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
-    "unobtainable": true
+    "inStartingLoadout": true,
+    "unobtainable": false
   },
   {
     "id": "wpn_pl15_tan",
@@ -6408,8 +6408,8 @@
     "displayName": "st_wpn_pm_new [default]",
     "hasNpcWeaponDrop": false,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
-    "unobtainable": true
+    "inStartingLoadout": true,
+    "unobtainable": false
   },
   {
     "id": "wpn_pmm_bas",
@@ -6438,7 +6438,7 @@
     "displayName": "st_wpn_pp2000n",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -6448,7 +6448,7 @@
     "displayName": "st_wpn_ppsh41",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -6788,8 +6788,8 @@
     "displayName": "st_wpn_sig220_n [default]",
     "hasNpcWeaponDrop": false,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
-    "unobtainable": true
+    "inStartingLoadout": true,
+    "unobtainable": false
   },
   {
     "id": "wpn_sig220_n",
@@ -6858,7 +6858,7 @@
     "displayName": "st_wpn_sig226 [sig226]",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -6958,7 +6958,7 @@
     "displayName": "st_wpn_sks_b",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -7038,7 +7038,7 @@
     "displayName": "st_wpn_sr1mp_new",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -7298,7 +7298,7 @@
     "displayName": "st_wpn_toz106_m1",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -7328,7 +7328,7 @@
     "displayName": "st_wpn_toz34",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -7378,7 +7378,7 @@
     "displayName": "st_wpn_toz34_mark4_23",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -7388,7 +7388,7 @@
     "displayName": "st_wpn_toz34_obrez",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -7418,8 +7418,8 @@
     "displayName": "st_wpn_tt33_custom [default]",
     "hasNpcWeaponDrop": false,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
-    "unobtainable": true
+    "inStartingLoadout": true,
+    "unobtainable": false
   },
   {
     "id": "wpn_tt33_modern",
@@ -7628,7 +7628,7 @@
     "displayName": "st_wpn_vintorez_n1 [n1]",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -7648,7 +7648,7 @@
     "displayName": "st_wpn_vityaznew [default]",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -7698,7 +7698,7 @@
     "displayName": "st_wpn_vz61 [default]",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {
@@ -7718,8 +7718,8 @@
     "displayName": "st_wpn_walther_p99 [default]",
     "hasNpcWeaponDrop": false,
     "hasStashDrop": false,
-    "inStartingLoadout": false,
-    "unobtainable": true
+    "inStartingLoadout": true,
+    "unobtainable": false
   },
   {
     "id": "wpn_walther_p99",
@@ -7758,7 +7758,7 @@
     "displayName": "st_wpn_winchester1873",
     "hasNpcWeaponDrop": true,
     "hasStashDrop": true,
-    "inStartingLoadout": false,
+    "inStartingLoadout": true,
     "unobtainable": false
   },
   {

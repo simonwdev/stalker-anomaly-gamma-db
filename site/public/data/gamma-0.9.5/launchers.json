@@ -44,6 +44,7 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -69,6 +70,7 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -94,6 +96,7 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "inStartingLoadout": false,
       "unobtainable": false
     }
   ]

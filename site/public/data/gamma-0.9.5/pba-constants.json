@@ -10,11 +10,11 @@
     "cooldown": null,
     "scaling": null,
     "passive": [
-      { "stat": "power_regen", "value": "scales with current radiation" },
+      { "stat": "power_per_tick", "value": 2, "unit": "%/tick x current radiation", "perCount": true },
       { "stat": "radiation_cure_per_tick", "value": -0.00005, "perCount": true }
     ],
     "synergy": null,
-    "notes": "Power regen is proportional to your current radiation level. Also slowly bleeds off radiation over time."
+    "notes": "Stamina regen scales with both your current radiation level and belt count. Also bleeds off a small flat amount of radiation per tick per copy."
   },
 
   "af_ball": {
@@ -91,7 +91,7 @@
       "stat": "damage_reduction_by_stacks",
       "unit": "%",
       "stackRange": [0, 10],
-      "values": [15, 27, 39, 51, 61, 71, 79, 87, 93, 99, 100],
+      "values": [15, 26, 37, 46, 53, 60, 65, 70, 73, 74, 75],
       "speedPenalty": {
         "unit": "% movement speed loss",
         "values": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
@@ -100,7 +100,7 @@
     },
     "passive": null,
     "synergy": null,
-    "notes": "Stacking dynamic shield: each hit increases both damage reduction and movement speed penalty. Each hit adds (belt count) stacks, capped at 10. Stacks reset 10 seconds after the last hit."
+    "notes": "Stacking dynamic shield: each hit increases both damage reduction and movement speed penalty. Each hit adds (belt count) stacks, capped at 10. Stacks reset 10 seconds after the last hit. Reduction follows a parabolic curve from 15% at 0 stacks to 75% at 10."
   },
 
   "af_dragon_eye": {
@@ -191,11 +191,11 @@
       "unit": "s",
       "values": [1, 2, 3, 4, 5]
     },
-    "passive": {
-      "healPerSecondDuringEffect": "scales with food's satiety value"
-    },
+    "passive": [
+      { "stat": "health_per_second", "value": 1, "unit": "%/s x food's satiety value", "scope": "while the effect is active" }
+    ],
     "synergy": null,
-    "notes": "Eating food gives a brief regen tick proportional to the food's satiety value. Effect window scales with belt count."
+    "notes": "Eating food gives a regen tick of (1% x satiety_value) of max HP each second for (1 x belt count) seconds. Higher-satiety foods heal more per tick; more copies on the belt extend the effect window."
   },
 
   "af_kislushka": {
@@ -306,15 +306,15 @@
   },
 
   "af_repei": {
-    "trigger": { "type": "on_before_hit", "scope": "incoming hits to actor" },
+    "trigger": { "type": "on_before_hit", "scope": "outgoing damage" },
     "cooldown": null,
     "scaling": null,
     "passive": [
-      { "stat": "incoming_damage", "value": "x0.5" },
-      { "stat": "bleed_dot_duration", "value": 7, "unit": "s" }
+      { "stat": "outgoing_damage", "value": "x0.5" },
+      { "stat": "delayed_bleed_to_enemy", "value": 0.14, "unit": "% of original hit", "perCount": true, "scope": "applied 7s after the hit" }
     ],
     "synergy": null,
-    "notes": "Halves incoming damage, but the avoided damage is applied back to you as a 7-second bleed proportional to the original hit. Net damage gets paid over time."
+    "notes": "Your direct hits to NPCs and monsters do 50% damage. The original hit's power x 0.14% x belt count is applied to the target as a single delayed tick 7 seconds later. Trade direct damage for guaranteed follow-through that scales with belt count."
   },
 
   "af_sandstone": {
@@ -373,8 +373,10 @@
         "perCountBonus": "+2.5% per copy on belt",
         "resetTrigger": "missing or pausing for ~2 seconds"
       },
-      "psyHealthRestorePerStack": 0.05,
-      "psyHealthPenaltyOnReset": "scales with how high the stack climbed"
+      "psyHealth": {
+        "restorePerStack": "+5%",
+        "penaltyOnReset": "scales with how high the stack climbed"
+      }
     },
     "synergy": null,
     "notes": "Each consecutive hit builds a damage multiplier; crits add more. Every shot must hit — miss or pause for ~2 seconds and the stack resets, applying a psy penalty proportional to how high it climbed."

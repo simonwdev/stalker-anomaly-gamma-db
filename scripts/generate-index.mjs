@@ -934,7 +934,9 @@ try {
 }
 
 // Generate starting-loadouts.json and item-loadouts.json from new_game_loadouts.ltx
-const LOADOUT_FILE = join(CSV_DIR, "new_game_loadouts.ltx");
+const LOADOUT_FILE = existsSync(join(CSV_DIR, "source", "new_game_loadouts.ltx"))
+  ? join(CSV_DIR, "source", "new_game_loadouts.ltx")
+  : join(CSV_DIR, "new_game_loadouts.ltx");
 try {
   const ltxText = readFileSync(LOADOUT_FILE, "utf-8");
 

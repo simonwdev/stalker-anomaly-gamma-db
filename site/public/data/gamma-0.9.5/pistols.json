@@ -45,6 +45,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -71,6 +72,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -97,6 +99,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -123,7 +126,8 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
-      "unobtainable": true
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_beretta_camo",
@@ -149,6 +153,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -175,6 +180,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -201,7 +207,8 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
-      "unobtainable": true
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_colt1911_anarchy",
@@ -227,6 +234,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -253,6 +261,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -279,6 +288,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -305,6 +315,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -331,6 +342,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -357,6 +369,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -383,6 +396,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -409,6 +423,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -435,6 +450,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -461,6 +477,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -487,6 +504,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -513,6 +531,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -539,6 +558,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -565,6 +585,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -591,6 +612,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -617,6 +639,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -643,6 +666,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -669,6 +693,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -695,6 +720,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -721,6 +747,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -747,6 +774,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -773,6 +801,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -799,6 +828,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -825,6 +855,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -851,6 +882,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -877,6 +909,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -903,6 +936,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -929,7 +963,8 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
-      "unobtainable": true
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_mp412",
@@ -955,6 +990,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -981,6 +1017,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -1007,6 +1044,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -1033,6 +1071,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -1059,6 +1098,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1085,6 +1125,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1111,7 +1152,8 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
-      "unobtainable": true
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_pl15_pl15_scolaz",
@@ -1137,6 +1179,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1163,6 +1206,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -1189,6 +1233,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1215,7 +1260,8 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
-      "unobtainable": true
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_pm_actor",
@@ -1241,6 +1287,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1267,6 +1314,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1293,6 +1341,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1319,6 +1368,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1345,6 +1395,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -1371,6 +1422,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1397,7 +1449,8 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
-      "unobtainable": true
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_sig220_n",
@@ -1423,6 +1476,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -1449,6 +1503,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1475,6 +1530,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -1501,6 +1557,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1527,6 +1584,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1553,6 +1611,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -1579,6 +1638,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1605,6 +1665,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": true,
       "unobtainable": false
     },
     {
@@ -1631,6 +1692,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1657,6 +1719,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1683,7 +1746,8 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
-      "unobtainable": true
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_tt33_modern",
@@ -1709,6 +1773,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -1735,6 +1800,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1761,7 +1827,8 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
-      "unobtainable": true
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_usp_tac",
@@ -1787,6 +1854,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1813,6 +1881,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -1839,7 +1908,8 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
-      "unobtainable": true
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_walther_mod9",
@@ -1865,6 +1935,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     },
     {
@@ -1891,6 +1962,7 @@
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": false
     },
     {
@@ -1917,6 +1989,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "hasUpgrades": true,
+      "inStartingLoadout": false,
       "unobtainable": true
     }
   ]
