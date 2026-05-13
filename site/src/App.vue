@@ -117,7 +117,7 @@
     <div class="sidebar-backdrop" v-show="sidebarOpen" @click="closeSidebar()"></div>
 
     <main class="content" :class="{ 'content-maps': mapsActive }">
-        <MapsView v-if="mapsActive" :pack-id="activePack?.id" />
+        <MapsView v-if="mapsMounted" v-show="mapsActive" :pack-id="activePack?.id" :visible="mapsActive" />
         <TradingView
             v-if="tradingActive"
             :pack-id="activePack?.id"

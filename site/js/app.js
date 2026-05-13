@@ -154,6 +154,7 @@ export const appDefinition = {
             buildPlayerFaction: "stalker",
             buildPlannerActive: false,
             mapsActive: false,
+            mapsMounted: false,
             tradingActive: false,
             damageSimActive: false,
             versionCompareActive: false,
@@ -1856,6 +1857,7 @@ export const appDefinition = {
                         await this.openDamageSim();
                     } else if (urlCat === "maps" || pathParsed.maps) {
                         this.mapsActive = true;
+                        this.mapsMounted = true;
                         this.activeCategory = null;
                     } else if (urlCat === "trading" || pathParsed.trading) {
                         this.tradingActive = true;
@@ -2819,6 +2821,7 @@ export const appDefinition = {
         openMaps() {
             this.resetViewState();
             this.mapsActive = true;
+            this.mapsMounted = true;
             this.pushUrlState(true);
         },
 
@@ -4636,6 +4639,7 @@ export const appDefinition = {
                 this.openDamageSim();
             } else if (parsed.maps || legacyCat === "maps") {
                 this.mapsActive = true;
+                this.mapsMounted = true;
                 this.activeCategory = null;
             } else if (parsed.trading || legacyCat === "trading") {
                 this.tradingActive = true;
