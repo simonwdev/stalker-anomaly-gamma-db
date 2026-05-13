@@ -1,0 +1,479 @@
+{
+  "_meta": {
+    "source": "G.A.M.M.A. Artefacts Reinvention (PBA)",
+    "version": "PBA 2.x (as bundled with GAMMA 0.9.5)",
+    "notes": "Per-artefact perk metadata. 'scaling.values' is the lookup table indexed by belt count (entry 0 = 1 artefact on belt, last = max). Hit-type names match the in-engine damage categories: fire_wound (bullets), wound, strike, shock, telepatic, light_burn, burn, chemical_burn, radiation, explosion."
+  },
+
+  "af_atom": {
+    "trigger": { "type": "passive", "condition": "while irradiated" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": [
+      { "stat": "power_regen", "value": "scales with current radiation" },
+      { "stat": "radiation_cure_per_tick", "value": -0.00005, "perCount": true }
+    ],
+    "synergy": null,
+    "notes": "Power regen is proportional to your current radiation level. Also slowly bleeds off radiation over time."
+  },
+
+  "af_ball": {
+    "trigger": { "type": "active", "binding": "Use key", "scanRadius": 2.7 },
+    "cooldown": { "vsStalker": 5, "vsMonster": "1 + 1*count" },
+    "scaling": null,
+    "passive": null,
+    "synergy": null,
+    "notes": "Grab-and-throw mechanic. Hold the Use key to pick up a nearby valid target; whatever you're looking at takes priority. Belt count gates which monster tiers can be picked up."
+  },
+
+  "af_bat": {
+    "trigger": { "type": "passive", "condition": "inventory action on an artefact" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": null,
+    "synergy": null,
+    "notes": "Use the inventory action on any artefact to transmute it. 35% chance to swap it for a different artefact of the same tier, 65% chance to upgrade it along its resistance tier. Consumed on use. Can't transmute itself, Lucifer, or unique / quest / container / attachment items."
+  },
+
+  "af_black_angel": {
+    "trigger": { "type": "on_before_hit", "hitTypes": ["fire_wound"] },
+    "cooldown": null,
+    "scaling": {
+      "stat": "reflect_chance",
+      "unit": "%",
+      "values": [20, 37.5, 50, 57.5, 60]
+    },
+    "passive": null,
+    "synergy": null,
+    "notes": "On proc, incoming bullet damage is reflected back at the attacker."
+  },
+
+  "af_cell": {
+    "trigger": { "type": "on_before_hit", "hitTypes": ["fire_wound"] },
+    "cooldown": null,
+    "scaling": {
+      "stat": "damage_reduction",
+      "unit": "%",
+      "values": [15, 29, 42, 54, 65]
+    },
+    "passive": null,
+    "synergy": null,
+    "notes": "Flat reduction to incoming bullet damage."
+  },
+
+  "af_chelust": {
+    "trigger": { "type": "passive_per_tick", "condition": "faction-gated" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": {
+      "whenFactionMatches": {
+        "factions": ["greh"],
+        "stats": [
+          { "stat": "health_per_tick", "value": 0.0004 },
+          { "stat": "power_per_tick", "value": 0.006 },
+          { "stat": "psy_recovery", "value": "2x" },
+          { "stat": "companion_heal", "value": 0.0015, "scope": "lowest-health Sin companion" }
+        ]
+      },
+      "otherwise": [
+        { "stat": "health_per_tick", "value": 0.000075 },
+        { "stat": "power_per_tick", "value": 0.0011 }
+      ]
+    },
+    "synergy": null,
+    "notes": "Strong regen plus a group-heal for Sin members. A weak passive trickle for everyone else."
+  },
+
+  "af_cocoon": {
+    "trigger": { "type": "on_before_hit", "hitTypes": ["wound", "strike"] },
+    "cooldown": null,
+    "scaling": {
+      "stat": "damage_reduction_by_stacks",
+      "unit": "%",
+      "stackRange": [0, 10],
+      "values": [15, 27, 39, 51, 61, 71, 79, 87, 93, 99, 100],
+      "speedPenalty": {
+        "unit": "% movement speed loss",
+        "values": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+      },
+      "stackTimeout": 10
+    },
+    "passive": null,
+    "synergy": null,
+    "notes": "Stacking dynamic shield: each hit increases both damage reduction and movement speed penalty. Each hit adds (belt count) stacks, capped at 10. Stacks reset 10 seconds after the last hit."
+  },
+
+  "af_dragon_eye": {
+    "trigger": { "type": "on_before_hit_and_on_death", "scope": "outgoing damage" },
+    "cooldown": null,
+    "scaling": {
+      "stat": "instakill_chance",
+      "unit": "%",
+      "values": [5, 10, 15, 20, 25]
+    },
+    "passive": null,
+    "synergy": ["af_lucifer"],
+    "notes": "On proc, a single hit becomes an instakill. On the killing blow, also detonates an explosive on the corpse for an area-of-effect kill. With buckshot, the chance is divided across each pellet. Each proc drains a small amount of Lucifer's condition."
+  },
+
+  "af_ear": {
+    "trigger": { "type": "passive_per_tick", "condition": "below health threshold" },
+    "cooldown": null,
+    "scaling": {
+      "stat": "low_health_threshold",
+      "unit": "%",
+      "values": [25, 28, 31, 34, 37]
+    },
+    "passive": {
+      "healPerTick": "proportional to how far below threshold, scales with belt count"
+    },
+    "synergy": ["af_lucifer"],
+    "notes": "Emergency regen that kicks in below the low-health threshold. While Lucifer is at zero condition, the heal is reduced to ~34%."
+  },
+
+  "af_elektron": {
+    "trigger": { "type": "on_before_hit", "hitTypes": ["shock"] },
+    "cooldown": null,
+    "scaling": null,
+    "passive": null,
+    "synergy": null,
+    "notes": "Reduces incoming shock damage. The exact reduction isn't published — it's handled by the shared damage pipeline."
+  },
+
+  "af_fire_loop": {
+    "trigger": { "type": "one_shot_activator" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": null,
+    "synergy": ["af_lucifer"],
+    "notes": "Activating consumes the artefact and spawns Lucifer on your belt, enabling the Lucifer mechanic. Alternatively, sacrifice it to an existing Lucifer to restore 20-30% of its condition."
+  },
+
+  "af_fonar": {
+    "trigger": { "type": "passive", "condition": "active stash or radio target on current map" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": [
+      { "stat": "light_range_min", "value": 1, "unit": "m" },
+      { "stat": "light_range_max", "value": 4, "unit": "m" },
+      { "stat": "blink_half_interval", "value": 1400, "unit": "ms" }
+    ],
+    "synergy": null,
+    "notes": "Lights up active stash locations and radio targets on the current map with a pulsing light. The light disappears once the target is picked up."
+  },
+
+  "af_fountain": {
+    "trigger": { "type": "on_item_sell" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": null,
+    "synergy": null,
+    "notes": "When you sell an item, refunds a portion of the sale price."
+  },
+
+  "af_generator": {
+    "trigger": { "type": "passive_per_tick", "condition": "while sprinting" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": [
+      { "stat": "pda_detector_nvg_charge_per_tick", "value": 0.00005, "perCount": true },
+      { "stat": "sprint_speed", "value": 0.115, "perCount": true }
+    ],
+    "synergy": null,
+    "notes": "While sprinting, slowly charges your PDA, detector, and NVG. Also a flat +11.5% sprint speed, stacking per copy on belt."
+  },
+
+  "af_grapes": {
+    "trigger": { "type": "on_item_use", "scope": "edible items" },
+    "cooldown": null,
+    "scaling": {
+      "stat": "effect_duration",
+      "unit": "s",
+      "values": [1, 2, 3, 4, 5]
+    },
+    "passive": {
+      "healPerSecondDuringEffect": "scales with food's satiety value"
+    },
+    "synergy": null,
+    "notes": "Eating food gives a brief regen tick proportional to the food's satiety value. Effect window scales with belt count."
+  },
+
+  "af_kislushka": {
+    "trigger": { "type": "passive_per_tick", "condition": "while bleeding" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": [
+      { "stat": "bleeding_cure", "value": 0.00135, "perCount": true },
+      { "stat": "satiety_drain_per_tick", "value": -0.00125, "perCount": true }
+    ],
+    "synergy": null,
+    "notes": "Trades food for bleed recovery. Drain stops when you're not bleeding."
+  },
+
+  "af_kogot": {
+    "trigger": { "type": "on_before_hit_and_on_death", "hitTypes": ["wound"], "scope": "outgoing damage to monsters" },
+    "cooldown": null,
+    "scaling": {
+      "stat": "damage_multiplier",
+      "unit": "x",
+      "values": [1.1, 1.2, 1.3, 1.4, 1.5]
+    },
+    "passive": null,
+    "synergy": ["af_lucifer"],
+    "notes": "Amplifies your melee and wound damage and gives lifesteal proportional to damage dealt. On monster kills, butchered meat chunks of the correct type spawn on the corpse. Lucifer synergy: as Lucifer's condition drops below 50%, damage and overkill chance both ramp up. Each overkill proc drains a small amount of Lucifer's condition and spawns 5 extra meat chunks.",
+    "monsterToMeat": {
+      "german_shepherd": "mutant_part_dog_meat",
+      "fox": "mutant_part_dog_meat",
+      "volk": "mutant_part_psevdodog_meat",
+      "tark": "mutant_part_flesh_meat",
+      "medved": "mutant_part_flesh_meat",
+      "monster_boar": "mutant_part_boar_chop",
+      "vendigo": "mutant_part_flesh_meat",
+      "chicken": "mutant_part_tushkano_meat",
+      "lurker": "mutant_part_lurker_meat",
+      "psysucker": "mutant_part_psysucker_meat",
+      "bloodsucker": "mutant_part_krovosos_meat",
+      "boar": "mutant_part_boar_chop",
+      "chimera": "mutant_part_chimera_meat",
+      "dog": "mutant_part_dog_meat",
+      "flesh": "mutant_part_flesh_meat",
+      "pseudodog": "mutant_part_psevdodog_meat",
+      "psy_dog": "mutant_part_psevdodog_meat",
+      "rat": "mutant_part_tushkano_meat",
+      "tushkano": "mutant_part_tushkano_meat"
+    }
+  },
+
+  "af_lighthouse": {
+    "trigger": { "type": "on_npc_death" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": null,
+    "synergy": null,
+    "notes": "When you kill an NPC, teleports you to their position. No stacking benefit."
+  },
+
+  "af_medallion": {
+    "trigger": { "type": "on_before_hit", "hitTypes": ["fire_wound"] },
+    "cooldown": null,
+    "scaling": {
+      "stat": "reflect_chance",
+      "unit": "%",
+      "values": [35, 50, 62, 70, 75]
+    },
+    "passive": null,
+    "synergy": null,
+    "notes": "Stronger reflect than Black Angel. Secondary effect: if a companion dies, the rest of their squad become permanently hostile to you until they're all dead."
+  },
+
+  "af_moh": {
+    "trigger": { "type": "on_item_use", "scope": "mutant meat / parts" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": null,
+    "synergy": null,
+    "notes": "Eating mutant parts grants a 60-second effect that varies by the type of meat consumed.",
+    "meatEffects": {
+      "mutant_part_flesh_meat":   { "duration": 60, "hpPerTick": 0.001, "incomingBullet": "x1.33 (you take more)" },
+      "mutant_part_boar_chop":    { "duration": 60, "incomingStrikeWound": "x0.75" },
+      "mutant_part_dog_meat":     { "duration": 60, "bleedingCure": 0.0015, "psyPerTick": 0.001 },
+      "mutant_part_psevdodog_meat": { "duration": 60, "psyPerTick": 0.002, "incomingPsy": "x0.75" },
+      "mutant_part_krovosos_meat": { "duration": 60, "bleedingCure": 0.003, "invisibility": "ends on weapon fire or hit" },
+      "mutant_part_psysucker_meat": { "duration": 60, "psyPerTick": 0.005, "invisibility": "ends on weapon fire or hit" },
+      "mutant_part_snork_hand":   { "duration": 60, "powerPerTick": 0.005, "satietyDrain": -0.001, "radiationCure": -0.00024, "incomingRadiation": "x0.5" },
+      "mutant_part_chimera_meat": { "duration": 60, "hpPerTick": 0.002, "powerPerTick": 0.01, "incomingRadiation": "x0.66" },
+      "mutant_part_lurker_meat":  { "duration": 60, "incomingElemental": "burn / shock / chemical x0.66" },
+      "mutant_part_tushkano_meat": { "duration": 60, "speed": "+20%", "incomingWoundStrike": "x1.2 (you take more)" }
+    }
+  },
+
+  "af_peas": {
+    "trigger": { "type": "passive_per_tick", "condition": "night hours (21:00 - 05:00)" },
+    "cooldown": { "moonSleepCycle": 10 },
+    "scaling": null,
+    "passive": {
+      "duringNight": [
+        { "stat": "bleeding_cure", "value": 0.0015, "perCount": true },
+        { "stat": "speed", "value": 0.085, "perCount": true },
+        { "stat": "sleep_buildup", "value": "reduced" }
+      ],
+      "duringDay": [
+        { "stat": "sleep_buildup", "value": "increased (makes you tired)" }
+      ]
+    },
+    "synergy": null,
+    "notes": "Lunar mechanic. Buffs at night, penalises during the day by gradually wearing you out."
+  },
+
+  "af_repei": {
+    "trigger": { "type": "on_before_hit", "scope": "incoming hits to actor" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": [
+      { "stat": "incoming_damage", "value": "x0.5" },
+      { "stat": "bleed_dot_duration", "value": 7, "unit": "s" }
+    ],
+    "synergy": null,
+    "notes": "Halves incoming damage, but the avoided damage is applied back to you as a 7-second bleed proportional to the original hit. Net damage gets paid over time."
+  },
+
+  "af_sandstone": {
+    "trigger": { "type": "on_before_hit_and_on_weapon_fired", "hitTypes": ["light_burn", "burn", "shock", "chemical_burn"] },
+    "cooldown": null,
+    "scaling": null,
+    "passive": [
+      { "stat": "primary_hit_power", "value": "x0.7" },
+      { "stat": "elemental_hit_power", "value": "x0.5" }
+    ],
+    "synergy": null,
+    "notes": "Weapons can be 'infused' with an elemental damage type that rotates each in-game hour. While wielding an infused weapon, your shots deal 70% normal damage plus a secondary elemental hit at 50% power of that element."
+  },
+
+  "af_serofim": {
+    "trigger": { "type": "on_before_actor_death" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": null,
+    "synergy": null,
+    "notes": "Cheats death once. Drops your active weapon, restores you, and grants a brief invulnerability window. Ironman-compatible."
+  },
+
+  "af_signet": {
+    "trigger": { "type": "passive_per_tick", "condition": "within 5m of an active campfire" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": [
+      { "stat": "health_per_tick", "value": 0.0007, "perCount": true },
+      { "stat": "psy_recovery", "value": "3x", "perCount": true }
+    ],
+    "synergy": null,
+    "notes": "Campfire-anchored regen. Effects scale per copy on belt."
+  },
+
+  "af_skull_miser": {
+    "trigger": { "type": "on_npc_death", "boneFilter": "headshot" },
+    "cooldown": null,
+    "scaling": {
+      "stat": "money_items_spawned",
+      "values": [3, 6, 9, 12, 15]
+    },
+    "passive": null,
+    "synergy": ["af_lucifer"],
+    "notes": "On a headshot kill, money items are launched out of the corpse. The drop pool is heavily weighted toward small denominations (loose roubles and small bills), with rare chances for larger stacks up to 900-1000. Each proc also gives a small Lucifer condition boost."
+  },
+
+  "af_spaika": {
+    "trigger": { "type": "on_before_hit", "scope": "outgoing damage" },
+    "cooldown": { "missWindow": 2 },
+    "scaling": null,
+    "passive": {
+      "stackingDamageBuff": {
+        "perHit": "+2.5%",
+        "perCriticalBoneHit": "+7.5%",
+        "perCountBonus": "+2.5% per copy on belt",
+        "resetTrigger": "missing or pausing for ~2 seconds"
+      },
+      "psyHealthRestorePerStack": 0.05,
+      "psyHealthPenaltyOnReset": "scales with how high the stack climbed"
+    },
+    "synergy": null,
+    "notes": "Each consecutive hit builds a damage multiplier; crits add more. Every shot must hit — miss or pause for ~2 seconds and the stack resets, applying a psy penalty proportional to how high it climbed."
+  },
+
+  "af_star_phantom": {
+    "trigger": { "type": "passive_per_tick" },
+    "cooldown": null,
+    "scaling": null,
+    "passive": {
+      "artefactDegradationPerTick": "steady drain, slows with more copies on belt",
+      "weaponHide": "lets you hide your weapon"
+    },
+    "synergy": null,
+    "notes": "Lets you hide your weapon and provides steady self-degradation. With more copies on belt, each one degrades slower, so the total burn is roughly constant. Artefacts that drop below 1% condition self-destruct."
+  },
+
+  "af_sun": {
+    "trigger": { "type": "passive_per_tick_and_on_before_hit", "hitTypes": ["fire_wound", "wound", "strike"] },
+    "cooldown": null,
+    "scaling": {
+      "stat": "fire_reflect_share (Lucifer-active only)",
+      "unit": "%",
+      "values": [50, 70, 85, 95, 100]
+    },
+    "passive": {
+      "daytimeClearWeather": [
+        { "stat": "health_per_tick", "value": 0.00035, "perCount": true },
+        { "stat": "power_per_tick", "value": 0.002, "perCount": true }
+      ],
+      "daytimePartlyWeather": [
+        { "stat": "power_per_tick", "value": 0.001, "perCount": true }
+      ],
+      "darkOrIndoorOrBadWeather": [
+        { "stat": "power_per_tick", "value": -0.001, "perCount": true }
+      ]
+    },
+    "synergy": ["af_lucifer"],
+    "notes": "Passively heals during clear daylight (06:00-20:59) and drains power at night, indoors, or in bad weather. While Lucifer is active, also reflects a share of incoming fire damage back."
+  },
+
+  "af_tapeworm": {
+    "trigger": { "type": "passive_per_tick", "hitTypes": ["wound", "strike"], "radius": 2 },
+    "cooldown": 6,
+    "scaling": {
+      "stat": "stun_duration",
+      "unit": "s",
+      "values": [3, 5, 7, 9, 11]
+    },
+    "passive": null,
+    "synergy": null,
+    "notes": "Enemies within 2m get periodically zapped and stunned. Stalkers take small recurring shock hits plus forced panic and a standing posture; monsters take a single bigger hit with a ragdoll impulse."
+  },
+
+  "af_zhelch": {
+    "trigger": { "type": "on_before_hit_and_per_tick", "hitTypes": ["telepatic"] },
+    "cooldown": 60,
+    "scaling": null,
+    "passive": {
+      "lowHealth": [
+        { "stat": "health_per_tick", "value": 0.003, "condition": "low health" },
+        { "stat": "psy_drain_per_tick", "value": "scales with Lucifer's condition" }
+      ],
+      "highHealth": [
+        { "stat": "psy_boost_per_tick", "value": "scales with Lucifer's condition" }
+      ],
+      "randomEventChance": {
+        "value": "scales as your psy health drops",
+        "cooldownSeconds": 60,
+        "possibleEvents": "hides your weapon, forces you to stare at a nearby NPC, opens the PDA, auto-throws a grenade, or triggers a suicide sequence"
+      }
+    },
+    "synergy": ["af_lucifer"],
+    "notes": "At low health: heals you while draining psy. At high health: restores psy, scaled by Lucifer's condition. As your psy drops, random 'insanity' events trigger more often — most are minor annoyances, but a couple are lethal."
+  },
+
+  "af_lucifer": {
+    "trigger": { "type": "passive_per_tick", "condition": "Lucifer enabled" },
+    "cooldown": { "negativeConditionEvent": 180 },
+    "scaling": null,
+    "passive": {
+      "conditionAboveHalf": [
+        { "stat": "health_per_tick", "value": "scales with condition" },
+        { "stat": "power_per_tick", "value": "scales with condition" },
+        { "stat": "bleeding_cure", "value": "scales with condition" },
+        { "stat": "psy_per_tick", "value": "scales with condition" },
+        { "stat": "speed", "value": "up to +16%", "scope": "scales with condition" },
+        { "stat": "carry_weight_bonus", "value": "up to +50 kg", "scope": "scales with condition" }
+      ],
+      "conditionBelowHalf": [
+        { "stat": "power_drain", "value": "scales with condition" },
+        { "stat": "health_drain", "value": "scales with condition", "condition": "below 40% condition" },
+        { "stat": "instant_death", "value": "triggers at near-zero condition, then resets to ~1%" }
+      ],
+      "degradationRate": "roughly 25% condition loss per in-game day"
+    },
+    "synergy": [
+      "Sacrifice non-quest / non-container artefacts via the inventory action to restore condition. Lower-tier artefacts give +3-5%, mid-tier +6-9%, high-tier +10-13%. Special: sacrificing Knot restores +20-30%; sacrificing Death Lamp restores +100% but has a 50% chance to instakill you on use."
+    ],
+    "notes": "Meta artefact: not in the normal artefact pool — spawned by activating Knot. While in good condition, it provides huge passive buffs (speed, carry weight, regen). While in bad condition, it triggers hostile paranormal events (sky color shifts, eerie sounds, forced psy drain). If condition hits zero, it instakills you and resets to ~1%. Several other perk artefacts (Claw, Heart, Dragon's Eye, Sun, Miser's Skull, Scar) have stronger effects while Lucifer is active."
+  }
+}

@@ -471,6 +471,7 @@
     :modal-used-by-weapons="modalUsedByWeapons"
     :parsed-description="parsedDescription"
     :parsed-perk="parsedPerk"
+    :pba-constants="pbaConstantsCache || {}"
     :modal-weapon-addons="modalWeaponAddons"
     :modal-addon-compatible-weapons="modalAddonCompatibleWeapons"
     :favorite-ids="favoriteIds"

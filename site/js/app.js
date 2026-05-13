@@ -98,6 +98,7 @@ export const appDefinition = {
             mutantProfilesCache: null,
             npcArmorProfilesCache: null,
             gboConstantsCache: null,
+            pbaConstantsCache: null,
             ballisticRangesCache: null,
             upgradesCache: null,
 
@@ -1738,6 +1739,10 @@ export const appDefinition = {
             return this.fetchJsonCached("gboConstantsCache", "gbo-constants.json");
         },
 
+        fetchPbaConstants() {
+            return this.fetchJsonCached("pbaConstantsCache", "pba-constants.json");
+        },
+
         findItemByName(name) {
             return this.index.find(i => i.name === name || i.displayName === name || i.pda_encyclopedia_name === name);
         },
@@ -1885,6 +1890,7 @@ export const appDefinition = {
                 this.ensureCategoryLoaded(categorySlug(CAT.GRENADE_LAUNCHERS)),
                 this.ensureCategoryLoaded(categorySlug(CAT.TACTICAL_KITS)),
                 this.fetchWeaponAddons(),
+                this.fetchPbaConstants(),
             ]);
             this.rebuildGlobalFuse();
             this.loading = false;
@@ -4851,6 +4857,7 @@ export const appDefinition = {
                 this.fetchMutantProfiles(),
                 this.fetchNpcArmorProfiles(),
                 this.fetchGboConstants(),
+                this.fetchPbaConstants(),
                 this.fetchCalibers(),
                 this.fetchAmmoWeapons(),
                 this.fetchJsonCached("ballisticRangesCache", "ballistic-ranges.json"),

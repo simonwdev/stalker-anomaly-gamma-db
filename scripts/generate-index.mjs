@@ -1431,6 +1431,14 @@ if (existsSync(gboSrc)) {
   console.log(`Copied GBO constants to ${gboOut}`);
 }
 
+// Copy pba-constants.json (Perk Based Artefacts) if present in pack data
+const pbaSrc = join(CSV_DIR, "pba-constants.json");
+if (existsSync(pbaSrc)) {
+  const pbaOut = join(OUT_DIR, "pba-constants.json");
+  cpSync(pbaSrc, pbaOut);
+  console.log(`Copied PBA constants to ${pbaOut}`);
+}
+
 // Generate addon-weapons.json from export_addon_weapon_map.csv (addon ID → weapon IDs)
 const ADDON_WEAPON_MAP_FILE = join(CSV_DIR, "export_addon_weapon_map.csv");
 try {

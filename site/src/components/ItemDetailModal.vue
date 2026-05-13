@@ -109,6 +109,12 @@
                             <ul v-if="parsedPerk.items.length" class="modal-perk-items">
                                 <li v-for="(it, i) in parsedPerk.items" :key="i" :class="'modal-perk-' + it.kind">{{ it.text }}</li>
                             </ul>
+                            <PerkDetails
+                                v-if="modalItem && pbaConstants[modalItem.id]"
+                                :item-id="modalItem.id"
+                                :pba-constants="pbaConstants"
+                                @navigate-to-item="$emit('navigateToItem', $event)"
+                            />
                         </div>
                     </div>
                 </div>
@@ -362,10 +368,11 @@
 
 <script>
 import UpgradeTreeView from './UpgradeTreeView.vue';
+import PerkDetails from './PerkDetails.vue';
 
 export default {
   name: 'ItemDetailModal',
-  components: { UpgradeTreeView },
+  components: { UpgradeTreeView, PerkDetails },
   inject: [
     't', 'tName', 'tCat', 'headerLabel', 'formatValue', 'displayLabel', 'displayStyle', 'isFieldHidden',
     'healDots', 'factionColor', 'factionIcon', 'singularCategory', 'isUnusedAmmo',
@@ -395,6 +402,7 @@ export default {
     modalUsedByWeapons: Array,
     parsedDescription: Object,
     parsedPerk: Object,
+    pbaConstants: { type: Object, default: () => ({}) },
     modalWeaponAddons: { type: Object, default: () => ({ scopes: [], silencers: [], launchers: [] }) },
     modalAddonCompatibleWeapons: { type: Array, default: () => [] },
     favoriteIds: Array,
