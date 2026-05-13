@@ -563,21 +563,9 @@ try {
   console.log("No weapon drop sources CSV found, skipping drops.json");
 }
 
-// Propagate hasNpcWeaponDrop from category items into index entries
-const dropLookup = new Map();
-for (const [, data] of categoryData) {
-  for (const item of data.items) {
-    if (item.hasNpcWeaponDrop !== undefined) dropLookup.set(item.id, item.hasNpcWeaponDrop);
-  }
-}
-for (const entry of index) {
-  if (dropLookup.has(entry.id)) entry.hasNpcWeaponDrop = dropLookup.get(entry.id);
-}
-
-// Write index.json
-index.sort((a, b) => a.displayName.localeCompare(b.displayName));
-writeFileSync(OUT_FILE, JSON.stringify(index, null, 2));
-console.log(`\nWrote ${index.length} items to ${OUT_FILE}`);
+// Obtainability flags (hasNpcWeaponDrop / hasStashDrop / inStartingLoadout /
+// unobtainable) and the index.json write are deferred until after the stash-drop
+// and starting-loadout blocks have populated their inputs further down.
 
 // Generate item-drops.json from export_item_drop_locations.csv
 const ITEM_DROPS_FILE = join(CSV_DIR, "export_item_drop_locations.csv");
@@ -1070,10 +1058,62 @@ try {
   const itemLoadoutsOut = join(OUT_DIR, "item-loadouts.json");
   writeFileSync(itemLoadoutsOut, JSON.stringify(itemLoadouts, null, 2));
   console.log(`Wrote ${Object.keys(itemLoadouts).length} item-loadout mappings to ${itemLoadoutsOut}`);
+
+  // Mark weapons/explosives whose IDs appear in any starting loadout
+  const loadoutFlagCategories = new Set(["pistols", "smgs", "shotguns", "rifles", "snipers", "launchers", "explosives"]);
+  for (const [slug, data] of categoryData) {
+    if (!loadoutFlagCategories.has(slug)) continue;
+    for (const item of data.items) {
+      item.inStartingLoadout = item.id in itemLoadouts;
+    }
+  }
 } catch (e) {
   if (e.code !== "ENOENT") throw e;
   console.log("No starting loadouts LTX found, skipping starting-loadouts.json");
 }
+
+// Compute the derived `unobtainable` flag for weapons/explosives and propagate
+// hasNpcWeaponDrop / hasStashDrop / inStartingLoadout / unobtainable from
+// category items into the index entries. Runs after stash-drop and loadout
+// blocks so all three input flags are available.
+const obtainabilityCategories = new Set(["pistols", "smgs", "shotguns", "rifles", "snipers", "launchers", "explosives"]);
+for (const [slug, data] of categoryData) {
+  if (!obtainabilityCategories.has(slug)) continue;
+  for (const item of data.items) {
+    item.unobtainable = item.hasNpcWeaponDrop !== true
+      && item.hasStashDrop !== true
+      && item.inStartingLoadout !== true;
+  }
+}
+
+const obtainabilityLookup = new Map();
+for (const [slug, data] of categoryData) {
+  if (!obtainabilityCategories.has(slug)) continue;
+  for (const item of data.items) {
+    obtainabilityLookup.set(item.id, {
+      hasNpcWeaponDrop: item.hasNpcWeaponDrop,
+      hasStashDrop: item.hasStashDrop,
+      inStartingLoadout: item.inStartingLoadout === true,
+      unobtainable: item.unobtainable === true,
+    });
+  }
+}
+for (const entry of index) {
+  const flags = obtainabilityLookup.get(entry.id);
+  if (!flags) continue;
+  entry.hasNpcWeaponDrop = flags.hasNpcWeaponDrop;
+  entry.hasStashDrop = flags.hasStashDrop;
+  entry.inStartingLoadout = flags.inStartingLoadout;
+  entry.unobtainable = flags.unobtainable;
+}
+
+// Write index.json (deferred from earlier so obtainability flags are included).
+// Re-run addDisplayNames here because entries added after the initial pass
+// (e.g. Materials at the disassembles step) wouldn't otherwise have it set.
+addDisplayNames(index, "id", "name");
+index.sort((a, b) => a.displayName.localeCompare(b.displayName));
+writeFileSync(OUT_FILE, JSON.stringify(index, null, 2));
+console.log(`\nWrote ${index.length} items to ${OUT_FILE}`);
 
 // Inject AP value into ammo items before writing category files
 const ammoDataPre = categoryData.get("ammo");
@@ -1200,7 +1240,7 @@ if (ammoData) {
             category: catData.category,
             isAlt: field === "st_data_export_ammo_types_alt",
           };
-          if (wpn.hasNpcWeaponDrop === false) ref.noDrop = true;
+          if (wpn.unobtainable === true) ref.noDrop = true;
           weaponsByAmmoVal.get(val).push(ref);
         }
       }

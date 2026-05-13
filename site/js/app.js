@@ -275,7 +275,7 @@ export const appDefinition = {
         categoryCounts() {
             const counts = {};
             for (const item of this.index) {
-                if (this.hideNoDrop && item.hasNpcWeaponDrop === false) continue;
+                if (this.hideNoDrop && item.unobtainable === true) continue;
                 if (this.hideUnusedAmmo && item.category === 'Ammo' && this.ammoWeaponsCache) {
                     const weapons = this.ammoWeaponsCache[item.id];
                     if (!weapons || weapons.length === 0) continue;
@@ -734,7 +734,7 @@ export const appDefinition = {
             if (!weaponIds.length) return [];
             const indexMap = new Map((this.index || []).map(i => [i.id, i]));
             let weapons = weaponIds.map(wid => indexMap.get(wid)).filter(Boolean);
-            if (this.hideNoDrop) weapons = weapons.filter(w => w.hasNpcWeaponDrop !== false);
+            if (this.hideNoDrop) weapons = weapons.filter(w => w.unobtainable !== true);
             return weapons.sort((a, b) => (this.tName(a) || '').localeCompare(this.tName(b) || ''));
         },
 
@@ -1116,14 +1116,14 @@ export const appDefinition = {
             const slug = categorySlug(this.activeCategory);
             let items = this.categoryItems[slug] || [];
             if (this.hideNoDrop) {
-                items = items.filter((i) => i.hasNpcWeaponDrop !== false);
+                items = items.filter((i) => i.unobtainable !== true);
                 if (this.isAddonCategory) {
                     const indexMap = new Map((this.index || []).map(i => [i.id, i]));
                     items = items.filter(i => {
                         const weaponIds = (this.addonCompatibleWeaponsMap || {})[i.id] || [];
                         return weaponIds.some(wid => {
                             const w = indexMap.get(wid);
-                            return w && w.hasNpcWeaponDrop !== false;
+                            return w && w.unobtainable !== true;
                         });
                     });
                 }
@@ -1526,7 +1526,7 @@ export const appDefinition = {
             const collectSlugs = (slugs) => {
                 let items = [];
                 for (const slug of slugs) items = items.concat(this.categoryItems[slug] || []);
-                if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
+                if (this.hideNoDrop) items = items.filter(i => i.unobtainable !== true);
                 return items;
             };
 
@@ -1556,7 +1556,7 @@ export const appDefinition = {
                 const beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !isBackpack(i));
                 const artItems = this.categoryItems["artefacts"] || [];
                 let items = beltItems.concat(artItems);
-                if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
+                if (this.hideNoDrop) items = items.filter(i => i.unobtainable !== true);
                 return searchOrSort(items);
             }
 
@@ -1564,7 +1564,7 @@ export const appDefinition = {
             if (!cat) return [];
             const slug = categorySlug(cat);
             let items = this.categoryItems[slug] || [];
-            if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
+            if (this.hideNoDrop) items = items.filter(i => i.unobtainable !== true);
             if (slotType === "backpack") items = items.filter(i => isBackpack(i));
             return searchOrSort(items);
         },
@@ -1985,7 +1985,7 @@ export const appDefinition = {
 
         globalSearchFilter(items) {
             return items.filter(item => {
-                if (this.hideNoDrop && item.hasNpcWeaponDrop === false) return false;
+                if (this.hideNoDrop && item.unobtainable === true) return false;
                 if (this.hideUnusedAmmo && item.category === 'Ammo' && this.ammoWeaponsCache) {
                     const weapons = this.ammoWeaponsCache[item.id];
                     if (!weapons || weapons.length === 0) return false;
@@ -4055,7 +4055,7 @@ export const appDefinition = {
                     const indexMap = new Map((this.index || []).map(i => [i.id, i]));
                     weapons = weapons.filter(wid => {
                         const w = indexMap.get(wid);
-                        return w && w.hasNpcWeaponDrop !== false;
+                        return w && w.unobtainable !== true;
                     });
                 }
                 return weapons.length;

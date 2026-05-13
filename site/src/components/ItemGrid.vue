@@ -5,7 +5,7 @@
             <span class="fav-icon" :class="{ favorited: isFavorited(item.id) }" @click.stop="$emit('toggleFavorite', item.id)">{{ isFavorited(item.id) ? '\u2605' : '\u2606' }}</span>
             <span class="pin-icon" :class="{ pinned: isPinned(item.id), 'pin-disabled': !isPinned(item.id) && pinnedIds.length >= 5 }" @click.stop="$emit('togglePin', item.id)">&#x1F4CC;</span>
             <a :href="itemHref(item.id)" @click.prevent.stop="$emit('navigateToItem', item.id)" class="tile-card-name">{{ tItemName(item) }}</a>
-            <span v-if="item.hasNpcWeaponDrop === false" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
+            <span v-if="item.unobtainable === true" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
             <span v-if="isUnusedAmmo(item)" class="badge-unused" v-tooltip="t('app_tooltip_unused_ammo')">{{ t('app_badge_unused') }}</span>
             <span v-if="item.Type" class="badge-flag badge-type">{{ t(singularType(item.Type)) }}</span>
             <span v-if="item['st_data_export_has_perk'] === 'Y'" class="badge-flag badge-perk">{{ perkBadgeText(item) }}</span>
