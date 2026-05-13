@@ -110,6 +110,7 @@ export const appDefinition = {
             craftingTreeExpanded: new Set(),
             craftingTreeExpandAll: false,
             _craftingTreeViewExpandAll: true,
+            highlightedCraftingId: null,
 
             sidebarOpen: false,
             sidebarCollapsed: false,
@@ -4792,20 +4793,25 @@ export const appDefinition = {
             this.globalQuery = "";
             this.globalResults = [];
             this.globalCraftingResults = [];
+            const entry = this.indexById[id];
+            const fullName = entry ? this.tName(entry) : '';
             await this.selectCategory(category);
+            if (fullName) { this.filterInput = fullName; this.filterQuery = fullName; }
             this.navigateToItem(id);
         },
 
         async selectCraftingSearchResult(result) {
-            const q = this.globalQuery.trim();
             this.lastGlobalQuery = this.globalQuery;
             this.globalQuery = "";
             this.globalResults = [];
             this.globalCraftingResults = [];
+            this.highlightedCraftingId = null;
             await this.selectCategory(CAT.CRAFTING);
             this.craftingCategory = result.craftCategory || 'all';
-            this.filterInput = q;
-            this.filterQuery = q;
+            this.filterInput = result.displayName || '';
+            this.filterQuery = result.displayName || '';
+            this.highlightedCraftingId = result.id;
+            setTimeout(() => { this.highlightedCraftingId = null; }, 2200);
         },
 
         // Build Planner methods

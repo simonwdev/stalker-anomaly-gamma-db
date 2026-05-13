@@ -131,7 +131,9 @@
                 @click.prevent="$emit('selectSearchResultInSection', { id: item.id, category: item.category })"
                 @mouseenter="activeSearchIdx = idx"
             >
-                <span v-html="highlightMatch(tName(item), globalQuery)"></span><template v-if="!tName(item).includes('[')"> <small class="search-id-hint">[{{ item.id }}]</small></template>
+                <span class="search-result-left">
+                    <span v-html="highlightMatch(tName(item), globalQuery)"></span><small v-if="!tName(item).includes('[')" class="search-id-hint"> [{{ item.id }}]</small>
+                </span>
                 <span class="search-cat-badge">{{ t('app_nav_item_db') }} › {{ tCat(item.category) }}</span>
             </a>
             <a
@@ -195,7 +197,9 @@
                     @click.prevent="$emit('selectSearchResultInSection', { id: item.id, category: item.category }); closeMobileSearch()"
                     @mouseenter="activeSearchIdx = idx"
                 >
-                    <span v-html="highlightMatch(tName(item), globalQuery)"></span><template v-if="!tName(item).includes('[')"> <small class="search-id-hint">[{{ item.id }}]</small></template>
+                    <span class="search-result-left">
+                        <span v-html="highlightMatch(tName(item), globalQuery)"></span><small v-if="!tName(item).includes('[')" class="search-id-hint"> [{{ item.id }}]</small>
+                    </span>
                     <span class="search-cat-badge">{{ t('app_nav_item_db') }} › {{ tCat(item.category) }}</span>
                 </a>
                 <a

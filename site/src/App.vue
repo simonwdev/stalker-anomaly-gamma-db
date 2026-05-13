@@ -242,6 +242,7 @@
                 :filtered-crafting-trees="filteredCraftingTrees"
                 :crafting-tree-expand-all="craftingTreeExpandAll"
                 :crafting-tree-expanded="craftingTreeExpanded"
+                :highlighted-crafting-id="highlightedCraftingId"
                 @toggle-tree-node="toggleTreeNode"
                 @navigate-to-item="navigateToItem"
             />
