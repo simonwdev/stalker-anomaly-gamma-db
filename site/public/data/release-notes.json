@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-05-13",
+    "entries": [
+      { "type": "added", "text": "Artefacts now show their perk name, full perk description and abilities." }
+    ]
+  },
+  {
     "date": "2026-05-10",
     "entries": [
       { "type": "added", "text": "GAMMA 0.9.5 starting loadouts planner is now available." },
