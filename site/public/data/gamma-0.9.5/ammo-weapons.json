@@ -5,8 +5,7 @@
       "name": "st_wpn_colt1911_n",
       "displayName": "st_wpn_colt1911_n [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_colt1911_anarchy",
@@ -80,16 +79,14 @@
       "name": "st_wpn_m45a1",
       "displayName": "st_wpn_m45a1",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig220",
       "name": "st_wpn_sig220_n",
       "displayName": "st_wpn_sig220_n [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig220_n",
@@ -118,8 +115,7 @@
       "name": "st_wpn_mk23",
       "displayName": "st_wpn_mk23",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_usp_tac_45",
@@ -185,8 +181,7 @@
       "name": "st_wpn_colt1911_n",
       "displayName": "st_wpn_colt1911_n [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_colt1911_anarchy",
@@ -260,16 +255,14 @@
       "name": "st_wpn_m45a1",
       "displayName": "st_wpn_m45a1",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig220",
       "name": "st_wpn_sig220_n",
       "displayName": "st_wpn_sig220_n [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig220_n",
@@ -298,8 +291,7 @@
       "name": "st_wpn_mk23",
       "displayName": "st_wpn_mk23",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_usp_tac_45",
@@ -496,8 +488,7 @@
       "name": "st_wpn_ithacam37_extmag",
       "displayName": "st_wpn_ithacam37_extmag",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ithacam37_sawnoff",
@@ -815,8 +806,7 @@
       "name": "st_wpn_ithacam37_extmag",
       "displayName": "st_wpn_ithacam37_extmag",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ithacam37_sawnoff",
@@ -1092,8 +1082,7 @@
       "name": "st_wpn_ithacam37_extmag",
       "displayName": "st_wpn_ithacam37_extmag",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ithacam37_sawnoff",
@@ -1271,8 +1260,7 @@
       "name": "st_wpn_toz106",
       "displayName": "st_wpn_toz106",
       "category": "Shotguns",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_toz106_m1",
@@ -1426,8 +1414,7 @@
       "name": "st_wpn_ithacam37_extmag",
       "displayName": "st_wpn_ithacam37_extmag",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ithacam37_sawnoff",
@@ -1605,8 +1592,7 @@
       "name": "st_wpn_toz106",
       "displayName": "st_wpn_toz106",
       "category": "Shotguns",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_toz106_m1",
@@ -1721,8 +1707,7 @@
       "name": "st_wpn_toz106",
       "displayName": "st_wpn_toz106",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz106_m1",
@@ -1753,8 +1738,7 @@
       "name": "st_wpn_ks23_23_up",
       "displayName": "st_wpn_ks23_23_up",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ks23_kaban",
@@ -1815,8 +1799,7 @@
       "name": "st_wpn_ks23_23_up",
       "displayName": "st_wpn_ks23_23_up",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ks23_kaban",
@@ -4483,8 +4466,7 @@
       "name": "st_wpn_tt33_custom",
       "displayName": "st_wpn_tt33_custom [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_tt33_modern",
@@ -4538,8 +4520,7 @@
       "name": "st_wpn_tt33_custom",
       "displayName": "st_wpn_tt33_custom [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_tt33_modern",
@@ -6024,8 +6005,7 @@
       "name": "st_wpn_beretta_new",
       "displayName": "st_wpn_beretta_new [default]",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_beretta_camo",
@@ -6145,8 +6125,7 @@
       "name": "st_wpn_pm_new",
       "displayName": "st_wpn_pm_new [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pm_actor",
@@ -6298,8 +6277,7 @@
       "name": "st_wpn_beretta_new",
       "displayName": "st_wpn_beretta_new [default]",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_beretta_camo",
@@ -6419,8 +6397,7 @@
       "name": "st_wpn_pm_new",
       "displayName": "st_wpn_pm_new [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pm_actor",
@@ -6587,8 +6564,7 @@
       "name": "st_wpn_beretta_new",
       "displayName": "st_wpn_beretta_new [default]",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_beretta_camo",
@@ -6708,8 +6684,7 @@
       "name": "st_wpn_pm_new",
       "displayName": "st_wpn_pm_new [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pm_actor",
@@ -6845,8 +6820,7 @@
       "name": "st_wpn_beretta_new",
       "displayName": "st_wpn_beretta_new [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_beretta_camo",
@@ -6981,8 +6955,7 @@
       "name": "st_wpn_pl15",
       "displayName": "st_wpn_pl15",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pl15_pl15_scolaz",
@@ -7012,8 +6985,7 @@
       "name": "st_wpn_pm_new",
       "displayName": "st_wpn_pm_new [default]",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pm_actor",
@@ -7106,8 +7078,7 @@
       "name": "st_wpn_walther_p99",
       "displayName": "st_wpn_walther_p99 [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_walther_mod9",
@@ -7286,8 +7257,7 @@
       "name": "st_wpn_beretta_new",
       "displayName": "st_wpn_beretta_new [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_beretta_camo",
@@ -7422,8 +7392,7 @@
       "name": "st_wpn_pl15",
       "displayName": "st_wpn_pl15",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pl15_pl15_scolaz",
@@ -7453,8 +7422,7 @@
       "name": "st_wpn_pm_new",
       "displayName": "st_wpn_pm_new [default]",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pm_actor",
@@ -7547,8 +7515,7 @@
       "name": "st_wpn_walther_p99",
       "displayName": "st_wpn_walther_p99 [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_walther_mod9",
@@ -7735,8 +7702,7 @@
       "name": "st_wpn_beretta_new",
       "displayName": "st_wpn_beretta_new [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_beretta_camo",
@@ -7871,8 +7837,7 @@
       "name": "st_wpn_pl15",
       "displayName": "st_wpn_pl15",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pl15_pl15_scolaz",
@@ -7902,8 +7867,7 @@
       "name": "st_wpn_pm_new",
       "displayName": "st_wpn_pm_new [default]",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pm_actor",
@@ -7996,8 +7960,7 @@
       "name": "st_wpn_walther_p99",
       "displayName": "st_wpn_walther_p99 [default]",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_walther_mod9",

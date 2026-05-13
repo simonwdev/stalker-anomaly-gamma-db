@@ -59,8 +59,8 @@
                 </div>
 
 
-                <div class="modal-badges" v-if="modalItem['st_data_export_has_perk'] === 'Y' || modalItem['st_data_export_is_junk'] === 'Y' || modalItem['st_data_export_can_be_crafted'] === 'Y' || modalItem['ui_mcm_menu_exo'] === 'Y' || modalItem['st_data_export_can_be_cooked'] === 'Y' || modalItem['st_data_export_used_in_cooking'] === 'Y' || modalItem['st_data_export_used_in_crafting'] === 'Y' || modalItem['st_data_export_cuts_thick_skin'] === 'Y' || modalItem.hasNpcWeaponDrop === false || isUnusedAmmo(modalItem, modalCategory)">
-                    <span v-if="modalItem.hasNpcWeaponDrop === false" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
+                <div class="modal-badges" v-if="modalItem['st_data_export_has_perk'] === 'Y' || modalItem['st_data_export_is_junk'] === 'Y' || modalItem['st_data_export_can_be_crafted'] === 'Y' || modalItem['ui_mcm_menu_exo'] === 'Y' || modalItem['st_data_export_can_be_cooked'] === 'Y' || modalItem['st_data_export_used_in_cooking'] === 'Y' || modalItem['st_data_export_used_in_crafting'] === 'Y' || modalItem['st_data_export_cuts_thick_skin'] === 'Y' || modalItem.unobtainable === true || isUnusedAmmo(modalItem, modalCategory)">
+                    <span v-if="modalItem.unobtainable === true" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
                     <span v-if="isUnusedAmmo(modalItem, modalCategory)" class="badge-unused" v-tooltip="t('app_tooltip_unused_ammo')">{{ t('app_badge_unused') }}</span>
                     <span v-if="modalItem['st_data_export_has_perk'] === 'Y'" class="badge-flag badge-perk">{{ t('app_badge_perk') }}</span>
                     <span v-if="modalItem['st_data_export_is_junk'] === 'Y'" class="badge-flag badge-junk">{{ t('app_badge_junk') }}</span>
@@ -100,6 +100,21 @@
                                     <span v-else v-for="item in section.items" class="desc-chip">{{ item }}</span>
                                 </template>
                             </div>
+                        </div>
+                        <div v-if="parsedPerk || (modalItem && pbaConstants[modalItem.id])" class="modal-perk-block">
+                            <div class="modal-perk-title">
+                                <span class="modal-perk-tag">{{ t('app_label_perk') }}</span>
+                                <span v-if="parsedPerk?.name" class="modal-perk-name">{{ parsedPerk.name }}</span>
+                            </div>
+                            <ul v-if="parsedPerk?.items?.length" class="modal-perk-items">
+                                <li v-for="(it, i) in parsedPerk.items" :key="i" :class="'modal-perk-' + it.kind">{{ it.text }}</li>
+                            </ul>
+                            <PerkDetails
+                                v-if="modalItem && pbaConstants[modalItem.id]"
+                                :item-id="modalItem.id"
+                                :pba-constants="pbaConstants"
+                                @navigate-to-item="$emit('navigateToItem', $event)"
+                            />
                         </div>
                     </div>
                 </div>
@@ -353,10 +368,11 @@
 
 <script>
 import UpgradeTreeView from './UpgradeTreeView.vue';
+import PerkDetails from './PerkDetails.vue';
 
 export default {
   name: 'ItemDetailModal',
-  components: { UpgradeTreeView },
+  components: { UpgradeTreeView, PerkDetails },
   inject: [
     't', 'tName', 'tCat', 'headerLabel', 'formatValue', 'displayLabel', 'displayStyle', 'isFieldHidden',
     'healDots', 'factionColor', 'factionIcon', 'singularCategory', 'isUnusedAmmo',
@@ -385,6 +401,8 @@ export default {
     modalUpgradeNodes: { type: Array, default: null },
     modalUsedByWeapons: Array,
     parsedDescription: Object,
+    parsedPerk: Object,
+    pbaConstants: { type: Object, default: () => ({}) },
     modalWeaponAddons: { type: Object, default: () => ({ scopes: [], silencers: [], launchers: [] }) },
     modalAddonCompatibleWeapons: { type: Array, default: () => [] },
     favoriteIds: Array,
@@ -498,6 +516,81 @@ export default {
 </script>
 
 <style scoped>
+.modal-perk-block {
+    margin: 0.6rem 0 0.25rem;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--color-accent-gold);
+    border-radius: 4px;
+    background: var(--color-surface-3);
+}
+.modal-perk-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.45rem;
+}
+.modal-perk-tag {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent-gold);
+    background: var(--color-accent-tint-18);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+}
+.modal-perk-name {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+.modal-perk-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.modal-perk-items li {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+.modal-perk-bullet {
+    position: relative;
+    padding-left: 1rem;
+}
+.modal-perk-bullet::before {
+    content: "•";
+    position: absolute;
+    left: 0.3rem;
+    color: var(--text-tertiary);
+}
+.modal-perk-section {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 0.35rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+}
+.modal-perk-sub {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.78rem;
+}
+.modal-perk-sub::before {
+    content: "›";
+    position: absolute;
+    left: 0.7rem;
+    color: var(--text-tertiary);
+}
 .modal-sticky-bar {
     position: sticky;
     top: -0.75rem;

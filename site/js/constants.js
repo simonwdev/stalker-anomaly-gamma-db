@@ -29,7 +29,7 @@ export const FILTER_DEFS = [
 export const NAME_TAG_COLS = new Set(["st_data_export_has_perk", "st_data_export_is_junk", "st_data_export_can_be_crafted", "ui_mcm_menu_exo", "st_data_export_can_be_cooked", "st_data_export_used_in_cooking", "st_data_export_used_in_crafting", "st_data_export_cuts_thick_skin"]);
 export const BADGE_COLS = new Set(["Type", "ui_mm_repair", "ui_ammo_types", "st_data_export_ammo_types_alt", "st_data_export_single_handed", ...NAME_TAG_COLS]);
 export const MODAL_BADGE_KEYS = new Set(["st_data_export_has_perk", "st_data_export_is_junk", "st_data_export_can_be_crafted", "ui_mcm_menu_exo", "st_data_export_can_be_cooked", "st_data_export_used_in_cooking", "st_data_export_used_in_crafting", "st_data_export_cuts_thick_skin", "ui_ammo_types", "st_data_export_ammo_types_alt", "ui_st_community"]);
-export const SKIP_KEYS = new Set(["id", "pda_encyclopedia_name", "hasNpcWeaponDrop", "hasStashDrop", "hasDisassemble", "st_data_export_description"]);
+export const SKIP_KEYS = new Set(["id", "pda_encyclopedia_name", "hasNpcWeaponDrop", "hasStashDrop", "inStartingLoadout", "unobtainable", "hasDisassemble", "st_data_export_description"]);
 export const MAX_PINS = 5;
 export const BUILD_HASH_PREFIX = "build/";
 
@@ -165,24 +165,27 @@ export const CATEGORY_GROUPS = [
 ];
 
 export const KEYS = {
-    SEARCH: '/',
+    SEARCH: ['/', 's'],
     ESCAPE: 'Escape',
     TOGGLE_VIEW: 'v',
-    TOGGLE_SIDEBAR: 's',
+    TOGGLE_SIDEBAR: 'b',
     COMPARE: 'c',
     HELP: '?',
     FILTERS: 'F',
-    PREV_CATEGORY: '[',
-    NEXT_CATEGORY: ']',
+    PREV_CATEGORY: ['[', ',', 'h'],
+    NEXT_CATEGORY: [']', '.', 'l'],
     FAVORITE: 'f',
     PIN: 'p',
-    PREV_ITEM: 'ArrowLeft',
-    NEXT_ITEM: 'ArrowRight',
+    PREV_ITEM: ['ArrowLeft', 'h'],
+    NEXT_ITEM: ['ArrowRight', 'l'],
     CLEAR_FILTERS: 'x',
     CHORD_GO: 'g',
     CHORD_BUILD: 'b',
     QUICK_NAV: 'k',
 };
+
+export const matchesKey = (key, binding) =>
+    Array.isArray(binding) ? binding.includes(key) : key === binding;
 export const CHORD_TIMEOUT = 500;
 
 export const FACTION_ICONS = {

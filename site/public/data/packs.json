@@ -1,5 +1,5 @@
 {
-  "hiddenFields": ["st_data_export_zoom_factor"],
+  "hiddenFields": ["st_data_export_zoom_factor", "st_data_export_perk_description"],
   "packs": [
     {
       "id": "gamma-0.9.5",

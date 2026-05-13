@@ -304,7 +304,7 @@ export default {
         'update:globalQuery', 'search', 'escapeSearch', 'selectSearchResult',
         'openItemDb', 'openMaps', 'openTrading', 'openBuildPlanner', 'openCrafting', 'openDamageSim',
         'toggleHideNoDrop', 'toggleHideUnusedAmmo', 'toggleShowTileIcons',
-        'selectSearchResult', 'selectCraftingSearchResult',
+        'selectCraftingSearchResult',
     ],
     inject: ['t', 'tName', 'tCat', 'navHref'],
     computed: {

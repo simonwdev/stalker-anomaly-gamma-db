@@ -4077,6 +4077,12 @@ input.range-input {
     color: var(--text);
     text-align: right;
 }
+.shortcut-or {
+    font-size: 0.72rem;
+    color: var(--text-tertiary, var(--text-secondary));
+    opacity: 0.7;
+    margin: 0 0.05rem;
+}
 .shortcut-row--highlight {
     background: var(--color-accent-tint-8);
     border-radius: 4px;

@@ -44,7 +44,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_bm16",
@@ -69,7 +71,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_bm16_alt",
@@ -94,7 +98,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_bm16_full",
@@ -119,7 +125,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_bm16_full_alt",
@@ -144,7 +152,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_bm16_full_alt_23",
@@ -169,7 +179,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_eft_mts_255",
@@ -194,7 +206,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_fort500",
@@ -219,7 +233,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_ithacam37",
@@ -244,7 +260,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_ithacam37_mag",
@@ -269,7 +287,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_ithacam37_sawnoff",
@@ -294,7 +314,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_ithacam37_stakeout",
@@ -319,7 +341,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_ithacam37_stakeout_20x70",
@@ -344,7 +368,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_ithacam37_trench",
@@ -369,7 +395,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_ks23",
@@ -394,7 +422,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_ks23_23_up",
@@ -419,7 +449,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_ks23_ecolog",
@@ -444,7 +476,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_ks23_kaban",
@@ -469,7 +503,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_ks23_kaban_kab_up",
@@ -494,7 +530,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_ks23_vorkuta",
@@ -519,7 +557,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_ksg23",
@@ -544,7 +584,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_mossberg590",
@@ -569,7 +611,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_mossberg590_rail",
@@ -594,7 +638,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_mp133",
@@ -619,7 +665,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_mp153",
@@ -644,7 +692,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_mp153_m1",
@@ -669,7 +719,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_mp155",
@@ -694,7 +746,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_protecta",
@@ -719,7 +773,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_protecta_aim",
@@ -744,7 +800,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_protecta_camo",
@@ -769,7 +827,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_protecta_custom",
@@ -794,7 +854,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_protecta_nimble",
@@ -819,7 +881,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_raptr",
@@ -844,7 +908,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_remington870",
@@ -869,7 +935,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_saiga12s",
@@ -894,7 +962,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_saiga12s_isg",
@@ -919,7 +989,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_saiga12s_m1",
@@ -944,7 +1016,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_saiga12s_m2",
@@ -969,7 +1043,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_spas12",
@@ -994,7 +1070,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_spas12_custom",
@@ -1019,7 +1097,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_spas12_nimble",
@@ -1044,7 +1124,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_toz106",
@@ -1069,7 +1151,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_toz106_m1",
@@ -1094,7 +1178,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_toz34",
@@ -1119,7 +1205,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_toz34_bull",
@@ -1143,7 +1231,9 @@
       "displayName": "st_wpn_toz34_bull",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_toz34_custom",
@@ -1168,7 +1258,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_toz34_decor",
@@ -1193,7 +1285,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_toz34_mark4",
@@ -1218,7 +1312,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_toz34_mark4_23",
@@ -1243,7 +1339,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_toz34_obrez",
@@ -1268,7 +1366,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": true,
+      "unobtainable": false
     },
     {
       "id": "wpn_toz34_obrez_custom",
@@ -1293,7 +1393,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_toz34_obrez_decor",
@@ -1318,7 +1420,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_usas12",
@@ -1343,7 +1447,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_vepr",
@@ -1368,7 +1474,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_wincheaster1300",
@@ -1393,7 +1501,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": false
     },
     {
       "id": "wpn_wincheaster1300_trapper",
@@ -1418,7 +1528,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "inStartingLoadout": false,
+      "unobtainable": true
     }
   ]
 }

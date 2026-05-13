@@ -12,7 +12,7 @@ import {
     LOCALES, CHART_COLORS,
     SINGULAR_TYPE, SINGULAR_CATEGORY, CATEGORY_KEYS,
     WEAPON_CATEGORIES, WEAPON_CATEGORY_SLUGS, VIRTUAL_CATEGORIES, CRAFTING_SUBCATEGORIES, CATEGORY_GROUPS,
-    KEYS, CHORD_TIMEOUT,
+    KEYS, CHORD_TIMEOUT, matchesKey,
     FACTION_ICONS, FACTION_COLORS, FACTION_LIST,
 } from './constants.js';
 import {
@@ -98,6 +98,7 @@ export const appDefinition = {
             mutantProfilesCache: null,
             npcArmorProfilesCache: null,
             gboConstantsCache: null,
+            pbaConstantsCache: null,
             ballisticRangesCache: null,
             upgradesCache: null,
 
@@ -275,7 +276,7 @@ export const appDefinition = {
         categoryCounts() {
             const counts = {};
             for (const item of this.index) {
-                if (this.hideNoDrop && item.hasNpcWeaponDrop === false) continue;
+                if (this.hideNoDrop && item.unobtainable === true) continue;
                 if (this.hideUnusedAmmo && item.category === 'Ammo' && this.ammoWeaponsCache) {
                     const weapons = this.ammoWeaponsCache[item.id];
                     if (!weapons || weapons.length === 0) continue;
@@ -393,6 +394,11 @@ export const appDefinition = {
         parsedDescription() {
             if (!this.modalItem?.st_data_export_description) return null;
             return this.parseDescription(this.modalItem);
+        },
+
+        parsedPerk() {
+            if (!this.modalItem?.st_data_export_perk_description) return null;
+            return this.parsePerk(this.modalItem);
         },
 
         modalWeaponAddons() {
@@ -729,7 +735,7 @@ export const appDefinition = {
             if (!weaponIds.length) return [];
             const indexMap = new Map((this.index || []).map(i => [i.id, i]));
             let weapons = weaponIds.map(wid => indexMap.get(wid)).filter(Boolean);
-            if (this.hideNoDrop) weapons = weapons.filter(w => w.hasNpcWeaponDrop !== false);
+            if (this.hideNoDrop) weapons = weapons.filter(w => w.unobtainable !== true);
             return weapons.sort((a, b) => (this.tName(a) || '').localeCompare(this.tName(b) || ''));
         },
 
@@ -1111,14 +1117,14 @@ export const appDefinition = {
             const slug = categorySlug(this.activeCategory);
             let items = this.categoryItems[slug] || [];
             if (this.hideNoDrop) {
-                items = items.filter((i) => i.hasNpcWeaponDrop !== false);
+                items = items.filter((i) => i.unobtainable !== true);
                 if (this.isAddonCategory) {
                     const indexMap = new Map((this.index || []).map(i => [i.id, i]));
                     items = items.filter(i => {
                         const weaponIds = (this.addonCompatibleWeaponsMap || {})[i.id] || [];
                         return weaponIds.some(wid => {
                             const w = indexMap.get(wid);
-                            return w && w.hasNpcWeaponDrop !== false;
+                            return w && w.unobtainable !== true;
                         });
                     });
                 }
@@ -1521,7 +1527,7 @@ export const appDefinition = {
             const collectSlugs = (slugs) => {
                 let items = [];
                 for (const slug of slugs) items = items.concat(this.categoryItems[slug] || []);
-                if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
+                if (this.hideNoDrop) items = items.filter(i => i.unobtainable !== true);
                 return items;
             };
 
@@ -1551,7 +1557,7 @@ export const appDefinition = {
                 const beltItems = (this.categoryItems["belt-attachments"] || []).filter(i => !isBackpack(i));
                 const artItems = this.categoryItems["artefacts"] || [];
                 let items = beltItems.concat(artItems);
-                if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
+                if (this.hideNoDrop) items = items.filter(i => i.unobtainable !== true);
                 return searchOrSort(items);
             }
 
@@ -1559,7 +1565,7 @@ export const appDefinition = {
             if (!cat) return [];
             const slug = categorySlug(cat);
             let items = this.categoryItems[slug] || [];
-            if (this.hideNoDrop) items = items.filter(i => i.hasNpcWeaponDrop !== false);
+            if (this.hideNoDrop) items = items.filter(i => i.unobtainable !== true);
             if (slotType === "backpack") items = items.filter(i => isBackpack(i));
             return searchOrSort(items);
         },
@@ -1733,6 +1739,10 @@ export const appDefinition = {
             return this.fetchJsonCached("gboConstantsCache", "gbo-constants.json");
         },
 
+        fetchPbaConstants() {
+            return this.fetchJsonCached("pbaConstantsCache", "pba-constants.json");
+        },
+
         findItemByName(name) {
             return this.index.find(i => i.name === name || i.displayName === name || i.pda_encyclopedia_name === name);
         },
@@ -1880,6 +1890,7 @@ export const appDefinition = {
                 this.ensureCategoryLoaded(categorySlug(CAT.GRENADE_LAUNCHERS)),
                 this.ensureCategoryLoaded(categorySlug(CAT.TACTICAL_KITS)),
                 this.fetchWeaponAddons(),
+                this.fetchPbaConstants(),
             ]);
             this.rebuildGlobalFuse();
             this.loading = false;
@@ -1980,7 +1991,7 @@ export const appDefinition = {
 
         globalSearchFilter(items) {
             return items.filter(item => {
-                if (this.hideNoDrop && item.hasNpcWeaponDrop === false) return false;
+                if (this.hideNoDrop && item.unobtainable === true) return false;
                 if (this.hideUnusedAmmo && item.category === 'Ammo' && this.ammoWeaponsCache) {
                     const weapons = this.ammoWeaponsCache[item.id];
                     if (!weapons || weapons.length === 0) return false;
@@ -3265,16 +3276,20 @@ export const appDefinition = {
             const numerics = parsed.filter((n) => !isNaN(n));
             let best = null;
             let worst = null;
+            let high = null;
+            let low = null;
             if (numerics.length >= 2 && !NO_HIGHLIGHT.has(label)) {
-                const lowerBetter = LOWER_IS_BETTER.has(label);
-                const bestVal = lowerBetter ? Math.min(...numerics) : Math.max(...numerics);
-                const worstVal = lowerBetter ? Math.max(...numerics) : Math.min(...numerics);
-                if (bestVal !== worstVal) {
-                    best = bestVal;
-                    worst = worstVal;
+                const maxVal = Math.max(...numerics);
+                const minVal = Math.min(...numerics);
+                if (maxVal !== minVal) {
+                    const lowerBetter = LOWER_IS_BETTER.has(label) || HIGHER_IS_WORSE.has(label);
+                    best = lowerBetter ? minVal : maxVal;
+                    worst = lowerBetter ? maxVal : minVal;
+                    high = maxVal;
+                    low = minVal;
                 }
             }
-            return { label, values, parsed, best, worst };
+            return { label, values, parsed, best, worst, high, low };
         },
 
         compareValueClass(row, idx) {
@@ -3287,11 +3302,11 @@ export const appDefinition = {
         },
 
         compareValueIcon(row, idx) {
-            if (row.best === null) return "";
+            if (row.high === null) return "";
             const v = row.parsed[idx];
             if (isNaN(v)) return "";
-            if (v === row.best) return "\u25B2";
-            if (v === row.worst) return "\u25BC";
+            if (v === row.high) return "\u25B2";
+            if (v === row.low) return "\u25BC";
             return "";
         },
 
@@ -4050,7 +4065,7 @@ export const appDefinition = {
                     const indexMap = new Map((this.index || []).map(i => [i.id, i]));
                     weapons = weapons.filter(wid => {
                         const w = indexMap.get(wid);
-                        return w && w.hasNpcWeaponDrop !== false;
+                        return w && w.unobtainable !== true;
                     });
                 }
                 return weapons.length;
@@ -4443,6 +4458,11 @@ export const appDefinition = {
             const pack = this.activePack?.id;
             if (!pack) return '#';
             return `/db/${pack}#${itemId}`;
+        },
+
+        itemExists(itemId) {
+            if (!itemId) return false;
+            return this.index?.some(i => i.id === itemId) ?? false;
         },
 
         categoryHref(category) {
@@ -4846,6 +4866,7 @@ export const appDefinition = {
                 this.fetchMutantProfiles(),
                 this.fetchNpcArmorProfiles(),
                 this.fetchGboConstants(),
+                this.fetchPbaConstants(),
                 this.fetchCalibers(),
                 this.fetchAmmoWeapons(),
                 this.fetchJsonCached("ballisticRangesCache", "ballistic-ranges.json"),
@@ -6058,6 +6079,30 @@ export const appDefinition = {
             return this.t(map[slotType]) || slotType;
         },
 
+        parsePerk(item) {
+            const key = item?.st_data_export_perk_description;
+            if (!key) return null;
+            const raw = this.t(key);
+            if (!raw || raw === key) return null;
+            const NL = /\x5cn/g;
+            const lines = raw.split(NL).map(l => l.trim()).filter(Boolean);
+            if (!lines.length) return null;
+            const first = lines[0].replace(/^perk\s*:\s*/i, "").trim();
+            const items = [];
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i];
+                if (/^[••]/.test(line)) {
+                    items.push({ kind: "bullet", text: line.replace(/^[••]\s*/, "").trim() });
+                } else if (/^[-–—]/.test(line)) {
+                    items.push({ kind: "sub", text: line.replace(/^[-–—]\s*/, "").trim() });
+                } else if (line) {
+                    items.push({ kind: "section", text: line.replace(/:\s*$/, "").trim() });
+                }
+            }
+            if (!first && !items.length) return null;
+            return { name: first, items };
+        },
+
         parseDescription(item) {
             if (!item?.st_data_export_description) return null;
             const raw = this.t(item.st_data_export_description);
@@ -6618,8 +6663,8 @@ export const appDefinition = {
 
             // Modal-context shortcuts
             if (this.modalOpen && this.modalItem) {
-                if (e.key === KEYS.PREV_ITEM) { this.navigateModal(-1); return; }
-                if (e.key === KEYS.NEXT_ITEM) { this.navigateModal(1); return; }
+                if (matchesKey(e.key, KEYS.PREV_ITEM)) { this.navigateModal(-1); return; }
+                if (matchesKey(e.key, KEYS.NEXT_ITEM)) { this.navigateModal(1); return; }
                 if (e.key === KEYS.FAVORITE) { this.toggleFavorite(this.modalItem.id); return; }
                 if (e.key === KEYS.PIN) { this.togglePin(this.modalItem.id); return; }
                 return;
@@ -6642,7 +6687,7 @@ export const appDefinition = {
             }
 
             // Global single-key shortcuts
-            if (e.key === KEYS.SEARCH) {
+            if (matchesKey(e.key, KEYS.SEARCH)) {
                 e.preventDefault();
                 if (!this.globalQuery && this.lastGlobalQuery) {
                     this.globalQuery = this.lastGlobalQuery;
@@ -6668,8 +6713,8 @@ export const appDefinition = {
                 this.filterInput = "";
                 return;
             }
-            if (e.key === KEYS.PREV_CATEGORY || e.key === KEYS.NEXT_CATEGORY) {
-                this.navigateCategory(e.key === KEYS.PREV_CATEGORY ? -1 : 1);
+            if (matchesKey(e.key, KEYS.PREV_CATEGORY) || matchesKey(e.key, KEYS.NEXT_CATEGORY)) {
+                this.navigateCategory(matchesKey(e.key, KEYS.PREV_CATEGORY) ? -1 : 1);
                 return;
             }
         });

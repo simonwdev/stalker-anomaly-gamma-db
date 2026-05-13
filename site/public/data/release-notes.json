@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-05-13",
+    "entries": [
+      { "type": "added", "text": "Artefacts now show their perk name, full perk description and abilities." },
+      { "type": "changed", "text": "Reworked unobtainable weapons filter to correctly classify weapons available via stash drops or starting loadouts, not just NPC drops." }
+    ]
+  },
+  {
     "date": "2026-05-10",
     "entries": [
       { "type": "added", "text": "GAMMA 0.9.5 starting loadouts planner is now available." },

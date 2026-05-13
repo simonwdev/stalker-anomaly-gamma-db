@@ -452,7 +452,7 @@ export default defineComponent({
         if (!Array.isArray(items)) continue;
         for (const item of items) {
           if (!item.ui_ammo_types || seen.has(item.id)) continue;
-          if (this.hideNoDrop && item.hasNpcWeaponDrop === false) continue;
+          if (this.hideNoDrop && item.unobtainable === true) continue;
           seen.add(item.id);
           weapons.push(item);
         }
@@ -552,7 +552,7 @@ export default defineComponent({
         const items = this.weaponCategories[slug];
         if (!Array.isArray(items)) continue;
         for (const w of items) {
-          if (this.hideNoDrop && w.hasNpcWeaponDrop === false) continue;
+          if (this.hideNoDrop && w.unobtainable === true) continue;
           if (w.ui_ammo_types) weapons.push(w);
         }
       }

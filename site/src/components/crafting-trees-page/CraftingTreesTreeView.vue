@@ -213,7 +213,7 @@ export default {
             if (!item) return [];
             const SKIP = new Set([
                 "id", "name", "displayName", "pda_encyclopedia_name", "category",
-                "hasNpcWeaponDrop", "hasStashDrop", "hasDisassemble",
+                "hasNpcWeaponDrop", "hasStashDrop", "inStartingLoadout", "unobtainable", "hasDisassemble",
                 "st_data_export_description", "localeName", "displayLabel",
                 "st_data_export_is_junk", "st_data_export_has_perk",
                 "st_data_export_can_be_crafted", "st_data_export_used_in_crafting",
