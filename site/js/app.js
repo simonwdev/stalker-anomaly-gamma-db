@@ -3276,16 +3276,20 @@ export const appDefinition = {
             const numerics = parsed.filter((n) => !isNaN(n));
             let best = null;
             let worst = null;
+            let high = null;
+            let low = null;
             if (numerics.length >= 2 && !NO_HIGHLIGHT.has(label)) {
-                const lowerBetter = LOWER_IS_BETTER.has(label);
-                const bestVal = lowerBetter ? Math.min(...numerics) : Math.max(...numerics);
-                const worstVal = lowerBetter ? Math.max(...numerics) : Math.min(...numerics);
-                if (bestVal !== worstVal) {
-                    best = bestVal;
-                    worst = worstVal;
+                const maxVal = Math.max(...numerics);
+                const minVal = Math.min(...numerics);
+                if (maxVal !== minVal) {
+                    const lowerBetter = LOWER_IS_BETTER.has(label) || HIGHER_IS_WORSE.has(label);
+                    best = lowerBetter ? minVal : maxVal;
+                    worst = lowerBetter ? maxVal : minVal;
+                    high = maxVal;
+                    low = minVal;
                 }
             }
-            return { label, values, parsed, best, worst };
+            return { label, values, parsed, best, worst, high, low };
         },
 
         compareValueClass(row, idx) {
@@ -3298,11 +3302,11 @@ export const appDefinition = {
         },
 
         compareValueIcon(row, idx) {
-            if (row.best === null) return "";
+            if (row.high === null) return "";
             const v = row.parsed[idx];
             if (isNaN(v)) return "";
-            if (v === row.best) return "\u25B2";
-            if (v === row.worst) return "\u25BC";
+            if (v === row.high) return "\u25B2";
+            if (v === row.low) return "\u25BC";
             return "";
         },
 
