@@ -834,16 +834,6 @@ button.header-link {
     flex: 1;
     overflow: hidden;
 }
-.search-result-right {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    flex-shrink: 0;
-    margin-left: 0.5rem;
-}
-.search-result-right .search-id-hint {
-    margin-left: 0;
-}
 .search-cat-badge {
     font-size: 0.65rem;
     color: var(--text-secondary);

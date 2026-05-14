@@ -54,8 +54,9 @@ self.addEventListener('fetch', (event) => {
         }
         return response;
       } catch {
-        // If offline and not cached, let the browser show the broken-image fallback
-        return new Response('', { status: 503 });
+        // If offline and not cached, surface a network error so the <img @error>
+        // fallback fires the same way it would for any other failed image fetch.
+        return Response.error();
       }
     })
   );
