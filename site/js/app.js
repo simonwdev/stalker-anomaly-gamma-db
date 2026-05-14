@@ -110,6 +110,7 @@ export const appDefinition = {
             craftingTreeExpanded: new Set(),
             craftingTreeExpandAll: false,
             _craftingTreeViewExpandAll: true,
+            highlightedCraftingId: null,
 
             sidebarOpen: false,
             sidebarCollapsed: false,
@@ -152,9 +153,13 @@ export const appDefinition = {
             buildPlayerName: "Stalker",
             buildPlayerFaction: "stalker",
             buildPlannerActive: false,
+            buildPlannerMounted: false,
             mapsActive: false,
+            mapsMounted: false,
             tradingActive: false,
+            tradingMounted: false,
             damageSimActive: false,
+            damageSimMounted: false,
             versionCompareActive: false,
             startingLoadoutsActive: false,
             startingLoadoutsCache: null,
@@ -1855,9 +1860,11 @@ export const appDefinition = {
                         await this.openDamageSim();
                     } else if (urlCat === "maps" || pathParsed.maps) {
                         this.mapsActive = true;
+                        this.mapsMounted = true;
                         this.activeCategory = null;
                     } else if (urlCat === "trading" || pathParsed.trading) {
                         this.tradingActive = true;
+                        this.tradingMounted = true;
                         this.activeCategory = null;
                     } else if (urlCat === "version-compare" || pathParsed.versionCompare) {
                         // Defer to restoreUrlState
@@ -2818,12 +2825,14 @@ export const appDefinition = {
         openMaps() {
             this.resetViewState();
             this.mapsActive = true;
+            this.mapsMounted = true;
             this.pushUrlState(true);
         },
 
         openTrading() {
             this.resetViewState();
             this.tradingActive = true;
+            this.tradingMounted = true;
             this.pushUrlState(true);
         },
 
@@ -4635,9 +4644,11 @@ export const appDefinition = {
                 this.openDamageSim();
             } else if (parsed.maps || legacyCat === "maps") {
                 this.mapsActive = true;
+                this.mapsMounted = true;
                 this.activeCategory = null;
             } else if (parsed.trading || legacyCat === "trading") {
                 this.tradingActive = true;
+                this.tradingMounted = true;
                 this.activeCategory = null;
             } else if (parsed.versionCompare || legacyCat === "version-compare") {
                 this.versionCompareActive = true;
@@ -4787,22 +4798,37 @@ export const appDefinition = {
             this.globalCraftingResults = [];
         },
 
+        async navigateToItemInSection(id, category) {
+            if (this.globalQuery.trim()) this.lastGlobalQuery = this.globalQuery;
+            this.globalQuery = "";
+            this.globalResults = [];
+            this.globalCraftingResults = [];
+            const entry = this.indexById[id];
+            const fullName = entry ? this.tName(entry) : '';
+            await this.selectCategory(category);
+            if (fullName) { this.filterInput = fullName; this.filterQuery = fullName; }
+            this.navigateToItem(id);
+        },
+
         async selectCraftingSearchResult(result) {
-            const q = this.globalQuery.trim();
             this.lastGlobalQuery = this.globalQuery;
             this.globalQuery = "";
             this.globalResults = [];
             this.globalCraftingResults = [];
+            this.highlightedCraftingId = null;
             await this.selectCategory(CAT.CRAFTING);
             this.craftingCategory = result.craftCategory || 'all';
-            this.filterInput = q;
-            this.filterQuery = q;
+            this.filterInput = result.displayName || '';
+            this.filterQuery = result.displayName || '';
+            this.highlightedCraftingId = result.id;
+            setTimeout(() => { this.highlightedCraftingId = null; }, 2200);
         },
 
         // Build Planner methods
         async openBuildPlanner() {
             this.resetViewState();
             this.buildPlannerActive = true;
+            this.buildPlannerMounted = true;
 
             // Load equipment category data
             const cats = ["outfits", "helmets", "belt-attachments", "artefacts", ...WEAPON_CATEGORY_SLUGS, GRENADE_SLUG, "ammo"];
@@ -4840,6 +4866,7 @@ export const appDefinition = {
         async openDamageSim() {
             this.resetViewState();
             this.damageSimActive = true;
+            this.damageSimMounted = true;
 
             const cats = [...WEAPON_CATEGORY_SLUGS, "ammo"];
             await Promise.all([

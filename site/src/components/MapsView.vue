@@ -264,6 +264,7 @@ export default defineComponent({
   inject: ['t'],
   props: {
     packId: { type: String, default: '' },
+    visible: { type: Boolean, default: true },
   },
   setup(props) {
     const mapContainer = ref<HTMLElement | null>(null);
@@ -2135,6 +2136,14 @@ export default defineComponent({
       destroyMap();
       rebuildLayers(newPack);
       initMap();
+    });
+
+    // When the view becomes visible again (v-show toggled), fix Leaflet layout
+    watch(() => props.visible, (val) => {
+      if (val && map) {
+        // Use a small delay to ensure display:none has been removed from the DOM
+        setTimeout(() => { map?.invalidateSize(); }, 50);
+      }
     });
 
     const baseLayerIds = new Set(['level-labels', 'level-bounds', 'faction-territory']);

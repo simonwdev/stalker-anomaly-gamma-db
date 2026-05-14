@@ -48,23 +48,28 @@
 
             <!-- Tile card view (all categories including artefacts) -->
             <div v-else class="tile-grid" ref="tileGrid">
-                <CraftingRecipeCard
+                <div
                     v-for="tree in visibleTrees"
                     :key="tree.id"
-                    :title="t(tree.name)"
-                    :title-clickable="true"
-                    :tier-label="tree.toolTier ? t('app_craft_toolkit_' + tree.toolTier) : ''"
-                    :tier-tooltip="t('app_craft_tool_tier')"
-                    :tier-class="tree.toolTier ? 'tier-' + tree.toolTier : ''"
-                    :rows="treeRows(tree)"
-                    :footer="tree.recipeReqName ? t(tree.recipeReqName) : ''"
-                    @click-title="$emit('navigateToItem', tree.id)"
-                    @click-row="(row) => row.itemId && $emit('navigateToItem', row.itemId)"
-                    @toggle-expand="(path) => $emit('toggleTreeNode', path)"
-                    @hover-enter="(ev, row) => showHover(row ? row.hoverName : tree.name, ev)"
-                    @hover-move="moveHover"
-                    @hover-leave="hideHover"
-                />
+                    :data-tree-id="tree.id"
+                    :class="{ 'crafting-card-highlighted': highlightedCraftingId === tree.id }"
+                >
+                    <CraftingRecipeCard
+                        :title="t(tree.name)"
+                        :title-clickable="true"
+                        :tier-label="tree.toolTier ? t('app_craft_toolkit_' + tree.toolTier) : ''"
+                        :tier-tooltip="t('app_craft_tool_tier')"
+                        :tier-class="tree.toolTier ? 'tier-' + tree.toolTier : ''"
+                        :rows="treeRows(tree)"
+                        :footer="tree.recipeReqName ? t(tree.recipeReqName) : ''"
+                        @click-title="$emit('navigateToItem', tree.id)"
+                        @click-row="(row) => row.itemId && $emit('navigateToItem', row.itemId)"
+                        @toggle-expand="(path) => $emit('toggleTreeNode', path)"
+                        @hover-enter="(ev, row) => showHover(row ? row.hoverName : tree.name, ev)"
+                        @hover-move="moveHover"
+                        @hover-leave="hideHover"
+                    />
+                </div>
                 <!-- Infinite scroll sentinel -->
                 <div class="infinite-scroll-sentinel" ref="scrollSentinel"></div>
             </div>
@@ -135,6 +140,7 @@ export default {
         filteredCraftingTrees: { type: Array, default: () => [] },
         craftingTreeExpandAll: { type: Boolean, default: false },
         craftingTreeExpanded: { type: Set, default: () => new Set() },
+        highlightedCraftingId: { type: String, default: null },
     },
     emits: ["navigateToItem", "expandAllTrees", "collapseAllTrees", "toggleTreeNode"],
     data() {
@@ -176,6 +182,15 @@ export default {
         filteredCraftingTrees() {
             this.visibleCount = PAGE_SIZE;
         },
+        highlightedCraftingId(id) {
+            if (!id) return;
+            // Ensure the target tree is within the visible window then scroll to it
+            const idx = this.filteredCraftingTrees.findIndex(t => t.id === id);
+            if (idx !== -1 && idx >= this.visibleCount) {
+                this.visibleCount = idx + 1;
+            }
+            this.$nextTick(() => this._scrollToCard(id));
+        },
         craftingCategory() {
             this.visibleCount = PAGE_SIZE;
             // Reset to list view when switching to materials (no tree tab there)
@@ -204,6 +219,11 @@ export default {
             this.craftingViewMode = mode;
             this.visibleCount = PAGE_SIZE;
             try { localStorage.setItem('craftingInnerViewMode', mode); } catch {}
+        },
+
+        _scrollToCard(id) {
+            const el = this.$el?.querySelector(`[data-tree-id="${id}"]`);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         },
 
         _setupObserver() {

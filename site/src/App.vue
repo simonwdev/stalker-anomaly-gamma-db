@@ -79,6 +79,7 @@
     @search="debouncedGlobalSearch()"
     @escape-search="() => { if (globalQuery.trim()) lastGlobalQuery = globalQuery; globalQuery = '' }"
     @select-search-result="(id) => { lastGlobalQuery = globalQuery; globalQuery = ''; navigateToItem(id) }"
+    @select-search-result-in-section="({ id, category }) => navigateToItemInSection(id, category)"
     @select-crafting-search-result="(result) => selectCraftingSearchResult(result)"
 />
 
@@ -116,9 +117,10 @@
     <div class="sidebar-backdrop" v-show="sidebarOpen" @click="closeSidebar()"></div>
 
     <main class="content" :class="{ 'content-maps': mapsActive }">
-        <MapsView v-if="mapsActive" :pack-id="activePack?.id" />
+        <MapsView v-if="mapsMounted" v-show="mapsActive" :pack-id="activePack?.id" :visible="mapsActive" />
         <TradingView
-            v-if="tradingActive"
+            v-if="tradingMounted"
+            v-show="tradingActive"
             :pack-id="activePack?.id"
             :index-by-id="indexById"
             @navigate-to-item="navigateToItem"
@@ -127,7 +129,8 @@
             @hide-item-hover="hideItemHover()"
         />
         <DamageSimulator
-            v-if="damageSimActive"
+            v-if="damageSimMounted"
+            v-show="damageSimActive"
             :weapon-categories="categoryItems"
             :ammo-items="categoryItems['ammo'] || []"
             :mutant-profiles="mutantProfilesCache || []"
@@ -241,6 +244,7 @@
                 :filtered-crafting-trees="filteredCraftingTrees"
                 :crafting-tree-expand-all="craftingTreeExpandAll"
                 :crafting-tree-expanded="craftingTreeExpanded"
+                :highlighted-crafting-id="highlightedCraftingId"
                 @toggle-tree-node="toggleTreeNode"
                 @navigate-to-item="navigateToItem"
             />
@@ -288,7 +292,8 @@
 
             <!-- Build Planner view -->
             <BuildPlanner
-                v-if="buildPlannerActive"
+                v-if="buildPlannerMounted"
+                v-show="buildPlannerActive"
                 ref="buildPlanner"
                 :build-player-name="buildPlayerName"
                 :build-player-faction="buildPlayerFaction"

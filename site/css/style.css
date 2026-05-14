@@ -825,7 +825,24 @@ button.header-link {
 .search-id-hint {
     color: var(--text-secondary);
     font-size: 0.7em;
-    margin-left: 0.5em;
+    margin-left: 0.25em;
+}
+.search-result-left {
+    display: flex;
+    align-items: baseline;
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+}
+.search-result-right {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+}
+.search-result-right .search-id-hint {
+    margin-left: 0;
 }
 .search-cat-badge {
     font-size: 0.65rem;
@@ -847,6 +864,14 @@ button.header-link {
 }
 .search-crafting-result {
     opacity: 0.92;
+}
+.crafting-card-highlighted {
+    animation: crafting-highlight-flash 2.2s ease forwards;
+}
+@keyframes crafting-highlight-flash {
+    0%   { box-shadow: 0 0 0 2px var(--accent); border-radius: 6px; }
+    60%  { box-shadow: 0 0 0 2px var(--accent); border-radius: 6px; }
+    100% { box-shadow: none; }
 }
 .srch-hl {
     background: transparent;

@@ -1,0 +1,11 @@
+﻿/sw.js
+  Cache-Control: no-store
+
+/img/icons/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*
+  Cache-Control: public, max-age=86400
+
+/data/*
+  Cache-Control: public, max-age=300, stale-while-revalidate=3600
