@@ -36,7 +36,11 @@
       "st_data_export_hit_power": "5.5",
       "displayName": "st_wpn_umirotvoritel",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_g43",
@@ -57,7 +61,11 @@
       "displayName": "st_wpn_g43",
       "hasNpcWeaponDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_gauss",
@@ -77,7 +85,11 @@
       "st_data_export_hit_power": "1",
       "displayName": "st_wpn_gauss",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_gauss_quest",
@@ -97,7 +109,11 @@
       "st_data_export_hit_power": "1",
       "displayName": "lttz_ll_wpn_gauss_quest_name",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_k98",
@@ -118,7 +134,11 @@
       "displayName": "st_wpn_k98",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_l96a1",
@@ -139,7 +159,11 @@
       "displayName": "st_wpn_l96a1",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_l96a1m",
@@ -160,7 +184,11 @@
       "displayName": "st_wpn_l96a1m",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_m24",
@@ -181,7 +209,11 @@
       "displayName": "st_wpn_m24",
       "hasNpcWeaponDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": true,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_m82",
@@ -202,7 +234,11 @@
       "displayName": "st_wpn_m82",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_m98b",
@@ -223,7 +259,11 @@
       "displayName": "st_wpn_m98b",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_mosin",
@@ -244,7 +284,11 @@
       "displayName": "st_wpn_mosin",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_remington700",
@@ -265,7 +309,11 @@
       "displayName": "st_wpn_remington700",
       "hasNpcWeaponDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": true,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sig550_sniper",
@@ -286,7 +334,11 @@
       "displayName": "st_wpn_sig550_sniper",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sks",
@@ -307,7 +359,11 @@
       "displayName": "st_wpn_sks",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sks_modern",
@@ -328,7 +384,11 @@
       "displayName": "st_wpn_sks_modern",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sr25",
@@ -349,7 +409,11 @@
       "displayName": "st_wpn_sr25",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sv98",
@@ -370,7 +434,11 @@
       "displayName": "st_wpn_sv98",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sv98_custom",
@@ -391,7 +459,11 @@
       "displayName": "st_wpn_sv98_custom",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_svd",
@@ -412,7 +484,11 @@
       "displayName": "st_wpn_svd",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_svd_custom",
@@ -433,7 +509,11 @@
       "displayName": "st_wpn_svd_custom",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_svd_nimble",
@@ -454,7 +534,11 @@
       "displayName": "st_wpn_svd_nimble",
       "hasNpcWeaponDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": true,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_svt40",
@@ -475,7 +559,11 @@
       "displayName": "st_wpn_svt40",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_svt40_modern",
@@ -496,7 +584,11 @@
       "displayName": "st_wpn_svt40_modern",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_svu",
@@ -517,7 +609,11 @@
       "displayName": "st_wpn_svu",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_svu_alt",
@@ -538,7 +634,11 @@
       "displayName": "st_wpn_svu_alt",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_svu_nimble",
@@ -559,7 +659,11 @@
       "displayName": "st_wpn_svu_nimble",
       "hasNpcWeaponDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": true,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_trg",
@@ -580,7 +684,11 @@
       "displayName": "st_trg_sako",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_vssk",
@@ -601,7 +709,11 @@
       "displayName": "st_wpn_vssk",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_wa2000",
@@ -622,7 +734,11 @@
       "displayName": "st_wpn_wa2000",
       "hasNpcWeaponDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": true,
+      "factions": [
+        "nato"
+      ]
     }
   ]
 }

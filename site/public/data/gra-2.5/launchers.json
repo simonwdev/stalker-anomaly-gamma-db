@@ -45,7 +45,11 @@
       "displayName": "st_wpn_m79",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_rg-6",
@@ -70,7 +74,11 @@
       "displayName": "st_wpn_rg6",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_rpg7",
@@ -95,7 +103,11 @@
       "displayName": "st_wpn_rpg7",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     }
   ]
 }

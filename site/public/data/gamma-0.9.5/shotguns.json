@@ -46,7 +46,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_bm16",
@@ -73,7 +76,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": true,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_bm16_alt",
@@ -100,7 +106,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_bm16_full",
@@ -127,7 +136,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_bm16_full_alt",
@@ -154,7 +166,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_bm16_full_alt_23",
@@ -181,7 +196,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_eft_mts_255",
@@ -208,7 +226,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": true,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_fort500",
@@ -235,7 +256,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_ithacam37",
@@ -262,7 +286,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_ithacam37_mag",
@@ -289,7 +316,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_ithacam37_sawnoff",
@@ -316,7 +346,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_ithacam37_stakeout",
@@ -343,7 +376,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_ithacam37_stakeout_20x70",
@@ -370,7 +406,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": true,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_ithacam37_trench",
@@ -397,7 +436,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_ks23",
@@ -424,7 +466,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_ks23_23_up",
@@ -451,7 +496,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_ks23_ecolog",
@@ -478,7 +526,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_ks23_kaban",
@@ -505,7 +556,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_ks23_kaban_kab_up",
@@ -532,7 +586,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_ks23_vorkuta",
@@ -559,7 +616,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_ksg23",
@@ -586,7 +646,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_mossberg590",
@@ -613,7 +676,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_mossberg590_rail",
@@ -640,7 +706,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": true,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_mp133",
@@ -667,7 +736,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_mp153",
@@ -694,7 +766,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_mp153_m1",
@@ -721,7 +796,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_mp155",
@@ -748,7 +826,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_protecta",
@@ -775,7 +856,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_protecta_aim",
@@ -802,7 +886,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_protecta_camo",
@@ -829,7 +916,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_protecta_custom",
@@ -856,7 +946,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_protecta_nimble",
@@ -883,7 +976,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_raptr",
@@ -910,7 +1006,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_remington870",
@@ -937,7 +1036,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_saiga12s",
@@ -964,7 +1066,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_saiga12s_isg",
@@ -991,7 +1096,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_saiga12s_m1",
@@ -1018,7 +1126,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_saiga12s_m2",
@@ -1045,7 +1156,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_spas12",
@@ -1072,7 +1186,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_spas12_custom",
@@ -1099,7 +1216,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_spas12_nimble",
@@ -1126,7 +1246,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_toz106",
@@ -1153,7 +1276,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_toz106_m1",
@@ -1180,7 +1306,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": true,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_toz34",
@@ -1207,7 +1336,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": true,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_toz34_bull",
@@ -1233,7 +1365,10 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_toz34_custom",
@@ -1260,7 +1395,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_toz34_decor",
@@ -1287,7 +1425,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_toz34_mark4",
@@ -1314,7 +1455,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_toz34_mark4_23",
@@ -1341,7 +1485,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": true,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_toz34_obrez",
@@ -1368,7 +1515,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": true,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_toz34_obrez_custom",
@@ -1395,7 +1545,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_toz34_obrez_decor",
@@ -1422,7 +1575,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_usas12",
@@ -1449,7 +1605,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_vepr",
@@ -1476,7 +1635,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_wincheaster1300",
@@ -1503,7 +1665,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_wincheaster1300_trapper",
@@ -1530,7 +1695,10 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "other"
+      ]
     }
   ]
 }

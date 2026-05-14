@@ -27,7 +27,8 @@
       "displayName": "st_grenade_f1",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false
     },
     {
       "id": "grenade_gd-05",
@@ -43,7 +44,8 @@
       "displayName": "st_grenade_thermite",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false
     },
     {
       "id": "grenade_rgd5",
@@ -59,7 +61,8 @@
       "displayName": "st_grenade_rgd5",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false
     },
     {
       "id": "grenade_smoke",
@@ -75,7 +78,8 @@
       "displayName": "st_grenade_smoke",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "ied",
@@ -91,7 +95,8 @@
       "displayName": "st_ied [default]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "ied_blow",
@@ -107,7 +112,8 @@
       "displayName": "st_ied [blow]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "ied_new_blow",
@@ -123,7 +129,8 @@
       "displayName": "st_ied [new_blow]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "ied_rpg",
@@ -139,7 +146,8 @@
       "displayName": "st_ied_rpg",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "mine",
@@ -155,7 +163,8 @@
       "displayName": "st_mine_name",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "mine_new_blow",
@@ -171,7 +180,8 @@
       "displayName": "nil",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     }
   ]
 }

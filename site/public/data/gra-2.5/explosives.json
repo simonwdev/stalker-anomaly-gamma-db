@@ -27,7 +27,8 @@
       "displayName": "ammo-m209 [bad]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "ammo_m209_verybad",
@@ -43,7 +44,8 @@
       "displayName": "ammo-m209 [verybad]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "ammo_vog-25_bad",
@@ -59,7 +61,8 @@
       "displayName": "ammo-vog-25 [bad]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "ammo_vog-25_verybad",
@@ -75,7 +78,8 @@
       "displayName": "ammo-vog-25 [verybad]",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "grenade_f1",
@@ -91,7 +95,8 @@
       "displayName": "st_grenade_f1",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false
     },
     {
       "id": "grenade_gd-05",
@@ -107,7 +112,8 @@
       "displayName": "st_grenade_thermite",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false
     },
     {
       "id": "grenade_rgd5",
@@ -123,7 +129,8 @@
       "displayName": "st_grenade_rgd5",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false
     },
     {
       "id": "grenade_smoke",
@@ -139,7 +146,8 @@
       "displayName": "st_grenade_smoke",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false
     },
     {
       "id": "ied",
@@ -155,7 +163,8 @@
       "displayName": "st_ied",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "ied_rpg",
@@ -171,7 +180,8 @@
       "displayName": "st_ied_rpg",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "mine",
@@ -187,7 +197,8 @@
       "displayName": "st_mine_name",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "wpn_rpg26",
@@ -203,7 +214,8 @@
       "displayName": "st_wpn_rpg26",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     }
   ]
 }

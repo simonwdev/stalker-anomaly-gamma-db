@@ -1318,7 +1318,9 @@
     "name": "lttz_ll_wpn_gauss_quest_name",
     "category": "Snipers",
     "displayName": "lttz_ll_wpn_gauss_quest_name",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "merc_combat_scientific_outfit",
@@ -2557,6 +2559,12 @@
     "displayName": "st_cuban_cigar"
   },
   {
+    "id": "cutlery",
+    "name": "st_cutlery",
+    "category": "Materials",
+    "displayName": "st_cutlery"
+  },
+  {
     "id": "drink_crow",
     "name": "st_drink_crow",
     "category": "Food",
@@ -2597,6 +2605,18 @@
     "name": "st_drug_radioprotector",
     "category": "Medicine",
     "displayName": "st_drug_radioprotector"
+  },
+  {
+    "id": "duct_tape",
+    "name": "st_duct_tape",
+    "category": "Materials",
+    "displayName": "st_duct_tape"
+  },
+  {
+    "id": "e_syringe",
+    "name": "st_e_syringe",
+    "category": "Materials",
+    "displayName": "st_e_syringe"
   },
   {
     "id": "ecolog_outfit_blue",
@@ -2687,7 +2707,9 @@
     "name": "st_grenade_f1",
     "category": "Explosives",
     "displayName": "st_grenade_f1",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_addon_grenade_launcher",
@@ -2706,21 +2728,27 @@
     "name": "st_grenade_rgd5",
     "category": "Explosives",
     "displayName": "st_grenade_rgd5",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "grenade_smoke",
     "name": "st_grenade_smoke",
     "category": "Explosives",
     "displayName": "st_grenade_smoke",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "grenade_gd-05",
     "name": "st_grenade_thermite",
     "category": "Explosives",
     "displayName": "st_grenade_thermite",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "hand_rolling_tobacco",
@@ -2889,14 +2917,18 @@
     "name": "st_ied",
     "category": "Explosives",
     "displayName": "st_ied",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "ied_rpg",
     "name": "st_ied_rpg",
     "category": "Explosives",
     "displayName": "st_ied_rpg",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "artefact_container",
@@ -2909,6 +2941,12 @@
     "name": "st_itm_backpack_name",
     "category": "Belt Attachments",
     "displayName": "st_itm_backpack_name"
+  },
+  {
+    "id": "jar",
+    "name": "st_jar",
+    "category": "Materials",
+    "displayName": "st_jar"
   },
   {
     "id": "jgut",
@@ -3173,7 +3211,9 @@
     "name": "st_mine_name",
     "category": "Explosives",
     "displayName": "st_mine_name",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "mineral_water",
@@ -3218,6 +3258,162 @@
     "displayName": "st_protein"
   },
   {
+    "id": "prt_i_capacitors",
+    "name": "st_prt_i_capacitors",
+    "category": "Materials",
+    "displayName": "st_prt_i_capacitors"
+  },
+  {
+    "id": "prt_i_copper",
+    "name": "st_prt_i_copper",
+    "category": "Materials",
+    "displayName": "st_prt_i_copper"
+  },
+  {
+    "id": "prt_i_fasteners",
+    "name": "st_prt_i_fasteners",
+    "category": "Materials",
+    "displayName": "st_prt_i_fasteners"
+  },
+  {
+    "id": "prt_i_paper",
+    "name": "st_prt_i_paper",
+    "category": "Materials",
+    "displayName": "st_prt_i_paper"
+  },
+  {
+    "id": "prt_i_plastic",
+    "name": "st_prt_i_plastic",
+    "category": "Materials",
+    "displayName": "st_prt_i_plastic"
+  },
+  {
+    "id": "prt_i_resistors",
+    "name": "st_prt_i_resistors",
+    "category": "Materials",
+    "displayName": "st_prt_i_resistors"
+  },
+  {
+    "id": "prt_i_scrap",
+    "name": "st_prt_i_scrap",
+    "category": "Materials",
+    "displayName": "st_prt_i_scrap"
+  },
+  {
+    "id": "prt_i_textolite",
+    "name": "st_prt_i_textolite",
+    "category": "Materials",
+    "displayName": "st_prt_i_textolite"
+  },
+  {
+    "id": "prt_i_transistors",
+    "name": "st_prt_i_transistors",
+    "category": "Materials",
+    "displayName": "st_prt_i_transistors"
+  },
+  {
+    "id": "prt_i_wood",
+    "name": "st_prt_i_wood",
+    "category": "Materials",
+    "displayName": "st_prt_i_wood"
+  },
+  {
+    "id": "prt_o_ballistic_1",
+    "name": "st_prt_o_ballistic_1",
+    "category": "Materials",
+    "displayName": "st_prt_o_ballistic_1"
+  },
+  {
+    "id": "prt_o_ballistic_13",
+    "name": "st_prt_o_ballistic_13",
+    "category": "Materials",
+    "displayName": "st_prt_o_ballistic_13"
+  },
+  {
+    "id": "prt_o_ballistic_15",
+    "name": "st_prt_o_ballistic_15",
+    "category": "Materials",
+    "displayName": "st_prt_o_ballistic_15"
+  },
+  {
+    "id": "prt_o_ballistic_3",
+    "name": "st_prt_o_ballistic_3",
+    "category": "Materials",
+    "displayName": "st_prt_o_ballistic_3"
+  },
+  {
+    "id": "prt_o_ballistic_5",
+    "name": "st_prt_o_ballistic_5",
+    "category": "Materials",
+    "displayName": "st_prt_o_ballistic_5"
+  },
+  {
+    "id": "prt_o_ballistic_7",
+    "name": "st_prt_o_ballistic_7",
+    "category": "Materials",
+    "displayName": "st_prt_o_ballistic_7"
+  },
+  {
+    "id": "prt_o_ballistic_9",
+    "name": "st_prt_o_ballistic_9",
+    "category": "Materials",
+    "displayName": "st_prt_o_ballistic_9"
+  },
+  {
+    "id": "prt_o_fabrics_1",
+    "name": "st_prt_o_fabrics_1",
+    "category": "Materials",
+    "displayName": "st_prt_o_fabrics_1"
+  },
+  {
+    "id": "prt_o_fabrics_2",
+    "name": "st_prt_o_fabrics_2",
+    "category": "Materials",
+    "displayName": "st_prt_o_fabrics_2"
+  },
+  {
+    "id": "prt_o_fabrics_3",
+    "name": "st_prt_o_fabrics_3",
+    "category": "Materials",
+    "displayName": "st_prt_o_fabrics_3"
+  },
+  {
+    "id": "prt_o_fabrics_4",
+    "name": "st_prt_o_fabrics_4",
+    "category": "Materials",
+    "displayName": "st_prt_o_fabrics_4"
+  },
+  {
+    "id": "prt_o_retardant_1",
+    "name": "st_prt_o_retardant_1",
+    "category": "Materials",
+    "displayName": "st_prt_o_retardant_1"
+  },
+  {
+    "id": "prt_o_retardant_13",
+    "name": "st_prt_o_retardant_13",
+    "category": "Materials",
+    "displayName": "st_prt_o_retardant_13"
+  },
+  {
+    "id": "prt_o_retardant_17",
+    "name": "st_prt_o_retardant_17",
+    "category": "Materials",
+    "displayName": "st_prt_o_retardant_17"
+  },
+  {
+    "id": "prt_o_retardant_5",
+    "name": "st_prt_o_retardant_5",
+    "category": "Materials",
+    "displayName": "st_prt_o_retardant_5"
+  },
+  {
+    "id": "prt_o_retardant_7",
+    "name": "st_prt_o_retardant_7",
+    "category": "Materials",
+    "displayName": "st_prt_o_retardant_7"
+  },
+  {
     "id": "raisins",
     "name": "st_raisins",
     "category": "Food",
@@ -3240,6 +3436,12 @@
     "name": "st_rebirth",
     "category": "Medicine",
     "displayName": "st_rebirth"
+  },
+  {
+    "id": "rope",
+    "name": "st_rope",
+    "category": "Materials",
+    "displayName": "st_rope"
   },
   {
     "id": "salicidic_acid",
@@ -3290,6 +3492,12 @@
     "displayName": "st_survival_kit"
   },
   {
+    "id": "swiss_knife",
+    "name": "st_swiss",
+    "category": "Materials",
+    "displayName": "st_swiss"
+  },
+  {
     "id": "tea",
     "name": "st_tea",
     "category": "Food",
@@ -3318,7 +3526,9 @@
     "name": "st_trg_sako",
     "category": "Snipers",
     "displayName": "st_trg_sako",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "tushonka",
@@ -3355,1722 +3565,2214 @@
     "name": "st_wpn_9a91",
     "category": "Rifles",
     "displayName": "st_wpn_9a91",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_abakan",
     "name": "st_wpn_abakan",
     "category": "Rifles",
     "displayName": "st_wpn_abakan",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_abakan_camo",
     "name": "st_wpn_abakan_camo",
     "category": "Rifles",
     "displayName": "st_wpn_abakan_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ace21",
     "name": "st_wpn_ace21",
     "category": "Rifles",
     "displayName": "st_wpn_ace21",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aek",
     "name": "st_wpn_aek971",
     "category": "Rifles",
     "displayName": "st_wpn_aek971",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aek_camo",
     "name": "st_wpn_aek971_camo",
     "category": "Rifles",
     "displayName": "st_wpn_aek971_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aek_duty",
     "name": "st_wpn_aek973",
     "category": "Rifles",
     "displayName": "st_wpn_aek973",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak",
     "name": "st_wpn_ak",
     "category": "Rifles",
     "displayName": "st_wpn_ak",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak101",
     "name": "st_wpn_ak101",
     "category": "Rifles",
     "displayName": "st_wpn_ak101",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak101_camo",
     "name": "st_wpn_ak101_camo",
     "category": "Rifles",
     "displayName": "st_wpn_ak101_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak102",
     "name": "st_wpn_ak102",
     "category": "Rifles",
     "displayName": "st_wpn_ak102",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak103",
     "name": "st_wpn_ak103",
     "category": "Rifles",
     "displayName": "st_wpn_ak103",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak103_camo",
     "name": "st_wpn_ak103_camo",
     "category": "Rifles",
     "displayName": "st_wpn_ak103_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak104",
     "name": "st_wpn_ak104",
     "category": "Rifles",
     "displayName": "st_wpn_ak104",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak105",
     "name": "st_wpn_ak105",
     "category": "Rifles",
     "displayName": "st_wpn_ak105",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak12",
     "name": "st_wpn_ak12",
     "category": "Rifles",
     "displayName": "st_wpn_ak12",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74",
     "name": "st_wpn_ak74",
     "category": "Rifles",
     "displayName": "st_wpn_ak74",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74_alt",
     "name": "st_wpn_ak74_alt",
     "category": "Rifles",
     "displayName": "st_wpn_ak74_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74_custom",
     "name": "st_wpn_ak74_custom",
     "category": "Rifles",
     "displayName": "st_wpn_ak74_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74_rpk",
     "name": "st_wpn_ak74_eot",
     "category": "Rifles",
     "displayName": "st_wpn_ak74_eot",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_ak74_modern",
     "name": "st_wpn_ak74_modern",
     "category": "Rifles",
     "displayName": "st_wpn_ak74_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74_old",
     "name": "st_wpn_ak74_old",
     "category": "Rifles",
     "displayName": "st_wpn_ak74_old",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74m",
     "name": "st_wpn_ak74m",
     "category": "Rifles",
     "displayName": "st_wpn_ak74m",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74m_alt",
     "name": "st_wpn_ak74m_alt",
     "category": "Rifles",
     "displayName": "st_wpn_ak74m_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74m_camo",
     "name": "st_wpn_ak74m_camo",
     "category": "Rifles",
     "displayName": "st_wpn_ak74m_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74m_custom",
     "name": "st_wpn_ak74m_custom",
     "category": "Rifles",
     "displayName": "st_wpn_ak74m_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74m_duty",
     "name": "st_wpn_ak74m_duty",
     "category": "Rifles",
     "displayName": "st_wpn_ak74m_duty",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74m_pka",
     "name": "st_wpn_ak74m_pk-a",
     "category": "Rifles",
     "displayName": "st_wpn_ak74m_pk-a",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_ak74u",
     "name": "st_wpn_ak74u",
     "category": "Rifles",
     "displayName": "st_wpn_ak74u",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74u_camo",
     "name": "st_wpn_ak74u_camo",
     "category": "Rifles",
     "displayName": "st_wpn_ak74u_camo",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_ak74u_custom",
     "name": "st_wpn_ak74u_custom",
     "category": "Rifles",
     "displayName": "st_wpn_ak74u_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74u_old",
     "name": "st_wpn_ak74u_old",
     "category": "Rifles",
     "displayName": "st_wpn_ak74u_old",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ak74u_snag",
     "name": "st_wpn_ak74u_snag",
     "category": "Rifles",
     "displayName": "st_wpn_ak74u_snag",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_akm",
     "name": "st_wpn_akm",
     "category": "Rifles",
     "displayName": "st_wpn_akm",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_akms",
     "name": "st_wpn_akms",
     "category": "Rifles",
     "displayName": "st_wpn_akms",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_akms_alt",
     "name": "st_wpn_akms_alt",
     "category": "Rifles",
     "displayName": "st_wpn_akms_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aks",
     "name": "st_wpn_aks",
     "category": "Rifles",
     "displayName": "st_wpn_aks",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aks74",
     "name": "st_wpn_aks74",
     "category": "Rifles",
     "displayName": "st_wpn_aks74",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aks74_new",
     "name": "st_wpn_aks74_new",
     "category": "Rifles",
     "displayName": "st_wpn_aks74_new",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aps",
     "name": "st_wpn_aps",
     "category": "Pistols",
     "displayName": "st_wpn_aps",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ash12",
     "name": "st_wpn_ash12",
     "category": "Rifles",
     "displayName": "st_wpn_ash12",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aug",
     "name": "st_wpn_aug",
     "category": "Rifles",
     "displayName": "st_wpn_aug",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aug_a3",
     "name": "st_wpn_aug_a3",
     "category": "Rifles",
     "displayName": "st_wpn_aug_a3",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_aug_custom",
     "name": "st_wpn_aug_custom",
     "category": "Rifles",
     "displayName": "st_wpn_aug_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aug_freedom",
     "name": "st_wpn_aug_freedom",
     "category": "Rifles",
     "displayName": "st_wpn_aug_freedom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_aug_merc",
     "name": "st_wpn_aug_merc",
     "category": "Rifles",
     "displayName": "st_wpn_aug_merc",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_aug_modern",
     "name": "st_wpn_aug_modern",
     "category": "Rifles",
     "displayName": "st_wpn_aug_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_beretta",
     "name": "st_wpn_beretta",
     "category": "Pistols",
     "displayName": "st_wpn_beretta",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_beretta_alt",
     "name": "st_wpn_beretta_alt",
     "category": "Pistols",
     "displayName": "st_wpn_beretta_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_beretta_camo",
     "name": "st_wpn_beretta_camo",
     "category": "Pistols",
     "displayName": "st_wpn_beretta_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_beretta_modern",
     "name": "st_wpn_beretta_modern",
     "category": "Pistols",
     "displayName": "st_wpn_beretta_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_bizon",
     "name": "st_wpn_bizon",
     "category": "SMGs",
     "displayName": "st_wpn_bizon",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_bm16",
     "name": "st_wpn_bm16",
     "category": "Shotguns",
     "displayName": "st_wpn_bm16",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_bm16_alt",
     "name": "st_wpn_bm16_alt",
     "category": "Shotguns",
     "displayName": "st_wpn_bm16_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_bm16_full",
     "name": "st_wpn_bm16_full",
     "category": "Shotguns",
     "displayName": "st_wpn_bm16_full",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_bm16_full_alt",
     "name": "st_wpn_bm16_full_alt",
     "category": "Shotguns",
     "displayName": "st_wpn_bm16_full_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_colt1911",
     "name": "st_wpn_colt1911",
     "category": "Pistols",
     "displayName": "st_wpn_colt1911",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_colt1911_alt",
     "name": "st_wpn_colt1911_alt",
     "category": "Pistols",
     "displayName": "st_wpn_colt1911_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_colt1911_camo",
     "name": "st_wpn_colt1911_camo",
     "category": "Pistols",
     "displayName": "st_wpn_colt1911_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_colt1911_custom",
     "name": "st_wpn_colt1911_custom",
     "category": "Pistols",
     "displayName": "st_wpn_colt1911_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_colt1911_duty",
     "name": "st_wpn_colt1911_duty",
     "category": "Pistols",
     "displayName": "st_wpn_colt1911_duty",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_colt1911_merc",
     "name": "st_wpn_colt1911_merc",
     "category": "Pistols",
     "displayName": "st_wpn_colt1911_merc",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_colt1911_modern",
     "name": "st_wpn_colt1911_modern",
     "category": "Pistols",
     "displayName": "st_wpn_colt1911_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_colt1911_new",
     "name": "st_wpn_colt1911_new",
     "category": "Pistols",
     "displayName": "st_wpn_colt1911_new",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_cz75",
     "name": "st_wpn_cz75",
     "category": "Pistols",
     "displayName": "st_wpn_cz75",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_desert_eagle",
     "name": "st_wpn_desert_eagle",
     "category": "Pistols",
     "displayName": "st_wpn_desert_eagle",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_desert_eagle_custom",
     "name": "st_wpn_desert_eagle_custom",
     "category": "Pistols",
     "displayName": "st_wpn_desert_eagle_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_desert_eagle_modern",
     "name": "st_wpn_desert_eagle_modern",
     "category": "Pistols",
     "displayName": "st_wpn_desert_eagle_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_desert_eagle_nimble",
     "name": "st_wpn_desert_eagle_nimble",
     "category": "Pistols",
     "displayName": "st_wpn_desert_eagle_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_fal",
     "name": "st_wpn_fal",
     "category": "Rifles",
     "displayName": "st_wpn_fal",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_famas3",
     "name": "st_wpn_famas3",
     "category": "Rifles",
     "displayName": "st_wpn_famas3",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_fn2000",
     "name": "st_wpn_fn2000",
     "category": "Rifles",
     "displayName": "st_wpn_fn2000",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fn2000_camo",
     "name": "st_wpn_fn2000_camo",
     "category": "Rifles",
     "displayName": "st_wpn_fn2000_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fn2000_custom",
     "name": "st_wpn_fn2000_custom",
     "category": "Rifles",
     "displayName": "st_wpn_fn2000_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fn2000_nimble",
     "name": "st_wpn_fn2000_nimble",
     "category": "Rifles",
     "displayName": "st_wpn_fn2000_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_fn57",
     "name": "st_wpn_fn57",
     "category": "Pistols",
     "displayName": "st_wpn_fn57",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fnc",
     "name": "st_wpn_fnc",
     "category": "Rifles",
     "displayName": "st_wpn_fnc",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fnp45",
     "name": "st_wpn_fnp45",
     "category": "Pistols",
     "displayName": "st_wpn_fnp45",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fnp45_custom",
     "name": "st_wpn_fnp45_custom",
     "category": "Pistols",
     "displayName": "st_wpn_fnp45_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fnx45",
     "name": "st_wpn_fnx45",
     "category": "Pistols",
     "displayName": "st_wpn_fnx45",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fnx45_alt",
     "name": "st_wpn_fnx45_alt",
     "category": "Pistols",
     "displayName": "st_wpn_fnx45_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fnx45_custom",
     "name": "st_wpn_fnx45_custom",
     "category": "Pistols",
     "displayName": "st_wpn_fnx45_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fort",
     "name": "st_wpn_fort",
     "category": "Pistols",
     "displayName": "st_wpn_fort [default]",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_fort_snag",
     "name": "st_wpn_fort",
     "category": "Pistols",
     "displayName": "st_wpn_fort [snag]",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_fort500",
     "name": "st_wpn_fort500",
     "category": "Shotguns",
     "displayName": "st_wpn_fort500",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_g3",
     "name": "st_wpn_g3",
     "category": "Rifles",
     "displayName": "st_wpn_g3",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_g36",
     "name": "st_wpn_g36",
     "category": "Rifles",
     "displayName": "st_wpn_g36 [default]",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_g36_nimble",
     "name": "st_wpn_g36",
     "category": "Rifles",
     "displayName": "st_wpn_g36 [nimble]",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_g36_camo",
     "name": "st_wpn_g36_camo",
     "category": "Rifles",
     "displayName": "st_wpn_g36_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_g36k",
     "name": "st_wpn_g36k",
     "category": "Rifles",
     "displayName": "st_wpn_g36k",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_g3sg1",
     "name": "st_wpn_g3sg1",
     "category": "Rifles",
     "displayName": "st_wpn_g3sg1",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_g43",
     "name": "st_wpn_g43",
     "category": "Snipers",
     "displayName": "st_wpn_g43",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_galil",
     "name": "st_wpn_galil",
     "category": "Rifles",
     "displayName": "st_wpn_galil",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_galil_custom",
     "name": "st_wpn_galil_custom",
     "category": "Rifles",
     "displayName": "st_wpn_galil_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_galil_modern",
     "name": "st_wpn_galil_modern",
     "category": "Rifles",
     "displayName": "st_wpn_galil_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_gauss",
     "name": "st_wpn_gauss",
     "category": "Snipers",
     "displayName": "st_wpn_gauss",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_glock",
     "name": "st_wpn_glock",
     "category": "Pistols",
     "displayName": "st_wpn_glock",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_glock_custom",
     "name": "st_wpn_glock_custom",
     "category": "Pistols",
     "displayName": "st_wpn_glock_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_glock_modern",
     "name": "st_wpn_glock_modern",
     "category": "Pistols",
     "displayName": "st_wpn_glock_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp443",
     "name": "st_wpn_grach",
     "category": "Pistols",
     "displayName": "st_wpn_grach",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_groza",
     "name": "st_wpn_groza",
     "category": "Rifles",
     "displayName": "st_wpn_groza",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_groza_nimble",
     "name": "st_wpn_groza_nimble",
     "category": "Rifles",
     "displayName": "st_wpn_groza_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_gsh18",
     "name": "st_wpn_gsh18",
     "category": "Pistols",
     "displayName": "st_wpn_gsh18",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_gsh18_custom",
     "name": "st_wpn_gsh18_custom",
     "category": "Pistols",
     "displayName": "st_wpn_gsh18_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_hk416",
     "name": "st_wpn_hk416",
     "category": "Rifles",
     "displayName": "st_wpn_hk416",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_hk417",
     "name": "st_wpn_hk417",
     "category": "Rifles",
     "displayName": "st_wpn_hk417",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_hpsa",
     "name": "st_wpn_hpsa",
     "category": "Pistols",
     "displayName": "st_wpn_hpsa",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_hpsa_alt",
     "name": "st_wpn_hpsa_alt",
     "category": "Pistols",
     "displayName": "st_wpn_hpsa_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_k98",
     "name": "st_wpn_k98",
     "category": "Snipers",
     "displayName": "st_wpn_k98",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_kiparis",
     "name": "st_wpn_kiparis",
     "category": "SMGs",
     "displayName": "st_wpn_kiparis",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_l85",
     "name": "st_wpn_l85",
     "category": "Rifles",
     "displayName": "st_wpn_l85",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_l85_alt",
     "name": "st_wpn_l85_alt",
     "category": "Rifles",
     "displayName": "st_wpn_l85_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_l85_custom",
     "name": "st_wpn_l85_custom",
     "category": "Rifles",
     "displayName": "st_wpn_l85_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_l85_modern",
     "name": "st_wpn_l85_modern",
     "category": "Rifles",
     "displayName": "st_wpn_l85_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_l85a2",
     "name": "st_wpn_l85a2",
     "category": "Rifles",
     "displayName": "st_wpn_l85a2",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_l85a2_alt",
     "name": "st_wpn_l85a2_alt",
     "category": "Rifles",
     "displayName": "st_wpn_l85a2_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_l85a2_custom",
     "name": "st_wpn_l85a2_custom",
     "category": "Rifles",
     "displayName": "st_wpn_l85a2_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_l85a2_modern",
     "name": "st_wpn_l85a2_modern",
     "category": "Rifles",
     "displayName": "st_wpn_l85a2_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_l96a1",
     "name": "st_wpn_l96a1",
     "category": "Snipers",
     "displayName": "st_wpn_l96a1",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_l96a1m",
     "name": "st_wpn_l96a1m",
     "category": "Snipers",
     "displayName": "st_wpn_l96a1m",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_lr300",
     "name": "st_wpn_lr300",
     "category": "Rifles",
     "displayName": "st_wpn_lr300",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_lr300_camo",
     "name": "st_wpn_lr300_camo",
     "category": "Rifles",
     "displayName": "st_wpn_lr300_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_lr300_custom",
     "name": "st_wpn_lr300_custom",
     "category": "Rifles",
     "displayName": "st_wpn_lr300_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m16",
     "name": "st_wpn_m16",
     "category": "Rifles",
     "displayName": "st_wpn_m16",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m16a2",
     "name": "st_wpn_m16a2",
     "category": "Rifles",
     "displayName": "st_wpn_m16a2",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m24",
     "name": "st_wpn_m24",
     "category": "Snipers",
     "displayName": "st_wpn_m24",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_m249",
     "name": "st_wpn_m249",
     "category": "Rifles",
     "displayName": "st_wpn_m249",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m4",
     "name": "st_wpn_m4",
     "category": "Rifles",
     "displayName": "st_wpn_m4",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m4a1",
     "name": "st_wpn_m4a1",
     "category": "Rifles",
     "displayName": "st_wpn_m4a1",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m4a1_camo",
     "name": "st_wpn_m4a1_camo",
     "category": "Rifles",
     "displayName": "st_wpn_m4a1_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m4a1_custom",
     "name": "st_wpn_m4a1_custom",
     "category": "Rifles",
     "displayName": "st_wpn_m4a1_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m4a1_freedom",
     "name": "st_wpn_m4a1_freedom",
     "category": "Rifles",
     "displayName": "st_wpn_m4a1_freedom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m60",
     "name": "st_wpn_m60",
     "category": "Rifles",
     "displayName": "st_wpn_m60",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_m79",
     "name": "st_wpn_m79",
     "category": "Launchers",
     "displayName": "st_wpn_m79",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m82",
     "name": "st_wpn_m82",
     "category": "Snipers",
     "displayName": "st_wpn_m82",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_m98b",
     "name": "st_wpn_m98b",
     "category": "Snipers",
     "displayName": "st_wpn_m98b",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mk14",
     "name": "st_wpn_mk14",
     "category": "Rifles",
     "displayName": "st_wpn_mk14",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mosin",
     "name": "st_wpn_mosin",
     "category": "Snipers",
     "displayName": "st_wpn_mosin",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mossberg590",
     "name": "st_wpn_mossberg590",
     "category": "Shotguns",
     "displayName": "st_wpn_mossberg590",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp133",
     "name": "st_wpn_mp133",
     "category": "Shotguns",
     "displayName": "st_wpn_mp133",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp153",
     "name": "st_wpn_mp153",
     "category": "Shotguns",
     "displayName": "st_wpn_mp153",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp412",
     "name": "st_wpn_mp412",
     "category": "Pistols",
     "displayName": "st_wpn_mp412",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp5",
     "name": "st_wpn_mp5",
     "category": "SMGs",
     "displayName": "st_wpn_mp5",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp5_alt",
     "name": "st_wpn_mp5_alt",
     "category": "SMGs",
     "displayName": "st_wpn_mp5_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp5_custom",
     "name": "st_wpn_mp5_custom",
     "category": "SMGs",
     "displayName": "st_wpn_mp5_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp5_nimble",
     "name": "st_wpn_mp5_nimble",
     "category": "SMGs",
     "displayName": "st_wpn_mp5_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_mp5sd",
     "name": "st_wpn_mp5sd",
     "category": "SMGs",
     "displayName": "st_wpn_mp5sd",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp5sd_custom",
     "name": "st_wpn_mp5sd_custom",
     "category": "SMGs",
     "displayName": "st_wpn_mp5sd_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp5sd_new",
     "name": "st_wpn_mp5sd_new",
     "category": "SMGs",
     "displayName": "st_wpn_mp5sd_new",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_mp7",
     "name": "st_wpn_mp7",
     "category": "SMGs",
     "displayName": "st_wpn_mp7",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_oc33",
     "name": "st_wpn_oc33",
     "category": "Pistols",
     "displayName": "st_wpn_oc33",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_p90",
     "name": "st_wpn_p90",
     "category": "SMGs",
     "displayName": "st_wpn_p90",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_pb",
     "name": "st_wpn_pb",
     "category": "Pistols",
     "displayName": "st_wpn_pb",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_pb_custom",
     "name": "st_wpn_pb_custom",
     "category": "Pistols",
     "displayName": "st_wpn_pb_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_pkm_zulus",
     "name": "st_wpn_pkm_zulus",
     "category": "Rifles",
     "displayName": "st_wpn_pkm_zulus",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_pkp",
     "name": "st_wpn_pkp",
     "category": "Rifles",
     "displayName": "st_wpn_pkp",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_pm",
     "name": "st_wpn_pm",
     "category": "Pistols",
     "displayName": "st_wpn_pm",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_pm_actor",
     "name": "st_wpn_pm_actor",
     "category": "Pistols",
     "displayName": "st_wpn_pm_actor",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_pm_custom",
     "name": "st_wpn_pm_custom",
     "category": "Pistols",
     "displayName": "st_wpn_pm_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_pmm",
     "name": "st_wpn_pmm",
     "category": "Pistols",
     "displayName": "st_wpn_pmm",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_pp2000",
     "name": "st_wpn_pp2000",
     "category": "SMGs",
     "displayName": "st_wpn_pp2000",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ppsh41",
     "name": "st_wpn_ppsh41",
     "category": "Rifles",
     "displayName": "st_wpn_ppsh41",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ppsh41_rednew",
     "name": "st_wpn_ppsh41_camo",
     "category": "Rifles",
     "displayName": "st_wpn_ppsh41_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ppsh41_woodnew",
     "name": "st_wpn_ppsh41_new",
     "category": "Rifles",
     "displayName": "st_wpn_ppsh41_new",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_protecta",
     "name": "st_wpn_protecta",
     "category": "Shotguns",
     "displayName": "st_wpn_protecta",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_protecta_aim",
     "name": "st_wpn_protecta_aim",
     "category": "Shotguns",
     "displayName": "st_wpn_protecta_aim",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_protecta_camo",
     "name": "st_wpn_protecta_camo",
     "category": "Shotguns",
     "displayName": "st_wpn_protecta_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_protecta_custom",
     "name": "st_wpn_protecta_custom",
     "category": "Shotguns",
     "displayName": "st_wpn_protecta_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_protecta_nimble",
     "name": "st_wpn_protecta_nimble",
     "category": "Shotguns",
     "displayName": "st_wpn_protecta_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_remington700",
     "name": "st_wpn_remington700",
     "category": "Snipers",
     "displayName": "st_wpn_remington700",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_remington870",
     "name": "st_wpn_remington870",
     "category": "Shotguns",
     "displayName": "st_wpn_remington870",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_rg-6",
     "name": "st_wpn_rg6",
     "category": "Launchers",
     "displayName": "st_wpn_rg6",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_pkm",
     "name": "st_wpn_rp",
     "category": "Rifles",
     "displayName": "st_wpn_rp",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_rpd",
     "name": "st_wpn_rpd",
     "category": "Rifles",
     "displayName": "st_wpn_rpd",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_rpg7",
     "name": "st_wpn_rpg7",
     "category": "Launchers",
     "displayName": "st_wpn_rpg7",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_rpk",
     "name": "st_wpn_rpk",
     "category": "Rifles",
     "displayName": "st_wpn_rpk",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_rpk74",
     "name": "st_wpn_rpk74",
     "category": "Rifles",
     "displayName": "st_wpn_rpk74",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_saiga12s",
     "name": "st_wpn_saiga12s",
     "category": "Shotguns",
     "displayName": "st_wpn_saiga12s",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_scar",
     "name": "st_wpn_scar",
     "category": "Rifles",
     "displayName": "st_wpn_scar",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_scar_custom",
     "name": "st_wpn_scar_custom",
     "category": "Rifles",
     "displayName": "st_wpn_scar_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_scar_new",
     "name": "st_wpn_scar_new",
     "category": "Rifles",
     "displayName": "st_wpn_scar_new",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sig220",
     "name": "st_wpn_sig220",
     "category": "Pistols",
     "displayName": "st_wpn_sig220",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sig220_custom",
     "name": "st_wpn_sig220_custom",
     "category": "Pistols",
     "displayName": "st_wpn_sig220_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sig220_nimble",
     "name": "st_wpn_sig220_nimble",
     "category": "Pistols",
     "displayName": "st_wpn_sig220_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_sig550",
     "name": "st_wpn_sig550",
     "category": "Rifles",
     "displayName": "st_wpn_sig550",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sig550_camo",
     "name": "st_wpn_sig550_camo",
     "category": "Rifles",
     "displayName": "st_wpn_sig550_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sig550_custom",
     "name": "st_wpn_sig550_custom",
     "category": "Rifles",
     "displayName": "st_wpn_sig550_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sig550_sniper",
     "name": "st_wpn_sig550_sniper",
     "category": "Snipers",
     "displayName": "st_wpn_sig550_sniper",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sig550_luckygun",
     "name": "st_wpn_sig550_strelok",
     "category": "Rifles",
     "displayName": "st_wpn_sig550_strelok",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_sig552",
     "name": "st_wpn_sig552",
     "category": "Rifles",
     "displayName": "st_wpn_sig552",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sks",
     "name": "st_wpn_sks",
     "category": "Snipers",
     "displayName": "st_wpn_sks",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sks_modern",
     "name": "st_wpn_sks_modern",
     "category": "Snipers",
     "displayName": "st_wpn_sks_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_spas12",
     "name": "st_wpn_spas12",
     "category": "Shotguns",
     "displayName": "st_wpn_spas12",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_spas12_custom",
     "name": "st_wpn_spas12_custom",
     "category": "Shotguns",
     "displayName": "st_wpn_spas12_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_spas12_nimble",
     "name": "st_wpn_spas12_nimble",
     "category": "Shotguns",
     "displayName": "st_wpn_spas12_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_sr25",
     "name": "st_wpn_sr25",
     "category": "Snipers",
     "displayName": "st_wpn_sr25",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sv98",
     "name": "st_wpn_sv98",
     "category": "Snipers",
     "displayName": "st_wpn_sv98",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_sv98_custom",
     "name": "st_wpn_sv98_custom",
     "category": "Snipers",
     "displayName": "st_wpn_sv98_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_svd",
     "name": "st_wpn_svd",
     "category": "Snipers",
     "displayName": "st_wpn_svd",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_svd_custom",
     "name": "st_wpn_svd_custom",
     "category": "Snipers",
     "displayName": "st_wpn_svd_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_svd_nimble",
     "name": "st_wpn_svd_nimble",
     "category": "Snipers",
     "displayName": "st_wpn_svd_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_svt40",
     "name": "st_wpn_svt40",
     "category": "Snipers",
     "displayName": "st_wpn_svt40",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_svt40_modern",
     "name": "st_wpn_svt40_modern",
     "category": "Snipers",
     "displayName": "st_wpn_svt40_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_svu",
     "name": "st_wpn_svu",
     "category": "Snipers",
     "displayName": "st_wpn_svu",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_svu_alt",
     "name": "st_wpn_svu_alt",
     "category": "Snipers",
     "displayName": "st_wpn_svu_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_svu_nimble",
     "name": "st_wpn_svu_nimble",
     "category": "Snipers",
     "displayName": "st_wpn_svu_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_wincheaster1300",
     "name": "st_wpn_toz194",
     "category": "Shotguns",
     "displayName": "st_wpn_toz194 [default]",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_wincheaster1300_trapper",
     "name": "st_wpn_toz194",
     "category": "Shotguns",
     "displayName": "st_wpn_toz194 [trapper]",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_toz34",
     "name": "st_wpn_toz34",
     "category": "Shotguns",
     "displayName": "st_wpn_toz34",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_toz34_bull",
     "name": "st_wpn_toz34_bull",
     "category": "Shotguns",
     "displayName": "st_wpn_toz34_bull",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_toz34_custom",
     "name": "st_wpn_toz34_custom",
     "category": "Shotguns",
     "displayName": "st_wpn_toz34_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_toz34_decor",
     "name": "st_wpn_toz34_decor",
     "category": "Shotguns",
     "displayName": "st_wpn_toz34_decor",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_toz34_mark4",
     "name": "st_wpn_toz34_mark4",
     "category": "Shotguns",
     "displayName": "st_wpn_toz34_mark4",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_toz34_obrez",
     "name": "st_wpn_toz34_obrez",
     "category": "Shotguns",
     "displayName": "st_wpn_toz34_obrez",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_toz34_obrez_custom",
     "name": "st_wpn_toz34_obrez_custom",
     "category": "Shotguns",
     "displayName": "st_wpn_toz34_obrez_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_toz34_obrez_decor",
     "name": "st_wpn_toz34_obrez_decor",
     "category": "Shotguns",
     "displayName": "st_wpn_toz34_obrez_decor",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_tt33",
     "name": "st_wpn_tt33",
     "category": "Pistols",
     "displayName": "st_wpn_tt33",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_tt33_modern",
     "name": "st_wpn_tt33_modern",
     "category": "Pistols",
     "displayName": "st_wpn_tt33_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_type63",
     "name": "st_wpn_type63",
     "category": "Rifles",
     "displayName": "st_wpn_type63",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "pri_a17_gauss_rifle",
     "name": "st_wpn_umirotvoritel",
     "category": "Snipers",
     "displayName": "st_wpn_umirotvoritel",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_ump45",
     "name": "st_wpn_ump45",
     "category": "SMGs",
     "displayName": "st_wpn_ump45",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_ump45_custom",
     "name": "st_wpn_ump45_custom",
     "category": "SMGs",
     "displayName": "st_wpn_ump45_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_usas12",
     "name": "st_wpn_usas12",
     "category": "Shotguns",
     "displayName": "st_wpn_usas12",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_usp",
     "name": "st_wpn_usp",
     "category": "Pistols",
     "displayName": "st_wpn_usp",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_usp_custom",
     "name": "st_wpn_usp_custom",
     "category": "Pistols",
     "displayName": "st_wpn_usp_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_usp_match",
     "name": "st_wpn_usp_match",
     "category": "Pistols",
     "displayName": "st_wpn_usp_match",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_usp_nimble",
     "name": "st_wpn_usp_nimble",
     "category": "Pistols",
     "displayName": "st_wpn_usp_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_val",
     "name": "st_wpn_val",
     "category": "Rifles",
     "displayName": "st_wpn_val",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_val_modern",
     "name": "st_wpn_val_modern",
     "category": "Rifles",
     "displayName": "st_wpn_val_modern",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vepr",
     "name": "st_wpn_vepr12",
     "category": "Shotguns",
     "displayName": "st_wpn_vepr12",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vihr",
     "name": "st_wpn_vihr",
     "category": "Rifles",
     "displayName": "st_wpn_vihr",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vintorez_1pn93",
     "name": "st_wpn_vintorez",
     "category": "Rifles",
     "displayName": "st_wpn_vintorez [1pn93]",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vintorez",
     "name": "st_wpn_vintorez",
     "category": "Rifles",
     "displayName": "st_wpn_vintorez [default]",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vintorez_alt",
     "name": "st_wpn_vintorez_alt",
     "category": "Rifles",
     "displayName": "st_wpn_vintorez_alt",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_vintorez_nimble",
     "name": "st_wpn_vintorez_nimble",
     "category": "Rifles",
     "displayName": "st_wpn_vintorez_nimble",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_vityaz",
     "name": "st_wpn_vityaz",
     "category": "SMGs",
     "displayName": "st_wpn_vityaz",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vsk94",
     "name": "st_wpn_vsk94",
     "category": "Rifles",
     "displayName": "st_wpn_vsk94",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vssk",
     "name": "st_wpn_vssk",
     "category": "Snipers",
     "displayName": "st_wpn_vssk",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vz61",
     "name": "st_wpn_vz61",
     "category": "SMGs",
     "displayName": "st_wpn_vz61",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vz61_alt",
     "name": "st_wpn_vz61_alt",
     "category": "SMGs",
     "displayName": "st_wpn_vz61_alt",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vz61_camo",
     "name": "st_wpn_vz61_camo",
     "category": "SMGs",
     "displayName": "st_wpn_vz61_camo",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_vz61_freedom",
     "name": "st_wpn_vz61_freedom",
     "category": "SMGs",
     "displayName": "st_wpn_vz61_freedom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_wa2000",
     "name": "st_wpn_wa2000",
     "category": "Snipers",
     "displayName": "st_wpn_wa2000",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "wpn_walther",
     "name": "st_wpn_walther",
     "category": "Pistols",
     "displayName": "st_wpn_walther",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_walther_custom",
     "name": "st_wpn_walther_custom",
     "category": "Pistols",
     "displayName": "st_wpn_walther_custom",
-    "hasNpcWeaponDrop": true
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false
   },
   {
     "id": "wpn_xm8",
     "name": "st_wpn_xm8",
     "category": "Rifles",
     "displayName": "st_wpn_xm8",
-    "hasNpcWeaponDrop": false
+    "hasNpcWeaponDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true
   },
   {
     "id": "yadylin",

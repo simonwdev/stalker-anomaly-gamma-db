@@ -16,7 +16,10 @@
       "st_upgr_cost": "13200",
       "displayName": "st_grenade_launcher",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_addon_grenade_launcher_l85",
@@ -26,7 +29,10 @@
       "st_upgr_cost": "10200",
       "displayName": "st_grenade_launcher_l85",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_addon_grenade_launcher_m203",
@@ -36,7 +42,10 @@
       "st_upgr_cost": "13200",
       "displayName": "st_grenade_launcher_m203",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_addon_grenade_launcher_monolit",
@@ -46,7 +55,10 @@
       "st_upgr_cost": "30500",
       "displayName": "st_grenade_launcher_monolit",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_addon_grenade_launcher_scar",
@@ -56,7 +68,10 @@
       "st_upgr_cost": "12200",
       "displayName": "st_grenade_launcher_scar",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     }
   ]
 }

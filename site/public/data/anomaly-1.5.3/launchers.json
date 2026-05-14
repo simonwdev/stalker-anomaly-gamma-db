@@ -36,7 +36,11 @@
       "st_data_export_hit_power": "0.8",
       "displayName": "st_wpn_m79",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_rg-6",
@@ -56,7 +60,11 @@
       "st_data_export_hit_power": "0.75",
       "displayName": "st_wpn_rg6",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_rpg7",
@@ -76,7 +84,11 @@
       "st_data_export_hit_power": "3",
       "displayName": "st_wpn_rpg7",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     }
   ]
 }

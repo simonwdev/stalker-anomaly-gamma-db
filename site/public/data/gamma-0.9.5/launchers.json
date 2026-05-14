@@ -45,7 +45,10 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_rg-6",
@@ -71,7 +74,10 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "inStartingLoadout": false,
-      "unobtainable": true
+      "unobtainable": true,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_rpg7",
@@ -97,7 +103,10 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "inStartingLoadout": false,
-      "unobtainable": false
+      "unobtainable": false,
+      "factions": [
+        "wp"
+      ]
     }
   ]
 }

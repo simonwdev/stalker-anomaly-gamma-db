@@ -1182,6 +1182,117 @@ if (ammoDataPre) {
   }
 }
 
+// Faction classification (NATO / WP / other) based on weapon caliber.
+// The xray engine and game LTX have no faction concept — this is a static
+// caliber-to-faction lookup derived from the ammo translation keys.
+const FACTION_BY_CALIBER = {
+  // Warsaw Pact / Soviet
+  "5.45x39": "wp",
+  "7.62x39": "wp",
+  "7.62x54": "wp",
+  "9x18": "wp",
+  "9x39": "wp",
+  "7.62x25": "wp",
+  "9x21": "wp",
+  "12.7x55": "wp",
+  "23x75": "wp",
+  "23": "wp",
+  "vog": "wp",
+  "og": "wp",
+  "pg": "wp",
+  "pkm": "wp",
+  // NATO / Western
+  "5.56x45": "nato",
+  "7.62x51": "nato",
+  "9x19": "nato",
+  "11.43x23": "nato",
+  "338": "nato",
+  "5.7x28": "nato",
+  "4.6x30": "nato",
+  "50": "nato",
+  "m209": "nato",
+  // Pre-bloc / shared / civilian
+  "12x70": "other",
+  "12x76": "other",
+  "20x70": "other",
+  "357": "other",
+  "7.92x33": "other",
+  "gauss": "other",
+  "magnum": "other",
+};
+
+function ammoTokenToCaliber(token) {
+  const stripped = token.replace(/^ammo[-_]/, "");
+  const m = stripped.match(/^([0-9]+(?:\.[0-9]+)?(?:x[0-9]+(?:\.[0-9]+)?)?)/);
+  if (m) return m[1];
+  return stripped.split(/[-_]/)[0];
+}
+
+function classifyAmmoTypes(...fields) {
+  const factions = new Set();
+  for (const raw of fields) {
+    if (!raw) continue;
+    for (const tok of raw.split(";").map(s => s.trim()).filter(Boolean)) {
+      const cal = ammoTokenToCaliber(tok);
+      const f = FACTION_BY_CALIBER[cal];
+      if (f) factions.add(f);
+    }
+  }
+  return [...factions].sort();
+}
+
+const WEAPON_FACTIONS = new Map();
+const WEAPON_SLUGS_FOR_FACTIONS = ["pistols", "smgs", "shotguns", "rifles", "snipers", "launchers"];
+for (const slug of WEAPON_SLUGS_FOR_FACTIONS) {
+  const cat = categoryData.get(slug);
+  if (!cat) continue;
+  for (const wpn of cat.items) {
+    const factions = classifyAmmoTypes(wpn["ui_ammo_types"]);
+    if (factions.length) {
+      wpn.factions = factions;
+      WEAPON_FACTIONS.set(wpn.id, factions);
+    }
+  }
+}
+
+const ammoFactionCat = categoryData.get("ammo");
+if (ammoFactionCat) {
+  for (const ammo of ammoFactionCat.items) {
+    const cal = ammoTokenToCaliber(ammo.id);
+    const f = FACTION_BY_CALIBER[cal];
+    if (f) ammo.factions = [f];
+  }
+}
+
+// Propagate factions to addons via export_addon_weapon_map.csv:
+// each addon's factions = union of factions of every weapon it attaches to.
+try {
+  const addonMapText = readFileSync(join(CSV_DIR, "export_addon_weapon_map.csv"), "utf-8");
+  const addonWeaponsMap = new Map();
+  for (const line of addonMapText.split(/\r?\n/)) {
+    const parts = line.split(",").map(v => v.trim()).filter(Boolean);
+    if (parts.length < 2) continue;
+    addonWeaponsMap.set(parts[0], parts.slice(1));
+  }
+  const ADDON_SLUGS = ["scopes", "silencers", "grenade-launchers", "tactical-kits"];
+  for (const slug of ADDON_SLUGS) {
+    const cat = categoryData.get(slug);
+    if (!cat) continue;
+    for (const addon of cat.items) {
+      const weapons = addonWeaponsMap.get(addon.id);
+      if (!weapons) continue;
+      const factionSet = new Set();
+      for (const wId of weapons) {
+        const fs = WEAPON_FACTIONS.get(wId);
+        if (fs) for (const f of fs) factionSet.add(f);
+      }
+      if (factionSet.size) addon.factions = [...factionSet].sort();
+    }
+  }
+} catch (e) {
+  if (e.code !== "ENOENT") throw e;
+}
+
 // Write per-category JSON files and build categories manifest
 const categoriesList = [];
 for (const [slug, data] of categoryData) {
