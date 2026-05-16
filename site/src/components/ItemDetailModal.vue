@@ -155,6 +155,22 @@
                     </div>
                 </div>
 
+                <!-- Max Upgraded Stats -->
+                <div v-if="maxUpgradeStatRows.length > 0" class="drop-sources max-stats-section" :class="{ collapsed: isCollapsed('max-stats') }">
+                    <h2 class="section-toggle" @click="toggleSection('max-stats')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_max_upgraded_stats') }}<span class="max-stats-tag">{{ t('app_label_best_or_selected') }}</span></h2>
+                    <div class="stat-grid">
+                        <div v-for="row in maxUpgradeStatRows" :key="'upg-' + row.key" class="stat-row">
+                            <span class="stat-label">{{ headerLabel(row.key) }}</span>
+                            <span class="stat-value max-stat-compare">
+                                <span class="max-stat-base">{{ formatValue(row.key, row.value) }}</span>
+                                <svg class="max-stat-arrow-icon" viewBox="0 0 16 8" width="14" height="7" fill="none"><path d="M0 4H13M10 1L13.5 4L10 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span class="max-stat-new" :class="upgradeDeltaClass(row.key, row.delta)">{{ formatValue(row.key, row.upgradedValue) }}</span>
+                                <span class="max-stat-delta" :class="upgradeDeltaClass(row.key, row.delta)">{{ formatUpgradeDelta(row.key, row.delta, row.value) }}</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Cross-pack changes -->
                 <div v-if="crossPackId && crossPackItem" class="drop-sources" :class="{ collapsed: isCollapsed('cross-pack') }">
                     <h2 class="section-toggle" @click="toggleSection('cross-pack')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_changes_from') }} {{ crossPackName }}</h2>
@@ -450,6 +466,102 @@ export default {
     isAddonItem() {
       return ['Scopes', 'Silencers', 'Grenade Launchers', 'Tactical Kits'].includes(this.modalCategory);
     },
+    upgradeStatDeltas() {
+      if (!this.modalUpgradeNodes || !this.modalUpgradeNodes.length) return {};
+
+      const PROP_TO_FIELD = {
+        st_prop_recoil: 'ui_inv_recoil',
+        st_prop_reliability: 'ui_inv_reli',
+        st_prop_bullet_speed: 'ui_inv_bspeed',
+        st_prop_weightoutfit: 'st_prop_weight',
+        st_prop_artefact: 'ui_inv_outfit_artefact_count',
+      };
+
+      const SECONDARY_TO_FIELD = {
+        inv_weight: 'st_prop_weight',
+        wound_protection: 'ui_inv_outfit_wound_protection',
+        fire_wound_protection: 'ui_inv_outfit_fire_wound_protection',
+        burn_protection: 'ui_inv_outfit_burn_protection',
+        chemical_burn_protection: 'ui_inv_outfit_chemical_burn_protection',
+        radiation_protection: 'ui_inv_outfit_radiation_protection',
+        telepatic_protection: 'ui_inv_outfit_telepatic_protection',
+        shock_protection: 'ui_inv_outfit_shock_protection',
+        explosion_protection: 'ui_inv_outfit_explosion_protection',
+        artefact_count: 'ui_inv_outfit_artefact_count',
+        additional_inventory_weight: 'ui_inv_outfit_additional_weight',
+        additional_inventory_weight2: 'ui_inv_outfit_additional_weight',
+        hit_power: 'st_data_export_hit_power',
+      };
+
+      const SKIP_PROPS = new Set([
+        'st_prop_calibre', 'st_prop_sprint', 'st_prop_underbarrel_slot',
+        'st_prop_scope', 'st_prop_scope_15x', 'st_prop_scope_4x', 'st_prop_scope_5x',
+        'st_prop_silencer', 'st_auto_fire', 'st_semi_auto_fire',
+        'st_prop_contrast', 'st_prop_night_vision_2',
+        'st_prop_binoc_zoom', 'st_prop_binoc_autolock', 'st_prop_binoc_nightvision',
+        'st_prop_durability', 'st_prop_restore_bleeding', 'st_prop_restore_health',
+      ]);
+
+      // Group nodes by position (row-col) for OR-group handling
+      const positions = new Map();
+      for (const node of this.modalUpgradeNodes) {
+        const posKey = `${node.row}-${node.col}`;
+        if (!positions.has(posKey)) positions.set(posKey, []);
+        positions.get(posKey).push(node);
+      }
+
+      // For each OR group pick the node with the highest absolute primary val
+      const selected = [];
+      for (const [, nodes] of positions) {
+        if (nodes.length === 1) {
+          selected.push(nodes[0]);
+        } else {
+          let best = nodes[0];
+          for (const n of nodes.slice(1)) {
+            if (Math.abs(parseFloat(n.val) || 0) > Math.abs(parseFloat(best.val) || 0)) best = n;
+          }
+          selected.push(best);
+        }
+      }
+
+      const deltas = {};
+      for (const node of selected) {
+        if (node.prop && !SKIP_PROPS.has(node.prop) && node.val) {
+          const fieldKey = PROP_TO_FIELD[node.prop] || node.prop;
+          const v = parseFloat(node.val);
+          if (!isNaN(v)) deltas[fieldKey] = (deltas[fieldKey] || 0) + v;
+        }
+        if (node.stats) {
+          const primaryField = PROP_TO_FIELD[node.prop] || node.prop;
+          for (const [sKey, sVal] of Object.entries(node.stats)) {
+            const mappedKey = SECONDARY_TO_FIELD[sKey];
+            if (!mappedKey || mappedKey === primaryField) continue;
+            const v = parseFloat(sVal);
+            if (!isNaN(v)) deltas[mappedKey] = (deltas[mappedKey] || 0) + v;
+          }
+        }
+      }
+
+      for (const key of Object.keys(deltas)) {
+        if (Math.abs(deltas[key]) < 0.0001) delete deltas[key];
+      }
+      return deltas;
+    },
+    maxUpgradeStatRows() {
+      if (!this.modalUpgradeNodes?.length) return [];
+      const deltas = this.upgradeStatDeltas;
+      if (!Object.keys(deltas).length) return [];
+      const result = [];
+      for (const row of this.modalStatRows || []) {
+        if (row.isSection || row.value === null || row.value === undefined || row.value === '') continue;
+        const delta = deltas[row.key];
+        if (delta === undefined) continue;
+        const upgradedValue = this.applyUpgradeDelta(row.key, row.value, delta);
+        if (upgradedValue === null) continue;
+        result.push({ key: row.key, value: row.value, delta, upgradedValue });
+      }
+      return result;
+    },
   },
   methods: {
     _loadCollapsedSections() {
@@ -511,6 +623,32 @@ export default {
     },
     weaponDisplayName(w) {
       return this.tName(w).replace(/\s*\[default\]$/i, '').trim();
+    },
+    applyUpgradeDelta(key, value, delta) {
+      if (value === null || value === undefined || value === '' || value === '--') return null;
+      const s = String(value);
+      const isPct = s.includes('%');
+      const raw = isPct ? s.replace('%', '') : s;
+      const n = parseFloat(raw);
+      if (isNaN(n)) return null;
+      const rounded = Math.round((n + delta) * 100) / 100;
+      return isPct ? `${rounded}%` : String(rounded);
+    },
+    upgradeDeltaClass(key, delta) {
+      if (!delta) return '';
+      const LOWER_IS_BETTER = new Set(['st_prop_weight', 'ui_inv_recoil']);
+      const isLowerBetter = LOWER_IS_BETTER.has(key);
+      const isGood = isLowerBetter ? delta < 0 : delta > 0;
+      return isGood ? 'upg-good' : 'upg-bad';
+    },
+    formatUpgradeDelta(key, delta, baseValue) {
+      if (!delta) return '';
+      const rounded = Math.round(delta * 100) / 100;
+      const prefix = rounded > 0 ? '+' : '';
+      const isPct = String(baseValue || '').includes('%');
+      if (isPct) return `${prefix}${rounded}%`;
+      if (key === 'st_prop_weight' || key === 'ui_inv_outfit_additional_weight') return `${prefix}${rounded} kg`;
+      return `${prefix}${rounded}`;
     },
   },
 };
@@ -665,4 +803,63 @@ export default {
     vertical-align: middle;
     margin-left: 0.4rem;
 }
+
+/* ── Max Upgraded Stats section ─────────────────────────── */
+
+.max-stats-tag {
+    display: inline-block;
+    font-size: 0.48rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent-dim);
+    background: var(--color-accent-tint-8);
+    border: 1px solid var(--color-accent-tint-20);
+    padding: 0.05rem 0.35rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+.max-stat-compare {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: nowrap;
+    min-width: 0;
+}
+
+.max-stat-base {
+    color: var(--text-secondary);
+    opacity: 0.65;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.max-stat-arrow-icon {
+    color: var(--color-elevated-3);
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.max-stat-new {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.max-stat-delta {
+    font-size: 0.58rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    padding: 0.05rem 0.3rem;
+    border-radius: 3px;
+    background: var(--color-overlay-white-2);
+    flex-shrink: 0;
+}
+
+.upg-good { color: var(--color-green-positive); }
+.upg-good.max-stat-delta { background: color-mix(in srgb, var(--color-green-positive) 12%, transparent); }
+
+.upg-bad { color: var(--color-red-muted); }
+.upg-bad.max-stat-delta { background: color-mix(in srgb, var(--color-red-muted) 12%, transparent); }
 </style>
