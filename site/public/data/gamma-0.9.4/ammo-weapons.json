@@ -1919,8 +1919,7 @@
       "name": "st_wpn_ks23_23_up",
       "displayName": "st_wpn_ks23_23_up",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ks23_kaban",
@@ -1973,8 +1972,7 @@
       "name": "st_wpn_ks23_23_up",
       "displayName": "st_wpn_ks23_23_up",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ks23_kaban",

@@ -26,7 +26,8 @@
       "st_detonation_time": "3",
       "displayName": "st_grenade_f1",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false
     },
     {
       "id": "grenade_gd-05",
@@ -41,7 +42,8 @@
       "st_detonation_time": "4",
       "displayName": "st_grenade_thermite",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false
     },
     {
       "id": "grenade_rgd5",
@@ -56,7 +58,8 @@
       "st_detonation_time": "3",
       "displayName": "st_grenade_rgd5",
       "hasNpcWeaponDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false
     },
     {
       "id": "grenade_smoke",
@@ -71,7 +74,8 @@
       "st_detonation_time": "12",
       "displayName": "st_grenade_smoke",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "ied",
@@ -86,7 +90,8 @@
       "st_detonation_time": "0",
       "displayName": "st_ied",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "ied_rpg",
@@ -101,7 +106,8 @@
       "st_detonation_time": "0",
       "displayName": "st_ied_rpg",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     },
     {
       "id": "mine",
@@ -116,7 +122,8 @@
       "st_detonation_time": "0",
       "displayName": "st_mine_name",
       "hasNpcWeaponDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true
     }
   ]
 }

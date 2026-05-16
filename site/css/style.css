@@ -834,16 +834,6 @@ button.header-link {
     flex: 1;
     overflow: hidden;
 }
-.search-result-right {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    flex-shrink: 0;
-    margin-left: 0.5rem;
-}
-.search-result-right .search-id-hint {
-    margin-left: 0;
-}
 .search-cat-badge {
     font-size: 0.65rem;
     color: var(--text-secondary);
@@ -2245,6 +2235,10 @@ input.range-input {
 .badge-thick-skin { background: var(--color-red-tint-15); color: var(--color-red-warm-soft); }
 .badge-type { background: var(--color-blue-tint-18); color: var(--color-blue-light); }
 .badge-compat { background: var(--color-blue-tint-14); color: var(--color-blue-soft); }
+.badge-origin-nato { background: var(--color-teal-tint-20); color: var(--color-teal); }
+.badge-origin-wp { background: var(--color-warm-brown-tint-20); color: var(--color-accent-tan); }
+.badge-origin-other { background: var(--color-olive-tint-20); color: var(--color-olive); }
+.badge-origin-mixed { background: var(--color-grey-blue-tint-12); color: var(--color-blue-grey-soft); }
 
 /* Preloader (pre-Vue) */
 #app-preloader {

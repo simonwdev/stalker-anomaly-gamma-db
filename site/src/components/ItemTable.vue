@@ -53,6 +53,9 @@
                     <template v-else-if="col.key === 'Type'">
                         <span class="badge-flag badge-type">{{ t(singularType(item[col.key])) }}</span>
                     </template>
+                    <template v-else-if="col.key === 'factions'">
+                        <span v-if="originBadge(item.factions)" class="badge-flag" :class="originBadge(item.factions).cls">{{ originBadge(item.factions).label }}</span>
+                    </template>
                     <template v-else-if="col.key === 'ui_mm_repair'">
                         <span class="badge" :style="displayStyle(col.key, item[col.key])">{{ displayLabel(col.key, item[col.key]) }}</span>
                     </template>
@@ -99,6 +102,7 @@ export default {
     "displayLabel",
     "displayStyle",
     "singularType",
+    "originBadge",
     "healDots",
     "caliberName",
     "itemHref",
@@ -132,7 +136,7 @@ export default {
       return this.sortAsc ? " \u25B2" : " \u25BC";
     },
     isLeftAlignCol(key) {
-      const LEFT_COLS = ["pda_encyclopedia_name", "name", "ui_st_community", "ui_ammo_types", "st_data_export_ammo_types_alt"];
+      const LEFT_COLS = ["pda_encyclopedia_name", "name", "ui_st_community", "ui_ammo_types", "st_data_export_ammo_types_alt", "factions"];
       return LEFT_COLS.includes(key);
     },
   },

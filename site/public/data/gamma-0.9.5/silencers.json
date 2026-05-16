@@ -16,7 +16,11 @@
       "st_upgr_cost": "400",
       "displayName": "st_addon_silencer",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_45",
@@ -26,7 +30,10 @@
       "st_upgr_cost": "1800",
       "displayName": "st_addon_sil_45",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_57",
@@ -36,7 +43,10 @@
       "st_upgr_cost": "1900",
       "displayName": "st_addon_sil_57",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_6p9",
@@ -46,7 +56,10 @@
       "st_upgr_cost": "1000",
       "displayName": "st_addon_sil_6p9",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_9a91",
@@ -56,7 +69,10 @@
       "st_upgr_cost": "2300",
       "displayName": "st_addon_sil_9a91",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_9mm",
@@ -66,7 +82,11 @@
       "st_upgr_cost": "1480",
       "displayName": "st_addon_sil_9mm",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_aac762",
@@ -76,7 +96,11 @@
       "st_upgr_cost": "12000",
       "displayName": "st_addon_sil_aac762",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_apb",
@@ -86,7 +110,10 @@
       "st_upgr_cost": "800",
       "displayName": "st_addon_sil_apb",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_aps",
@@ -96,7 +123,10 @@
       "st_upgr_cost": "1000",
       "displayName": "st_addon_sil_aps",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_ash12",
@@ -106,7 +136,10 @@
       "st_upgr_cost": "5100",
       "displayName": "st_addon_sil_ash12",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_atg",
@@ -116,7 +149,11 @@
       "st_upgr_cost": "2500",
       "displayName": "st_addon_sil_atg",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_auga",
@@ -126,7 +163,10 @@
       "st_upgr_cost": "17150",
       "displayName": "st_addon_sil_auga",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_black_box",
@@ -136,7 +176,10 @@
       "st_upgr_cost": "2400",
       "displayName": "st_addon_sil_black_box",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_daniel",
@@ -146,7 +189,10 @@
       "st_upgr_cost": "8100",
       "displayName": "st_addon_sil_daniel",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_forester",
@@ -156,7 +202,10 @@
       "st_upgr_cost": "5100",
       "displayName": "st_addon_sil_forester",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_sil_geks545",
@@ -166,7 +215,11 @@
       "st_upgr_cost": "2000",
       "displayName": "st_addon_sil_geks545",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_gemtech",
@@ -176,7 +229,10 @@
       "st_upgr_cost": "2100",
       "displayName": "st_addon_sil_gemtech",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_grot",
@@ -186,7 +242,10 @@
       "st_upgr_cost": "10000",
       "displayName": "st_addon_sil_grot",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_hex23",
@@ -196,7 +255,10 @@
       "st_upgr_cost": "18000",
       "displayName": "st_addon_sil_hex23",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_hexagon",
@@ -206,7 +268,10 @@
       "st_upgr_cost": "3200",
       "displayName": "st_addon_sil_hexagon",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_kac4",
@@ -216,7 +281,10 @@
       "st_upgr_cost": "20100",
       "displayName": "st_addon_sil_kac4",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_kek12",
@@ -226,7 +294,12 @@
       "st_upgr_cost": "3800",
       "displayName": "st_addon_sil_kek12",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "other",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_kzrzp",
@@ -236,7 +309,10 @@
       "st_upgr_cost": "2600",
       "displayName": "st_addon_sil_kzrzp",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_lapu7",
@@ -246,7 +322,10 @@
       "st_upgr_cost": "15300",
       "displayName": "st_addon_sil_lapu7",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_m42k",
@@ -256,7 +335,10 @@
       "st_upgr_cost": "12150",
       "displayName": "st_addon_sil_m42k",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_nato",
@@ -266,7 +348,11 @@
       "st_upgr_cost": "2200",
       "displayName": "st_addon_sil_nato",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_osp9",
@@ -276,7 +362,10 @@
       "st_upgr_cost": "2500",
       "displayName": "st_addon_sil_osp9",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_pbs1",
@@ -286,7 +375,11 @@
       "st_upgr_cost": "2200",
       "displayName": "st_addon_sil_pbs1",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_pbs4",
@@ -296,7 +389,10 @@
       "st_upgr_cost": "2300",
       "displayName": "st_addon_sil_pbs4",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_pl15",
@@ -306,7 +402,10 @@
       "st_upgr_cost": "10100",
       "displayName": "st_addon_sil_pl15",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_pmm",
@@ -316,7 +415,10 @@
       "st_upgr_cost": "1580",
       "displayName": "st_addon_sil_pmm",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_rotor",
@@ -326,7 +428,10 @@
       "st_upgr_cost": "5600",
       "displayName": "st_addon_sil_rotor",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_salvo",
@@ -336,7 +441,11 @@
       "st_upgr_cost": "6200",
       "displayName": "st_addon_sil_salvo",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_spec_isg",
@@ -346,7 +455,11 @@
       "st_upgr_cost": "12100",
       "displayName": "st_addon_sil_spec_isg",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_sr1m",
@@ -356,7 +469,10 @@
       "st_upgr_cost": "4100",
       "displayName": "st_addon_sil_sr1m",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_sr25",
@@ -366,7 +482,10 @@
       "st_upgr_cost": "2350",
       "displayName": "st_addon_sil_sr25",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_sil_surfire",
@@ -376,7 +495,11 @@
       "st_upgr_cost": "18325",
       "displayName": "st_addon_sil_surfire",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_tgp-a",
@@ -386,7 +509,10 @@
       "st_upgr_cost": "2000",
       "displayName": "st_addon_sil_tgp-a",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_tgpv",
@@ -396,7 +522,10 @@
       "st_upgr_cost": "8000",
       "displayName": "st_addon_sil_tgpv",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_veresk",
@@ -406,7 +535,10 @@
       "st_upgr_cost": "13100",
       "displayName": "st_addon_sil_veresk",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_sil_vihr",
@@ -416,7 +548,10 @@
       "st_upgr_cost": "2300",
       "displayName": "st_addon_sil_vihr",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     }
   ]
 }

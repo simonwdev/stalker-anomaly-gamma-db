@@ -19,7 +19,11 @@
       "st_data_export_zoom_factor": "15",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_1p29",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "ac10632",
@@ -30,7 +34,11 @@
       "st_data_export_zoom_factor": "",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_ac10632",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "ac11090",
@@ -41,7 +49,10 @@
       "st_data_export_zoom_factor": "",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_ac11090",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "acog",
@@ -52,7 +63,11 @@
       "st_data_export_zoom_factor": "",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_acog",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "c-more",
@@ -63,7 +78,11 @@
       "st_data_export_zoom_factor": "",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_cmore",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "eot",
@@ -74,7 +93,11 @@
       "st_data_export_zoom_factor": "",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_eotech",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "kobra",
@@ -85,7 +108,11 @@
       "st_data_export_zoom_factor": "",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_kobra",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "ps01",
@@ -96,7 +123,11 @@
       "st_data_export_zoom_factor": "",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope [ps01]",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "pso1m21",
@@ -107,7 +138,10 @@
       "st_data_export_zoom_factor": "",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_pso-1m2-01",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_addon_scope",
@@ -118,7 +152,12 @@
       "st_data_export_zoom_factor": "24",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope [wpn_addon_scope]",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "other",
+        "wp"
+      ]
     },
     {
       "id": "wpn_addon_scope_g43",
@@ -129,7 +168,10 @@
       "st_data_export_zoom_factor": "24.8",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_zf4",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_addon_scope_susat",
@@ -140,7 +182,10 @@
       "st_data_export_zoom_factor": "24",
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_galil_susat",
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     }
   ]
 }

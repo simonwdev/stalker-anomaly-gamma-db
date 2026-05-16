@@ -8,6 +8,7 @@
             <span v-if="item.unobtainable === true" class="badge-no-drop" v-tooltip="t('app_tooltip_not_dropped')">{{ t('app_badge_no_drop') }}</span>
             <span v-if="isUnusedAmmo(item)" class="badge-unused" v-tooltip="t('app_tooltip_unused_ammo')">{{ t('app_badge_unused') }}</span>
             <span v-if="item.Type" class="badge-flag badge-type">{{ t(singularType(item.Type)) }}</span>
+            <span v-if="originBadge(item.factions)" class="badge-flag" :class="originBadge(item.factions).cls">{{ originBadge(item.factions).label }}</span>
             <span v-if="item['st_data_export_has_perk'] === 'Y'" class="badge-flag badge-perk">{{ perkBadgeText(item) }}</span>
             <span v-if="item['st_data_export_is_junk'] === 'Y'" class="badge-flag badge-junk">{{ t('app_badge_junk') }}</span>
             <span v-if="item['st_data_export_can_be_crafted'] === 'Y'" class="badge-flag badge-craftable">{{ t('app_badge_craftable') }}</span>
@@ -84,7 +85,7 @@ export default {
     inject: [
         't', 'tItemName', 'headerLabel', 'cellValue', 'formatValue',
         'statClass', 'statStyle', 'displayLabel', 'displayStyle',
-        'singularType', 'singularCategory', 'healDots',
+        'singularType', 'singularCategory', 'healDots', 'originBadge',
         'caliberName', 'itemHref', 'showItemHoverFromCaliber', 'hideItemHover', 'factionColor',
         'isUnusedAmmo', 'openAmmoFromCaliber',
         'showWeaponListPopover',

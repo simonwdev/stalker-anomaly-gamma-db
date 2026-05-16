@@ -877,6 +877,13 @@ export const appDefinition = {
                 filtered.splice(nameIdx, 0, "ui_st_community");
             }
 
+            // Inject Origin (factions) column when items carry NATO/WP classification
+            if (items.some(i => Array.isArray(i.factions) && i.factions.length)) {
+                const typeIdx = filtered.indexOf("Type");
+                if (typeIdx >= 0) filtered.splice(typeIdx + 1, 0, "factions");
+                else filtered.push("factions");
+            }
+
             // Inject malfunction chance after reliability
             const reliIdx = filtered.indexOf("ui_inv_reli");
             if (reliIdx >= 0) {
@@ -915,6 +922,7 @@ export const appDefinition = {
                 }
                 if (def.type === "flag") return raw.includes(def.key);
                 if (def.key === "ui_st_community") return raw.includes("ui_st_community");
+                if (def.arrayField) return items.some(i => Array.isArray(i[def.key]) && i[def.key].length > 0);
                 return headers.includes(def.key) || raw.includes(def.key);
             }).map(def => {
                 if (def.type === "has-effect") {
@@ -924,6 +932,17 @@ export const appDefinition = {
                         if (items.some(item => isNonZero(item[f]))) vals.push(f);
                     }
                     return vals.length > 0 ? { ...def, values: vals } : null;
+                }
+                if (def.arrayField && def.type === "discrete") {
+                    const present = new Set();
+                    for (const item of items) {
+                        const arr = item[def.key];
+                        if (Array.isArray(arr)) for (const v of arr) present.add(String(v));
+                    }
+                    const filtered = Array.isArray(def.values)
+                        ? def.values.filter(v => present.has(String(v)))
+                        : [...present].sort();
+                    return filtered.length > 0 ? { ...def, values: filtered } : null;
                 }
                 if (def.type === "discrete" && def.dynamic) {
                     const vals = new Set();
@@ -3590,6 +3609,8 @@ export const appDefinition = {
                             } else {
                                 if (!val.some(v => itemCals.includes(v))) return false;
                             }
+                        } else if (def.arrayField) {
+                            if (!Array.isArray(itemVal) || !val.some(v => itemVal.includes(v))) return false;
                         } else {
                             if (!val.includes(String(itemVal ?? ""))) return false;
                         }
@@ -3802,6 +3823,7 @@ export const appDefinition = {
             if (h === "_cost_per_round") return this.t("_cost_per_round");
             if (h === "_compatible_weapons") return this.t("app_label_compatible_weapons");
             if (h === "_num_scopes") return this.t("app_label_num_scopes");
+            if (h === "factions") return this.t("app_filter_origin");
             if (h === "st_upgr_cost" && this.activeCategory === CAT.AMMO) return this.t("_cost_per_pack");
             if (h === "ui_inv_damage" && this.activeCategory === CAT.AMMO) return this.t("st_data_export_damage_mult");
             const translated = this.t(h);
@@ -3810,8 +3832,19 @@ export const appDefinition = {
         },
 
         isLeftAlignCol(key) {
-            const LEFT_COLS = ['pda_encyclopedia_name', 'name', 'ui_st_community', 'ui_ammo_types', 'st_data_export_ammo_types_alt'];
+            const LEFT_COLS = ['pda_encyclopedia_name', 'name', 'ui_st_community', 'ui_ammo_types', 'st_data_export_ammo_types_alt', 'factions'];
             return LEFT_COLS.includes(key);
+        },
+
+        originBadge(factions) {
+            if (!Array.isArray(factions) || factions.length === 0) return null;
+            const ORDER = ['wp', 'nato', 'other'];
+            const labelOf = f => f === 'nato' ? 'NATO' : f === 'wp' ? 'WP' : this.t('app_origin_other').toUpperCase();
+            if (factions.length === 1) {
+                return { cls: 'badge-origin-' + factions[0], label: labelOf(factions[0]) };
+            }
+            const sorted = [...factions].sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
+            return { cls: 'badge-origin-mixed', label: sorted.map(labelOf).join('/') };
         },
 
         healDots(val) {

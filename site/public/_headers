@@ -1,4 +1,4 @@
-﻿/sw.js
+/sw.js
   Cache-Control: no-store
 
 /img/icons/*

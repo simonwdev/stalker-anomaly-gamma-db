@@ -3,6 +3,7 @@
     <div class="item-hover-card">
         <div class="item-hover-header">
             <span class="item-hover-name">{{ tItemName(item) }}</span>
+            <span v-if="originBadge(item.factions)" class="badge-flag" :class="originBadge(item.factions).cls">{{ originBadge(item.factions).label }}</span>
             <span v-if="item['st_data_export_has_perk'] === 'Y'" class="badge-flag badge-perk">{{ t('app_badge_perk') }}</span>
             <span v-if="item['ui_mcm_menu_exo'] === 'Y'" class="badge-flag badge-powered">{{ t('app_badge_powered') }}</span>
         </div>
@@ -46,7 +47,7 @@ interface HoverPos {
 
 export default defineComponent({
   name: 'ItemHoverPopover',
-  inject: ['t', 'tItemName', 'headerLabel', 'formatValue', 'displayStyle', 'displayLabel', 'statClass', 'statStyle', 'cellValue', 'getItemFields', 'parseDescription', 'caliberName'],
+  inject: ['t', 'tItemName', 'headerLabel', 'formatValue', 'displayStyle', 'displayLabel', 'statClass', 'statStyle', 'cellValue', 'getItemFields', 'parseDescription', 'caliberName', 'originBadge'],
   props: {
     item: { type: Object, default: null },
     pos: { type: Object as PropType<HoverPos | null>, default: null },

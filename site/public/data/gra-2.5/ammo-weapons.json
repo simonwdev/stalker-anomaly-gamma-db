@@ -26,24 +26,21 @@
       "name": "st_wpn_colt1911_custom",
       "displayName": "st_wpn_colt1911_custom",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_colt1911_duty",
       "name": "st_wpn_colt1911_duty",
       "displayName": "st_wpn_colt1911_duty",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_colt1911_merc",
       "name": "st_wpn_colt1911_merc",
       "displayName": "st_wpn_colt1911_merc",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_colt1911_modern",
@@ -223,24 +220,21 @@
       "name": "st_wpn_colt1911_custom",
       "displayName": "st_wpn_colt1911_custom",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_colt1911_duty",
       "name": "st_wpn_colt1911_duty",
       "displayName": "st_wpn_colt1911_duty",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_colt1911_merc",
       "name": "st_wpn_colt1911_merc",
       "displayName": "st_wpn_colt1911_merc",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_colt1911_modern",
@@ -529,8 +523,7 @@
       "name": "st_wpn_mp153",
       "displayName": "st_wpn_mp153",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_mp153_bas",
@@ -558,8 +551,7 @@
       "name": "st_wpn_protecta_aim",
       "displayName": "st_wpn_protecta_aim",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_protecta_camo",
@@ -637,8 +629,7 @@
       "name": "st_wpn_spas12_nimble",
       "displayName": "st_wpn_spas12_nimble",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz34",
@@ -666,8 +657,7 @@
       "name": "st_wpn_toz34_mark4",
       "displayName": "st_wpn_toz34_mark4",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz34_obrez",
@@ -716,8 +706,7 @@
       "name": "st_wpn_toz194",
       "displayName": "st_wpn_toz194 [trapper]",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_12x70_buck_self": [
@@ -782,8 +771,7 @@
       "name": "st_wpn_mp153",
       "displayName": "st_wpn_mp153",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_mp153_bas",
@@ -811,8 +799,7 @@
       "name": "st_wpn_protecta_aim",
       "displayName": "st_wpn_protecta_aim",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_protecta_camo",
@@ -890,8 +877,7 @@
       "name": "st_wpn_spas12_nimble",
       "displayName": "st_wpn_spas12_nimble",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz34",
@@ -919,8 +905,7 @@
       "name": "st_wpn_toz34_mark4",
       "displayName": "st_wpn_toz34_mark4",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz34_obrez",
@@ -969,8 +954,7 @@
       "name": "st_wpn_toz194",
       "displayName": "st_wpn_toz194 [trapper]",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_12x70_raid": [
@@ -1056,8 +1040,7 @@
       "name": "st_wpn_protecta_aim",
       "displayName": "st_wpn_protecta_aim",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_protecta_camo",
@@ -1107,8 +1090,7 @@
       "name": "st_wpn_spas12_nimble",
       "displayName": "st_wpn_spas12_nimble",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz34",
@@ -1136,8 +1118,7 @@
       "name": "st_wpn_toz34_mark4",
       "displayName": "st_wpn_toz34_mark4",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz34_obrez",
@@ -1172,8 +1153,7 @@
       "name": "st_wpn_toz194",
       "displayName": "st_wpn_toz194 [trapper]",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_12x76_bull": [
@@ -1182,8 +1162,7 @@
       "name": "st_wpn_toz34_bull",
       "displayName": "st_wpn_toz34_bull",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_12x76_dart": [
@@ -1248,8 +1227,7 @@
       "name": "st_wpn_mp153",
       "displayName": "st_wpn_mp153",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_mp153_bas",
@@ -1277,8 +1255,7 @@
       "name": "st_wpn_protecta_aim",
       "displayName": "st_wpn_protecta_aim",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_protecta_camo",
@@ -1356,8 +1333,7 @@
       "name": "st_wpn_spas12_nimble",
       "displayName": "st_wpn_spas12_nimble",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz106",
@@ -1399,8 +1375,7 @@
       "name": "st_wpn_toz34_mark4",
       "displayName": "st_wpn_toz34_mark4",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz34_obrez",
@@ -1449,8 +1424,7 @@
       "name": "st_wpn_toz194",
       "displayName": "st_wpn_toz194 [trapper]",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_12x76_zhekan": [
@@ -1515,8 +1489,7 @@
       "name": "st_wpn_mp153",
       "displayName": "st_wpn_mp153",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_mp153_bas",
@@ -1544,8 +1517,7 @@
       "name": "st_wpn_protecta_aim",
       "displayName": "st_wpn_protecta_aim",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_protecta_camo",
@@ -1623,8 +1595,7 @@
       "name": "st_wpn_spas12_nimble",
       "displayName": "st_wpn_spas12_nimble",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz106",
@@ -1666,8 +1637,7 @@
       "name": "st_wpn_toz34_mark4",
       "displayName": "st_wpn_toz34_mark4",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_toz34_obrez",
@@ -1716,8 +1686,7 @@
       "name": "st_wpn_toz194",
       "displayName": "st_wpn_toz194 [trapper]",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_20x70_buck": [
@@ -1742,8 +1711,7 @@
       "name": "st_wpn_ks23",
       "displayName": "st_wpn_ks23",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ks23_23_up",
@@ -1775,8 +1743,7 @@
       "name": "st_wpn_ks23",
       "displayName": "st_wpn_ks23",
       "category": "Shotguns",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ks23_23_up",
@@ -1808,16 +1775,14 @@
       "name": "st_wpn_abakan",
       "displayName": "st_wpn_abakan",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_abakan_camo",
       "name": "st_wpn_abakan_camo",
       "displayName": "st_wpn_abakan_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_abakan_n",
@@ -1852,8 +1817,7 @@
       "name": "st_wpn_ak105",
       "displayName": "st_wpn_ak105",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak105_bas",
@@ -1867,16 +1831,14 @@
       "name": "st_wpn_ak105_bas_shakal",
       "displayName": "st_wpn_ak105_bas_shakal",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak105_bas_swamp",
       "name": "st_wpn_ak105_bas_swamp",
       "displayName": "st_wpn_ak105_bas_swamp",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak105_sp",
@@ -1890,8 +1852,7 @@
       "name": "st_wpn_ak12",
       "displayName": "st_wpn_ak12",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak12_bas",
@@ -1912,8 +1873,7 @@
       "name": "st_wpn_ak12_mono_kit",
       "displayName": "st_wpn_ak12_mono_kit",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak12_m1",
@@ -1990,16 +1950,14 @@
       "name": "st_wpn_ak74_eot",
       "displayName": "st_wpn_ak74_eot",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74m",
       "name": "st_wpn_ak74m",
       "displayName": "st_wpn_ak74m",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74m_alt",
@@ -2048,8 +2006,7 @@
       "name": "st_wpn_ak74m_pk-a",
       "displayName": "st_wpn_ak74m_pk-a",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74u",
@@ -2063,16 +2020,14 @@
       "name": "st_wpn_ak74u_camo",
       "displayName": "st_wpn_ak74u_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74u_custom",
       "name": "st_wpn_ak74u_custom",
       "displayName": "st_wpn_ak74u_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74u_isg",
@@ -2135,64 +2090,56 @@
       "name": "st_wpn_l85",
       "displayName": "st_wpn_l85",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85_alt",
       "name": "st_wpn_l85_alt",
       "displayName": "st_wpn_l85_alt",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85_custom",
       "name": "st_wpn_l85_custom",
       "displayName": "st_wpn_l85_custom",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85_modern",
       "name": "st_wpn_l85_modern",
       "displayName": "st_wpn_l85_modern",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2",
       "name": "st_wpn_l85a2",
       "displayName": "st_wpn_l85a2",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2_alt",
       "name": "st_wpn_l85a2_alt",
       "displayName": "st_wpn_l85a2_alt",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2_custom",
       "name": "st_wpn_l85a2_custom",
       "displayName": "st_wpn_l85a2_custom",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2_modern",
       "name": "st_wpn_l85a2_modern",
       "displayName": "st_wpn_l85a2_modern",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_rpk74",
@@ -2215,16 +2162,14 @@
       "name": "st_wpn_abakan",
       "displayName": "st_wpn_abakan",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_abakan_camo",
       "name": "st_wpn_abakan_camo",
       "displayName": "st_wpn_abakan_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_abakan_n",
@@ -2259,8 +2204,7 @@
       "name": "st_wpn_ak105",
       "displayName": "st_wpn_ak105",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak105_bas",
@@ -2274,16 +2218,14 @@
       "name": "st_wpn_ak105_bas_shakal",
       "displayName": "st_wpn_ak105_bas_shakal",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak105_bas_swamp",
       "name": "st_wpn_ak105_bas_swamp",
       "displayName": "st_wpn_ak105_bas_swamp",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak105_sp",
@@ -2297,8 +2239,7 @@
       "name": "st_wpn_ak12",
       "displayName": "st_wpn_ak12",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak12_bas",
@@ -2319,8 +2260,7 @@
       "name": "st_wpn_ak12_mono_kit",
       "displayName": "st_wpn_ak12_mono_kit",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak12_m1",
@@ -2397,16 +2337,14 @@
       "name": "st_wpn_ak74_eot",
       "displayName": "st_wpn_ak74_eot",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74m",
       "name": "st_wpn_ak74m",
       "displayName": "st_wpn_ak74m",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74m_alt",
@@ -2455,8 +2393,7 @@
       "name": "st_wpn_ak74m_pk-a",
       "displayName": "st_wpn_ak74m_pk-a",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74u",
@@ -2470,16 +2407,14 @@
       "name": "st_wpn_ak74u_camo",
       "displayName": "st_wpn_ak74u_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74u_custom",
       "name": "st_wpn_ak74u_custom",
       "displayName": "st_wpn_ak74u_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74u_isg",
@@ -2542,64 +2477,56 @@
       "name": "st_wpn_l85",
       "displayName": "st_wpn_l85",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85_alt",
       "name": "st_wpn_l85_alt",
       "displayName": "st_wpn_l85_alt",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85_custom",
       "name": "st_wpn_l85_custom",
       "displayName": "st_wpn_l85_custom",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85_modern",
       "name": "st_wpn_l85_modern",
       "displayName": "st_wpn_l85_modern",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2",
       "name": "st_wpn_l85a2",
       "displayName": "st_wpn_l85a2",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2_alt",
       "name": "st_wpn_l85a2_alt",
       "displayName": "st_wpn_l85a2_alt",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2_custom",
       "name": "st_wpn_l85a2_custom",
       "displayName": "st_wpn_l85a2_custom",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2_modern",
       "name": "st_wpn_l85a2_modern",
       "displayName": "st_wpn_l85a2_modern",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_rpk74",
@@ -2622,16 +2549,14 @@
       "name": "st_wpn_abakan",
       "displayName": "st_wpn_abakan",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_abakan_camo",
       "name": "st_wpn_abakan_camo",
       "displayName": "st_wpn_abakan_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_abakan_n",
@@ -2666,8 +2591,7 @@
       "name": "st_wpn_ak105",
       "displayName": "st_wpn_ak105",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak105_bas",
@@ -2681,16 +2605,14 @@
       "name": "st_wpn_ak105_bas_shakal",
       "displayName": "st_wpn_ak105_bas_shakal",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak105_bas_swamp",
       "name": "st_wpn_ak105_bas_swamp",
       "displayName": "st_wpn_ak105_bas_swamp",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak105_sp",
@@ -2704,8 +2626,7 @@
       "name": "st_wpn_ak12",
       "displayName": "st_wpn_ak12",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak12_bas",
@@ -2726,8 +2647,7 @@
       "name": "st_wpn_ak12_mono_kit",
       "displayName": "st_wpn_ak12_mono_kit",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak12_m1",
@@ -2804,16 +2724,14 @@
       "name": "st_wpn_ak74_eot",
       "displayName": "st_wpn_ak74_eot",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74m",
       "name": "st_wpn_ak74m",
       "displayName": "st_wpn_ak74m",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74m_alt",
@@ -2862,8 +2780,7 @@
       "name": "st_wpn_ak74m_pk-a",
       "displayName": "st_wpn_ak74m_pk-a",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74u",
@@ -2877,16 +2794,14 @@
       "name": "st_wpn_ak74u_camo",
       "displayName": "st_wpn_ak74u_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74u_custom",
       "name": "st_wpn_ak74u_custom",
       "displayName": "st_wpn_ak74u_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak74u_isg",
@@ -2949,64 +2864,56 @@
       "name": "st_wpn_l85",
       "displayName": "st_wpn_l85",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85_alt",
       "name": "st_wpn_l85_alt",
       "displayName": "st_wpn_l85_alt",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85_custom",
       "name": "st_wpn_l85_custom",
       "displayName": "st_wpn_l85_custom",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85_modern",
       "name": "st_wpn_l85_modern",
       "displayName": "st_wpn_l85_modern",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2",
       "name": "st_wpn_l85a2",
       "displayName": "st_wpn_l85a2",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2_alt",
       "name": "st_wpn_l85a2_alt",
       "displayName": "st_wpn_l85a2_alt",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2_custom",
       "name": "st_wpn_l85a2_custom",
       "displayName": "st_wpn_l85a2_custom",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l85a2_modern",
       "name": "st_wpn_l85a2_modern",
       "displayName": "st_wpn_l85a2_modern",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_rpk74",
@@ -3064,8 +2971,7 @@
       "name": "st_wpn_ak12",
       "displayName": "st_wpn_ak12",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak12_bas",
@@ -3086,8 +2992,7 @@
       "name": "st_wpn_ak12_mono_kit",
       "displayName": "st_wpn_ak12_mono_kit",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak12_m1",
@@ -3115,8 +3020,7 @@
       "name": "st_wpn_ak5c_bas_5c_tik",
       "displayName": "st_wpn_ak5c_bas_5c_tik",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak5c_isg",
@@ -3186,16 +3090,14 @@
       "name": "st_wpn_ak74_eot",
       "displayName": "st_wpn_ak74_eot",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak74m",
       "name": "st_wpn_ak74m",
       "displayName": "st_wpn_ak74m",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak74m_alt",
@@ -3237,8 +3139,7 @@
       "name": "st_wpn_ak74m_pk-a",
       "displayName": "st_wpn_ak74m_pk-a",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak74u_isg",
@@ -3301,8 +3202,7 @@
       "name": "st_wpn_aug",
       "displayName": "st_wpn_aug",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_a1_bas",
@@ -3345,40 +3245,35 @@
       "name": "st_wpn_aug_custom",
       "displayName": "st_wpn_aug_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_freedom",
       "name": "st_wpn_aug_freedom",
       "displayName": "st_wpn_aug_freedom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_merc",
       "name": "st_wpn_aug_merc",
       "displayName": "st_wpn_aug_merc",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_modern",
       "name": "st_wpn_aug_modern",
       "displayName": "st_wpn_aug_modern",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_famas3",
       "name": "st_wpn_famas3",
       "displayName": "st_wpn_famas3",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_fn2000",
@@ -3450,8 +3345,7 @@
       "name": "st_wpn_hk416",
       "displayName": "st_wpn_hk416",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_howa20",
@@ -3465,24 +3359,21 @@
       "name": "st_wpn_l85",
       "displayName": "st_wpn_l85",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85_alt",
       "name": "st_wpn_l85_alt",
       "displayName": "st_wpn_l85_alt",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85_custom",
       "name": "st_wpn_l85_custom",
       "displayName": "st_wpn_l85_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85_m1",
@@ -3510,40 +3401,35 @@
       "name": "st_wpn_l85_modern",
       "displayName": "st_wpn_l85_modern",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2",
       "name": "st_wpn_l85a2",
       "displayName": "st_wpn_l85a2",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2_alt",
       "name": "st_wpn_l85a2_alt",
       "displayName": "st_wpn_l85a2_alt",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2_custom",
       "name": "st_wpn_l85a2_custom",
       "displayName": "st_wpn_l85a2_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2_modern",
       "name": "st_wpn_l85a2_modern",
       "displayName": "st_wpn_l85a2_modern",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_lr300",
@@ -3627,24 +3513,21 @@
       "name": "st_wpn_m4a1",
       "displayName": "st_wpn_m4a1",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_m4a1_camo",
       "name": "st_wpn_m4a1_camo",
       "displayName": "st_wpn_m4a1_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_m4a1_custom",
       "name": "st_wpn_m4a1_custom",
       "displayName": "st_wpn_m4a1_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_m4a1_freedom",
@@ -3686,24 +3569,21 @@
       "name": "st_wpn_sig550",
       "displayName": "st_wpn_sig550",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig550_camo",
       "name": "st_wpn_sig550_camo",
       "displayName": "st_wpn_sig550_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig550_custom",
       "name": "st_wpn_sig550_custom",
       "displayName": "st_wpn_sig550_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig550_luckygun",
@@ -3732,8 +3612,7 @@
       "name": "st_wpn_sig552",
       "displayName": "st_wpn_sig552",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig552_isg_siber",
@@ -3827,8 +3706,7 @@
       "name": "st_wpn_ak12",
       "displayName": "st_wpn_ak12",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak12_bas",
@@ -3849,8 +3727,7 @@
       "name": "st_wpn_ak12_mono_kit",
       "displayName": "st_wpn_ak12_mono_kit",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak12_m1",
@@ -3878,8 +3755,7 @@
       "name": "st_wpn_ak5c_bas_5c_tik",
       "displayName": "st_wpn_ak5c_bas_5c_tik",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak5c_isg",
@@ -3949,16 +3825,14 @@
       "name": "st_wpn_ak74_eot",
       "displayName": "st_wpn_ak74_eot",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak74m",
       "name": "st_wpn_ak74m",
       "displayName": "st_wpn_ak74m",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak74m_alt",
@@ -4000,8 +3874,7 @@
       "name": "st_wpn_ak74m_pk-a",
       "displayName": "st_wpn_ak74m_pk-a",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak74u_isg",
@@ -4064,8 +3937,7 @@
       "name": "st_wpn_aug",
       "displayName": "st_wpn_aug",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_a1_bas",
@@ -4108,40 +3980,35 @@
       "name": "st_wpn_aug_custom",
       "displayName": "st_wpn_aug_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_freedom",
       "name": "st_wpn_aug_freedom",
       "displayName": "st_wpn_aug_freedom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_merc",
       "name": "st_wpn_aug_merc",
       "displayName": "st_wpn_aug_merc",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_modern",
       "name": "st_wpn_aug_modern",
       "displayName": "st_wpn_aug_modern",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_famas3",
       "name": "st_wpn_famas3",
       "displayName": "st_wpn_famas3",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_fn2000",
@@ -4213,8 +4080,7 @@
       "name": "st_wpn_hk416",
       "displayName": "st_wpn_hk416",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_howa20",
@@ -4228,24 +4094,21 @@
       "name": "st_wpn_l85",
       "displayName": "st_wpn_l85",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85_alt",
       "name": "st_wpn_l85_alt",
       "displayName": "st_wpn_l85_alt",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85_custom",
       "name": "st_wpn_l85_custom",
       "displayName": "st_wpn_l85_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85_m1",
@@ -4273,40 +4136,35 @@
       "name": "st_wpn_l85_modern",
       "displayName": "st_wpn_l85_modern",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2",
       "name": "st_wpn_l85a2",
       "displayName": "st_wpn_l85a2",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2_alt",
       "name": "st_wpn_l85a2_alt",
       "displayName": "st_wpn_l85a2_alt",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2_custom",
       "name": "st_wpn_l85a2_custom",
       "displayName": "st_wpn_l85a2_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2_modern",
       "name": "st_wpn_l85a2_modern",
       "displayName": "st_wpn_l85a2_modern",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_lr300",
@@ -4390,24 +4248,21 @@
       "name": "st_wpn_m4a1",
       "displayName": "st_wpn_m4a1",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_m4a1_camo",
       "name": "st_wpn_m4a1_camo",
       "displayName": "st_wpn_m4a1_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_m4a1_custom",
       "name": "st_wpn_m4a1_custom",
       "displayName": "st_wpn_m4a1_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_m4a1_freedom",
@@ -4449,24 +4304,21 @@
       "name": "st_wpn_sig550",
       "displayName": "st_wpn_sig550",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig550_camo",
       "name": "st_wpn_sig550_camo",
       "displayName": "st_wpn_sig550_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig550_custom",
       "name": "st_wpn_sig550_custom",
       "displayName": "st_wpn_sig550_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig550_luckygun",
@@ -4495,8 +4347,7 @@
       "name": "st_wpn_sig552",
       "displayName": "st_wpn_sig552",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig552_isg_siber",
@@ -4590,8 +4441,7 @@
       "name": "st_wpn_ak12",
       "displayName": "st_wpn_ak12",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak12_bas",
@@ -4612,8 +4462,7 @@
       "name": "st_wpn_ak12_mono_kit",
       "displayName": "st_wpn_ak12_mono_kit",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak12_m1",
@@ -4641,8 +4490,7 @@
       "name": "st_wpn_ak5c_bas_5c_tik",
       "displayName": "st_wpn_ak5c_bas_5c_tik",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ak5c_isg",
@@ -4712,16 +4560,14 @@
       "name": "st_wpn_ak74_eot",
       "displayName": "st_wpn_ak74_eot",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak74m",
       "name": "st_wpn_ak74m",
       "displayName": "st_wpn_ak74m",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak74m_alt",
@@ -4763,8 +4609,7 @@
       "name": "st_wpn_ak74m_pk-a",
       "displayName": "st_wpn_ak74m_pk-a",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_ak74u_isg",
@@ -4827,8 +4672,7 @@
       "name": "st_wpn_aug",
       "displayName": "st_wpn_aug",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_a1_bas",
@@ -4871,40 +4715,35 @@
       "name": "st_wpn_aug_custom",
       "displayName": "st_wpn_aug_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_freedom",
       "name": "st_wpn_aug_freedom",
       "displayName": "st_wpn_aug_freedom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_merc",
       "name": "st_wpn_aug_merc",
       "displayName": "st_wpn_aug_merc",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aug_modern",
       "name": "st_wpn_aug_modern",
       "displayName": "st_wpn_aug_modern",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_famas3",
       "name": "st_wpn_famas3",
       "displayName": "st_wpn_famas3",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_fn2000",
@@ -4976,8 +4815,7 @@
       "name": "st_wpn_hk416",
       "displayName": "st_wpn_hk416",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_howa20",
@@ -4991,24 +4829,21 @@
       "name": "st_wpn_l85",
       "displayName": "st_wpn_l85",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85_alt",
       "name": "st_wpn_l85_alt",
       "displayName": "st_wpn_l85_alt",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85_custom",
       "name": "st_wpn_l85_custom",
       "displayName": "st_wpn_l85_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85_m1",
@@ -5036,40 +4871,35 @@
       "name": "st_wpn_l85_modern",
       "displayName": "st_wpn_l85_modern",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2",
       "name": "st_wpn_l85a2",
       "displayName": "st_wpn_l85a2",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2_alt",
       "name": "st_wpn_l85a2_alt",
       "displayName": "st_wpn_l85a2_alt",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2_custom",
       "name": "st_wpn_l85a2_custom",
       "displayName": "st_wpn_l85a2_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_l85a2_modern",
       "name": "st_wpn_l85a2_modern",
       "displayName": "st_wpn_l85a2_modern",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_lr300",
@@ -5153,24 +4983,21 @@
       "name": "st_wpn_m4a1",
       "displayName": "st_wpn_m4a1",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_m4a1_camo",
       "name": "st_wpn_m4a1_camo",
       "displayName": "st_wpn_m4a1_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_m4a1_custom",
       "name": "st_wpn_m4a1_custom",
       "displayName": "st_wpn_m4a1_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_m4a1_freedom",
@@ -5212,24 +5039,21 @@
       "name": "st_wpn_sig550",
       "displayName": "st_wpn_sig550",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig550_camo",
       "name": "st_wpn_sig550_camo",
       "displayName": "st_wpn_sig550_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig550_custom",
       "name": "st_wpn_sig550_custom",
       "displayName": "st_wpn_sig550_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig550_luckygun",
@@ -5258,8 +5082,7 @@
       "name": "st_wpn_sig552",
       "displayName": "st_wpn_sig552",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sig552_isg_siber",
@@ -5385,24 +5208,21 @@
       "name": "st_wpn_ppsh41",
       "displayName": "st_wpn_ppsh41",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ppsh41_rednew",
       "name": "st_wpn_ppsh41_camo",
       "displayName": "st_wpn_ppsh41_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ppsh41_woodnew",
       "name": "st_wpn_ppsh41_new",
       "displayName": "st_wpn_ppsh41_new",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ppsh_bas",
@@ -5447,24 +5267,21 @@
       "name": "st_wpn_ppsh41",
       "displayName": "st_wpn_ppsh41",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ppsh41_rednew",
       "name": "st_wpn_ppsh41_camo",
       "displayName": "st_wpn_ppsh41_camo",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ppsh41_woodnew",
       "name": "st_wpn_ppsh41_new",
       "displayName": "st_wpn_ppsh41_new",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_ppsh_bas",
@@ -5530,8 +5347,7 @@
       "name": "st_wpn_akm",
       "displayName": "st_wpn_akm",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_akm_alfa",
@@ -5559,16 +5375,14 @@
       "name": "st_wpn_akms",
       "displayName": "st_wpn_akms",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_akms_alt",
       "name": "st_wpn_akms_alt",
       "displayName": "st_wpn_akms_alt",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_akms_bas",
@@ -5589,8 +5403,7 @@
       "name": "st_wpn_galil",
       "displayName": "st_wpn_galil",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_galil_custom",
@@ -5625,8 +5438,7 @@
       "name": "st_wpn_rpk",
       "displayName": "st_wpn_rpk",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_type63",
@@ -5654,16 +5466,14 @@
       "name": "st_wpn_karabiner98k",
       "displayName": "st_wpn_karabiner98k",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_karabiner98k_silen98",
       "name": "st_wpn_karabiner98k_silen98",
       "displayName": "st_wpn_karabiner98k_silen98",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_mosin",
@@ -5691,8 +5501,7 @@
       "name": "st_wpn_sks_modern",
       "displayName": "st_wpn_sks_modern",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sks_molot",
@@ -5771,8 +5580,7 @@
       "name": "st_wpn_akm",
       "displayName": "st_wpn_akm",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_akm_alfa",
@@ -5800,16 +5608,14 @@
       "name": "st_wpn_akms",
       "displayName": "st_wpn_akms",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_akms_alt",
       "name": "st_wpn_akms_alt",
       "displayName": "st_wpn_akms_alt",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_akms_bas",
@@ -5830,8 +5636,7 @@
       "name": "st_wpn_galil",
       "displayName": "st_wpn_galil",
       "category": "Rifles",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_galil_custom",
@@ -5866,8 +5671,7 @@
       "name": "st_wpn_rpk",
       "displayName": "st_wpn_rpk",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_type63",
@@ -5895,16 +5699,14 @@
       "name": "st_wpn_karabiner98k",
       "displayName": "st_wpn_karabiner98k",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_karabiner98k_silen98",
       "name": "st_wpn_karabiner98k_silen98",
       "displayName": "st_wpn_karabiner98k_silen98",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_mosin",
@@ -5932,8 +5734,7 @@
       "name": "st_wpn_sks_modern",
       "displayName": "st_wpn_sks_modern",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_sks_molot",
@@ -6005,8 +5806,7 @@
       "name": "st_wpn_galil",
       "displayName": "st_wpn_galil",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_galil_custom",
@@ -6049,24 +5849,21 @@
       "name": "st_wpn_scar",
       "displayName": "st_wpn_scar",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_scar_custom",
       "name": "st_wpn_scar_custom",
       "displayName": "st_wpn_scar_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_scar_new",
       "name": "st_wpn_scar_new",
       "displayName": "st_wpn_scar_new",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_scar_siber",
@@ -6143,16 +5940,14 @@
       "name": "st_wpn_karabiner98k",
       "displayName": "st_wpn_karabiner98k",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_karabiner98k_silen98",
       "name": "st_wpn_karabiner98k_silen98",
       "displayName": "st_wpn_karabiner98k_silen98",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l96a1",
@@ -6166,8 +5961,7 @@
       "name": "st_wpn_remington700",
       "displayName": "st_wpn_remington700",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_remington700_bas",
@@ -6209,8 +6003,7 @@
       "name": "st_wpn_wa2000",
       "displayName": "st_wpn_wa2000",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_7.62x51_fmj": [
@@ -6254,8 +6047,7 @@
       "name": "st_wpn_galil",
       "displayName": "st_wpn_galil",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_galil_custom",
@@ -6298,24 +6090,21 @@
       "name": "st_wpn_scar",
       "displayName": "st_wpn_scar",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_scar_custom",
       "name": "st_wpn_scar_custom",
       "displayName": "st_wpn_scar_custom",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_scar_new",
       "name": "st_wpn_scar_new",
       "displayName": "st_wpn_scar_new",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_scar_siber",
@@ -6392,16 +6181,14 @@
       "name": "st_wpn_karabiner98k",
       "displayName": "st_wpn_karabiner98k",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_karabiner98k_silen98",
       "name": "st_wpn_karabiner98k_silen98",
       "displayName": "st_wpn_karabiner98k_silen98",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_l96a1",
@@ -6415,8 +6202,7 @@
       "name": "st_wpn_remington700",
       "displayName": "st_wpn_remington700",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_remington700_bas",
@@ -6458,8 +6244,7 @@
       "name": "st_wpn_wa2000",
       "displayName": "st_wpn_wa2000",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_7.62x54_7h1": [
@@ -6503,8 +6288,7 @@
       "name": "st_wpn_sks_modern",
       "displayName": "st_wpn_sks_modern",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_sks_molot",
@@ -6560,8 +6344,7 @@
       "name": "st_wpn_svd_nimble",
       "displayName": "st_wpn_svd_nimble",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_svds",
@@ -6610,8 +6393,7 @@
       "name": "st_wpn_svu_nimble",
       "displayName": "st_wpn_svu_nimble",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_7.62x54_7h14": [
@@ -6655,8 +6437,7 @@
       "name": "st_wpn_sks_modern",
       "displayName": "st_wpn_sks_modern",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_sks_molot",
@@ -6712,8 +6493,7 @@
       "name": "st_wpn_svd_nimble",
       "displayName": "st_wpn_svd_nimble",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_svds",
@@ -6762,8 +6542,7 @@
       "name": "st_wpn_svu_nimble",
       "displayName": "st_wpn_svu_nimble",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_7.62x54_ap": [
@@ -6779,8 +6558,7 @@
       "name": "st_wpn_rp",
       "displayName": "st_wpn_rp",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pkm_siber",
@@ -6816,8 +6594,7 @@
       "name": "st_wpn_pkp",
       "displayName": "st_wpn_pkp",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pkp_siber",
@@ -6873,8 +6650,7 @@
       "name": "st_wpn_sks_modern",
       "displayName": "st_wpn_sks_modern",
       "category": "Snipers",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_sks_molot",
@@ -6930,8 +6706,7 @@
       "name": "st_wpn_svd_nimble",
       "displayName": "st_wpn_svd_nimble",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_svds",
@@ -6980,8 +6755,7 @@
       "name": "st_wpn_svu_nimble",
       "displayName": "st_wpn_svu_nimble",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_7.92x33_ap": [
@@ -6990,8 +6764,7 @@
       "name": "st_wpn_g43",
       "displayName": "st_wpn_g43",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_k98",
@@ -7027,16 +6800,14 @@
       "name": "st_wpn_karabiner98k",
       "displayName": "st_wpn_karabiner98k",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_karabiner98k_silen98",
       "name": "st_wpn_karabiner98k_silen98",
       "displayName": "st_wpn_karabiner98k_silen98",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_7.92x33_fmj": [
@@ -7045,8 +6816,7 @@
       "name": "st_wpn_g43",
       "displayName": "st_wpn_g43",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_k98",
@@ -7082,16 +6852,14 @@
       "name": "st_wpn_karabiner98k",
       "displayName": "st_wpn_karabiner98k",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_karabiner98k_silen98",
       "name": "st_wpn_karabiner98k_silen98",
       "displayName": "st_wpn_karabiner98k_silen98",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_9x18_ap": [
@@ -7100,8 +6868,7 @@
       "name": "st_wpn_aps",
       "displayName": "st_wpn_aps",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aps_bas",
@@ -7236,8 +7003,7 @@
       "name": "st_wpn_pb_custom",
       "displayName": "st_wpn_pb_custom",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pm",
@@ -7251,8 +7017,7 @@
       "name": "st_wpn_pm_actor",
       "displayName": "st_wpn_pm_actor",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pm_bas",
@@ -7280,16 +7045,14 @@
       "name": "st_wpn_pm_custom",
       "displayName": "st_wpn_pm_custom",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pmm",
       "name": "st_wpn_pmm",
       "displayName": "st_wpn_pmm",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pmm_bas",
@@ -7310,8 +7073,7 @@
       "name": "st_wpn_kiparis",
       "displayName": "st_wpn_kiparis",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_kiparis_m1",
@@ -7409,8 +7171,7 @@
       "name": "st_wpn_vz61_alt",
       "displayName": "st_wpn_vz61_alt",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vz61_scorpion",
@@ -7440,8 +7201,7 @@
       "name": "st_wpn_aps",
       "displayName": "st_wpn_aps",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aps_bas",
@@ -7576,8 +7336,7 @@
       "name": "st_wpn_pb_custom",
       "displayName": "st_wpn_pb_custom",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pm",
@@ -7591,8 +7350,7 @@
       "name": "st_wpn_pm_actor",
       "displayName": "st_wpn_pm_actor",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pm_bas",
@@ -7620,16 +7378,14 @@
       "name": "st_wpn_pm_custom",
       "displayName": "st_wpn_pm_custom",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pmm",
       "name": "st_wpn_pmm",
       "displayName": "st_wpn_pmm",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pmm_bas",
@@ -7650,8 +7406,7 @@
       "name": "st_wpn_kiparis",
       "displayName": "st_wpn_kiparis",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_kiparis_m1",
@@ -7749,8 +7504,7 @@
       "name": "st_wpn_vz61_alt",
       "displayName": "st_wpn_vz61_alt",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vz61_scorpion",
@@ -7780,8 +7534,7 @@
       "name": "st_wpn_aps",
       "displayName": "st_wpn_aps",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_aps_bas",
@@ -7916,8 +7669,7 @@
       "name": "st_wpn_pb_custom",
       "displayName": "st_wpn_pb_custom",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pm",
@@ -7931,8 +7683,7 @@
       "name": "st_wpn_pm_actor",
       "displayName": "st_wpn_pm_actor",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pm_bas",
@@ -7960,16 +7711,14 @@
       "name": "st_wpn_pm_custom",
       "displayName": "st_wpn_pm_custom",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pmm",
       "name": "st_wpn_pmm",
       "displayName": "st_wpn_pmm",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pmm_bas",
@@ -7990,8 +7739,7 @@
       "name": "st_wpn_kiparis",
       "displayName": "st_wpn_kiparis",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_kiparis_m1",
@@ -8089,8 +7837,7 @@
       "name": "st_wpn_vz61_alt",
       "displayName": "st_wpn_vz61_alt",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vz61_scorpion",
@@ -8120,8 +7867,7 @@
       "name": "st_wpn_aps",
       "displayName": "st_wpn_aps",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_beretta",
@@ -8206,8 +7952,7 @@
       "name": "st_wpn_glock_modern",
       "displayName": "st_wpn_glock_modern",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_gsh18",
@@ -8293,8 +8038,7 @@
       "name": "st_wpn_pm_actor",
       "displayName": "st_wpn_pm_actor",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pm_bas",
@@ -8322,16 +8066,14 @@
       "name": "st_wpn_pm_custom",
       "displayName": "st_wpn_pm_custom",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pmm",
       "name": "st_wpn_pmm",
       "displayName": "st_wpn_pmm",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pmm_bas",
@@ -8390,8 +8132,7 @@
       "name": "st_wpn_walther",
       "displayName": "st_wpn_walther",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_walther_custom",
@@ -8420,8 +8161,7 @@
       "name": "st_wpn_kiparis",
       "displayName": "st_wpn_kiparis",
       "category": "SMGs",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_kiparis_m1",
@@ -8533,16 +8273,14 @@
       "name": "st_wpn_vz61_camo",
       "displayName": "st_wpn_vz61_camo",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vz61_freedom",
       "name": "st_wpn_vz61_freedom",
       "displayName": "st_wpn_vz61_freedom",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vz61_scorpion",
@@ -8572,8 +8310,7 @@
       "name": "st_wpn_aps",
       "displayName": "st_wpn_aps",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_beretta",
@@ -8658,8 +8395,7 @@
       "name": "st_wpn_glock_modern",
       "displayName": "st_wpn_glock_modern",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_gsh18",
@@ -8745,8 +8481,7 @@
       "name": "st_wpn_pm_actor",
       "displayName": "st_wpn_pm_actor",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pm_bas",
@@ -8774,16 +8509,14 @@
       "name": "st_wpn_pm_custom",
       "displayName": "st_wpn_pm_custom",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pmm",
       "name": "st_wpn_pmm",
       "displayName": "st_wpn_pmm",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pmm_bas",
@@ -8842,8 +8575,7 @@
       "name": "st_wpn_walther",
       "displayName": "st_wpn_walther",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_walther_custom",
@@ -8872,8 +8604,7 @@
       "name": "st_wpn_kiparis",
       "displayName": "st_wpn_kiparis",
       "category": "SMGs",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_kiparis_m1",
@@ -8985,16 +8716,14 @@
       "name": "st_wpn_vz61_camo",
       "displayName": "st_wpn_vz61_camo",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vz61_freedom",
       "name": "st_wpn_vz61_freedom",
       "displayName": "st_wpn_vz61_freedom",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vz61_scorpion",
@@ -9024,8 +8753,7 @@
       "name": "st_wpn_aps",
       "displayName": "st_wpn_aps",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_beretta",
@@ -9110,8 +8838,7 @@
       "name": "st_wpn_glock_modern",
       "displayName": "st_wpn_glock_modern",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_gsh18",
@@ -9197,8 +8924,7 @@
       "name": "st_wpn_pm_actor",
       "displayName": "st_wpn_pm_actor",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pm_bas",
@@ -9226,16 +8952,14 @@
       "name": "st_wpn_pm_custom",
       "displayName": "st_wpn_pm_custom",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pmm",
       "name": "st_wpn_pmm",
       "displayName": "st_wpn_pmm",
       "category": "Pistols",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_pmm_bas",
@@ -9294,8 +9018,7 @@
       "name": "st_wpn_walther",
       "displayName": "st_wpn_walther",
       "category": "Pistols",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_walther_custom",
@@ -9324,8 +9047,7 @@
       "name": "st_wpn_kiparis",
       "displayName": "st_wpn_kiparis",
       "category": "SMGs",
-      "isAlt": true,
-      "noDrop": true
+      "isAlt": true
     },
     {
       "id": "wpn_kiparis_m1",
@@ -9437,16 +9159,14 @@
       "name": "st_wpn_vz61_camo",
       "displayName": "st_wpn_vz61_camo",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vz61_freedom",
       "name": "st_wpn_vz61_freedom",
       "displayName": "st_wpn_vz61_freedom",
       "category": "SMGs",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vz61_scorpion",
@@ -9544,8 +9264,7 @@
       "name": "st_wpn_val",
       "displayName": "st_wpn_val",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_val_modern",
@@ -9573,24 +9292,21 @@
       "name": "st_wpn_vintorez",
       "displayName": "st_wpn_vintorez [default]",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vintorez_1pn93",
       "name": "st_wpn_vintorez",
       "displayName": "st_wpn_vintorez [1pn93]",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vintorez_alt",
       "name": "st_wpn_vintorez_alt",
       "displayName": "st_wpn_vintorez_alt",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vintorez_isg",
@@ -9656,8 +9372,7 @@
       "name": "st_wpn_val",
       "displayName": "st_wpn_val",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_val_modern",
@@ -9685,24 +9400,21 @@
       "name": "st_wpn_vintorez",
       "displayName": "st_wpn_vintorez [default]",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vintorez_1pn93",
       "name": "st_wpn_vintorez",
       "displayName": "st_wpn_vintorez [1pn93]",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vintorez_alt",
       "name": "st_wpn_vintorez_alt",
       "displayName": "st_wpn_vintorez_alt",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_vintorez_isg",
@@ -9799,8 +9511,7 @@
       "name": "st_wpn_rp",
       "displayName": "st_wpn_rp",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pkm_siber",
@@ -9836,8 +9547,7 @@
       "name": "st_wpn_pkp",
       "displayName": "st_wpn_pkp",
       "category": "Rifles",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_pkp_siber",
@@ -9922,8 +9632,7 @@
       "name": "st_wpn_m24",
       "displayName": "st_wpn_m24",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_m98b",
@@ -9937,8 +9646,7 @@
       "name": "st_wpn_rem700_aics",
       "displayName": "st_wpn_rem700_aics",
       "category": "Snipers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     },
     {
       "id": "wpn_rem700_mcmillan",
@@ -9977,8 +9685,7 @@
       "name": "st_wpn_rg6",
       "displayName": "st_wpn_rg6",
       "category": "Launchers",
-      "isAlt": false,
-      "noDrop": true
+      "isAlt": false
     }
   ],
   "ammo_og-7b": [

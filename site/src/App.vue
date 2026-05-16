@@ -662,6 +662,7 @@ export default {
       displayLabel: this.displayLabel,
       displayStyle: this.displayStyle,
       singularType: this.singularType,
+      originBadge: this.originBadge,
       healDots: this.healDots,
       caliberName: this.caliberName,
       ammoTooltipPayload: this.ammoTooltipPayload,

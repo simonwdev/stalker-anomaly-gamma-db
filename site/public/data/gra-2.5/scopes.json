@@ -20,7 +20,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_0kp2",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "1p29",
@@ -32,7 +35,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_1p29",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "ac10632",
@@ -44,7 +50,11 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_ac10632",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "acog",
@@ -56,7 +66,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_acog",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "aim_low",
@@ -68,7 +81,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_aim_low",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "aimpoint",
@@ -80,7 +96,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_aimpoint",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "c-more",
@@ -92,7 +111,11 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_cmore",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "compm4s",
@@ -104,7 +127,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_compm4s",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "d0cter",
@@ -116,7 +142,11 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_d0cter",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "deltapoint",
@@ -128,7 +158,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_deltapoint",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "e0t2",
@@ -140,7 +173,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_e0t2",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "ekp8_18",
@@ -152,7 +188,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_ekp8_18",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "eot",
@@ -164,7 +203,11 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_eotech",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "wp"
+      ]
     },
     {
       "id": "exps3",
@@ -176,7 +219,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_exps3",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "he510",
@@ -188,7 +234,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_he510",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "kobra",
@@ -200,7 +249,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_kobra",
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "okep77",
@@ -212,7 +264,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_okep77",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "pn23fore",
@@ -224,7 +279,11 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_pn23fore",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "other"
+      ]
     },
     {
       "id": "point_aimpro",
@@ -236,7 +295,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_aimpoint_pro",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "ps01",
@@ -248,7 +310,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope [ps01]",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "rakurs",
@@ -260,7 +325,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_rakurs",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "rmr",
@@ -272,7 +340,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_rmr",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "silen98",
@@ -284,7 +355,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_silen98",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "susatov",
@@ -296,7 +370,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_susatov",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "uptacppsh",
@@ -308,7 +385,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_uptacppsh",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_addon_scope",
@@ -320,7 +400,12 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope [wpn_addon_scope]",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato",
+        "other",
+        "wp"
+      ]
     },
     {
       "id": "wpn_addon_scope_g43",
@@ -332,7 +417,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_zf4",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_addon_scope_pu",
@@ -344,7 +432,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_pu",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_addon_scope_susat",
@@ -356,7 +447,10 @@
       "st_data_export_magnifications": "",
       "displayName": "st_addon_scope_galil_susat",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     }
   ]
 }
