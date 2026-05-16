@@ -49,7 +49,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -79,7 +79,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -109,7 +109,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -139,7 +139,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -169,7 +169,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -229,7 +229,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -259,7 +259,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -289,7 +289,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -319,7 +319,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -349,7 +349,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -379,7 +379,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -409,7 +409,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -619,7 +619,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -649,7 +649,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -679,7 +679,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -709,7 +709,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -739,7 +739,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -769,7 +769,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -799,7 +799,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1009,7 +1009,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -1039,7 +1039,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1069,7 +1069,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1099,7 +1099,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1129,7 +1129,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1159,7 +1159,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -1189,7 +1189,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -1219,7 +1219,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -1249,7 +1249,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1279,7 +1279,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1309,7 +1309,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1338,7 +1338,7 @@
       "hasDisassemble": false,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1368,7 +1368,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1398,7 +1398,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1428,7 +1428,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1488,7 +1488,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1518,7 +1518,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1548,7 +1548,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1578,7 +1578,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -1608,7 +1608,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -1638,7 +1638,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -1668,7 +1668,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "nato"
       ]
     }
   ]

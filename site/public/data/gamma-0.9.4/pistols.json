@@ -409,7 +409,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -649,7 +649,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -679,7 +679,7 @@
       "hasUpgrades": true,
       "unobtainable": true,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -1339,7 +1339,7 @@
       "hasUpgrades": true,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {

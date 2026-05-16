@@ -154,7 +154,6 @@
       "hasDisassemble": false,
       "factions": [
         "nato",
-        "other",
         "wp"
       ]
     },

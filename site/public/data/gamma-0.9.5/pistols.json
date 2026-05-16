@@ -288,7 +288,7 @@
       "inStartingLoadout": false,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -438,7 +438,7 @@
       "inStartingLoadout": false,
       "unobtainable": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -468,7 +468,7 @@
       "inStartingLoadout": false,
       "unobtainable": true,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -1098,7 +1098,7 @@
       "inStartingLoadout": false,
       "unobtainable": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {

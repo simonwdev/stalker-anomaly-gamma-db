@@ -232,8 +232,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "factions": [
-        "nato",
-        "other"
+        "nato"
       ]
     },
     {
@@ -400,7 +399,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {

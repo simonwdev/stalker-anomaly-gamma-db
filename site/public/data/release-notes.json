@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-05-16",
+    "entries": [
+      { "type": "added", "text": "Weapons, ammo, and addons now show an Origin badge (NATO / WP / Other) and can be filtered by it.", "credits": [{ "name": "cXy", "role": "suggestion" }] }
+    ]
+  },
+  {
     "date": "2026-05-13",
     "entries": [
       { "type": "added", "text": "Artefacts now show their perk name, full perk description and abilities.", "credits": [{ "name": "ApokalypsBZH", "role": "suggestion" }] },
@@ -10,7 +16,7 @@
     "date": "2026-05-10",
     "entries": [
       { "type": "added", "text": "GAMMA 0.9.5 starting loadouts planner is now available." },
-      { "type": "added", "text": "Ballistics calculator now supports mutant shots-to-kill." }
+      { "type": "added", "text": "Ballistics calculator now supports mutant shots-to-kill.", "credits": [{ "name": "SaloEater", "role": "suggestion" }] }
     ]
   },
   {

@@ -281,7 +281,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {
@@ -374,7 +374,6 @@
       "hasDisassemble": false,
       "factions": [
         "nato",
-        "other",
         "wp"
       ]
     },
@@ -440,7 +439,7 @@
       "hasStashDrop": false,
       "hasDisassemble": false,
       "factions": [
-        "other"
+        "wp"
       ]
     },
     {

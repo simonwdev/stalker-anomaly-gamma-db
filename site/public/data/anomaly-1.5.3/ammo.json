@@ -2921,7 +2921,7 @@
       "displayName": "ammo-338-lapua [default]",
       "hasDisassemble": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -2945,7 +2945,7 @@
       "displayName": "ammo-338-lapua [bad]",
       "hasDisassemble": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {
@@ -2969,7 +2969,7 @@
       "displayName": "ammo-338-lapua [verybad]",
       "hasDisassemble": false,
       "factions": [
-        "other"
+        "nato"
       ]
     },
     {

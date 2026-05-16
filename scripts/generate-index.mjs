@@ -1211,6 +1211,7 @@ const FACTION_BY_CALIBER = {
   "4.6x30": "nato",
   "50": "nato",
   "m209": "nato",
+  "magnum": "nato", // .300 Win Mag — used by USSOCOM / UK SF
   // Pre-bloc / shared / civilian
   "12x70": "other",
   "12x76": "other",
@@ -1218,8 +1219,28 @@ const FACTION_BY_CALIBER = {
   "357": "other",
   "7.92x33": "other",
   "gauss": "other",
-  "magnum": "other",
 };
+
+// Shotguns are bloc-neutral by caliber (12/20-gauge shells are used everywhere),
+// so we classify them by design lineage instead. Anything unmatched falls back
+// to "other".
+function shotgunDesignFaction(id) {
+  const s = id.toLowerCase();
+  if (/mossberg|remington|benelli|ithaca|spas|winchea?ster|usas/.test(s)) return "nato";
+  if (/toz|saiga|mp_?1(33|53|55)|vepr|bm_?16|fort_?500|ks_?23|ksg_?23|mts_?255/.test(s)) return "wp";
+  return null;
+}
+
+// Design-lineage override for non-shotgun weapons whose caliber alone placed
+// them in "other" (civilian/pre-bloc rounds like .357, .300 WinMag pre-fix).
+// Returns null when no design hint is available, leaving the caliber-derived
+// classification untouched.
+function nonShotgunDesignFaction(id) {
+  const s = id.toLowerCase();
+  if (/colt|desert_eagle|winchester|m1911/.test(s)) return "nato";
+  if (/mp412/.test(s)) return "wp";
+  return null;
+}
 
 function ammoTokenToCaliber(token) {
   const stripped = token.replace(/^ammo[-_]/, "");
@@ -1247,7 +1268,20 @@ for (const slug of WEAPON_SLUGS_FOR_FACTIONS) {
   const cat = categoryData.get(slug);
   if (!cat) continue;
   for (const wpn of cat.items) {
-    const factions = classifyAmmoTypes(wpn["ui_ammo_types"]);
+    let factions;
+    if (slug === "shotguns") {
+      // Caliber alone can't distinguish blocs for shotguns — same shells are
+      // used worldwide. Fall back to "other" when design lineage is unknown.
+      factions = [shotgunDesignFaction(wpn.id) || "other"];
+    } else {
+      factions = classifyAmmoTypes(wpn["ui_ammo_types"]);
+      // If caliber landed the weapon in "other" only, prefer design lineage
+      // when we recognise the manufacturer (e.g. Desert Eagle .357 → NATO).
+      if (factions.length === 1 && factions[0] === "other") {
+        const ovr = nonShotgunDesignFaction(wpn.id);
+        if (ovr) factions = [ovr];
+      }
+    }
     if (factions.length) {
       wpn.factions = factions;
       WEAPON_FACTIONS.set(wpn.id, factions);
