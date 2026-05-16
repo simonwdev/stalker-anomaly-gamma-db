@@ -1740,10 +1740,11 @@ a.tile-card-name:hover {
     border-color: var(--accent);
 }
 .filter-chip.active {
-    color: var(--color-black);
-    border-color: var(--accent);
-    background: var(--accent);
-    font-weight: 600;
+    color: #0d0d0d;
+    border-color: var(--color-accent-lighter);
+    background: var(--color-accent-lighter);
+    font-weight: 700;
+    box-shadow: 0 0 0 2px var(--color-accent);
 }
 .filter-chip-alt {
     border-style: dashed;

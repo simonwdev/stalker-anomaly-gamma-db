@@ -920,7 +920,14 @@ export const appDefinition = {
                 if (def.type === "has-effect") {
                     return [...def.fields].some(f => headers.includes(f) || raw.includes(f));
                 }
-                if (def.type === "flag") return raw.includes(def.key);
+                if (def.type === "flag") {
+                    if (def.key === "_has_launcher") {
+                        const isWeaponCat = WEAPON_CATEGORIES.includes(this.activeCategory) || this.activeCategory === CAT.ALL_WEAPONS;
+                        return isWeaponCat && !!this.weaponAddonsCache &&
+                            Object.values(this.weaponAddonsCache).some(a => a.launchers && a.launchers.length > 0);
+                    }
+                    return raw.includes(def.key);
+                }
                 if (def.key === "ui_st_community") return raw.includes("ui_st_community");
                 if (def.arrayField) return items.some(i => Array.isArray(i[def.key]) && i[def.key].length > 0);
                 return headers.includes(def.key) || raw.includes(def.key);
@@ -3576,6 +3583,14 @@ export const appDefinition = {
             if (entries.length === 0) return items;
             return items.filter(item => {
                 for (const [key, val] of entries) {
+                    // Virtual: grenade launcher availability check
+                    if (key === "_has_launcher") {
+                        const addons = this.weaponAddonsCache ? (this.weaponAddonsCache[item.id] || null) : null;
+                        const hasLauncher = !!(addons && addons.launchers && addons.launchers.length > 0);
+                        if (val === true && !hasLauncher) return false;
+                        if (val === false && hasLauncher) return false;
+                        continue;
+                    }
                     const def = FILTER_DEFS.find(d => d.key === key);
                     if (!def) {
                         // Range filter
