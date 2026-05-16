@@ -1,20 +1,110 @@
 <template>
 <div class="trading-view" v-if="packId && traders.length">
-    <!-- Trader selector pills -->
-    <div class="trading-toolbar">
-        <div class="trading-trader-pills">
-            <button
-                v-for="trader in displayTraders"
-                :key="trader.id"
-                class="trading-pill"
-                :class="{ active: selectedTrader === trader.id }"
-                @click="selectTrader(trader.id)"
+    <div class="trading-layout">
+        <!-- Left rail: faction-grouped trader directory -->
+        <aside class="trading-rail">
+            <div class="trading-rail-header">
+                <span class="trading-rail-title">{{ t('app_trading_all_traders') || 'Traders' }}</span>
+                <span class="trading-rail-count">{{ traders.length }}</span>
+                <span class="trading-rail-actions">
+                    <button
+                        type="button"
+                        class="trading-rail-action"
+                        @click="setAllFactionsCollapsed(false)"
+                        v-tooltip="t('app_label_expand_all') || 'Expand All'"
+                        :aria-label="t('app_label_expand_all') || 'Expand All'"
+                    >+</button>
+                    <button
+                        type="button"
+                        class="trading-rail-action"
+                        @click="setAllFactionsCollapsed(true)"
+                        v-tooltip="t('app_label_collapse_all') || 'Collapse All'"
+                        :aria-label="t('app_label_collapse_all') || 'Collapse All'"
+                    >−</button>
+                </span>
+            </div>
+            <div class="trading-rail-scroll">
+                <div
+                    v-for="group in factionGroups"
+                    :key="group.faction"
+                    class="trading-faction-group"
+                >
+                    <button
+                        type="button"
+                        class="trading-faction-header"
+                        :class="{ collapsed: collapsedFactions[group.faction] }"
+                        @click="toggleFaction(group.faction)"
+                    >
+                        <span class="trading-faction-chevron">▾</span>
+                        <span class="trading-faction-name">{{ factionLabel(group.faction) }}</span>
+                        <span class="trading-faction-count">{{ group.traders.length }}</span>
+                    </button>
+                    <div class="trading-faction-list" v-show="!collapsedFactions[group.faction]">
+                        <button
+                            v-for="trader in group.traders"
+                            :key="trader.id"
+                            type="button"
+                            class="trading-rail-item"
+                            :class="{ active: selectedTrader === trader.id }"
+                            :style="{ '--trader-color': trader.color }"
+                            @click="selectTrader(trader.id)"
+                        >
+                            <span class="trading-rail-item-stripe"></span>
+                            <span class="trading-rail-item-dot"></span>
+                            <span class="trading-rail-item-name">{{ traderName(trader) }}</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="trading-main">
+            <!-- Trader header card -->
+            <header
+                v-if="!loading && traderData && selectedTraderObj"
+                class="trading-trader-card"
+                :style="{ '--trader-color': selectedTraderObj.color }"
             >
-                <span class="trading-pill-dot" :style="{ background: trader.color }"></span>
-                {{ traderName(trader) }}
-            </button>
-        </div>
-    </div>
+                <span class="trading-trader-card-bar"></span>
+                <div class="trading-trader-card-id">
+                    <div class="trading-trader-card-name">{{ traderName(selectedTraderObj) }}</div>
+                    <div class="trading-trader-card-sub">
+                        <span class="trading-trader-card-faction">{{ factionLabel(factionOf(selectedTraderObj.id)) }}</span>
+                        <span class="trading-trader-card-stock" v-if="stockedCount">
+                            <span class="trading-trader-card-dot">·</span>
+                            <span class="trading-trader-card-stock-n">{{ stockedCount }}</span>
+                            {{ t('app_trading_in_stock') || 'in stock' }}
+                        </span>
+                        <span class="trading-trader-card-origins" v-if="originCounts.wp || originCounts.nato">
+                            <span class="trading-trader-card-dot">·</span>
+                            <span v-if="originCounts.wp" class="trading-trader-origin trading-trader-origin--wp">
+                                <span class="trading-trader-origin-dot"></span>
+                                <span class="trading-trader-origin-n">{{ originCounts.wp }}</span>
+                                WP
+                            </span>
+                            <span v-if="originCounts.nato" class="trading-trader-origin trading-trader-origin--nato">
+                                <span class="trading-trader-origin-dot"></span>
+                                <span class="trading-trader-origin-n">{{ originCounts.nato }}</span>
+                                NATO
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="trading-trader-card-rates" v-if="hasRates">
+                    <div class="trading-rate">
+                        <span class="trading-rate-label">{{ t('app_trading_you_sell_at') || 'You sell at' }}</span>
+                        <span class="trading-rate-value" :class="rateClass(discountMap.buy, 'sell')">
+                            {{ formatMultiplier(discountMap.buy) }}<span class="trading-rate-x">×</span>
+                        </span>
+                    </div>
+                    <div class="trading-rate">
+                        <span class="trading-rate-label">{{ t('app_trading_you_buy_at') || 'You buy at' }}</span>
+                        <span class="trading-rate-value" :class="rateClass(discountMap.sell, 'buy')">
+                            {{ formatMultiplier(discountMap.sell) }}<span class="trading-rate-x">×</span>
+                        </span>
+                    </div>
+                </div>
+            </header>
 
     <!-- Loading state -->
     <div v-if="loading" class="trading-loading">
@@ -60,6 +150,15 @@
                                 <span class="toggle-knob"></span>
                             </span>
                             <span class="trading-popover-toggle-label">{{ t('app_trading_stocked_only') }}</span>
+                        </label>
+                        <label
+                            class="trading-popover-toggle"
+                            @click="hideMisc = !hideMisc"
+                        >
+                            <span class="toggle-switch" :class="{ on: hideMisc }">
+                                <span class="toggle-knob"></span>
+                            </span>
+                            <span class="trading-popover-toggle-label">{{ t('app_trading_hide_misc') || 'Hide Misc. items' }}</span>
                         </label>
                     </div>
                     <div v-if="supplyKeys.length > 1" class="trading-popover-group">
@@ -136,11 +235,6 @@
                 </div>
             </div>
 
-            <div class="trading-meta-chips" v-if="traderData.discounts && traderData.discounts.length">
-                <span v-for="d in traderData.discounts" :key="d[0]" class="trading-discount-badge" :class="d[0]">
-                    {{ t('app_trading_discount_' + d[0]) || d[0] }} {{ (d[1] * 100).toFixed(0) }}%
-                </span>
-            </div>
         </div>
         <div class="trading-active-filters" v-if="activeFilterCount > 0">
             <span v-for="key in selectedTiers" :key="'t-' + key" class="trading-active-chip">
@@ -160,53 +254,62 @@
     </div>
 
     <!-- Content -->
-    <div v-if="!loading && traderData" class="trading-content">
-        <div class="trading-items-grid" v-if="filteredItems.length">
+    <div v-if="!loading && traderData" class="trading-content" @scroll.passive="$emit('hideItemHover')">
+        <div class="trading-ledger" v-if="filteredItems.length">
+            <div class="trading-ledger-header" role="row">
+                <span class="ledger-col-tier"></span>
+                <span class="ledger-col-name">{{ t('app_trading_item') }}</span>
+                <span class="ledger-col-qty">{{ t('app_trading_quantity') }}</span>
+                <span class="ledger-col-buy">
+                    {{ t('app_trading_discount_buy') }} <span class="ledger-unit">₽</span>
+                </span>
+                <span class="ledger-col-sell">
+                    {{ t('app_trading_discount_sell') }} <span class="ledger-unit">₽</span>
+                </span>
+            </div>
             <a
                 v-for="entry in filteredItems"
                 :key="entry.id"
-                class="trading-item-card"
-                :class="{ 'trading-item-card--linked': !!resolveItem(entry.id) }"
+                class="trading-ledger-row"
+                :class="{ 'trading-ledger-row--linked': !!resolveItem(entry.id) }"
                 href="#"
                 @click.prevent="resolveItem(entry.id) && $emit('navigateToItem', resolveItem(entry.id).id)"
-                @mouseenter="resolveItem(entry.id) && $emit('showItemHover', resolveItem(entry.id).id, $event)"
-                @mousemove="$emit('moveItemHover', $event)"
+                @mouseenter="resolveItem(entry.id) && $emit('showItemHover', resolveItem(entry.id).id, { clientX: $event.clientX, clientY: $event.clientY })"
+                @mousemove="$emit('moveItemHover', { clientX: $event.clientX, clientY: $event.clientY })"
                 @mouseleave="$emit('hideItemHover')"
             >
-                <div class="trading-item-info">
-                    <div class="trading-item-name">
-                        {{ itemDisplayName(entry.id) }}
-                    </div>
-                    <div class="trading-item-meta-row">
-                        <span class="trading-item-cat">{{ categoryLabel(entry.id) }}</span>
-                        <span class="trading-item-tiers" v-if="entry.tiers.length">
-                            <span
-                                class="trading-tier-badge"
-                                v-tooltip="tierTooltip(entry.tiers[0])"
-                            >{{ tierBadgeLabel(entry.tiers[0]) }}</span>
-                        </span>
-                    </div>
-                </div>
-                <span class="trading-item-qty" v-if="entry.qty != null">×{{ entry.qty }}</span>
-                <div class="trading-item-prices" v-if="buyPrice(entry.id) != null || sellPrice(entry.id) != null || (entry.prob != null && entry.prob < 1)">
-                    <span class="trading-price trading-price--buy" v-if="buyPrice(entry.id) != null">
-                        <LucideArrowDownCircle :size="10" />{{ formatPrice(buyPrice(entry.id)) }}
-                    </span>
-                    <span class="trading-price trading-price--sell" v-if="sellPrice(entry.id) != null">
-                        <LucideArrowUpCircle :size="10" />{{ formatPrice(sellPrice(entry.id)) }}
-                    </span>
+                <span class="ledger-col-tier">
                     <span
-                        class="trading-item-prob"
+                        v-if="entry.tiers.length"
+                        class="ledger-tier"
+                        v-tooltip="tierTooltip(entry.tiers[0])"
+                    >{{ tierBadgeShort(entry.tiers[0]) }}</span>
+                </span>
+                <span class="ledger-col-name">
+                    <span class="ledger-name-text">{{ itemDisplayName(entry.id) }}</span>
+                    <span class="ledger-cat">{{ categoryLabel(entry.id) }}</span>
+                </span>
+                <span class="ledger-col-qty">
+                    <span v-if="entry.qty != null" class="ledger-qty">×{{ entry.qty }}</span>
+                    <span
                         v-if="entry.prob != null && entry.prob < 1"
-                        :class="{ 'trading-item-prob--low': entry.prob < 0.5 }"
-                    >
-                        <span class="prob-bar" :style="{ width: (entry.prob * 100) + '%' }"></span>
-                        {{ (entry.prob * 100).toFixed(0) }}%
-                    </span>
-                </div>
+                        class="ledger-prob"
+                        :class="{ 'ledger-prob--low': entry.prob < 0.5 }"
+                    >{{ (entry.prob * 100).toFixed(0) }}%</span>
+                </span>
+                <span class="ledger-col-buy">
+                    <span v-if="buyPrice(entry.id) != null" class="ledger-price ledger-price--buy">{{ formatPriceBare(buyPrice(entry.id)) }}</span>
+                    <span v-else class="ledger-price-empty">—</span>
+                </span>
+                <span class="ledger-col-sell">
+                    <span v-if="sellPrice(entry.id) != null" class="ledger-price ledger-price--sell">{{ formatPriceBare(sellPrice(entry.id)) }}</span>
+                    <span v-else class="ledger-price-empty">—</span>
+                </span>
             </a>
         </div>
         <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
+    </div>
+        </div>
     </div>
 </div>
 </template>
@@ -241,10 +344,12 @@ export default {
             selectedOrigins: [],
             selectedTiers: [],
             stockedOnly: true,
+            hideMisc: true,
             filterPanelOpen: false,
             sortMenuOpen: false,
             sortKey: 'name',
             sortAsc: true,
+            collapsedFactions: {},
         };
     },
     computed: {
@@ -252,6 +357,48 @@ export default {
             return [...this.traders].sort((a, b) =>
                 this.traderName(a).localeCompare(this.traderName(b))
             );
+        },
+        selectedTraderObj() {
+            return this.traders.find(t => t.id === this.selectedTrader) || null;
+        },
+        factionGroups() {
+            const ORDER = ['loner', 'duty', 'freedom', 'ecolog', 'military', 'mercenary', 'bandit', 'monolith', 'csky', 'sin', 'isg', 'generic', 'other'];
+            const groups = new Map();
+            for (const t of this.traders) {
+                const f = this.factionOf(t.id);
+                if (!groups.has(f)) groups.set(f, []);
+                groups.get(f).push(t);
+            }
+            const out = [];
+            for (const f of ORDER) {
+                if (!groups.has(f)) continue;
+                const list = groups.get(f).sort((a, b) =>
+                    this.traderName(a).localeCompare(this.traderName(b))
+                );
+                out.push({ faction: f, traders: list });
+                groups.delete(f);
+            }
+            for (const [f, list] of groups) {
+                out.push({ faction: f, traders: list });
+            }
+            return out;
+        },
+        stockedCount() {
+            return this.allEntries.filter(e => e.stocked).length;
+        },
+        originCounts() {
+            const c = { nato: 0, wp: 0 };
+            for (const e of this.allEntries) {
+                if (!e.stocked) continue;
+                const f = this.originById[e.id];
+                if (!Array.isArray(f)) continue;
+                if (f.includes('nato')) c.nato++;
+                if (f.includes('wp')) c.wp++;
+            }
+            return c;
+        },
+        hasRates() {
+            return !!(this.traderData?.discounts && this.traderData.discounts.length);
         },
         supplyKeys() {
             if (!this.traderData) return [];
@@ -293,6 +440,7 @@ export default {
             const tiers = this.selectedTiers;
             const filtered = this.allEntries.filter(entry => {
                 if (this.stockedOnly && !entry.stocked) return false;
+                if (this.hideMisc && !this.resolveItem(entry.id)) return false;
                 const id = entry.id;
                 if (q) {
                     const idMatch = id.toLowerCase().includes(q);
@@ -370,12 +518,6 @@ export default {
             },
         },
         selectedTrader() {
-            this.selectedCategories = [];
-            this.selectedOrigins = [];
-            this.selectedTiers = [];
-            this.stockedOnly = true;
-            this.sortKey = 'name';
-            this.sortAsc = true;
             this.loadTrader();
         },
     },
@@ -399,6 +541,14 @@ export default {
         formatPrice(val) {
             if (val == null) return null;
             return val.toLocaleString() + ' ₽';
+        },
+        formatPriceBare(val) {
+            if (val == null) return null;
+            return val.toLocaleString();
+        },
+        tierBadgeShort(key) {
+            if (key === 'supplies_generic') return 'G';
+            return key.replace('supplies_', '');
         },
         async prefetchPrices() {
             if (!this.packId || !this.traderData) return;
@@ -460,6 +610,84 @@ export default {
         selectTrader(id) {
             this.selectedTrader = id;
         },
+        factionOf(id) {
+            const FACTION_PREFIX = {
+                bandit: 'bandit',
+                csky: 'csky',
+                duty: 'duty',
+                ecolog: 'ecolog',
+                freedom: 'freedom',
+                generic: 'generic',
+                greh: 'sin',
+                isg: 'isg',
+                mercenary: 'mercenary',
+                military: 'military',
+                monolith: 'monolith',
+                stalker: 'loner',
+            };
+            const prefix = id.split('_')[0];
+            return FACTION_PREFIX[prefix] || 'other';
+        },
+        factionLabel(f) {
+            const FACTION_LABEL_KEY = {
+                loner: 'app_faction_stalker',
+                duty: 'app_faction_duty',
+                freedom: 'app_faction_freedom',
+                ecolog: 'app_faction_ecolog',
+                military: 'app_faction_military',
+                mercenary: 'app_faction_mercenary',
+                bandit: 'app_faction_bandit',
+                monolith: 'app_faction_monolith',
+                csky: 'app_faction_clear_sky',
+                sin: 'app_faction_greh',
+                isg: 'app_faction_isg',
+            };
+            const FALLBACK = {
+                loner: 'Loners', duty: 'Duty', freedom: 'Freedom', ecolog: 'Ecologists',
+                military: 'Military', mercenary: 'Mercenaries', bandit: 'Bandits',
+                monolith: 'Monolith', csky: 'Clear Sky', sin: 'Sin', isg: 'ISG',
+                generic: 'Generic', other: 'Other',
+            };
+            const key = FACTION_LABEL_KEY[f];
+            if (key) {
+                const v = this.t(key);
+                if (v && v !== key) return v;
+            }
+            return FALLBACK[f] || f;
+        },
+        toggleFaction(f) {
+            this.collapsedFactions = {
+                ...this.collapsedFactions,
+                [f]: !this.collapsedFactions[f],
+            };
+        },
+        setAllFactionsCollapsed(collapsed) {
+            const next = {};
+            for (const g of this.factionGroups) next[g.faction] = collapsed;
+            this.collapsedFactions = next;
+        },
+        initDefaultCollapsedFactions() {
+            const selectedFaction = this.selectedTrader ? this.factionOf(this.selectedTrader) : null;
+            const next = {};
+            for (const g of this.factionGroups) {
+                next[g.faction] = g.faction !== 'loner' && g.faction !== selectedFaction;
+            }
+            this.collapsedFactions = next;
+        },
+        formatMultiplier(v) {
+            if (v == null || isNaN(v)) return '—';
+            return v.toFixed(2);
+        },
+        rateClass(v, kind) {
+            if (v == null || isNaN(v)) return '';
+            // kind='sell' → player sells (higher = better for player)
+            // kind='buy'  → player buys  (lower  = better for player)
+            const good = kind === 'sell' ? v >= 1 : v <= 1;
+            const bad  = kind === 'sell' ? v < 0.5 : v > 1.5;
+            if (good) return 'trading-rate-value--good';
+            if (bad)  return 'trading-rate-value--bad';
+            return 'trading-rate-value--mid';
+        },
         tierLabel(key) {
             if (key === 'supplies_generic') return this.t('app_trading_generic_tier') || 'Generic';
             const num = key.replace('supplies_', '');
@@ -478,7 +706,7 @@ export default {
                 stalker: 'Stalker', bandit: 'Bandit', csky: 'Clear Sky',
                 dolg: 'Duty', freedom: 'Freedom', ecolog: 'Ecologist',
                 army: 'Military', monolith: 'Monolith', killer: 'Mercenary',
-                greh: 'Greh', isg: 'ISG',
+                greh: 'Sin', isg: 'ISG',
             };
 
             const CONDITION_HANDLERS = {
@@ -553,6 +781,7 @@ export default {
                 const preferred = this.traders.find(t => t.id === 'stalker_sidorovich');
                 this.selectedTrader = preferred?.id ?? this.traders[0]?.id ?? null;
             }
+            this.initDefaultCollapsedFactions();
             this.loadTrader();
             // items-common is optional — never let a missing file wipe traders
             try {
@@ -626,6 +855,7 @@ export default {
             this.selectedOrigins = [];
             this.selectedTiers = [];
             this.stockedOnly = true;
+            this.hideMisc = true;
         },
         closeFilterPanel() { this.filterPanelOpen = false; },
         closeSortMenu() { this.sortMenuOpen = false; },
@@ -978,7 +1208,7 @@ export default {
     border-color: var(--accent);
 }
 .trading-popover-chip.origin-nato.active { background: #4f8ef7; border-color: #4f8ef7; color: #fff; }
-.trading-popover-chip.origin-wp.active { background: #ef4444; border-color: #ef4444; color: #fff; }
+.trading-popover-chip.origin-wp.active { background: #b91c1c; border-color: #b91c1c; color: #fff; }
 .trading-popover-empty {
     padding: 0.5rem;
     text-align: center;
@@ -1082,116 +1312,177 @@ export default {
 }
 .trading-active-clear:hover { text-decoration: underline; }
 
-/* Items grid */
-.trading-items-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 0.5rem;
-}
-.trading-item-card {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    column-gap: 0.5rem;
-    row-gap: 0.25rem;
-    align-items: start;
-    padding: 0.4rem 0.55rem;
-    background: var(--card);
+/* Ledger (item list) */
+.trading-ledger {
+    --ledger-cols: 1.6rem minmax(0, 1fr) 5rem 5.5rem 5.5rem;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--border);
     border-radius: 6px;
-    transition: border-color 0.15s, background 0.15s;
-    text-decoration: none;
+    background: var(--card);
+    overflow: hidden;
+}
+.trading-ledger-header,
+.trading-ledger-row {
+    display: grid;
+    grid-template-columns: var(--ledger-cols);
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 0 0.65rem;
+}
+.trading-ledger-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 1.7rem;
+    background:
+        linear-gradient(180deg,
+            var(--color-surface-3) 0%,
+            color-mix(in srgb, var(--color-surface-3) 100%, black 8%) 100%);
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+.trading-ledger-header .ledger-unit {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    font-weight: 400;
+    margin-left: 0.1rem;
+    color: var(--accent);
+    letter-spacing: 0;
+    opacity: 0.8;
+}
+.trading-ledger-row {
+    height: 1.85rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
     color: inherit;
+    text-decoration: none;
     cursor: default;
+    transition: background 0.1s;
 }
-.trading-item-card--linked {
-    cursor: pointer;
-}
-.trading-item-card:hover { text-decoration: none; }
-.trading-item-card--linked:hover {
-    border-color: var(--accent);
+.trading-ledger-row:last-child { border-bottom: none; }
+.trading-ledger-row--linked { cursor: pointer; }
+.trading-ledger-row:hover { text-decoration: none; }
+.trading-ledger-row--linked:hover {
     background: var(--color-overlay-white-6);
 }
-.trading-item-info { grid-column: 1; grid-row: 1; min-width: 0; }
-.trading-item-name {
-    font-family: var(--font-display);
-    font-size: 0.78rem; font-weight: 600;
-    letter-spacing: 0.01em;
-    color: var(--text);
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.trading-item-cat {
-    font-family: var(--font-display);
-    font-size: 0.58rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--accent);
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-/* Prices row (now spans both columns under name+qty header) */
-.trading-item-prices {
-    grid-column: 1 / -1;
-    grid-row: 2;
+
+/* Columns */
+.ledger-col-tier {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    flex-wrap: wrap;
+    justify-content: center;
 }
-.trading-price {
+.ledger-col-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: 0.01em;
+}
+.ledger-name-text {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ledger-cat {
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-size: 0.55rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    opacity: 0.55;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 8rem;
+}
+.trading-ledger-row:hover .ledger-cat { opacity: 0.85; }
+.ledger-col-qty,
+.ledger-col-buy,
+.ledger-col-sell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.3rem;
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums lining-nums;
+    font-feature-settings: "tnum" 1, "lnum" 1, "calt" 0;
+    font-size: 0.72rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+.trading-ledger-header .ledger-col-qty,
+.trading-ledger-header .ledger-col-buy,
+.trading-ledger-header .ledger-col-sell {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+}
+
+/* Tier marker (dim outline, no fill) */
+.ledger-tier {
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
+    justify-content: center;
+    min-width: 1.05rem;
+    height: 0.95rem;
+    padding: 0 0.2rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
     font-family: var(--mono);
     font-variant-numeric: tabular-nums;
-    font-feature-settings: "tnum" 1, "calt" 0;
-    font-size: 0.68rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    line-height: 1;
+}
+.trading-ledger-row:hover .ledger-tier {
+    color: var(--accent);
+    border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+}
+
+/* Quantity / probability cluster */
+.ledger-qty {
+    color: var(--accent);
     font-weight: 500;
 }
-.trading-price--buy { color: #22c55e; }
-.trading-price--sell { color: #f59e0b; }
-.trading-item-qty {
-    grid-column: 2;
-    grid-row: 1;
-    align-self: start;
-    justify-self: end;
-    font-family: var(--mono);
-    font-variant-numeric: tabular-nums;
-    font-feature-settings: "tnum" 1, "calt" 0;
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--accent);
-    line-height: 1.2;
-}
-.trading-item-prob {
-    position: relative;
-    font-family: var(--mono);
-    font-variant-numeric: tabular-nums;
-    font-feature-settings: "tnum" 1, "calt" 0;
-    font-size: 0.65rem;
-    font-weight: 700;
+.ledger-prob {
+    font-size: 0.62rem;
+    font-weight: 600;
     color: #f59e0b;
     background: rgba(245, 158, 11, 0.12);
     border: 1px solid rgba(245, 158, 11, 0.3);
     border-radius: 3px;
-    padding: 0 0.3rem;
-    min-width: 34px;
-    text-align: center;
-    line-height: 1.7;
+    padding: 0 0.25rem;
+    line-height: 1.4;
 }
-.trading-item-prob--low {
+.ledger-prob--low {
     color: #ef4444;
     background: rgba(239, 68, 68, 0.12);
     border-color: rgba(239, 68, 68, 0.3);
 }
-.prob-bar {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    background: currentColor;
-    border-radius: 0 0 3px 3px;
-    opacity: 0.5;
+
+/* Prices */
+.ledger-price {
+    font-weight: 500;
+}
+.ledger-price--buy  { color: #22c55e; }
+.ledger-price--sell { color: #b45309; }
+.ledger-price-empty {
+    color: var(--text-secondary);
+    opacity: 0.35;
 }
 
 /* Conditions table */
@@ -1252,6 +1543,357 @@ export default {
 /* Scrollable content area */
 .trading-content { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; }
 
+/* ── Two-column layout: faction rail + main column ── */
+.trading-layout {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    gap: 0.75rem;
+    overflow: hidden;
+}
+.trading-main {
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ── Faction rail ── */
+.trading-rail {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    background: var(--color-surface-1, var(--card));
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 var(--color-overlay-white-6);
+    overflow: hidden;
+}
+.trading-rail-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.5rem 0.45rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    background:
+        linear-gradient(180deg,
+            var(--color-surface-3) 0%,
+            color-mix(in srgb, var(--color-surface-3) 100%, black 8%) 100%);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+.trading-rail-title { flex: 0 0 auto; }
+.trading-rail-count {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.65rem;
+    color: var(--accent);
+    letter-spacing: 0;
+    margin-right: auto;
+}
+.trading-rail-actions {
+    display: inline-flex;
+    gap: 0.15rem;
+    align-items: center;
+}
+.trading-rail-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.35rem;
+    height: 1.35rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--card);
+    color: var(--text-secondary);
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.12s, border-color 0.12s, background 0.12s;
+    padding: 0;
+}
+.trading-rail-action:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--color-accent-tint-12);
+}
+.trading-rail-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 0.35rem 0;
+}
+.trading-faction-group { margin-bottom: 0.2rem; }
+.trading-faction-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: 100%;
+    padding: 0.3rem 0.75rem 0.3rem 0.4rem;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.12s;
+}
+.trading-faction-header:hover { color: var(--text); }
+.trading-faction-chevron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.9rem;
+    line-height: 1;
+    color: var(--accent);
+    transition: transform 0.18s ease, color 0.12s;
+}
+.trading-faction-header:hover .trading-faction-chevron { color: var(--accent); }
+.trading-faction-header.collapsed .trading-faction-chevron {
+    transform: rotate(-90deg);
+    color: var(--text-secondary);
+}
+.trading-faction-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.trading-faction-count {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: 0;
+    opacity: 0.7;
+}
+.trading-faction-list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.trading-faction-list::before {
+    content: "";
+    position: absolute;
+    left: 0.9rem;
+    top: 0.15rem;
+    bottom: 0.15rem;
+    width: 1px;
+    background: var(--border);
+    opacity: 0.7;
+    pointer-events: none;
+}
+.trading-rail-item {
+    --trader-color: var(--accent);
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.35rem 0.75rem 0.35rem 1.4rem;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.12s, background 0.12s;
+}
+.trading-rail-item-stripe {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 3px;
+    background: var(--trader-color);
+    opacity: 0;
+    transition: opacity 0.12s;
+}
+.trading-rail-item-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--trader-color);
+    opacity: 0.55;
+    flex-shrink: 0;
+    transition: opacity 0.12s, box-shadow 0.12s;
+}
+.trading-rail-item-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.trading-rail-item:hover {
+    color: var(--text);
+    background: var(--color-overlay-white-6);
+}
+.trading-rail-item:hover .trading-rail-item-stripe { opacity: 0.5; }
+.trading-rail-item:hover .trading-rail-item-dot { opacity: 1; }
+.trading-rail-item.active {
+    color: var(--text);
+    background: linear-gradient(90deg,
+        color-mix(in srgb, var(--trader-color) 14%, transparent) 0%,
+        transparent 70%);
+}
+.trading-rail-item.active .trading-rail-item-stripe { opacity: 1; }
+.trading-rail-item.active .trading-rail-item-dot {
+    opacity: 1;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--trader-color) 30%, transparent);
+}
+
+/* ── Trader header card ── */
+.trading-trader-card {
+    --trader-color: var(--accent);
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.45rem 0.85rem 0.45rem 0.95rem;
+    margin-bottom: 0.5rem;
+    background:
+        linear-gradient(90deg,
+            color-mix(in srgb, var(--trader-color) 8%, var(--color-surface-2, var(--card))) 0%,
+            var(--color-surface-2, var(--card)) 60%);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 var(--color-overlay-white-6);
+    overflow: hidden;
+}
+.trading-trader-card-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--trader-color);
+    box-shadow: 0 0 12px color-mix(in srgb, var(--trader-color) 55%, transparent);
+}
+.trading-trader-card-id { flex: 1; min-width: 0; }
+.trading-trader-card-name {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.trading-trader-card-sub {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    margin-top: 0.1rem;
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.04em;
+}
+.trading-trader-card-faction {
+    font-weight: 600;
+    color: var(--trader-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.6rem;
+}
+.trading-trader-card-dot { opacity: 0.5; }
+.trading-trader-card-stock-n {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+    font-weight: 600;
+}
+.trading-trader-card-origins {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.35rem;
+}
+.trading-trader-origin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+.trading-trader-origin-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.trading-trader-origin-n {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0;
+}
+.trading-trader-origin--wp   .trading-trader-origin-dot { background: #b91c1c; }
+.trading-trader-origin--wp                              { color: #b91c1c; }
+.trading-trader-origin--nato .trading-trader-origin-dot { background: #4f8ef7; }
+.trading-trader-origin--nato                            { color: #4f8ef7; }
+.trading-trader-card-rates {
+    display: flex;
+    gap: 0.45rem;
+    flex-shrink: 0;
+}
+.trading-rate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.05rem;
+    padding: 0.22rem 0.55rem;
+    min-width: 5.25rem;
+    background: color-mix(in srgb, var(--color-overlay-black-40) 100%, transparent);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+.trading-rate-label {
+    font-family: var(--font-display);
+    font-size: 0.52rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+.trading-rate-value {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "calt" 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--text);
+    letter-spacing: -0.01em;
+}
+.trading-rate-x {
+    font-size: 0.7em;
+    margin-left: 0.05em;
+    opacity: 0.55;
+    font-weight: 400;
+}
+.trading-rate-value--good { color: #22c55e; }
+.trading-rate-value--mid  { color: var(--text); }
+.trading-rate-value--bad  { color: #b91c1c; }
+
 /* Responsive */
 @media (max-width: 768px) {
     .trading-search-wrap,
@@ -1260,32 +1902,33 @@ export default {
         margin-left: 0;
         flex: 1 1 100%;
     }
-    .trading-items-grid { grid-template-columns: 1fr; }
-
-    /* Hide ambient discount chips on mobile to save room */
-    .trading-meta-chips { display: none; }
-
-    /* Trader pills: horizontal scroll instead of wrapping (would consume full viewport) */
-    .trading-trader-pills {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-        margin: 0 -0.75rem;
-        padding: 0 0.75rem;
-        mask-image: linear-gradient(90deg,
-            transparent 0,
-            #000 0.75rem,
-            #000 calc(100% - 1.5rem),
-            transparent 100%);
-        -webkit-mask-image: linear-gradient(90deg,
-            transparent 0,
-            #000 0.75rem,
-            #000 calc(100% - 1.5rem),
-            transparent 100%);
+    /* Ledger: drop the sell column on narrow viewports */
+    .trading-ledger {
+        --ledger-cols: 1.4rem minmax(0, 1fr) 4rem 5rem;
     }
-    .trading-trader-pills::-webkit-scrollbar { display: none; }
-    .trading-pill { flex-shrink: 0; }
+    .trading-ledger .ledger-col-sell { display: none; }
+    .ledger-cat { display: none; }
+
+    /* Stack rail above main on narrow viewports */
+    .trading-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 0.5rem;
+    }
+    .trading-rail {
+        max-height: 40vh;
+    }
+
+    /* Trader card: stack rates below identity */
+    .trading-trader-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+    }
+    .trading-trader-card-rates {
+        justify-content: stretch;
+    }
+    .trading-rate { flex: 1; min-width: 0; }
 }
 </style>
 
