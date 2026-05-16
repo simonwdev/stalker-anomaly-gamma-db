@@ -2,7 +2,8 @@
   {
     "date": "2026-05-16",
     "entries": [
-      { "type": "added", "text": "Weapons, ammo, and addons now show an Origin badge (NATO / WP / Other) and can be filtered by it.", "credits": [{ "name": "cXy", "role": "suggestion" }] }
+      { "type": "added", "text": "Weapons, ammo, and addons now show an Origin badge (NATO / WP / Other) and can be filtered by it.", "credits": [{ "name": "cXy", "role": "suggestion" }] },
+      { "type": "changed", "text": "Traders screen reworked to include filtering, sorting, and searching." }
     ]
   },
   {

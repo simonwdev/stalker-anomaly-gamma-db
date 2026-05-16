@@ -59,9 +59,24 @@
         </aside>
 
         <div class="trading-main">
-            <!-- Trader header card -->
+
+    <!-- Loading state -->
+    <div v-if="loading" class="trading-loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scrollable content area: trader card + control strip stick to top, ledger scrolls beneath -->
+    <div
+        v-if="!loading && traderData"
+        class="trading-content"
+        :class="{ scrolled: compactHeader }"
+        ref="scroller"
+        @scroll.passive="onScroll"
+    >
+        <div class="trading-sticky">
+            <!-- Trader header card (single-line identity strip) -->
             <header
-                v-if="!loading && traderData && selectedTraderObj"
+                v-if="selectedTraderObj"
                 class="trading-trader-card"
                 :style="{ '--trader-color': selectedTraderObj.color }"
             >
@@ -92,13 +107,13 @@
                 </div>
                 <div class="trading-trader-card-rates" v-if="hasRates">
                     <div class="trading-rate">
-                        <span class="trading-rate-label">{{ t('app_trading_you_sell_at') || 'You sell at' }}</span>
+                        <span class="trading-rate-label">{{ compactHeader ? (t('app_trading_sell') || 'Sell') : (t('app_trading_you_sell_at') || 'You sell at') }}</span>
                         <span class="trading-rate-value" :class="rateClass(discountMap.buy, 'sell')">
                             {{ formatMultiplier(discountMap.buy) }}<span class="trading-rate-x">×</span>
                         </span>
                     </div>
                     <div class="trading-rate">
-                        <span class="trading-rate-label">{{ t('app_trading_you_buy_at') || 'You buy at' }}</span>
+                        <span class="trading-rate-label">{{ compactHeader ? (t('app_trading_buy') || 'Buy') : (t('app_trading_you_buy_at') || 'You buy at') }}</span>
                         <span class="trading-rate-value" :class="rateClass(discountMap.sell, 'buy')">
                             {{ formatMultiplier(discountMap.sell) }}<span class="trading-rate-x">×</span>
                         </span>
@@ -106,37 +121,25 @@
                 </div>
             </header>
 
-    <!-- Loading state -->
-    <div v-if="loading" class="trading-loading">
-        <div class="loading-spinner"></div>
-    </div>
-
-    <!-- Controls bar: chrome strip outside the scroll region so it stays fixed -->
-    <div class="trading-controls-bar" v-if="!loading && traderData">
-        <div class="trading-controls-row">
-            <div class="trading-search-wrap">
-                <input
-                    type="text"
-                    class="trading-search"
-                    v-model="searchQuery"
-                    :placeholder="t('app_trading_search')"
-                >
-                <button v-if="searchQuery" class="trading-search-clear" @click="searchQuery = ''">&times;</button>
-            </div>
-
-            <!-- Filter button + popover -->
-            <div class="trading-menu-wrap" v-click-outside="closeFilterPanel">
-                <button
-                    class="trading-menu-btn"
-                    :class="{ active: filterPanelOpen, 'has-active': activeFilterCount > 0 }"
-                    @click.stop="filterPanelOpen = !filterPanelOpen"
-                    v-tooltip="t('app_label_filters')"
-                >
-                    <LucideSlidersHorizontal :size="13" />
-                    <span class="trading-menu-btn-label">{{ t('app_label_filters') }}</span>
-                    <span v-if="activeFilterCount > 0" class="trading-menu-badge">{{ activeFilterCount }}</span>
-                </button>
-                <div class="trading-popover" v-show="filterPanelOpen" @click.stop>
+            <!-- Strip row A: search + filters, matching the item-page filter-bar pattern -->
+            <div class="trading-strip-controls">
+                <div class="filter-input-group trading-filter-group" v-click-outside="closeFilterPanel">
+                    <LucideSearch class="filter-input-icon" :size="14" />
+                    <input
+                        type="text"
+                        v-model="searchQuery"
+                        :placeholder="t('app_trading_search')"
+                    >
+                    <button v-if="searchQuery" class="filter-input-clear" @click="searchQuery = ''">&times;</button>
+                    <button
+                        class="filter-btn"
+                        @click.stop="filterPanelOpen = !filterPanelOpen"
+                        v-tooltip="t('app_label_filters')"
+                    >
+                        <LucideSlidersHorizontal :size="14" />
+                        <span v-if="activeFilterCount > 0" class="filter-badge">{{ activeFilterCount }}</span>
+                    </button>
+                    <div class="filter-panel trading-filter-panel" v-show="filterPanelOpen" @click.stop>
                     <div class="trading-popover-header">
                         <span>{{ t('app_label_filters') }}</span>
                         <a v-if="activeFilterCount > 0" href="#" class="trading-popover-clear" @click.prevent="clearAllFilters">{{ t('app_label_clear_all') }}</a>
@@ -202,71 +205,67 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Sort button + popover -->
-            <div class="trading-menu-wrap" v-click-outside="closeSortMenu">
-                <button
-                    class="trading-menu-btn"
-                    :class="{ active: sortMenuOpen }"
-                    @click.stop="sortMenuOpen = !sortMenuOpen"
-                    v-tooltip="t('app_label_sort')"
-                >
-                    <LucideArrowUpDown :size="13" />
-                    <span class="trading-menu-btn-label">{{ sortFieldLabel(sortKey) }}</span>
-                    <span class="trading-menu-btn-dir">{{ sortAsc ? '▲' : '▼' }}</span>
-                </button>
-                <div class="trading-popover trading-popover--sort" v-show="sortMenuOpen" @click.stop>
-                    <button class="trading-sort-item" @click="sortAsc = !sortAsc">
-                        <span class="trading-sort-check">{{ sortAsc ? '▲' : '▼' }}</span>
-                        <span>{{ sortAsc ? t('app_label_ascending') : t('app_label_descending') }}</span>
-                    </button>
-                    <div class="trading-popover-divider"></div>
-                    <div class="trading-popover-label">{{ t('app_label_sort_by') }}</div>
-                    <button
-                        v-for="field in sortableFields"
-                        :key="field"
-                        class="trading-sort-item"
-                        :class="{ active: sortKey === field }"
-                        @click="pickSort(field)"
-                    >
-                        <span class="trading-sort-check">{{ sortKey === field ? '✓' : '' }}</span>
-                        <span>{{ sortFieldLabel(field) }}</span>
-                    </button>
-                </div>
+            <!-- Active filter chips: shown directly below the search/filter bar, like item pages -->
+            <div v-if="activeFilterCount > 0" class="active-filters">
+                <span v-for="key in selectedTiers" :key="'t-' + key" class="active-filter-chip">
+                    <span class="active-filter-label">{{ t('app_trading_filter_level') }}: {{ tierLabel(key) }}</span>
+                    <button class="active-filter-remove" @click="toggleTier(key)">&times;</button>
+                </span>
+                <span v-for="cat in selectedCategories" :key="'c-' + cat" class="active-filter-chip">
+                    <span class="active-filter-label">{{ t('app_trading_filter_category') }}: {{ tCat(cat) || cat }}</span>
+                    <button class="active-filter-remove" @click="toggleCategory(cat)">&times;</button>
+                </span>
+                <span v-for="o in selectedOrigins" :key="'o-' + o" class="active-filter-chip">
+                    <span class="active-filter-label">{{ t('app_filter_origin') }}: {{ originLabel(o) }}</span>
+                    <button class="active-filter-remove" @click="toggleOrigin(o)">&times;</button>
+                </span>
+                <a href="#" class="filter-clear-inline" @click.prevent="clearAllFilters">{{ t('app_label_clear_all') }}</a>
             </div>
 
-        </div>
-        <div class="trading-active-filters" v-if="activeFilterCount > 0">
-            <span v-for="key in selectedTiers" :key="'t-' + key" class="trading-active-chip">
-                <span class="trading-active-chip-label">{{ t('app_trading_filter_level') }}: {{ tierLabel(key) }}</span>
-                <button class="trading-active-chip-remove" @click="toggleTier(key)">&times;</button>
-            </span>
-            <span v-for="cat in selectedCategories" :key="'c-' + cat" class="trading-active-chip">
-                <span class="trading-active-chip-label">{{ t('app_trading_filter_category') }}: {{ tCat(cat) || cat }}</span>
-                <button class="trading-active-chip-remove" @click="toggleCategory(cat)">&times;</button>
-            </span>
-            <span v-for="o in selectedOrigins" :key="'o-' + o" class="trading-active-chip">
-                <span class="trading-active-chip-label">{{ t('app_filter_origin') }}: {{ originLabel(o) }}</span>
-                <button class="trading-active-chip-remove" @click="toggleOrigin(o)">&times;</button>
-            </span>
-            <a href="#" class="trading-active-clear" @click.prevent="clearAllFilters">{{ t('app_label_clear_all') }}</a>
-        </div>
-    </div>
-
-    <!-- Content -->
-    <div v-if="!loading && traderData" class="trading-content" @scroll.passive="$emit('hideItemHover')">
-        <div class="trading-ledger" v-if="filteredItems.length">
+            </div>
+            <!-- Strip row B: column header labels, clickable for sort -->
             <div class="trading-ledger-header" role="row">
                 <span class="ledger-col-tier"></span>
-                <span class="ledger-col-name">{{ t('app_trading_item') }}</span>
-                <span class="ledger-col-qty">{{ t('app_trading_quantity') }}</span>
-                <span class="ledger-col-buy">
+                <button
+                    type="button"
+                    class="ledger-col-name ledger-col-sort"
+                    :class="{ 'is-active': sortKey === 'name' }"
+                    @click="toggleSort('name')"
+                >
+                    {{ t('app_trading_item') }}
+                    <span class="ledger-sort-arrow">{{ sortArrow('name') }}</span>
+                </button>
+                <button
+                    type="button"
+                    class="ledger-col-qty ledger-col-sort"
+                    :class="{ 'is-active': sortKey === 'qty' }"
+                    @click="toggleSort('qty')"
+                >
+                    {{ t('app_trading_quantity') }}
+                    <span class="ledger-sort-arrow">{{ sortArrow('qty') }}</span>
+                </button>
+                <button
+                    type="button"
+                    class="ledger-col-buy ledger-col-sort"
+                    :class="{ 'is-active': sortKey === 'buy' }"
+                    @click="toggleSort('buy')"
+                >
                     {{ t('app_trading_discount_buy') }} <span class="ledger-unit">₽</span>
-                </span>
-                <span class="ledger-col-sell">
+                    <span class="ledger-sort-arrow">{{ sortArrow('buy') }}</span>
+                </button>
+                <button
+                    type="button"
+                    class="ledger-col-sell ledger-col-sort"
+                    :class="{ 'is-active': sortKey === 'sell' }"
+                    @click="toggleSort('sell')"
+                >
                     {{ t('app_trading_discount_sell') }} <span class="ledger-unit">₽</span>
-                </span>
+                    <span class="ledger-sort-arrow">{{ sortArrow('sell') }}</span>
+                </button>
             </div>
+        </div>
+
+        <div class="trading-ledger" v-if="filteredItems.length">
             <a
                 v-for="entry in filteredItems"
                 :key="entry.id"
@@ -346,10 +345,11 @@ export default {
             stockedOnly: true,
             hideMisc: true,
             filterPanelOpen: false,
-            sortMenuOpen: false,
             sortKey: 'name',
             sortAsc: true,
             collapsedFactions: {},
+            stickyScrolled: false,
+            narrowViewport: false,
         };
     },
     computed: {
@@ -502,8 +502,11 @@ export default {
                 + this.selectedOrigins.length
                 + this.selectedTiers.length;
         },
-        sortableFields() {
-            return ['name', 'category', 'qty', 'prob', 'buy', 'sell'];
+        // Trader-header compact mode: forced on once the ledger has scrolled past the hysteresis
+        // band, or whenever the viewport is too narrow to fit the expanded card without bulky
+        // wrapping. Drives both the .scrolled CSS class and the short Sell/Buy rate labels.
+        compactHeader() {
+            return this.stickyScrolled || this.narrowViewport;
         },
     },
     watch: {
@@ -518,6 +521,11 @@ export default {
             },
         },
         selectedTrader() {
+            // Reset scroll + expanded header when switching trader, regardless of cache hit.
+            this.stickyScrolled = false;
+            this.$nextTick(() => {
+                if (this.$refs.scroller) this.$refs.scroller.scrollTop = 0;
+            });
             this.loadTrader();
         },
     },
@@ -858,25 +866,27 @@ export default {
             this.hideMisc = true;
         },
         closeFilterPanel() { this.filterPanelOpen = false; },
-        closeSortMenu() { this.sortMenuOpen = false; },
-        pickSort(field) {
-            this.sortKey = field;
-            this.sortMenuOpen = false;
+        toggleSort(field) {
+            if (this.sortKey === field) {
+                this.sortAsc = !this.sortAsc;
+            } else {
+                this.sortKey = field;
+                this.sortAsc = true;
+            }
         },
-        sortFieldLabel(field) {
-            const FALLBACK = { name: 'Name', category: 'Category', qty: 'Quantity', prob: 'Probability', buy: 'Buy price', sell: 'Sell price' };
-            const KEYS = {
-                name: 'app_trading_item',
-                category: 'app_trading_filter_category',
-                qty: 'app_trading_quantity',
-                prob: 'app_trading_probability',
-                buy: 'app_trading_sort_buy',
-                sell: 'app_trading_sort_sell',
-            };
-            const k = KEYS[field];
-            if (!k) return FALLBACK[field] || field;
-            const v = this.t(k);
-            return v && v !== k ? v : (FALLBACK[field] || field);
+        sortArrow(field) {
+            if (this.sortKey !== field) return '';
+            return this.sortAsc ? '▲' : '▼';
+        },
+        onScroll(ev) {
+            this.$emit('hideItemHover');
+            // Hysteresis: the card collapse changes the sticky stack's height, which can
+            // nudge scrollTop back across a single threshold and cause flicker. Use separate
+            // enter/exit thresholds so once collapsed the card stays collapsed until you're
+            // genuinely back near the top.
+            const top = ev.target.scrollTop;
+            if (!this.stickyScrolled && top > 32) this.stickyScrolled = true;
+            else if (this.stickyScrolled && top < 4) this.stickyScrolled = false;
         },
         originLabel(o) {
             if (o === 'nato') return 'NATO';
@@ -917,6 +927,21 @@ export default {
             });
             return arr;
         },
+    },
+    mounted() {
+        // Track narrow viewport so the trader header renders in its compact form on phones
+        // (same treatment as the scrolled state, with short Sell/Buy labels).
+        if (typeof window !== 'undefined' && window.matchMedia) {
+            this._narrowMq = window.matchMedia('(max-width: 540px)');
+            this._narrowMqHandler = (e) => { this.narrowViewport = e.matches; };
+            this.narrowViewport = this._narrowMq.matches;
+            this._narrowMq.addEventListener('change', this._narrowMqHandler);
+        }
+    },
+    beforeUnmount() {
+        if (this._narrowMq && this._narrowMqHandler) {
+            this._narrowMq.removeEventListener('change', this._narrowMqHandler);
+        }
     },
 };
 </script>
@@ -967,28 +992,6 @@ export default {
 .trading-pill-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 .trading-pill.active .trading-pill-dot { box-shadow: 0 0 0 2px rgba(255,255,255,0.4); }
 
-/* Search */
-.trading-search-wrap { position: relative; width: 100%; max-width: 320px; flex-shrink: 0; }
-.trading-search {
-    width: 100%; padding: 0.4rem 2rem 0.4rem 0.6rem;
-    background: var(--color-surface-1); border: 1px solid var(--color-bg); border-radius: 4px;
-    color: var(--text); font-size: 0.8rem; outline: none;
-    box-shadow: inset 0 2px 4px var(--color-overlay-black-60);
-    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
-}
-.trading-search:hover { border-color: var(--accent-dim); }
-.trading-search:focus {
-    border-color: var(--accent);
-    background: var(--color-surface-2);
-    box-shadow:
-        inset 0 2px 4px var(--color-overlay-black-60),
-        0 0 0 3px var(--color-accent-tint-20);
-}
-.trading-search-clear {
-    position: absolute; right: 0.3rem; top: 50%; transform: translateY(-50%);
-    background: none; border: none; color: var(--text-secondary); font-size: 1.1rem; cursor: pointer; line-height: 1;
-}
-
 /* Discount chips (inline in controls bar) */
 .trading-meta-chips {
     display: inline-flex;
@@ -1010,45 +1013,50 @@ export default {
 .trading-discount-badge.sell { background: rgba(239,68,68,0.15); color: #ef4444; }
 
 /* Controls bar: chrome strip wrapping the controls row */
-.trading-controls-bar {
-    position: relative;
-    flex-shrink: 0;
-    margin: 0 -0.75rem 0.75rem 0;
-    padding: 0.4rem 1.5rem 0.4rem 0.75rem;
+/* Sticky stack: wraps trader card + search/filter strip + column header + active chips.
+   Lives inside the scroll container so all four pieces remain anchored when rows scroll. */
+.trading-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--color-surface-1, var(--card));
+}
+.trading-sticky .trading-ledger-header {
+    border-radius: 0;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Strip row A: reuses the global .filter-input-group chrome from FilterBar (search icon, input,
+   clear button, filters icon-button with badge). The trader-specific wrapper just adds spacing
+   and the sticky-block border treatment. */
+.trading-strip-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    padding: 0.4rem 0.65rem;
     background:
         linear-gradient(180deg,
             var(--color-surface-3) 0%,
             color-mix(in srgb, var(--color-surface-3) 100%, black 8%) 100%);
-    box-shadow:
-        inset 0 1px 0 var(--color-overlay-white-6),
-        0 4px 12px -8px var(--color-overlay-black-70);
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
 }
-.trading-controls-bar::after {
-    content: "";
-    position: absolute;
+.trading-filter-group { width: 100%; max-width: none; }
+/* Active-filters chip strip inside the trader strip-controls: tighten top margin so it
+   hugs the search bar (item-page rule has margin-top: 0.4rem inherited from .filter-bar context). */
+.trading-strip-controls .active-filters { margin-top: 0; padding-right: 0; }
+/* Drop the filter panel BELOW the input group, not on top of it (the item-page default).
+   Anchor to the left of the input group so it never clips the viewport's right edge. */
+.trading-filter-panel {
+    top: calc(100% + 0.35rem);
     left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: linear-gradient(90deg,
-        transparent 0%,
-        var(--border) 12%,
-        var(--border) 88%,
-        transparent 100%);
-    pointer-events: none;
-}
-.trading-controls-row {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem 0.75rem;
-    flex-wrap: wrap;
-}
-.trading-controls-row .trading-search-wrap {
-    max-width: 18rem;
-    flex: 1 1 14rem;
-}
-.trading-controls-row .trading-meta-chips {
-    margin-left: auto;
+    right: auto;
+    min-width: 18rem;
+    max-width: min(24rem, calc(100vw - 1rem));
 }
 /* Tier badges on item tiles */
 .trading-item-meta-row {
@@ -1082,72 +1090,8 @@ export default {
     letter-spacing: 0.02em;
 }
 
-/* Filter / sort menu buttons (controls bar) */
-.trading-menu-wrap { position: relative; display: inline-flex; }
-.trading-menu-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    height: 1.85rem;
-    padding: 0 0.6rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: var(--card);
-    color: var(--text-secondary);
-    font-family: var(--font-display);
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    transition: color 0.15s, border-color 0.15s, background 0.15s;
-    box-shadow: inset 0 1px 2px var(--color-overlay-black-40);
-}
-.trading-menu-btn:hover { color: var(--text); border-color: var(--text-secondary); }
-.trading-menu-btn.active {
-    color: var(--accent);
-    border-color: var(--accent);
-    background: var(--color-accent-tint-12);
-}
-.trading-menu-btn.has-active { color: var(--text); }
-.trading-menu-btn-label { max-width: 7rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.trading-menu-btn-dir {
-    font-family: var(--mono);
-    font-size: 0.6rem;
-    color: var(--accent);
-    margin-left: 0.1rem;
-}
-.trading-menu-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 1rem;
-    height: 1rem;
-    padding: 0 0.3rem;
-    border-radius: 999px;
-    background: var(--accent);
-    color: var(--color-black, #000);
-    font-family: var(--mono);
-    font-variant-numeric: tabular-nums;
-    font-size: 0.6rem;
-    font-weight: 700;
-    line-height: 1;
-}
-
-/* Popover (used for both filter + sort) */
-.trading-popover {
-    position: absolute;
-    top: calc(100% + 0.35rem);
-    left: 0;
-    z-index: 20;
-    min-width: 14rem;
-    max-width: 22rem;
-    padding: 0.6rem;
-    background: var(--color-surface-2, var(--card));
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    box-shadow: 0 12px 28px -8px var(--color-overlay-black-70), 0 2px 6px var(--color-overlay-black-40);
-}
-.trading-popover--sort { min-width: 11rem; padding: 0.35rem; }
+/* Filter panel internal styles (reused inside .filter-panel via .trading-filter-panel). */
+.trading-filter-panel { padding: 0.6rem; }
 .trading-popover-header {
     display: flex;
     align-items: center;
@@ -1232,93 +1176,17 @@ export default {
     font-weight: 500;
     color: var(--text);
 }
-.trading-popover-divider {
-    height: 1px;
-    background: var(--border);
-    margin: 0.35rem 0;
-}
-
-/* Sort menu items */
-.trading-sort-item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 0.5rem;
-    padding: 0.35rem 0.5rem;
-    border: none;
-    border-radius: 4px;
-    background: none;
-    color: var(--text);
-    font-family: var(--font-display);
-    font-size: 0.74rem;
-    text-align: left;
-    cursor: pointer;
-    transition: background 0.12s, color 0.12s;
-}
-.trading-sort-item:hover { background: var(--color-overlay-white-6); }
-.trading-sort-item.active { color: var(--accent); }
-.trading-sort-check {
-    display: inline-flex;
-    justify-content: center;
-    width: 0.9rem;
-    font-family: var(--mono);
-    font-size: 0.7rem;
-    color: var(--accent);
-}
-
-/* Active filter chip strip */
-.trading-active-filters {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.3rem;
-    margin-top: 0.4rem;
-}
-.trading-active-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    padding: 0.15rem 0.2rem 0.15rem 0.5rem;
-    border: 1px solid var(--accent);
-    border-radius: 999px;
-    background: var(--color-accent-tint-12);
-    color: var(--accent);
-    font-family: var(--font-display);
-    font-size: 0.68rem;
-    font-weight: 500;
-}
-.trading-active-chip-remove {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.05rem;
-    height: 1.05rem;
-    border: none;
-    border-radius: 50%;
-    background: transparent;
-    color: var(--accent);
-    font-size: 0.85rem;
-    line-height: 1;
-    cursor: pointer;
-    padding: 0;
-}
-.trading-active-chip-remove:hover { background: var(--accent); color: var(--color-black, #000); }
-.trading-active-clear {
-    font-family: var(--font-display);
-    font-size: 0.68rem;
-    color: var(--accent);
-    text-decoration: none;
-    margin-left: 0.25rem;
-}
-.trading-active-clear:hover { text-decoration: underline; }
-
-/* Ledger (item list) */
-.trading-ledger {
+/* Ledger (item list). --ledger-cols is hoisted to .trading-content so the sticky header
+   (now a sibling of .trading-ledger, not a child) shares the same column grid as the rows. */
+.trading-content {
     --ledger-cols: 1.6rem minmax(0, 1fr) 5rem 5.5rem 5.5rem;
+}
+.trading-ledger {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--border);
-    border-radius: 6px;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
     background: var(--card);
     overflow: hidden;
 }
@@ -1331,21 +1199,51 @@ export default {
     padding: 0 0.65rem;
 }
 .trading-ledger-header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
     height: 1.7rem;
     background:
         linear-gradient(180deg,
             var(--color-surface-3) 0%,
             color-mix(in srgb, var(--color-surface-3) 100%, black 8%) 100%);
-    border-bottom: 1px solid var(--border);
     font-family: var(--font-display);
     font-size: 0.6rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--text-secondary);
+}
+
+/* Sortable column header cells (replace the old dedicated Sort menu). */
+.ledger-col-sort {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    text-transform: inherit;
+    letter-spacing: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    height: 100%;
+    transition: color 0.12s;
+}
+.trading-ledger-header .ledger-col-sort.ledger-col-qty,
+.trading-ledger-header .ledger-col-sort.ledger-col-buy,
+.trading-ledger-header .ledger-col-sort.ledger-col-sell {
+    justify-content: flex-end;
+}
+.ledger-col-sort:hover { color: var(--text); }
+.ledger-col-sort.is-active { color: var(--accent); }
+.ledger-sort-arrow {
+    display: inline-block;
+    min-width: 0.6rem;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: var(--accent);
+    letter-spacing: 0;
 }
 .trading-ledger-header .ledger-unit {
     font-family: var(--mono);
@@ -1424,12 +1322,18 @@ export default {
     font-weight: 400;
     white-space: nowrap;
 }
+.trading-ledger-header .ledger-col-name,
 .trading-ledger-header .ledger-col-qty,
 .trading-ledger-header .ledger-col-buy,
 .trading-ledger-header .ledger-col-sell {
     font-family: var(--font-display);
     font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
+.trading-ledger-header .ledger-col-name { gap: 0.25rem; }
 
 /* Tier marker (dim outline, no fill) */
 .ledger-tier {
@@ -1541,7 +1445,17 @@ export default {
 .trading-loading { display: flex; justify-content: center; padding: 3rem; }
 
 /* Scrollable content area */
-.trading-content { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; }
+.trading-content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Disable browser scroll-anchoring: when the sticky trader card collapses, the content
+       below shrinks by ~34px. With anchoring on, the browser nudges scrollTop to keep the
+       first visible non-sticky element in place, which pushes scrollTop back across the
+       hysteresis band and causes the card to re-expand → flicker loop. */
+    overflow-anchor: none;
+}
 
 /* ── Two-column layout: faction rail + main column ── */
 .trading-layout {
@@ -1756,14 +1670,16 @@ export default {
     box-shadow: 0 0 0 2px color-mix(in srgb, var(--trader-color) 30%, transparent);
 }
 
-/* ── Trader header card ── */
+/* ── Trader header card ── two-line at rest: large NAME + sub line (faction · stock · origins) +
+   2-line rate boxes. Visually a separate card above the controls panel. Collapses to a single
+   slim row when the user scrolls the ledger. */
 .trading-trader-card {
     --trader-color: var(--accent);
     position: relative;
     display: flex;
     align-items: center;
     gap: 0.9rem;
-    padding: 0.45rem 0.85rem 0.45rem 0.95rem;
+    padding: 0.55rem 0.85rem 0.55rem 0.95rem;
     margin-bottom: 0.5rem;
     background:
         linear-gradient(90deg,
@@ -1773,7 +1689,26 @@ export default {
     border-radius: 6px;
     box-shadow: inset 0 1px 0 var(--color-overlay-white-6);
     overflow: hidden;
+    transition: padding 0.18s ease, margin-bottom 0.18s ease, gap 0.18s ease;
 }
+/* Scrolled state: compress the card down to one slim row that stays anchored at the top. */
+.trading-content.scrolled .trading-trader-card { padding: 0.35rem 0.95rem 0.35rem 1.05rem; margin-bottom: 0.35rem; gap: 0.6rem; }
+.trading-content.scrolled .trading-trader-card-id {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow: hidden;
+}
+.trading-content.scrolled .trading-trader-card-name { font-size: 0.78rem; }
+.trading-content.scrolled .trading-trader-card-sub { margin-top: 0; flex-wrap: nowrap; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; align-items: center; }
+.trading-content.scrolled .trading-rate { flex-direction: row; align-items: center; gap: 0.5rem; padding: 0.25rem 0.65rem; min-width: 0; }
+.trading-content.scrolled .trading-rate-value { font-size: 0.72rem; }
+.trading-content.scrolled .trading-rate-label { font-size: 0.45rem; letter-spacing: 0.08em; }
+/* Collapsed: hide the noisier sub-line entries (stock count, WP/NATO origin counts) to keep the bar short. */
+.trading-content.scrolled .trading-trader-card-stock,
+.trading-content.scrolled .trading-trader-card-origins { display: none; }
 .trading-trader-card-bar {
     position: absolute;
     left: 0;
@@ -1786,31 +1721,34 @@ export default {
 .trading-trader-card-id { flex: 1; min-width: 0; }
 .trading-trader-card-name {
     font-family: var(--font-display);
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     color: var(--text);
     text-transform: uppercase;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    line-height: 1.1;
+    transition: font-size 0.18s ease;
 }
 .trading-trader-card-sub {
     display: flex;
     align-items: baseline;
-    gap: 0.3rem;
-    margin-top: 0.1rem;
+    gap: 0.35rem;
+    margin-top: 0.15rem;
     font-family: var(--font-display);
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     color: var(--text-secondary);
     letter-spacing: 0.04em;
+    flex-wrap: wrap;
 }
 .trading-trader-card-faction {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--trader-color);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
 }
 .trading-trader-card-dot { opacity: 0.5; }
 .trading-trader-card-stock-n {
@@ -1846,10 +1784,11 @@ export default {
     color: var(--text);
     letter-spacing: 0;
 }
-.trading-trader-origin--wp   .trading-trader-origin-dot { background: #b91c1c; }
-.trading-trader-origin--wp                              { color: #b91c1c; }
-.trading-trader-origin--nato .trading-trader-origin-dot { background: #4f8ef7; }
-.trading-trader-origin--nato                            { color: #4f8ef7; }
+/* Match the WP / NATO origin badge palette used on item-view badges. */
+.trading-trader-origin--wp   .trading-trader-origin-dot { background: var(--color-accent-tan); }
+.trading-trader-origin--wp                              { color: var(--color-accent-tan); }
+.trading-trader-origin--nato .trading-trader-origin-dot { background: var(--color-teal); }
+.trading-trader-origin--nato                            { color: var(--color-teal); }
 .trading-trader-card-rates {
     display: flex;
     gap: 0.45rem;
@@ -1859,20 +1798,22 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 0.05rem;
-    padding: 0.22rem 0.55rem;
+    gap: 0.1rem;
+    padding: 0.3rem 0.6rem;
     min-width: 5.25rem;
     background: color-mix(in srgb, var(--color-overlay-black-40) 100%, transparent);
     border: 1px solid var(--border);
     border-radius: 4px;
+    transition: padding 0.18s ease, min-width 0.18s ease, gap 0.18s ease;
 }
 .trading-rate-label {
     font-family: var(--font-display);
-    font-size: 0.52rem;
+    font-size: 0.55rem;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-secondary);
+    transition: font-size 0.18s ease;
 }
 .trading-rate-value {
     font-family: var(--mono);
@@ -1883,6 +1824,7 @@ export default {
     line-height: 1;
     color: var(--text);
     letter-spacing: -0.01em;
+    transition: font-size 0.18s ease;
 }
 .trading-rate-x {
     font-size: 0.7em;
@@ -1896,39 +1838,101 @@ export default {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .trading-search-wrap,
-    .trading-controls-row .trading-search-wrap {
+    .trading-search-wrap {
         max-width: 100%;
         margin-left: 0;
         flex: 1 1 100%;
     }
     /* Ledger: drop the sell column on narrow viewports */
-    .trading-ledger {
+    .trading-content {
         --ledger-cols: 1.4rem minmax(0, 1fr) 4rem 5rem;
     }
-    .trading-ledger .ledger-col-sell { display: none; }
+    .trading-ledger .ledger-col-sell,
+    .trading-ledger-header .ledger-col-sell {
+        display: none;
+    }
     .ledger-cat { display: none; }
 
-    /* Stack rail above main on narrow viewports */
+    /* Stack rail above main on narrow viewports — and flatten it into a single horizontal
+       scrollable strip of trader chips so it doesn't eat vertical space.
+       minmax(0, 1fr) prevents the chip list's intrinsic min-content from pushing the grid
+       track wider than the viewport. */
     .trading-layout {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto minmax(0, 1fr);
         gap: 0.5rem;
     }
     .trading-rail {
-        max-height: 40vh;
+        max-height: none;
+        height: auto;
+        flex-direction: row;
+        min-width: 0;
+        overflow: hidden;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .trading-rail-header { display: none; }
+    .trading-rail-scroll {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0.35rem 0 0.35rem 0;
+        gap: 0.35rem;
+        -webkit-overflow-scrolling: touch;
+        min-width: 0;
+        width: 100%;
+        /* Hide scrollbar */
+        scrollbar-width: none;
+        /* Fade the right edge to hint that more chips lie beyond. */
+        -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
+        mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
+    }
+    .trading-rail-scroll::-webkit-scrollbar { display: none; }
+    /* Flatten faction-group + faction-list so trader chips become direct flex children of
+       rail-scroll (single horizontal row). !important on the list overrides v-show's inline
+       display:none for any factions a user previously collapsed in desktop mode. */
+    .trading-faction-group { display: contents; }
+    .trading-faction-header { display: none; }
+    .trading-faction-list { display: contents !important; }
+    .trading-faction-list::before { display: none; }
+    .trading-rail-item {
+        flex: 0 0 auto;
+        width: auto;
+        padding: 0.3rem 0.7rem 0.3rem 0.8rem;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--color-surface-1, var(--card));
+        font-size: 0.72rem;
+        white-space: nowrap;
+    }
+    .trading-rail-item-stripe { display: none; }
+    .trading-rail-item.active {
+        background: color-mix(in srgb, var(--trader-color) 16%, var(--color-surface-1, var(--card)));
+        border-color: var(--trader-color);
     }
 
-    /* Trader card: stack rates below identity */
+    /* Trader card: keep identity + rates on one line if they fit; only wrap rates to a
+       second line when the viewport is too narrow. */
     .trading-trader-card {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.6rem;
+        flex-wrap: wrap;
+        row-gap: 0.4rem;
     }
-    .trading-trader-card-rates {
-        justify-content: stretch;
-    }
-    .trading-rate { flex: 1; min-width: 0; }
+    .trading-trader-card-id { flex: 1 1 12rem; }
+    .trading-trader-card-rates { flex: 0 0 auto; }
+}
+
+/* Progressive sub-line hiding for the trader header on smaller screens. Origins drop first
+   (lowest signal), then the in-stock count, leaving just NAME + faction on tiny phones. */
+@media (max-width: 540px) {
+    .trading-trader-card-origins { display: none; }
+}
+@media (max-width: 420px) {
+    .trading-trader-card-stock { display: none; }
 }
 </style>
 
