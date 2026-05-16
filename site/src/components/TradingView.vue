@@ -16,18 +16,6 @@
         </div>
     </div>
 
-    <!-- Tab bar -->
-    <div class="trading-tabs">
-        <button class="trading-tab" :class="{ active: activeTab === 'supplies' }" @click="activeTab = 'supplies'">
-            <LucidePackage :size="14" />
-            {{ t('app_trading_supplies') }}
-        </button>
-        <button class="trading-tab" :class="{ active: activeTab === 'prices' }" @click="activeTab = 'prices'">
-            <LucideArrowDownCircle :size="14" />
-            {{ t('app_trading_prices') }}
-        </button>
-    </div>
-
     <!-- Loading state -->
     <div v-if="loading" class="trading-loading">
         <div class="loading-spinner"></div>
@@ -36,33 +24,6 @@
     <!-- Controls bar: chrome strip outside the scroll region so it stays fixed -->
     <div class="trading-controls-bar" v-if="!loading && traderData">
         <div class="trading-controls-row">
-            <template v-if="activeTab === 'supplies' && supplyKeys.length > 1">
-                <div class="trading-tier-segment">
-                    <button
-                        v-for="key in supplyKeys"
-                        :key="key"
-                        class="trading-tier-btn"
-                        :class="{ active: activeTier === key }"
-                        @click="activeTier = key"
-                    >
-                        {{ tierLabel(key) }}
-                    </button>
-                </div>
-                <select class="trading-tier-select" v-model="activeTier">
-                    <option v-for="key in supplyKeys" :key="key" :value="key">{{ tierLabel(key) }}</option>
-                </select>
-                <label class="trading-exclusive-toggle" @click="exclusiveOnly = !exclusiveOnly" v-tooltip="t('app_trading_exclusive_only_tooltip')">
-                    <span class="toggle-switch" :class="{ on: exclusiveOnly }">
-                        <span class="toggle-knob"></span>
-                    </span>
-                    <span class="trading-exclusive-label">{{ t('app_trading_exclusive_only') }}</span>
-                </label>
-            </template>
-            <div class="trading-meta-chips" v-if="traderData.discounts && traderData.discounts.length">
-                <span v-for="d in traderData.discounts" :key="d[0]" class="trading-discount-badge" :class="d[0]">
-                    {{ t('app_trading_discount_' + d[0]) || d[0] }} {{ (d[1] * 100).toFixed(0) }}%
-                </span>
-            </div>
             <div class="trading-search-wrap">
                 <input
                     type="text"
@@ -72,94 +33,180 @@
                 >
                 <button v-if="searchQuery" class="trading-search-clear" @click="searchQuery = ''">&times;</button>
             </div>
+
+            <!-- Filter button + popover -->
+            <div class="trading-menu-wrap" v-click-outside="closeFilterPanel">
+                <button
+                    class="trading-menu-btn"
+                    :class="{ active: filterPanelOpen, 'has-active': activeFilterCount > 0 }"
+                    @click.stop="filterPanelOpen = !filterPanelOpen"
+                    v-tooltip="t('app_label_filters')"
+                >
+                    <LucideSlidersHorizontal :size="13" />
+                    <span class="trading-menu-btn-label">{{ t('app_label_filters') }}</span>
+                    <span v-if="activeFilterCount > 0" class="trading-menu-badge">{{ activeFilterCount }}</span>
+                </button>
+                <div class="trading-popover" v-show="filterPanelOpen" @click.stop>
+                    <div class="trading-popover-header">
+                        <span>{{ t('app_label_filters') }}</span>
+                        <a v-if="activeFilterCount > 0" href="#" class="trading-popover-clear" @click.prevent="clearAllFilters">{{ t('app_label_clear_all') }}</a>
+                    </div>
+                    <div v-if="supplyKeys.length" class="trading-popover-group">
+                        <label
+                            class="trading-popover-toggle"
+                            @click="stockedOnly = !stockedOnly"
+                        >
+                            <span class="toggle-switch" :class="{ on: stockedOnly }">
+                                <span class="toggle-knob"></span>
+                            </span>
+                            <span class="trading-popover-toggle-label">{{ t('app_trading_stocked_only') }}</span>
+                        </label>
+                    </div>
+                    <div v-if="supplyKeys.length > 1" class="trading-popover-group">
+                        <div class="trading-popover-label">{{ t('app_trading_filter_level') }}</div>
+                        <div class="trading-popover-chips">
+                            <button
+                                v-for="key in supplyKeys"
+                                :key="key"
+                                class="trading-popover-chip"
+                                :class="{ active: selectedTiers.includes(key) }"
+                                @click="toggleTier(key)"
+                            >{{ tierLabel(key) }}</button>
+                        </div>
+                    </div>
+                    <div v-if="availableCategories.length" class="trading-popover-group">
+                        <div class="trading-popover-label">{{ t('app_trading_filter_category') }}</div>
+                        <div class="trading-popover-chips">
+                            <button
+                                v-for="cat in availableCategories"
+                                :key="cat"
+                                class="trading-popover-chip"
+                                :class="{ active: selectedCategories.includes(cat) }"
+                                @click="toggleCategory(cat)"
+                            >{{ tCat(cat) || cat }}</button>
+                        </div>
+                    </div>
+                    <div v-if="availableOrigins.length" class="trading-popover-group">
+                        <div class="trading-popover-label">{{ t('app_filter_origin') }}</div>
+                        <div class="trading-popover-chips">
+                            <button
+                                v-for="o in availableOrigins"
+                                :key="o"
+                                class="trading-popover-chip"
+                                :class="['origin-' + o, { active: selectedOrigins.includes(o) }]"
+                                @click="toggleOrigin(o)"
+                            >{{ originLabel(o) }}</button>
+                        </div>
+                    </div>
+                    <div v-if="!availableCategories.length && !availableOrigins.length && !supplyKeys.length" class="trading-popover-empty">
+                        {{ t('app_trading_no_filters_available') }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sort button + popover -->
+            <div class="trading-menu-wrap" v-click-outside="closeSortMenu">
+                <button
+                    class="trading-menu-btn"
+                    :class="{ active: sortMenuOpen }"
+                    @click.stop="sortMenuOpen = !sortMenuOpen"
+                    v-tooltip="t('app_label_sort')"
+                >
+                    <LucideArrowUpDown :size="13" />
+                    <span class="trading-menu-btn-label">{{ sortFieldLabel(sortKey) }}</span>
+                    <span class="trading-menu-btn-dir">{{ sortAsc ? '▲' : '▼' }}</span>
+                </button>
+                <div class="trading-popover trading-popover--sort" v-show="sortMenuOpen" @click.stop>
+                    <button class="trading-sort-item" @click="sortAsc = !sortAsc">
+                        <span class="trading-sort-check">{{ sortAsc ? '▲' : '▼' }}</span>
+                        <span>{{ sortAsc ? t('app_label_ascending') : t('app_label_descending') }}</span>
+                    </button>
+                    <div class="trading-popover-divider"></div>
+                    <div class="trading-popover-label">{{ t('app_label_sort_by') }}</div>
+                    <button
+                        v-for="field in sortableFields"
+                        :key="field"
+                        class="trading-sort-item"
+                        :class="{ active: sortKey === field }"
+                        @click="pickSort(field)"
+                    >
+                        <span class="trading-sort-check">{{ sortKey === field ? '✓' : '' }}</span>
+                        <span>{{ sortFieldLabel(field) }}</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="trading-meta-chips" v-if="traderData.discounts && traderData.discounts.length">
+                <span v-for="d in traderData.discounts" :key="d[0]" class="trading-discount-badge" :class="d[0]">
+                    {{ t('app_trading_discount_' + d[0]) || d[0] }} {{ (d[1] * 100).toFixed(0) }}%
+                </span>
+            </div>
+        </div>
+        <div class="trading-active-filters" v-if="activeFilterCount > 0">
+            <span v-for="key in selectedTiers" :key="'t-' + key" class="trading-active-chip">
+                <span class="trading-active-chip-label">{{ t('app_trading_filter_level') }}: {{ tierLabel(key) }}</span>
+                <button class="trading-active-chip-remove" @click="toggleTier(key)">&times;</button>
+            </span>
+            <span v-for="cat in selectedCategories" :key="'c-' + cat" class="trading-active-chip">
+                <span class="trading-active-chip-label">{{ t('app_trading_filter_category') }}: {{ tCat(cat) || cat }}</span>
+                <button class="trading-active-chip-remove" @click="toggleCategory(cat)">&times;</button>
+            </span>
+            <span v-for="o in selectedOrigins" :key="'o-' + o" class="trading-active-chip">
+                <span class="trading-active-chip-label">{{ t('app_filter_origin') }}: {{ originLabel(o) }}</span>
+                <button class="trading-active-chip-remove" @click="toggleOrigin(o)">&times;</button>
+            </span>
+            <a href="#" class="trading-active-clear" @click.prevent="clearAllFilters">{{ t('app_label_clear_all') }}</a>
         </div>
     </div>
 
     <!-- Content -->
     <div v-if="!loading && traderData" class="trading-content">
-        <!-- Supplies tab -->
-        <div v-if="activeTab === 'supplies'" class="trading-supplies">
-            <div v-if="unlockCondition" class="trading-unlock-condition">
-                <span class="trading-unlock-icon">🔒</span>
-                <template v-for="(label, i) in unlockCondition" :key="i">
-                    <span v-if="i > 0" class="trading-unlock-or">{{ t('app_trading_or') || 'OR' }}</span>
-                    <span class="trading-unlock-badge">{{ label }}</span>
-                </template>
-            </div>
-            <div class="trading-items-grid" v-if="filteredSupplyItems.length">
-                <a
-                    v-for="item in filteredSupplyItems"
-                    :key="item[0]"
-                    class="trading-item-card"
-                    :class="{ 'trading-item-card--linked': !!resolveItem(item[0]) }"
-                    href="#"
-                    @click.prevent="resolveItem(item[0]) && $emit('navigateToItem', resolveItem(item[0]).id)"
-                    @mouseenter="resolveItem(item[0]) && $emit('showItemHover', resolveItem(item[0]).id, $event)"
-                    @mousemove="$emit('moveItemHover', $event)"
-                    @mouseleave="$emit('hideItemHover')"
-                >
-                    <div class="trading-item-info">
-                        <div class="trading-item-name">
-                            {{ itemDisplayName(item[0]) }}
-                        </div>
-                        <div class="trading-item-cat">{{ categoryLabel(item[0]) }}</div>
+        <div class="trading-items-grid" v-if="filteredItems.length">
+            <a
+                v-for="entry in filteredItems"
+                :key="entry.id"
+                class="trading-item-card"
+                :class="{ 'trading-item-card--linked': !!resolveItem(entry.id) }"
+                href="#"
+                @click.prevent="resolveItem(entry.id) && $emit('navigateToItem', resolveItem(entry.id).id)"
+                @mouseenter="resolveItem(entry.id) && $emit('showItemHover', resolveItem(entry.id).id, $event)"
+                @mousemove="$emit('moveItemHover', $event)"
+                @mouseleave="$emit('hideItemHover')"
+            >
+                <div class="trading-item-info">
+                    <div class="trading-item-name">
+                        {{ itemDisplayName(entry.id) }}
                     </div>
-                    <div class="trading-item-stats">
-                        <span class="trading-item-qty">×{{ item[1] }}</span>
-                        <span
-                            class="trading-item-prob"
-                            v-if="item[2] != null && item[2] < 1"
-                            :class="{ 'trading-item-prob--low': item[2] < 0.5 }"
-                        >
-                            <span class="prob-bar" :style="{ width: (item[2] * 100) + '%' }"></span>
-                            {{ (item[2] * 100).toFixed(0) }}%
+                    <div class="trading-item-meta-row">
+                        <span class="trading-item-cat">{{ categoryLabel(entry.id) }}</span>
+                        <span class="trading-item-tiers" v-if="entry.tiers.length">
+                            <span
+                                class="trading-tier-badge"
+                                v-tooltip="tierTooltip(entry.tiers[0])"
+                            >{{ tierBadgeLabel(entry.tiers[0]) }}</span>
                         </span>
                     </div>
-                    <div class="trading-item-prices" v-if="buyPrice(item[0]) != null || sellPrice(item[0]) != null">
-                        <span class="trading-price trading-price--buy" v-if="buyPrice(item[0]) != null">
-                            <LucideArrowDownCircle :size="10" />{{ formatPrice(buyPrice(item[0])) }}
-                        </span>
-                        <span class="trading-price trading-price--sell" v-if="sellPrice(item[0]) != null">
-                            <LucideArrowUpCircle :size="10" />{{ formatPrice(sellPrice(item[0])) }}
-                        </span>
-                    </div>
-                </a>
-            </div>
-            <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
+                </div>
+                <span class="trading-item-qty" v-if="entry.qty != null">×{{ entry.qty }}</span>
+                <div class="trading-item-prices" v-if="buyPrice(entry.id) != null || sellPrice(entry.id) != null || (entry.prob != null && entry.prob < 1)">
+                    <span class="trading-price trading-price--buy" v-if="buyPrice(entry.id) != null">
+                        <LucideArrowDownCircle :size="10" />{{ formatPrice(buyPrice(entry.id)) }}
+                    </span>
+                    <span class="trading-price trading-price--sell" v-if="sellPrice(entry.id) != null">
+                        <LucideArrowUpCircle :size="10" />{{ formatPrice(sellPrice(entry.id)) }}
+                    </span>
+                    <span
+                        class="trading-item-prob"
+                        v-if="entry.prob != null && entry.prob < 1"
+                        :class="{ 'trading-item-prob--low': entry.prob < 0.5 }"
+                    >
+                        <span class="prob-bar" :style="{ width: (entry.prob * 100) + '%' }"></span>
+                        {{ (entry.prob * 100).toFixed(0) }}%
+                    </span>
+                </div>
+            </a>
         </div>
-
-        <!-- Prices tab -->
-        <div v-if="activeTab === 'prices'" class="trading-conditions">
-            <div class="trading-items-grid" v-if="priceItems.length">
-                <a
-                    v-for="item in priceItems"
-                    :key="item.id"
-                    class="trading-item-card"
-                    :class="{ 'trading-item-card--linked': !!resolveItem(item.id) }"
-                    href="#"
-                    @click.prevent="resolveItem(item.id) && $emit('navigateToItem', resolveItem(item.id).id)"
-                    @mouseenter="resolveItem(item.id) && $emit('showItemHover', resolveItem(item.id).id, $event)"
-                    @mousemove="$emit('moveItemHover', $event)"
-                    @mouseleave="$emit('hideItemHover')"
-                >
-                    <div class="trading-item-info">
-                        <div class="trading-item-name">
-                            {{ itemDisplayName(item.id) }}
-                        </div>
-                        <div class="trading-item-cat">{{ categoryLabel(item.id) }}</div>
-                    </div>
-                    <div class="trading-item-prices" v-if="buyPrice(item.id) != null || sellPrice(item.id) != null">
-                        <span class="trading-price trading-price--buy" v-if="buyPrice(item.id) != null">
-                            <LucideArrowDownCircle :size="10" />{{ formatPrice(buyPrice(item.id)) }}
-                        </span>
-                        <span class="trading-price trading-price--sell" v-if="sellPrice(item.id) != null">
-                            <LucideArrowUpCircle :size="10" />{{ formatPrice(sellPrice(item.id)) }}
-                        </span>
-                    </div>
-                </a>
-            </div>
-            <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
-        </div>
+        <div v-else class="trading-empty">{{ t('app_trading_no_results') }}</div>
     </div>
 </div>
 </template>
@@ -170,7 +217,7 @@ export default {
         packId: { type: String, default: null },
         indexById: { type: Object, default: () => ({}) },
     },
-    inject: ['t', 'tName', 'tCat', 'tItemName'],
+    inject: ['t', 'tName', 'tCat', 'tCatSingular', 'tItemName'],
     emits: ['navigateToItem', 'showItemHover', 'moveItemHover', 'hideItemHover'],
     data() {
         return {
@@ -178,17 +225,26 @@ export default {
             selectedTrader: null,
             traderData: null,
             loading: false,
-            activeTab: 'supplies',
-            activeTier: 'supplies_1',
-            exclusiveOnly: false,
             searchQuery: '',
             cache: {},
             // Price lookup: id -> base cost (st_upgr_cost)
             priceById: {},
+            // Origin classification per id, derived from per-category JSON factions array.
+            // Stored as primary origin string ('nato' | 'wp' | 'other') or null when unknown.
+            originById: {},
             // Tracks which category slugs have already been fetched for prices
             catPriceFetched: {},
             // Universal item data from items-common.json (id -> { name?, price? })
             itemsCommon: {},
+            // Filter + sort state (per trader; reset on trader change)
+            selectedCategories: [],
+            selectedOrigins: [],
+            selectedTiers: [],
+            stockedOnly: true,
+            filterPanelOpen: false,
+            sortMenuOpen: false,
+            sortKey: 'name',
+            sortAsc: true,
         };
     },
     computed: {
@@ -206,35 +262,56 @@ export default {
         supplyTierCount() {
             return this.supplyKeys.length;
         },
-        unlockCondition() {
-            if (!this.traderData?.buy_supplies) return null;
-            const match = this.traderData.buy_supplies.find(s => s[0] === this.activeTier);
-            if (!match || !match[1]) return null;
-            return this.parseCondition(match[1]);
-        },
-        currentSupplyItems() {
+        // Unified trader entries: union of supply-tier items and ids referenced by buy/sell
+        // condition multipliers. qty/prob come from the lowest tier the item appears in.
+        allEntries() {
             if (!this.traderData) return [];
-            return this.traderData[this.activeTier] || [];
+            const byId = new Map();
+            for (const key of this.supplyKeys) {
+                for (const row of (this.traderData[key] || [])) {
+                    const id = row[0];
+                    let e = byId.get(id);
+                    if (!e) {
+                        e = { id, tiers: [], qty: row[1], prob: row[2] ?? null, stocked: true };
+                        byId.set(id, e);
+                    }
+                    e.tiers.push(key);
+                }
+            }
+            for (const id of Object.keys(this.buyConditionMap)) {
+                if (!byId.has(id)) byId.set(id, { id, tiers: [], qty: null, prob: null, stocked: false });
+            }
+            for (const id of Object.keys(this.sellConditionMap)) {
+                if (!byId.has(id)) byId.set(id, { id, tiers: [], qty: null, prob: null, stocked: false });
+            }
+            return [...byId.values()];
         },
-        exclusiveSupplyItems() {
-            if (!this.traderData) return [];
-            const currentIdx = this.supplyKeys.indexOf(this.activeTier);
-            const priorIds = new Set(
-                this.supplyKeys.slice(0, currentIdx)
-                    .flatMap(k => (this.traderData[k] || []).map(item => item[0]))
-            );
-            return this.currentSupplyItems.filter(item => !priorIds.has(item[0]));
-        },
-        filteredSupplyItems() {
-            const base = this.exclusiveOnly ? this.exclusiveSupplyItems : this.currentSupplyItems;
+        filteredItems() {
             const q = this.searchQuery.trim().toLowerCase();
-            if (!q) return base;
-            return base.filter(item => {
-                if (item[0].toLowerCase().includes(q)) return true;
-                const resolved = this.resolveItem(item[0]);
-                if (resolved && this.tName(resolved).toLowerCase().includes(q)) return true;
-                return false;
+            const cats = this.selectedCategories;
+            const origins = this.selectedOrigins;
+            const tiers = this.selectedTiers;
+            const filtered = this.allEntries.filter(entry => {
+                if (this.stockedOnly && !entry.stocked) return false;
+                const id = entry.id;
+                if (q) {
+                    const idMatch = id.toLowerCase().includes(q);
+                    const resolved = this.resolveItem(id);
+                    const nameMatch = resolved && this.tName(resolved).toLowerCase().includes(q);
+                    if (!idMatch && !nameMatch) return false;
+                }
+                if (cats.length) {
+                    const resolved = this.resolveItem(id);
+                    if (!resolved || !cats.includes(resolved.category)) return false;
+                }
+                if (origins.length) {
+                    const f = this.originById[id];
+                    if (!Array.isArray(f) || !f.some(x => origins.includes(x))) return false;
+                }
+                if (tiers.length && !entry.tiers.some(k => tiers.includes(k))) return false;
+                return true;
             });
+            return this.sortEntries(filtered);
         },
         discountMap() {
             const m = { buy: 1, sell: 1 };
@@ -255,37 +332,50 @@ export default {
                 if (r[1] != null) map[r[0].replace(/_x$/, '')] = r[1];
             return map;
         },
-        priceItems() {
-            const buyMap = this.buyConditionMap;
-            const sellMap = this.sellConditionMap;
-
-            const ids = new Set();
-            for (const key of this.supplyKeys) {
-                for (const row of (this.traderData[key] || []))
-                    ids.add(row[0]);
+        availableCategories() {
+            const cats = new Set();
+            for (const e of this.allEntries) {
+                const resolved = this.resolveItem(e.id);
+                if (resolved?.category) cats.add(resolved.category);
             }
-            for (const id of Object.keys(buyMap))
-                ids.add(id);
-
-            const q = this.searchQuery.trim().toLowerCase();
-
-            return [...ids]
-                .map(id => ({ id, buy: buyMap[id] ?? null, sell: sellMap[id] ?? null }))
-                .filter(({ id }) => {
-                    if (!q) return true;
-                    if (id.toLowerCase().includes(q)) return true;
-                    const resolved = this.resolveItem(id);
-                    return resolved && this.tName(resolved).toLowerCase().includes(q);
-                })
-                .sort((a, b) => this.itemDisplayName(a.id).localeCompare(this.itemDisplayName(b.id)));
+            return [...cats].sort((a, b) => (this.tCat(a) || a).localeCompare(this.tCat(b) || b));
+        },
+        availableOrigins() {
+            const origins = new Set();
+            for (const e of this.allEntries) {
+                const f = this.originById[e.id];
+                if (Array.isArray(f)) for (const x of f) origins.add(x);
+            }
+            const ORDER = ['wp', 'nato', 'other'];
+            return [...origins].sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
+        },
+        activeFilterCount() {
+            return this.selectedCategories.length
+                + this.selectedOrigins.length
+                + this.selectedTiers.length;
+        },
+        sortableFields() {
+            return ['name', 'category', 'qty', 'prob', 'buy', 'sell'];
         },
     },
     watch: {
         packId: {
             immediate: true,
-            handler() { this.cache = {}; this.priceById = {}; this.catPriceFetched = {}; this.loadTradersMeta(); },
+            handler() {
+                this.cache = {};
+                this.priceById = {};
+                this.originById = {};
+                this.catPriceFetched = {};
+                this.loadTradersMeta();
+            },
         },
         selectedTrader() {
+            this.selectedCategories = [];
+            this.selectedOrigins = [];
+            this.selectedTiers = [];
+            this.stockedOnly = true;
+            this.sortKey = 'name';
+            this.sortAsc = true;
             this.loadTrader();
         },
     },
@@ -343,6 +433,10 @@ export default {
                                 if (!isNaN(cost) && cost > 0) {
                                     this.priceById[item.id] = cost;
                                 }
+                                const f = item.factions;
+                                if (Array.isArray(f) && f.length) {
+                                    this.originById[item.id] = f.slice();
+                                }
                             }
                         })
                         .catch(() => {})
@@ -360,12 +454,11 @@ export default {
         },
         categoryLabel(id) {
             const resolved = this.resolveItem(id);
-            const cat = resolved && this.tCat(resolved.category);
+            const cat = resolved && this.tCatSingular(resolved.category);
             return cat || this.t('app_trading_cat_misc');
         },
         selectTrader(id) {
             this.selectedTrader = id;
-            this.activeTier = 'supplies_1';
         },
         tierLabel(key) {
             if (key === 'supplies_generic') return this.t('app_trading_generic_tier') || 'Generic';
@@ -477,7 +570,6 @@ export default {
             const id = this.selectedTrader;
             if (this.cache[id]) {
                 this.traderData = this.cache[id];
-                this.resetTier();
                 return;
             }
             this.loading = true;
@@ -488,8 +580,7 @@ export default {
                 this.cache[id] = data;
                 if (this.selectedTrader === id) {
                     this.traderData = data;
-                    this.resetTier();
-                    this.prefetchPrices();
+                        this.prefetchPrices();
                 }
             } catch (e) {
                 console.error('Failed to load trader data:', e);
@@ -498,12 +589,103 @@ export default {
                 this.loading = false;
             }
         },
-        resetTier() {
-            const keys = Object.keys(this.traderData || {})
-                .filter(k => k.startsWith('supplies_'))
-                .sort();
-            this.activeTier = keys[0] || 'supplies_1';
-            this.exclusiveOnly = false;
+        toggleTier(key) {
+            const i = this.selectedTiers.indexOf(key);
+            if (i >= 0) this.selectedTiers.splice(i, 1);
+            else this.selectedTiers.push(key);
+        },
+        tierBadgeLabel(key) {
+            if (key === 'supplies_generic') return 'G';
+            return 'L' + key.replace('supplies_', '');
+        },
+        tierTooltip(key) {
+            const label = this.tierLabel(key);
+            const conds = this.tierUnlock(key);
+            if (!conds.length) return label;
+            const or = this.t('app_trading_or') || 'OR';
+            return `${label}: ${conds.join(' ' + or + ' ')}`;
+        },
+        tierUnlock(key) {
+            if (!this.traderData?.buy_supplies) return [];
+            const match = this.traderData.buy_supplies.find(s => s[0] === key);
+            if (!match || !match[1]) return [];
+            return this.parseCondition(match[1]);
+        },
+        toggleCategory(cat) {
+            const i = this.selectedCategories.indexOf(cat);
+            if (i >= 0) this.selectedCategories.splice(i, 1);
+            else this.selectedCategories.push(cat);
+        },
+        toggleOrigin(o) {
+            const i = this.selectedOrigins.indexOf(o);
+            if (i >= 0) this.selectedOrigins.splice(i, 1);
+            else this.selectedOrigins.push(o);
+        },
+        clearAllFilters() {
+            this.selectedCategories = [];
+            this.selectedOrigins = [];
+            this.selectedTiers = [];
+            this.stockedOnly = true;
+        },
+        closeFilterPanel() { this.filterPanelOpen = false; },
+        closeSortMenu() { this.sortMenuOpen = false; },
+        pickSort(field) {
+            this.sortKey = field;
+            this.sortMenuOpen = false;
+        },
+        sortFieldLabel(field) {
+            const FALLBACK = { name: 'Name', category: 'Category', qty: 'Quantity', prob: 'Probability', buy: 'Buy price', sell: 'Sell price' };
+            const KEYS = {
+                name: 'app_trading_item',
+                category: 'app_trading_filter_category',
+                qty: 'app_trading_quantity',
+                prob: 'app_trading_probability',
+                buy: 'app_trading_sort_buy',
+                sell: 'app_trading_sort_sell',
+            };
+            const k = KEYS[field];
+            if (!k) return FALLBACK[field] || field;
+            const v = this.t(k);
+            return v && v !== k ? v : (FALLBACK[field] || field);
+        },
+        originLabel(o) {
+            if (o === 'nato') return 'NATO';
+            if (o === 'wp') return 'WP';
+            const v = this.t('app_origin_other');
+            return v && v !== 'app_origin_other' ? v : 'Other';
+        },
+        compareForKey(a, b, key) {
+            const aId = a.id, bId = b.id;
+            switch (key) {
+                case 'name':
+                    return this.itemDisplayName(aId).localeCompare(this.itemDisplayName(bId));
+                case 'category': {
+                    const ac = this.resolveItem(aId)?.category || '';
+                    const bc = this.resolveItem(bId)?.category || '';
+                    return (this.tCat(ac) || ac).localeCompare(this.tCat(bc) || bc);
+                }
+                case 'qty':
+                    return (a.qty ?? 0) - (b.qty ?? 0);
+                case 'prob':
+                    return (a.prob ?? 1) - (b.prob ?? 1);
+                case 'buy':
+                    return (this.buyPrice(aId) ?? Infinity) - (this.buyPrice(bId) ?? Infinity);
+                case 'sell':
+                    return (this.sellPrice(aId) ?? Infinity) - (this.sellPrice(bId) ?? Infinity);
+                default:
+                    return 0;
+            }
+        },
+        sortEntries(items) {
+            const key = this.sortKey;
+            const dir = this.sortAsc ? 1 : -1;
+            const arr = items.slice();
+            arr.sort((a, b) => {
+                const c = this.compareForKey(a, b, key);
+                if (c !== 0) return c * dir;
+                return this.itemDisplayName(a.id).localeCompare(this.itemDisplayName(b.id));
+            });
+            return arr;
         },
     },
 };
@@ -577,23 +759,7 @@ export default {
     background: none; border: none; color: var(--text-secondary); font-size: 1.1rem; cursor: pointer; line-height: 1;
 }
 
-/* Tabs */
-.trading-tabs { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 0; }
-.trading-tab {
-    display: flex; align-items: center; gap: 0.35rem;
-    padding: 0.55rem 1rem; background: none; border: none;
-    border-bottom: 2px solid transparent; margin-bottom: -2px;
-    color: var(--text-secondary);
-    font-family: var(--font-display);
-    font-size: 0.8rem; font-weight: 500;
-    letter-spacing: 0.02em;
-    cursor: pointer;
-    transition: color 0.15s, border-color 0.15s;
-}
-.trading-tab:hover { color: var(--text); }
-.trading-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
-
-/* Discount chips (now inline in controls bar) */
+/* Discount chips (inline in controls bar) */
 .trading-meta-chips {
     display: inline-flex;
     align-items: center;
@@ -648,94 +814,273 @@ export default {
     flex-wrap: wrap;
 }
 .trading-controls-row .trading-search-wrap {
-    margin-left: auto;
     max-width: 18rem;
+    flex: 1 1 14rem;
 }
-.trading-tier-segment {
+.trading-controls-row .trading-meta-chips {
+    margin-left: auto;
+}
+/* Tier badges on item tiles */
+.trading-item-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-width: 0;
+}
+.trading-item-meta-row .trading-item-cat { flex: 0 1 auto; min-width: 0; }
+.trading-item-tiers {
     display: inline-flex;
+    gap: 0.2rem;
+    flex-shrink: 0;
+}
+.trading-tier-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.2rem;
+    height: 0.95rem;
+    padding: 0 0.25rem;
+    border: 1px solid var(--accent-dim, var(--accent));
+    border-radius: 3px;
+    background: var(--color-accent-tint-12);
+    color: var(--accent);
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.6rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+/* Filter / sort menu buttons (controls bar) */
+.trading-menu-wrap { position: relative; display: inline-flex; }
+.trading-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    height: 1.85rem;
+    padding: 0 0.6rem;
     border: 1px solid var(--border);
     border-radius: 6px;
     background: var(--card);
-    padding: 2px;
-    box-shadow: inset 0 1px 2px var(--color-overlay-black-40);
-}
-/* Compact tier <select> — desktop hides this, mobile swaps it in for the segment */
-.trading-tier-select {
-    display: none;
-    height: 1.85rem;
-    padding: 0 1.6rem 0 0.6rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background:
-        linear-gradient(45deg, transparent 50%, var(--text-secondary) 50%) calc(100% - 0.7rem) 50% / 5px 5px no-repeat,
-        var(--card);
-    color: var(--text);
+    color: var(--text-secondary);
     font-family: var(--font-display);
     font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.04em;
     cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
     box-shadow: inset 0 1px 2px var(--color-overlay-black-40);
 }
-.trading-tier-select:focus { outline: none; border-color: var(--accent); }
-.trading-tier-btn {
-    padding: 0.3rem 0.7rem;
-    border: none;
-    border-radius: 4px;
-    background: transparent;
-    color: var(--text-secondary);
-    font-family: var(--font-display);
-    font-size: 0.72rem; font-weight: 500;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    transition: color 0.15s, background 0.15s;
+.trading-menu-btn:hover { color: var(--text); border-color: var(--text-secondary); }
+.trading-menu-btn.active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--color-accent-tint-12);
 }
-.trading-tier-btn:hover { color: var(--text); }
-.trading-tier-btn.active {
-    background: var(--accent);
-    color: var(--color-black);
-    box-shadow: 0 1px 3px var(--color-overlay-black-50);
+.trading-menu-btn.has-active { color: var(--text); }
+.trading-menu-btn-label { max-width: 7rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.trading-menu-btn-dir {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--accent);
+    margin-left: 0.1rem;
 }
-
-/* Exclusive-only toggle with inline label */
-.trading-exclusive-toggle {
+.trading-menu-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    user-select: none;
+    justify-content: center;
+    min-width: 1rem;
+    height: 1rem;
+    padding: 0 0.3rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--color-black, #000);
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.6rem;
+    font-weight: 700;
+    line-height: 1;
 }
-.trading-exclusive-label {
+
+/* Popover (used for both filter + sort) */
+.trading-popover {
+    position: absolute;
+    top: calc(100% + 0.35rem);
+    left: 0;
+    z-index: 20;
+    min-width: 14rem;
+    max-width: 22rem;
+    padding: 0.6rem;
+    background: var(--color-surface-2, var(--card));
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 12px 28px -8px var(--color-overlay-black-70), 0 2px 6px var(--color-overlay-black-40);
+}
+.trading-popover--sort { min-width: 11rem; padding: 0.35rem; }
+.trading-popover-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0 0.1rem 0.4rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.45rem;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+}
+.trading-popover-clear {
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    color: var(--accent);
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: 0;
+}
+.trading-popover-clear:hover { text-decoration: underline; }
+.trading-popover-group { margin-bottom: 0.55rem; }
+.trading-popover-group:last-child { margin-bottom: 0; }
+.trading-popover-label {
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    padding: 0.25rem 0.35rem;
+}
+.trading-popover-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.1rem;
+}
+.trading-popover-chip {
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--text-secondary);
     font-family: var(--font-display);
     font-size: 0.7rem;
     font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.trading-popover-chip:hover { color: var(--text); border-color: var(--text-secondary); }
+.trading-popover-chip.active {
+    background: var(--accent);
+    color: var(--color-black, #000);
+    border-color: var(--accent);
+}
+.trading-popover-chip.origin-nato.active { background: #4f8ef7; border-color: #4f8ef7; color: #fff; }
+.trading-popover-chip.origin-wp.active { background: #ef4444; border-color: #ef4444; color: #fff; }
+.trading-popover-empty {
+    padding: 0.5rem;
+    text-align: center;
     color: var(--text-secondary);
-    letter-spacing: 0.04em;
-    transition: color 0.15s;
+    font-size: 0.72rem;
 }
-.trading-exclusive-toggle:hover .trading-exclusive-label { color: var(--text); }
-
-/* Unlock condition */
-.trading-unlock-condition {
-    display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem;
-    padding: 0.25rem 0.5rem; background: rgba(245,158,11,0.06);
-    border: 1px solid rgba(245,158,11,0.2); border-radius: 4px;
-    margin-bottom: 0.5rem; font-size: 0.68rem;
+.trading-popover-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.35rem;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.12s;
 }
-.trading-unlock-icon { font-size: 0.8rem; flex-shrink: 0; opacity: 0.85; }
-.trading-unlock-badge {
-    padding: 0.1rem 0.4rem; background: rgba(245,158,11,0.15);
-    border: 1px solid rgba(245,158,11,0.35); border-radius: 3px;
-    color: #f59e0b;
+.trading-popover-toggle:hover { background: var(--color-overlay-white-6); }
+.trading-popover-toggle-label {
     font-family: var(--font-display);
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    white-space: nowrap;
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: var(--text);
 }
-.trading-unlock-or { font-size: 0.6rem; font-weight: 700; color: var(--text-secondary); letter-spacing: 0.05em; text-transform: uppercase; }
+.trading-popover-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0.35rem 0;
+}
+
+/* Sort menu items */
+.trading-sort-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0.35rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background: none;
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 0.74rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.12s, color 0.12s;
+}
+.trading-sort-item:hover { background: var(--color-overlay-white-6); }
+.trading-sort-item.active { color: var(--accent); }
+.trading-sort-check {
+    display: inline-flex;
+    justify-content: center;
+    width: 0.9rem;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+}
+
+/* Active filter chip strip */
+.trading-active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.4rem;
+}
+.trading-active-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.15rem 0.2rem 0.15rem 0.5rem;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    background: var(--color-accent-tint-12);
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 500;
+}
+.trading-active-chip-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.05rem;
+    height: 1.05rem;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--accent);
+    font-size: 0.85rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+}
+.trading-active-chip-remove:hover { background: var(--accent); color: var(--color-black, #000); }
+.trading-active-clear {
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    color: var(--accent);
+    text-decoration: none;
+    margin-left: 0.25rem;
+}
+.trading-active-clear:hover { text-decoration: underline; }
 
 /* Items grid */
 .trading-items-grid {
@@ -744,8 +1089,12 @@ export default {
     gap: 0.5rem;
 }
 .trading-item-card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    column-gap: 0.5rem;
+    row-gap: 0.25rem;
+    align-items: start;
     padding: 0.4rem 0.55rem;
     background: var(--card);
     border: 1px solid var(--border);
@@ -754,7 +1103,6 @@ export default {
     text-decoration: none;
     color: inherit;
     cursor: default;
-    gap: 0.2rem;
 }
 .trading-item-card--linked {
     cursor: pointer;
@@ -764,7 +1112,7 @@ export default {
     border-color: var(--accent);
     background: var(--color-overlay-white-6);
 }
-.trading-item-info { flex: 1; min-width: 0; }
+.trading-item-info { grid-column: 1; grid-row: 1; min-width: 0; }
 .trading-item-name {
     font-family: var(--font-display);
     font-size: 0.78rem; font-weight: 600;
@@ -781,13 +1129,12 @@ export default {
     color: var(--accent);
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.trading-item-stats {
-    display: flex; align-items: center; gap: 0.5rem;
-    flex-shrink: 0;
-}
-/* Prices row */
+/* Prices row (now spans both columns under name+qty header) */
 .trading-item-prices {
+    grid-column: 1 / -1;
+    grid-row: 2;
     display: flex;
+    align-items: center;
     gap: 0.4rem;
     flex-wrap: wrap;
 }
@@ -798,26 +1145,23 @@ export default {
     font-family: var(--mono);
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum" 1, "calt" 0;
-    font-size: 0.65rem;
-    font-weight: 600;
-    padding: 0.1rem 0.35rem;
-    border-radius: 3px;
+    font-size: 0.68rem;
+    font-weight: 500;
 }
-.trading-price--buy {
-    color: #22c55e;
-    background: rgba(34, 197, 94, 0.1);
-    border: 1px solid rgba(34, 197, 94, 0.25);
-}
-.trading-price--sell {
-    color: #f59e0b;
-    background: rgba(245, 158, 11, 0.1);
-    border: 1px solid rgba(245, 158, 11, 0.25);
-}
+.trading-price--buy { color: #22c55e; }
+.trading-price--sell { color: #f59e0b; }
 .trading-item-qty {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
     font-family: var(--mono);
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum" 1, "calt" 0;
-    font-size: 0.72rem; font-weight: 600; color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.2;
 }
 .trading-item-prob {
     position: relative;
@@ -918,9 +1262,7 @@ export default {
     }
     .trading-items-grid { grid-template-columns: 1fr; }
 
-    /* Tier segment → compact select; hide ambient discount chips */
-    .trading-tier-segment { display: none; }
-    .trading-tier-select { display: inline-block; }
+    /* Hide ambient discount chips on mobile to save room */
     .trading-meta-chips { display: none; }
 
     /* Trader pills: horizontal scroll instead of wrapping (would consume full viewport) */
