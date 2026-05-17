@@ -1,7 +1,7 @@
 # TODO
 
-- [ ] See the max gun stats with all upgrades applied for that stat (e.g. max accuracy assuming choose all the accuracy upgrades)
-- [ ] See which guns can take a launcher attachment (a filter) 
+- [x] See the max gun stats with all upgrades applied for that stat (e.g. max accuracy assuming choose all the accuracy upgrades)
+- [x] See which guns can take a launcher attachment (a filter) 
 - [ ] See which guns can switch ammo types (so ammo filter could pick those up optionally)
 - [ ] The Winchester doesn't show any compatible scopes even though it can take the side-mount telescope, not exactly sure why this happens
 - [ ] Currently it doesn't show the grenade launcher even if it has an upgrade for it
