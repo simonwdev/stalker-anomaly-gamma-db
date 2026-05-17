@@ -8,4 +8,3 @@
 - [ ] (BLOCKED on data script changes) Idea for amors: show a table of effective damage mitigation considering the BRC and BR that it provides at different breakpoints (HP/FMJ/AP)
 - [ ] (From: 𝖉𝖗𝖆𝖎𝖓𝖊𝖗 𝟙𝟜/𝖞.𝖔) Add achievement requirements and buffs - perhaps a "library" tab?.
 - [ ] Save files not loading on map?
-test
