@@ -277,7 +277,7 @@ a:hover {
 }
 
 /* Compatible weapons badge (clickable count in table/grid) */
-.compat-weapons-badge {
+.badge-flag.compat-weapons-badge {
     cursor: pointer;
     text-transform: none;
     letter-spacing: normal;
@@ -285,12 +285,14 @@ a:hover {
     display: inline-flex;
     align-items: center;
     gap: 0.1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
-.compat-weapons-badge svg { opacity: 0.5; }
-.compat-weapons-badge:hover {
+.badge-flag.compat-weapons-badge svg { flex-shrink: 0; opacity: 0.5; }
+.badge-flag.compat-weapons-badge:hover {
     background: var(--color-blue-tint-20);
 }
-.compat-weapons-badge:hover svg { opacity: 0.8; }
+.badge-flag.compat-weapons-badge:hover svg { opacity: 0.8; }
 
 /* Compatible weapons click popover */
 .weapon-list-popover {
