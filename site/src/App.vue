@@ -187,6 +187,7 @@
                 :build-planner-active="buildPlannerActive"
                 :version-compare-active="versionCompareActive"
                 :starting-loadouts-active="startingLoadoutsActive"
+                :is-weapon-section="isWeaponSection"
                 @update:filter-input="filterInput = $event"
                 @clear-filter-input="filterInput = ''; filterQuery = ''"
                 @clear-all-filters="clearAllFilters()"
@@ -208,6 +209,7 @@
                 @toggle-hide-no-drop="toggleHideNoDrop()"
                 @toggle-hide-unused-ammo="toggleHideUnusedAmmo()"
                 @toggle-show-tile-icons="toggleShowTileIcons()"
+                @open-weapon-help="weaponMechanicsOpen = true"
             />
             <div v-if="favoritesViewActive && favoriteIds.length === 0" class="favorites-empty">
                 <p>{{ t('app_label_no_favorites_1') }} <span class="fav-icon-inline">&#9734;</span> {{ t('app_label_no_favorites_2') }}</p>
@@ -498,6 +500,7 @@
     @copy-item-id="copyItemId"
     @copy-modal-link="copyModalLink()"
     @pick-compare-pack="pickComparePack"
+    @open-weapon-help="weaponMechanicsOpen = true"
 />
 
 <BuildSaveModal
@@ -557,6 +560,11 @@
     @close="shortcutHelpOpen = false"
 />
 
+<WeaponMechanicsModal
+    :open="weaponMechanicsOpen"
+    @close="weaponMechanicsOpen = false"
+/>
+
 <QuickNavModal
     :open="quickNavOpen"
     :groupedCategories="groupedCategories"
@@ -613,6 +621,7 @@ import SaveImportModal from "./components/modals/SaveImportModal.vue";
 import BuildPickerModal from "./components/modals/BuildPickerModal.vue";
 import QuickNavModal from "./components/modals/QuickNavModal.vue";
 import ShortcutHelpModal from "./components/modals/ShortcutHelpModal.vue";
+import WeaponMechanicsModal from "./components/modals/WeaponMechanicsModal.vue";
 
 export default {
   ...appDefinition,
@@ -639,6 +648,7 @@ export default {
     QuickNavModal,
     SaveImportModal,
     ShortcutHelpModal,
+    WeaponMechanicsModal,
     SidebarNav,
     ToolkitRatesView,
     VersionCompareView,

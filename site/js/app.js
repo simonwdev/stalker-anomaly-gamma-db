@@ -171,6 +171,7 @@ export const appDefinition = {
             versionComparePropertyFilter: [],
             versionCompareCategoryFilter: [],
             shortcutHelpOpen: false,
+            weaponMechanicsOpen: false,
             quickNavOpen: false,
             _chordKey: null,
             _chordTimer: null,
@@ -490,6 +491,10 @@ export const appDefinition = {
 
         versionCompareTotal() {
             return this.versionCompareResults.reduce((sum, g) => sum + g.items.length, 0);
+        },
+
+        isWeaponSection() {
+            return WEAPON_CATEGORIES.includes(this.activeCategory) || this.activeCategory === CAT.ALL_WEAPONS;
         },
 
         versionComparePropertyKeys() {
@@ -4803,6 +4808,8 @@ export const appDefinition = {
                 this.dismissWhatsNew();
             } else if (this.shortcutHelpOpen) {
                 this.shortcutHelpOpen = false;
+            } else if (this.weaponMechanicsOpen) {
+                this.weaponMechanicsOpen = false;
             } else if (this.buildImportCodeModalOpen) {
                 this.buildImportCodeModalOpen = false;
             } else if (this.buildSaveModalOpen) {
@@ -6807,7 +6814,7 @@ export const appDefinition = {
             const isModalOpen = () =>
                 this.modalOpen || this.quickNavOpen || this.buildPickerOpen ||
                 this.buildSaveModalOpen || this.buildImportCodeModalOpen ||
-                this.saveImportModalOpen || this.shortcutHelpOpen;
+                this.saveImportModalOpen || this.shortcutHelpOpen || this.weaponMechanicsOpen;
 
             const onTouchStart = (e) => {
                 swipeTouchStartX = e.touches[0].clientX;
