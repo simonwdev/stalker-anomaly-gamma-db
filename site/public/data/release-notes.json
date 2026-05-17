@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-05-17",
+    "entries": [
+      { "type": "added", "text": "Weapon detail modal now includes a Max Upgraded Stats section showing the best achievable values with all upgrades applied.", "credits": [{ "name": "Evincars", "role": "code" }] },
+      { "type": "added", "text": "New Has Grenade Launcher filter for weapon categories.", "credits": [{ "name": "Evincars", "role": "code" }] }
+    ]
+  },
+  {
     "date": "2026-05-16",
     "entries": [
       { "type": "added", "text": "Weapons, ammo, and addons now show an Origin badge (NATO / WP / Other) and can be filtered by it.", "credits": [{ "name": "cXy", "role": "suggestion" }] },
