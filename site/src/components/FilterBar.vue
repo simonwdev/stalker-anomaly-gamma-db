@@ -10,7 +10,10 @@
                         @input="$emit('update:filterInput', $event.target.value)"
                     >
                     <button v-if="filterInput" class="filter-input-clear" @click="$emit('clearFilterInput')">&times;</button>
-                    <button v-if="availableFilters.length > 0" class="filter-btn" @click.stop="toggleFilterPanel()" v-tooltip="t('app_label_filters')">
+                    <button v-if="isWeaponSection" class="weapon-help-btn" @click="$emit('openWeaponHelp')" v-tooltip="t('app_label_weapon_mechanics_help')">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    </button>
+                <button v-if="availableFilters.length > 0" class="filter-btn" @click.stop="toggleFilterPanel()" v-tooltip="t('app_label_filters')">
                         <LucideSlidersHorizontal :size="14" />
                         <span v-if="activeFilterCount > 0" class="filter-badge">{{ activeFilterCount }}</span>
                     </button>
@@ -261,6 +264,7 @@ export default {
         buildPlannerActive: { type: Boolean, default: false },
         versionCompareActive: { type: Boolean, default: false },
         startingLoadoutsActive: { type: Boolean, default: false },
+        isWeaponSection: { type: Boolean, default: false },
     },
     emits: [
         'update:filterInput',
@@ -283,6 +287,7 @@ export default {
         'downloadData',
         'toggleHideNoDrop',
         'toggleHideUnusedAmmo',
+        'openWeaponHelp',
     ],
     data() {
         return {

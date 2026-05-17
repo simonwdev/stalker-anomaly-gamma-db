@@ -121,7 +121,7 @@
                 </div>
 
                 <div class="drop-sources" :class="{ collapsed: isCollapsed('stats') }">
-                    <h2 class="section-toggle" @click="toggleSection('stats')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_stats') }}</h2>
+                    <h2 class="section-toggle" @click="toggleSection('stats')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_stats') }}<button v-if="isWeaponItem" class="stats-help-btn" @click.stop="$emit('openWeaponHelp')" v-tooltip="t('app_label_weapon_mechanics_help')"><LucideInfo :size="13" /></button></h2>
                     <div class="stat-grid">
                         <div v-for="row in modalStatRows" :key="row.key" :class="row.isSection ? 'stat-section' : 'stat-row'">
                             <template v-if="row.isSection">
@@ -436,7 +436,7 @@ export default {
   },
   emits: [
     'closeModal', 'navigateModal', 'navigateToItem', 'toggleFavorite', 'togglePin',
-    'copyItemId', 'copyModalLink', 'pickComparePack',
+    'copyItemId', 'copyModalLink', 'pickComparePack', 'openWeaponHelp',
   ],
   data() {
     return {
@@ -462,6 +462,10 @@ export default {
     hasWeaponAddons() {
       const a = this.modalWeaponAddons;
       return a.scopes.length > 0 || a.silencers.length > 0 || a.launchers.length > 0 || a.kits.length > 0;
+    },
+    isWeaponItem() {
+      const WEAPON_CATS = new Set(['Pistols','SMGs','Shotguns','Rifles','Snipers','Launchers','Melee','All Weapons']);
+      return WEAPON_CATS.has(this.modalCategory);
     },
     isAddonItem() {
       return ['Scopes', 'Silencers', 'Grenade Launchers', 'Tactical Kits'].includes(this.modalCategory);
@@ -862,4 +866,23 @@ export default {
 
 .upg-bad { color: var(--color-red-muted); }
 .upg-bad.max-stat-delta { background: color-mix(in srgb, var(--color-red-muted) 12%, transparent); }
+
+.stats-help-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.4rem;
+    padding: 0.1rem;
+    border: none;
+    background: transparent;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    border-radius: 3px;
+    vertical-align: middle;
+    transition: color 0.15s;
+    line-height: 0;
+}
+.stats-help-btn:hover {
+    color: var(--color-accent);
+}
 </style>

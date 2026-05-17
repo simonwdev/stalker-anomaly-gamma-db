@@ -1650,6 +1650,25 @@ a.tile-card-name:hover {
     background: var(--color-overlay-white-8);
     color: var(--text);
 }
+.weapon-help-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: calc(100% - 4px);
+    margin: 2px;
+    border-radius: 3px;
+    border: none;
+    background: transparent;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+.weapon-help-btn:hover {
+    background: var(--color-overlay-white-8);
+    color: var(--color-accent);
+}
 .filter-badge {
     position: absolute;
     top: -0.3rem;
