@@ -187,10 +187,10 @@
                 <span class="item-count" v-if="!isOutfitExchange && !isCrafting">{{ sortedItems.length }} {{ t('app_label_items') }}</span>
                 <span class="item-count" v-if="isCrafting">{{ craftingItemCount }} {{ t('app_label_recipes') }}</span>
                 <span class="item-count" v-if="isOutfitExchange && outfitExchange">{{ filteredExchanges.length }} {{ t('app_label_exchanges') }}</span>
-                <button v-if="isWeaponSection" class="copy-link-btn" @click="$emit('openWeaponHelp')" v-tooltip="t('app_label_weapon_mechanics_help')">
+                <button v-if="isWeaponSection" class="copy-link-btn" style="margin-left: auto" @click="$emit('openWeaponHelp')" v-tooltip="t('app_label_weapon_mechanics_help')">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
                 </button>
-                <div class="view-toggle" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCrafting && !isToolkitRates">
+                <div class="view-toggle" :style="isWeaponSection ? 'margin-left: 0' : ''" v-show="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCrafting && !isToolkitRates">
                     <button :class="{ active: viewMode === 'table' }" @click="$emit('setViewMode', 'table')" v-tooltip="t('app_label_table_view')">
                         <LucideList :size="16" />
                     </button>
