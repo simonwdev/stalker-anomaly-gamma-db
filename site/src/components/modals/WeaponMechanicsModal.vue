@@ -12,7 +12,7 @@
 
             <!-- Section 1: Stat Card -->
             <div class="wm-source">
-                Taken from the <a class="wm-link" href="https://discord.com/channels/912320241713958912/976570969768476753/1400944581960274011" target="_blank" rel="noopener noreferrer">GAMMA channel</a>
+                <i style="font-size: 13px;">Taken from the official <a class="wm-link" href="https://discord.com/channels/912320241713958912/976570969768476753/1400944581960274011" target="_blank" rel="noopener noreferrer">FAQ GAMMA channel</a></i>
             </div>
             <div class="wm-section">
                 <h3 class="wm-section-title">📋 Stat Card: What Do They Mean?</h3>
@@ -80,7 +80,7 @@
 
             <!-- Section 3: Reliability deep-dive -->
             <div class="wm-section">
-                <h3 class="wm-section-title">🎲 Reliability: How It Actually Works</h3>
+                <h3 class="wm-section-title">Reliability: How It Actually Works</h3>
                 <p class="wm-note wm-note--warn">⚠ Contains algebra</p>
 
                 <h4 class="wm-sub">Step 1 — Convert stat to internal value</h4>
@@ -140,7 +140,7 @@ export default {
 
 <style scoped>
 .wm-modal {
-    max-width: 680px;
+    max-width: 780px;
     width: 100%;
 }
 .wm-title {
@@ -150,7 +150,7 @@ export default {
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin: 0 0 1.25rem;
+    margin: 0 0 0.6rem;
     padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--border);
 }
@@ -158,12 +158,18 @@ export default {
     color: var(--color-accent);
     flex-shrink: 0;
 }
-.wm-credit {
-    margin-left: auto;
-    font-size: 0.72rem;
-    font-weight: 400;
+.wm-source {
+    font-size: 0.75rem;
     color: var(--text-tertiary);
-    font-style: italic;
+    margin-bottom: 1.1rem;
+}
+.wm-link {
+    color: var(--color-accent-lighter, var(--color-accent));
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.wm-link:hover {
+    color: var(--text-primary);
 }
 .wm-section {
     margin-bottom: 1.5rem;
