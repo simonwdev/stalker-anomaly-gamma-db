@@ -5877,11 +5877,14 @@ kbd {
     align-items: center;
     padding: 0.35rem 0.5rem;
     border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 0.25rem;
 }
 .build-stats-header-actions {
     display: flex;
     gap: 0.25rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 .build-expand-all-btn {
     background: none;
@@ -6161,6 +6164,8 @@ kbd {
     align-items: center;
     padding: 0.35rem 0.5rem;
     border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 0.25rem;
 }
 .build-inventory-sort-btn {
     display: flex;
@@ -6337,6 +6342,7 @@ kbd {
     grid-column: 1 / -1;
     display: flex;
     gap: 4px;
+    flex-wrap: wrap;
 }
 .build-weapon-toggle-btn {
     padding: 0.2rem 0.6rem;
