@@ -1498,6 +1498,16 @@ a.tile-card-name:hover {
 .settings-wrap {
     position: relative;
 }
+/* Filter-bar mobile settings button: hidden on desktop (nav-bar has it there) */
+.filter-bar-settings-btn {
+    display: none;
+}
+/* Backdrop for the Teleported filter-bar settings panel */
+.filter-bar-settings-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+}
 .settings-btn {
     display: inline-flex;
     align-items: center;
@@ -4249,6 +4259,10 @@ kbd {
         pointer-events: auto;
     }
     .nav-bar .settings-wrap .settings-menu { right: 0.25rem; }
+    /* On mobile the settings icon moves into the filter-bar; hide it from the nav-bar */
+    .nav-bar .settings-wrap { display: none; }
+    /* Show the filter-bar settings button only on mobile */
+    .filter-bar-settings-btn { display: inline-flex; }
 
     /* What's New banner: center horizontally */
     .whats-new-banner { left: 0.75rem; right: 0.75rem; width: auto; max-width: none; }
