@@ -1960,4 +1960,75 @@ export default defineComponent({
   font-size: 0.75rem;
   margin: 0;
 }
+
+/* ── Mobile / small-screen fixes ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .damage-sim {
+    padding-right: 0.5rem;
+    /* do NOT add overflow-x: hidden – that clips content instead of fitting it */
+  }
+
+  /* KEY FIX: grid items must have min-width: 0 so they respect their track
+     width and don't push the column (and the page) wider than the viewport. */
+  .damage-sim-panel {
+    min-width: 0;
+  }
+
+  /* Topbar: allow credit + actions to wrap on tiny screens */
+  .damage-sim-topbar {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .damage-sim-actions {
+    flex-wrap: wrap;
+  }
+
+  /* ── Toggle groups ────────────────────────────────────────────────────── *
+   * Buttons default to min-width:auto which means they refuse to shrink     *
+   * below their text content.  6 faction buttons × ~68 px = ~408 px on a   *
+   * 375 px screen → overflow.  Fix: drop the shared-border approach, give  *
+   * every button its own border and let the group wrap freely.              */
+  .damage-sim-toggle-group {
+    flex-wrap: wrap;
+    overflow: visible;
+    border: none;           /* outer border replaced by per-button borders   */
+    gap: 0.3rem;
+  }
+  .damage-sim-toggle-group button {
+    flex: 1 1 auto;
+    min-width: 0;           /* allow shrinking below content width           */
+    border: 1px solid var(--border) !important;
+    border-radius: 3px !important;
+  }
+  .damage-sim-toggle-group button + button {
+    border-left: 1px solid var(--border) !important;
+  }
+  .damage-sim-toggle-group button.active {
+    border-color: var(--accent-dim) !important;
+  }
+
+  /* ── Loadout row ──────────────────────────────────────────────────────── *
+   * Allow wrapping so weapon + ammo slots stack on very narrow screens.     *
+   * The slots already have flex:1 + min-width:0 + text-overflow:ellipsis   *
+   * so on most 375 px+ screens they stay on one row and just truncate.      */
+  .damage-sim-loadout-row {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+  }
+  .damage-sim-loadout-row > .damage-sim-slot {
+    /* each slot can claim a full row on its own when space is too tight */
+    flex: 1 1 8rem;
+    min-width: 0;
+  }
+
+  /* ── Slot meta text ───────────────────────────────────────────────────── *
+   * "Body X · Head X · AP Scale X · Hit Frac X" – very long, no wrapping.  */
+  .damage-sim-slot-meta {
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    font-size: 0.55rem;
+    line-height: 1.4;
+  }
+}
 </style>
