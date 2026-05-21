@@ -60,6 +60,13 @@
                                         @click="$emit('toggleFlagFilter', def.key, false)"
                                     >{{ t('app_label_no') }}</button>
                                 </div>
+                                <div v-else-if="def.type === 'present'" class="filter-chips">
+                                    <button
+                                        class="filter-chip"
+                                        :class="{ active: activeFilters[def.key] === true }"
+                                        @click="$emit('toggleFlagFilter', def.key, true)"
+                                    >{{ t('app_label_yes') }}</button>
+                                </div>
                             </div>
                         </template>
                         <div v-if="rangeFilters.length > 0" class="range-filters-grid">
@@ -187,6 +194,8 @@
                 <span class="item-count" v-if="!isOutfitExchange && !isCrafting">{{ sortedItems.length }} {{ t('app_label_items') }}</span>
                 <span class="item-count" v-if="isCrafting">{{ craftingItemCount }} {{ t('app_label_recipes') }}</span>
                 <span class="item-count" v-if="isOutfitExchange && outfitExchange">{{ filteredExchanges.length }} {{ t('app_label_exchanges') }}</span>
+                <!-- Spacer: grows on desktop to push right-side controls to the far right -->
+                <span class="filter-bar-spacer" aria-hidden="true"></span>
                 <button v-if="isWeaponSection" class="weapon-help-btn" @click="$emit('openWeaponHelp')" v-tooltip="t('app_label_weapon_mechanics_help')">
                     <LucideInfo :size="16" />
                 </button>

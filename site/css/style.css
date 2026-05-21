@@ -1135,9 +1135,13 @@ button.header-link {
 }
 
 /* View toggle */
+/* Spacer: takes all leftover flex space on desktop, pushing right-side controls to the edge */
+.filter-bar-spacer {
+    flex: 1;
+    min-width: 0;
+}
 .view-toggle {
     display: flex;
-    margin-left: auto;
     flex-shrink: 0;
 }
 .view-toggle button {
@@ -1667,7 +1671,6 @@ a.tile-card-name:hover {
     flex-shrink: 0;
     width: 1.75rem;
     height: 1.75rem;
-    margin-left: auto;
     border-radius: 3px;
     border: none;
     background: transparent;
@@ -1678,9 +1681,6 @@ a.tile-card-name:hover {
 .weapon-help-btn:hover {
     background: var(--color-overlay-white-8);
     color: var(--color-accent);
-}
-.weapon-help-btn + .view-toggle {
-    margin-left: 0.25rem;
 }
 .filter-badge {
     position: absolute;
@@ -4304,6 +4304,9 @@ kbd {
     .filter-input-group { flex: 1 1 100%; max-width: none; min-width: 0; order: 1; }
     .sort-wrap { order: 2; }
     .filter-bar .item-count { display: none; }
+    /* On mobile: spacer is hidden so individual auto-margins handle alignment */
+    .filter-bar-spacer { display: none; }
+    .weapon-help-btn { margin-left: auto; }
     .view-toggle { order: 3; margin-left: auto; }
     .utility-group { order: 4; }
 

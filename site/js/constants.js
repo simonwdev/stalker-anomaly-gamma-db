@@ -25,7 +25,8 @@ export const FILTER_DEFS = [
     { key: "Type", type: "discrete", label: "app_filter_weapon_type", dynamic: true },
     { key: "factions", type: "discrete", label: "app_filter_origin", values: ["nato", "wp", "other"], displayMap: { nato: "NATO", wp: "WP", other: "Other" }, arrayField: true },
     { key: "_effects", type: "has-effect", label: "app_filter_provides_effect", fields: EFFECT_FIELDS },
-    { key: "_has_launcher", type: "flag", label: "app_filter_has_launcher" },
+    { key: "_has_launcher", type: "present", label: "app_filter_has_launcher" },
+    { key: "st_data_export_ammo_types_alt", type: "present", label: "app_filter_has_alt_ammo" },
 ];
 
 export const NAME_TAG_COLS = new Set(["st_data_export_has_perk", "st_data_export_is_junk", "st_data_export_can_be_crafted", "ui_mcm_menu_exo", "st_data_export_can_be_cooked", "st_data_export_used_in_cooking", "st_data_export_used_in_crafting", "st_data_export_cuts_thick_skin"]);
