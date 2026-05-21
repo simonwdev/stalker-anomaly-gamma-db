@@ -277,6 +277,7 @@
     --text:          var(--color-text);
     --text-primary:  var(--color-text);
     --text-secondary: var(--color-text-secondary);
+    --text-tertiary:  var(--color-text-tertiary);
     --accent:        var(--color-accent);
     --accent-dim:    var(--color-accent-dim);
     /* Added by apply-color-palette */

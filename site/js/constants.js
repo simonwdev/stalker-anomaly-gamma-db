@@ -18,7 +18,7 @@ export const FILTER_DEFS = [
     { key: "st_data_export_used_in_crafting", type: "flag", label: "app_filter_craft_material" },
     { key: "st_data_export_has_perk", type: "flag", label: "app_filter_has_perk" },
     { key: "st_data_export_is_junk", type: "flag", label: "app_filter_is_junk" },
-    { key: "st_data_export_cuts_thick_skin", type: "flag", label: "app_filter_cuts_thick_skin" },
+    { key: "st_data_export_cuts_thick_skin", type: "present", label: "app_filter_cuts_thick_skin" },
     { key: "ui_mcm_menu_exo", type: "flag", label: "app_filter_powered_exo" },
     { key: "st_data_export_can_be_cooked", type: "flag", label: "app_filter_cookable" },
     { key: "st_data_export_used_in_cooking", type: "flag", label: "app_filter_ingredient" },

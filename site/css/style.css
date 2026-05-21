@@ -1750,6 +1750,24 @@ a.tile-card-name:hover {
     margin-bottom: 0.3rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.4rem;
+}
+.filter-group-collapse-link {
+    font-size: 0.6rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--text-tertiary);
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: color 0.15s;
+}
+.filter-group-collapse-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
 }
 .filter-chips {
     display: flex;
