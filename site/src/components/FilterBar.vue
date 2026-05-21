@@ -60,12 +60,13 @@
                                         @click="$emit('toggleFlagFilter', def.key, false)"
                                     >{{ t('app_label_no') }}</button>
                                 </div>
-                                <div v-else-if="def.type === 'present'" class="filter-chips">
-                                    <button
-                                        class="filter-chip"
-                                        :class="{ active: activeFilters[def.key] === true }"
-                                        @click="$emit('toggleFlagFilter', def.key, true)"
-                                    >{{ t('app_label_yes') }}</button>
+                                <div v-else-if="def.type === 'present'"
+                                     class="filter-toggle-wrap"
+                                     :class="{ active: activeFilters[def.key] === true }"
+                                     @click="$emit('toggleFlagFilter', def.key, true)">
+                                    <span class="toggle-switch" :class="{ on: activeFilters[def.key] === true }">
+                                        <span class="toggle-knob"></span>
+                                    </span>
                                 </div>
                             </div>
                         </template>

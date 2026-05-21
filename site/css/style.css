@@ -1780,8 +1780,24 @@ a.tile-card-name:hover {
     font-weight: 700;
     box-shadow: 0 0 0 2px var(--color-accent);
 }
-.filter-chip-alt {
-    border-style: dashed;
+/* Slide-toggle for 'present'-type filters (Has Launcher / Can Switch Ammo) */
+.filter-toggle-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.3rem 0.5rem 0.3rem 0.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+}
+.filter-toggle-wrap:hover {
+    background: var(--color-overlay-white-8);
+}
+.filter-toggle-wrap.active .toggle-switch {
+    box-shadow: 0 0 0 2px var(--color-accent);
+}
+.filter-chip-alt {    border-style: dashed;
     border-color: var(--color-blue-bright);
     color: var(--color-blue-bright);
 }
