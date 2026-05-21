@@ -2214,6 +2214,8 @@ input.range-input {
 .addon-img-tile-silencer:hover { background: var(--color-blue-tint-30); }
 .addon-img-tile-launcher { background: var(--color-orange-warm-tint-14); }
 .addon-img-tile-launcher:hover { background: var(--color-orange-warm-tint-30); }
+.addon-img-tile-kit { background: var(--color-purple-tint-12); }
+.addon-img-tile-kit:hover { background: var(--color-purple-tint-20); }
 .addon-tile-grid {
     display: flex;
     flex-wrap: wrap;
