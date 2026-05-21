@@ -1752,22 +1752,23 @@ a.tile-card-name:hover {
     letter-spacing: 0.04em;
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
-    gap: 0.4rem;
+    gap: 0.5rem;
 }
 .filter-group-collapse-link {
-    font-size: 0.6rem;
-    font-weight: 400;
+    font-size: 0.65rem;
+    font-weight: 500;
     text-transform: none;
     letter-spacing: 0;
-    color: var(--text-tertiary);
-    text-decoration: none;
+    color: var(--accent);
+    text-decoration: underline;
+    opacity: 0.75;
     flex-shrink: 0;
     transition: color 0.15s;
 }
 .filter-group-collapse-link:hover {
     color: var(--accent);
     text-decoration: underline;
+    opacity: 1;
 }
 .filter-chips {
     display: flex;
