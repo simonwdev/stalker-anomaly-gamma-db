@@ -1,8 +1,8 @@
 <template>
 <Transition name="fade">
 <div class="modal-backdrop" v-if="modalOpen" @click.self="$emit('closeModal')">
-    <button class="modal-nav modal-nav-prev" @click="$emit('navigateModal', -1)" v-tooltip="'&#8592;'">&lsaquo;</button>
-    <button class="modal-nav modal-nav-next" @click="$emit('navigateModal', 1)" v-tooltip="'&#8594;'">&rsaquo;</button>
+    <button class="modal-nav modal-nav-prev" @click="$emit('navigateModal', -1)" v-tooltip="'&#8592;'"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button class="modal-nav modal-nav-next" @click="$emit('navigateModal', 1)" v-tooltip="'&#8594;'"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
     <button class="modal-close" @click="$emit('closeModal')">&times;</button>
     <Transition name="modal" appear>
     <div class="modal" v-if="modalOpen">

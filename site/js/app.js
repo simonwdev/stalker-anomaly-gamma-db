@@ -140,6 +140,9 @@ export const appDefinition = {
             copyModalLinkFeedback: false,
             copyLinkFeedback: false,
             _restoringUrl: false,
+            // Modal cross-category navigation history
+            _modalNavBackStack: [],
+            _modalNavFwdStack: [],
 
             // Cross-pack comparison
             crossPackId: localStorage.getItem("crossPackId") || null,
@@ -2517,6 +2520,8 @@ export const appDefinition = {
         closeModal() {
             this.modalOpen = false;
             this.modalItem = null;
+            this._modalNavBackStack = [];
+            this._modalNavFwdStack = [];
             document.body.style.overflow = "";
             if (window.location.hash) {
                 history.pushState(null, "", window.location.pathname + window.location.search);
@@ -2745,6 +2750,22 @@ export const appDefinition = {
 
         navigateModal(direction) {
             if (!this.modalOpen || !this.modalItem || this.modalLoading) return;
+
+            // History-based back/forward for cross-category navigation
+            if (direction === -1 && this._modalNavBackStack.length > 0) {
+                const prevId = this._modalNavBackStack.pop();
+                this._modalNavFwdStack.push(this.modalItem.id);
+                this.navigateToItem(prevId, true);
+                return;
+            }
+            if (direction === 1 && this._modalNavFwdStack.length > 0) {
+                const nextId = this._modalNavFwdStack.pop();
+                this._modalNavBackStack.push(this.modalItem.id);
+                this.navigateToItem(nextId, true);
+                return;
+            }
+
+            // Fallback: navigate within the current sorted list
             let items;
             if (this.versionCompareActive) {
                 items = this.filteredVersionCompareResults.flatMap(g => g.items);
@@ -3825,8 +3846,12 @@ export const appDefinition = {
             return entry ? entry.id : null;
         },
 
-        navigateToItem(id) {
+        navigateToItem(id, _fromHistory = false) {
             if (!this.indexById[id]) return;
+            if (!_fromHistory && this.modalOpen && this.modalItem) {
+                this._modalNavBackStack.push(this.modalItem.id);
+                this._modalNavFwdStack = [];
+            }
             this.openItem(id);
             history.pushState(null, "", `${window.location.pathname}${window.location.search}#${id}`);
         },

@@ -2740,13 +2740,16 @@ input.range-input {
     background: var(--color-overlay-white-8);
     border: 1px solid var(--color-overlay-white-15);
     color: var(--color-overlay-white-50);
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1;
     padding: 0.5rem 0.75rem;
     border-radius: 6px;
     cursor: pointer;
     z-index: 101;
     transition: background 0.15s, color 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .modal-nav:hover {
     background: var(--color-overlay-white-15);
