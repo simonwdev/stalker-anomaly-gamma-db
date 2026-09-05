@@ -34,9 +34,11 @@ local UNIONS = {
     armor = { "outfits", "helmets" },
 }
 
--- Not item groups. materials ids collide with medicine.
+-- Not item groups. materials ids collide with medicine;
+-- recipes ids collide with artefacts (all 36 of them on GAMMA).
 local SKIP_GROUP = {
     ["materials.json"] = true,
+    ["recipes.json"] = true,
     ["pack-files.json"] = true,
     ["translations.json"] = true,
 }
@@ -293,7 +295,12 @@ local function load_all()
     local misc_file = nil
     for i = 1, #files do
         local file = files[i]
-        local data, err = decode_file(file)
+        local data, err
+        if norm_file(file):find("\\") then
+            data, err = nil, "subdir" -- is_item_file rejects these; do not pay to parse
+        else
+            data, err = decode_file(file)
+        end
         if data then
             ok_files = ok_files + 1
             if is_item_file(file, data) then
@@ -331,6 +338,17 @@ local function load_all()
     end
     index_all()
     load_recipes()
+    -- Drop what the index does not own; h.json re-reads those on demand.
+    -- Keeps ~7 MB instead of ~36 MB resident on GAMMA 0.9.5.
+    local keep = { ["translations.json"] = true, ["craft-recipes.json"] = true }
+    for i = 1, #item_files do
+        keep[norm_file(item_files[i])] = true
+    end
+    for file in pairs(json_raw) do
+        if not keep[file] then
+            json_raw[file] = nil
+        end
+    end
     printf("STALKER_DB: loaded %s items from %s groups, %s files (%s missing), name_miss %s", n_items, #item_files, ok_files, miss_files, name_miss)
 end
 
@@ -449,6 +467,7 @@ local function make_handle()
     end
 
     --- Item rows in a group (this handle's copies).
+    --- The returned table is the handle's own: read it, do not insert or remove.
     --- @param typ string Group slug (`pistols`, `weapons`, `armor`, ...)
     --- @param sort? string Field to sort by
     --- @param dir? string `"desc"` or omit
@@ -479,7 +498,9 @@ local function make_handle()
         return sorted_list(src, typ, sort, dir, hsort)
     end
 
-    --- Raw pack JSON for a relative file (`pistols.json`, `craft-recipes.json`, ...).
+    --- Pack JSON for a relative file (`pistols.json`, `craft-recipes.json`, ...).
+    --- Item rows also carry the stamped `name` / `descr`, so this is not byte-for-byte raw.
+    --- Costs a full copy per handle: `item-drops.json` is ~7 MB. Prefer get / list.
     --- @param file string Path under `db/`
     --- @return table? data
     function h.json(file)

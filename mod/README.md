@@ -20,11 +20,18 @@ local rec = db.craft(sec)
 
 The handle also has `json`, `is_any`, and `translate`.
 
+`list` hands back the handle's own table. Read it, sort it via the `sort` / `dir` arguments,
+but do not `table.insert` or `table.remove` on it — that permanently changes the group for
+your handle. `json` copies the whole file per handle (`item-drops.json` is ~7 MB), so reach
+for `get` and `list` first.
+
 ## Build
 
 ```bash
 npm run pack-mod -- --release --out dist/mod
 ```
+
+Needs Python on `PATH` (`py -3`, `python`, or `python3`) — it does the zipping.
 
 CI opens a draft when `site/public/data/` changes. Publish it by hand. Same data as the last draft or release is a no-op.
 

@@ -2,13 +2,18 @@ name: Release in-game mod
 
 on:
   push:
-    branches: [main, feat/in-game-mod]
+    branches: [main]
     paths:
       - site/public/data/**
   workflow_dispatch:
 
 permissions:
   contents: write
+
+# One release job at a time: two data pushes must not race for the same tag.
+concurrency:
+  group: release-mod
+  cancel-in-progress: false
 
 jobs:
   release:
@@ -24,12 +29,16 @@ jobs:
         run: |
           VER=$(tr -d '[:space:]' < dist/mod/VERSION)
           DATA=$(git rev-parse HEAD:site/public/data)
-          LAST=$(gh api "repos/${{ github.repository }}/releases?per_page=1" --jq '.[0].body' || true)
+          LAST=$(gh api "repos/${{ github.repository }}/releases?per_page=30" --jq '.[].body' || true)
           if [ -n "$DATA" ] && printf '%s\n' "$LAST" | grep -F -q "data $DATA"; then
             echo "site/public/data tree $DATA already released, skip"
             exit 0
           fi
           { echo "data $DATA"; cat dist/mod/NOTES; } > dist/mod/NOTES.release
+          # Version is minute-resolution; two pushes inside one minute would collide.
+          if gh release view "v$VER" >/dev/null 2>&1; then
+            VER="$VER-$(git rev-parse --short HEAD)"
+          fi
           gh release create "v$VER" dist/mod/*.zip \
             --draft \
             --target "${{ github.sha }}" \

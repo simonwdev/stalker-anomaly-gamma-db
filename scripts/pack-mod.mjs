@@ -106,7 +106,7 @@ version=${ver}
 newestVersion=${ver}
 category=0
 nexusFileStatus=1
-installationFile=StalkerDB_${pack.id}.zip
+installationFile=StalkerDB_${pack.id}_${ver}.zip
 comments=Stalker DB - ${pack.name}
 notes=
 `,
@@ -207,7 +207,8 @@ function buildZip(pack, version, outDir) {
 }
 
 function runRelease() {
-  const outDir = arg("out") || join(ROOT, "dist", "mod");
+  const outArg = arg("out");
+  const outDir = (outArg !== true && outArg) || join(ROOT, "dist", "mod");
   mkdirSync(outDir, { recursive: true });
   const version = (arg("version") !== true && arg("version")) || dateVersion();
   const rebuilt = [];
