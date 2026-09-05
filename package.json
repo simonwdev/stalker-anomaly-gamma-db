@@ -14,7 +14,8 @@
     "deploy": "node scripts/deploy.mjs",
     "deploy-preview": "node scripts/deploy.mjs --preview",
     "test": "node --test tests/*.test.mjs",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "pack-mod": "node scripts/pack-mod.mjs"
   },
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.1019.0",

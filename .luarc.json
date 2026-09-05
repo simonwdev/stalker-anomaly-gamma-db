@@ -1,0 +1,13 @@
+{
+  "runtime": {
+    "version": "Lua 5.1",
+    "path": ["?.script", "?.lua"]
+  },
+  "diagnostics": {
+    "globals": ["printf", "getFS", "stalker_db_json", "stalker_db", "STALKER_DB", "app_ready"],
+    "disable": ["lowercase-global", "undefined-global", "undefined-doc-name"]
+  },
+  "workspace": {
+    "ignoreDir": ["site", "node_modules", "dist", "data"]
+  }
+}

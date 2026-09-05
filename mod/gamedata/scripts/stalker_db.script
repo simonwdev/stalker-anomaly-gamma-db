@@ -1,0 +1,584 @@
+--[[
+    Item catalog: gamedata/configs/db/*.json (site pack dump).
+    Public API is STALKER_DB.open only. Master never leaves this file.
+
+    open(mod_id) during load returns a handle (private dcopy cache).
+    Same id always returns that handle. New id after load finishes is nil.
+    Load = app_ready() false (engine g_appLoaded; first LoadBegin to last LoadEnd).
+    on_game_start / on_game_load run inside that window. Play does not.
+
+    Item groups are top-level files with items[].id
+    (materials skipped: ids collide with medicine; misc last = first-wins).
+    Unions: weapons, weapon-attach, armor.
+    db/lang picks translations (en/ru/fr).
+]]
+
+local ROOT = "db\\"
+local loaded = false
+local names = {}
+local names_lang = "en"
+local by_id = {}
+local groups = {}
+local in_group = {}
+local recipes = {}
+local json_raw = {}
+local views = {}
+local view_n = 0
+local name_miss = 0
+
+local UNIONS = {
+    weapons = {
+        "pistols", "smgs", "rifles", "snipers", "shotguns", "melee", "launchers",
+    },
+    ["weapon-attach"] = { "scopes", "silencers", "grenade-launchers" },
+    armor = { "outfits", "helmets" },
+}
+
+-- Not item groups. materials ids collide with medicine.
+local SKIP_GROUP = {
+    ["materials.json"] = true,
+    ["pack-files.json"] = true,
+    ["translations.json"] = true,
+}
+
+-- Cached pcall targets (no heap alloc per call).
+local try_read_path = function(getFS, rel)
+    return getFS():update_path("$game_config$", rel)
+end
+
+local try_open = function(abs)
+    return io.open(abs, "r")
+end
+
+-- Engine g_appLoaded. False during LoadBegin nest, true after last LoadEnd.
+local try_app_ready = function()
+    return app_ready()
+end
+
+local function read_text(rel)
+    if not (getFS and getFS().update_path) then
+        return nil
+    end
+    local ok, abs = pcall(try_read_path, getFS, rel)
+    if not (ok and abs and abs ~= "") then
+        return nil
+    end
+    local okf, f = pcall(try_open, abs)
+    if not (okf and f) then
+        return nil
+    end
+    local s = f:read("*a")
+    f:close()
+    if s and s ~= "" then
+        return s
+    end
+    return nil
+end
+
+local function norm_file(file)
+    return file:gsub("/", "\\")
+end
+
+local function decode_file(file)
+    file = norm_file(file)
+    local hit = json_raw[file]
+    if hit ~= nil then
+        return hit -- false = tried and failed; do not reopen
+    end
+    local text = read_text(ROOT .. file)
+    if not text then
+        json_raw[file] = false
+        return nil, "missing"
+    end
+    local ok, data = pcall(stalker_db_json.decode, text)
+    if ok then
+        json_raw[file] = data
+        return data
+    end
+    json_raw[file] = false
+    printf("STALKER_DB: failed to decode %s", file)
+    return nil, "bad"
+end
+
+local function read_lang()
+    local text = read_text(ROOT .. "lang")
+    local lang = text and text:match("[A-Za-z]+")
+    if lang then
+        return string.lower(lang)
+    end
+    return "en"
+end
+
+-- Site displayName may carry " [1]" uniqueness junk. Never look that up.
+local function tr(s, lang)
+    if type(s) ~= "string" or s == "" then
+        return nil
+    end
+    s = s:gsub("%s+%[.-%]$", "")
+    local tab = names
+    if lang and lang ~= "" then
+        lang = string.lower(lang)
+        if lang ~= names_lang then
+            local data = decode_file("translations.json")
+            local other = type(data) == "table" and data[lang]
+            if type(other) ~= "table" then
+                return nil
+            end
+            tab = other
+        end
+    end
+    return tab[string.lower(s)]
+end
+
+-- Master only: stamp translated name + descr. Raw JSON keys stay.
+local function decorate(row)
+    local key = row.pda_encyclopedia_name or row.displayName
+    local name = key and tr(key)
+    if name then
+        row.name = name
+    else
+        row.name = row.id or ""
+        if key then
+            name_miss = name_miss + 1
+        end
+    end
+    if row.st_data_export_description then
+        row.descr = tr(row.st_data_export_description)
+    end
+    return row
+end
+
+local function add_row(typ, row)
+    if not (row and row.id) then
+        return false
+    end
+    if by_id[row.id] then
+        printf("STALKER_DB: skip duplicate id %s", row.id)
+        return false
+    end
+    decorate(row)
+    by_id[row.id] = row
+    local g = groups[typ]
+    g[#g + 1] = row
+    return true
+end
+
+local function concat(types)
+    local out = {}
+    for i = 1, #types do
+        local g = groups[types[i]]
+        if g then
+            for j = 1, #g do
+                out[#out + 1] = g[j]
+            end
+        end
+    end
+    return out
+end
+
+local function index_all()
+    in_group = {}
+    for typ, rows in pairs(groups) do
+        local idx = {}
+        for i = 1, #rows do
+            local id = rows[i].id
+            if id then
+                idx[id] = true
+            end
+        end
+        in_group[typ] = idx
+    end
+end
+
+local function load_names()
+    local data = decode_file("translations.json")
+    names = {}
+    if not data then
+        printf("STALKER_DB: names missing")
+        return
+    end
+    local lang = read_lang()
+    if type(data[lang]) == "table" then
+        names = data[lang]
+        names_lang = lang
+        printf("STALKER_DB: names %s", lang)
+        return
+    end
+    if type(data.en) == "table" then
+        names = data.en
+        names_lang = "en"
+        printf("STALKER_DB: names en (no %s)", lang)
+        return
+    end
+    printf("STALKER_DB: names missing")
+end
+
+local function pack_file_list()
+    local listed = decode_file("pack-files.json")
+    if type(listed) == "table" and listed[1] then
+        return listed
+    end
+    local man = decode_file("manifest.json")
+    if type(man) ~= "table" then
+        return {}
+    end
+    local out = {}
+    for k in pairs(man) do
+        if type(k) == "string" and string.sub(k, -5) == ".json" then
+            out[#out + 1] = k
+        end
+    end
+    return out
+end
+
+local function basename(file)
+    return file:match("([^/\\]+)$") or file
+end
+
+local function slug(file)
+    local base = basename(file)
+    if base:sub(-5) ~= ".json" then
+        return nil
+    end
+    return base:sub(1, #base - 5)
+end
+
+local function is_item_file(file, data)
+    local base = basename(file)
+    if SKIP_GROUP[base] then
+        return false
+    end
+    if file:find("[/\\]") then
+        return false
+    end
+    local items = data and data.items
+    return items and items[1] and items[1].id
+end
+
+local function load_recipes()
+    recipes = {}
+    local data = decode_file("craft-recipes.json")
+    if type(data) ~= "table" then
+        return
+    end
+    local n = 0
+    for _, cat in pairs(data) do
+        local items = cat and cat.items
+        if items then
+            for i = 1, #items do
+                local it = items[i]
+                if it and it.id then
+                    decorate(it)
+                    recipes[it.id] = it
+                    n = n + 1
+                end
+            end
+        end
+    end
+    printf("STALKER_DB: craft recipes %s", n)
+end
+
+local function load_all()
+    loaded = true
+    by_id = {}
+    groups = {}
+    recipes = {}
+    json_raw = {}
+    name_miss = 0
+    load_names()
+    local files = pack_file_list()
+    local ok_files = 0
+    local miss_files = 0
+    local item_files = {}
+    local misc_file = nil
+    for i = 1, #files do
+        local file = files[i]
+        local data, err = decode_file(file)
+        if data then
+            ok_files = ok_files + 1
+            if is_item_file(file, data) then
+                if slug(file) == "misc" then
+                    misc_file = file
+                else
+                    item_files[#item_files + 1] = file
+                end
+            end
+        elseif err == "missing" then
+            miss_files = miss_files + 1
+        end
+    end
+    -- misc last so a colliding id already taken by a real group wins.
+    if misc_file then
+        item_files[#item_files + 1] = misc_file
+    end
+    local n_items = 0
+    for i = 1, #item_files do
+        local file = item_files[i]
+        local typ = slug(file)
+        local data = decode_file(file)
+        local items = type(data) == "table" and data.items
+        if typ and items then
+            groups[typ] = {}
+            for j = 1, #items do
+                if add_row(typ, items[j]) then
+                    n_items = n_items + 1
+                end
+            end
+        end
+    end
+    for name, types in pairs(UNIONS) do
+        groups[name] = concat(types)
+    end
+    index_all()
+    load_recipes()
+    printf("STALKER_DB: loaded %s items from %s groups, %s files (%s missing), name_miss %s", n_items, #item_files, ok_files, miss_files, name_miss)
+end
+
+local function init()
+    if not loaded then
+        load_all()
+    end
+end
+
+local function cmp(key, desc)
+    return function(a, b)
+        local va, vb = a[key], b[key]
+        local na, nb = tonumber(va), tonumber(vb)
+        if na and nb then
+            va, vb = na, nb
+        else
+            va = tostring(va or "")
+            vb = tostring(vb or "")
+        end
+        if va == vb then
+            return false
+        end
+        if desc then
+            return va > vb
+        end
+        return va < vb
+    end
+end
+
+local function sorted_list(src, typ, sort, dir, cache)
+    if not sort then
+        return src
+    end
+    local key = typ .. "\0" .. sort .. "\0" .. (dir or "")
+    local hit = cache[key]
+    if hit then
+        return hit
+    end
+    local out = {}
+    for i = 1, #src do
+        out[i] = src[i]
+    end
+    table.sort(out, cmp(sort, dir == "desc"))
+    cache[key] = out
+    return out
+end
+
+local function item_is(id, typ)
+    init()
+    if not (id and typ) then
+        return false
+    end
+    local idx = in_group[typ]
+    return idx and idx[id] == true
+end
+
+local function item_is_any(id, types)
+    if not (id and types) then
+        return false
+    end
+    for i = 1, #types do
+        if item_is(id, types[i]) then
+            return true
+        end
+    end
+    return false
+end
+
+-- Deep copy with seen (recipes nest; rows can alias). Handle cache only.
+local function dcopy(v, seen)
+    if type(v) ~= "table" then
+        return v
+    end
+    local hit = seen[v]
+    if hit then
+        return hit
+    end
+    local o = {}
+    seen[v] = o
+    for k, x in pairs(v) do
+        o[k] = dcopy(x, seen)
+    end
+    return o
+end
+
+-- One handle per mod_id. get/list/json/craft clone from master once, then reuse.
+-- Writes stay on this copy. is / is_any / translate do not return row tables.
+--- @return StalkerDbHandle
+local function make_handle()
+    local hid, hgrp, hjson, hrec, hsort = {}, {}, {}, {}, {}
+    --- @class StalkerDbHandle
+    local h = {}
+
+    --- Item row for this handle. Copied from master on first get, then cached.
+    --- @param id string Section id
+    --- @param typ? string Group slug (omit = any group)
+    --- @return table? row
+    function h.get(id, typ)
+        init()
+        if not id then
+            return nil
+        end
+        if typ and not (in_group[typ] and in_group[typ][id]) then
+            return nil
+        end
+        local row = hid[id]
+        if not row then
+            local raw = by_id[id]
+            if not raw then
+                return nil
+            end
+            row = dcopy(raw, {})
+            hid[id] = row
+        end
+        return row
+    end
+
+    --- Item rows in a group (this handle's copies).
+    --- @param typ string Group slug (`pistols`, `weapons`, `armor`, ...)
+    --- @param sort? string Field to sort by
+    --- @param dir? string `"desc"` or omit
+    --- @return table
+    function h.list(typ, sort, dir)
+        init()
+        local raw = typ and groups[typ]
+        if not raw then
+            return {} -- fresh; a shared empty table would leak writes
+        end
+        local src = hgrp[typ]
+        if not src then
+            src = {}
+            for i = 1, #raw do
+                local r = raw[i]
+                local id = r.id
+                local row = id and hid[id]
+                if not row then
+                    row = dcopy(r, {})
+                    if id then
+                        hid[id] = row
+                    end
+                end
+                src[i] = row
+            end
+            hgrp[typ] = src
+        end
+        return sorted_list(src, typ, sort, dir, hsort)
+    end
+
+    --- Raw pack JSON for a relative file (`pistols.json`, `craft-recipes.json`, ...).
+    --- @param file string Path under `db/`
+    --- @return table? data
+    function h.json(file)
+        init()
+        if not file then
+            return nil
+        end
+        file = norm_file(file)
+        local hit = hjson[file]
+        if hit then
+            return hit
+        end
+        local data = decode_file(file)
+        if not data then
+            return nil
+        end
+        hit = dcopy(data, {})
+        hjson[file] = hit
+        return hit
+    end
+
+    --- Craft recipe for an item id.
+    --- @param id string Section id
+    --- @return table? recipe
+    function h.craft(id)
+        init()
+        if not id then
+            return nil
+        end
+        local hit = hrec[id]
+        if hit then
+            return hit
+        end
+        local raw = recipes[id]
+        if not raw then
+            return nil
+        end
+        hit = dcopy(raw, {})
+        hrec[id] = hit
+        return hit
+    end
+
+    --- True if `id` is in group `typ`.
+    --- @type fun(id: string, typ: string): boolean
+    h.is = item_is
+
+    --- True if `id` is in any of `types`.
+    --- @type fun(id: string, types: string[]): boolean
+    h.is_any = item_is_any
+
+    --- Loc string. Omit lang for the installer language.
+    --- @param key string
+    --- @param lang? string `en` / `ru` / `fr`
+    --- @return string? text
+    function h.translate(key, lang)
+        init()
+        return tr(key, lang)
+    end
+    return h
+end
+
+--- Gets a handle to a unique copy of the db for the given id, or the existing handle for that id.
+--- Must be called from `on_game_start` or `on_game_load` else returns nil (no runtime construction).
+--- @param mod_id string unique id
+--- @return StalkerDbHandle? handle
+function open(mod_id)
+    if type(mod_id) ~= "string" or mod_id == "" then
+        printf("STALKER_DB: open refused (empty id)")
+        return nil
+    end
+    -- Known id: always the same handle (even in play). New id: load only.
+    local h = views[mod_id]
+    if h then
+        return h
+    end
+    -- Not a callback latch. app_ready is engine state, so script order does not matter.
+    -- Another mod's on_game_load during LoadBegin still sees false.
+    local ok, ready = pcall(try_app_ready)
+    if ok and ready then
+        printf("STALKER_DB: open refused (game running)")
+        return nil
+    end
+    init()
+    view_n = view_n + 1
+    h = make_handle()
+    views[mod_id] = h
+    printf("STALKER_DB: open %s views=%s", mod_id, view_n)
+    if view_n > 16 then
+        printf("STALKER_DB: open warn many views")
+    end
+    return h
+end
+
+function on_game_start()
+    init() -- boot log even if nobody has opened yet
+end
+
+--- @class STALKER_DB
+--- @field open fun(mod_id: string): StalkerDbHandle?
+--- @type STALKER_DB
+STALKER_DB = { open = open }
+rawset(_G, "STALKER_DB", STALKER_DB)

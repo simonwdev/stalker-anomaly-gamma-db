@@ -1,0 +1,37 @@
+name: Release in-game mod
+
+on:
+  push:
+    branches: [main, feat/in-game-mod]
+    paths:
+      - site/public/data/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/pack-mod.mjs --release --out dist/mod
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VER=$(tr -d '[:space:]' < dist/mod/VERSION)
+          DATA=$(git rev-parse HEAD:site/public/data)
+          LAST=$(gh api "repos/${{ github.repository }}/releases?per_page=1" --jq '.[0].body' || true)
+          if [ -n "$DATA" ] && printf '%s\n' "$LAST" | grep -F -q "data $DATA"; then
+            echo "site/public/data tree $DATA already released, skip"
+            exit 0
+          fi
+          { echo "data $DATA"; cat dist/mod/NOTES; } > dist/mod/NOTES.release
+          gh release create "v$VER" dist/mod/*.zip \
+            --draft \
+            --target "${{ github.sha }}" \
+            --title "Stalker DB $VER" \
+            --notes-file dist/mod/NOTES.release

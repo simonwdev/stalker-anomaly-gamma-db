@@ -46,6 +46,16 @@ npm run dev
 
 This starts a local dev server on port 3000.
 
+## In-game mod
+
+A self-contained Anomaly/GAMMA mod that loads pack JSON. Other scripts call `STALKER_DB.open` at load and keep the handle. See [mod/README.md](mod/README.md).
+
+```bash
+npm run pack-mod -- --release --out dist/mod
+```
+
+CI opens a draft `StalkerDB_{pack}_{yyyy.mm.dd-hhmm}.zip` when committed `site/public/data/` changes. Publish it by hand. Same data as the last draft or release is a no-op. See [mod/README.md](mod/README.md).
+
 ## Acknowledgements
 
 - **[GSC Game World](https://www.gsc-game.com/)** — S.T.A.L.K.E.R. series
