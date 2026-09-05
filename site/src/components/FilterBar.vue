@@ -204,6 +204,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="sort-wrap" v-show="isOutfitExchange" v-click-outside="closeSortMenu">
+                    <button class="sort-btn" @click.stop="sortMenuOpen = !sortMenuOpen" v-tooltip="t('app_label_sort')">
+                        <LucideArrowUpDown :size="14" />
+                        <span class="sort-btn-label">{{ t(exchangeSortOptions.find(o => o.value === exchangeSort)?.label || 'app_ex_sort_name') }}</span>
+                    </button>
+                    <div class="sort-menu" v-show="sortMenuOpen" @click.stop>
+                        <div class="sort-menu-header">{{ t('app_label_sort_by') }}</div>
+                        <div class="sort-menu-scroll">
+                            <button
+                                v-for="opt in exchangeSortOptions"
+                                :key="opt.value"
+                                class="sort-menu-item"
+                                :class="{ active: exchangeSort === opt.value }"
+                                @click="$emit('pickExchangeSort', opt.value); sortMenuOpen = false"
+                            >
+                                <span class="sort-menu-check">{{ exchangeSort === opt.value ? '✓' : '' }}</span>
+                                <span>{{ t(opt.label) }}</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <button v-if="!favoritesViewActive && !recentViewActive && !isOutfitExchange && !isCrafting && favoriteIds.length > 0"
                         class="fav-filter-btn" :class="{ active: showFavoritesOnly }"
                         @click="$emit('toggleShowFavoritesOnly')"
@@ -212,7 +233,7 @@
                 </button>
                 <span class="item-count" v-if="!isOutfitExchange && !isCrafting">{{ sortedItems.length }} {{ t('app_label_items') }}</span>
                 <span class="item-count" v-if="isCrafting">{{ craftingItemCount }} {{ t('app_label_recipes') }}</span>
-                <span class="item-count" v-if="isOutfitExchange && outfitExchange">{{ filteredExchanges.length }} {{ t('app_label_exchanges') }}</span>
+                <span class="item-count" v-if="isOutfitExchange && outfitExchange">{{ filteredExchanges.length }} {{ t('app_cat_outfits').toLowerCase() }} &middot; {{ exchangeTradeCount }} {{ t('app_label_exchanges') }}</span>
                 <!-- Spacer: grows on desktop to push right-side controls to the far right -->
                 <span class="filter-bar-spacer" aria-hidden="true"></span>
                 <button v-if="isWeaponSection" class="weapon-help-btn" @click="$emit('openWeaponHelp')" v-tooltip="t('app_label_weapon_mechanics_help')">
@@ -285,6 +306,9 @@ export default {
         isToolkitRates: { type: Boolean, default: false },
         outfitExchange: { type: Object, default: null },
         filteredExchanges: { type: Array, default: () => [] },
+        exchangeSort: { type: String, default: 'name' },
+        exchangeTradeCount: { type: Number, default: 0 },
+        exchangeHasBallistics: { type: Boolean, default: true },
         toolkitRates: { type: Object, default: null },
         toolkitSortCol: { type: String, default: '' },
         toolkitSortAsc: { type: Boolean, default: true },
@@ -295,6 +319,7 @@ export default {
         isWeaponSection: { type: Boolean, default: false },
     },
     emits: [
+        'pickExchangeSort',
         'update:filterInput',
         'clearFilterInput',
         'clearAllFilters',
@@ -319,11 +344,21 @@ export default {
         return {
             filterPanelOpen: false,
             sortMenuOpen: false,
+            EXCHANGE_SORTS: [
+                { value: 'name', label: 'app_ex_sort_name' },
+                { value: 'count', label: 'app_ex_sort_count' },
+                { value: 'gain', label: 'app_ex_sort_gain' },
+            ],
             downloadMenuOpen: false,
             controlsExpanded: false,
             _filterPanelCleanup: null,
             ammoTypesCollapsed: localStorage.getItem('filterAmmoTypesCollapsed') === 'true',
         };
+    },
+    computed: {
+        exchangeSortOptions() {
+            return this.exchangeHasBallistics ? this.EXCHANGE_SORTS : this.EXCHANGE_SORTS.filter(o => o.value !== 'gain');
+        },
     },
     methods: {
         toggleFilterPanel() {

@@ -1328,8 +1328,46 @@ try {
       exchanges.push({ name, sourceFaction, results });
     }
 
+    // Join the stats the exchange view filters and sorts on (armour class,
+    // artefact slots, repair class, plus the two raw armour fields that feed
+    // ballisticRating()) so it never has to load the whole Outfits category at
+    // runtime. Keyed by name, shared between the outfit handed in and the
+    // outfits received.
+    const oeNames = new Set();
+    for (const ex of exchanges) {
+      oeNames.add(ex.name);
+      for (const v of Object.values(ex.results)) oeNames.add(v);
+    }
+    const stats = {};
+    const numOrNull = (v) => {
+      const n = parseFloat(v);
+      return Number.isFinite(n) ? n : null;
+    };
+    for (const item of categoryData.get("outfits")?.items || []) {
+      const key = item.pda_encyclopedia_name;
+      if (!key || !oeNames.has(key) || stats[key]) continue;
+      const s = {};
+      if (item.ui_mcm_menu_exo === "Y") s.exo = true;
+      const art = numOrNull(item.ui_inv_outfit_artefact_count);
+      if (art !== null) s.art = art;
+      if (item.ui_mm_repair) s.repair = item.ui_mm_repair;
+      // Raw armour fields, not display percents: the view runs them through the
+      // shared ballisticRating() so there is one implementation of the formula.
+      // ARMOR_FIELD_MAP hasn't run yet at this point in the pipeline, so read
+      // the raw export columns and fall back to the camelCase names.
+      const bone = numOrNull(item.st_data_export_bone_armor ?? item.boneArmor);
+      if (bone !== null) s.boneArmor = bone;
+      const hfa = numOrNull(item.st_data_export_hit_fraction_actor ?? item.hitFractionActor);
+      if (hfa !== null) s.hitFractionActor = hfa;
+      stats[key] = s;
+    }
+    const missingStats = [...oeNames].filter((n) => !stats[n]);
+    if (missingStats.length) {
+      console.log(`Outfit exchange: no outfit stats for ${missingStats.length} entries (${missingStats.slice(0, 3).join(", ")}…)`);
+    }
+
     const oeOut = join(OUT_DIR, "outfit-exchange.json");
-    writeFileSync(oeOut, JSON.stringify({ factions, exchanges }, null, 2));
+    writeFileSync(oeOut, JSON.stringify({ factions, stats, exchanges }, null, 2));
     console.log(`Wrote ${exchanges.length} outfit exchange entries to ${oeOut}`);
   }
 } catch (e) {

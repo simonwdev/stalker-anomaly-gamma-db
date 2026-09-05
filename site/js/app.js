@@ -84,7 +84,11 @@ export const appDefinition = {
 
             // Outfit exchange
             outfitExchange: null,
-            exchangeFactionFilter: null,
+            exchangeFactionFilter: null,   // faction you trade WITH
+            exchangeSourceFilter: null,    // faction the outfit you hand in belongs to
+            exchangeDirection: "give",     // "give" = I have an outfit, "want" = I want an outfit
+            exchangeView: "cards",         // "cards" | "matrix"
+            exchangeSort: "name",          // "name" | "count" | "gain"
             toolkitRates: null,
             toolkitSortCol: null,
             toolkitSortAsc: false,
@@ -1055,25 +1059,160 @@ export const appDefinition = {
             return this.outfitExchange?.factions || [];
         },
 
-        filteredExchanges() {
-            if (!this.outfitExchange) return [];
-            let exchanges = this.outfitExchange.exchanges;
-            if (this.exchangeFactionFilter) {
-                const f = this.exchangeFactionFilter;
-                exchanges = exchanges.filter(ex => ex.results[f]);
-            }
-            if (!this.filterQuery.trim()) return exchanges;
-            const q = this.filterQuery.toLowerCase();
-            return exchanges.filter(ex =>
-                this.t(ex.name).toLowerCase().includes(q) ||
-                this.t(ex.sourceFaction).toLowerCase().includes(q) ||
-                Object.values(ex.results).some(v => this.t(v).toLowerCase().includes(q))
+        exchangeStats() {
+            return this.outfitExchange?.stats || {};
+        },
+
+        // Older packs (and plain Anomaly) ship no raw armour columns, so there is
+        // no Ballistic Rating to filter, sort or diff on.
+        exchangeHasBallistics() {
+            return Object.values(this.exchangeStats).some(
+                s => typeof s.boneArmor === "number" && typeof s.hitFractionActor === "number"
             );
         },
 
-        exchangeVisibleFactions() {
-            if (this.exchangeFactionFilter) return [this.exchangeFactionFilter];
-            return this.exchangeFactions;
+        // exchangeItemId() scans the whole index per call, and the exchange view
+        // resolves a link for every outfit on screen. Build the lookup once.
+        exchangeIdByName() {
+            const map = {};
+            for (const item of this.index) {
+                for (const key of [item.name, item.displayName, item.pda_encyclopedia_name]) {
+                    if (key && !(key in map)) map[key] = item.id;
+                }
+            }
+            return map;
+        },
+
+        // Factions that appear as the faction of an outfit you can hand in.
+        exchangeSourceFactions() {
+            const present = new Set((this.outfitExchange?.exchanges || []).map(ex => ex.sourceFaction).filter(Boolean));
+            return this.exchangeFactions.filter(f => present.has(f));
+        },
+
+        // Factions you can actually trade with.
+        exchangeTraderFactions() {
+            const present = new Set();
+            for (const ex of this.outfitExchange?.exchanges || []) {
+                for (const f of Object.keys(ex.results)) present.add(f);
+            }
+            return this.exchangeFactions.filter(f => present.has(f));
+        },
+
+        // One card per outfit, with the trades that survive every filter.
+        // "give" keys each card on the outfit you hand in; "want" inverts the
+        // index so each card is an outfit you can receive.
+        filteredExchanges() {
+            if (!this.outfitExchange) return [];
+            const want = this.exchangeDirection === "want";
+            const stats = this.exchangeStats;
+            const ids = this.exchangeIdByName;
+            const q = this.filterQuery.trim().toLowerCase();
+            const classF = this.activeFilters._ex_class || [];
+            const artF = this.activeFilters._ex_art || [];
+            const brF = this.activeFilters._ex_br || [];
+            const repairF = this.activeFilters.ui_mm_repair || [];
+            const upgradeOnly = this.activeFilters._ex_upgrade === true;
+
+            // Ballistic Rating, the same 0-100 score the item tables show, rounded
+            // once here so the deltas add up to what the reader sees.
+            const brCache = {};
+            const brOf = (name) => {
+                if (name in brCache) return brCache[name];
+                const s = stats[name];
+                const r = s ? ballisticRating(s.boneArmor, s.hitFractionActor) : null;
+                return (brCache[name] = r === null ? null : Math.round(r));
+            };
+            const BR_BANDS = { low: [0, 29.999], mid: [30, 49.999], high: [50, Infinity] };
+            const statOk = (name) => {
+                const s = stats[name];
+                if (classF.length) {
+                    const isExo = !!(s && s.exo);
+                    if (!classF.includes(isExo ? "exo" : "std")) return false;
+                }
+                if (artF.length) {
+                    const a = s && typeof s.art === "number" ? Math.min(s.art, 5) : null;
+                    if (a === null || !artF.includes(String(a))) return false;
+                }
+                if (repairF.length && !repairF.includes(s?.repair)) return false;
+                if (brF.length) {
+                    const v = brOf(name);
+                    if (v === null) return false;
+                    if (!brF.some(k => BR_BANDS[k] && v >= BR_BANDS[k][0] && v <= BR_BANDS[k][1])) return false;
+                }
+                return true;
+            };
+            const delta = (fromName, toName) => {
+                const a = brOf(fromName), b = brOf(toName);
+                return (a !== null && b !== null) ? b - a : null;
+            };
+            const card = (name, faction) => ({
+                key: (want ? "w:" : "g:") + faction + ":" + name,
+                name,
+                faction,
+                id: ids[name] || null,
+                stats: stats[name] || null,
+                br: brOf(name),
+                trades: [],
+            });
+            const matches = (c) => {
+                if (!q) return true;
+                if (this.t(c.name).toLowerCase().includes(q)) return true;
+                if (this.t(c.faction).toLowerCase().includes(q)) return true;
+                return c.trades.some(tr => this.t(tr.name).toLowerCase().includes(q) || this.t(tr.faction).toLowerCase().includes(q));
+            };
+
+            const cards = [];
+            if (!want) {
+                for (const ex of this.outfitExchange.exchanges) {
+                    if (this.exchangeSourceFilter && ex.sourceFaction !== this.exchangeSourceFilter) continue;
+                    if (!statOk(ex.name)) continue;
+                    const c = card(ex.name, ex.sourceFaction);
+                    for (const [f, out] of Object.entries(ex.results)) {
+                        if (this.exchangeFactionFilter && f !== this.exchangeFactionFilter) continue;
+                        const d = delta(ex.name, out);
+                        if (upgradeOnly && !(d !== null && d > 0)) continue;
+                        c.trades.push({ faction: f, name: out, id: ids[out] || null, delta: d });
+                    }
+                    if (c.trades.length && matches(c)) cards.push(c);
+                }
+            } else {
+                // You receive faction F's outfit by trading with faction F, so the
+                // card's faction is the trader; each row is an outfit you hand in.
+                const byOutfit = new Map();
+                for (const ex of this.outfitExchange.exchanges) {
+                    if (this.exchangeSourceFilter && ex.sourceFaction !== this.exchangeSourceFilter) continue;
+                    for (const [f, out] of Object.entries(ex.results)) {
+                        if (this.exchangeFactionFilter && f !== this.exchangeFactionFilter) continue;
+                        if (!statOk(out)) continue;
+                        const d = delta(ex.name, out);
+                        if (upgradeOnly && !(d !== null && d > 0)) continue;
+                        const cardKey = f + ":" + out;
+                        if (!byOutfit.has(cardKey)) byOutfit.set(cardKey, card(out, f));
+                        byOutfit.get(cardKey).trades.push({ faction: ex.sourceFaction, name: ex.name, id: ids[ex.name] || null, delta: d });
+                    }
+                }
+                for (const c of byOutfit.values()) if (matches(c)) cards.push(c);
+            }
+
+            const bestGain = c => c.trades.reduce((m, tr) => Math.max(m, tr.delta === null ? -Infinity : tr.delta), -Infinity);
+            const byName = (a, b) => this.t(a.name).localeCompare(this.t(b.name));
+            if (this.exchangeSort === "count") cards.sort((a, b) => b.trades.length - a.trades.length || byName(a, b));
+            else if (this.exchangeSort === "gain") cards.sort((a, b) => bestGain(b) - bestGain(a) || byName(a, b));
+            else cards.sort(byName);
+            return cards;
+        },
+
+        // Matrix columns: only factions that still appear in the filtered cards.
+        exchangeMatrixFactions() {
+            const present = new Set();
+            for (const c of this.filteredExchanges) {
+                for (const tr of c.trades) present.add(tr.faction);
+            }
+            return this.exchangeFactions.filter(f => present.has(f));
+        },
+
+        exchangeTradeCount() {
+            return this.filteredExchanges.reduce((n, c) => n + c.trades.length, 0);
         },
 
         modalRecipe() {
@@ -1183,6 +1322,33 @@ export const appDefinition = {
         },
 
         availableFilters() {
+            // The exchange view has no table columns, so its filters are declared
+            // here rather than derived from headers. They reuse the shared filter
+            // panel, active-chip row and URL persistence unchanged.
+            if (this.isOutfitExchange) {
+                if (!this.outfitExchange) return [];
+                // Repair classes reuse the shared def so their chips carry the
+                // same labels and colours as the Outfits table.
+                const repairDef = FILTER_DEFS.find(d => d.key === "ui_mm_repair");
+                const repairValues = new Set();
+                for (const s of Object.values(this.exchangeStats)) {
+                    if (s.repair) repairValues.add(s.repair);
+                }
+                return [
+                    { key: "_ex_class", type: "discrete", label: "app_ex_filter_class", values: ["exo", "std"],
+                      labelMap: { exo: "app_ex_class_exo", std: "app_ex_class_std" } },
+                    ...(repairDef && repairValues.size
+                        ? [{ ...repairDef, values: repairDef.values.filter(v => repairValues.has(v)) }]
+                        : []),
+                    { key: "_ex_art", type: "discrete", label: "app_ex_filter_art", values: ["1", "2", "3", "4", "5"],
+                      displayMap: { 5: "5+" } },
+                    ...(this.exchangeHasBallistics ? [
+                        { key: "_ex_br", type: "discrete", label: "app_ex_filter_br", values: ["low", "mid", "high"],
+                          labelMap: { low: "app_ex_br_low", mid: "app_ex_br_mid", high: "app_ex_br_high" } },
+                        { key: "_ex_upgrade", type: "present", label: "app_ex_upgrade_only" },
+                    ] : []),
+                ];
+            }
             const headers = this.displayHeaders;
             if (!headers.length) return [];
             const slug = categorySlug(this.activeCategory);
@@ -1377,7 +1543,7 @@ export const appDefinition = {
                     chips.push({ key, label, display, type: "range" });
                     continue;
                 }
-                const def = FILTER_DEFS.find(d => d.key === key);
+                const def = FILTER_DEFS.find(d => d.key === key) || this.availableFilters.find(d => d.key === key);
                 if (!def) continue;
                 if (def.type === "flag" && (val === true || val === false)) {
                     chips.push({ key, label: def.label, value: val, display: val ? this.t("app_label_yes") : this.t("app_label_no"), type: "flag" });
@@ -2615,6 +2781,10 @@ export const appDefinition = {
                     sortCol: this.sortCol,
                     sortAsc: this.sortAsc,
                     exchangeFactionFilter: this.exchangeFactionFilter,
+                    exchangeSourceFilter: this.exchangeSourceFilter,
+                    exchangeDirection: this.exchangeDirection,
+                    exchangeView: this.exchangeView,
+                    exchangeSort: this.exchangeSort,
                     includeAltAmmo: this.includeAltAmmo,
                 });
             }
@@ -2640,6 +2810,10 @@ export const appDefinition = {
             this.sortCol = "pda_encyclopedia_name";
             this.sortAsc = true;
             this.exchangeFactionFilter = null;
+            this.exchangeSourceFilter = null;
+            this.exchangeDirection = "give";
+            this.exchangeView = "cards";
+            this.exchangeSort = "name";
             this.activeFilters = {};
             this.includeAltAmmo = false;
             if (this.$refs.filterBar) this.$refs.filterBar.closeFilterPanel();
@@ -2655,6 +2829,10 @@ export const appDefinition = {
                     this.sortCol = saved.sortCol || "pda_encyclopedia_name";
                     this.sortAsc = saved.sortAsc !== undefined ? saved.sortAsc : true;
                     this.exchangeFactionFilter = saved.exchangeFactionFilter || null;
+                    this.exchangeSourceFilter = saved.exchangeSourceFilter || null;
+                    this.exchangeDirection = saved.exchangeDirection === "want" ? "want" : "give";
+                    this.exchangeView = saved.exchangeView === "matrix" ? "matrix" : "cards";
+                    this.exchangeSort = ["count", "gain"].includes(saved.exchangeSort) ? saved.exchangeSort : "name";
                     this.includeAltAmmo = saved.includeAltAmmo || false;
                 }
             }
@@ -3182,6 +3360,11 @@ export const appDefinition = {
         async loadoutItemHover(id, event, extras) {
             const entry = this.indexById[id];
             if (!entry) return;
+            // currentTarget is cleared once dispatch ends, so capture the anchor
+            // before the category fetch below can await past it — otherwise the
+            // first hover on a not-yet-loaded category has nothing to anchor to
+            // and the popover renders off-screen.
+            const anchor = { currentTarget: event.currentTarget };
             const slug = categorySlug(entry.category);
             if (!this.categoryItems[slug]) {
                 try {
@@ -3193,7 +3376,7 @@ export const appDefinition = {
                 } catch { return; }
             }
             const item = (this.categoryItems[slug] || []).find(i => i.id === id);
-            if (item) this.showItemHover(item, event, null, extras);
+            if (item) this.showItemHover(item, anchor, null, extras);
         },
 
         async loadVersionCompareData() {
@@ -4363,6 +4546,7 @@ export const appDefinition = {
 
         filterValueLabel(def, value) {
             if (def.format) return def.format(value);
+            if (def.labelMap && def.labelMap[value]) return this.t(def.labelMap[value]);
             if (def.translate) return this.t(value);
             if (def.displayMap && def.displayMap[value]) return def.displayMap[value];
             const entry = this.displayEntry(def.key, value);
@@ -4452,8 +4636,16 @@ export const appDefinition = {
         },
 
         exchangeItemId(name) {
-            const entry = this.index.find(i => i.name === name || i.displayName === name || i.pda_encyclopedia_name === name);
-            return entry ? entry.id : null;
+            return this.exchangeIdByName[name] || null;
+        },
+
+        // Translate a string that carries {placeholders}, e.g. "{n} traders".
+        tf(key, params) {
+            let out = this.t(key);
+            for (const [k, v] of Object.entries(params || {})) {
+                out = out.split("{" + k + "}").join(v);
+            }
+            return out;
         },
 
         navigateToItem(id, _fromHistory = false) {
@@ -5411,6 +5603,28 @@ export const appDefinition = {
             } else {
                 url.searchParams.delete("faction");
             }
+            // "faction" keeps its original meaning (who you trade with); the
+            // outfit's own faction is a second, independent axis.
+            if (this.exchangeSourceFilter) {
+                url.searchParams.set("from", this.exchangeSourceFilter);
+            } else {
+                url.searchParams.delete("from");
+            }
+            if (this.isOutfitExchange && this.exchangeDirection !== "give") {
+                url.searchParams.set("dir", this.exchangeDirection);
+            } else {
+                url.searchParams.delete("dir");
+            }
+            if (this.isOutfitExchange && this.exchangeView !== "cards") {
+                url.searchParams.set("exview", this.exchangeView);
+            } else {
+                url.searchParams.delete("exview");
+            }
+            if (this.isOutfitExchange && this.exchangeSort !== "name") {
+                url.searchParams.set("exsort", this.exchangeSort);
+            } else {
+                url.searchParams.delete("exsort");
+            }
             // Version compare filters
             if (this.versionCompareFilter) {
                 url.searchParams.set("vcq", this.versionCompareFilter);
@@ -5444,6 +5658,10 @@ export const appDefinition = {
                     sortCol: this.sortCol,
                     sortAsc: this.sortAsc,
                     exchangeFactionFilter: this.exchangeFactionFilter,
+                    exchangeSourceFilter: this.exchangeSourceFilter,
+                    exchangeDirection: this.exchangeDirection,
+                    exchangeView: this.exchangeView,
+                    exchangeSort: this.exchangeSort,
                     includeAltAmmo: this.includeAltAmmo,
                 });
             }
@@ -5535,6 +5753,12 @@ export const appDefinition = {
             if (params.get("altammo") === "1") this.includeAltAmmo = true;
             const faction = params.get("faction");
             if (faction) this.exchangeFactionFilter = faction;
+            const fromFaction = params.get("from");
+            if (fromFaction) this.exchangeSourceFilter = fromFaction;
+            if (params.get("dir") === "want") this.exchangeDirection = "want";
+            if (params.get("exview") === "matrix") this.exchangeView = "matrix";
+            const exSort = params.get("exsort");
+            if (exSort === "count" || exSort === "gain") this.exchangeSort = exSort;
         },
 
         async copyLink() {
@@ -7214,7 +7438,16 @@ export const appDefinition = {
             const slug = slugMap[slotType];
             if (slug) {
                 const headers = this.categoryHeaders[slug] || [];
-                return headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id");
+                const fields = headers.filter(h => !TILE_HIDE.has(h) && !h.startsWith("Total ") && h !== "id");
+                // Ballistic Rating is computed, not a column, so inject it next to
+                // BR Class the way the item table does.
+                if ((slotType === "outfit" || slotType === "helmet")
+                    && typeof item.boneArmor === "number" && typeof item.hitFractionActor === "number") {
+                    const apIdx = fields.indexOf("ui_inv_ap_res");
+                    if (apIdx >= 0) fields.splice(apIdx, 0, "_ballistic_rating");
+                    else fields.push("_ballistic_rating");
+                }
+                return fields;
             }
             // Fallback: resolve category from index and use its headers
             const indexEntry = (this.index || []).find(i => i.id === item.id);
@@ -7651,6 +7884,18 @@ export const appDefinition = {
             if (!this._restoringUrl) this.debouncedPushUrl();
         },
         exchangeFactionFilter() {
+            if (!this._restoringUrl) this.pushUrlState();
+        },
+        exchangeSourceFilter() {
+            if (!this._restoringUrl) this.pushUrlState();
+        },
+        exchangeDirection() {
+            if (!this._restoringUrl) this.pushUrlState();
+        },
+        exchangeView() {
+            if (!this._restoringUrl) this.pushUrlState();
+        },
+        exchangeSort() {
             if (!this._restoringUrl) this.pushUrlState();
         },
         buildRadarVisible(visible) {

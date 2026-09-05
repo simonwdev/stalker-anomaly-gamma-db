@@ -13,6 +13,722 @@
     "renegade",
     "stalker"
   ],
+  "stats": {
+    "army_nosorog_outfit_name": {
+      "exo": true,
+      "art": 2,
+      "repair": "E",
+      "boneArmor": 0.6875,
+      "hitFractionActor": 0.31
+    },
+    "bandit_exo_outfit_name": {
+      "exo": true,
+      "art": 2,
+      "repair": "E",
+      "boneArmor": 0.55,
+      "hitFractionActor": 0.53
+    },
+    "bandit_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.525,
+      "hitFractionActor": 0.56
+    },
+    "cs_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.5,
+      "hitFractionActor": 0.41
+    },
+    "cs_exolight_outfit_name": {
+      "art": 3,
+      "repair": "H",
+      "boneArmor": 0.475,
+      "hitFractionActor": 0.45
+    },
+    "dolg_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.55,
+      "hitFractionActor": 0.41
+    },
+    "dolg_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.525,
+      "hitFractionActor": 0.45
+    },
+    "dolg_heavy_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.4875,
+      "hitFractionActor": 0.48
+    },
+    "dolg_heavy_redline_outfit_name": {
+      "art": 3,
+      "repair": "H",
+      "boneArmor": 0.4875,
+      "hitFractionActor": 0.48
+    },
+    "dolg_nosorog_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.575,
+      "hitFractionActor": 0.37
+    },
+    "dolg_pantsir_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.45,
+      "hitFractionActor": 0.52
+    },
+    "ecolog_exo_outfit_name": {
+      "exo": true,
+      "art": 4,
+      "repair": "E",
+      "boneArmor": 0.4375,
+      "hitFractionActor": 0.53
+    },
+    "exo_dolg_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.4625,
+      "hitFractionActor": 0.49
+    },
+    "exo_dolg_red_outfit_name": {
+      "art": 3,
+      "repair": "H",
+      "boneArmor": 0.4375,
+      "hitFractionActor": 0.5
+    },
+    "exo_dolg_urban_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.5875,
+      "hitFractionActor": 0.4
+    },
+    "exo_dolg_wood_outfit_name": {
+      "art": 3,
+      "repair": "H",
+      "boneArmor": 0.4875,
+      "hitFractionActor": 0.47
+    },
+    "exo_merc_grass_outfit_name": {
+      "art": 3,
+      "repair": "H",
+      "boneArmor": 0.5125,
+      "hitFractionActor": 0.44
+    },
+    "exo_merc_urban_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.65,
+      "hitFractionActor": 0.34
+    },
+    "exo_merc_wood_outfit_name": {
+      "art": 3,
+      "repair": "H",
+      "boneArmor": 0.5375,
+      "hitFractionActor": 0.42
+    },
+    "exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.5,
+      "hitFractionActor": 0.47
+    },
+    "exo_wood_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.525,
+      "hitFractionActor": 0.45
+    },
+    "exolight_outfit_name": {
+      "art": 3,
+      "repair": "H",
+      "boneArmor": 0.475,
+      "hitFractionActor": 0.5
+    },
+    "freedom_exo_vineleaf_outfit_name": {
+      "art": 3,
+      "repair": "H",
+      "boneArmor": 0.5625,
+      "hitFractionActor": 0.36
+    },
+    "freedom_nosorog_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.575,
+      "hitFractionActor": 0.31
+    },
+    "greh_exo_outfit_name": {
+      "exo": true,
+      "art": 5,
+      "repair": "E",
+      "boneArmor": 0.525,
+      "hitFractionActor": 0.44
+    },
+    "greh_trenchcoat_outfit_name": {
+      "art": 6,
+      "repair": "H",
+      "boneArmor": 0.35,
+      "hitFractionActor": 0.7
+    },
+    "isg_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.55,
+      "hitFractionActor": 0.29
+    },
+    "isg_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.525,
+      "hitFractionActor": 0.34
+    },
+    "isg_nosorog_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.575,
+      "hitFractionActor": 0.24
+    },
+    "light_isg_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.3625,
+      "hitFractionActor": 0.59
+    },
+    "merc_exo_outfit_name": {
+      "exo": true,
+      "art": 2,
+      "repair": "E",
+      "boneArmor": 0.6,
+      "hitFractionActor": 0.35
+    },
+    "merc_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.575,
+      "hitFractionActor": 0.39
+    },
+    "merc_nosorog_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.6375,
+      "hitFractionActor": 0.31
+    },
+    "military_bandit_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.4875,
+      "hitFractionActor": 0.58
+    },
+    "military_exo_outfit_name": {
+      "exo": true,
+      "art": 2,
+      "repair": "E",
+      "boneArmor": 0.6625,
+      "hitFractionActor": 0.35
+    },
+    "military_exolight_outfit_name": {
+      "art": 1,
+      "repair": "H",
+      "boneArmor": 0.625,
+      "hitFractionActor": 0.39
+    },
+    "military_freedom_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.4875,
+      "hitFractionActor": 0.43
+    },
+    "military_merc_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.5375,
+      "hitFractionActor": 0.43
+    },
+    "military_monolit_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.5375,
+      "hitFractionActor": 0.48
+    },
+    "military_outfit_name": {
+      "art": 1,
+      "repair": "H",
+      "boneArmor": 0.5875,
+      "hitFractionActor": 0.43
+    },
+    "military_sky_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.4375,
+      "hitFractionActor": 0.48
+    },
+    "monolith_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.6,
+      "hitFractionActor": 0.41
+    },
+    "monolith_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.575,
+      "hitFractionActor": 0.45
+    },
+    "monolith_nosorog_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.6375,
+      "hitFractionActor": 0.37
+    },
+    "monolith_trenchcoat_outfit_name": {
+      "art": 3,
+      "repair": "H",
+      "boneArmor": 0.4,
+      "hitFractionActor": 0.68
+    },
+    "renegade_exo_outfit_name": {
+      "exo": true,
+      "art": 1,
+      "repair": "E",
+      "boneArmor": 0.6,
+      "hitFractionActor": 0.35
+    },
+    "svoboda_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E",
+      "boneArmor": 0.55,
+      "hitFractionActor": 0.35
+    },
+    "svoboda_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H",
+      "boneArmor": 0.525,
+      "hitFractionActor": 0.39
+    },
+    "bandit_nbc_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.175,
+      "hitFractionActor": 0.82
+    },
+    "banditmerc_outfit_name": {
+      "art": 2,
+      "repair": "L",
+      "boneArmor": 0.2,
+      "hitFractionActor": 0.8
+    },
+    "csky_light_novice_outfit_name": {
+      "art": 2,
+      "repair": "F",
+      "boneArmor": 0.0875,
+      "hitFractionActor": 0.83
+    },
+    "csky_light_outfit_name": {
+      "art": 2,
+      "repair": "L",
+      "boneArmor": 0.1625,
+      "hitFractionActor": 0.81
+    },
+    "cs_nbc_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.175,
+      "hitFractionActor": 0.77
+    },
+    "dolg_red_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.1875,
+      "hitFractionActor": 0.77
+    },
+    "ghillie_outfit_name": {
+      "art": 4,
+      "repair": "L",
+      "boneArmor": 0.1375,
+      "hitFractionActor": 0.83
+    },
+    "isg_lcs_camo_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.2,
+      "hitFractionActor": 0.7
+    },
+    "merc_fighter_outfit_name": {
+      "art": 2,
+      "repair": "L",
+      "boneArmor": 0.2625,
+      "hitFractionActor": 0.7
+    },
+    "merc_scout_outfit_name": {
+      "art": 2,
+      "repair": "L",
+      "boneArmor": 0.2125,
+      "hitFractionActor": 0.74
+    },
+    "merc_wolven_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.225,
+      "hitFractionActor": 0.74
+    },
+    "monolith_nbc_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.2125,
+      "hitFractionActor": 0.77
+    },
+    "nbc_dolg_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.1875,
+      "hitFractionActor": 0.77
+    },
+    "nbc_freedom_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.1875,
+      "hitFractionActor": 0.75
+    },
+    "nbc_merc_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.2125,
+      "hitFractionActor": 0.75
+    },
+    "nbc_outfit_name": {
+      "art": 4,
+      "repair": "L",
+      "boneArmor": 0.175,
+      "hitFractionActor": 0.79
+    },
+    "stalker_autumn_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.175,
+      "hitFractionActor": 0.81
+    },
+    "stalker_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.1625,
+      "hitFractionActor": 0.83
+    },
+    "stalker_salamander_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.175,
+      "hitFractionActor": 0.78
+    },
+    "travel_outfit_name": {
+      "art": 6,
+      "repair": "L",
+      "boneArmor": 0.125,
+      "hitFractionActor": 0.85
+    },
+    "trenchcoat_freedom_brown_outfit_name": {
+      "art": 1,
+      "repair": "F",
+      "boneArmor": 0.1,
+      "hitFractionActor": 0.85
+    },
+    "trenchcoat_green_outfit_name": {
+      "art": 3,
+      "repair": "L",
+      "boneArmor": 0.1375,
+      "hitFractionActor": 0.8
+    },
+    "trenchcoat_outfit_name": {
+      "art": 2,
+      "repair": "F",
+      "boneArmor": 0.1,
+      "hitFractionActor": 0.86
+    },
+    "bandit_ps5_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.2875,
+      "hitFractionActor": 0.74
+    },
+    "bandit_scientific_dark_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2375,
+      "hitFractionActor": 0.76
+    },
+    "bandit_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.3375,
+      "hitFractionActor": 0.73
+    },
+    "bandit_sun_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.225,
+      "hitFractionActor": 0.77
+    },
+    "cs_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2125,
+      "hitFractionActor": 0.7
+    },
+    "cs_stalker_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.2,
+      "hitFractionActor": 0.71
+    },
+    "dolg_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2875,
+      "hitFractionActor": 0.67
+    },
+    "dolg_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2375,
+      "hitFractionActor": 0.7
+    },
+    "dolg_scientific_red_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2,
+      "hitFractionActor": 0.72
+    },
+    "dolg_scientific_wood_outfit_name": {
+      "art": 4,
+      "repair": "M",
+      "boneArmor": 0.2625,
+      "hitFractionActor": 0.68
+    },
+    "dolg_scout_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.2625,
+      "hitFractionActor": 0.7
+    },
+    "ecologist_guard_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.275,
+      "hitFractionActor": 0.71
+    },
+    "st_ecologist_outfit_grn_name": {
+      "art": 4,
+      "repair": "M",
+      "boneArmor": 0.125,
+      "hitFractionActor": 0.91
+    },
+    "greh_armored_camo_outfit_name": {
+      "art": 4,
+      "repair": "M",
+      "boneArmor": 0.25,
+      "hitFractionActor": 0.71
+    },
+    "greh_armored_outfit_name": {
+      "art": 4,
+      "repair": "M",
+      "boneArmor": 0.3625,
+      "hitFractionActor": 0.64
+    },
+    "greh_ps5_outfit_name": {
+      "art": 4,
+      "repair": "M",
+      "boneArmor": 0.275,
+      "hitFractionActor": 0.69
+    },
+    "isg_merc_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.3375,
+      "hitFractionActor": 0.57
+    },
+    "isg_lcs_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.375,
+      "hitFractionActor": 0.54
+    },
+    "isg_lcs_urban_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.2625,
+      "hitFractionActor": 0.63
+    },
+    "isg_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2875,
+      "hitFractionActor": 0.6
+    },
+    "isg_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2375,
+      "hitFractionActor": 0.64
+    },
+    "merc_coyote_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.4625,
+      "hitFractionActor": 0.56
+    },
+    "merc_jackal_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.3625,
+      "hitFractionActor": 0.65
+    },
+    "merc_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.4125,
+      "hitFractionActor": 0.58
+    },
+    "merc_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2625,
+      "hitFractionActor": 0.67
+    },
+    "merc_sun_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.375,
+      "hitFractionActor": 0.6
+    },
+    "merc_sunset_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.2875,
+      "hitFractionActor": 0.66
+    },
+    "monolith_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.375,
+      "hitFractionActor": 0.64
+    },
+    "monolith_scientific_light_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.225,
+      "hitFractionActor": 0.73
+    },
+    "monolith_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2625,
+      "hitFractionActor": 0.7
+    },
+    "renegade_scientific_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.2625,
+      "hitFractionActor": 0.67
+    },
+    "renegademerc_outfit_name": {
+      "art": 1,
+      "repair": "M",
+      "boneArmor": 0.4125,
+      "hitFractionActor": 0.58
+    },
+    "scientific_outfit_name": {
+      "art": 4,
+      "repair": "M",
+      "boneArmor": 0.2125,
+      "hitFractionActor": 0.73
+    },
+    "specops_bandit_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.2375,
+      "hitFractionActor": 0.76
+    },
+    "specops_outfit_name": {
+      "art": 1,
+      "repair": "M",
+      "boneArmor": 0.2875,
+      "hitFractionActor": 0.67
+    },
+    "stalker_bear_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2375,
+      "hitFractionActor": 0.71
+    },
+    "stalker_drought_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2,
+      "hitFractionActor": 0.74
+    },
+    "stalker_graphite_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2,
+      "hitFractionActor": 0.74
+    },
+    "stalker_tigerstripe_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.175,
+      "hitFractionActor": 0.77
+    },
+    "svoboda_heavy_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2375,
+      "hitFractionActor": 0.67
+    },
+    "svoboda_heavy_outfit_2_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2875,
+      "hitFractionActor": 0.64
+    },
+    "svoboda_light_outfit_name": {
+      "art": 2,
+      "repair": "M",
+      "boneArmor": 0.3375,
+      "hitFractionActor": 0.6
+    },
+    "svoboda_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2375,
+      "hitFractionActor": 0.67
+    },
+    "trenchcoat_brown_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.2,
+      "hitFractionActor": 0.73
+    },
+    "trenchcoat_dolg_brown_outfit_name": {
+      "art": 3,
+      "repair": "M",
+      "boneArmor": 0.225,
+      "hitFractionActor": 0.72
+    }
+  },
   "exchanges": [
     {
       "name": "army_nosorog_outfit_name",

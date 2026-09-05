@@ -7,6 +7,7 @@
 import {
   ArrowDownCircle,
   ArrowLeft,
+  ArrowRight,
   ArrowUpCircle,
   ArrowUpDown,
   Backpack,
@@ -50,6 +51,7 @@ import {
   Shield,
   SlidersHorizontal,
   Star,
+  Table,
   Timer,
   Trash2,
   TriangleAlert,
@@ -62,6 +64,7 @@ import {
 export const lucideIcons = {
   LucideArrowDownCircle: ArrowDownCircle,
   LucideArrowLeft: ArrowLeft,
+  LucideArrowRight: ArrowRight,
   LucideArrowUpCircle: ArrowUpCircle,
   LucideArrowUpDown: ArrowUpDown,
   LucideBackpack: Backpack,
@@ -104,6 +107,7 @@ export const lucideIcons = {
   LucideShield: Shield,
   LucideSlidersHorizontal: SlidersHorizontal,
   LucideStar: Star,
+  LucideTable: Table,
   LucideTimer: Timer,
   LucideTrash2: Trash2,
   LucideTriangleAlert: TriangleAlert,
@@ -133,6 +137,7 @@ export const iconMap = {
   'settings': Settings,
   'sliders-horizontal': SlidersHorizontal,
   'star': Star,
+  'table': Table,
   'trash-2': Trash2,
 };
 

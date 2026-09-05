@@ -276,6 +276,9 @@
                 :is-toolkit-rates="isToolkitRates"
                 :outfit-exchange="outfitExchange"
                 :filtered-exchanges="filteredExchanges"
+                :exchange-sort="exchangeSort"
+                :exchange-trade-count="exchangeTradeCount"
+                :exchange-has-ballistics="exchangeHasBallistics"
                 :toolkit-rates="toolkitRates"
                 :toolkit-sort-col="toolkitSortCol"
                 :toolkit-sort-asc="toolkitSortAsc"
@@ -296,6 +299,7 @@
                 @toggle-include-alt-ammo="includeAltAmmo = !includeAltAmmo; pushUrlState()"
                 @pick-sort="(col) => { sortCol = col; pushUrlState() }"
                 @toggle-sort-dir="sortAsc = !sortAsc; pushUrlState()"
+                @pick-exchange-sort="(val) => exchangeSort = val"
                 @toggle-toolkit-sort="(col) => toggleToolkitSort(col)"
                 @toggle-toolkit-sort-dir="toolkitSortAsc = !toolkitSortAsc"
                 @toggle-show-favorites-only="showFavoritesOnly = !showFavoritesOnly; pushUrlState()"
@@ -314,11 +318,20 @@
                 :is-outfit-exchange="isOutfitExchange"
                 :outfit-exchange="outfitExchange"
                 :exchange-faction-filter="exchangeFactionFilter"
-                :exchange-factions="exchangeFactions"
-                :exchange-visible-factions="exchangeVisibleFactions"
+                :exchange-source-filter="exchangeSourceFilter"
+                :exchange-direction="exchangeDirection"
+                :exchange-view="exchangeView"
+                :exchange-trader-factions="exchangeTraderFactions"
+                :exchange-source-factions="exchangeSourceFactions"
+                :exchange-matrix-factions="exchangeMatrixFactions"
                 :filtered-exchanges="filteredExchanges"
                 @update:exchange-faction-filter="exchangeFactionFilter = $event"
+                @update:exchange-source-filter="exchangeSourceFilter = $event"
+                @update:exchange-direction="exchangeDirection = $event"
+                @update:exchange-view="exchangeView = $event"
                 @navigate-to-item="navigateToItem"
+                @show-item-hover="loadoutItemHover"
+                @hide-item-hover="hideItemHover()"
             />
 
             <ToolkitRatesView
@@ -792,6 +805,7 @@ export default {
   provide() {
     return {
       t: this.t,
+      tf: this.tf,
       tName: this.tName,
       isFieldHidden: (key) => this.globalHiddenFields.includes(key) || (this.activePack?.hiddenFields || []).includes(key),
       tCat: this.tCat,

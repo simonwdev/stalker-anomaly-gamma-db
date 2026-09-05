@@ -13,6 +13,490 @@
     "renegade",
     "stalker"
   ],
+  "stats": {
+    "army_nosorog_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "bandit_exo_outfit_name": {
+      "exo": true,
+      "art": 2,
+      "repair": "E"
+    },
+    "bandit_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "cs_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "cs_exolight_outfit_name": {
+      "art": 3,
+      "repair": "H"
+    },
+    "dolg_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "dolg_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "dolg_heavy_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "dolg_heavy_redline_outfit_name": {
+      "art": 3,
+      "repair": "H"
+    },
+    "dolg_nosorog_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "dolg_pantsir_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "ecolog_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "exo_dolg_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "exo_dolg_red_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "exo_dolg_urban_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "exo_dolg_wood_outfit_name": {
+      "art": 3,
+      "repair": "H"
+    },
+    "exo_merc_grass_outfit_name": {
+      "art": 3,
+      "repair": "H"
+    },
+    "exo_merc_urban_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "exo_merc_wood_outfit_name": {
+      "art": 3,
+      "repair": "H"
+    },
+    "exo_outfit_name": {
+      "exo": true,
+      "art": 2,
+      "repair": "E"
+    },
+    "exo_wood_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "exolight_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "freedom_exo_vineleaf_outfit_name": {
+      "art": 3,
+      "repair": "H"
+    },
+    "freedom_nosorog_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "greh_exo_outfit_name": {
+      "exo": true,
+      "art": 4,
+      "repair": "E"
+    },
+    "isg_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "isg_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "isg_nosorog_outfit_name": {
+      "exo": true,
+      "art": 4,
+      "repair": "E"
+    },
+    "light_isg_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "merc_exo_outfit_name": {
+      "exo": true,
+      "art": 2,
+      "repair": "E"
+    },
+    "merc_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "merc_nosorog_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "military_bandit_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "military_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "military_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "military_freedom_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "military_merc_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "military_monolit_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "military_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "military_sky_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "monolith_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "monolith_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "monolith_nosorog_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "renegade_exo_outfit_name": {
+      "exo": true,
+      "art": 2,
+      "repair": "E"
+    },
+    "svoboda_exo_outfit_name": {
+      "exo": true,
+      "art": 3,
+      "repair": "E"
+    },
+    "svoboda_exolight_outfit_name": {
+      "art": 2,
+      "repair": "H"
+    },
+    "banditmerc_outfit_name": {
+      "art": 2,
+      "repair": "L"
+    },
+    "csky_light_novice_outfit_name": {
+      "art": 2,
+      "repair": "L"
+    },
+    "csky_light_outfit_name": {
+      "art": 2,
+      "repair": "L"
+    },
+    "isg_lcs_camo_outfit_name": {
+      "art": 3,
+      "repair": "L"
+    },
+    "merc_fighter_outfit_name": {
+      "art": 2,
+      "repair": "L"
+    },
+    "merc_scout_outfit_name": {
+      "art": 2,
+      "repair": "L"
+    },
+    "merc_wolven_outfit_name": {
+      "art": 3,
+      "repair": "L"
+    },
+    "stalker_autumn_outfit_name": {
+      "art": 2,
+      "repair": "L"
+    },
+    "stalker_outfit_name": {
+      "art": 2,
+      "repair": "L"
+    },
+    "stalker_salamander_outfit_name": {
+      "art": 2,
+      "repair": "L"
+    },
+    "trenchcoat_outfit_name": {
+      "art": 2,
+      "repair": "F"
+    },
+    "bandit_nbc_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "bandit_ps5_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "bandit_scientific_dark_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "bandit_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "bandit_sun_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "cs_nbc_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "cs_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "cs_stalker_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "dolg_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "dolg_red_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "dolg_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "dolg_scientific_red_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "dolg_scientific_wood_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "dolg_scout_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "ecologist_guard_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "st_ecologist_outfit_grn_name": {
+      "art": 4,
+      "repair": "M"
+    },
+    "ghillie_outfit_name": {
+      "art": 4,
+      "repair": "M"
+    },
+    "greh_armored_camo_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "greh_armored_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "greh_ps5_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "greh_trenchcoat_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "isg_merc_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "isg_lcs_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "isg_lcs_urban_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "isg_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "isg_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "merc_coyote_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "merc_jackal_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "merc_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "merc_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "merc_sun_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "merc_sunset_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "monolith_nbc_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "monolith_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "monolith_scientific_light_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "monolith_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "monolith_trenchcoat_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "nbc_dolg_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "nbc_freedom_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "nbc_merc_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "nbc_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "renegade_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "renegademerc_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "scientific_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "specops_bandit_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "specops_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "stalker_bear_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "stalker_drought_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "stalker_graphite_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "stalker_tigerstripe_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "svoboda_heavy_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "svoboda_heavy_outfit_2_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "svoboda_light_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "svoboda_scientific_outfit_name": {
+      "art": 3,
+      "repair": "M"
+    },
+    "travel_outfit_name": {
+      "art": 5,
+      "repair": "M"
+    },
+    "trenchcoat_brown_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "trenchcoat_dolg_brown_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "trenchcoat_freedom_brown_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    },
+    "trenchcoat_green_outfit_name": {
+      "art": 2,
+      "repair": "M"
+    }
+  },
   "exchanges": [
     {
       "name": "army_nosorog_outfit_name",

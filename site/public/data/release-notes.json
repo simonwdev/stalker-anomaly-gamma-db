@@ -1,289 +1,806 @@
 [
   {
+    "date": "2026-09-02",
+    "entries": [
+      {
+        "type": "added",
+        "text": "Outfit Exchange now says which outfit you hand over and which one you get back, and shows the Ballistic Rating you gain or lose on each trade. Look a swap up from either side, filter by trader, outfit faction, armour class, repair class, artefact slots or rating, and switch to a matrix view to compare a whole armour tier at once.",
+        "credits": [
+          {
+            "name": "veerserif",
+            "role": "suggestion"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-08-30",
     "entries": [
-      { "type": "fixed", "text": "Two leftover sections from the base game were listed as real items: a suppressor under Silencers carrying the 9mm suppressor's icon, and a scope that duplicated the PSO-1. Both are the fixed suppressor or optic on weapons like the VAL, Vintorez and Gauss Rifle, so they're now labelled as built-in and hidden behind the unobtainable filter.", "credits": [{ "name": "Dorn", "role": "bug" }] }
+      {
+        "type": "fixed",
+        "text": "Two leftover sections from the base game were listed as real items: a suppressor under Silencers carrying the 9mm suppressor's icon, and a scope that duplicated the PSO-1. Both are the fixed suppressor or optic on weapons like the VAL, Vintorez and Gauss Rifle, so they're now labelled as built-in and hidden behind the unobtainable filter.",
+        "credits": [
+          {
+            "name": "Dorn",
+            "role": "bug"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-08-29",
     "entries": [
-      { "type": "fixed", "text": "The Build Planner was adding your outfit and headgear together for Ballistic Res and BR Class. Only one of them takes a given bullet, so a Nosorog under a Spartan helmet claimed a BR Class of 134 instead of 79 to the body and 69 to the head. There's now a Body/Head toggle, and belt plates and pelts count toward the zones they actually cover.", "credits": [{ "name": "Wille", "role": "bug" }], "action": "buildPlanner" }
+      {
+        "type": "fixed",
+        "text": "The Build Planner was adding your outfit and headgear together for Ballistic Res and BR Class. Only one of them takes a given bullet, so a Nosorog under a Spartan helmet claimed a BR Class of 134 instead of 79 to the body and 69 to the head. There's now a Body/Head toggle, and belt plates and pelts count toward the zones they actually cover.",
+        "credits": [
+          {
+            "name": "Wille",
+            "role": "bug"
+          }
+        ],
+        "action": "buildPlanner"
+      }
     ]
   },
   {
     "date": "2026-08-21",
     "entries": [
-      { "type": "fixed", "text": "Max Upgraded Stats now follows the \"Show computed upgrade values\" toggle and matches the upgrade tree. It was summing the game's own numbers, which overshoot: a fully upgraded AK-74 claimed 116% reliability, not 94.5%." }
+      {
+        "type": "fixed",
+        "text": "Max Upgraded Stats now follows the \"Show computed upgrade values\" toggle and matches the upgrade tree. It was summing the game's own numbers, which overshoot: a fully upgraded AK-74 claimed 116% reliability, not 94.5%."
+      }
     ]
   },
   {
     "date": "2026-08-07",
     "entries": [
-      { "type": "added", "text": "Guns now show their fire modes — SEMI, burst and AUTO badges on the table, tiles and item pages, plus a Fire Mode filter." },
-      { "type": "added", "text": "Hover an upgrade in the upgrade tree to see which kit it needs and what tier. Tier depends on what you're upgrading: an exoskeleton wants tier 3 kits right across its tree, a pistol mostly tier 1.", "credits": [{ "name": "AgentX2006", "role": "suggestion" }] },
-      { "type": "fixed", "text": "Crafting was listing the old per-stat upgrade kits that GAMMA dropped a while back. It now shows the six that actually exist: suit armour, environmental and utility, and weapon body, mechanism and optics. Ammo recipes were stale too (a few listed the ammo itself as an ingredient), and the exo power supplies were missing.", "action": "crafting" }
+      {
+        "type": "added",
+        "text": "Guns now show their fire modes — SEMI, burst and AUTO badges on the table, tiles and item pages, plus a Fire Mode filter."
+      },
+      {
+        "type": "added",
+        "text": "Hover an upgrade in the upgrade tree to see which kit it needs and what tier. Tier depends on what you're upgrading: an exoskeleton wants tier 3 kits right across its tree, a pistol mostly tier 1.",
+        "credits": [
+          {
+            "name": "AgentX2006",
+            "role": "suggestion"
+          }
+        ]
+      },
+      {
+        "type": "fixed",
+        "text": "Crafting was listing the old per-stat upgrade kits that GAMMA dropped a while back. It now shows the six that actually exist: suit armour, environmental and utility, and weapon body, mechanism and optics. Ammo recipes were stale too (a few listed the ammo itself as an ingredient), and the exo power supplies were missing.",
+        "action": "crafting"
+      }
     ]
   },
   {
     "date": "2026-08-01",
     "entries": [
-      { "type": "added", "text": "Upgrade trees have a new Lighter tag that picks out every upgrade making the item weigh less, even when it's filed under something else. Some AK stock upgrades only list Handling but quietly shave off weight too.", "credits": [{ "name": "Androwski", "role": "suggestion" }] },
-      { "type": "changed", "text": "The upgrade tree tags now match on everything an upgrade does, not just its headline stat, so tapping Recoil also highlights the upgrades that cut recoil as a side effect. Tap a tag to keep it highlighted." },
-      { "type": "added", "text": "Artefacts and belt items now show what they add to your bullet protection. BR Class raises the class of round your armour will stop, and Stopped Bonus is the extra damage cut when a round doesn't get through.", "credits": [{ "name": "neuroc", "role": "suggestion" }] }
+      {
+        "type": "added",
+        "text": "Upgrade trees have a new Lighter tag that picks out every upgrade making the item weigh less, even when it's filed under something else. Some AK stock upgrades only list Handling but quietly shave off weight too.",
+        "credits": [
+          {
+            "name": "Androwski",
+            "role": "suggestion"
+          }
+        ]
+      },
+      {
+        "type": "changed",
+        "text": "The upgrade tree tags now match on everything an upgrade does, not just its headline stat, so tapping Recoil also highlights the upgrades that cut recoil as a side effect. Tap a tag to keep it highlighted."
+      },
+      {
+        "type": "added",
+        "text": "Artefacts and belt items now show what they add to your bullet protection. BR Class raises the class of round your armour will stop, and Stopped Bonus is the extra damage cut when a round doesn't get through.",
+        "credits": [
+          {
+            "name": "neuroc",
+            "role": "suggestion"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-07-17",
     "entries": [
-      { "type": "added", "text": "New Misc category gathers items that didn't fit any other page: detectors, tools, repair and cooking kits, the bolt, binoculars, artefact junk and more, each with its icon, weight and cost. Weapon Parts and Outfit Parts now sit alongside it under a new Items group." },
-      { "type": "fixed", "text": "Fixed a few items that were missing from Starting Loadouts, like the Thompson and the anomaly detector.", "action": "startingLoadouts" }
+      {
+        "type": "added",
+        "text": "New Misc category gathers items that didn't fit any other page: detectors, tools, repair and cooking kits, the bolt, binoculars, artefact junk and more, each with its icon, weight and cost. Weapon Parts and Outfit Parts now sit alongside it under a new Items group."
+      },
+      {
+        "type": "fixed",
+        "text": "Fixed a few items that were missing from Starting Loadouts, like the Thompson and the anomaly detector.",
+        "action": "startingLoadouts"
+      }
     ]
   },
   {
     "date": "2026-07-16",
     "entries": [
-      { "type": "added", "text": "Starting Loadouts now supports alternative loadout mods. Pick one from the Mods menu (starting with Drunk's Alternative Loadouts) to plan its loadout instead of the base game's.", "action": "startingLoadouts" },
-      { "type": "fixed", "text": "Weapon magazine sizes now show the base-game value by default and switch to GAMMA Mags Reloaded's capacities only when the Magazines view is on. Some weapons (the P90 and SVDS variants among others) were showing the mod's larger mag sizes even with it turned off.", "credits": [{ "name": "KRN", "role": "bug" }] }
+      {
+        "type": "added",
+        "text": "Starting Loadouts now supports alternative loadout mods. Pick one from the Mods menu (starting with Drunk's Alternative Loadouts) to plan its loadout instead of the base game's.",
+        "action": "startingLoadouts"
+      },
+      {
+        "type": "fixed",
+        "text": "Weapon magazine sizes now show the base-game value by default and switch to GAMMA Mags Reloaded's capacities only when the Magazines view is on. Some weapons (the P90 and SVDS variants among others) were showing the mod's larger mag sizes even with it turned off.",
+        "credits": [
+          {
+            "name": "KRN",
+            "role": "bug"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-07-15",
     "entries": [
-      { "type": "added", "text": "New Tools page that gathers all the calculators and analysis views in one spot." },
-      { "type": "changed", "text": "Upgrade trees now show real values computed from the game files. A new \"Show computed upgrade values\" toggle switches back to the game's own in-game numbers." },
-      { "type": "changed", "text": "The Ballistics calculator now compares many weapon and ammo loadouts at once, with a leaderboard that ranks them by damage and shots to kill." },
-      { "type": "added", "text": "Outfit and helmet pages now include a penetration scale showing which ammo types the armor stops and how much damage gets through the ones it doesn't.", "highlight": true, "summaryKey": "app_whats_new_armor_penetration", "action": "outfits" },
-      { "type": "added", "text": "Outfits and helmets now show a Ballistic Rating: a 0 to 100 score the site works out to sum up how well the armor stops bullets across every ammo tier in one number." }
+      {
+        "type": "added",
+        "text": "New Tools page that gathers all the calculators and analysis views in one spot."
+      },
+      {
+        "type": "changed",
+        "text": "Upgrade trees now show real values computed from the game files. A new \"Show computed upgrade values\" toggle switches back to the game's own in-game numbers."
+      },
+      {
+        "type": "changed",
+        "text": "The Ballistics calculator now compares many weapon and ammo loadouts at once, with a leaderboard that ranks them by damage and shots to kill."
+      },
+      {
+        "type": "added",
+        "text": "Outfit and helmet pages now include a penetration scale showing which ammo types the armor stops and how much damage gets through the ones it doesn't.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_armor_penetration",
+        "action": "outfits"
+      },
+      {
+        "type": "added",
+        "text": "Outfits and helmets now show a Ballistic Rating: a 0 to 100 score the site works out to sum up how well the armor stops bullets across every ammo tier in one number."
+      }
     ]
   },
   {
     "date": "2026-07-11",
     "entries": [
-      { "type": "added", "text": "Named anomaly fields (High Hopes, Burnt Fuzz Tunnel, and dozens more) now show on the map. Turn on the Anomaly fields layer, then click a field for its anomaly type and full artefact drop chances." }
+      {
+        "type": "added",
+        "text": "Named anomaly fields (High Hopes, Burnt Fuzz Tunnel, and dozens more) now show on the map. Turn on the Anomaly fields layer, then click a field for its anomaly type and full artefact drop chances."
+      }
     ]
   },
   {
     "date": "2026-07-05",
     "entries": [
-      { "type": "changed", "text": "Recoil Control and Handling are now hidden from weapon stats by default as they are meaningless. A new \"Show unreliable stats\" toggle under Display brings them back." },
-      { "type": "added", "text": "Weapons you can get from Nimble now carry a NIMBLE badge and count as obtainable.", "credits": [{ "name": "shazhaze13", "role": "suggestion" }] }
+      {
+        "type": "changed",
+        "text": "Recoil Control and Handling are now hidden from weapon stats by default as they are meaningless. A new \"Show unreliable stats\" toggle under Display brings them back."
+      },
+      {
+        "type": "added",
+        "text": "Weapons you can get from Nimble now carry a NIMBLE badge and count as obtainable.",
+        "credits": [
+          {
+            "name": "shazhaze13",
+            "role": "suggestion"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-06-29",
     "entries": [
-      { "type": "fixed", "text": "The Sold By section no longer lists weapons, outfits, and helmets, which GAMMA traders stock but won't actually sell.", "credits": [{ "name": "Terrafryer", "role": "bug" }] }
+      {
+        "type": "fixed",
+        "text": "The Sold By section no longer lists weapons, outfits, and helmets, which GAMMA traders stock but won't actually sell.",
+        "credits": [
+          {
+            "name": "Terrafryer",
+            "role": "bug"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-06-20",
     "entries": [
-      { "type": "added", "text": "Weapons and outfits now list the parts they're built from, and each part shows which weapons and outfits use it.", "highlight": true, "summaryKey": "app_whats_new_item_parts" },
-      { "type": "added", "text": "The Trading view now has an economy-difficulty selector (Tourist / Scavenger / Survivalist) that scales every buy and sell price to match your in-game economy setting." },
-      { "type": "added", "text": "Item pages now have a Sold By section listing which traders stock the item and the supply tier it unlocks at, with the unlock requirement shown on hover." },
-      { "type": "added", "text": "Scopes, silencers, and launchers that are permanently built into a weapon are now marked with an Int. badge, so you can tell them apart from attachments you fit yourself." },
-      { "type": "changed", "text": "In a weapon's detail view, compatible scopes now show their magnification and compatible magazines show their round capacity right on the tile." },
-      { "type": "changed", "text": "Weapons with a built-in silencer now keep the silencer toggle locked on in the Ballistics calculator, and the damage results account for it automatically." }
+      {
+        "type": "added",
+        "text": "Weapons and outfits now list the parts they're built from, and each part shows which weapons and outfits use it.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_item_parts"
+      },
+      {
+        "type": "added",
+        "text": "The Trading view now has an economy-difficulty selector (Tourist / Scavenger / Survivalist) that scales every buy and sell price to match your in-game economy setting."
+      },
+      {
+        "type": "added",
+        "text": "Item pages now have a Sold By section listing which traders stock the item and the supply tier it unlocks at, with the unlock requirement shown on hover."
+      },
+      {
+        "type": "added",
+        "text": "Scopes, silencers, and launchers that are permanently built into a weapon are now marked with an Int. badge, so you can tell them apart from attachments you fit yourself."
+      },
+      {
+        "type": "changed",
+        "text": "In a weapon's detail view, compatible scopes now show their magnification and compatible magazines show their round capacity right on the tile."
+      },
+      {
+        "type": "changed",
+        "text": "Weapons with a built-in silencer now keep the silencer toggle locked on in the Ballistics calculator, and the damage results account for it automatically."
+      }
     ]
   },
   {
     "date": "2026-06-11",
     "entries": [
-      { "type": "added", "text": "GAMMA Mags Reloaded support: a new Magazines category showing each magazine's size and round capacity, compatible magazines listed on every weapon (and compatible weapons on every magazine), and magazine carry slots on outfits and belt gear. Turn it on under the new Mods menu.", "highlight": true, "summaryKey": "app_whats_new_magazines", "credits": [{ "name": "Conact", "role": "suggestion" }] }
+      {
+        "type": "added",
+        "text": "GAMMA Mags Reloaded support: a new Magazines category showing each magazine's size and round capacity, compatible magazines listed on every weapon (and compatible weapons on every magazine), and magazine carry slots on outfits and belt gear. Turn it on under the new Mods menu.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_magazines",
+        "credits": [
+          {
+            "name": "Conact",
+            "role": "suggestion"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-06-06",
     "entries": [
-      { "type": "added", "text": "Inventory view - import a save file to browse your character's inventory and player stashes", "highlight": true, "summaryKey": "app_whats_new_player_inventory", "action": "playerInventory" }
+      {
+        "type": "added",
+        "text": "Inventory view - import a save file to browse your character's inventory and player stashes",
+        "highlight": true,
+        "summaryKey": "app_whats_new_player_inventory",
+        "action": "playerInventory"
+      }
     ]
   },
   {
     "date": "2026-06-05",
     "entries": [
-      { "type": "changed", "text": "Weapons only obtainable by applying a tactical kit are now badged Tactical Kit instead of Unobtainable, with a new setting to hide them. Kit-derived duplicates now show a [Kit] name suffix instead of a raw ID.", "credits": [{ "name": "Icarus", "role": "suggestion" }] }
+      {
+        "type": "changed",
+        "text": "Weapons only obtainable by applying a tactical kit are now badged Tactical Kit instead of Unobtainable, with a new setting to hide them. Kit-derived duplicates now show a [Kit] name suffix instead of a raw ID.",
+        "credits": [
+          {
+            "name": "Icarus",
+            "role": "suggestion"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-06-03",
     "entries": [
-      { "type": "added", "text": "Faction Drops view - browse every faction's NPC weapon pool as a rank-by-rank matrix from Novice to Legend. See which weapons are exclusive to a faction, which are carried by special units like snipers and black ops, and filter by category, rank, and origin.", "highlight": true, "summaryKey": "app_whats_new_faction_drops", "action": "factionPools", "credits": [{ "name": "Conact", "role": "suggestion" }] }
+      {
+        "type": "added",
+        "text": "Faction Drops view - browse every faction's NPC weapon pool as a rank-by-rank matrix from Novice to Legend. See which weapons are exclusive to a faction, which are carried by special units like snipers and black ops, and filter by category, rank, and origin.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_faction_drops",
+        "action": "factionPools",
+        "credits": [
+          {
+            "name": "Conact",
+            "role": "suggestion"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-05-23",
     "entries": [
-      { "type": "added", "text": "Tactical kits now show the modified weapon they produce.", "credits": [{ "name": "Icarus", "role": "suggestion" }] }
+      {
+        "type": "added",
+        "text": "Tactical kits now show the modified weapon they produce.",
+        "credits": [
+          {
+            "name": "Icarus",
+            "role": "suggestion"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-05-18",
     "entries": [
-      { "type": "added", "text": "Weapon Mechanics Guide explaining what each stat actually does, accessible from the weapon list and from the Stats section of any weapon's detail modal.", "credits": [{ "name": "Evincars", "role": "code" }] }
+      {
+        "type": "added",
+        "text": "Weapon Mechanics Guide explaining what each stat actually does, accessible from the weapon list and from the Stats section of any weapon's detail modal.",
+        "credits": [
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-05-17",
     "entries": [
-      { "type": "added", "text": "Weapon detail modal now includes a Max Upgraded Stats section showing the best achievable values with all upgrades applied.", "credits": [{ "name": "Evincars", "role": "code" }] },
-      { "type": "added", "text": "New Has Grenade Launcher filter for weapon categories.", "credits": [{ "name": "Evincars", "role": "code" }] }
+      {
+        "type": "added",
+        "text": "Weapon detail modal now includes a Max Upgraded Stats section showing the best achievable values with all upgrades applied.",
+        "credits": [
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      },
+      {
+        "type": "added",
+        "text": "New Has Grenade Launcher filter for weapon categories.",
+        "credits": [
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-05-16",
     "entries": [
-      { "type": "added", "text": "Weapons, ammo, and addons now show an Origin badge (NATO / WP / Other) and can be filtered by it.", "credits": [{ "name": "cXy", "role": "suggestion" }] },
-      { "type": "changed", "text": "Traders screen reworked to include filtering, sorting, and searching." }
+      {
+        "type": "added",
+        "text": "Weapons, ammo, and addons now show an Origin badge (NATO / WP / Other) and can be filtered by it.",
+        "credits": [
+          {
+            "name": "cXy",
+            "role": "suggestion"
+          }
+        ]
+      },
+      {
+        "type": "changed",
+        "text": "Traders screen reworked to include filtering, sorting, and searching."
+      }
     ]
   },
   {
     "date": "2026-05-13",
     "entries": [
-      { "type": "added", "text": "Artefacts now show their perk name, full perk description and abilities.", "credits": [{ "name": "ApokalypsBZH", "role": "suggestion" }] },
-      { "type": "changed", "text": "Reworked unobtainable weapons filter to correctly classify weapons available via stash drops or starting loadouts, not just NPC drops.", "credits": [{ "name": "Icarus", "role": "suggestion" }] }
+      {
+        "type": "added",
+        "text": "Artefacts now show their perk name, full perk description and abilities.",
+        "credits": [
+          {
+            "name": "ApokalypsBZH",
+            "role": "suggestion"
+          }
+        ]
+      },
+      {
+        "type": "changed",
+        "text": "Reworked unobtainable weapons filter to correctly classify weapons available via stash drops or starting loadouts, not just NPC drops.",
+        "credits": [
+          {
+            "name": "Icarus",
+            "role": "suggestion"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-05-10",
     "entries": [
-      { "type": "added", "text": "GAMMA 0.9.5 starting loadouts planner is now available." },
-      { "type": "added", "text": "Ballistics calculator now supports mutant shots-to-kill.", "credits": [{ "name": "SaloEater", "role": "suggestion" }] }
+      {
+        "type": "added",
+        "text": "GAMMA 0.9.5 starting loadouts planner is now available."
+      },
+      {
+        "type": "added",
+        "text": "Ballistics calculator now supports mutant shots-to-kill.",
+        "credits": [
+          {
+            "name": "SaloEater",
+            "role": "suggestion"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-05-09",
     "entries": [
-      { "type": "added", "text": "GAMMA 0.9.5 has been released and is now the default mod pack.", "highlight": true, "summaryKey": "app_whats_new_gamma_095" }
+      {
+        "type": "added",
+        "text": "GAMMA 0.9.5 has been released and is now the default mod pack.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_gamma_095"
+      }
     ]
   },
   {
     "date": "2026-04-26",
     "entries": [
-      { "type": "added", "text": "Trading view - browse every trader's stock, prices, supply tiers, and buy/sell conditions across all factions.", "highlight": true, "summaryKey": "app_whats_new_trading", "action": "trading", "credits": [{ "name": "Evincars", "role": "code" }] }
+      {
+        "type": "added",
+        "text": "Trading view - browse every trader's stock, prices, supply tiers, and buy/sell conditions across all factions.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_trading",
+        "action": "trading",
+        "credits": [
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-04-16",
     "entries": [
-      { "type": "added", "text": "Crafting tree view - visualize full recipe chains as expandable trees showing every ingredient and sub-recipe.", "credits": [{ "name": "Evincars", "role": "code" }] }
+      {
+        "type": "added",
+        "text": "Crafting tree view - visualize full recipe chains as expandable trees showing every ingredient and sub-recipe.",
+        "credits": [
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-04-12",
     "entries": [
-      { "type": "added", "text": "Full crafting recipes - browse every workshop recipe across all categories: repair kits, equipment, devices, upgrades, medical, ammo, furniture, decorations, and artefacts. See required ingredients, toolkit, and recipe book at a glance. Expand any ingredient to see its own recipe chain.", "highlight": true, "summaryKey": "app_whats_new_crafting", "action": "crafting" }
+      {
+        "type": "added",
+        "text": "Full crafting recipes - browse every workshop recipe across all categories: repair kits, equipment, devices, upgrades, medical, ammo, furniture, decorations, and artefacts. See required ingredients, toolkit, and recipe book at a glance. Expand any ingredient to see its own recipe chain.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_crafting",
+        "action": "crafting"
+      }
     ]
   },
   {
     "date": "2026-04-11",
     "entries": [
-      { "type": "added", "text": "Upgrade tree for weapons and outfits - browse every upgrade tier and see costs and stat changes at a glance.", "highlight": true, "summaryKey": "app_whats_new_upgrade_tree" }
+      {
+        "type": "added",
+        "text": "Upgrade tree for weapons and outfits - browse every upgrade tier and see costs and stat changes at a glance.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_upgrade_tree"
+      }
     ]
   },
   {
     "date": "2026-04-09",
     "entries": [
-      { "type": "added", "text": "Starting Loadouts planner - browse and plan your new game loadout for all 13 factions. Select items, track your point budget with a live progress bar, and see which ammo you'll receive. Supports all three difficulty levels and persists selections per faction.", "highlight": true, "summaryKey": "app_whats_new_starting_loadouts", "action": "startingLoadouts" },
-      { "type": "added", "text": "Ballistic help and instructions panel - learn how damage, armor penetration, and hit zones work with an in-app guide accessible from the Ballistics tab." }
+      {
+        "type": "added",
+        "text": "Starting Loadouts planner - browse and plan your new game loadout for all 13 factions. Select items, track your point budget with a live progress bar, and see which ammo you'll receive. Supports all three difficulty levels and persists selections per faction.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_starting_loadouts",
+        "action": "startingLoadouts"
+      },
+      {
+        "type": "added",
+        "text": "Ballistic help and instructions panel - learn how damage, armor penetration, and hit zones work with an in-app guide accessible from the Ballistics tab."
+      }
     ]
   },
   {
     "date": "2026-04-05",
     "entries": [
-      { "type": "added", "text": "Weapon attachments - Scopes, Silencers, Underbarrel, and Tactical Kits with compatible weapons and attachment tiles on weapon modals.", "highlight": true, "summaryKey": "app_whats_new_attachments", "action": "attachments", "credits": [{ "name": "Evincars", "role": "code" }] }
+      {
+        "type": "added",
+        "text": "Weapon attachments - Scopes, Silencers, Underbarrel, and Tactical Kits with compatible weapons and attachment tiles on weapon modals.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_attachments",
+        "action": "attachments",
+        "credits": [
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-04-03",
     "entries": [
-      { "type": "added", "text": "Ballistics calculator - compare up to 5 weapon + ammo loadouts against any stalker or mutant target. See damage, AP, penetration, shots to kill, and a radar chart breakdown. Click Ballistics in the tab bar to try it.", "highlight": true, "summaryKey": "app_whats_new_ballistics", "action": "ballistics" }
+      {
+        "type": "added",
+        "text": "Ballistics calculator - compare up to 5 weapon + ammo loadouts against any stalker or mutant target. See damage, AP, penetration, shots to kill, and a radar chart breakdown. Click Ballistics in the tab bar to try it.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_ballistics",
+        "action": "ballistics"
+      }
     ]
   },
   {
     "date": "2026-03-29",
     "entries": [
-      { "type": "added", "text": "Interactive map - explore the Zone with a zoomable, multi-resolution map. Click Maps in the tab bar to try it out.", "highlight": true, "summaryKey": "app_whats_new_maps", "action": "maps" },
-      { "type": "added", "text": "Artifact crafting trees - see every recipe chain at a glance.", "highlight": true, "summaryKey": "app_whats_new_crafting_trees", "action": "craftingTrees", "credits": [{ "name": "Evincars", "role": "code" }] },
-      { "type": "added", "text": "Grim Raid Addon 2.4 mod pack with full item data, icons, and drop locations.", "credits": [{ "name": "SaloEater", "role": "code" }] },
-      { "type": "added", "text": "Stash drop chances for Anomaly 1.5.3 items.", "credits": [{ "name": "SaloEater", "role": "code" }] },
-      { "type": "changed", "text": "Responsive layout improvements - header, filter bar, and version compare toolbar now collapse gracefully on tablet and mobile." },
-      { "type": "changed", "text": "Version compare filter selections now persist in the URL, so filtered views can be shared or bookmarked." },
-      { "type": "fixed", "text": "Save file import now correctly resolves weapons with GAMMA-style addon suffixes and assigns loadout slots based on equipped state." }
+      {
+        "type": "added",
+        "text": "Interactive map - explore the Zone with a zoomable, multi-resolution map. Click Maps in the tab bar to try it out.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_maps",
+        "action": "maps"
+      },
+      {
+        "type": "added",
+        "text": "Artifact crafting trees - see every recipe chain at a glance.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_crafting_trees",
+        "action": "craftingTrees",
+        "credits": [
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      },
+      {
+        "type": "added",
+        "text": "Grim Raid Addon 2.4 mod pack with full item data, icons, and drop locations.",
+        "credits": [
+          {
+            "name": "SaloEater",
+            "role": "code"
+          }
+        ]
+      },
+      {
+        "type": "added",
+        "text": "Stash drop chances for Anomaly 1.5.3 items.",
+        "credits": [
+          {
+            "name": "SaloEater",
+            "role": "code"
+          }
+        ]
+      },
+      {
+        "type": "changed",
+        "text": "Responsive layout improvements - header, filter bar, and version compare toolbar now collapse gracefully on tablet and mobile."
+      },
+      {
+        "type": "changed",
+        "text": "Version compare filter selections now persist in the URL, so filtered views can be shared or bookmarked."
+      },
+      {
+        "type": "fixed",
+        "text": "Save file import now correctly resolves weapons with GAMMA-style addon suffixes and assigns loadout slots based on equipped state."
+      }
     ]
   },
   {
     "date": "2026-03-28",
     "entries": [
-      { "type": "added", "text": "Save file import in the build planner - drag and drop your .scop and .scoc save files to auto-populate your loadout, inventory, and stash.", "highlight": true, "summaryKey": "app_whats_new_save_import", "action": "buildPlanner" },
-      { "type": "added", "text": "Ammo tooltips on weapon caliber badges - hover any ammo type on a gun to see an image, armor penetration, damage, accuracy, and cost per round.", "credits": [{ "name": "Evincars", "role": "code" }] },
-      { "type": "added", "text": "Clicking an ammo badge on a weapon now navigates directly to that ammo item.", "credits": [{ "name": "Evincars", "role": "code" }] },
-      { "type": "added", "text": "Version Compare page - accessible from the sidebar, with category and property filters to drill into specific balance changes between pack versions." }
+      {
+        "type": "added",
+        "text": "Save file import in the build planner - drag and drop your .scop and .scoc save files to auto-populate your loadout, inventory, and stash.",
+        "highlight": true,
+        "summaryKey": "app_whats_new_save_import",
+        "action": "buildPlanner"
+      },
+      {
+        "type": "added",
+        "text": "Ammo tooltips on weapon caliber badges - hover any ammo type on a gun to see an image, armor penetration, damage, accuracy, and cost per round.",
+        "credits": [
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      },
+      {
+        "type": "added",
+        "text": "Clicking an ammo badge on a weapon now navigates directly to that ammo item.",
+        "credits": [
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      },
+      {
+        "type": "added",
+        "text": "Version Compare page - accessible from the sidebar, with category and property filters to drill into specific balance changes between pack versions."
+      }
     ]
   },
   {
     "date": "2026-03-26",
     "entries": [
-      { "type": "added", "text": "Item icons now appear in the item detail modal and build planner hover previews.", "credits": [{ "name": "SaloEater", "role": "code" }, { "name": "Evincars", "role": "code" }] },
-      { "type": "added", "text": "Flag filters like Powered Exo and Craftable now support both Yes and No options, so you can exclude items that match.", "credits": [{ "name": "AboveTheChemist", "role": "suggestion" }] },
-      { "type": "added", "text": "Alt ammo toggle on the ammo type filter - include weapons that can be converted to a particular caliber alongside those that natively fire it.", "credits": [{ "name": "AboveTheChemist", "role": "suggestion" }] }
+      {
+        "type": "added",
+        "text": "Item icons now appear in the item detail modal and build planner hover previews.",
+        "credits": [
+          {
+            "name": "SaloEater",
+            "role": "code"
+          },
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      },
+      {
+        "type": "added",
+        "text": "Flag filters like Powered Exo and Craftable now support both Yes and No options, so you can exclude items that match.",
+        "credits": [
+          {
+            "name": "AboveTheChemist",
+            "role": "suggestion"
+          }
+        ]
+      },
+      {
+        "type": "added",
+        "text": "Alt ammo toggle on the ammo type filter - include weapons that can be converted to a particular caliber alongside those that natively fire it.",
+        "credits": [
+          {
+            "name": "AboveTheChemist",
+            "role": "suggestion"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-03-25",
     "entries": [
-      { "type": "changed", "text": "Belt slots now automatically use the fully upgraded slot count for each outfit - no more manual +/- adjustments needed." },
-      { "type": "fixed", "text": "Build sharing now works for all ammo types, including OG-7B and VOG-25 variants." },
-      { "type": "fixed", "text": "Adding favourites to build planner inventory now correctly updates stats.", "credits": [{ "name": "Evincars", "role": "code" }] },
-      { "type": "added", "text": "French translations for item names, descriptions, and app UI.", "credits": [{ "name": "equi-web", "role": "code" }] }
+      {
+        "type": "changed",
+        "text": "Belt slots now automatically use the fully upgraded slot count for each outfit - no more manual +/- adjustments needed."
+      },
+      {
+        "type": "fixed",
+        "text": "Build sharing now works for all ammo types, including OG-7B and VOG-25 variants."
+      },
+      {
+        "type": "fixed",
+        "text": "Adding favourites to build planner inventory now correctly updates stats.",
+        "credits": [
+          {
+            "name": "Evincars",
+            "role": "code"
+          }
+        ]
+      },
+      {
+        "type": "added",
+        "text": "French translations for item names, descriptions, and app UI.",
+        "credits": [
+          {
+            "name": "equi-web",
+            "role": "code"
+          }
+        ]
+      }
     ]
   },
   {
     "date": "2026-03-24",
     "entries": [
-      { "type": "added", "text": "Toolkit Rates - see the drop chances for Basic, Advanced, Expert, Drug-making, and Gunsmithing tools across every map at a glance." },
-      { "type": "fixed", "text": "Resist caps in the build planner now calculate correctly - cap bonuses from all equipped artefacts stack onto the 65% base instead of being ignored." }
+      {
+        "type": "added",
+        "text": "Toolkit Rates - see the drop chances for Basic, Advanced, Expert, Drug-making, and Gunsmithing tools across every map at a glance."
+      },
+      {
+        "type": "fixed",
+        "text": "Resist caps in the build planner now calculate correctly - cap bonuses from all equipped artefacts stack onto the 65% base instead of being ignored."
+      }
     ]
   },
   {
     "date": "2026-03-23",
     "entries": [
-      { "type": "added", "text": "GAMMA 0.9.5 mod pack (preview)." },
-      { "type": "added", "text": "Cross-pack stat comparison in the item modal - see what changed between pack versions." }
+      {
+        "type": "added",
+        "text": "GAMMA 0.9.5 mod pack (preview)."
+      },
+      {
+        "type": "added",
+        "text": "Cross-pack stat comparison in the item modal - see what changed between pack versions."
+      }
     ]
   },
   {
     "date": "2026-03-22",
     "entries": [
-      { "type": "added", "text": "Radar chart view in the Compare modal - visually compare pinned items across all stats." },
-      { "type": "added", "text": "Weapon Chart in the build planner - overlay your equipped weapons on a radar chart to compare stats at a glance." },
-      { "type": "added", "text": "Bonus belt slots for tracking outfit upgrades." },
-      { "type": "added", "text": "Shareable build codes - copy a short code or link to share your full loadout and inventory." },
-      { "type": "added", "text": "Keyboard shortcuts for common actions like search, view toggling, and item navigation." },
-      { "type": "added", "text": "Sidebar can now be collapsed on desktop for more screen space." },
-      { "type": "added", "text": "Anomaly 1.5.3 mod pack with 798 items across 16 categories." }
+      {
+        "type": "added",
+        "text": "Radar chart view in the Compare modal - visually compare pinned items across all stats."
+      },
+      {
+        "type": "added",
+        "text": "Weapon Chart in the build planner - overlay your equipped weapons on a radar chart to compare stats at a glance."
+      },
+      {
+        "type": "added",
+        "text": "Bonus belt slots for tracking outfit upgrades."
+      },
+      {
+        "type": "added",
+        "text": "Shareable build codes - copy a short code or link to share your full loadout and inventory."
+      },
+      {
+        "type": "added",
+        "text": "Keyboard shortcuts for common actions like search, view toggling, and item navigation."
+      },
+      {
+        "type": "added",
+        "text": "Sidebar can now be collapsed on desktop for more screen space."
+      },
+      {
+        "type": "added",
+        "text": "Anomaly 1.5.3 mod pack with 798 items across 16 categories."
+      }
     ]
   },
   {
     "date": "2026-03-21",
     "entries": [
-      { "type": "added", "text": "Weapon slots in the build planner: primary, secondary, sidearm (pistol/knife), and grenade with ammo selection and combined weapon stats." },
-      { "type": "added", "text": "Build planner now shows your total carry capacity, combining base carry weight with equipment bonuses." },
-      { "type": "added", "text": "Release notes page with a notification badge when new updates are available." },
-      { "type": "added", "text": "Ammo tiles now show cost per pack and cost per round." }
+      {
+        "type": "added",
+        "text": "Weapon slots in the build planner: primary, secondary, sidearm (pistol/knife), and grenade with ammo selection and combined weapon stats."
+      },
+      {
+        "type": "added",
+        "text": "Build planner now shows your total carry capacity, combining base carry weight with equipment bonuses."
+      },
+      {
+        "type": "added",
+        "text": "Release notes page with a notification badge when new updates are available."
+      },
+      {
+        "type": "added",
+        "text": "Ammo tiles now show cost per pack and cost per round."
+      }
     ]
   },
   {
     "date": "2026-03-20",
     "entries": [
-      { "type": "added", "text": "Compare equipped items against inventory items in the build planner to see which is better." },
-      { "type": "added", "text": "Build planner for planning and comparing loadouts with combined stats, weight, and protection breakdowns." }
+      {
+        "type": "added",
+        "text": "Compare equipped items against inventory items in the build planner to see which is better."
+      },
+      {
+        "type": "added",
+        "text": "Build planner for planning and comparing loadouts with combined stats, weight, and protection breakdowns."
+      }
     ]
   },
   {
     "date": "2026-03-19",
     "entries": [
-      { "type": "added", "text": "Initial release of Stalker Gamma Database." }
+      {
+        "type": "added",
+        "text": "Initial release of Stalker Gamma Database."
+      }
     ]
   }
 ]
