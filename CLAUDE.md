@@ -15,6 +15,7 @@
 - `npm run build` — production build to `dist/`
 - `npm run release` — build + copy Cloudflare Functions to dist
 - Deploy: Cloudflare Pages via `npm run deploy`
+- `npm run deploy-presence` — deploy the presence Worker (`workers/presence/`); deploy it before Pages when both change
 
 ## Project structure
 Vite root is `site/`. Notable non-obvious paths:
