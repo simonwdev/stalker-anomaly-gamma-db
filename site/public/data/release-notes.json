@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-09-13",
+    "entries": [
+      {
+        "type": "fixed",
+        "text": "CNPP North and South had their names swapped on the map, including on transitions from other levels. Both zones now fit the map image, and their markers line up with the buildings and roads they belong to.",
+        "credits": [
+          {
+            "name": "Galahadin",
+            "role": "bug"
+          }
+        ],
+        "action": "maps"
+      }
+    ]
+  },
+  {
     "date": "2026-09-12",
     "entries": [
       {
