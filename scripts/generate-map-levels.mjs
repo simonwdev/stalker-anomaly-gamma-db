@@ -47,8 +47,9 @@ const WORLD_BOUNDS = {
   l10u_bunker:          { minX: -75.655, maxX: 30.716, minZ: -112.497, maxZ: 85.01 },
   l11_hospital:         { minX: -180, maxX: 10, minZ: 537, maxZ: 917 },
   l11_pripyat:          { minX: -628.133, maxX: 671.867, minZ: -520.743, maxZ: 779.257 },
-  l12_stancia:          { minX: -600.105, maxX: 1729.65, minZ: -747.782, maxZ: 850.523 },
-  l12_stancia_2:        { minX: -603.302, maxX: 1729.65, minZ: -930.571, maxZ: 966.97 },
+  // CNPP bounds: see map-projection.mjs
+  l12_stancia:          { minX: -254.776, maxX: 1398.44, minZ: -747.782, maxZ: 52.879 },
+  l12_stancia_2:        { minX: -254.776, maxX: 1398.44, minZ: 52.879, maxZ: 852.879 },
   l12u_control_monolith:{ minX: -43.996, maxX: 43.947, minZ: -44.348, maxZ: 40.702 },
   l12u_sarcofag:        { minX: -34.982, maxX: 102.851, minZ: -43.51, maxZ: 55.244 },
   l13_generators:       { minX: -525.205, maxX: 540.927, minZ: -853.156, maxZ: 209.524 },
@@ -84,8 +85,8 @@ const LEVEL_NAMES = {
   l10u_bunker: "Bunker",
   l11_hospital: "Hospital",
   l11_pripyat: "Pripyat (SoC)",
-  l12_stancia: "CNPP (North)",
-  l12_stancia_2: "CNPP (South)",
+  l12_stancia: "CNPP (South)",
+  l12_stancia_2: "CNPP (North)",
   l12u_control_monolith: "Monolith Control Center",
   l12u_sarcofag: "Sarcophagus",
   l13_generators: "Generators",
@@ -95,6 +96,15 @@ const LEVEL_NAMES = {
   labx8: "Lab X-8",
   y04_pole: "Meadow",
   fake_start: "Fake Start",
+};
+
+// Display-only rects (LTX space) for levels whose texture is mostly transparent
+// padding, so the zone outline/label hugs the visible map. rawRect keeps the
+// global_rect, which tile placement and save-game transforms depend on.
+// CNPP: measured from map_aes_1 / map_aes_2 content extents.
+const DISPLAY_RECTS = {
+  l12_stancia:   { x1: 365, y1: 298, x2: 669, y2: 388 },
+  l12_stancia_2: { x1: 365, y1: 181, x2: 669, y2: 298 },
 };
 
 // Parse the LTX file
@@ -157,6 +167,7 @@ for (const id of levelIds) {
   const w = Math.abs(rect.x2 - rect.x1);
   const h = Math.abs(rect.y2 - rect.y1);
   const isUnderground = w <= 2 && h <= 2;
+  const display = DISPLAY_RECTS[id] || rect;
 
   levels.push({
     id,
@@ -164,10 +175,10 @@ for (const id of levelIds) {
     underground: isUnderground,
     // Normalized coordinates (0-1 range relative to global map)
     bounds: {
-      x1: rect.x1 / GLOBAL_W,
-      y1: rect.y1 / GLOBAL_H,
-      x2: rect.x2 / GLOBAL_W,
-      y2: rect.y2 / GLOBAL_H,
+      x1: display.x1 / GLOBAL_W,
+      y1: display.y1 / GLOBAL_H,
+      x2: display.x2 / GLOBAL_W,
+      y2: display.y2 / GLOBAL_H,
     },
     // Raw LTX coordinates (for reference)
     rawRect: rect,

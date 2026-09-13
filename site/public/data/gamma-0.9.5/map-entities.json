@@ -1595,8 +1595,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 429.58,
-        "mapY": 184.85
+        "mapX": 388.22,
+        "mapY": 271.79
       },
       {
         "id": 8151,
@@ -1604,8 +1604,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 435.23,
-        "mapY": 187.67
+        "mapX": 396.19,
+        "mapY": 278.48
       },
       {
         "id": 8152,
@@ -1613,8 +1613,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 432.54,
-        "mapY": 188.25
+        "mapX": 392.4,
+        "mapY": 279.86
       },
       {
         "id": 8153,
@@ -1622,8 +1622,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 429.95,
-        "mapY": 190.3
+        "mapX": 388.74,
+        "mapY": 284.72
       },
       {
         "id": 8154,
@@ -1631,8 +1631,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 434.31,
-        "mapY": 182.06
+        "mapX": 394.9,
+        "mapY": 265.17
       },
       {
         "id": 8155,
@@ -1640,8 +1640,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 428.75,
-        "mapY": 181.14
+        "mapX": 387.05,
+        "mapY": 262.99
       },
       {
         "id": 8156,
@@ -1649,8 +1649,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 428.83,
-        "mapY": 173.19
+        "mapX": 387.16,
+        "mapY": 244.13
       },
       {
         "id": 8157,
@@ -1658,8 +1658,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 523.91,
-        "mapY": 172.2
+        "mapX": 521.34,
+        "mapY": 241.79
       },
       {
         "id": 8158,
@@ -1667,8 +1667,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 524.65,
-        "mapY": 171.4
+        "mapX": 522.38,
+        "mapY": 239.89
       },
       {
         "id": 8159,
@@ -1676,8 +1676,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 526.19,
-        "mapY": 171.22
+        "mapX": 524.55,
+        "mapY": 239.46
       },
       {
         "id": 8160,
@@ -1685,8 +1685,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 527.41,
-        "mapY": 172
+        "mapX": 526.27,
+        "mapY": 241.31
       },
       {
         "id": 8161,
@@ -1694,8 +1694,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 527.07,
-        "mapY": 172.89
+        "mapX": 525.79,
+        "mapY": 243.42
       },
       {
         "id": 8162,
@@ -1703,8 +1703,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 525.79,
-        "mapY": 173.31
+        "mapX": 523.99,
+        "mapY": 244.42
       },
       {
         "id": 8163,
@@ -1712,8 +1712,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia_2",
-        "mapX": 524.43,
-        "mapY": 172.93
+        "mapX": 522.07,
+        "mapY": 243.52
       },
       {
         "id": 8589,
@@ -2351,8 +2351,8 @@
         "section": "campfire",
         "type": "campfire",
         "level": "l12_stancia",
-        "mapX": 493.55,
-        "mapY": 403.27
+        "mapX": 478.95,
+        "mapY": 311.89
       },
       {
         "id": 14307,
@@ -14145,8 +14145,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia",
-        "mapX": 414.01,
-        "mapY": 412.19
+        "mapX": 366.86,
+        "mapY": 329.69
       },
       {
         "id": 22749,
@@ -14154,8 +14154,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia",
-        "mapX": 601.92,
-        "mapY": 397.12
+        "mapX": 631.66,
+        "mapY": 299.61
       },
       {
         "id": 22751,
@@ -14163,8 +14163,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia",
-        "mapX": 464.78,
-        "mapY": 424.71
+        "mapX": 438.4,
+        "mapY": 354.68
       },
       {
         "id": 22753,
@@ -14172,8 +14172,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia",
-        "mapX": 478.11,
-        "mapY": 430.41
+        "mapX": 457.19,
+        "mapY": 366.06
       },
       {
         "id": 22755,
@@ -14181,8 +14181,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia",
-        "mapX": 533.17,
-        "mapY": 415.63
+        "mapX": 534.78,
+        "mapY": 336.56
       },
       {
         "id": 22757,
@@ -14190,8 +14190,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia",
-        "mapX": 555.09,
-        "mapY": 403.14
+        "mapX": 565.67,
+        "mapY": 311.63
       },
       {
         "id": 22759,
@@ -14199,8 +14199,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia",
-        "mapX": 557.02,
-        "mapY": 428.25
+        "mapX": 568.39,
+        "mapY": 361.75
       },
       {
         "id": 22761,
@@ -14208,8 +14208,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia",
-        "mapX": 574.35,
-        "mapY": 417.12
+        "mapX": 592.81,
+        "mapY": 339.53
       },
       {
         "id": 22763,
@@ -14217,8 +14217,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia",
-        "mapX": 577.2,
-        "mapY": 406.32
+        "mapX": 596.83,
+        "mapY": 317.97
       },
       {
         "id": 22765,
@@ -14226,8 +14226,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia",
-        "mapX": 590.63,
-        "mapY": 440.57
+        "mapX": 615.75,
+        "mapY": 386.35
       },
       {
         "id": 22767,
@@ -14235,8 +14235,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 606.56,
-        "mapY": 179.33
+        "mapX": 637.97,
+        "mapY": 258.7
       },
       {
         "id": 22769,
@@ -14244,8 +14244,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 446.83,
-        "mapY": 169.43
+        "mapX": 412.56,
+        "mapY": 235.22
       },
       {
         "id": 22771,
@@ -14253,8 +14253,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 457.31,
-        "mapY": 187.37
+        "mapX": 427.35,
+        "mapY": 277.77
       },
       {
         "id": 22773,
@@ -14262,8 +14262,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 469.46,
-        "mapY": 187.08
+        "mapX": 444.5,
+        "mapY": 277.08
       },
       {
         "id": 22775,
@@ -14271,8 +14271,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 483.96,
-        "mapY": 185.51
+        "mapX": 464.96,
+        "mapY": 273.36
       },
       {
         "id": 22777,
@@ -14280,8 +14280,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 489.38,
-        "mapY": 169.01
+        "mapX": 472.61,
+        "mapY": 234.22
       },
       {
         "id": 22779,
@@ -14289,8 +14289,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 427.69,
-        "mapY": 173.14
+        "mapX": 385.55,
+        "mapY": 244.02
       },
       {
         "id": 22781,
@@ -14298,8 +14298,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 522.62,
-        "mapY": 173.47
+        "mapX": 519.52,
+        "mapY": 244.8
       },
       {
         "id": 22783,
@@ -14307,8 +14307,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 578.39,
-        "mapY": 187.56
+        "mapX": 598.22,
+        "mapY": 278.22
       },
       {
         "id": 22785,
@@ -14316,8 +14316,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 579.01,
-        "mapY": 165.99
+        "mapX": 599.09,
+        "mapY": 227.06
       },
       {
         "id": 22787,
@@ -14325,8 +14325,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 579.58,
-        "mapY": 178.82
+        "mapX": 599.89,
+        "mapY": 257.49
       },
       {
         "id": 22789,
@@ -14334,8 +14334,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 504.26,
-        "mapY": 183.57
+        "mapX": 493.61,
+        "mapY": 268.76
       },
       {
         "id": 22791,
@@ -14343,8 +14343,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 536.3,
-        "mapY": 167.18
+        "mapX": 538.82,
+        "mapY": 229.88
       },
       {
         "id": 22793,
@@ -14352,8 +14352,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 543.16,
-        "mapY": 187.86
+        "mapX": 548.5,
+        "mapY": 278.93
       },
       {
         "id": 22795,
@@ -14361,8 +14361,8 @@
         "section": "inventory_box",
         "type": "stash",
         "level": "l12_stancia_2",
-        "mapX": 555.24,
-        "mapY": 190.22
+        "mapX": 565.55,
+        "mapY": 284.53
       },
       {
         "id": 31488,
@@ -14723,8 +14723,8 @@
         "section": "level_changer",
         "type": "level_changer",
         "level": "l12_stancia_2",
-        "mapX": 425.89,
-        "mapY": 195.13
+        "mapX": 383.01,
+        "mapY": 296.17
       },
       {
         "id": 8238,
@@ -14732,8 +14732,8 @@
         "section": "level_changer",
         "type": "level_changer",
         "level": "l12_stancia_2",
-        "mapX": 574.02,
-        "mapY": 147.44
+        "mapX": 592.05,
+        "mapY": 183.06
       },
       {
         "id": 8239,
@@ -14741,8 +14741,8 @@
         "section": "level_changer",
         "type": "level_changer",
         "level": "l12_stancia_2",
-        "mapX": 451.41,
-        "mapY": 166.17
+        "mapX": 419.03,
+        "mapY": 227.48
       },
       {
         "id": 8240,
@@ -14750,8 +14750,8 @@
         "section": "level_changer",
         "type": "level_changer",
         "level": "l12_stancia_2",
-        "mapX": 429.95,
-        "mapY": 194.67
+        "mapX": 388.74,
+        "mapY": 295.08
       },
       {
         "id": 8732,
@@ -15029,8 +15029,8 @@
         "section": "level_changer",
         "type": "level_changer",
         "level": "l12_stancia",
-        "mapX": 419.14,
-        "mapY": 411.19
+        "mapX": 374.09,
+        "mapY": 327.7
       },
       {
         "id": 13476,
@@ -15038,8 +15038,8 @@
         "section": "level_changer",
         "type": "level_changer",
         "level": "l12_stancia",
-        "mapX": 586.6,
-        "mapY": 453.55
+        "mapX": 610.07,
+        "mapY": 412.26
       },
       {
         "id": 13477,
@@ -15047,8 +15047,8 @@
         "section": "level_changer",
         "type": "level_changer",
         "level": "l12_stancia",
-        "mapX": 491.01,
-        "mapY": 433.89
+        "mapX": 475.37,
+        "mapY": 373.01
       },
       {
         "id": 13478,
@@ -15056,8 +15056,8 @@
         "section": "level_changer",
         "type": "level_changer",
         "level": "l12_stancia",
-        "mapX": 490.71,
-        "mapY": 398.38
+        "mapX": 474.94,
+        "mapY": 302.12
       },
       {
         "id": 14392,
@@ -19369,8 +19369,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia_2",
-        "mapX": 430.52,
-        "mapY": 185.36,
+        "mapX": 389.55,
+        "mapY": 273,
         "location": "North CNPP - Big Encampment",
         "factions": [
           "monolith"
@@ -19383,8 +19383,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia_2",
-        "mapX": 428.39,
-        "mapY": 172.51,
+        "mapX": 386.54,
+        "mapY": 242.52,
         "location": "North CNPP - Inner Lookout",
         "factions": [
           "monolith"
@@ -19397,8 +19397,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia_2",
-        "mapX": 525.64,
-        "mapY": 171.68,
+        "mapX": 523.78,
+        "mapY": 240.55,
         "location": "North CNPP - Rooftop Camp",
         "factions": [
           "monolith"
@@ -19411,8 +19411,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia_2",
-        "mapX": 580.98,
-        "mapY": 190.69,
+        "mapX": 601.87,
+        "mapY": 285.64,
         "location": "North CNPP - Storage in Rooftop",
         "factions": [
           "monolith"
@@ -19425,8 +19425,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia_2",
-        "mapX": 460.84,
-        "mapY": 182.46,
+        "mapX": 432.33,
+        "mapY": 266.12,
         "location": "North CNPP - Rooftops",
         "factions": [
           "monolith"
@@ -19439,8 +19439,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia_2",
-        "mapX": 495.83,
-        "mapY": 184.66,
+        "mapX": 481.71,
+        "mapY": 271.34,
         "location": "North CNPP - Inner Camp",
         "factions": [
           "monolith"
@@ -19453,8 +19453,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia_2",
-        "mapX": 556.25,
-        "mapY": 182.74,
+        "mapX": 566.97,
+        "mapY": 266.79,
         "location": "North CNPP - Power Plant Depot",
         "factions": [
           "monolith"
@@ -19467,8 +19467,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia_2",
-        "mapX": 543.61,
-        "mapY": 163.92,
+        "mapX": 549.14,
+        "mapY": 222.15,
         "location": "North CNPP - Backdoor Exit",
         "mutants": [
           "fracture",
@@ -19495,8 +19495,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia_2",
-        "mapX": 492.28,
-        "mapY": 161.23,
+        "mapX": 476.7,
+        "mapY": 215.77,
         "location": "North CNPP - Landing Zone",
         "mutants": [
           "fracture",
@@ -21528,8 +21528,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia",
-        "mapX": 580.6,
-        "mapY": 408.09,
+        "mapX": 601.62,
+        "mapY": 321.51,
         "location": "South CNPP - Power Plant Entrance",
         "factions": [
           "monolith"
@@ -21542,8 +21542,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia",
-        "mapX": 548.2,
-        "mapY": 407.71,
+        "mapX": 555.96,
+        "mapY": 320.75,
         "location": "South CNPP - Oil Tankers",
         "factions": [
           "monolith"
@@ -21556,8 +21556,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia",
-        "mapX": 497.26,
-        "mapY": 407.84,
+        "mapX": 484.17,
+        "mapY": 321.01,
         "location": "South CNPP - Power Station",
         "factions": [
           "monolith"
@@ -21570,8 +21570,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia",
-        "mapX": 586.76,
-        "mapY": 425.69,
+        "mapX": 610.3,
+        "mapY": 356.64,
         "location": "South CNPP - Main Road",
         "mutants": [
           "fracture",
@@ -21598,8 +21598,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia",
-        "mapX": 567.32,
-        "mapY": 423.75,
+        "mapX": 582.9,
+        "mapY": 352.77,
         "location": "South CNPP - Distant Camp",
         "mutants": [
           "fracture",
@@ -21626,8 +21626,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia",
-        "mapX": 508.24,
-        "mapY": 427,
+        "mapX": 499.65,
+        "mapY": 359.26,
         "location": "South CNPP - Transmission Towers",
         "mutants": [
           "fracture",
@@ -21654,8 +21654,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia",
-        "mapX": 451.34,
-        "mapY": 424.33,
+        "mapX": 419.46,
+        "mapY": 353.93,
         "location": "South CNPP - Lonely Camp",
         "mutants": [
           "fracture",
@@ -21682,8 +21682,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia",
-        "mapX": 475.3,
-        "mapY": 429.91,
+        "mapX": 453.23,
+        "mapY": 365.07,
         "location": "South CNPP - Outpost",
         "factions": [
           "army",
@@ -21696,8 +21696,8 @@
         "section": "smart_terrain",
         "type": "smart_terrain",
         "level": "l12_stancia",
-        "mapX": 603.87,
-        "mapY": 404.7,
+        "mapX": 634.41,
+        "mapY": 314.74,
         "factions": [
           "army",
           "monolith"
@@ -31018,8 +31018,8 @@
         "section": "aes_2c_01_ce_anomaly_spot",
         "type": "anomaly_field",
         "level": "l12_stancia",
-        "mapX": 599.86,
-        "mapY": 414.32,
+        "mapX": 628.76,
+        "mapY": 333.94,
         "artefacts": [
           {
             "name": "Kolobok",
@@ -31115,8 +31115,8 @@
         "section": "aes_2c_02_p_anomaly_spot",
         "type": "anomaly_field",
         "level": "l12_stancia",
-        "mapX": 461.6,
-        "mapY": 415.34,
+        "mapX": 433.92,
+        "mapY": 335.98,
         "artefacts": [
           {
             "name": "Crystal",
@@ -31156,8 +31156,8 @@
         "section": "aes2_2c_02_at_anomaly_spot",
         "type": "anomaly_field",
         "level": "l12_stancia_2",
-        "mapX": 566.02,
-        "mapY": 166.99,
+        "mapX": 580.76,
+        "mapY": 229.43,
         "anomalyTypes": [
           "Chemical"
         ],
@@ -31212,8 +31212,8 @@
         "section": "aes2_2c_01_bo_anomaly_spot",
         "type": "anomaly_field",
         "level": "l12_stancia_2",
-        "mapX": 486.38,
-        "mapY": 188.56,
+        "mapX": 468.37,
+        "mapY": 280.59,
         "artefacts": [
           {
             "name": "Bracelet",

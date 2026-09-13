@@ -65,8 +65,11 @@ export const levelBounds = {
   l10u_bunker:          { minX: -75.655, maxX: 30.716, minZ: -112.497, maxZ: 85.01 },
   l11_hospital:         { minX: -180, maxX: 10, minZ: 537, maxZ: 917 },
   l11_pripyat:          { minX: -628.133, maxX: 671.867, minZ: -520.743, maxZ: 779.257 },
-  l12_stancia:          { minX: -600.105, maxX: 1729.65, minZ: -747.782, maxZ: 850.523 },
-  l12_stancia_2:        { minX: -603.302, maxX: 1729.65, minZ: -930.571, maxZ: 966.97 },
+  // CNPP: Anomaly's half-height split of one shared world space at Z=52.879.
+  // South is level.ltx [level_map] bound_rect; North is inferred from map_aes_2's
+  // framing (same X span and 800-unit height, abutting South).
+  l12_stancia:          { minX: -254.776, maxX: 1398.44, minZ: -747.782, maxZ: 52.879 },
+  l12_stancia_2:        { minX: -254.776, maxX: 1398.44, minZ: 52.879, maxZ: 852.879 },
   l12u_control_monolith:{ minX: -43.996, maxX: 43.947, minZ: -44.348, maxZ: 40.702 },
   l12u_sarcofag:        { minX: -34.982, maxX: 102.851, minZ: -43.51, maxZ: 55.244 },
   l13_generators:       { minX: -525.205, maxX: 540.927, minZ: -853.156, maxZ: 209.524 },
