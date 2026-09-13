@@ -1,16 +1,5 @@
 {
   "version": 1,
-  "include": ["/*"],
-  "exclude": [
-    "/sw.js",
-    "/presence.json",
-    "/data/*",
-    "/img/*",
-    "/css/*",
-    "/js/*",
-    "/acknowledgements/*",
-    "/contact/*",
-    "/donate/*",
-    "/release-notes/*"
-  ]
+  "include": ["/api/*"],
+  "exclude": []
 }
