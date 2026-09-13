@@ -29,7 +29,7 @@ if (packIdx !== -1 && args[packIdx + 1]) pack = args[packIdx + 1];
 
 const fields = buildAnomalyFields(root, pack);
 if (fields.length === 0) {
-  console.error(`No named anomaly fields for pack ${pack} (missing/empty export_anomaly_fields.csv?)`);
+  console.error(`No anomaly fields for pack ${pack} (missing/empty export_anomaly_fields.csv?)`);
   process.exit(1);
 }
 
@@ -46,4 +46,4 @@ data.entities.anomaly_field = fields;
 data.counts.anomaly_field = fields.length;
 
 writeFileSync(outPath, JSON.stringify(data, null, 2));
-console.log(`Merged ${fields.length} named anomaly fields into ${outPath}`);
+console.log(`Merged ${fields.length} anomaly fields into ${outPath}`);

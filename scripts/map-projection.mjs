@@ -163,9 +163,26 @@ function prettifyArtefact(section) {
   return section.replace(/^af_/, '').replace(/_/g, ' ').replace(/\b\w/g, (ch) => ch.toUpperCase());
 }
 
+// PDA spot ids that don't follow any derivable pattern from the restrictor id.
+const spotAliases = {
+  pri_b302_anomal_zone: 'pri_anomal_loza_spot',
+  pri_b307_anomal_zone: 'pri_anomal_vulkan_spot',
+};
+
+// Candidate PDA spot ids for a field, most specific first. CoP levels (Zaton,
+// Jupiter, Outskirts) key their spots by quest id (`zat_b55_spot`) and Truck
+// Cemetery uses `_anom_spot` / `_anomal_zone_spot`, so the exporter's
+// `<prefix>_anomaly_spot` never matches them directly.
+function derivedSpotIds(id) {
+  const base = id.replace(/_anomal_zone$/, '');
+  const out = [spotAliases[id], `${id}_spot`, `${base}_anom_spot`, `${base}_spot`];
+  if (base.startsWith('zaton_')) out.push(`zat_${base.slice(6)}_spot`);
+  return out.filter(Boolean);
+}
+
 // Build projected `anomaly_field` entities from export_anomaly_fields.csv.
-// Only NAMED fields (those with a resolvable "High Hopes"-style display name) are
-// emitted; unnamed generic zones (Jupiter/Zaton CoP fields) are skipped. When the
+// Fields get their PDA display name where one resolves; fields without one (e.g.
+// jup_b10, *_wa zones) are still emitted under a generic type-based label. When the
 // exporter includes them, each field also carries anomalyTypes (e.g. ["Chemical"])
 // and artefacts (resolved display names). Returns [] when the CSV is absent.
 export function buildAnomalyFields(rootDir, pack) {
@@ -192,13 +209,25 @@ export function buildAnomalyFields(rootDir, pack) {
   const out = [];
   for (let i = 1; i < lines.length; i++) {
     const c = splitCsvLine(lines[i]);
+    const id = (c[col.id] || '').trim();
     const nameKey = (c[col.name_key] || '').trim();
     const spot = (c[col.spot] || '').trim();
 
+    // Optional enrichment (present once the exporter emits these columns).
+    const anomalyTypes = (c[col.anomaly_types] || '')
+      .split(';').map((s) => s.trim()).filter(Boolean);
+
     // Display name: PDA registry (authoritative, by config field_name) first,
-    // then the object-derived translation key. Skip fields with neither.
-    const label = stripAnomaly(spotNames[spot]) || stripAnomaly(translations.get(nameKey));
-    if (!label) continue;
+    // then the object-derived translation key, then id-derived PDA spots. Derived
+    // spots only count when they name an anomaly — CoP quest spots also label
+    // plain locations ("School", "Parking Lot") that merely contain a field.
+    const derivedName = derivedSpotIds(id)
+      .map((s) => spotNames[s])
+      .find((n) => n && /\sAnomaly$/i.test(n));
+    const label = stripAnomaly(spotNames[spot])
+      || stripAnomaly(translations.get(nameKey))
+      || stripAnomaly(derivedName)
+      || (anomalyTypes.length ? `${anomalyTypes.join(' / ')} field` : 'Anomaly field');
 
     const level = (c[col.level] || '').trim();
     if (excludedLevels.has(level)) continue;
@@ -210,9 +239,6 @@ export function buildAnomalyFields(rootDir, pack) {
     const px = worldToPixels(level, x, z);
     if (!px) continue;
 
-    // Optional enrichment (present once the exporter emits these columns).
-    const anomalyTypes = (c[col.anomaly_types] || '')
-      .split(';').map((s) => s.trim()).filter(Boolean);
     // Each artefact entry is "section:percent" (percent = drop share); older
     // exports without the colon degrade to name-only.
     const artefacts = (c[col.artefacts] || '')
@@ -226,7 +252,7 @@ export function buildAnomalyFields(rootDir, pack) {
       });
 
     out.push({
-      id: (c[col.id] || '').trim(),
+      id,
       name: (c[col.field_name] || '').trim(),
       label,
       label_key: nameKey,

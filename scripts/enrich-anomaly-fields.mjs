@@ -83,10 +83,15 @@ const typeSeg = {
   radioactive: 'Radioactive', radiation: 'Radioactive',
   psychic: 'Psi', psi: 'Psi',
 };
-function collectTypes(str, set, seen) {
+// Artefact class-bucket segment (af_class_gravi_musor, af_class_psio-gravi_mid) → label.
+const artefactClassSeg = {
+  gravi: 'Gravitational', electro: 'Electro', thermo: 'Thermal',
+  chem: 'Chemical', psio: 'Psi', rad: 'Radioactive',
+};
+function collectTypes(str, set, seen, segMap = typeSeg) {
   if (!str) return;
   for (const seg of str.toLowerCase().match(/[a-z]+/g) || []) {
-    const lbl = typeSeg[seg];
+    const lbl = segMap[seg];
     if (lbl && !seen.has(lbl)) { seen.add(lbl); set.push(lbl); }
   }
 }
@@ -120,6 +125,11 @@ function enrich(id, fieldName) {
     const lsec = cfg['layer_' + li];
     const msec = lsec && cfg[lsec.kv['mines_section']];
     if (msec) for (const mine of msec.order) collectTypes(mine, types, seen);
+  }
+  // Fallback for fields whose config names no typed field/mines (common on CoP
+  // levels): infer from the artefact classes the field spawns.
+  if (!types.length) {
+    for (const tok of toks) if (tok.startsWith('af_class_')) collectTypes(tok, types, seen, artefactClassSeg);
   }
 
   const spot = (az.kv['field_name'] || '').split(',')[0].trim(); // first of any comma list

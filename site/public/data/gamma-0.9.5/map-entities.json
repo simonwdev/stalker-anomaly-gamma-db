@@ -10,7 +10,7 @@
     "level_changer": 102,
     "smart_terrain": 467,
     "named_npc": 126,
-    "anomaly_field": 71
+    "anomaly_field": 104
   },
   "entities": {
     "campfire": [
@@ -25357,6 +25357,1111 @@
     ],
     "anomaly_field": [
       {
+        "id": "jup_b200_anomal_zone",
+        "name": "jup_b200_anomaly_spot",
+        "label": "Anomaly field",
+        "label_key": "",
+        "section": "jup_b200_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 428.05,
+        "mapY": 819.85,
+        "artefacts": [
+          {
+            "name": "Soul",
+            "chance": 25
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 16.7
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 8.3
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 8.3
+          },
+          {
+            "name": "Nightstar",
+            "chance": 8.3
+          },
+          {
+            "name": "Kolobok",
+            "chance": 2.9
+          },
+          {
+            "name": "Empty",
+            "chance": 1.7
+          },
+          {
+            "name": "Gravi",
+            "chance": 1.7
+          },
+          {
+            "name": "Sponge",
+            "chance": 1.7
+          },
+          {
+            "name": "Wrenched",
+            "chance": 1.7
+          },
+          {
+            "name": "Cell",
+            "chance": 1.4
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 1.4
+          },
+          {
+            "name": "Electron",
+            "chance": 1.4
+          },
+          {
+            "name": "Generator",
+            "chance": 1.4
+          },
+          {
+            "name": "Grapes",
+            "chance": 1.4
+          },
+          {
+            "name": "Claw",
+            "chance": 1.4
+          },
+          {
+            "name": "Beacon",
+            "chance": 1.4
+          },
+          {
+            "name": "Medal",
+            "chance": 1.4
+          },
+          {
+            "name": "Thistle",
+            "chance": 1.4
+          },
+          {
+            "name": "Seraphim",
+            "chance": 1.4
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 1.4
+          },
+          {
+            "name": "Sun",
+            "chance": 1.4
+          },
+          {
+            "name": "Bracelet",
+            "chance": 1.2
+          },
+          {
+            "name": "Shell",
+            "chance": 1.2
+          },
+          {
+            "name": "Moonlight",
+            "chance": 1.2
+          },
+          {
+            "name": "Eye",
+            "chance": 1.2
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 1.2
+          },
+          {
+            "name": "Pin",
+            "chance": 1.2
+          }
+        ]
+      },
+      {
+        "id": "jup_b214_anomal_zone",
+        "name": "jup_b214_anomaly_spot",
+        "label": "Anomaly field",
+        "label_key": "",
+        "section": "jup_b214_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 404.97,
+        "mapY": 940.1,
+        "artefacts": [
+          {
+            "name": "Stone Flower",
+            "chance": 25
+          },
+          {
+            "name": "Soul",
+            "chance": 25
+          },
+          {
+            "name": "Grapes",
+            "chance": 4.7
+          },
+          {
+            "name": "Beacon",
+            "chance": 4.7
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 4.7
+          },
+          {
+            "name": "Sun",
+            "chance": 4.7
+          },
+          {
+            "name": "Bat",
+            "chance": 3.3
+          },
+          {
+            "name": "Bracelet",
+            "chance": 2.4
+          },
+          {
+            "name": "Shell",
+            "chance": 2.4
+          },
+          {
+            "name": "Moonlight",
+            "chance": 2.4
+          },
+          {
+            "name": "Eye",
+            "chance": 2.4
+          },
+          {
+            "name": "Kolobok",
+            "chance": 2.4
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 2.4
+          },
+          {
+            "name": "Pin",
+            "chance": 2.4
+          },
+          {
+            "name": "Cell",
+            "chance": 1.4
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 1.4
+          },
+          {
+            "name": "Electron",
+            "chance": 1.4
+          },
+          {
+            "name": "Generator",
+            "chance": 1.4
+          },
+          {
+            "name": "Claw",
+            "chance": 1.4
+          },
+          {
+            "name": "Medal",
+            "chance": 1.4
+          },
+          {
+            "name": "Thistle",
+            "chance": 1.4
+          },
+          {
+            "name": "Seraphim",
+            "chance": 1.4
+          }
+        ]
+      },
+      {
+        "id": "jup_b32_anomal_zone",
+        "name": "jup_b32_anomaly_spot",
+        "label": "Anomaly field",
+        "label_key": "",
+        "section": "jup_b32_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 356.93,
+        "mapY": 895.95,
+        "artefacts": [
+          {
+            "name": "Battery",
+            "chance": 33.3
+          },
+          {
+            "name": "Sparkler",
+            "chance": 33.3
+          },
+          {
+            "name": "Crystal",
+            "chance": 5.6
+          },
+          {
+            "name": "Moonlight",
+            "chance": 5.6
+          },
+          {
+            "name": "Ring",
+            "chance": 5.6
+          },
+          {
+            "name": "Cell",
+            "chance": 1.4
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 1.4
+          },
+          {
+            "name": "Electron",
+            "chance": 1.4
+          },
+          {
+            "name": "Generator",
+            "chance": 1.4
+          },
+          {
+            "name": "Grapes",
+            "chance": 1.4
+          },
+          {
+            "name": "Claw",
+            "chance": 1.4
+          },
+          {
+            "name": "Beacon",
+            "chance": 1.4
+          },
+          {
+            "name": "Medal",
+            "chance": 1.4
+          },
+          {
+            "name": "Thistle",
+            "chance": 1.4
+          },
+          {
+            "name": "Seraphim",
+            "chance": 1.4
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 1.4
+          },
+          {
+            "name": "Sun",
+            "chance": 1.4
+          }
+        ]
+      },
+      {
+        "id": "jup_wa_anomal_zone",
+        "name": "jup_wa_anomaly_spot",
+        "label": "Anomaly field",
+        "label_key": "",
+        "section": "jup_wa_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 366.09,
+        "mapY": 876.31,
+        "artefacts": [
+          {
+            "name": "Soul",
+            "chance": 27.3
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 18.2
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 9.1
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 9.1
+          },
+          {
+            "name": "Nightstar",
+            "chance": 9.1
+          },
+          {
+            "name": "Kolobok",
+            "chance": 3.1
+          },
+          {
+            "name": "Empty",
+            "chance": 1.8
+          },
+          {
+            "name": "Gravi",
+            "chance": 1.8
+          },
+          {
+            "name": "Sponge",
+            "chance": 1.8
+          },
+          {
+            "name": "Wrenched",
+            "chance": 1.8
+          },
+          {
+            "name": "Bracelet",
+            "chance": 1.3
+          },
+          {
+            "name": "Shell",
+            "chance": 1.3
+          },
+          {
+            "name": "Moonlight",
+            "chance": 1.3
+          },
+          {
+            "name": "Eye",
+            "chance": 1.3
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 1.3
+          },
+          {
+            "name": "Pin",
+            "chance": 1.3
+          },
+          {
+            "name": "Cell",
+            "chance": 0.8
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 0.8
+          },
+          {
+            "name": "Electron",
+            "chance": 0.8
+          },
+          {
+            "name": "Generator",
+            "chance": 0.8
+          },
+          {
+            "name": "Grapes",
+            "chance": 0.8
+          },
+          {
+            "name": "Claw",
+            "chance": 0.8
+          },
+          {
+            "name": "Beacon",
+            "chance": 0.8
+          },
+          {
+            "name": "Medal",
+            "chance": 0.8
+          },
+          {
+            "name": "Thistle",
+            "chance": 0.8
+          },
+          {
+            "name": "Seraphim",
+            "chance": 0.8
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 0.8
+          },
+          {
+            "name": "Sun",
+            "chance": 0.8
+          }
+        ]
+      },
+      {
+        "id": "jup_b1_anomal_zone",
+        "name": "jup_b1_anomaly_spot",
+        "label": "Ash Heap",
+        "label_key": "",
+        "section": "jup_b1_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 312.6,
+        "mapY": 811.56,
+        "anomalyTypes": [
+          "Psi"
+        ],
+        "artefacts": [
+          {
+            "name": "Stone Flower",
+            "chance": 28.6
+          },
+          {
+            "name": "Soul",
+            "chance": 28.6
+          },
+          {
+            "name": "Generator",
+            "chance": 2.1
+          },
+          {
+            "name": "Bracelet",
+            "chance": 2
+          },
+          {
+            "name": "Shell",
+            "chance": 2
+          },
+          {
+            "name": "Moonlight",
+            "chance": 2
+          },
+          {
+            "name": "Eye",
+            "chance": 2
+          },
+          {
+            "name": "Kolobok",
+            "chance": 2
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 2
+          },
+          {
+            "name": "Pin",
+            "chance": 2
+          },
+          {
+            "name": "Cell",
+            "chance": 1.2
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 1.2
+          },
+          {
+            "name": "Electron",
+            "chance": 1.2
+          },
+          {
+            "name": "Grapes",
+            "chance": 1.2
+          },
+          {
+            "name": "Claw",
+            "chance": 1.2
+          },
+          {
+            "name": "Beacon",
+            "chance": 1.2
+          },
+          {
+            "name": "Medal",
+            "chance": 1.2
+          },
+          {
+            "name": "Thistle",
+            "chance": 1.2
+          },
+          {
+            "name": "Seraphim",
+            "chance": 1.2
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 1.2
+          },
+          {
+            "name": "Sun",
+            "chance": 1.2
+          },
+          {
+            "name": "Ball",
+            "chance": 0.9
+          },
+          {
+            "name": "Black Angel",
+            "chance": 0.9
+          },
+          {
+            "name": "Chain",
+            "chance": 0.9
+          },
+          {
+            "name": "Cocoon",
+            "chance": 0.9
+          },
+          {
+            "name": "Heart",
+            "chance": 0.9
+          },
+          {
+            "name": "Lamp",
+            "chance": 0.9
+          },
+          {
+            "name": "Sourpuss",
+            "chance": 0.9
+          },
+          {
+            "name": "Moss",
+            "chance": 0.9
+          },
+          {
+            "name": "Moon",
+            "chance": 0.9
+          },
+          {
+            "name": "Sandstone",
+            "chance": 0.9
+          },
+          {
+            "name": "Signet",
+            "chance": 0.9
+          },
+          {
+            "name": "Miser's Skull",
+            "chance": 0.9
+          },
+          {
+            "name": "Spike",
+            "chance": 0.9
+          },
+          {
+            "name": "Tapeworm",
+            "chance": 0.9
+          },
+          {
+            "name": "Scar",
+            "chance": 0.9
+          }
+        ]
+      },
+      {
+        "id": "jup_b209_anomal_zone",
+        "name": "jup_b209_anomaly_spot",
+        "label": "Bitumen",
+        "label_key": "",
+        "section": "jup_b209_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 401.54,
+        "mapY": 887.85,
+        "anomalyTypes": [
+          "Thermal"
+        ],
+        "artefacts": [
+          {
+            "name": "Mama's Beads",
+            "chance": 40
+          },
+          {
+            "name": "Itcher",
+            "chance": 40
+          },
+          {
+            "name": "Crystal",
+            "chance": 6.7
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 6.7
+          },
+          {
+            "name": "Pin",
+            "chance": 6.7
+          }
+        ]
+      },
+      {
+        "id": "jup_b201_anomal_zone",
+        "name": "jup_b201_anomaly_spot",
+        "label": "Concrete Bath",
+        "label_key": "",
+        "section": "jup_b201_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 401.94,
+        "mapY": 920.16,
+        "anomalyTypes": [
+          "Chemical"
+        ],
+        "artefacts": [
+          {
+            "name": "Stone Blood",
+            "chance": 20
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 20
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 20
+          },
+          {
+            "name": "Soul",
+            "chance": 20
+          },
+          {
+            "name": "Bracelet",
+            "chance": 5
+          },
+          {
+            "name": "Eye",
+            "chance": 5
+          },
+          {
+            "name": "Kolobok",
+            "chance": 5
+          },
+          {
+            "name": "Wrenched",
+            "chance": 5
+          }
+        ]
+      },
+      {
+        "id": "jup_b25_anomal_zone",
+        "name": "jup_b25_anomaly_spot",
+        "label": "Cracked Earth",
+        "label_key": "",
+        "section": "jup_b25_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 408.26,
+        "mapY": 861.22,
+        "anomalyTypes": [
+          "Chemical"
+        ],
+        "artefacts": [
+          {
+            "name": "Stone Blood",
+            "chance": 16.7
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 16.7
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 16.7
+          },
+          {
+            "name": "Soul",
+            "chance": 16.7
+          },
+          {
+            "name": "Bracelet",
+            "chance": 4.2
+          },
+          {
+            "name": "Eye",
+            "chance": 4.2
+          },
+          {
+            "name": "Kolobok",
+            "chance": 4.2
+          },
+          {
+            "name": "Wrenched",
+            "chance": 4.2
+          },
+          {
+            "name": "Cell",
+            "chance": 1.4
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 1.4
+          },
+          {
+            "name": "Electron",
+            "chance": 1.4
+          },
+          {
+            "name": "Generator",
+            "chance": 1.4
+          },
+          {
+            "name": "Grapes",
+            "chance": 1.4
+          },
+          {
+            "name": "Claw",
+            "chance": 1.4
+          },
+          {
+            "name": "Beacon",
+            "chance": 1.4
+          },
+          {
+            "name": "Medal",
+            "chance": 1.4
+          },
+          {
+            "name": "Thistle",
+            "chance": 1.4
+          },
+          {
+            "name": "Seraphim",
+            "chance": 1.4
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 1.4
+          },
+          {
+            "name": "Sun",
+            "chance": 1.4
+          }
+        ]
+      },
+      {
+        "id": "jup_b211_anomal_zone",
+        "name": "jup_b211_anomaly_spot",
+        "label": "Plavni",
+        "label_key": "",
+        "section": "jup_b211_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 407.79,
+        "mapY": 804.33,
+        "anomalyTypes": [
+          "Chemical"
+        ],
+        "artefacts": [
+          {
+            "name": "Stone Blood",
+            "chance": 20
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 20
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 20
+          },
+          {
+            "name": "Soul",
+            "chance": 20
+          },
+          {
+            "name": "Bracelet",
+            "chance": 5
+          },
+          {
+            "name": "Eye",
+            "chance": 5
+          },
+          {
+            "name": "Kolobok",
+            "chance": 5
+          },
+          {
+            "name": "Wrenched",
+            "chance": 5
+          }
+        ]
+      },
+      {
+        "id": "jup_b206_anomal_zone",
+        "name": "jup_b206_anomaly_spot",
+        "label": "Rotten Grove",
+        "label_key": "",
+        "section": "jup_b206_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 375.96,
+        "mapY": 870.86,
+        "anomalyTypes": [
+          "Chemical"
+        ],
+        "artefacts": [
+          {
+            "name": "Stone Blood",
+            "chance": 20
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 20
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 20
+          },
+          {
+            "name": "Soul",
+            "chance": 20
+          },
+          {
+            "name": "Bracelet",
+            "chance": 5
+          },
+          {
+            "name": "Eye",
+            "chance": 5
+          },
+          {
+            "name": "Kolobok",
+            "chance": 5
+          },
+          {
+            "name": "Wrenched",
+            "chance": 5
+          }
+        ]
+      },
+      {
+        "id": "jup_b10_anomal_zone",
+        "name": "jup_b10_anomaly_spot",
+        "label": "Thermal field",
+        "label_key": "",
+        "section": "jup_b10_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "jupiter",
+        "mapX": 309.26,
+        "mapY": 826.1,
+        "anomalyTypes": [
+          "Thermal"
+        ],
+        "artefacts": [
+          {
+            "name": "Mama's Beads",
+            "chance": 28.6
+          },
+          {
+            "name": "Itcher",
+            "chance": 28.6
+          },
+          {
+            "name": "Crystal",
+            "chance": 4.8
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 4.8
+          },
+          {
+            "name": "Pin",
+            "chance": 4.8
+          },
+          {
+            "name": "Generator",
+            "chance": 2.1
+          },
+          {
+            "name": "Cell",
+            "chance": 1.2
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 1.2
+          },
+          {
+            "name": "Electron",
+            "chance": 1.2
+          },
+          {
+            "name": "Grapes",
+            "chance": 1.2
+          },
+          {
+            "name": "Claw",
+            "chance": 1.2
+          },
+          {
+            "name": "Beacon",
+            "chance": 1.2
+          },
+          {
+            "name": "Medal",
+            "chance": 1.2
+          },
+          {
+            "name": "Thistle",
+            "chance": 1.2
+          },
+          {
+            "name": "Seraphim",
+            "chance": 1.2
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 1.2
+          },
+          {
+            "name": "Sun",
+            "chance": 1.2
+          },
+          {
+            "name": "Ball",
+            "chance": 0.9
+          },
+          {
+            "name": "Black Angel",
+            "chance": 0.9
+          },
+          {
+            "name": "Chain",
+            "chance": 0.9
+          },
+          {
+            "name": "Cocoon",
+            "chance": 0.9
+          },
+          {
+            "name": "Heart",
+            "chance": 0.9
+          },
+          {
+            "name": "Lamp",
+            "chance": 0.9
+          },
+          {
+            "name": "Sourpuss",
+            "chance": 0.9
+          },
+          {
+            "name": "Moss",
+            "chance": 0.9
+          },
+          {
+            "name": "Moon",
+            "chance": 0.9
+          },
+          {
+            "name": "Sandstone",
+            "chance": 0.9
+          },
+          {
+            "name": "Signet",
+            "chance": 0.9
+          },
+          {
+            "name": "Miser's Skull",
+            "chance": 0.9
+          },
+          {
+            "name": "Spike",
+            "chance": 0.9
+          },
+          {
+            "name": "Tapeworm",
+            "chance": 0.9
+          },
+          {
+            "name": "Scar",
+            "chance": 0.9
+          }
+        ]
+      },
+      {
+        "id": "marsh_wa_anomal_zone",
+        "name": "marsh_wa_anomaly_spot",
+        "label": "Anomaly field",
+        "label_key": "",
+        "section": "marsh_wa_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "k00_marsh",
+        "mapX": 150.05,
+        "mapY": 2290.21,
+        "artefacts": [
+          {
+            "name": "Stone Flower",
+            "chance": 15
+          },
+          {
+            "name": "Soul",
+            "chance": 15
+          },
+          {
+            "name": "Stone Blood",
+            "chance": 5
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 5
+          },
+          {
+            "name": "Ball",
+            "chance": 3.8
+          },
+          {
+            "name": "Black Angel",
+            "chance": 3.8
+          },
+          {
+            "name": "Chain",
+            "chance": 3.8
+          },
+          {
+            "name": "Cocoon",
+            "chance": 3.8
+          },
+          {
+            "name": "Heart",
+            "chance": 3.8
+          },
+          {
+            "name": "Lamp",
+            "chance": 3.8
+          },
+          {
+            "name": "Generator",
+            "chance": 3.8
+          },
+          {
+            "name": "Sourpuss",
+            "chance": 3.8
+          },
+          {
+            "name": "Moss",
+            "chance": 3.8
+          },
+          {
+            "name": "Moon",
+            "chance": 3.8
+          },
+          {
+            "name": "Sandstone",
+            "chance": 3.8
+          },
+          {
+            "name": "Signet",
+            "chance": 3.8
+          },
+          {
+            "name": "Miser's Skull",
+            "chance": 3.8
+          },
+          {
+            "name": "Spike",
+            "chance": 3.8
+          },
+          {
+            "name": "Tapeworm",
+            "chance": 3.8
+          },
+          {
+            "name": "Scar",
+            "chance": 3.8
+          }
+        ]
+      },
+      {
         "id": "mar_smart_terrain_base_anomal_zone",
         "name": "mar_smart_terrain_base_anomaly_spot",
         "label": "Bog Pounder",
@@ -26108,6 +27213,373 @@
         "level": "k01_darkscape",
         "mapX": 946.65,
         "mapY": 2167.99
+      },
+      {
+        "id": "trc_2c_01_rift_anomal_zone",
+        "name": "trc_2c_01_rift_anomaly_spot",
+        "label": "Bus Furrow",
+        "label_key": "",
+        "section": "trc_2c_01_rift_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "k02_trucks_cemetery",
+        "mapX": 838.55,
+        "mapY": 1562.28
+      },
+      {
+        "id": "trc_2c_03_desolation_anomal_zone",
+        "name": "trc_2c_03_desolation_anomaly_spot",
+        "label": "Charcoal Abode",
+        "label_key": "",
+        "section": "trc_2c_03_desolation_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "k02_trucks_cemetery",
+        "mapX": 981.96,
+        "mapY": 1644.27,
+        "anomalyTypes": [
+          "Thermal"
+        ],
+        "artefacts": [
+          {
+            "name": "Mama's Beads",
+            "chance": 37.5
+          },
+          {
+            "name": "Itcher",
+            "chance": 37.5
+          },
+          {
+            "name": "Crystal",
+            "chance": 4.2
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 4.2
+          },
+          {
+            "name": "Pin",
+            "chance": 4.2
+          },
+          {
+            "name": "Ball",
+            "chance": 0.8
+          },
+          {
+            "name": "Black Angel",
+            "chance": 0.8
+          },
+          {
+            "name": "Chain",
+            "chance": 0.8
+          },
+          {
+            "name": "Cocoon",
+            "chance": 0.8
+          },
+          {
+            "name": "Heart",
+            "chance": 0.8
+          },
+          {
+            "name": "Lamp",
+            "chance": 0.8
+          },
+          {
+            "name": "Generator",
+            "chance": 0.8
+          },
+          {
+            "name": "Sourpuss",
+            "chance": 0.8
+          },
+          {
+            "name": "Moss",
+            "chance": 0.8
+          },
+          {
+            "name": "Moon",
+            "chance": 0.8
+          },
+          {
+            "name": "Sandstone",
+            "chance": 0.8
+          },
+          {
+            "name": "Signet",
+            "chance": 0.8
+          },
+          {
+            "name": "Miser's Skull",
+            "chance": 0.8
+          },
+          {
+            "name": "Spike",
+            "chance": 0.8
+          },
+          {
+            "name": "Tapeworm",
+            "chance": 0.8
+          },
+          {
+            "name": "Scar",
+            "chance": 0.8
+          }
+        ]
+      },
+      {
+        "id": "trc_2c_02_chem_anomal_zone",
+        "name": "trc_2c_02_chem_anomaly_spot",
+        "label": "Thorn Bath",
+        "label_key": "",
+        "section": "trc_2c_02_chem_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "k02_trucks_cemetery",
+        "mapX": 785.98,
+        "mapY": 1594.22,
+        "anomalyTypes": [
+          "Chemical"
+        ],
+        "artefacts": [
+          {
+            "name": "Stone Blood",
+            "chance": 18.8
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 18.8
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 18.8
+          },
+          {
+            "name": "Soul",
+            "chance": 18.8
+          },
+          {
+            "name": "Bracelet",
+            "chance": 3.1
+          },
+          {
+            "name": "Eye",
+            "chance": 3.1
+          },
+          {
+            "name": "Kolobok",
+            "chance": 3.1
+          },
+          {
+            "name": "Wrenched",
+            "chance": 3.1
+          },
+          {
+            "name": "Ball",
+            "chance": 0.8
+          },
+          {
+            "name": "Black Angel",
+            "chance": 0.8
+          },
+          {
+            "name": "Chain",
+            "chance": 0.8
+          },
+          {
+            "name": "Cocoon",
+            "chance": 0.8
+          },
+          {
+            "name": "Heart",
+            "chance": 0.8
+          },
+          {
+            "name": "Lamp",
+            "chance": 0.8
+          },
+          {
+            "name": "Generator",
+            "chance": 0.8
+          },
+          {
+            "name": "Sourpuss",
+            "chance": 0.8
+          },
+          {
+            "name": "Moss",
+            "chance": 0.8
+          },
+          {
+            "name": "Moon",
+            "chance": 0.8
+          },
+          {
+            "name": "Sandstone",
+            "chance": 0.8
+          },
+          {
+            "name": "Signet",
+            "chance": 0.8
+          },
+          {
+            "name": "Miser's Skull",
+            "chance": 0.8
+          },
+          {
+            "name": "Spike",
+            "chance": 0.8
+          },
+          {
+            "name": "Tapeworm",
+            "chance": 0.8
+          },
+          {
+            "name": "Scar",
+            "chance": 0.8
+          }
+        ]
+      },
+      {
+        "id": "trc_sim_13_anomal_zone",
+        "name": "trc_sim_13_anomaly_spot",
+        "label": "Zealot's Maze",
+        "label_key": "",
+        "section": "trc_sim_13_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "k02_trucks_cemetery",
+        "mapX": 861.89,
+        "mapY": 1519.08,
+        "anomalyTypes": [
+          "Gravitational"
+        ],
+        "artefacts": [
+          {
+            "name": "Soul",
+            "chance": 30
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 20
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 10
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 10
+          },
+          {
+            "name": "Nightstar",
+            "chance": 10
+          },
+          {
+            "name": "Kolobok",
+            "chance": 2.3
+          },
+          {
+            "name": "Empty",
+            "chance": 1.3
+          },
+          {
+            "name": "Gravi",
+            "chance": 1.3
+          },
+          {
+            "name": "Sponge",
+            "chance": 1.3
+          },
+          {
+            "name": "Wrenched",
+            "chance": 1.3
+          },
+          {
+            "name": "Bracelet",
+            "chance": 1
+          },
+          {
+            "name": "Shell",
+            "chance": 1
+          },
+          {
+            "name": "Moonlight",
+            "chance": 1
+          },
+          {
+            "name": "Eye",
+            "chance": 1
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 1
+          },
+          {
+            "name": "Pin",
+            "chance": 1
+          },
+          {
+            "name": "Ball",
+            "chance": 0.4
+          },
+          {
+            "name": "Black Angel",
+            "chance": 0.4
+          },
+          {
+            "name": "Chain",
+            "chance": 0.4
+          },
+          {
+            "name": "Cocoon",
+            "chance": 0.4
+          },
+          {
+            "name": "Heart",
+            "chance": 0.4
+          },
+          {
+            "name": "Lamp",
+            "chance": 0.4
+          },
+          {
+            "name": "Generator",
+            "chance": 0.4
+          },
+          {
+            "name": "Sourpuss",
+            "chance": 0.4
+          },
+          {
+            "name": "Moss",
+            "chance": 0.4
+          },
+          {
+            "name": "Moon",
+            "chance": 0.4
+          },
+          {
+            "name": "Sandstone",
+            "chance": 0.4
+          },
+          {
+            "name": "Signet",
+            "chance": 0.4
+          },
+          {
+            "name": "Miser's Skull",
+            "chance": 0.4
+          },
+          {
+            "name": "Spike",
+            "chance": 0.4
+          },
+          {
+            "name": "Tapeworm",
+            "chance": 0.4
+          },
+          {
+            "name": "Scar",
+            "chance": 0.4
+          }
+        ]
       },
       {
         "id": "esc_tunnel_electr_anomal_zone",
@@ -31019,7 +32491,7 @@
         "type": "anomaly_field",
         "level": "l12_stancia",
         "mapX": 628.76,
-        "mapY": 333.94,
+        "mapY": 333.93,
         "artefacts": [
           {
             "name": "Kolobok",
@@ -31157,7 +32629,7 @@
         "type": "anomaly_field",
         "level": "l12_stancia_2",
         "mapX": 580.76,
-        "mapY": 229.43,
+        "mapY": 229.42,
         "anomalyTypes": [
           "Chemical"
         ],
@@ -31349,6 +32821,547 @@
         ]
       },
       {
+        "id": "pri_b304_anomal_zone",
+        "name": "pri_b304_anomaly_spot",
+        "label": "Acid Bath",
+        "label_key": "",
+        "section": "pri_b304_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "pripyat",
+        "mapX": 757.24,
+        "mapY": 865,
+        "artefacts": [
+          {
+            "name": "Bracelet",
+            "chance": 17.9
+          },
+          {
+            "name": "Eye",
+            "chance": 17.9
+          },
+          {
+            "name": "Kolobok",
+            "chance": 17.9
+          },
+          {
+            "name": "Wrenched",
+            "chance": 17.9
+          },
+          {
+            "name": "Bubble",
+            "chance": 7.1
+          },
+          {
+            "name": "Firefly",
+            "chance": 7.1
+          },
+          {
+            "name": "Stone Blood",
+            "chance": 3.6
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 3.6
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 3.6
+          },
+          {
+            "name": "Soul",
+            "chance": 3.6
+          }
+        ]
+      },
+      {
+        "id": "pri_b301_anomal_zone",
+        "name": "pri_b301_anomaly_spot",
+        "label": "Anomaly field",
+        "label_key": "",
+        "section": "pri_b301_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "pripyat",
+        "mapX": 795.48,
+        "mapY": 798.84,
+        "artefacts": [
+          {
+            "name": "Kolobok",
+            "chance": 11.4
+          },
+          {
+            "name": "Empty",
+            "chance": 6.7
+          },
+          {
+            "name": "Gravi",
+            "chance": 6.7
+          },
+          {
+            "name": "Sponge",
+            "chance": 6.7
+          },
+          {
+            "name": "Wrenched",
+            "chance": 6.7
+          },
+          {
+            "name": "Soul",
+            "chance": 5
+          },
+          {
+            "name": "Bracelet",
+            "chance": 4.8
+          },
+          {
+            "name": "Shell",
+            "chance": 4.8
+          },
+          {
+            "name": "Moonlight",
+            "chance": 4.8
+          },
+          {
+            "name": "Eye",
+            "chance": 4.8
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 4.8
+          },
+          {
+            "name": "Pin",
+            "chance": 4.8
+          },
+          {
+            "name": "Firefly",
+            "chance": 4.4
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 3.3
+          },
+          {
+            "name": "Black Spray",
+            "chance": 2.2
+          },
+          {
+            "name": "Flash",
+            "chance": 2.2
+          },
+          {
+            "name": "Full Empty",
+            "chance": 2.2
+          },
+          {
+            "name": "Goldfish",
+            "chance": 2.2
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 1.7
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 1.7
+          },
+          {
+            "name": "Nightstar",
+            "chance": 1.7
+          },
+          {
+            "name": "Cell",
+            "chance": 0.6
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 0.6
+          },
+          {
+            "name": "Electron",
+            "chance": 0.6
+          },
+          {
+            "name": "Generator",
+            "chance": 0.6
+          },
+          {
+            "name": "Grapes",
+            "chance": 0.6
+          },
+          {
+            "name": "Claw",
+            "chance": 0.6
+          },
+          {
+            "name": "Beacon",
+            "chance": 0.6
+          },
+          {
+            "name": "Medal",
+            "chance": 0.6
+          },
+          {
+            "name": "Thistle",
+            "chance": 0.6
+          },
+          {
+            "name": "Seraphim",
+            "chance": 0.6
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 0.6
+          },
+          {
+            "name": "Sun",
+            "chance": 0.6
+          }
+        ]
+      },
+      {
+        "id": "pri_b303_anomal_zone",
+        "name": "pri_b303_anomaly_spot",
+        "label": "Anomaly field",
+        "label_key": "",
+        "section": "pri_b303_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "pripyat",
+        "mapX": 788.98,
+        "mapY": 767.39,
+        "artefacts": [
+          {
+            "name": "Crystal",
+            "chance": 23.8
+          },
+          {
+            "name": "Moonlight",
+            "chance": 23.8
+          },
+          {
+            "name": "Ring",
+            "chance": 23.8
+          },
+          {
+            "name": "Battery",
+            "chance": 7.1
+          },
+          {
+            "name": "Flash",
+            "chance": 7.1
+          },
+          {
+            "name": "Sparkler",
+            "chance": 7.1
+          },
+          {
+            "name": "Snowflake",
+            "chance": 7.1
+          }
+        ]
+      },
+      {
+        "id": "pri_wa_anomal_zone",
+        "name": "pri_wa_anomaly_spot",
+        "label": "Anomaly field",
+        "label_key": "",
+        "section": "pri_wa_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "pripyat",
+        "mapX": 788.28,
+        "mapY": 809.46,
+        "artefacts": [
+          {
+            "name": "Kolobok",
+            "chance": 16.1
+          },
+          {
+            "name": "Wrenched",
+            "chance": 16.1
+          },
+          {
+            "name": "Bracelet",
+            "chance": 8.9
+          },
+          {
+            "name": "Eye",
+            "chance": 8.9
+          },
+          {
+            "name": "Empty",
+            "chance": 7.1
+          },
+          {
+            "name": "Gravi",
+            "chance": 7.1
+          },
+          {
+            "name": "Sponge",
+            "chance": 7.1
+          },
+          {
+            "name": "Firefly",
+            "chance": 6
+          },
+          {
+            "name": "Bubble",
+            "chance": 3.6
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 3.6
+          },
+          {
+            "name": "Soul",
+            "chance": 3.6
+          },
+          {
+            "name": "Full Empty",
+            "chance": 2.4
+          },
+          {
+            "name": "Goldfish",
+            "chance": 2.4
+          },
+          {
+            "name": "Stone Blood",
+            "chance": 1.8
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 1.8
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 1.8
+          },
+          {
+            "name": "Nightstar",
+            "chance": 1.8
+          }
+        ]
+      },
+      {
+        "id": "pri_b306_anomal_zone",
+        "name": "pri_b306_anomaly_spot",
+        "label": "Spark Plug",
+        "label_key": "",
+        "section": "pri_b306_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "pripyat",
+        "mapX": 771.35,
+        "mapY": 804.64,
+        "anomalyTypes": [
+          "Electro"
+        ],
+        "artefacts": [
+          {
+            "name": "Crystal",
+            "chance": 23.8
+          },
+          {
+            "name": "Moonlight",
+            "chance": 23.8
+          },
+          {
+            "name": "Ring",
+            "chance": 23.8
+          },
+          {
+            "name": "Battery",
+            "chance": 7.1
+          },
+          {
+            "name": "Flash",
+            "chance": 7.1
+          },
+          {
+            "name": "Sparkler",
+            "chance": 7.1
+          },
+          {
+            "name": "Snowflake",
+            "chance": 7.1
+          }
+        ]
+      },
+      {
+        "id": "pri_b302_anomal_zone",
+        "name": "pri_b302_anomaly_spot",
+        "label": "Vine",
+        "label_key": "",
+        "section": "pri_b302_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "pripyat",
+        "mapX": 809.35,
+        "mapY": 777.41,
+        "anomalyTypes": [
+          "Chemical"
+        ],
+        "artefacts": [
+          {
+            "name": "Kolobok",
+            "chance": 15.6
+          },
+          {
+            "name": "Wrenched",
+            "chance": 15.6
+          },
+          {
+            "name": "Bracelet",
+            "chance": 9.4
+          },
+          {
+            "name": "Eye",
+            "chance": 9.4
+          },
+          {
+            "name": "Empty",
+            "chance": 6.3
+          },
+          {
+            "name": "Gravi",
+            "chance": 6.3
+          },
+          {
+            "name": "Sponge",
+            "chance": 6.3
+          },
+          {
+            "name": "Firefly",
+            "chance": 5.2
+          },
+          {
+            "name": "Bubble",
+            "chance": 3.1
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 3.1
+          },
+          {
+            "name": "Soul",
+            "chance": 3.1
+          },
+          {
+            "name": "Full Empty",
+            "chance": 2.1
+          },
+          {
+            "name": "Goldfish",
+            "chance": 2.1
+          },
+          {
+            "name": "Stone Blood",
+            "chance": 1.6
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 1.6
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 1.6
+          },
+          {
+            "name": "Nightstar",
+            "chance": 1.6
+          },
+          {
+            "name": "Cell",
+            "chance": 0.5
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 0.5
+          },
+          {
+            "name": "Electron",
+            "chance": 0.5
+          },
+          {
+            "name": "Generator",
+            "chance": 0.5
+          },
+          {
+            "name": "Grapes",
+            "chance": 0.5
+          },
+          {
+            "name": "Claw",
+            "chance": 0.5
+          },
+          {
+            "name": "Beacon",
+            "chance": 0.5
+          },
+          {
+            "name": "Medal",
+            "chance": 0.5
+          },
+          {
+            "name": "Thistle",
+            "chance": 0.5
+          },
+          {
+            "name": "Seraphim",
+            "chance": 0.5
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 0.5
+          },
+          {
+            "name": "Sun",
+            "chance": 0.5
+          }
+        ]
+      },
+      {
+        "id": "pri_b307_anomal_zone",
+        "name": "pri_b307_anomaly_spot",
+        "label": "Volcano",
+        "label_key": "",
+        "section": "pri_b307_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "pripyat",
+        "mapX": 751.4,
+        "mapY": 831.88,
+        "artefacts": [
+          {
+            "name": "Crystal",
+            "chance": 23.8
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 23.8
+          },
+          {
+            "name": "Pin",
+            "chance": 23.8
+          },
+          {
+            "name": "Mama's Beads",
+            "chance": 7.1
+          },
+          {
+            "name": "Itcher",
+            "chance": 7.1
+          },
+          {
+            "name": "Bubble",
+            "chance": 4.8
+          },
+          {
+            "name": "Flame",
+            "chance": 4.8
+          },
+          {
+            "name": "Fireball",
+            "chance": 4.8
+          }
+        ]
+      },
+      {
         "id": "pol_smart_terrain_1_2_anomal_zone",
         "name": "pol_smart_terrain_1_2_anomaly_spot",
         "label": "Volt",
@@ -31433,6 +33446,931 @@
           {
             "name": "Scar",
             "chance": 1.6
+          }
+        ]
+      },
+      {
+        "id": "zat_wa_anomal_zone",
+        "name": "zat_wa_anomaly_spot",
+        "label": "Anomaly field",
+        "label_key": "",
+        "section": "zat_wa_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "zaton",
+        "mapX": 389.89,
+        "mapY": 661.52,
+        "artefacts": [
+          {
+            "name": "Soul",
+            "chance": 26.7
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 20
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 13.3
+          },
+          {
+            "name": "Stone Blood",
+            "chance": 6.7
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 6.7
+          },
+          {
+            "name": "Nightstar",
+            "chance": 6.7
+          },
+          {
+            "name": "Kolobok",
+            "chance": 4
+          },
+          {
+            "name": "Wrenched",
+            "chance": 3
+          },
+          {
+            "name": "Bracelet",
+            "chance": 2.6
+          },
+          {
+            "name": "Eye",
+            "chance": 2.6
+          },
+          {
+            "name": "Empty",
+            "chance": 1.3
+          },
+          {
+            "name": "Gravi",
+            "chance": 1.3
+          },
+          {
+            "name": "Sponge",
+            "chance": 1.3
+          },
+          {
+            "name": "Shell",
+            "chance": 1
+          },
+          {
+            "name": "Moonlight",
+            "chance": 1
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 1
+          },
+          {
+            "name": "Pin",
+            "chance": 1
+          }
+        ]
+      },
+      {
+        "id": "zat_b20_anomal_zone",
+        "name": "zat_b20_anomaly_spot",
+        "label": "Barge's Inferno",
+        "label_key": "",
+        "section": "zat_b20_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "zaton",
+        "mapX": 376.44,
+        "mapY": 615.97,
+        "anomalyTypes": [
+          "Thermal"
+        ],
+        "artefacts": [
+          {
+            "name": "Mama's Beads",
+            "chance": 33.3
+          },
+          {
+            "name": "Itcher",
+            "chance": 33.3
+          },
+          {
+            "name": "Crystal",
+            "chance": 5.6
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 5.6
+          },
+          {
+            "name": "Pin",
+            "chance": 5.6
+          },
+          {
+            "name": "Cell",
+            "chance": 1.4
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 1.4
+          },
+          {
+            "name": "Electron",
+            "chance": 1.4
+          },
+          {
+            "name": "Generator",
+            "chance": 1.4
+          },
+          {
+            "name": "Grapes",
+            "chance": 1.4
+          },
+          {
+            "name": "Claw",
+            "chance": 1.4
+          },
+          {
+            "name": "Beacon",
+            "chance": 1.4
+          },
+          {
+            "name": "Medal",
+            "chance": 1.4
+          },
+          {
+            "name": "Thistle",
+            "chance": 1.4
+          },
+          {
+            "name": "Seraphim",
+            "chance": 1.4
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 1.4
+          },
+          {
+            "name": "Sun",
+            "chance": 1.4
+          }
+        ]
+      },
+      {
+        "id": "zat_b53_anomal_zone",
+        "name": "zat_b53_anomaly_spot",
+        "label": "Boiler",
+        "label_key": "",
+        "section": "zat_b53_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "zaton",
+        "mapX": 445.69,
+        "mapY": 600.35,
+        "anomalyTypes": [
+          "Thermal"
+        ],
+        "artefacts": [
+          {
+            "name": "Mama's Beads",
+            "chance": 33.3
+          },
+          {
+            "name": "Itcher",
+            "chance": 33.3
+          },
+          {
+            "name": "Crystal",
+            "chance": 5.6
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 5.6
+          },
+          {
+            "name": "Pin",
+            "chance": 5.6
+          },
+          {
+            "name": "Cell",
+            "chance": 1.4
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 1.4
+          },
+          {
+            "name": "Electron",
+            "chance": 1.4
+          },
+          {
+            "name": "Generator",
+            "chance": 1.4
+          },
+          {
+            "name": "Grapes",
+            "chance": 1.4
+          },
+          {
+            "name": "Claw",
+            "chance": 1.4
+          },
+          {
+            "name": "Beacon",
+            "chance": 1.4
+          },
+          {
+            "name": "Medal",
+            "chance": 1.4
+          },
+          {
+            "name": "Thistle",
+            "chance": 1.4
+          },
+          {
+            "name": "Seraphim",
+            "chance": 1.4
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 1.4
+          },
+          {
+            "name": "Sun",
+            "chance": 1.4
+          }
+        ]
+      },
+      {
+        "id": "zaton_b56_anomal_zone",
+        "name": "zaton_b56_anomaly_spot",
+        "label": "Circus",
+        "label_key": "",
+        "section": "zaton_b56_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "zaton",
+        "mapX": 383.71,
+        "mapY": 720.18
+      },
+      {
+        "id": "zat_b55_anomal_zone",
+        "name": "zat_b55_anomaly_spot",
+        "label": "Claw",
+        "label_key": "",
+        "section": "zat_b55_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "zaton",
+        "mapX": 374.26,
+        "mapY": 690.64,
+        "artefacts": [
+          {
+            "name": "Soul",
+            "chance": 27.3
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 18.2
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 9.1
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 9.1
+          },
+          {
+            "name": "Nightstar",
+            "chance": 9.1
+          },
+          {
+            "name": "Kolobok",
+            "chance": 3.1
+          },
+          {
+            "name": "Empty",
+            "chance": 1.8
+          },
+          {
+            "name": "Gravi",
+            "chance": 1.8
+          },
+          {
+            "name": "Sponge",
+            "chance": 1.8
+          },
+          {
+            "name": "Wrenched",
+            "chance": 1.8
+          },
+          {
+            "name": "Bracelet",
+            "chance": 1.3
+          },
+          {
+            "name": "Shell",
+            "chance": 1.3
+          },
+          {
+            "name": "Moonlight",
+            "chance": 1.3
+          },
+          {
+            "name": "Eye",
+            "chance": 1.3
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 1.3
+          },
+          {
+            "name": "Pin",
+            "chance": 1.3
+          },
+          {
+            "name": "Cell",
+            "chance": 0.8
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 0.8
+          },
+          {
+            "name": "Electron",
+            "chance": 0.8
+          },
+          {
+            "name": "Generator",
+            "chance": 0.8
+          },
+          {
+            "name": "Grapes",
+            "chance": 0.8
+          },
+          {
+            "name": "Claw",
+            "chance": 0.8
+          },
+          {
+            "name": "Beacon",
+            "chance": 0.8
+          },
+          {
+            "name": "Medal",
+            "chance": 0.8
+          },
+          {
+            "name": "Thistle",
+            "chance": 0.8
+          },
+          {
+            "name": "Seraphim",
+            "chance": 0.8
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 0.8
+          },
+          {
+            "name": "Sun",
+            "chance": 0.8
+          }
+        ]
+      },
+      {
+        "id": "zat_b100_anomal_zone",
+        "name": "zat_b100_anomaly_spot",
+        "label": "Iron Forest",
+        "label_key": "",
+        "section": "zat_b100_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "zaton",
+        "mapX": 327.45,
+        "mapY": 716.28,
+        "artefacts": [
+          {
+            "name": "Soul",
+            "chance": 20
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 13.3
+          },
+          {
+            "name": "Battery",
+            "chance": 13.3
+          },
+          {
+            "name": "Sparkler",
+            "chance": 13.3
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 6.7
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 6.7
+          },
+          {
+            "name": "Nightstar",
+            "chance": 6.7
+          },
+          {
+            "name": "Moonlight",
+            "chance": 3.2
+          },
+          {
+            "name": "Kolobok",
+            "chance": 2.3
+          },
+          {
+            "name": "Crystal",
+            "chance": 2.2
+          },
+          {
+            "name": "Ring",
+            "chance": 2.2
+          },
+          {
+            "name": "Empty",
+            "chance": 1.3
+          },
+          {
+            "name": "Gravi",
+            "chance": 1.3
+          },
+          {
+            "name": "Sponge",
+            "chance": 1.3
+          },
+          {
+            "name": "Wrenched",
+            "chance": 1.3
+          },
+          {
+            "name": "Bracelet",
+            "chance": 1
+          },
+          {
+            "name": "Shell",
+            "chance": 1
+          },
+          {
+            "name": "Eye",
+            "chance": 1
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 1
+          },
+          {
+            "name": "Pin",
+            "chance": 1
+          }
+        ]
+      },
+      {
+        "id": "zat_b39_anomal_zone",
+        "name": "zat_b39_anomaly_spot",
+        "label": "Oakpine",
+        "label_key": "",
+        "section": "zat_b39_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "zaton",
+        "mapX": 336.98,
+        "mapY": 684.4,
+        "anomalyTypes": [
+          "Chemical",
+          "Psi"
+        ],
+        "artefacts": [
+          {
+            "name": "Stone Blood",
+            "chance": 16.7
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 16.7
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 16.7
+          },
+          {
+            "name": "Soul",
+            "chance": 16.7
+          },
+          {
+            "name": "Bracelet",
+            "chance": 4.2
+          },
+          {
+            "name": "Eye",
+            "chance": 4.2
+          },
+          {
+            "name": "Kolobok",
+            "chance": 4.2
+          },
+          {
+            "name": "Wrenched",
+            "chance": 4.2
+          },
+          {
+            "name": "Cell",
+            "chance": 1.4
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 1.4
+          },
+          {
+            "name": "Electron",
+            "chance": 1.4
+          },
+          {
+            "name": "Generator",
+            "chance": 1.4
+          },
+          {
+            "name": "Grapes",
+            "chance": 1.4
+          },
+          {
+            "name": "Claw",
+            "chance": 1.4
+          },
+          {
+            "name": "Beacon",
+            "chance": 1.4
+          },
+          {
+            "name": "Medal",
+            "chance": 1.4
+          },
+          {
+            "name": "Thistle",
+            "chance": 1.4
+          },
+          {
+            "name": "Seraphim",
+            "chance": 1.4
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 1.4
+          },
+          {
+            "name": "Sun",
+            "chance": 1.4
+          }
+        ]
+      },
+      {
+        "id": "zat_b14_anomal_zone",
+        "name": "zat_b14_anomaly_spot",
+        "label": "Riptide",
+        "label_key": "",
+        "section": "zat_b14_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "zaton",
+        "mapX": 443.16,
+        "mapY": 627.67,
+        "anomalyTypes": [
+          "Radioactive",
+          "Gravitational"
+        ],
+        "artefacts": [
+          {
+            "name": "Soul",
+            "chance": 27.3
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 18.2
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 9.1
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 9.1
+          },
+          {
+            "name": "Nightstar",
+            "chance": 9.1
+          },
+          {
+            "name": "Kolobok",
+            "chance": 3.1
+          },
+          {
+            "name": "Empty",
+            "chance": 1.8
+          },
+          {
+            "name": "Gravi",
+            "chance": 1.8
+          },
+          {
+            "name": "Sponge",
+            "chance": 1.8
+          },
+          {
+            "name": "Wrenched",
+            "chance": 1.8
+          },
+          {
+            "name": "Bracelet",
+            "chance": 1.3
+          },
+          {
+            "name": "Shell",
+            "chance": 1.3
+          },
+          {
+            "name": "Moonlight",
+            "chance": 1.3
+          },
+          {
+            "name": "Eye",
+            "chance": 1.3
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 1.3
+          },
+          {
+            "name": "Pin",
+            "chance": 1.3
+          },
+          {
+            "name": "Cell",
+            "chance": 0.8
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 0.8
+          },
+          {
+            "name": "Electron",
+            "chance": 0.8
+          },
+          {
+            "name": "Generator",
+            "chance": 0.8
+          },
+          {
+            "name": "Grapes",
+            "chance": 0.8
+          },
+          {
+            "name": "Claw",
+            "chance": 0.8
+          },
+          {
+            "name": "Beacon",
+            "chance": 0.8
+          },
+          {
+            "name": "Medal",
+            "chance": 0.8
+          },
+          {
+            "name": "Thistle",
+            "chance": 0.8
+          },
+          {
+            "name": "Seraphim",
+            "chance": 0.8
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 0.8
+          },
+          {
+            "name": "Sun",
+            "chance": 0.8
+          }
+        ]
+      },
+      {
+        "id": "zat_b54_anomal_zone",
+        "name": "zat_b54_anomaly_spot",
+        "label": "Scar",
+        "label_key": "",
+        "section": "zat_b54_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "zaton",
+        "mapX": 423.38,
+        "mapY": 706.24,
+        "artefacts": [
+          {
+            "name": "Soul",
+            "chance": 27.3
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 18.2
+          },
+          {
+            "name": "Jellyfish",
+            "chance": 9.1
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 9.1
+          },
+          {
+            "name": "Nightstar",
+            "chance": 9.1
+          },
+          {
+            "name": "Kolobok",
+            "chance": 3.1
+          },
+          {
+            "name": "Empty",
+            "chance": 1.8
+          },
+          {
+            "name": "Gravi",
+            "chance": 1.8
+          },
+          {
+            "name": "Sponge",
+            "chance": 1.8
+          },
+          {
+            "name": "Wrenched",
+            "chance": 1.8
+          },
+          {
+            "name": "Bracelet",
+            "chance": 1.3
+          },
+          {
+            "name": "Shell",
+            "chance": 1.3
+          },
+          {
+            "name": "Moonlight",
+            "chance": 1.3
+          },
+          {
+            "name": "Eye",
+            "chance": 1.3
+          },
+          {
+            "name": "Lobster Eyes",
+            "chance": 1.3
+          },
+          {
+            "name": "Pin",
+            "chance": 1.3
+          },
+          {
+            "name": "Cell",
+            "chance": 0.8
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 0.8
+          },
+          {
+            "name": "Electron",
+            "chance": 0.8
+          },
+          {
+            "name": "Generator",
+            "chance": 0.8
+          },
+          {
+            "name": "Grapes",
+            "chance": 0.8
+          },
+          {
+            "name": "Claw",
+            "chance": 0.8
+          },
+          {
+            "name": "Beacon",
+            "chance": 0.8
+          },
+          {
+            "name": "Medal",
+            "chance": 0.8
+          },
+          {
+            "name": "Thistle",
+            "chance": 0.8
+          },
+          {
+            "name": "Seraphim",
+            "chance": 0.8
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 0.8
+          },
+          {
+            "name": "Sun",
+            "chance": 0.8
+          }
+        ]
+      },
+      {
+        "id": "zat_b101_anomal_zone",
+        "name": "zat_b101_anomaly_spot",
+        "label": "Sullage",
+        "label_key": "",
+        "section": "zat_b101_anomaly_spot",
+        "type": "anomaly_field",
+        "level": "zaton",
+        "mapX": 329.14,
+        "mapY": 638.53,
+        "anomalyTypes": [
+          "Chemical"
+        ],
+        "artefacts": [
+          {
+            "name": "Stone Blood",
+            "chance": 16.7
+          },
+          {
+            "name": "Stone Flower",
+            "chance": 16.7
+          },
+          {
+            "name": "Meat Chunk",
+            "chance": 16.7
+          },
+          {
+            "name": "Soul",
+            "chance": 16.7
+          },
+          {
+            "name": "Bracelet",
+            "chance": 4.2
+          },
+          {
+            "name": "Eye",
+            "chance": 4.2
+          },
+          {
+            "name": "Kolobok",
+            "chance": 4.2
+          },
+          {
+            "name": "Wrenched",
+            "chance": 4.2
+          },
+          {
+            "name": "Cell",
+            "chance": 1.4
+          },
+          {
+            "name": "Dragon's Eye",
+            "chance": 1.4
+          },
+          {
+            "name": "Electron",
+            "chance": 1.4
+          },
+          {
+            "name": "Generator",
+            "chance": 1.4
+          },
+          {
+            "name": "Grapes",
+            "chance": 1.4
+          },
+          {
+            "name": "Claw",
+            "chance": 1.4
+          },
+          {
+            "name": "Beacon",
+            "chance": 1.4
+          },
+          {
+            "name": "Medal",
+            "chance": 1.4
+          },
+          {
+            "name": "Thistle",
+            "chance": 1.4
+          },
+          {
+            "name": "Seraphim",
+            "chance": 1.4
+          },
+          {
+            "name": "Phantom Star",
+            "chance": 1.4
+          },
+          {
+            "name": "Sun",
+            "chance": 1.4
           }
         ]
       }
