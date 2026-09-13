@@ -16,5 +16,19 @@ export const onRequest = async (context) => {
 
     const id = env.PRESENCE.idFromName("global");
     const stub = env.PRESENCE.get(id);
-    return stub.fetch(request);
+    try {
+        return await stub.fetch(request);
+    } catch (err) {
+        // DO stub errors carry `retryable` / `overloaded` flags (e.g. during a
+        // runtime restart). Log them so bursts are diagnosable, then fail soft.
+        console.error("presence stub.fetch failed", {
+            message: err?.message,
+            retryable: err?.retryable,
+            overloaded: err?.overloaded,
+        });
+        return new Response("Presence unavailable", {
+            status: 503,
+            headers: { "Retry-After": "30" },
+        });
+    }
 };

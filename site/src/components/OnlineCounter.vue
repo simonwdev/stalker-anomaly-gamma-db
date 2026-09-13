@@ -43,6 +43,19 @@
 <script>
 const LOCK_NAME = "presence-leader";
 const CHANNEL_NAME = "presence-count";
+const CONFIG_URL = "/presence.json";
+
+// A socket that stays open this long counts as healthy and resets backoff.
+const STABLE_MS = 60_000;
+// Consecutive attempts that never open (e.g. a proxy stripping Upgrade)
+// before giving up until the tab is revisited.
+const MAX_FAILS = 5;
+const BACKOFF_CAP_MS = 300_000;
+// After a healthy socket drops (usually the DO restarting and dropping every
+// client at once), wait a random delay so tabs don't reconnect in lockstep.
+const DROP_JITTER_MIN_MS = 5_000;
+const DROP_JITTER_MAX_MS = 60_000;
+const GIVE_UP_RETRY_MS = 10 * 60_000;
 
 export default {
     name: "OnlineCounter",
@@ -57,6 +70,8 @@ export default {
             releaseLock: null,
             reconnectTimer: null,
             reconnectAttempt: 0,
+            failStreak: 0,
+            gaveUpAt: null,
             unloading: false,
             hovered: false,
             nowHHMM: "",
@@ -91,11 +106,20 @@ export default {
         };
         window.addEventListener("pagehide", this.handleUnload);
 
+        this.handleVisibility = () => {
+            if (document.visibilityState !== "visible" || this.gaveUpAt === null) return;
+            if (Date.now() - this.gaveUpAt < GIVE_UP_RETRY_MS) return;
+            this.gaveUpAt = null;
+            this.failStreak = MAX_FAILS - 1; // one more attempt before giving up again
+            this.connect();
+        };
+        document.addEventListener("visibilitychange", this.handleVisibility);
+
         if ("locks" in navigator) {
             this.acquireLeadership();
         } else {
             this.isLeader = true;
-            this.connect();
+            this.startIfEnabled();
         }
     },
     beforeUnmount() {
@@ -113,6 +137,7 @@ export default {
         this.releaseLock?.();
         if (typeof window !== "undefined") {
             window.removeEventListener("pagehide", this.handleUnload);
+            document.removeEventListener("visibilitychange", this.handleVisibility);
         }
     },
     methods: {
@@ -150,7 +175,7 @@ export default {
                 await navigator.locks.request(LOCK_NAME, { mode: "exclusive" }, () => {
                     if (this.unloading) return;
                     this.isLeader = true;
-                    this.connect();
+                    this.startIfEnabled();
                     return new Promise((resolve) => {
                         this.releaseLock = () => {
                             this.releaseLock = null;
@@ -160,8 +185,20 @@ export default {
                 });
             } catch {}
         },
+        // Kill switch: a static (quota-free) flag file lets presence be turned
+        // off for new page loads without touching the Worker. Fails open.
+        async startIfEnabled() {
+            try {
+                const res = await fetch(CONFIG_URL, { cache: "no-store" });
+                if (res.ok) {
+                    const cfg = await res.json();
+                    if (cfg && cfg.enabled === false) return;
+                }
+            } catch {}
+            this.connect();
+        },
         connect() {
-            if (this.unloading || this.ws) return;
+            if (this.unloading || this.ws || this.gaveUpAt !== null) return;
 
             const proto = location.protocol === "https:" ? "wss:" : "ws:";
             const url = `${proto}//${location.host}/api/presence`;
@@ -174,10 +211,12 @@ export default {
                 return;
             }
             this.ws = ws;
+            let openedAt = null;
 
             ws.addEventListener("open", () => {
+                openedAt = Date.now();
                 this.connected = true;
-                this.reconnectAttempt = 0;
+                this.failStreak = 0;
             });
 
             ws.addEventListener("message", (e) => {
@@ -195,16 +234,38 @@ export default {
                 if (this.ws !== ws) return;
                 this.ws = null;
                 this.connected = false;
-                if (!this.unloading && this.isLeader) this.scheduleReconnect();
+                if (this.unloading || !this.isLeader) return;
+
+                if (openedAt === null) {
+                    // Never opened: blocked or unreachable.
+                    this.failStreak++;
+                    if (this.failStreak >= MAX_FAILS) {
+                        this.gaveUpAt = Date.now();
+                        return;
+                    }
+                    this.scheduleReconnect();
+                } else if (Date.now() - openedAt >= STABLE_MS) {
+                    // Healthy socket dropped: reset backoff, spread reconnects out.
+                    this.reconnectAttempt = 0;
+                    const span = DROP_JITTER_MAX_MS - DROP_JITTER_MIN_MS;
+                    this.scheduleReconnect(DROP_JITTER_MIN_MS + Math.floor(Math.random() * span));
+                } else {
+                    // Opened but died quickly: server unstable, keep backing off.
+                    this.scheduleReconnect();
+                }
             };
             ws.addEventListener("close", onClose);
             ws.addEventListener("error", onClose);
         },
-        scheduleReconnect() {
+        scheduleReconnect(fixedDelay) {
             if (this.reconnectTimer || this.unloading) return;
-            this.reconnectAttempt = Math.min(this.reconnectAttempt + 1, 6);
-            const base = 1000 * Math.pow(2, this.reconnectAttempt - 1);
-            const delay = Math.min(base, 30000) + Math.floor(Math.random() * 1000);
+            let delay = fixedDelay;
+            if (delay === undefined) {
+                this.reconnectAttempt = Math.min(this.reconnectAttempt + 1, 10);
+                const base = Math.min(2000 * Math.pow(2, this.reconnectAttempt - 1), BACKOFF_CAP_MS);
+                // Jitter between half and full base so retries don't align.
+                delay = Math.floor(base / 2 + Math.random() * (base / 2));
+            }
             this.reconnectTimer = setTimeout(() => {
                 this.reconnectTimer = null;
                 this.connect();

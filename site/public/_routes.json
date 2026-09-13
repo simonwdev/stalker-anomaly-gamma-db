@@ -3,6 +3,7 @@
   "include": ["/*"],
   "exclude": [
     "/sw.js",
+    "/presence.json",
     "/data/*",
     "/img/*",
     "/css/*",
