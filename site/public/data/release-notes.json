@@ -4,6 +4,17 @@
     "entries": [
       {
         "type": "fixed",
+        "text": "Anomaly fields were missing from the map on Jupiter, Zaton, Outskirts and Truck Cemetery. They now appear there, and fields with no name in the game are labelled by their anomaly type.",
+        "credits": [
+          {
+            "name": "Galahadin",
+            "role": "bug"
+          }
+        ],
+        "action": "maps"
+      },
+      {
+        "type": "fixed",
         "text": "CNPP North and South had their names swapped on the map, including on transitions from other levels. Both zones now fit the map image, and their markers line up with the buildings and roads they belong to.",
         "credits": [
           {
