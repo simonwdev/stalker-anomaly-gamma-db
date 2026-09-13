@@ -2510,6 +2510,15 @@ input.range-input {
     align-items: flex-start;
 }
 
+/* Replaces the addon tile grid when a slot is unlocked by an upgrade rather
+   than filled by a known addon (e.g. the AK underbarrel GL mount). */
+.addon-upgrade-note {
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+
 .desc-chip-label {
     display: inline-flex;
     align-items: center;

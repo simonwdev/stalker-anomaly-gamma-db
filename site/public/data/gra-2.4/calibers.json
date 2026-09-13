@@ -5,7 +5,7 @@
       {
         "id": "ammo_9x18_pmm",
         "name": "ammo-9x18-pmm",
-        "displayName": "ammo-9x18-pmm [default]",
+        "displayName": "ammo-9x18-pmm",
         "ui_inv_damage": "1.1",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -77,7 +77,7 @@
       {
         "id": "ammo_9x18_ap",
         "name": "ammo-9x18-ap",
-        "displayName": "ammo-9x18-ap [default]",
+        "displayName": "ammo-9x18-ap",
         "ui_inv_damage": "0.6",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -113,7 +113,7 @@
       {
         "id": "ammo_9x18_fmj",
         "name": "ammo-9x18-fmj",
-        "displayName": "ammo-9x18-fmj [default]",
+        "displayName": "ammo-9x18-fmj",
         "ui_inv_damage": "0.6",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -208,7 +208,7 @@
       {
         "id": "ammo_7.62x51_ap",
         "name": "ammo-7.62x51_ap",
-        "displayName": "ammo-7.62x51_ap [default]",
+        "displayName": "ammo-7.62x51_ap",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "50%",
         "ui_inv_wrange": "100%",
@@ -262,7 +262,7 @@
       {
         "id": "ammo_7.62x51_fmj",
         "name": "ammo-7.62x51_fmj",
-        "displayName": "ammo-7.62x51_fmj [default]",
+        "displayName": "ammo-7.62x51_fmj",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "50%",
         "ui_inv_wrange": "100%",
@@ -321,7 +321,7 @@
       {
         "id": "ammo_12.7x55_ap",
         "name": "ammo_12.7x55_ap",
-        "displayName": "ammo_12.7x55_ap [default]",
+        "displayName": "ammo_12.7x55_ap",
         "ui_inv_damage": "1.35",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -339,7 +339,7 @@
       {
         "id": "ammo_12.7x55_fmj",
         "name": "ammo-12.7x55-fmj",
-        "displayName": "ammo-12.7x55-fmj [default]",
+        "displayName": "ammo-12.7x55-fmj",
         "ui_inv_damage": "1.35",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -398,7 +398,7 @@
       {
         "id": "ammo_4.6x30_fmj",
         "name": "ammo-4.6x30-fmj",
-        "displayName": "ammo-4.6x30-fmj [default]",
+        "displayName": "ammo-4.6x30-fmj",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -475,7 +475,7 @@
       {
         "id": "ammo_7.62x25_p",
         "name": "ammo-7.62x25-p",
-        "displayName": "ammo-7.62x25-p [default]",
+        "displayName": "ammo-7.62x25-p",
         "ui_inv_damage": "0.65",
         "ui_inv_accuracy": "70%",
         "ui_inv_wrange": "100%",
@@ -547,7 +547,7 @@
       {
         "id": "ammo_7.62x25_ps",
         "name": "ammo-7.62x25-ps",
-        "displayName": "ammo-7.62x25-ps [default]",
+        "displayName": "ammo-7.62x25-ps",
         "ui_inv_damage": "0.8",
         "ui_inv_accuracy": "68%",
         "ui_inv_wrange": "100%",
@@ -624,7 +624,7 @@
       {
         "id": "ammo_7.62x39_ap",
         "name": "ammo-7.62x39_ap",
-        "displayName": "ammo-7.62x39_ap [default]",
+        "displayName": "ammo-7.62x39_ap",
         "ui_inv_damage": "1.1",
         "ui_inv_accuracy": "75%",
         "ui_inv_wrange": "100%",
@@ -642,7 +642,7 @@
       {
         "id": "ammo_7.62x39_fmj",
         "name": "ammo-7.62x39_fmj",
-        "displayName": "ammo-7.62x39_fmj [default]",
+        "displayName": "ammo-7.62x39_fmj",
         "ui_inv_damage": "1.1",
         "ui_inv_accuracy": "75%",
         "ui_inv_wrange": "100%",
@@ -701,7 +701,7 @@
       {
         "id": "ammo_9x39_ap",
         "name": "ammo-9x39-ap",
-        "displayName": "ammo-9x39-ap [default]",
+        "displayName": "ammo-9x39-ap",
         "ui_inv_damage": "1.3",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -755,7 +755,7 @@
       {
         "id": "ammo_9x39_pab9",
         "name": "ammo-9x39-pab9",
-        "displayName": "ammo-9x39-pab9 [default]",
+        "displayName": "ammo-9x39-pab9",
         "ui_inv_damage": "1.3",
         "ui_inv_accuracy": "50%",
         "ui_inv_wrange": "100%",
@@ -796,7 +796,7 @@
       {
         "id": "ammo_12x70_buck",
         "name": "ammo-12x70-buck",
-        "displayName": "ammo-12x70-buck [default]",
+        "displayName": "ammo-12x70-buck",
         "ui_inv_damage": "0.4",
         "ui_inv_accuracy": "459%",
         "ui_inv_wrange": "75%",
@@ -891,7 +891,7 @@
       {
         "id": "ammo_5.45x39_ep",
         "name": "ammo-5.45x39-ep",
-        "displayName": "ammo-5.45x39-ep [default]",
+        "displayName": "ammo-5.45x39-ep",
         "ui_inv_damage": "1.6",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -963,7 +963,7 @@
       {
         "id": "ammo_5.45x39_fmj",
         "name": "ammo-5.45x39-fmj",
-        "displayName": "ammo-5.45x39-fmj [default]",
+        "displayName": "ammo-5.45x39-fmj",
         "ui_inv_damage": "1.1",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1017,7 +1017,7 @@
       {
         "id": "ammo_5.45x39_ap",
         "name": "ammo-5.45x39-ap",
-        "displayName": "ammo-5.45x39-ap [default]",
+        "displayName": "ammo-5.45x39-ap",
         "ui_inv_damage": "1.1",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1076,7 +1076,7 @@
       {
         "id": "ammo_5.56x45_ss190",
         "name": "ammo-5.56x45-ss190",
-        "displayName": "ammo-5.56x45-ss190 [default]",
+        "displayName": "ammo-5.56x45-ss190",
         "ui_inv_damage": "1.45",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1094,7 +1094,7 @@
       {
         "id": "ammo_5.56x45_ap",
         "name": "ammo-5.56x45-ap",
-        "displayName": "ammo-5.56x45-ap [default]",
+        "displayName": "ammo-5.56x45-ap",
         "ui_inv_damage": "0.9",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1130,7 +1130,7 @@
       {
         "id": "ammo_5.56x45_fmj",
         "name": "ammo-5.56x45-fmj",
-        "displayName": "ammo-5.56x45-fmj [default]",
+        "displayName": "ammo-5.56x45-fmj",
         "ui_inv_damage": "0.9",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1243,7 +1243,7 @@
       {
         "id": "ammo_7.62x54_7h1",
         "name": "ammo-7.62x54-7n1",
-        "displayName": "ammo-7.62x54-7n1 [default]",
+        "displayName": "ammo-7.62x54-7n1",
         "ui_inv_damage": "1.18",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1261,7 +1261,7 @@
       {
         "id": "ammo_7.62x54_ap",
         "name": "ammo-7.62x54-ap",
-        "displayName": "ammo-7.62x54-ap [default]",
+        "displayName": "ammo-7.62x54-ap",
         "ui_inv_damage": "1.18",
         "ui_inv_accuracy": "90%",
         "ui_inv_wrange": "100%",
@@ -1315,7 +1315,7 @@
       {
         "id": "ammo_7.62x54_7h14",
         "name": "ammo-7.62x54_7n14",
-        "displayName": "ammo-7.62x54_7n14 [default]",
+        "displayName": "ammo-7.62x54_7n14",
         "ui_inv_damage": "1.18",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1428,7 +1428,7 @@
       {
         "id": "ammo_9x19_ap",
         "name": "ammo-9x19-ap",
-        "displayName": "ammo-9x19-ap [default]",
+        "displayName": "ammo-9x19-ap",
         "ui_inv_damage": "0.67",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1482,7 +1482,7 @@
       {
         "id": "ammo_9x19_pbp",
         "name": "ammo-9x19-pbp",
-        "displayName": "ammo-9x19-pbp [default]",
+        "displayName": "ammo-9x19-pbp",
         "ui_inv_damage": "1.3",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1536,7 +1536,7 @@
       {
         "id": "ammo_9x19_fmj",
         "name": "ammo-9x19-fmj",
-        "displayName": "ammo-9x19-fmj [default]",
+        "displayName": "ammo-9x19-fmj",
         "ui_inv_damage": "0.67",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1577,7 +1577,7 @@
       {
         "id": "ammo_7.92x33_fmj",
         "name": "ammo-7.92x33_fmj",
-        "displayName": "ammo-7.92x33_fmj [default]",
+        "displayName": "ammo-7.92x33_fmj",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "85%",
         "ui_inv_wrange": "100%",
@@ -1631,7 +1631,7 @@
       {
         "id": "ammo_7.92x33_ap",
         "name": "ammo-7.92x33_ap",
-        "displayName": "ammo-7.92x33_ap [default]",
+        "displayName": "ammo-7.92x33_ap",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "85%",
         "ui_inv_wrange": "100%",
@@ -1690,7 +1690,7 @@
       {
         "id": "ammo_11.43x23_hydro",
         "name": "ammo-11.43x23-hydro",
-        "displayName": "ammo-11.43x23-hydro [default]",
+        "displayName": "ammo-11.43x23-hydro",
         "ui_inv_damage": "2",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1726,7 +1726,7 @@
       {
         "id": "ammo_11.43x23_fmj",
         "name": "ammo-11.43x23-fmj",
-        "displayName": "ammo-11.43x23-fmj [default]",
+        "displayName": "ammo-11.43x23-fmj",
         "ui_inv_damage": "0.7",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1821,7 +1821,7 @@
       {
         "id": "ammo_12x76_zhekan",
         "name": "ammo-12x76-zhekan",
-        "displayName": "ammo-12x76-zhekan [default]",
+        "displayName": "ammo-12x76-zhekan",
         "ui_inv_damage": "2",
         "ui_inv_accuracy": "50%",
         "ui_inv_wrange": "90%",
@@ -1857,7 +1857,7 @@
       {
         "id": "ammo_12x76_dart",
         "name": "ammo-12x76-dart",
-        "displayName": "ammo-12x76-dart [default]",
+        "displayName": "ammo-12x76-dart",
         "ui_inv_damage": "1.2",
         "ui_inv_accuracy": "33%",
         "ui_inv_wrange": "100%",
@@ -1916,7 +1916,7 @@
       {
         "id": "ammo_5.7x28_ss195",
         "name": "ammo-5.7x28-ss195",
-        "displayName": "ammo-5.7x28-ss195 [default]",
+        "displayName": "ammo-5.7x28-ss195",
         "ui_inv_damage": "0.74",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -1934,7 +1934,7 @@
       {
         "id": "ammo_5.7x28_ss190",
         "name": "ammo-5.7x28-ss190",
-        "displayName": "ammo-5.7x28-ss190 [default]",
+        "displayName": "ammo-5.7x28-ss190",
         "ui_inv_damage": "0.74",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2065,7 +2065,7 @@
       {
         "id": "ammo_9x19_fmj",
         "name": "ammo-9x19-fmj",
-        "displayName": "ammo-9x19-fmj [default]",
+        "displayName": "ammo-9x19-fmj",
         "ui_inv_damage": "0.67",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2124,7 +2124,7 @@
       {
         "id": "ammo_9x19_pbp",
         "name": "ammo-9x19-pbp",
-        "displayName": "ammo-9x19-pbp [default]",
+        "displayName": "ammo-9x19-pbp",
         "ui_inv_damage": "1.3",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2165,7 +2165,7 @@
       {
         "id": "ammo_9x19_ap",
         "name": "ammo-9x19-ap",
-        "displayName": "ammo-9x19-ap [default]",
+        "displayName": "ammo-9x19-ap",
         "ui_inv_damage": "0.67",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2206,7 +2206,7 @@
       {
         "id": "ammo_5.7x28_ss190",
         "name": "ammo-5.7x28-ss190",
-        "displayName": "ammo-5.7x28-ss190 [default]",
+        "displayName": "ammo-5.7x28-ss190",
         "ui_inv_damage": "0.74",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2265,7 +2265,7 @@
       {
         "id": "ammo_5.7x28_ss195",
         "name": "ammo-5.7x28-ss195",
-        "displayName": "ammo-5.7x28-ss195 [default]",
+        "displayName": "ammo-5.7x28-ss195",
         "ui_inv_damage": "0.74",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2342,7 +2342,7 @@
       {
         "id": "ammo_9x18_fmj",
         "name": "ammo-9x18-fmj",
-        "displayName": "ammo-9x18-fmj [default]",
+        "displayName": "ammo-9x18-fmj",
         "ui_inv_damage": "0.6",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2383,7 +2383,7 @@
       {
         "id": "ammo_9x18_pmm",
         "name": "ammo-9x18-pmm",
-        "displayName": "ammo-9x18-pmm [default]",
+        "displayName": "ammo-9x18-pmm",
         "ui_inv_damage": "1.1",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2478,7 +2478,7 @@
       {
         "id": "ammo_9x18_ap",
         "name": "ammo-9x18-ap",
-        "displayName": "ammo-9x18-ap [default]",
+        "displayName": "ammo-9x18-ap",
         "ui_inv_damage": "0.6",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2519,7 +2519,7 @@
       {
         "id": "ammo_357_hp_mag",
         "name": "ammo-357-hp",
-        "displayName": "ammo-357-hp [default]",
+        "displayName": "ammo-357-hp",
         "ui_inv_damage": "1.2",
         "ui_inv_accuracy": "50%",
         "ui_inv_wrange": "100%",
@@ -2560,7 +2560,7 @@
       {
         "id": "ammo_11.43x23_fmj",
         "name": "ammo-11.43x23-fmj",
-        "displayName": "ammo-11.43x23-fmj [default]",
+        "displayName": "ammo-11.43x23-fmj",
         "ui_inv_damage": "0.7",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2637,7 +2637,7 @@
       {
         "id": "ammo_11.43x23_hydro",
         "name": "ammo-11.43x23-hydro",
-        "displayName": "ammo-11.43x23-hydro [default]",
+        "displayName": "ammo-11.43x23-hydro",
         "ui_inv_damage": "2",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -2678,7 +2678,7 @@
       {
         "id": "ammo_7.62x25_p",
         "name": "ammo-7.62x25-p",
-        "displayName": "ammo-7.62x25-p [default]",
+        "displayName": "ammo-7.62x25-p",
         "ui_inv_damage": "0.65",
         "ui_inv_accuracy": "70%",
         "ui_inv_wrange": "100%",
@@ -2773,7 +2773,7 @@
       {
         "id": "ammo_7.62x25_ps",
         "name": "ammo-7.62x25-ps",
-        "displayName": "ammo-7.62x25-ps [default]",
+        "displayName": "ammo-7.62x25-ps",
         "ui_inv_damage": "0.8",
         "ui_inv_accuracy": "68%",
         "ui_inv_wrange": "100%",
@@ -2796,7 +2796,7 @@
       {
         "id": "ammo_12x70_buck",
         "name": "ammo-12x70-buck",
-        "displayName": "ammo-12x70-buck [default]",
+        "displayName": "ammo-12x70-buck",
         "ui_inv_damage": "0.4",
         "ui_inv_accuracy": "459%",
         "ui_inv_wrange": "75%",
@@ -2896,7 +2896,7 @@
       {
         "id": "ammo_12x76_zhekan",
         "name": "ammo-12x76-zhekan",
-        "displayName": "ammo-12x76-zhekan [default]",
+        "displayName": "ammo-12x76-zhekan",
         "ui_inv_damage": "2",
         "ui_inv_accuracy": "50%",
         "ui_inv_wrange": "90%",
@@ -2955,7 +2955,7 @@
       {
         "id": "ammo_12x76_dart",
         "name": "ammo-12x76-dart",
-        "displayName": "ammo-12x76-dart [default]",
+        "displayName": "ammo-12x76-dart",
         "ui_inv_damage": "1.2",
         "ui_inv_accuracy": "33%",
         "ui_inv_wrange": "100%",
@@ -3042,7 +3042,7 @@
       {
         "id": "ammo_5.56x45_fmj",
         "name": "ammo-5.56x45-fmj",
-        "displayName": "ammo-5.56x45-fmj [default]",
+        "displayName": "ammo-5.56x45-fmj",
         "ui_inv_damage": "0.9",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -3119,7 +3119,7 @@
       {
         "id": "ammo_5.56x45_ss190",
         "name": "ammo-5.56x45-ss190",
-        "displayName": "ammo-5.56x45-ss190 [default]",
+        "displayName": "ammo-5.56x45-ss190",
         "ui_inv_damage": "1.45",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -3160,7 +3160,7 @@
       {
         "id": "ammo_5.56x45_ap",
         "name": "ammo-5.56x45-ap",
-        "displayName": "ammo-5.56x45-ap [default]",
+        "displayName": "ammo-5.56x45-ap",
         "ui_inv_damage": "0.9",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -3255,7 +3255,7 @@
       {
         "id": "ammo_9x39_pab9",
         "name": "ammo-9x39-pab9",
-        "displayName": "ammo-9x39-pab9 [default]",
+        "displayName": "ammo-9x39-pab9",
         "ui_inv_damage": "1.3",
         "ui_inv_accuracy": "50%",
         "ui_inv_wrange": "100%",
@@ -3278,7 +3278,7 @@
       {
         "id": "ammo_9x39_ap",
         "name": "ammo-9x39-ap",
-        "displayName": "ammo-9x39-ap [default]",
+        "displayName": "ammo-9x39-ap",
         "ui_inv_damage": "1.3",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -3355,7 +3355,7 @@
       {
         "id": "ammo_5.45x39_fmj",
         "name": "ammo-5.45x39-fmj",
-        "displayName": "ammo-5.45x39-fmj [default]",
+        "displayName": "ammo-5.45x39-fmj",
         "ui_inv_damage": "1.1",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -3396,7 +3396,7 @@
       {
         "id": "ammo_5.45x39_ep",
         "name": "ammo-5.45x39-ep",
-        "displayName": "ammo-5.45x39-ep [default]",
+        "displayName": "ammo-5.45x39-ep",
         "ui_inv_damage": "1.6",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -3491,7 +3491,7 @@
       {
         "id": "ammo_5.45x39_ap",
         "name": "ammo-5.45x39-ap",
-        "displayName": "ammo-5.45x39-ap [default]",
+        "displayName": "ammo-5.45x39-ap",
         "ui_inv_damage": "1.1",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -3532,7 +3532,7 @@
       {
         "id": "ammo_7.62x39_fmj",
         "name": "ammo-7.62x39_fmj",
-        "displayName": "ammo-7.62x39_fmj [default]",
+        "displayName": "ammo-7.62x39_fmj",
         "ui_inv_damage": "1.1",
         "ui_inv_accuracy": "75%",
         "ui_inv_wrange": "100%",
@@ -3609,7 +3609,7 @@
       {
         "id": "ammo_7.62x39_ap",
         "name": "ammo-7.62x39_ap",
-        "displayName": "ammo-7.62x39_ap [default]",
+        "displayName": "ammo-7.62x39_ap",
         "ui_inv_damage": "1.1",
         "ui_inv_accuracy": "75%",
         "ui_inv_wrange": "100%",
@@ -3668,7 +3668,7 @@
       {
         "id": "ammo_7.62x51_fmj",
         "name": "ammo-7.62x51_fmj",
-        "displayName": "ammo-7.62x51_fmj [default]",
+        "displayName": "ammo-7.62x51_fmj",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "50%",
         "ui_inv_wrange": "100%",
@@ -3709,7 +3709,7 @@
       {
         "id": "ammo_7.62x51_ap",
         "name": "ammo-7.62x51_ap",
-        "displayName": "ammo-7.62x51_ap [default]",
+        "displayName": "ammo-7.62x51_ap",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "50%",
         "ui_inv_wrange": "100%",
@@ -3768,7 +3768,7 @@
       {
         "id": "ammo_pkm_100",
         "name": "ammo-7.62x54-r",
-        "displayName": "ammo-7.62x54-r [default]",
+        "displayName": "ammo-7.62x54-r",
         "ui_inv_damage": "1.5",
         "ui_inv_accuracy": "90%",
         "ui_inv_wrange": "100%",
@@ -3809,7 +3809,7 @@
       {
         "id": "ammo_7.62x54_ap",
         "name": "ammo-7.62x54-ap",
-        "displayName": "ammo-7.62x54-ap [default]",
+        "displayName": "ammo-7.62x54-ap",
         "ui_inv_damage": "1.18",
         "ui_inv_accuracy": "90%",
         "ui_inv_wrange": "100%",
@@ -3886,7 +3886,7 @@
       {
         "id": "ammo_7.62x54_7h1",
         "name": "ammo-7.62x54-7n1",
-        "displayName": "ammo-7.62x54-7n1 [default]",
+        "displayName": "ammo-7.62x54-7n1",
         "ui_inv_damage": "1.18",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -3945,7 +3945,7 @@
       {
         "id": "ammo_7.62x54_7h14",
         "name": "ammo-7.62x54_7n14",
-        "displayName": "ammo-7.62x54_7n14 [default]",
+        "displayName": "ammo-7.62x54_7n14",
         "ui_inv_damage": "1.18",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -4004,7 +4004,7 @@
       {
         "id": "ammo_12.7x55_fmj",
         "name": "ammo-12.7x55-fmj",
-        "displayName": "ammo-12.7x55-fmj [default]",
+        "displayName": "ammo-12.7x55-fmj",
         "ui_inv_damage": "1.35",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -4063,7 +4063,7 @@
       {
         "id": "ammo_12.7x55_ap",
         "name": "ammo_12.7x55_ap",
-        "displayName": "ammo_12.7x55_ap [default]",
+        "displayName": "ammo_12.7x55_ap",
         "ui_inv_damage": "1.35",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -4140,7 +4140,7 @@
       {
         "id": "ammo_magnum_300",
         "name": "ammo-338-lapua",
-        "displayName": "ammo-338-lapua [default]",
+        "displayName": "ammo-338-lapua",
         "ui_inv_damage": "1.3",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -4181,7 +4181,7 @@
       {
         "id": "ammo_7.92x33_fmj",
         "name": "ammo-7.92x33_fmj",
-        "displayName": "ammo-7.92x33_fmj [default]",
+        "displayName": "ammo-7.92x33_fmj",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "85%",
         "ui_inv_wrange": "100%",
@@ -4258,7 +4258,7 @@
       {
         "id": "ammo_7.92x33_ap",
         "name": "ammo-7.92x33_ap",
-        "displayName": "ammo-7.92x33_ap [default]",
+        "displayName": "ammo-7.92x33_ap",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "85%",
         "ui_inv_wrange": "100%",
@@ -4317,7 +4317,7 @@
       {
         "id": "ammo_gauss",
         "name": "ammo-gauss",
-        "displayName": "ammo-gauss [default]",
+        "displayName": "ammo-gauss",
         "ui_inv_damage": "2.5",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -4376,7 +4376,7 @@
       {
         "id": "ammo_og-7b",
         "name": "ammo-og-7b",
-        "displayName": "ammo-og-7b [default]",
+        "displayName": "ammo-og-7b",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "152%",
         "ui_inv_wrange": "100%",
@@ -4417,7 +4417,7 @@
       {
         "id": "ammo_m209",
         "name": "ammo-m209",
-        "displayName": "ammo-m209 [default]",
+        "displayName": "ammo-m209",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",
@@ -4458,7 +4458,7 @@
       {
         "id": "ammo_vog-25",
         "name": "ammo-vog-25",
-        "displayName": "ammo-vog-25 [default]",
+        "displayName": "ammo-vog-25",
         "ui_inv_damage": "1",
         "ui_inv_accuracy": "66%",
         "ui_inv_wrange": "100%",

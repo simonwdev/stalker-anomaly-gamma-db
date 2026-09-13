@@ -38,7 +38,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.1",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-11.43x23-fmj [default]",
+      "displayName": "ammo-11.43x23-fmj",
       "hasDisassemble": false,
       "factions": [
         "nato",
@@ -114,7 +114,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.2",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-11.43x23-hydro [default]",
+      "displayName": "ammo-11.43x23-hydro",
       "hasDisassemble": false,
       "factions": [
         "nato",
@@ -189,7 +189,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.7",
       "st_data_export_k_air_resistance": "0.05",
-      "displayName": "ammo_12.7x55_ap [default]",
+      "displayName": "ammo_12.7x55_ap",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -261,7 +261,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.5",
       "st_data_export_k_air_resistance": "0.05",
-      "displayName": "ammo-12.7x55-fmj [default]",
+      "displayName": "ammo-12.7x55-fmj",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -333,7 +333,7 @@
       "st_data_export_k_hit": "0.4",
       "st_data_export_k_ap": "0.03",
       "st_data_export_k_air_resistance": "2",
-      "displayName": "ammo-12x70-buck [default]",
+      "displayName": "ammo-12x70-buck",
       "hasDisassemble": false,
       "factions": [
         "other"
@@ -454,7 +454,7 @@
       "st_data_export_k_hit": "1.75",
       "st_data_export_k_ap": "0.3",
       "st_data_export_k_air_resistance": "1",
-      "displayName": "ammo-12x76-dart [default]",
+      "displayName": "ammo-12x76-dart",
       "hasDisassemble": false,
       "factions": [
         "other"
@@ -526,7 +526,7 @@
       "st_data_export_k_hit": "2",
       "st_data_export_k_ap": "0.2",
       "st_data_export_k_air_resistance": "1.1",
-      "displayName": "ammo-12x76-zhekan [default]",
+      "displayName": "ammo-12x76-zhekan",
       "hasDisassemble": false,
       "factions": [
         "other"
@@ -599,7 +599,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.25",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-357-hp [default]",
+      "displayName": "ammo-357-hp",
       "hasDisassemble": false,
       "factions": [
         "nato",
@@ -675,7 +675,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.35",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-4.6x30-fmj [default]",
+      "displayName": "ammo-4.6x30-fmj",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -747,7 +747,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.6",
       "st_data_export_k_air_resistance": "0.25",
-      "displayName": "ammo-5.45x39-ap [default]",
+      "displayName": "ammo-5.45x39-ap",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -819,7 +819,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.5",
       "st_data_export_k_air_resistance": "0.25",
-      "displayName": "ammo-5.45x39-ep [default]",
+      "displayName": "ammo-5.45x39-ep",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -891,7 +891,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.4",
       "st_data_export_k_air_resistance": "0.25",
-      "displayName": "ammo-5.45x39-fmj [default]",
+      "displayName": "ammo-5.45x39-fmj",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -964,7 +964,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.55",
       "st_data_export_k_air_resistance": "0.25",
-      "displayName": "ammo-5.56x45-ap [default]",
+      "displayName": "ammo-5.56x45-ap",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -1036,7 +1036,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.33",
       "st_data_export_k_air_resistance": "0.25",
-      "displayName": "ammo-5.56x45-fmj [default]",
+      "displayName": "ammo-5.56x45-fmj",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -1109,7 +1109,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.4",
       "st_data_export_k_air_resistance": "0.25",
-      "displayName": "ammo-5.56x45-ss190 [default]",
+      "displayName": "ammo-5.56x45-ss190",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -1182,7 +1182,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.35",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-5.7x28-ss190 [default]",
+      "displayName": "ammo-5.7x28-ss190",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -1254,7 +1254,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.2",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-5.7x28-ss195 [default]",
+      "displayName": "ammo-5.7x28-ss195",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -1326,7 +1326,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.6",
       "st_data_export_k_air_resistance": "0.05",
-      "displayName": "ammo-50-bmg [default]",
+      "displayName": "ammo-50-bmg",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -1398,7 +1398,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.15",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-7.62x25-p [default]",
+      "displayName": "ammo-7.62x25-p",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -1471,7 +1471,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.25",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-7.62x25-ps [default]",
+      "displayName": "ammo-7.62x25-ps",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -1543,7 +1543,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.55",
       "st_data_export_k_air_resistance": "0.25",
-      "displayName": "ammo-7.62x39_ap [default]",
+      "displayName": "ammo-7.62x39_ap",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -1615,7 +1615,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.45",
       "st_data_export_k_air_resistance": "0.25",
-      "displayName": "ammo-7.62x39_fmj [default]",
+      "displayName": "ammo-7.62x39_fmj",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -1688,7 +1688,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.6",
       "st_data_export_k_air_resistance": "0.1",
-      "displayName": "ammo-7.62x51_ap [default]",
+      "displayName": "ammo-7.62x51_ap",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -1760,7 +1760,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.4",
       "st_data_export_k_air_resistance": "0.1",
-      "displayName": "ammo-7.62x51_fmj [default]",
+      "displayName": "ammo-7.62x51_fmj",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -1833,7 +1833,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.5",
       "st_data_export_k_air_resistance": "0.05",
-      "displayName": "ammo-7.62x54-7n1 [default]",
+      "displayName": "ammo-7.62x54-7n1",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -1858,7 +1858,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.6",
       "st_data_export_k_air_resistance": "0.05",
-      "displayName": "ammo-7.62x54_7n14 [default]",
+      "displayName": "ammo-7.62x54_7n14",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -1978,7 +1978,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.6",
       "st_data_export_k_air_resistance": "0.05",
-      "displayName": "ammo-7.62x54-ap [default]",
+      "displayName": "ammo-7.62x54-ap",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -2050,7 +2050,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.55",
       "st_data_export_k_air_resistance": "0.25",
-      "displayName": "ammo-7.92x33_ap [default]",
+      "displayName": "ammo-7.92x33_ap",
       "hasDisassemble": false,
       "factions": [
         "other"
@@ -2122,7 +2122,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.45",
       "st_data_export_k_air_resistance": "0.25",
-      "displayName": "ammo-7.92x33_fmj [default]",
+      "displayName": "ammo-7.92x33_fmj",
       "hasDisassemble": false,
       "factions": [
         "other"
@@ -2194,7 +2194,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.2",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-9x18-ap [default]",
+      "displayName": "ammo-9x18-ap",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -2266,7 +2266,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.1",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-9x18-fmj [default]",
+      "displayName": "ammo-9x18-fmj",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -2339,7 +2339,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.15",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-9x18-pmm [default]",
+      "displayName": "ammo-9x18-pmm",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -2412,7 +2412,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.3",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-9x19-ap [default]",
+      "displayName": "ammo-9x19-ap",
       "hasDisassemble": false,
       "factions": [
         "nato",
@@ -2487,7 +2487,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.15",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-9x19-fmj [default]",
+      "displayName": "ammo-9x19-fmj",
       "hasDisassemble": false,
       "factions": [
         "nato",
@@ -2563,7 +2563,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.15",
       "st_data_export_k_air_resistance": "0.8",
-      "displayName": "ammo-9x19-pbp [default]",
+      "displayName": "ammo-9x19-pbp",
       "hasDisassemble": false,
       "factions": [
         "nato",
@@ -2639,7 +2639,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.45",
       "st_data_export_k_air_resistance": "0.15",
-      "displayName": "ammo-9x39-ap [default]",
+      "displayName": "ammo-9x39-ap",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -2711,7 +2711,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.35",
       "st_data_export_k_air_resistance": "0.15",
-      "displayName": "ammo-9x39-pab9 [default]",
+      "displayName": "ammo-9x39-pab9",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -2784,7 +2784,7 @@
       "st_data_export_k_hit": "2.5",
       "st_data_export_k_ap": "5",
       "st_data_export_k_air_resistance": "0.01",
-      "displayName": "ammo-gauss [default]",
+      "displayName": "ammo-gauss",
       "hasDisassemble": false,
       "factions": [
         "other"
@@ -2880,7 +2880,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.35",
       "st_data_export_k_air_resistance": "1",
-      "displayName": "ammo-m209 [default]",
+      "displayName": "ammo-m209",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -2952,7 +2952,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.8",
       "st_data_export_k_air_resistance": "0.05",
-      "displayName": "ammo-338-lapua [default]",
+      "displayName": "ammo-338-lapua",
       "hasDisassemble": false,
       "factions": [
         "nato"
@@ -3025,7 +3025,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "1.25",
       "st_data_export_k_air_resistance": "1",
-      "displayName": "ammo-og-7b [default]",
+      "displayName": "ammo-og-7b",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -3097,7 +3097,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.45",
       "st_data_export_k_air_resistance": "0.1",
-      "displayName": "ammo-7.62x54-r [default]",
+      "displayName": "ammo-7.62x54-r",
       "hasDisassemble": false,
       "factions": [
         "wp"
@@ -3169,7 +3169,7 @@
       "st_data_export_k_hit": "1",
       "st_data_export_k_ap": "0.35",
       "st_data_export_k_air_resistance": "1",
-      "displayName": "ammo-vog-25 [default]",
+      "displayName": "ammo-vog-25",
       "hasDisassemble": false,
       "factions": [
         "wp"

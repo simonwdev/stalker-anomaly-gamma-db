@@ -16,7 +16,10 @@
       "st_upgr_cost": "13200",
       "displayName": "st_grenade_launcher",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_addon_grenade_launcher_m203",
@@ -26,7 +29,10 @@
       "st_upgr_cost": "13200",
       "displayName": "st_grenade_launcher_m203",
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "factions": [
+        "nato"
+      ]
     }
   ]
 }

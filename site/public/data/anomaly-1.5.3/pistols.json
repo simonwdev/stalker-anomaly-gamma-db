@@ -39,6 +39,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -64,6 +66,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -89,6 +93,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -114,6 +120,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -139,6 +147,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -164,6 +174,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -189,6 +201,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -214,6 +228,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -239,6 +255,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -264,6 +282,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -289,6 +309,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -314,6 +336,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -339,6 +363,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -364,6 +390,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -389,6 +417,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -414,6 +444,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -439,6 +471,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -464,6 +498,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -489,6 +525,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -514,6 +552,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -539,6 +579,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -564,6 +606,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -589,6 +633,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -614,6 +660,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -634,11 +682,13 @@
       "ui_ammo_types": "ammo-9x18-fmj;ammo-9x18-fmj;ammo-9x18-fmj;ammo-9x18-pmm;ammo-9x18-pmm;ammo-9x18-pmm;ammo-9x18-ap;ammo-9x18-ap;ammo-9x18-ap",
       "st_data_export_ammo_types_alt": "ammo-9x19-fmj;ammo-9x19-fmj;ammo-9x19-fmj;ammo-9x19-pbp;ammo-9x19-pbp;ammo-9x19-pbp;ammo-9x19-ap;ammo-9x19-ap;ammo-9x19-ap",
       "st_data_export_hit_power": "0.45",
-      "displayName": "st_wpn_fort [default]",
+      "displayName": "st_wpn_fort",
       "hasNpcWeaponDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -664,6 +714,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -689,6 +741,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -714,6 +768,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -739,6 +795,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -764,6 +822,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -789,6 +849,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -814,6 +876,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -839,6 +903,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -864,6 +930,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -889,6 +957,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -914,6 +984,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -939,6 +1011,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -964,6 +1038,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -989,6 +1065,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -1014,6 +1092,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -1039,6 +1119,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -1064,6 +1146,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -1089,6 +1173,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -1114,6 +1200,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -1139,6 +1227,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -1164,6 +1254,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -1189,6 +1281,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -1214,6 +1308,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -1239,6 +1335,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -1264,6 +1362,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -1289,6 +1389,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -1314,6 +1416,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -1339,6 +1443,8 @@
       "hasDisassemble": false,
       "hasUpgrades": true,
       "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]

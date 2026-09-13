@@ -28,8 +28,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": true,
       "tacticalKit": false,
-      "unobtainable": true
+      "nimble": false
     },
     {
       "id": "ammo_m209_verybad",
@@ -46,8 +47,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": true,
       "tacticalKit": false,
-      "unobtainable": true
+      "nimble": false
     },
     {
       "id": "ammo_vog-25_bad",
@@ -64,8 +66,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": true,
       "tacticalKit": false,
-      "unobtainable": true
+      "nimble": false
     },
     {
       "id": "ammo_vog-25_verybad",
@@ -82,8 +85,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": true,
       "tacticalKit": false,
-      "unobtainable": true
+      "nimble": false
     },
     {
       "id": "grenade_f1",
@@ -100,8 +104,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
+      "unobtainable": false,
       "tacticalKit": false,
-      "unobtainable": false
+      "nimble": false
     },
     {
       "id": "grenade_gd-05",
@@ -118,8 +123,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
+      "unobtainable": false,
       "tacticalKit": false,
-      "unobtainable": false
+      "nimble": false
     },
     {
       "id": "grenade_rgd5",
@@ -136,8 +142,9 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
+      "unobtainable": false,
       "tacticalKit": false,
-      "unobtainable": false
+      "nimble": false
     },
     {
       "id": "grenade_smoke",
@@ -154,8 +161,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
       "hasDisassemble": false,
+      "unobtainable": false,
       "tacticalKit": false,
-      "unobtainable": false
+      "nimble": false
     },
     {
       "id": "ied",
@@ -172,8 +180,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": true,
       "tacticalKit": false,
-      "unobtainable": true
+      "nimble": false
     },
     {
       "id": "ied_rpg",
@@ -190,8 +199,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": true,
       "tacticalKit": false,
-      "unobtainable": true
+      "nimble": false
     },
     {
       "id": "mine",
@@ -208,8 +218,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": true,
       "tacticalKit": false,
-      "unobtainable": true
+      "nimble": false
     },
     {
       "id": "wpn_rpg26",
@@ -226,8 +237,9 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": true,
       "tacticalKit": false,
-      "unobtainable": true
+      "nimble": false
     }
   ]
 }

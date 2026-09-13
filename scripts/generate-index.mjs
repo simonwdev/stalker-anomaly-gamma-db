@@ -1061,6 +1061,16 @@ try {
 // Generate upgrades.json from export_upgrade_sections.csv + export_upgrades_items.csv
 const UPGRADE_SECTIONS_FILE = join(CSV_DIR, "export_upgrade_sections.csv");
 const UPGRADE_ITEMS_FILE = join(CSV_DIR, "export_upgrades_items.csv");
+
+// Weapons whose upgrade tree contains the underbarrel grenade launcher mount.
+// export_weapon_addon_map.csv only reports base compatibility: the exporter emits a
+// launcher when the weapon's ltx grenade_launcher_status is already >= 2, so the AK
+// family, which gains its mount from an upgrade, never appears there. The key below is
+// the only GL mount upgrade in the game translations. Read by the weapon-addons.json
+// pass further down.
+const GL_MOUNT_UPGRADE_NAME_KEY = "st_up_add_a3_name";
+const glUpgradeWeaponIds = new Set();
+
 try {
   const sectText = readFileSync(UPGRADE_SECTIONS_FILE, "utf-8");
   const sectLines = sectText.split(/\r?\n/).filter((l) => l.length > 0);
@@ -1168,6 +1178,8 @@ try {
       const desc = cols[base + stride - 2]?.trim();
       const sectionId = cols[base + stride - 1]?.trim();
       if (!row || !sectionId) continue;
+
+      if (name === GL_MOUNT_UPGRADE_NAME_KEY) glUpgradeWeaponIds.add(itemId);
 
       const sect = sectionsMap.get(sectionId) || { cost: 0, stats: {} };
       nodes.push({
@@ -2796,6 +2808,23 @@ try {
       weaponAddons[weaponId] = addons;
     }
   }
+
+  // Flag weapons that mount a grenade launcher only after the mount upgrade is installed.
+  // No export names the launcher model that fits, so this stays a boolean and the UI
+  // points at the upgrade instead. Weapons that already list a native launcher are
+  // skipped, since for them the mount is not a precondition. A weapon with no other
+  // addons has no entry in the map yet, so seed one.
+  let glUpgradeCount = 0;
+  for (const weaponId of glUpgradeWeaponIds) {
+    if (!weaponIdsForKitDetection.has(weaponId)) continue;
+    const addons = weaponAddons[weaponId]
+      || (weaponAddons[weaponId] = { scopes: [], silencers: [], launchers: [], kits: [] });
+    if (addons.launchers.length) continue;
+    addons.launcherViaUpgrade = true;
+    glUpgradeCount++;
+  }
+  if (glUpgradeCount) console.log(`Flagged ${glUpgradeCount} weapons as launcher-capable via upgrade`);
+
   const waOut = join(OUT_DIR, "weapon-addons.json");
   writeFileSync(waOut, JSON.stringify(weaponAddons, null, 2));
   console.log(`Wrote ${Object.keys(weaponAddons).length} weapon-addon mappings to ${waOut}`);

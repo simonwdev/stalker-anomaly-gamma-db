@@ -40,7 +40,8 @@
     ],
     "silencers": [],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_abakan_camo": {
     "scopes": [
@@ -52,7 +53,8 @@
       "wpn_sil_tgp-a"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_abakan_n": {
     "scopes": [
@@ -74,7 +76,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ace21": {
     "scopes": [
@@ -190,7 +193,8 @@
       "wpn_sil_pbs1"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_ak101": {
     "scopes": [
@@ -215,7 +219,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak101_camo": {
     "scopes": [
@@ -240,7 +245,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak102": {
     "scopes": [
@@ -280,7 +286,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak103_camo": {
     "scopes": [
@@ -305,7 +312,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak104": {
     "scopes": [
@@ -740,7 +748,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74_alt": {
     "scopes": [
@@ -765,7 +774,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74_custom": {
     "scopes": [
@@ -790,7 +800,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74_isg": {
     "scopes": [
@@ -855,7 +866,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74_n": {
     "scopes": [
@@ -876,7 +888,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74_old": {
     "scopes": [],
@@ -884,7 +897,8 @@
       "wpn_sil_tgp-a"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74_pmc": {
     "scopes": [
@@ -940,7 +954,8 @@
       "wpn_sil_tgp-a"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74m": {
     "scopes": [
@@ -965,7 +980,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74m_alt": {
     "scopes": [
@@ -990,7 +1006,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74m_beard": {
     "scopes": [
@@ -1050,7 +1067,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74m_custom": {
     "scopes": [
@@ -1075,7 +1093,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74m_duty": {
     "scopes": [
@@ -1100,7 +1119,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_ak74m_n": {
     "scopes": [
@@ -1353,7 +1373,8 @@
       "wpn_sil_pbs1"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_akm_alfa": {
     "scopes": [
@@ -1401,7 +1422,8 @@
       "wpn_sil_pbs1"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_akm_isg": {
     "scopes": [
@@ -1453,7 +1475,8 @@
       "wpn_sil_pbs1"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_akms_alt": {
     "scopes": [
@@ -1478,7 +1501,8 @@
     "launchers": [],
     "kits": [
       "1pn93"
-    ]
+    ],
+    "launcherViaUpgrade": true
   },
   "wpn_akms_bas": {
     "scopes": [],
@@ -1486,7 +1510,8 @@
       "wpn_sil_pbs1"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_aks": {
     "scopes": [
@@ -1496,7 +1521,8 @@
       "wpn_sil_pbs1"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_aks74": {
     "scopes": [
@@ -1508,7 +1534,8 @@
       "wpn_sil_tgp-a"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_aks74_new": {
     "scopes": [
@@ -1520,7 +1547,8 @@
       "wpn_sil_tgp-a"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_am17": {
     "scopes": [
@@ -3345,7 +3373,8 @@
       "wpn_sil_nato"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_lr300_camo": {
     "scopes": [
@@ -3357,7 +3386,8 @@
       "wpn_sil_nato"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_lr300_custom": {
     "scopes": [
@@ -3369,7 +3399,8 @@
       "wpn_sil_nato"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_m16": {
     "scopes": [
@@ -3560,7 +3591,8 @@
       "wpn_sil_nato"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_m4a1_camo": {
     "scopes": [
@@ -3572,7 +3604,8 @@
       "wpn_sil_nato"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_m4a1_custom": {
     "scopes": [
@@ -3584,7 +3617,8 @@
       "wpn_sil_nato"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_m4a1_freedom": {
     "scopes": [
@@ -3596,7 +3630,8 @@
       "wpn_sil_nato"
     ],
     "launchers": [],
-    "kits": []
+    "kits": [],
+    "launcherViaUpgrade": true
   },
   "wpn_m4a1_siber": {
     "scopes": [

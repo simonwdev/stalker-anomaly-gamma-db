@@ -304,6 +304,14 @@
                     </div>
                 </div>
 
+                <!-- Launcher available only after the mount upgrade (on weapon detail).
+                     No export names the launcher model that fits, so this shows a note
+                     instead of addon tiles. -->
+                <div v-if="modalWeaponAddons.launcherViaUpgrade && !modalWeaponAddons.launchers.length" class="drop-sources">
+                    <h2>{{ t('app_label_compatible_launchers') }}</h2>
+                    <p class="addon-upgrade-note">{{ t('app_label_launcher_via_upgrade') }}</p>
+                </div>
+
                 <!-- Compatible Tactical Kits (on weapon detail) -->
                 <div v-if="modalWeaponAddons.kits && modalWeaponAddons.kits.length" class="drop-sources" :class="{ collapsed: isCollapsed('kits') }">
                     <h2 class="section-toggle" @click="toggleSection('kits')"><LucideChevronRight :size="14" class="section-chevron" /> {{ t('app_label_compatible_kits') }}</h2>
@@ -618,7 +626,7 @@ export default {
     parsedDescription: Object,
     parsedPerk: Object,
     pbaConstants: { type: Object, default: () => ({}) },
-    modalWeaponAddons: { type: Object, default: () => ({ scopes: [], silencers: [], launchers: [], kits: [] }) },
+    modalWeaponAddons: { type: Object, default: () => ({ scopes: [], silencers: [], launchers: [], kits: [], launcherViaUpgrade: false }) },
     modalCompatibleMagazines: { type: Array, default: () => [] },
     modalMagazineCompatibleWeapons: { type: Array, default: () => [] },
     modalKitWeapons: { type: Array, default: () => [] },
@@ -667,7 +675,8 @@ export default {
   computed: {
     hasWeaponAddons() {
       const a = this.modalWeaponAddons;
-      return a.scopes.length > 0 || a.silencers.length > 0 || a.launchers.length > 0 || a.kits.length > 0;
+      return a.scopes.length > 0 || a.silencers.length > 0 || a.launchers.length > 0 || a.kits.length > 0
+        || !!a.launcherViaUpgrade;
     },
     isAddonItem() {
       return ['Scopes', 'Silencers', 'Grenade Launchers', 'Tactical Kits'].includes(this.modalCategory);

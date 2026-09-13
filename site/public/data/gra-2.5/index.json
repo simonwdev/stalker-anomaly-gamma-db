@@ -1,9 +1,45 @@
 [
   {
+    "id": "tch_meal_1_ico",
+    "name": "\"tch_upgr\"",
+    "category": "Misc",
+    "displayName": "\"tch_upgr\" [meal_1_ico]"
+  },
+  {
+    "id": "tch_meal_2_ico",
+    "name": "\"tch_upgr\"",
+    "category": "Misc",
+    "displayName": "\"tch_upgr\" [meal_2_ico]"
+  },
+  {
+    "id": "tch_upgr_ico",
+    "name": "\"tch_upgr\"",
+    "category": "Misc",
+    "displayName": "\"tch_upgr\" [upgr_ico]"
+  },
+  {
     "id": "merc_ace_outfit",
     "name": "ace_outfit_name",
     "category": "Outfits",
     "displayName": "ace_outfit_name"
+  },
+  {
+    "id": "af_ameba_mica",
+    "name": "af_ameba_mica",
+    "category": "Misc",
+    "displayName": "af_ameba_mica"
+  },
+  {
+    "id": "af_ameba_slime",
+    "name": "af_ameba_slime",
+    "category": "Misc",
+    "displayName": "af_ameba_slime"
+  },
+  {
+    "id": "af_ameba_slug",
+    "name": "af_ameba_slug",
+    "category": "Misc",
+    "displayName": "af_ameba_slug"
   },
   {
     "id": "af_arhara_globus",
@@ -90,16 +126,34 @@
     "displayName": "af_dik_4_name"
   },
   {
+    "id": "af_drops",
+    "name": "af_drops",
+    "category": "Misc",
+    "displayName": "af_drops"
+  },
+  {
     "id": "af_dummy_battery_red",
     "name": "af_dummy_battery_red_name",
     "category": "Artefacts",
     "displayName": "af_dummy_battery_red_name"
   },
   {
+    "id": "af_dummy_pellicle",
+    "name": "af_dummy_pellicle",
+    "category": "Misc",
+    "displayName": "af_dummy_pellicle"
+  },
+  {
     "id": "af_dummy_pellicle_red",
     "name": "af_dummy_pellicle_red_name",
     "category": "Artefacts",
     "displayName": "af_dummy_pellicle_red_name"
+  },
+  {
+    "id": "af_dummy_spring",
+    "name": "af_dummy_spring",
+    "category": "Misc",
+    "displayName": "af_dummy_spring"
   },
   {
     "id": "af_dummy_spring_red",
@@ -162,10 +216,22 @@
     "displayName": "af_pudd_4_name"
   },
   {
+    "id": "af_rusty_kristall",
+    "name": "af_rusty_kristall",
+    "category": "Misc",
+    "displayName": "af_rusty_kristall"
+  },
+  {
     "id": "af_rusty_sea_urchin",
     "name": "af_rusty_sea_urchin",
     "category": "Artefacts",
     "displayName": "af_rusty_sea_urchin"
+  },
+  {
+    "id": "af_rusty_thorn",
+    "name": "af_rusty_thorn",
+    "category": "Misc",
+    "displayName": "af_rusty_thorn"
   },
   {
     "id": "af_simbion",
@@ -830,6 +896,18 @@
     "displayName": "csky_novice_outfit_name"
   },
   {
+    "id": "mutant_part_general_meat",
+    "name": "default",
+    "category": "Misc",
+    "displayName": "default [mutant_part_general_meat]"
+  },
+  {
+    "id": "tch_repair",
+    "name": "default",
+    "category": "Misc",
+    "displayName": "default [tch_repair]"
+  },
+  {
     "id": "dolg_exo_outfit",
     "name": "dolg_exo_outfit_name",
     "category": "Outfits",
@@ -1160,6 +1238,24 @@
     "displayName": "isg_scientific_outfit_name"
   },
   {
+    "id": "monolith_shard",
+    "name": "item_monolith_shard_name",
+    "category": "Misc",
+    "displayName": "item_monolith_shard_name"
+  },
+  {
+    "id": "item_raid_psi_emitter_plan",
+    "name": "item_raid_psi_emitter_plan_name",
+    "category": "Misc",
+    "displayName": "item_raid_psi_emitter_plan_name"
+  },
+  {
+    "id": "jup_b1_half_artifact",
+    "name": "jup_b1_half_artifact",
+    "category": "Misc",
+    "displayName": "jup_b1_half_artifact"
+  },
+  {
     "id": "jup_b1_half_artifact2",
     "name": "jup_b1_half_artifact2",
     "category": "Artefacts",
@@ -1423,10 +1519,76 @@
     "displayName": "mutant_boar_chop"
   },
   {
+    "id": "mutant_part_boar_leg",
+    "name": "mutant_boar_leg",
+    "category": "Misc",
+    "displayName": "mutant_boar_leg"
+  },
+  {
+    "id": "mutant_part_brain_burer",
+    "name": "mutant_brain_burer",
+    "category": "Misc",
+    "displayName": "mutant_brain_burer"
+  },
+  {
+    "id": "mutant_part_burer_hand",
+    "name": "mutant_burer_hand",
+    "category": "Misc",
+    "displayName": "mutant_burer_hand"
+  },
+  {
+    "id": "mutant_part_cat_claw",
+    "name": "mutant_cat_claw",
+    "category": "Misc",
+    "displayName": "mutant_cat_claw"
+  },
+  {
+    "id": "mutant_part_cat_tail",
+    "name": "mutant_cat_tail",
+    "category": "Misc",
+    "displayName": "mutant_cat_tail"
+  },
+  {
+    "id": "mutant_part_cat_thyroid",
+    "name": "mutant_cat_thyroid",
+    "category": "Misc",
+    "displayName": "mutant_cat_thyroid"
+  },
+  {
+    "id": "mutant_part_chimera_claw",
+    "name": "mutant_chimera_claw",
+    "category": "Misc",
+    "displayName": "mutant_chimera_claw"
+  },
+  {
+    "id": "mutant_part_chimera_kogot",
+    "name": "mutant_chimera_cogot",
+    "category": "Misc",
+    "displayName": "mutant_chimera_cogot"
+  },
+  {
     "id": "mutant_part_chimera_meat",
     "name": "mutant_chimera_meat",
     "category": "Food",
     "displayName": "mutant_chimera_meat"
+  },
+  {
+    "id": "mutant_part_controller_hand",
+    "name": "mutant_controller_hand",
+    "category": "Misc",
+    "displayName": "mutant_controller_hand"
+  },
+  {
+    "id": "mutant_part_dog_heart",
+    "name": "mutant_dog_heart",
+    "category": "Misc",
+    "displayName": "mutant_dog_heart"
+  },
+  {
+    "id": "mutant_part_dog_liver",
+    "name": "mutant_dog_liver",
+    "category": "Misc",
+    "displayName": "mutant_dog_liver"
   },
   {
     "id": "mutant_part_dog_meat",
@@ -1435,10 +1597,52 @@
     "displayName": "mutant_dog_meat"
   },
   {
+    "id": "mutant_part_dog_tail",
+    "name": "mutant_dog_tail",
+    "category": "Misc",
+    "displayName": "mutant_dog_tail"
+  },
+  {
+    "id": "mutant_part_fang_psevdodog",
+    "name": "mutant_fang_psevdodog",
+    "category": "Misc",
+    "displayName": "mutant_fang_psevdodog"
+  },
+  {
+    "id": "mutant_part_flesh_eye",
+    "name": "mutant_flesh_eye",
+    "category": "Misc",
+    "displayName": "mutant_flesh_eye"
+  },
+  {
     "id": "mutant_part_flesh_meat",
     "name": "mutant_flesh_meat",
     "category": "Food",
     "displayName": "mutant_flesh_meat"
+  },
+  {
+    "id": "mutant_part_fracture_hand",
+    "name": "mutant_fracture_hand",
+    "category": "Misc",
+    "displayName": "mutant_fracture_hand"
+  },
+  {
+    "id": "mutant_part_heart_bloodsucker",
+    "name": "mutant_heart_bloodsucker",
+    "category": "Misc",
+    "displayName": "mutant_heart_bloodsucker"
+  },
+  {
+    "id": "mutant_part_heart_chimera",
+    "name": "mutant_heart_chimera",
+    "category": "Misc",
+    "displayName": "mutant_heart_chimera"
+  },
+  {
+    "id": "mutant_part_krovosos_jaw",
+    "name": "mutant_krovosos_jaw",
+    "category": "Misc",
+    "displayName": "mutant_krovosos_jaw"
   },
   {
     "id": "mutant_part_krovosos_meat",
@@ -1447,16 +1651,58 @@
     "displayName": "mutant_krovosos_meat"
   },
   {
+    "id": "mutant_part_lurker_eye",
+    "name": "mutant_lurker_eye",
+    "category": "Misc",
+    "displayName": "mutant_lurker_eye"
+  },
+  {
     "id": "mutant_part_lurker_meat",
     "name": "mutant_lurker_meat",
     "category": "Food",
     "displayName": "mutant_lurker_meat"
   },
   {
+    "id": "mutant_part_lurker_tail",
+    "name": "mutant_lurker_tail",
+    "category": "Misc",
+    "displayName": "mutant_lurker_tail"
+  },
+  {
+    "id": "mutant_part_controller_glass",
+    "name": "mutant_part_controller_brain_tissue",
+    "category": "Misc",
+    "displayName": "mutant_part_controller_brain_tissue"
+  },
+  {
+    "id": "mutant_part_pseudogigant_eye",
+    "name": "mutant_pseudogigant_eye",
+    "category": "Misc",
+    "displayName": "mutant_pseudogigant_eye"
+  },
+  {
+    "id": "mutant_part_pseudogigant_hand",
+    "name": "mutant_pseudogigant_hand",
+    "category": "Misc",
+    "displayName": "mutant_pseudogigant_hand"
+  },
+  {
     "id": "mutant_part_psevdodog_meat",
     "name": "mutant_psevdodog_meat",
     "category": "Food",
     "displayName": "mutant_psevdodog_meat"
+  },
+  {
+    "id": "mutant_part_psevdodog_tail",
+    "name": "mutant_psevdodog_tail",
+    "category": "Misc",
+    "displayName": "mutant_psevdodog_tail"
+  },
+  {
+    "id": "mutant_part_psysucker_hand",
+    "name": "mutant_psysucker_hand",
+    "category": "Misc",
+    "displayName": "mutant_psysucker_hand"
   },
   {
     "id": "mutant_part_psysucker_meat",
@@ -1471,10 +1717,40 @@
     "displayName": "mutant_snork_hand"
   },
   {
+    "id": "mutant_part_snork_leg",
+    "name": "mutant_snork_leg",
+    "category": "Misc",
+    "displayName": "mutant_snork_leg"
+  },
+  {
+    "id": "mutant_part_snork_mask",
+    "name": "mutant_snork_mask",
+    "category": "Misc",
+    "displayName": "mutant_snork_mask"
+  },
+  {
+    "id": "mutant_part_tushkano_head",
+    "name": "mutant_tushkano_head",
+    "category": "Misc",
+    "displayName": "mutant_tushkano_head"
+  },
+  {
     "id": "mutant_part_tushkano_meat",
     "name": "mutant_tushkano_meat",
     "category": "Food",
     "displayName": "mutant_tushkano_meat"
+  },
+  {
+    "id": "mutant_part_tusk_boar",
+    "name": "mutant_tusk_boar",
+    "category": "Misc",
+    "displayName": "mutant_tusk_boar"
+  },
+  {
+    "id": "mutant_part_zombi_hand",
+    "name": "mutant_zombi_hand",
+    "category": "Misc",
+    "displayName": "mutant_zombi_hand"
   },
   {
     "id": "nbc_dolg_outfit",
@@ -1499,6 +1775,12 @@
     "name": "nbc_outfit_name",
     "category": "Outfits",
     "displayName": "nbc_outfit_name"
+  },
+  {
+    "id": "mine_new_blow",
+    "name": "nil",
+    "category": "Misc",
+    "displayName": "nil"
   },
   {
     "id": "nomad_outfit",
@@ -1606,13 +1888,21 @@
     "id": "226sig_kit",
     "name": "st_addon_scope_226sig_kit",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_226sig_kit"
+    "displayName": "st_addon_scope_226sig_kit",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "23_up",
     "name": "st_addon_scope_23_up",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_23_up"
+    "displayName": "st_addon_scope_23_up",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "ac10632",
@@ -1648,13 +1938,21 @@
     "id": "apsabigo",
     "name": "st_addon_scope_apsabigo",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_apsabigo"
+    "displayName": "st_addon_scope_apsabigo",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "archangel",
     "name": "st_addon_scope_archangel",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_archangel"
+    "displayName": "st_addon_scope_archangel",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "c-more",
@@ -1714,7 +2012,11 @@
     "id": "gurza_up",
     "name": "st_addon_scope_gurza_up",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_gurza_up"
+    "displayName": "st_addon_scope_gurza_up",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "he510",
@@ -1726,31 +2028,51 @@
     "id": "kab_up",
     "name": "st_addon_scope_kab_up",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_kab_up"
+    "displayName": "st_addon_scope_kab_up",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "kashtan_rmr",
     "name": "st_addon_scope_kashtan_rmr",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_kashtan_rmr"
+    "displayName": "st_addon_scope_kashtan_rmr",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "kit_aus_tri",
     "name": "st_addon_scope_kit_aus_tri",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_kit_aus_tri"
+    "displayName": "st_addon_scope_kit_aus_tri",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "kit_fal_leup",
     "name": "st_addon_scope_kit_fal_leup",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_kit_fal_leup"
+    "displayName": "st_addon_scope_kit_fal_leup",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "kit_sa5x_spec",
     "name": "st_addon_scope_kit_sa5x_spec",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_kit_sa5x_spec"
+    "displayName": "st_addon_scope_kit_sa5x_spec",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "kobra",
@@ -1768,7 +2090,11 @@
     "id": "lapua700",
     "name": "st_addon_scope_lapua700",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_lapua700"
+    "displayName": "st_addon_scope_lapua700",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "lazup_pl15",
@@ -1780,25 +2106,41 @@
     "id": "magpul_pro",
     "name": "st_addon_scope_magpul_pro",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_magpul_pro"
+    "displayName": "st_addon_scope_magpul_pro",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "mod_x_gen3",
     "name": "st_addon_scope_mod_x_gen3",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_mod_x_gen3"
+    "displayName": "st_addon_scope_mod_x_gen3",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "mod9",
     "name": "st_addon_scope_mod9",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_mod9"
+    "displayName": "st_addon_scope_mod9",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "mono_kit",
     "name": "st_addon_scope_mono_kit",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_mono_kit"
+    "displayName": "st_addon_scope_mono_kit",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "okep77",
@@ -1810,7 +2152,11 @@
     "id": "pl15_scolaz",
     "name": "st_addon_scope_pl15_scolaz",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_pl15_scolaz"
+    "displayName": "st_addon_scope_pl15_scolaz",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "pn23fore",
@@ -1822,7 +2168,11 @@
     "id": "pritseldob",
     "name": "st_addon_scope_pritseldob",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_pritseldob"
+    "displayName": "st_addon_scope_pritseldob",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_addon_scope_pu",
@@ -1846,25 +2196,41 @@
     "id": "shakal",
     "name": "st_addon_scope_shakal",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_shakal"
+    "displayName": "st_addon_scope_shakal",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "silen98",
     "name": "st_addon_scope_silen98",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_silen98"
+    "displayName": "st_addon_scope_silen98",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "sr1upgr1",
     "name": "st_addon_scope_sr1upgr1",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_sr1upgr1"
+    "displayName": "st_addon_scope_sr1upgr1",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "sr2_upkit",
     "name": "st_addon_scope_sr2_upkit",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_sr2_upkit"
+    "displayName": "st_addon_scope_sr2_upkit",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "susatov",
@@ -1876,25 +2242,41 @@
     "id": "swamp",
     "name": "st_addon_scope_swamp",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_swamp"
+    "displayName": "st_addon_scope_swamp",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "u2p2g0r",
     "name": "st_addon_scope_u2p2g0r",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_u2p2g0r"
+    "displayName": "st_addon_scope_u2p2g0r",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "upg220",
     "name": "st_addon_scope_upg220",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_upg220"
+    "displayName": "st_addon_scope_upg220",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "uptacppsh",
     "name": "st_addon_scope_uptacppsh",
     "category": "Tactical Kits",
-    "displayName": "st_addon_scope_uptacppsh"
+    "displayName": "st_addon_scope_uptacppsh",
+    "hasStashDrop": false,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_addon_scope_g43",
@@ -3061,6 +3443,12 @@
     "displayName": "st_af_pulsar_name"
   },
   {
+    "id": "af_quest_b14_twisted",
+    "name": "st_af_quest_b14_twisted",
+    "category": "Misc",
+    "displayName": "st_af_quest_b14_twisted"
+  },
+  {
     "id": "af_quest_b14_twisted2",
     "name": "st_af_quest_b14_twisted2",
     "category": "Artefacts",
@@ -3289,6 +3677,12 @@
     "displayName": "st_amk_yoyo_name"
   },
   {
+    "id": "ammo_box",
+    "name": "st_ammo_box",
+    "category": "Misc",
+    "displayName": "st_ammo_box"
+  },
+  {
     "id": "analgetic",
     "name": "st_analgetic",
     "category": "Medicine",
@@ -3331,6 +3725,24 @@
     "displayName": "st_antirad_kalium"
   },
   {
+    "id": "armor_repair_fa",
+    "name": "st_armor_repair_fa",
+    "category": "Misc",
+    "displayName": "st_armor_repair_fa"
+  },
+  {
+    "id": "army_bowler",
+    "name": "st_army_bowler",
+    "category": "Misc",
+    "displayName": "st_army_bowler"
+  },
+  {
+    "id": "army_patch",
+    "name": "st_army_fp",
+    "category": "Misc",
+    "displayName": "st_army_fp"
+  },
+  {
     "id": "wpn_axe",
     "name": "st_axe",
     "category": "Melee",
@@ -3343,10 +3755,46 @@
     "displayName": "st_axe3"
   },
   {
+    "id": "ball_hammer",
+    "name": "st_ball_hammer",
+    "category": "Misc",
+    "displayName": "st_ball_hammer"
+  },
+  {
+    "id": "explo_balon_gas",
+    "name": "st_balon_gas",
+    "category": "Misc",
+    "displayName": "st_balon_gas"
+  },
+  {
+    "id": "explo_balon_gas_empty",
+    "name": "st_balon_gas_empty",
+    "category": "Misc",
+    "displayName": "st_balon_gas_empty"
+  },
+  {
     "id": "bandage",
     "name": "st_bandage",
     "category": "Medicine",
     "displayName": "st_bandage"
+  },
+  {
+    "id": "bandit_patch",
+    "name": "st_bandit_fp",
+    "category": "Misc",
+    "displayName": "st_bandit_fp"
+  },
+  {
+    "id": "batteries_dead",
+    "name": "st_batteries",
+    "category": "Misc",
+    "displayName": "st_batteries"
+  },
+  {
+    "id": "beadspread",
+    "name": "st_beadspread",
+    "category": "Misc",
+    "displayName": "st_beadspread"
   },
   {
     "id": "beans",
@@ -3373,10 +3821,40 @@
     "displayName": "st_beer [camelbak_sip]"
   },
   {
+    "id": "wpn_binoc_inv",
+    "name": "st_binocular_name",
+    "category": "Misc",
+    "displayName": "st_binocular_name"
+  },
+  {
+    "id": "bolts_pack",
+    "name": "st_bolts_pack",
+    "category": "Misc",
+    "displayName": "st_bolts_pack"
+  },
+  {
+    "id": "bolt",
+    "name": "st_bolty",
+    "category": "Misc",
+    "displayName": "st_bolty"
+  },
+  {
+    "id": "boots",
+    "name": "st_boots",
+    "category": "Misc",
+    "displayName": "st_boots"
+  },
+  {
     "id": "bottle_metal",
     "name": "st_bottle_metal",
     "category": "Food",
     "displayName": "st_bottle_metal"
+  },
+  {
+    "id": "box_matches",
+    "name": "st_box_matches",
+    "category": "Misc",
+    "displayName": "st_box_matches"
   },
   {
     "id": "bread",
@@ -3391,10 +3869,34 @@
     "displayName": "st_breadold"
   },
   {
+    "id": "broken_detector",
+    "name": "st_broken_detector",
+    "category": "Misc",
+    "displayName": "st_broken_detector"
+  },
+  {
     "id": "caffeine",
     "name": "st_caffeine",
     "category": "Medicine",
     "displayName": "st_caffeine"
+  },
+  {
+    "id": "cards",
+    "name": "st_cards",
+    "category": "Misc",
+    "displayName": "st_cards"
+  },
+  {
+    "id": "cash",
+    "name": "st_cash_name",
+    "category": "Misc",
+    "displayName": "st_cash_name"
+  },
+  {
+    "id": "charcoal",
+    "name": "st_charcoal",
+    "category": "Misc",
+    "displayName": "st_charcoal"
   },
   {
     "id": "chili",
@@ -3451,6 +3953,42 @@
     "displayName": "st_cigarettes_russian"
   },
   {
+    "id": "cleaning_kit_p",
+    "name": "st_cleaning_kit_p",
+    "category": "Misc",
+    "displayName": "st_cleaning_kit_p"
+  },
+  {
+    "id": "cleaning_kit_r5",
+    "name": "st_cleaning_kit_r5",
+    "category": "Misc",
+    "displayName": "st_cleaning_kit_r5"
+  },
+  {
+    "id": "cleaning_kit_r7",
+    "name": "st_cleaning_kit_r7",
+    "category": "Misc",
+    "displayName": "st_cleaning_kit_r7"
+  },
+  {
+    "id": "cleaning_kit_s",
+    "name": "st_cleaning_kit_s",
+    "category": "Misc",
+    "displayName": "st_cleaning_kit_s"
+  },
+  {
+    "id": "cleaning_kit_u",
+    "name": "st_cleaning_kit_u",
+    "category": "Misc",
+    "displayName": "st_cleaning_kit_u"
+  },
+  {
+    "id": "csky_patch",
+    "name": "st_clearsky_fp",
+    "category": "Misc",
+    "displayName": "st_clearsky_fp"
+  },
+  {
     "id": "cocaine",
     "name": "st_cocaine",
     "category": "Medicine",
@@ -3463,10 +4001,28 @@
     "displayName": "st_compass2"
   },
   {
+    "id": "compression_bag",
+    "name": "st_compression_bag",
+    "category": "Misc",
+    "displayName": "st_compression_bag"
+  },
+  {
     "id": "conserva",
     "name": "st_conserva",
     "category": "Food",
-    "displayName": "st_conserva"
+    "displayName": "st_conserva [conserva]"
+  },
+  {
+    "id": "tch_money",
+    "name": "st_conserva",
+    "category": "Misc",
+    "displayName": "st_conserva [tch_money]"
+  },
+  {
+    "id": "cooking",
+    "name": "st_cooking",
+    "category": "Misc",
+    "displayName": "st_cooking"
   },
   {
     "id": "corn",
@@ -3483,8 +4039,116 @@
   {
     "id": "cutlery",
     "name": "st_cutlery",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_cutlery"
+  },
+  {
+    "id": "detector_simple",
+    "name": "st_detector1",
+    "category": "Misc",
+    "displayName": "st_detector1 [detector_simple]"
+  },
+  {
+    "id": "tch_detector",
+    "name": "st_detector1",
+    "category": "Misc",
+    "displayName": "st_detector1 [tch_detector]"
+  },
+  {
+    "id": "detector_advanced",
+    "name": "st_detector2",
+    "category": "Misc",
+    "displayName": "st_detector2"
+  },
+  {
+    "id": "detector_elite",
+    "name": "st_detector3",
+    "category": "Misc",
+    "displayName": "st_detector3"
+  },
+  {
+    "id": "detector_scientific",
+    "name": "st_detector4",
+    "category": "Misc",
+    "displayName": "st_detector4"
+  },
+  {
+    "id": "detector_anomaly",
+    "name": "st_detector8",
+    "category": "Misc",
+    "displayName": "st_detector8"
+  },
+  {
+    "id": "detector_radio",
+    "name": "st_detector9",
+    "category": "Misc",
+    "displayName": "st_detector9"
+  },
+  {
+    "id": "device_flashlight",
+    "name": "st_device_flashlight",
+    "category": "Misc",
+    "displayName": "st_device_flashlight"
+  },
+  {
+    "id": "device_glowstick",
+    "name": "st_device_glowstick",
+    "category": "Misc",
+    "displayName": "st_device_glowstick"
+  },
+  {
+    "id": "device_glowstick_blue",
+    "name": "st_device_glowstick_blue",
+    "category": "Misc",
+    "displayName": "st_device_glowstick_blue"
+  },
+  {
+    "id": "device_glowstick_orange",
+    "name": "st_device_glowstick_orange",
+    "category": "Misc",
+    "displayName": "st_device_glowstick_orange"
+  },
+  {
+    "id": "device_glowstick_red",
+    "name": "st_device_glowstick_red",
+    "category": "Misc",
+    "displayName": "st_device_glowstick_red"
+  },
+  {
+    "id": "device_torch_dummy",
+    "name": "st_device_torch_name",
+    "category": "Misc",
+    "displayName": "st_device_torch_name"
+  },
+  {
+    "id": "device_torch_nv_1",
+    "name": "st_device_torch_nv_1_name",
+    "category": "Misc",
+    "displayName": "st_device_torch_nv_1_name"
+  },
+  {
+    "id": "device_torch_nv_2",
+    "name": "st_device_torch_nv_2_name",
+    "category": "Misc",
+    "displayName": "st_device_torch_nv_2_name"
+  },
+  {
+    "id": "device_torch_nv_3",
+    "name": "st_device_torch_nv_3_name",
+    "category": "Misc",
+    "displayName": "st_device_torch_nv_3_name"
+  },
+  {
+    "id": "device_torch_nv_4",
+    "name": "st_device_torch_nv_4_name",
+    "category": "Misc",
+    "displayName": "st_device_torch_nv_4_name"
+  },
+  {
+    "id": "dolg_patch",
+    "name": "st_dolg_fp",
+    "category": "Misc",
+    "displayName": "st_dolg_fp"
   },
   {
     "id": "drink_crow",
@@ -3531,14 +4195,26 @@
   {
     "id": "duct_tape",
     "name": "st_duct_tape",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_duct_tape"
   },
   {
     "id": "e_syringe",
     "name": "st_e_syringe",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_e_syringe"
+  },
+  {
+    "id": "ecolog_raid_event_item",
+    "name": "st_eco_event_package_name",
+    "category": "Misc",
+    "displayName": "st_eco_event_package_name"
+  },
+  {
+    "id": "ecolog_patch",
+    "name": "st_ecolog_fp",
+    "category": "Misc",
+    "displayName": "st_ecolog_fp"
   },
   {
     "id": "ecolog_outfit_blue",
@@ -3607,10 +4283,64 @@
     "displayName": "st_equ_touristpack_name"
   },
   {
+    "id": "exo_repair_kit",
+    "name": "st_exo_repair_kit",
+    "category": "Misc",
+    "displayName": "st_exo_repair_kit"
+  },
+  {
+    "id": "heavy_repair_kit",
+    "name": "st_exolight_repair_kit",
+    "category": "Misc",
+    "displayName": "st_exolight_repair_kit"
+  },
+  {
+    "id": "fieldcooker",
+    "name": "st_fieldcooker",
+    "category": "Misc",
+    "displayName": "st_fieldcooker"
+  },
+  {
+    "id": "flashlight_broken",
+    "name": "st_flashlight_broken",
+    "category": "Misc",
+    "displayName": "st_flashlight_broken"
+  },
+  {
     "id": "flask",
     "name": "st_flask",
     "category": "Food",
     "displayName": "st_flask"
+  },
+  {
+    "id": "freedom_patch",
+    "name": "st_freedom_fp",
+    "category": "Misc",
+    "displayName": "st_freedom_fp"
+  },
+  {
+    "id": "tch_fuel_1_ico",
+    "name": "st_fuel_tier_1",
+    "category": "Misc",
+    "displayName": "st_fuel_tier_1"
+  },
+  {
+    "id": "tch_fuel_2_ico",
+    "name": "st_fuel_tier_2",
+    "category": "Misc",
+    "displayName": "st_fuel_tier_2"
+  },
+  {
+    "id": "detector_geiger",
+    "name": "st_geiger_dead",
+    "category": "Misc",
+    "displayName": "st_geiger_dead"
+  },
+  {
+    "id": "gloves",
+    "name": "st_gloves",
+    "category": "Misc",
+    "displayName": "st_gloves"
   },
   {
     "id": "glucose",
@@ -3623,6 +4353,36 @@
     "name": "st_glucose_s",
     "category": "Medicine",
     "displayName": "st_glucose_s"
+  },
+  {
+    "id": "glue_a",
+    "name": "st_glue_a",
+    "category": "Misc",
+    "displayName": "st_glue_a"
+  },
+  {
+    "id": "glue_b",
+    "name": "st_glue_b",
+    "category": "Misc",
+    "displayName": "st_glue_b"
+  },
+  {
+    "id": "glue_e",
+    "name": "st_glue_e",
+    "category": "Misc",
+    "displayName": "st_glue_e"
+  },
+  {
+    "id": "grease",
+    "name": "st_grease",
+    "category": "Misc",
+    "displayName": "st_grease"
+  },
+  {
+    "id": "greh_patch",
+    "name": "st_greh_fp",
+    "category": "Misc",
+    "displayName": "st_greh_fp"
   },
   {
     "id": "grenade_f1",
@@ -3699,10 +4459,64 @@
     "tacticalKit": false
   },
   {
+    "id": "grooming",
+    "name": "st_grooming",
+    "category": "Misc",
+    "displayName": "st_grooming"
+  },
+  {
+    "id": "guitar_a",
+    "name": "st_guitar_name",
+    "category": "Misc",
+    "displayName": "st_guitar_name"
+  },
+  {
+    "id": "gun_oil",
+    "name": "st_gun_oil",
+    "category": "Misc",
+    "displayName": "st_gun_oil"
+  },
+  {
+    "id": "gun_oil_ru",
+    "name": "st_gun_oil_ru",
+    "category": "Misc",
+    "displayName": "st_gun_oil_ru"
+  },
+  {
+    "id": "gun_oil_ru_d",
+    "name": "st_gun_oil_ru_d",
+    "category": "Misc",
+    "displayName": "st_gun_oil_ru_d"
+  },
+  {
     "id": "hand_rolling_tobacco",
     "name": "st_hand_rolling_tobacco",
     "category": "Food",
     "displayName": "st_hand_rolling_tobacco"
+  },
+  {
+    "id": "hand_watch",
+    "name": "st_hand_watch",
+    "category": "Misc",
+    "displayName": "st_hand_watch"
+  },
+  {
+    "id": "harmonica_a",
+    "name": "st_harmonica_name",
+    "category": "Misc",
+    "displayName": "st_harmonica_name"
+  },
+  {
+    "id": "headlamp",
+    "name": "st_headlamp",
+    "category": "Misc",
+    "displayName": "st_headlamp"
+  },
+  {
+    "id": "heavy_sewing_thread",
+    "name": "st_heavy_sewing_thread",
+    "category": "Misc",
+    "displayName": "st_heavy_sewing_thread"
   },
   {
     "id": "helm_bandana",
@@ -3795,6 +4609,12 @@
     "displayName": "st_helm_tactic"
   },
   {
+    "id": "helmet_repair_kit",
+    "name": "st_helmet_repair_kit",
+    "category": "Misc",
+    "displayName": "st_helmet_repair_kit"
+  },
+  {
     "id": "hide_bloodsucker",
     "name": "st_hide_bloodsucker_name",
     "category": "Belt Attachments",
@@ -3861,6 +4681,18 @@
     "displayName": "st_hide_psysucker_name"
   },
   {
+    "id": "hideout_cat",
+    "name": "st_hideout_cat",
+    "category": "Misc",
+    "displayName": "st_hideout_cat"
+  },
+  {
+    "id": "hideout_cat_bed",
+    "name": "st_hideout_cat_bed",
+    "category": "Misc",
+    "displayName": "st_hideout_cat_bed"
+  },
+  {
     "id": "ied",
     "name": "st_ied",
     "category": "Explosives",
@@ -3870,6 +4702,24 @@
     "inStartingLoadout": false,
     "unobtainable": true,
     "tacticalKit": false
+  },
+  {
+    "id": "ied_blow",
+    "name": "st_ied",
+    "category": "Misc",
+    "displayName": "st_ied [blow]"
+  },
+  {
+    "id": "ied_new_blow",
+    "name": "st_ied",
+    "category": "Misc",
+    "displayName": "st_ied [new_blow]"
+  },
+  {
+    "id": "ied_new",
+    "name": "st_ied",
+    "category": "Misc",
+    "displayName": "st_ied [new]"
   },
   {
     "id": "ied_rpg",
@@ -3883,6 +4733,90 @@
     "tacticalKit": false
   },
   {
+    "id": "ied_rpg_new",
+    "name": "st_ied_rpg",
+    "category": "Misc",
+    "displayName": "st_ied_rpg [new]"
+  },
+  {
+    "id": "isg_patch",
+    "name": "st_isg_fp",
+    "category": "Misc",
+    "displayName": "st_isg_fp"
+  },
+  {
+    "id": "item_raid_art_fragment_chem",
+    "name": "st_item_raid_art_fragment_chem_name",
+    "category": "Misc",
+    "displayName": "st_item_raid_art_fragment_chem_name"
+  },
+  {
+    "id": "item_raid_art_fragment_electro",
+    "name": "st_item_raid_art_fragment_electro_name",
+    "category": "Misc",
+    "displayName": "st_item_raid_art_fragment_electro_name"
+  },
+  {
+    "id": "item_raid_art_fragment_gravi",
+    "name": "st_item_raid_art_fragment_gravi_name",
+    "category": "Misc",
+    "displayName": "st_item_raid_art_fragment_gravi_name"
+  },
+  {
+    "id": "item_raid_art_fragment_thermo",
+    "name": "st_item_raid_art_fragment_thermo_name",
+    "category": "Misc",
+    "displayName": "st_item_raid_art_fragment_thermo_name"
+  },
+  {
+    "id": "item_raid_art_matrix_chem",
+    "name": "st_item_raid_art_matrix_chem_name",
+    "category": "Misc",
+    "displayName": "st_item_raid_art_matrix_chem_name"
+  },
+  {
+    "id": "item_raid_art_matrix_electr",
+    "name": "st_item_raid_art_matrix_electro_name",
+    "category": "Misc",
+    "displayName": "st_item_raid_art_matrix_electro_name"
+  },
+  {
+    "id": "item_raid_art_matrix_gravi",
+    "name": "st_item_raid_art_matrix_gravi_name",
+    "category": "Misc",
+    "displayName": "st_item_raid_art_matrix_gravi_name"
+  },
+  {
+    "id": "item_raid_art_matrix_thermo",
+    "name": "st_item_raid_art_matrix_thermo_name",
+    "category": "Misc",
+    "displayName": "st_item_raid_art_matrix_thermo_name"
+  },
+  {
+    "id": "item_raid_unknown",
+    "name": "st_item_raid_unknown_name",
+    "category": "Misc",
+    "displayName": "st_item_raid_unknown_name"
+  },
+  {
+    "id": "itm_actor_backpack",
+    "name": "st_itm_actor_backpack_name",
+    "category": "Misc",
+    "displayName": "st_itm_actor_backpack_name"
+  },
+  {
+    "id": "itm_advancedkit",
+    "name": "st_itm_advancedkit_name",
+    "category": "Misc",
+    "displayName": "st_itm_advancedkit_name"
+  },
+  {
+    "id": "itm_ammokit",
+    "name": "st_itm_ammokit",
+    "category": "Misc",
+    "displayName": "st_itm_ammokit"
+  },
+  {
     "id": "artefact_container",
     "name": "st_itm_artefact_container_name",
     "category": "Belt Attachments",
@@ -3892,13 +4826,139 @@
     "id": "itm_backpack",
     "name": "st_itm_backpack_name",
     "category": "Belt Attachments",
-    "displayName": "st_itm_backpack_name"
+    "displayName": "st_itm_backpack_name [itm_backpack]"
+  },
+  {
+    "id": "test_container",
+    "name": "st_itm_backpack_name",
+    "category": "Misc",
+    "displayName": "st_itm_backpack_name [test_container]"
+  },
+  {
+    "id": "itm_basickit",
+    "name": "st_itm_basickit_name",
+    "category": "Misc",
+    "displayName": "st_itm_basickit_name"
+  },
+  {
+    "id": "itm_deployable_mgun",
+    "name": "st_itm_deployable_mgun_name",
+    "category": "Misc",
+    "displayName": "st_itm_deployable_mgun_name"
+  },
+  {
+    "id": "itm_drugkit",
+    "name": "st_itm_drugkit",
+    "category": "Misc",
+    "displayName": "st_itm_drugkit"
+  },
+  {
+    "id": "itm_expertkit",
+    "name": "st_itm_expertkit_name",
+    "category": "Misc",
+    "displayName": "st_itm_expertkit_name"
+  },
+  {
+    "id": "tch_mapkit",
+    "name": "st_itm_mapkit",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit"
+  },
+  {
+    "id": "itm_mapkit_1",
+    "name": "st_itm_mapkit_1",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_1"
+  },
+  {
+    "id": "itm_mapkit_2",
+    "name": "st_itm_mapkit_2",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_2"
+  },
+  {
+    "id": "itm_mapkit_3",
+    "name": "st_itm_mapkit_3",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_3"
+  },
+  {
+    "id": "itm_mapkit_4",
+    "name": "st_itm_mapkit_4",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_4"
+  },
+  {
+    "id": "itm_mapkit_5",
+    "name": "st_itm_mapkit_5",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_5"
+  },
+  {
+    "id": "itm_mapkit_6",
+    "name": "st_itm_mapkit_6",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_6"
+  },
+  {
+    "id": "itm_mapkit_7",
+    "name": "st_itm_mapkit_7",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_7"
+  },
+  {
+    "id": "itm_mapkit_8",
+    "name": "st_itm_mapkit_8",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_8"
+  },
+  {
+    "id": "itm_mapkit_9",
+    "name": "st_itm_mapkit_9",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_9"
+  },
+  {
+    "id": "itm_sleepbag",
+    "name": "st_itm_sleepbag_name",
+    "category": "Misc",
+    "displayName": "st_itm_sleepbag_name"
+  },
+  {
+    "id": "itm_tent_bag",
+    "name": "st_itm_tent_bag",
+    "category": "Misc",
+    "displayName": "st_itm_tent_bag"
+  },
+  {
+    "id": "itm_tent",
+    "name": "st_itm_tent_name",
+    "category": "Misc",
+    "displayName": "st_itm_tent_name"
   },
   {
     "id": "jar",
     "name": "st_jar",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_jar"
+  },
+  {
+    "id": "explo_jerrycan_fuel",
+    "name": "st_jerrycan_fuel",
+    "category": "Misc",
+    "displayName": "st_jerrycan_fuel"
+  },
+  {
+    "id": "explo_jerrycan_fuel_empty",
+    "name": "st_jerrycan_fuel_empty",
+    "category": "Misc",
+    "displayName": "st_jerrycan_fuel_empty"
+  },
+  {
+    "id": "jewelry_box",
+    "name": "st_jewelry_box",
+    "category": "Misc",
+    "displayName": "st_jewelry_box"
   },
   {
     "id": "jgut",
@@ -3911,6 +4971,18 @@
     "name": "st_joint",
     "category": "Food",
     "displayName": "st_joint"
+  },
+  {
+    "id": "journal",
+    "name": "st_journal",
+    "category": "Misc",
+    "displayName": "st_journal"
+  },
+  {
+    "id": "kerosene",
+    "name": "st_kerosene",
+    "category": "Misc",
+    "displayName": "st_kerosene"
   },
   {
     "id": "kit_hunt",
@@ -3967,10 +5039,28 @@
     "displayName": "st_kukri"
   },
   {
+    "id": "leatherman_tool",
+    "name": "st_leatherman_tool",
+    "category": "Misc",
+    "displayName": "st_leatherman_tool"
+  },
+  {
+    "id": "light_repair_kit",
+    "name": "st_light_repair_kit",
+    "category": "Misc",
+    "displayName": "st_light_repair_kit"
+  },
+  {
     "id": "marijuana",
     "name": "st_marijuana",
     "category": "Food",
     "displayName": "st_marijuana"
+  },
+  {
+    "id": "matches",
+    "name": "st_matches",
+    "category": "Misc",
+    "displayName": "st_matches"
   },
   {
     "id": "meat_bloodsucker",
@@ -4153,10 +5243,40 @@
     "displayName": "st_meat_tushkano [b]"
   },
   {
+    "id": "medium_repair_kit",
+    "name": "st_medium_repair_kit",
+    "category": "Misc",
+    "displayName": "st_medium_repair_kit"
+  },
+  {
     "id": "medkit",
     "name": "st_medkit",
     "category": "Medicine",
     "displayName": "st_medkit"
+  },
+  {
+    "id": "medkit_script",
+    "name": "st_medkit",
+    "category": "Misc",
+    "displayName": "st_medkit [script]"
+  },
+  {
+    "id": "medkit_ai1",
+    "name": "st_medkit_ai1",
+    "category": "Misc",
+    "displayName": "st_medkit_ai1"
+  },
+  {
+    "id": "medkit_ai2",
+    "name": "st_medkit_ai2",
+    "category": "Misc",
+    "displayName": "st_medkit_ai2"
+  },
+  {
+    "id": "medkit_ai3",
+    "name": "st_medkit_ai3",
+    "category": "Misc",
+    "displayName": "st_medkit_ai3"
   },
   {
     "id": "medkit_army",
@@ -4171,6 +5291,48 @@
     "displayName": "st_medkit_science"
   },
   {
+    "id": "meinkampf",
+    "name": "st_meinkampf",
+    "category": "Misc",
+    "displayName": "st_meinkampf"
+  },
+  {
+    "id": "itm_guide_usb_1",
+    "name": "st_memory_stick_name",
+    "category": "Misc",
+    "displayName": "st_memory_stick_name [1]"
+  },
+  {
+    "id": "itm_guide_usb_2",
+    "name": "st_memory_stick_name",
+    "category": "Misc",
+    "displayName": "st_memory_stick_name [2]"
+  },
+  {
+    "id": "killer_patch",
+    "name": "st_merc_fp",
+    "category": "Misc",
+    "displayName": "st_merc_fp"
+  },
+  {
+    "id": "explo_metalcan_powder",
+    "name": "st_metalcan_powder",
+    "category": "Misc",
+    "displayName": "st_metalcan_powder"
+  },
+  {
+    "id": "mil_radio_amplifier",
+    "name": "st_mil_amp",
+    "category": "Misc",
+    "displayName": "st_mil_amp"
+  },
+  {
+    "id": "military_car_radio",
+    "name": "st_mil_car",
+    "category": "Misc",
+    "displayName": "st_mil_car"
+  },
+  {
     "id": "mine",
     "name": "st_mine_name",
     "category": "Explosives",
@@ -4180,6 +5342,12 @@
     "inStartingLoadout": false,
     "unobtainable": true,
     "tacticalKit": false
+  },
+  {
+    "id": "mine_new",
+    "name": "st_mine_name",
+    "category": "Misc",
+    "displayName": "st_mine_name [new]"
   },
   {
     "id": "mineral_water",
@@ -4194,6 +5362,18 @@
     "displayName": "st_mint"
   },
   {
+    "id": "mirror",
+    "name": "st_mirror",
+    "category": "Misc",
+    "displayName": "st_mirror"
+  },
+  {
+    "id": "monolith_patch",
+    "name": "st_monolith_fp",
+    "category": "Misc",
+    "displayName": "st_monolith_fp"
+  },
+  {
     "id": "morphine",
     "name": "st_morphine",
     "category": "Medicine",
@@ -4204,6 +5384,12 @@
     "name": "st_mre",
     "category": "Food",
     "displayName": "st_mre"
+  },
+  {
+    "id": "mutant_part_crow_beak",
+    "name": "st_mutant_part_crow_beak",
+    "category": "Misc",
+    "displayName": "st_mutant_part_crow_beak"
   },
   {
     "id": "nuts",
@@ -4218,10 +5404,970 @@
     "displayName": "st_oasis_heart2"
   },
   {
+    "id": "partskit_tool",
+    "name": "st_partskit",
+    "category": "Misc",
+    "displayName": "st_partskit"
+  },
+  {
+    "id": "device_pda_1",
+    "name": "st_pda_1_name",
+    "category": "Misc",
+    "displayName": "st_pda_1_name"
+  },
+  {
+    "id": "device_pda_2",
+    "name": "st_pda_2_name",
+    "category": "Misc",
+    "displayName": "st_pda_2_name"
+  },
+  {
+    "id": "device_pda_3",
+    "name": "st_pda_3_name",
+    "category": "Misc",
+    "displayName": "st_pda_3_name"
+  },
+  {
+    "id": "itm_pda_common",
+    "name": "st_pda_name",
+    "category": "Misc",
+    "displayName": "st_pda_name [common]"
+  },
+  {
+    "id": "itm_pda_rare",
+    "name": "st_pda_name",
+    "category": "Misc",
+    "displayName": "st_pda_name [rare]"
+  },
+  {
+    "id": "itm_pda_uncommon",
+    "name": "st_pda_name",
+    "category": "Misc",
+    "displayName": "st_pda_name [uncommon]"
+  },
+  {
+    "id": "itm_pda_personal",
+    "name": "st_perspda",
+    "category": "Misc",
+    "displayName": "st_perspda"
+  },
+  {
+    "id": "picture_woman",
+    "name": "st_picture_woman",
+    "category": "Misc",
+    "displayName": "st_picture_woman"
+  },
+  {
+    "id": "prop_ammo_box",
+    "name": "st_placeable_ammo_box",
+    "category": "Misc",
+    "displayName": "st_placeable_ammo_box"
+  },
+  {
+    "id": "decor_arti_display",
+    "name": "st_placeable_arti_display",
+    "category": "Misc",
+    "displayName": "st_placeable_arti_display"
+  },
+  {
+    "id": "decor_ashtray",
+    "name": "st_placeable_ashtray",
+    "category": "Misc",
+    "displayName": "st_placeable_ashtray"
+  },
+  {
+    "id": "decor_barrel_metal",
+    "name": "st_placeable_barrel_metal",
+    "category": "Misc",
+    "displayName": "st_placeable_barrel_metal"
+  },
+  {
+    "id": "decor_bidon",
+    "name": "st_placeable_bidon",
+    "category": "Misc",
+    "displayName": "st_placeable_bidon"
+  },
+  {
+    "id": "decor_biliard",
+    "name": "st_placeable_biliard",
+    "category": "Misc",
+    "displayName": "st_placeable_biliard"
+  },
+  {
+    "id": "blue_box_item",
+    "name": "st_placeable_blue_box",
+    "category": "Misc",
+    "displayName": "st_placeable_blue_box"
+  },
+  {
+    "id": "decor_box_paper",
+    "name": "st_placeable_box_paper",
+    "category": "Misc",
+    "displayName": "st_placeable_box_paper"
+  },
+  {
+    "id": "decor_box_wood",
+    "name": "st_placeable_box_wood",
+    "category": "Misc",
+    "displayName": "st_placeable_box_wood"
+  },
+  {
+    "id": "decor_cabinet",
+    "name": "st_placeable_cabinet",
+    "category": "Misc",
+    "displayName": "st_placeable_cabinet"
+  },
+  {
+    "id": "case_item",
+    "name": "st_placeable_case",
+    "category": "Misc",
+    "displayName": "st_placeable_case"
+  },
+  {
+    "id": "decor_clinic_equipments",
+    "name": "st_placeable_clinic_equipments",
+    "category": "Misc",
+    "displayName": "st_placeable_clinic_equipments"
+  },
+  {
+    "id": "decor_countertop",
+    "name": "st_placeable_countertop",
+    "category": "Misc",
+    "displayName": "st_placeable_countertop"
+  },
+  {
+    "id": "decor_cuttingboard",
+    "name": "st_placeable_cuttingboard",
+    "category": "Misc",
+    "displayName": "st_placeable_cuttingboard"
+  },
+  {
+    "id": "decor_dev_guitar",
+    "name": "st_placeable_dev_guitar",
+    "category": "Misc",
+    "displayName": "st_placeable_dev_guitar"
+  },
+  {
+    "id": "decor_documents_1",
+    "name": "st_placeable_documents_1",
+    "category": "Misc",
+    "displayName": "st_placeable_documents_1"
+  },
+  {
+    "id": "decor_documents_2",
+    "name": "st_placeable_documents_2",
+    "category": "Misc",
+    "displayName": "st_placeable_documents_2"
+  },
+  {
+    "id": "decor_door",
+    "name": "st_placeable_door",
+    "category": "Misc",
+    "displayName": "st_placeable_door"
+  },
+  {
+    "id": "decor_door02",
+    "name": "st_placeable_door02",
+    "category": "Misc",
+    "displayName": "st_placeable_door02"
+  },
+  {
+    "id": "decor_door03",
+    "name": "st_placeable_door03",
+    "category": "Misc",
+    "displayName": "st_placeable_door03"
+  },
+  {
+    "id": "decor_door04",
+    "name": "st_placeable_door04",
+    "category": "Misc",
+    "displayName": "st_placeable_door04"
+  },
+  {
+    "id": "decor_door05",
+    "name": "st_placeable_door05",
+    "category": "Misc",
+    "displayName": "st_placeable_door05"
+  },
+  {
+    "id": "exo_repair_kit_item",
+    "name": "st_placeable_exo_kit",
+    "category": "Misc",
+    "displayName": "st_placeable_exo_kit"
+  },
+  {
+    "id": "decor_exoskelet",
+    "name": "st_placeable_exoskelet",
+    "category": "Misc",
+    "displayName": "st_placeable_exoskelet"
+  },
+  {
+    "id": "decor_fchair",
+    "name": "st_placeable_fchair",
+    "category": "Misc",
+    "displayName": "st_placeable_fchair"
+  },
+  {
+    "id": "decor_fuel",
+    "name": "st_placeable_fuel",
+    "category": "Misc",
+    "displayName": "st_placeable_fuel"
+  },
+  {
+    "id": "decor_game",
+    "name": "st_placeable_game",
+    "category": "Misc",
+    "displayName": "st_placeable_game"
+  },
+  {
+    "id": "device_gas_lamp",
+    "name": "st_placeable_gas_lamp",
+    "category": "Misc",
+    "displayName": "st_placeable_gas_lamp"
+  },
+  {
+    "id": "decor_gaz_balon",
+    "name": "st_placeable_gaz_balon",
+    "category": "Misc",
+    "displayName": "st_placeable_gaz_balon"
+  },
+  {
+    "id": "decor_grave1",
+    "name": "st_placeable_grave1",
+    "category": "Misc",
+    "displayName": "st_placeable_grave1"
+  },
+  {
+    "id": "decor_grave2",
+    "name": "st_placeable_grave2",
+    "category": "Misc",
+    "displayName": "st_placeable_grave2"
+  },
+  {
+    "id": "decor_guidebook1",
+    "name": "st_placeable_guidebook1",
+    "category": "Misc",
+    "displayName": "st_placeable_guidebook1"
+  },
+  {
+    "id": "decor_guidebook2",
+    "name": "st_placeable_guidebook2",
+    "category": "Misc",
+    "displayName": "st_placeable_guidebook2"
+  },
+  {
+    "id": "decor_gun_parts",
+    "name": "st_placeable_gun_parts",
+    "category": "Misc",
+    "displayName": "st_placeable_gun_parts"
+  },
+  {
+    "id": "decor_junk",
+    "name": "st_placeable_junk",
+    "category": "Misc",
+    "displayName": "st_placeable_junk"
+  },
+  {
+    "id": "decor_kartina03",
+    "name": "st_placeable_kartina03",
+    "category": "Misc",
+    "displayName": "st_placeable_kartina03"
+  },
+  {
+    "id": "decor_lead_box_open",
+    "name": "st_placeable_lead_box_open",
+    "category": "Misc",
+    "displayName": "st_placeable_lead_box_open"
+  },
+  {
+    "id": "device_light_altar",
+    "name": "st_placeable_light_altar",
+    "category": "Misc",
+    "displayName": "st_placeable_light_altar"
+  },
+  {
+    "id": "decor_light1",
+    "name": "st_placeable_light1",
+    "category": "Misc",
+    "displayName": "st_placeable_light1"
+  },
+  {
+    "id": "decor_light2",
+    "name": "st_placeable_light2",
+    "category": "Misc",
+    "displayName": "st_placeable_light2"
+  },
+  {
+    "id": "decor_light3",
+    "name": "st_placeable_light3",
+    "category": "Misc",
+    "displayName": "st_placeable_light3"
+  },
+  {
+    "id": "decor_light4",
+    "name": "st_placeable_light4",
+    "category": "Misc",
+    "displayName": "st_placeable_light4"
+  },
+  {
+    "id": "decor_light5",
+    "name": "st_placeable_light5",
+    "category": "Misc",
+    "displayName": "st_placeable_light5"
+  },
+  {
+    "id": "decor_light6",
+    "name": "st_placeable_light6",
+    "category": "Misc",
+    "displayName": "st_placeable_light6"
+  },
+  {
+    "id": "decor_light7",
+    "name": "st_placeable_light7",
+    "category": "Misc",
+    "displayName": "st_placeable_light7"
+  },
+  {
+    "id": "decor_light8",
+    "name": "st_placeable_light8",
+    "category": "Misc",
+    "displayName": "st_placeable_light8"
+  },
+  {
+    "id": "decor_map1",
+    "name": "st_placeable_map1",
+    "category": "Misc",
+    "displayName": "st_placeable_map1"
+  },
+  {
+    "id": "decor_map2",
+    "name": "st_placeable_map2",
+    "category": "Misc",
+    "displayName": "st_placeable_map2"
+  },
+  {
+    "id": "decor_merc_outfit",
+    "name": "st_placeable_merc_outfit",
+    "category": "Misc",
+    "displayName": "st_placeable_merc_outfit"
+  },
+  {
+    "id": "decor_metal_plate",
+    "name": "st_placeable_metal_plate",
+    "category": "Misc",
+    "displayName": "st_placeable_metal_plate"
+  },
+  {
+    "id": "decor_metal_table1",
+    "name": "st_placeable_metal_table1",
+    "category": "Misc",
+    "displayName": "st_placeable_metal_table1"
+  },
+  {
+    "id": "decor_metal_table2",
+    "name": "st_placeable_metal_table2",
+    "category": "Misc",
+    "displayName": "st_placeable_metal_table2"
+  },
+  {
+    "id": "device_metal_torch",
+    "name": "st_placeable_metal_torch",
+    "category": "Misc",
+    "displayName": "st_placeable_metal_torch"
+  },
+  {
+    "id": "decor_microscope",
+    "name": "st_placeable_microscope",
+    "category": "Misc",
+    "displayName": "st_placeable_microscope"
+  },
+  {
+    "id": "decor_money_5000",
+    "name": "st_placeable_money_5000",
+    "category": "Misc",
+    "displayName": "st_placeable_money_5000"
+  },
+  {
+    "id": "decor_notes_writing_book",
+    "name": "st_placeable_notes_writing_book",
+    "category": "Misc",
+    "displayName": "st_placeable_notes_writing_book"
+  },
+  {
+    "id": "piano_item",
+    "name": "st_placeable_piano",
+    "category": "Misc",
+    "displayName": "st_placeable_piano"
+  },
+  {
+    "id": "pistol_shelf_item",
+    "name": "st_placeable_pistol_shelf",
+    "category": "Misc",
+    "displayName": "st_placeable_pistol_shelf"
+  },
+  {
+    "id": "decor_plant2",
+    "name": "st_placeable_plant2",
+    "category": "Misc",
+    "displayName": "st_placeable_plant2"
+  },
+  {
+    "id": "decor_plant3",
+    "name": "st_placeable_plant3",
+    "category": "Misc",
+    "displayName": "st_placeable_plant3"
+  },
+  {
+    "id": "decor_plant4",
+    "name": "st_placeable_plant4",
+    "category": "Misc",
+    "displayName": "st_placeable_plant4"
+  },
+  {
+    "id": "decor_poster1",
+    "name": "st_placeable_poster1",
+    "category": "Misc",
+    "displayName": "st_placeable_poster1"
+  },
+  {
+    "id": "decor_poster2",
+    "name": "st_placeable_poster2",
+    "category": "Misc",
+    "displayName": "st_placeable_poster2"
+  },
+  {
+    "id": "decor_poster3",
+    "name": "st_placeable_poster3",
+    "category": "Misc",
+    "displayName": "st_placeable_poster3"
+  },
+  {
+    "id": "decor_poster4",
+    "name": "st_placeable_poster4",
+    "category": "Misc",
+    "displayName": "st_placeable_poster4"
+  },
+  {
+    "id": "decor_poster5",
+    "name": "st_placeable_poster5",
+    "category": "Misc",
+    "displayName": "st_placeable_poster5"
+  },
+  {
+    "id": "decor_poster6",
+    "name": "st_placeable_poster6",
+    "category": "Misc",
+    "displayName": "st_placeable_poster6"
+  },
+  {
+    "id": "decor_poster7",
+    "name": "st_placeable_poster7",
+    "category": "Misc",
+    "displayName": "st_placeable_poster7"
+  },
+  {
+    "id": "decor_pot",
+    "name": "st_placeable_pot",
+    "category": "Misc",
+    "displayName": "st_placeable_pot"
+  },
+  {
+    "id": "decor_psi_helmet",
+    "name": "st_placeable_psi_helmet",
+    "category": "Misc",
+    "displayName": "st_placeable_psi_helmet"
+  },
+  {
+    "id": "radio_item",
+    "name": "st_placeable_radio",
+    "category": "Misc",
+    "displayName": "st_placeable_radio"
+  },
+  {
+    "id": "decor_radiola",
+    "name": "st_placeable_radiola",
+    "category": "Misc",
+    "displayName": "st_placeable_radiola"
+  },
+  {
+    "id": "decor_rug",
+    "name": "st_placeable_rug",
+    "category": "Misc",
+    "displayName": "st_placeable_rug"
+  },
+  {
+    "id": "decor_shelves",
+    "name": "st_placeable_shelves",
+    "category": "Misc",
+    "displayName": "st_placeable_shelves"
+  },
+  {
+    "id": "decor_shelves_b",
+    "name": "st_placeable_shelves_b",
+    "category": "Misc",
+    "displayName": "st_placeable_shelves_b"
+  },
+  {
+    "id": "decor_shield",
+    "name": "st_placeable_shield",
+    "category": "Misc",
+    "displayName": "st_placeable_shield"
+  },
+  {
+    "id": "decor_shooting_target_1",
+    "name": "st_placeable_shooting_target_1",
+    "category": "Misc",
+    "displayName": "st_placeable_shooting_target_1"
+  },
+  {
+    "id": "decor_shower",
+    "name": "st_placeable_shower",
+    "category": "Misc",
+    "displayName": "st_placeable_shower"
+  },
+  {
+    "id": "decor_sidetable1",
+    "name": "st_placeable_sidetable1",
+    "category": "Misc",
+    "displayName": "st_placeable_sidetable1"
+  },
+  {
+    "id": "decor_sidetable2",
+    "name": "st_placeable_sidetable2",
+    "category": "Misc",
+    "displayName": "st_placeable_sidetable2"
+  },
+  {
+    "id": "decor_sink",
+    "name": "st_placeable_sink",
+    "category": "Misc",
+    "displayName": "st_placeable_sink"
+  },
+  {
+    "id": "decor_stalker_outfit",
+    "name": "st_placeable_stalker_outfit",
+    "category": "Misc",
+    "displayName": "st_placeable_stalker_outfit"
+  },
+  {
+    "id": "decor_stool",
+    "name": "st_placeable_stool",
+    "category": "Misc",
+    "displayName": "st_placeable_stool"
+  },
+  {
+    "id": "decor_storage01",
+    "name": "st_placeable_storage01",
+    "category": "Misc",
+    "displayName": "st_placeable_storage01"
+  },
+  {
+    "id": "decor_storage02",
+    "name": "st_placeable_storage02",
+    "category": "Misc",
+    "displayName": "st_placeable_storage02"
+  },
+  {
+    "id": "decor_storage03",
+    "name": "st_placeable_storage03",
+    "category": "Misc",
+    "displayName": "st_placeable_storage03"
+  },
+  {
+    "id": "decor_storage04",
+    "name": "st_placeable_storage04",
+    "category": "Misc",
+    "displayName": "st_placeable_storage04"
+  },
+  {
+    "id": "decor_storage05",
+    "name": "st_placeable_storage05",
+    "category": "Misc",
+    "displayName": "st_placeable_storage05"
+  },
+  {
+    "id": "decor_storage06",
+    "name": "st_placeable_storage06",
+    "category": "Misc",
+    "displayName": "st_placeable_storage06"
+  },
+  {
+    "id": "decor_storage07",
+    "name": "st_placeable_storage07",
+    "category": "Misc",
+    "displayName": "st_placeable_storage07"
+  },
+  {
+    "id": "decor_storage08",
+    "name": "st_placeable_storage08",
+    "category": "Misc",
+    "displayName": "st_placeable_storage08"
+  },
+  {
+    "id": "decor_stretcher",
+    "name": "st_placeable_stretcher",
+    "category": "Misc",
+    "displayName": "st_placeable_stretcher"
+  },
+  {
+    "id": "decor_suit",
+    "name": "st_placeable_suit",
+    "category": "Misc",
+    "displayName": "st_placeable_suit"
+  },
+  {
+    "id": "sumka6_item",
+    "name": "st_placeable_sumka6",
+    "category": "Misc",
+    "displayName": "st_placeable_sumka6"
+  },
+  {
+    "id": "decor_survivalguide",
+    "name": "st_placeable_survivalguide",
+    "category": "Misc",
+    "displayName": "st_placeable_survivalguide"
+  },
+  {
+    "id": "decor_teapot",
+    "name": "st_placeable_teapot",
+    "category": "Misc",
+    "displayName": "st_placeable_teapot"
+  },
+  {
+    "id": "decor_toilet",
+    "name": "st_placeable_toilet",
+    "category": "Misc",
+    "displayName": "st_placeable_toilet"
+  },
+  {
+    "id": "decor_trophie1",
+    "name": "st_placeable_trophie1",
+    "category": "Misc",
+    "displayName": "st_placeable_trophie1"
+  },
+  {
+    "id": "decor_trophie2",
+    "name": "st_placeable_trophie2",
+    "category": "Misc",
+    "displayName": "st_placeable_trophie2"
+  },
+  {
+    "id": "decor_trophie3",
+    "name": "st_placeable_trophie3",
+    "category": "Misc",
+    "displayName": "st_placeable_trophie3"
+  },
+  {
+    "id": "decor_trophie4",
+    "name": "st_placeable_trophie4",
+    "category": "Misc",
+    "displayName": "st_placeable_trophie4"
+  },
+  {
+    "id": "decor_trophie5",
+    "name": "st_placeable_trophie5",
+    "category": "Misc",
+    "displayName": "st_placeable_trophie5"
+  },
+  {
+    "id": "decor_trophie6",
+    "name": "st_placeable_trophie6",
+    "category": "Misc",
+    "displayName": "st_placeable_trophie6"
+  },
+  {
+    "id": "decor_trophie7",
+    "name": "st_placeable_trophie7",
+    "category": "Misc",
+    "displayName": "st_placeable_trophie7"
+  },
+  {
+    "id": "decor_trophie8",
+    "name": "st_placeable_trophie8",
+    "category": "Misc",
+    "displayName": "st_placeable_trophie8"
+  },
+  {
+    "id": "decor_trophie9",
+    "name": "st_placeable_trophie9",
+    "category": "Misc",
+    "displayName": "st_placeable_trophie9"
+  },
+  {
+    "id": "decor_tv_box",
+    "name": "st_placeable_tv_box",
+    "category": "Misc",
+    "displayName": "st_placeable_tv_box"
+  },
+  {
+    "id": "decor_wall",
+    "name": "st_placeable_wall",
+    "category": "Misc",
+    "displayName": "st_placeable_wall"
+  },
+  {
+    "id": "decor_wall_divider",
+    "name": "st_placeable_wall_divider",
+    "category": "Misc",
+    "displayName": "st_placeable_wall_divider"
+  },
+  {
+    "id": "decor_wall_doorway",
+    "name": "st_placeable_wall_doorway",
+    "category": "Misc",
+    "displayName": "st_placeable_wall_doorway"
+  },
+  {
+    "id": "decor_wall_doorway_metal",
+    "name": "st_placeable_wall_doorway_metal",
+    "category": "Misc",
+    "displayName": "st_placeable_wall_doorway_metal"
+  },
+  {
+    "id": "decor_wall_metal",
+    "name": "st_placeable_wall_metal",
+    "category": "Misc",
+    "displayName": "st_placeable_wall_metal"
+  },
+  {
+    "id": "decor_wall02",
+    "name": "st_placeable_wall02",
+    "category": "Misc",
+    "displayName": "st_placeable_wall02"
+  },
+  {
+    "id": "decor_wall02_metal",
+    "name": "st_placeable_wall02_metal",
+    "category": "Misc",
+    "displayName": "st_placeable_wall02_metal"
+  },
+  {
+    "id": "weapon_rack_item",
+    "name": "st_placeable_weapon_rack",
+    "category": "Misc",
+    "displayName": "st_placeable_weapon_rack"
+  },
+  {
+    "id": "decor_wooden_board",
+    "name": "st_placeable_wooden_board",
+    "category": "Misc",
+    "displayName": "st_placeable_wooden_board"
+  },
+  {
+    "id": "decor_wooden_plank",
+    "name": "st_placeable_wooden_plank",
+    "category": "Misc",
+    "displayName": "st_placeable_wooden_plank"
+  },
+  {
+    "id": "workshop_item",
+    "name": "st_placeable_workshop",
+    "category": "Misc",
+    "displayName": "st_placeable_workshop"
+  },
+  {
+    "id": "porn",
+    "name": "st_porn",
+    "category": "Misc",
+    "displayName": "st_porn"
+  },
+  {
+    "id": "porn2",
+    "name": "st_porn2",
+    "category": "Misc",
+    "displayName": "st_porn2"
+  },
+  {
     "id": "powder_poltergeist",
     "name": "st_powder_poltergeist",
     "category": "Belt Attachments",
     "displayName": "st_powder_poltergeist"
+  },
+  {
+    "id": "prop_bed_1",
+    "name": "st_prop_bed_1",
+    "category": "Misc",
+    "displayName": "st_prop_bed_1"
+  },
+  {
+    "id": "prop_bed_2",
+    "name": "st_prop_bed_2",
+    "category": "Misc",
+    "displayName": "st_prop_bed_2"
+  },
+  {
+    "id": "prop_bed_3",
+    "name": "st_prop_bed_3",
+    "category": "Misc",
+    "displayName": "st_prop_bed_3"
+  },
+  {
+    "id": "prop_board_map",
+    "name": "st_prop_board_map",
+    "category": "Misc",
+    "displayName": "st_prop_board_map"
+  },
+  {
+    "id": "prop_bong",
+    "name": "st_prop_bong",
+    "category": "Misc",
+    "displayName": "st_prop_bong"
+  },
+  {
+    "id": "prop_cans_tuna",
+    "name": "st_prop_cans_tuna",
+    "category": "Misc",
+    "displayName": "st_prop_cans_tuna"
+  },
+  {
+    "id": "prop_pccase",
+    "name": "st_prop_case",
+    "category": "Misc",
+    "displayName": "st_prop_case"
+  },
+  {
+    "id": "prop_chair",
+    "name": "st_prop_chair",
+    "category": "Misc",
+    "displayName": "st_prop_chair"
+  },
+  {
+    "id": "prop_couch_1",
+    "name": "st_prop_couch_1",
+    "category": "Misc",
+    "displayName": "st_prop_couch_1"
+  },
+  {
+    "id": "prop_counter_1",
+    "name": "st_prop_counter_1",
+    "category": "Misc",
+    "displayName": "st_prop_counter_1"
+  },
+  {
+    "id": "prop_dish1",
+    "name": "st_prop_dish1",
+    "category": "Misc",
+    "displayName": "st_prop_dish1"
+  },
+  {
+    "id": "prop_dish2",
+    "name": "st_prop_dish2",
+    "category": "Misc",
+    "displayName": "st_prop_dish2"
+  },
+  {
+    "id": "prop_fan",
+    "name": "st_prop_fan",
+    "category": "Misc",
+    "displayName": "st_prop_fan"
+  },
+  {
+    "id": "prop_fridge",
+    "name": "st_prop_fridge",
+    "category": "Misc",
+    "displayName": "st_prop_fridge"
+  },
+  {
+    "id": "prop_keyboard",
+    "name": "st_prop_keyboard",
+    "category": "Misc",
+    "displayName": "st_prop_keyboard"
+  },
+  {
+    "id": "prop_lamp1",
+    "name": "st_prop_lamp1",
+    "category": "Misc",
+    "displayName": "st_prop_lamp1"
+  },
+  {
+    "id": "prop_lamp2",
+    "name": "st_prop_lamp2",
+    "category": "Misc",
+    "displayName": "st_prop_lamp2"
+  },
+  {
+    "id": "prop_laptop_item",
+    "name": "st_prop_laptop_item",
+    "category": "Misc",
+    "displayName": "st_prop_laptop_item"
+  },
+  {
+    "id": "prop_med_case_1",
+    "name": "st_prop_med_case_1",
+    "category": "Misc",
+    "displayName": "st_prop_med_case_1"
+  },
+  {
+    "id": "prop_mice_pad",
+    "name": "st_prop_mice_pad",
+    "category": "Misc",
+    "displayName": "st_prop_mice_pad"
+  },
+  {
+    "id": "prop_monitor",
+    "name": "st_prop_monitor",
+    "category": "Misc",
+    "displayName": "st_prop_monitor"
+  },
+  {
+    "id": "prop_mug",
+    "name": "st_prop_mug",
+    "category": "Misc",
+    "displayName": "st_prop_mug"
+  },
+  {
+    "id": "prop_poster_vertical_item",
+    "name": "st_prop_poster_vertical_item",
+    "category": "Misc",
+    "displayName": "st_prop_poster_vertical_item"
+  },
+  {
+    "id": "prop_clock_1",
+    "name": "st_prop_prop_clock_1",
+    "category": "Misc",
+    "displayName": "st_prop_prop_clock_1"
+  },
+  {
+    "id": "prop_shelf_1",
+    "name": "st_prop_shelf_1",
+    "category": "Misc",
+    "displayName": "st_prop_shelf_1"
+  },
+  {
+    "id": "prop_shelf_2",
+    "name": "st_prop_shelf_2",
+    "category": "Misc",
+    "displayName": "st_prop_shelf_2"
+  },
+  {
+    "id": "prop_stove1",
+    "name": "st_prop_stove1",
+    "category": "Misc",
+    "displayName": "st_prop_stove1"
+  },
+  {
+    "id": "prop_stove2",
+    "name": "st_prop_stove2",
+    "category": "Misc",
+    "displayName": "st_prop_stove2"
+  },
+  {
+    "id": "prop_table_1",
+    "name": "st_prop_table_1",
+    "category": "Misc",
+    "displayName": "st_prop_table_1"
+  },
+  {
+    "id": "prop_table_2",
+    "name": "st_prop_table_2",
+    "category": "Misc",
+    "displayName": "st_prop_table_2"
+  },
+  {
+    "id": "prop_tv",
+    "name": "st_prop_tv",
+    "category": "Misc",
+    "displayName": "st_prop_tv"
   },
   {
     "id": "protein",
@@ -4482,6 +6628,108 @@
     "displayName": "st_prt_o_retardant_9"
   },
   {
+    "id": "radio",
+    "name": "st_radio",
+    "category": "Misc",
+    "displayName": "st_radio"
+  },
+  {
+    "id": "radio2",
+    "name": "st_radio2",
+    "category": "Misc",
+    "displayName": "st_radio2"
+  },
+  {
+    "id": "raid_access_card_agr_und",
+    "name": "st_raid_access_card_agr_und_name",
+    "category": "Misc",
+    "displayName": "st_raid_access_card_agr_und_name"
+  },
+  {
+    "id": "raid_access_card_jup_und",
+    "name": "st_raid_access_card_jup_und_name",
+    "category": "Misc",
+    "displayName": "st_raid_access_card_jup_und_name"
+  },
+  {
+    "id": "raid_access_card_x18",
+    "name": "st_raid_access_card_x18_name",
+    "category": "Misc",
+    "displayName": "st_raid_access_card_x18_name"
+  },
+  {
+    "id": "raid_anomaly_visor",
+    "name": "st_raid_anomaly_visor",
+    "category": "Misc",
+    "displayName": "st_raid_anomaly_visor"
+  },
+  {
+    "id": "raid_extra_loot_1",
+    "name": "st_raid_extra_loot_1",
+    "category": "Misc",
+    "displayName": "st_raid_extra_loot_1"
+  },
+  {
+    "id": "raid_extra_loot_10",
+    "name": "st_raid_extra_loot_10",
+    "category": "Misc",
+    "displayName": "st_raid_extra_loot_10"
+  },
+  {
+    "id": "raid_extra_loot_2",
+    "name": "st_raid_extra_loot_2",
+    "category": "Misc",
+    "displayName": "st_raid_extra_loot_2"
+  },
+  {
+    "id": "raid_extra_loot_3",
+    "name": "st_raid_extra_loot_3",
+    "category": "Misc",
+    "displayName": "st_raid_extra_loot_3"
+  },
+  {
+    "id": "raid_extra_loot_4",
+    "name": "st_raid_extra_loot_4",
+    "category": "Misc",
+    "displayName": "st_raid_extra_loot_4"
+  },
+  {
+    "id": "raid_extra_loot_5",
+    "name": "st_raid_extra_loot_5",
+    "category": "Misc",
+    "displayName": "st_raid_extra_loot_5"
+  },
+  {
+    "id": "raid_extra_loot_6",
+    "name": "st_raid_extra_loot_6",
+    "category": "Misc",
+    "displayName": "st_raid_extra_loot_6"
+  },
+  {
+    "id": "raid_extra_loot_7",
+    "name": "st_raid_extra_loot_7",
+    "category": "Misc",
+    "displayName": "st_raid_extra_loot_7"
+  },
+  {
+    "id": "raid_extra_loot_8",
+    "name": "st_raid_extra_loot_8",
+    "category": "Misc",
+    "displayName": "st_raid_extra_loot_8"
+  },
+  {
+    "id": "raid_extra_loot_9",
+    "name": "st_raid_extra_loot_9",
+    "category": "Misc",
+    "displayName": "st_raid_extra_loot_9"
+  },
+  {
+    "id": "raid_fuel_item",
+    "name": "st_raid_fuel",
+    "category": "Misc",
+    "displayName": "st_raid_fuel"
+  },
+  {
     "id": "raid_injector_1",
     "name": "st_raid_injector_1",
     "category": "Medicine",
@@ -4512,10 +6760,70 @@
     "displayName": "st_raid_injector_5"
   },
   {
+    "id": "raid_intelligence_note",
+    "name": "st_raid_intelligence_note_name",
+    "category": "Misc",
+    "displayName": "st_raid_intelligence_note_name"
+  },
+  {
+    "id": "raid_map_travel_k01_darkscape_infected",
+    "name": "st_raid_map_travel_k01_darkscape_infected_name",
+    "category": "Misc",
+    "displayName": "st_raid_map_travel_k01_darkscape_infected_name"
+  },
+  {
+    "id": "raid_map_travel_k01_darkscape_scouting",
+    "name": "st_raid_map_travel_k01_darkscape_scouting_name",
+    "category": "Misc",
+    "displayName": "st_raid_map_travel_k01_darkscape_scouting_name"
+  },
+  {
+    "id": "raid_map_travel_l06_rostok_scouting",
+    "name": "st_raid_map_travel_l06_rostok_scouting_name",
+    "category": "Misc",
+    "displayName": "st_raid_map_travel_l06_rostok_scouting_name"
+  },
+  {
+    "id": "raid_map_travel_l09_deadcity_infected",
+    "name": "st_raid_map_travel_l09_deadcity_infected_name",
+    "category": "Misc",
+    "displayName": "st_raid_map_travel_l09_deadcity_infected_name"
+  },
+  {
+    "id": "raid_map_travel_l09_deadcity_scouting",
+    "name": "st_raid_map_travel_l09_deadcity_scouting_name",
+    "category": "Misc",
+    "displayName": "st_raid_map_travel_l09_deadcity_scouting_name"
+  },
+  {
+    "id": "raid_map_travel_y04_pole_infected",
+    "name": "st_raid_map_travel_y04_pole_infected_name",
+    "category": "Misc",
+    "displayName": "st_raid_map_travel_y04_pole_infected_name"
+  },
+  {
+    "id": "pill_raid",
+    "name": "st_raid_pill",
+    "category": "Misc",
+    "displayName": "st_raid_pill"
+  },
+  {
     "id": "raisins",
     "name": "st_raisins",
     "category": "Food",
     "displayName": "st_raisins"
+  },
+  {
+    "id": "ramrod_tool",
+    "name": "st_ramrod_tool",
+    "category": "Misc",
+    "displayName": "st_ramrod_tool"
+  },
+  {
+    "id": "rasp_tool",
+    "name": "st_rasp_tool",
+    "category": "Misc",
+    "displayName": "st_rasp_tool"
   },
   {
     "id": "ration_ru",
@@ -4536,10 +6844,166 @@
     "displayName": "st_rebirth"
   },
   {
+    "id": "renegade_patch",
+    "name": "st_renegade_fp",
+    "category": "Misc",
+    "displayName": "st_renegade_fp"
+  },
+  {
+    "id": "toolkit_p",
+    "name": "st_repair_kit_p",
+    "category": "Misc",
+    "displayName": "st_repair_kit_p"
+  },
+  {
+    "id": "toolkit_r5",
+    "name": "st_repair_kit_r5",
+    "category": "Misc",
+    "displayName": "st_repair_kit_r5"
+  },
+  {
+    "id": "toolkit_r7",
+    "name": "st_repair_kit_r7",
+    "category": "Misc",
+    "displayName": "st_repair_kit_r7"
+  },
+  {
+    "id": "toolkit_s",
+    "name": "st_repair_kit_s",
+    "category": "Misc",
+    "displayName": "st_repair_kit_s"
+  },
+  {
     "id": "rope",
     "name": "st_rope",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_rope"
+  },
+  {
+    "id": "rotten_meat",
+    "name": "st_rotten_meat",
+    "category": "Misc",
+    "displayName": "st_rotten_meat"
+  },
+  {
+    "id": "money_10_50",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_10_50]"
+  },
+  {
+    "id": "money_100_200",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_100_200]"
+  },
+  {
+    "id": "money_1000_5000",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_1000_5000]"
+  },
+  {
+    "id": "money_200_300",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_200_300]"
+  },
+  {
+    "id": "money_300_400",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_300_400]"
+  },
+  {
+    "id": "money_400_500",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_400_500]"
+  },
+  {
+    "id": "money_50_100",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_50_100]"
+  },
+  {
+    "id": "money_500_600",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_500_600]"
+  },
+  {
+    "id": "money_5000_end",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_5000_end]"
+  },
+  {
+    "id": "money_600_700",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_600_700]"
+  },
+  {
+    "id": "money_700_800",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_700_800]"
+  },
+  {
+    "id": "money_800_900",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_800_900]"
+  },
+  {
+    "id": "money_900_1000",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_900_1000]"
+  },
+  {
+    "id": "roubles",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [roubles]"
+  },
+  {
+    "id": "money_10",
+    "name": "st_roubles_10_name",
+    "category": "Misc",
+    "displayName": "st_roubles_10_name"
+  },
+  {
+    "id": "money_100",
+    "name": "st_roubles_100_name",
+    "category": "Misc",
+    "displayName": "st_roubles_100_name"
+  },
+  {
+    "id": "money_1000",
+    "name": "st_roubles_1000_name",
+    "category": "Misc",
+    "displayName": "st_roubles_1000_name"
+  },
+  {
+    "id": "money_50",
+    "name": "st_roubles_50_name",
+    "category": "Misc",
+    "displayName": "st_roubles_50_name"
+  },
+  {
+    "id": "money_500",
+    "name": "st_roubles_500_name",
+    "category": "Misc",
+    "displayName": "st_roubles_500_name"
+  },
+  {
+    "id": "money_5000",
+    "name": "st_roubles_5000_name",
+    "category": "Misc",
+    "displayName": "st_roubles_5000_name"
   },
   {
     "id": "salicidic_acid",
@@ -4560,10 +7024,76 @@
     "displayName": "st_sausage"
   },
   {
+    "id": "sewing_kit_a",
+    "name": "st_sewing_kit_a",
+    "category": "Misc",
+    "displayName": "st_sewing_kit_a"
+  },
+  {
+    "id": "sewing_kit_b",
+    "name": "st_sewing_kit_b",
+    "category": "Misc",
+    "displayName": "st_sewing_kit_b"
+  },
+  {
+    "id": "sewing_kit_h",
+    "name": "st_sewing_kit_h",
+    "category": "Misc",
+    "displayName": "st_sewing_kit_h"
+  },
+  {
+    "id": "sewing_thread",
+    "name": "st_sewing_thread",
+    "category": "Misc",
+    "displayName": "st_sewing_thread"
+  },
+  {
+    "id": "sharpening_stones",
+    "name": "st_sharpening_stones",
+    "category": "Misc",
+    "displayName": "st_sharpening_stones"
+  },
+  {
+    "id": "shovel_mili",
+    "name": "st_shovel_mili",
+    "category": "Misc",
+    "displayName": "st_shovel_mili"
+  },
+  {
+    "id": "shovel_old",
+    "name": "st_shovel_old",
+    "category": "Misc",
+    "displayName": "st_shovel_old"
+  },
+  {
     "id": "drug_sleepingpills",
     "name": "st_sleepingpills",
     "category": "Medicine",
     "displayName": "st_sleepingpills"
+  },
+  {
+    "id": "solvent",
+    "name": "st_solvent",
+    "category": "Misc",
+    "displayName": "st_solvent"
+  },
+  {
+    "id": "stalker_raid_event_item",
+    "name": "st_stalker_event_package_name",
+    "category": "Misc",
+    "displayName": "st_stalker_event_package_name"
+  },
+  {
+    "id": "stalker_patch",
+    "name": "st_stalker_fp",
+    "category": "Misc",
+    "displayName": "st_stalker_fp"
+  },
+  {
+    "id": "steel_wool",
+    "name": "st_steel_wool",
+    "category": "Misc",
+    "displayName": "st_steel_wool"
   },
   {
     "id": "stimpack",
@@ -4598,14 +7128,26 @@
   {
     "id": "swiss_knife",
     "name": "st_swiss",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_swiss"
+  },
+  {
+    "id": "synthrope",
+    "name": "st_synthrope",
+    "category": "Misc",
+    "displayName": "st_synthrope"
   },
   {
     "id": "wpn_knife7",
     "name": "st_tactical_knife",
     "category": "Melee",
     "displayName": "st_tactical_knife"
+  },
+  {
+    "id": "tarpaulin",
+    "name": "st_tarpaulin",
+    "category": "Misc",
+    "displayName": "st_tarpaulin"
   },
   {
     "id": "tea",
@@ -4655,10 +7197,22 @@
     "displayName": "st_tushonka"
   },
   {
+    "id": "underwear",
+    "name": "st_underwear",
+    "category": "Misc",
+    "displayName": "st_underwear"
+  },
+  {
     "id": "vodka",
     "name": "st_vodka",
     "category": "Food",
     "displayName": "st_vodka"
+  },
+  {
+    "id": "vodka_script",
+    "name": "st_vodka",
+    "category": "Misc",
+    "displayName": "st_vodka [script]"
   },
   {
     "id": "vodka_quality",
@@ -4673,10 +7227,28 @@
     "displayName": "st_vodka2"
   },
   {
+    "id": "walkie",
+    "name": "st_walkie",
+    "category": "Misc",
+    "displayName": "st_walkie"
+  },
+  {
     "id": "water_drink",
     "name": "st_water_drink",
     "category": "Food",
     "displayName": "st_water_drink"
+  },
+  {
+    "id": "device_weather_radar",
+    "name": "st_weather_radar",
+    "category": "Misc",
+    "displayName": "st_weather_radar"
+  },
+  {
+    "id": "welding_goggles",
+    "name": "st_welding_goggles",
+    "category": "Misc",
+    "displayName": "st_welding_goggles"
   },
   {
     "id": "wpn_9a91",

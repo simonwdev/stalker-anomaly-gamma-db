@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09-12",
+    "entries": [
+      {
+        "type": "fixed",
+        "text": "The Has Grenade Launcher filter only matched weapons that mount one straight away, so the AK family was missing. Rifles like the AK-74M, AKM and AN-94 take a launcher once the underbarrel mount upgrade is installed, and they now match the filter, with a note on their item pages."
+      }
+    ]
+  },
+  {
     "date": "2026-09-02",
     "entries": [
       {

@@ -151,7 +151,7 @@
       "ui_inv_outfit_telepatic_protection": "0%",
       "ui_inv_outfit_strike_protection": "0%",
       "ui_inv_outfit_explosion_protection": "0%",
-      "displayName": "st_helm_respirator [default]",
+      "displayName": "st_helm_respirator",
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true
@@ -334,7 +334,7 @@
       "ui_inv_outfit_telepatic_protection": "1%",
       "ui_inv_outfit_strike_protection": "0%",
       "ui_inv_outfit_explosion_protection": "8%",
-      "displayName": "st_helm_hardhat [default]",
+      "displayName": "st_helm_hardhat",
       "hasStashDrop": true,
       "hasDisassemble": false,
       "hasUpgrades": true

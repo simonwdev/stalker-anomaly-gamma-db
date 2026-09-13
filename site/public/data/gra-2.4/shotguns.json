@@ -46,7 +46,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_toz34_obrez_custom",
@@ -72,7 +78,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_protecta_custom",
@@ -98,7 +110,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_spas12_custom",
@@ -124,7 +142,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_toz34_obrez_decor",
@@ -150,7 +174,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_bm16_full",
@@ -176,7 +206,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_wincheaster1300",
@@ -198,11 +234,17 @@
       "ui_ammo_types": "ammo-12x70-buck;ammo-12x70-raid;ammo-12x70-buck;ammo-12x76-zhekan;ammo-12x76-zhekan;ammo-12x76-zhekan;ammo-12x76-dart;ammo-12x76-dart;ammo-12x76-dart;ammo-12x70-buck_self",
       "st_data_export_ammo_types_alt": "",
       "st_data_export_hit_power": "0.79",
-      "displayName": "st_wpn_toz194 [default]",
+      "displayName": "st_wpn_toz194",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_spas12",
@@ -228,7 +270,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_vepr",
@@ -254,7 +302,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_bm16",
@@ -280,7 +334,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_protecta_nimble",
@@ -306,7 +366,13 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_usas12",
@@ -332,7 +398,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_bm16_full_alt",
@@ -358,7 +430,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_toz34_custom",
@@ -384,7 +462,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_bm16_alt",
@@ -410,7 +494,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_spas12_nimble",
@@ -436,7 +526,13 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_saiga12s",
@@ -462,7 +558,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_mp153",
@@ -488,7 +590,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_wincheaster1300_trapper",
@@ -514,7 +622,13 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_toz34_mark4",
@@ -540,7 +654,13 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_toz34_bull",
@@ -565,7 +685,13 @@
       "displayName": "st_wpn_toz34_bull",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_toz34_decor",
@@ -591,7 +717,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_remington870",
@@ -617,7 +749,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_toz34",
@@ -643,7 +781,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_mossberg590",
@@ -669,7 +813,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "nato"
+      ]
     },
     {
       "id": "wpn_protecta",
@@ -695,7 +845,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_mp133",
@@ -721,7 +877,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     },
     {
       "id": "wpn_protecta_aim",
@@ -747,7 +909,13 @@
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_protecta_camo",
@@ -773,7 +941,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "other"
+      ]
     },
     {
       "id": "wpn_fort500",
@@ -799,7 +973,13 @@
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
       "hasDisassemble": false,
-      "hasUpgrades": true
+      "hasUpgrades": true,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
+      "factions": [
+        "wp"
+      ]
     }
   ]
 }

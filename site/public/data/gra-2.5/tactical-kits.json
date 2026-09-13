@@ -21,6 +21,9 @@
       "displayName": "st_addon_scope_226sig_kit",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -36,6 +39,9 @@
       "displayName": "st_addon_scope_23_up",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -51,6 +57,9 @@
       "displayName": "st_addon_scope_apsabigo",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -66,6 +75,9 @@
       "displayName": "st_addon_scope_archangel",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -81,6 +93,9 @@
       "displayName": "st_addon_scope_gurza_up",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -96,6 +111,9 @@
       "displayName": "st_addon_scope_kab_up",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -111,6 +129,9 @@
       "displayName": "st_addon_scope_kashtan_rmr",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -126,6 +147,9 @@
       "displayName": "st_addon_scope_kit_aus_tri",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -141,6 +165,9 @@
       "displayName": "st_addon_scope_kit_fal_leup",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -156,6 +183,9 @@
       "displayName": "st_addon_scope_kit_sa5x_spec",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -171,6 +201,9 @@
       "displayName": "st_addon_scope_lapua700",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -186,6 +219,9 @@
       "displayName": "st_addon_scope_magpul_pro",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -201,6 +237,9 @@
       "displayName": "st_addon_scope_mod9",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -216,6 +255,9 @@
       "displayName": "st_addon_scope_mod_x_gen3",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -231,6 +273,9 @@
       "displayName": "st_addon_scope_mono_kit",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -246,6 +291,9 @@
       "displayName": "st_addon_scope_pl15_scolaz",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -261,6 +309,9 @@
       "displayName": "st_addon_scope_pritseldob",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -276,6 +327,9 @@
       "displayName": "st_addon_scope_shakal",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -291,6 +345,9 @@
       "displayName": "st_addon_scope_silen98",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "other"
       ]
@@ -306,6 +363,9 @@
       "displayName": "st_addon_scope_sr1upgr1",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -321,6 +381,9 @@
       "displayName": "st_addon_scope_sr2_upkit",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -336,6 +399,9 @@
       "displayName": "st_addon_scope_swamp",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]
@@ -351,6 +417,9 @@
       "displayName": "st_addon_scope_u2p2g0r",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -366,6 +435,9 @@
       "displayName": "st_addon_scope_upg220",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "nato"
       ]
@@ -381,6 +453,9 @@
       "displayName": "st_addon_scope_uptacppsh",
       "hasStashDrop": false,
       "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false,
       "factions": [
         "wp"
       ]

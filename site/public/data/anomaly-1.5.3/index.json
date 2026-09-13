@@ -1,9 +1,87 @@
 [
   {
+    "id": "tch_meal_1_ico",
+    "name": "\"tch_upgr\"",
+    "category": "Misc",
+    "displayName": "\"tch_upgr\" [meal_1_ico]"
+  },
+  {
+    "id": "tch_meal_2_ico",
+    "name": "\"tch_upgr\"",
+    "category": "Misc",
+    "displayName": "\"tch_upgr\" [meal_2_ico]"
+  },
+  {
+    "id": "tch_upgr_ico",
+    "name": "\"tch_upgr\"",
+    "category": "Misc",
+    "displayName": "\"tch_upgr\" [upgr_ico]"
+  },
+  {
     "id": "merc_ace_outfit",
     "name": "ace_outfit_name",
     "category": "Outfits",
     "displayName": "ace_outfit_name"
+  },
+  {
+    "id": "af_ameba_mica",
+    "name": "af_ameba_mica",
+    "category": "Misc",
+    "displayName": "af_ameba_mica"
+  },
+  {
+    "id": "af_ameba_slime",
+    "name": "af_ameba_slime",
+    "category": "Misc",
+    "displayName": "af_ameba_slime"
+  },
+  {
+    "id": "af_ameba_slug",
+    "name": "af_ameba_slug",
+    "category": "Misc",
+    "displayName": "af_ameba_slug"
+  },
+  {
+    "id": "af_drops",
+    "name": "af_drops",
+    "category": "Misc",
+    "displayName": "af_drops"
+  },
+  {
+    "id": "af_dummy_pellicle",
+    "name": "af_dummy_pellicle",
+    "category": "Misc",
+    "displayName": "af_dummy_pellicle"
+  },
+  {
+    "id": "af_dummy_spring",
+    "name": "af_dummy_spring",
+    "category": "Misc",
+    "displayName": "af_dummy_spring"
+  },
+  {
+    "id": "af_rusty_kristall",
+    "name": "af_rusty_kristall",
+    "category": "Misc",
+    "displayName": "af_rusty_kristall"
+  },
+  {
+    "id": "af_rusty_sea",
+    "name": "af_rusty_sea_urchin",
+    "category": "Misc",
+    "displayName": "af_rusty_sea_urchin"
+  },
+  {
+    "id": "af_rusty_thorn",
+    "name": "af_rusty_thorn",
+    "category": "Misc",
+    "displayName": "af_rusty_thorn"
+  },
+  {
+    "id": "ammo_12.7x55_ap",
+    "name": "ammo_12.7x55_ap",
+    "category": "Ammo",
+    "displayName": "ammo_12.7x55_ap"
   },
   {
     "id": "ammo_12.7x55_ap_bad",
@@ -12,16 +90,16 @@
     "displayName": "ammo_12.7x55_ap [bad]"
   },
   {
-    "id": "ammo_12.7x55_ap",
-    "name": "ammo_12.7x55_ap",
-    "category": "Ammo",
-    "displayName": "ammo_12.7x55_ap [default]"
-  },
-  {
     "id": "ammo_12.7x55_ap_verybad",
     "name": "ammo_12.7x55_ap",
     "category": "Ammo",
     "displayName": "ammo_12.7x55_ap [verybad]"
+  },
+  {
+    "id": "ammo_11.43x23_fmj",
+    "name": "ammo-11.43x23-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-11.43x23-fmj"
   },
   {
     "id": "ammo_11.43x23_fmj_bad",
@@ -30,16 +108,16 @@
     "displayName": "ammo-11.43x23-fmj [bad]"
   },
   {
-    "id": "ammo_11.43x23_fmj",
-    "name": "ammo-11.43x23-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-11.43x23-fmj [default]"
-  },
-  {
     "id": "ammo_11.43x23_fmj_verybad",
     "name": "ammo-11.43x23-fmj",
     "category": "Ammo",
     "displayName": "ammo-11.43x23-fmj [verybad]"
+  },
+  {
+    "id": "ammo_11.43x23_hydro",
+    "name": "ammo-11.43x23-hydro",
+    "category": "Ammo",
+    "displayName": "ammo-11.43x23-hydro"
   },
   {
     "id": "ammo_11.43x23_hydro_bad",
@@ -48,16 +126,16 @@
     "displayName": "ammo-11.43x23-hydro [bad]"
   },
   {
-    "id": "ammo_11.43x23_hydro",
-    "name": "ammo-11.43x23-hydro",
-    "category": "Ammo",
-    "displayName": "ammo-11.43x23-hydro [default]"
-  },
-  {
     "id": "ammo_11.43x23_hydro_verybad",
     "name": "ammo-11.43x23-hydro",
     "category": "Ammo",
     "displayName": "ammo-11.43x23-hydro [verybad]"
+  },
+  {
+    "id": "ammo_12.7x55_fmj",
+    "name": "ammo-12.7x55-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-12.7x55-fmj"
   },
   {
     "id": "ammo_12.7x55_fmj_bad",
@@ -66,28 +144,22 @@
     "displayName": "ammo-12.7x55-fmj [bad]"
   },
   {
-    "id": "ammo_12.7x55_fmj",
-    "name": "ammo-12.7x55-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-12.7x55-fmj [default]"
-  },
-  {
     "id": "ammo_12.7x55_fmj_verybad",
     "name": "ammo-12.7x55-fmj",
     "category": "Ammo",
     "displayName": "ammo-12.7x55-fmj [verybad]"
   },
   {
+    "id": "ammo_12x70_buck",
+    "name": "ammo-12x70-buck",
+    "category": "Ammo",
+    "displayName": "ammo-12x70-buck"
+  },
+  {
     "id": "ammo_12x70_buck_bad",
     "name": "ammo-12x70-buck",
     "category": "Ammo",
     "displayName": "ammo-12x70-buck [bad]"
-  },
-  {
-    "id": "ammo_12x70_buck",
-    "name": "ammo-12x70-buck",
-    "category": "Ammo",
-    "displayName": "ammo-12x70-buck [default]"
   },
   {
     "id": "ammo_12x70_buck_verybad",
@@ -108,16 +180,16 @@
     "displayName": "ammo-12x76-bull"
   },
   {
+    "id": "ammo_12x76_dart",
+    "name": "ammo-12x76-dart",
+    "category": "Ammo",
+    "displayName": "ammo-12x76-dart"
+  },
+  {
     "id": "ammo_12x76_dart_bad",
     "name": "ammo-12x76-dart",
     "category": "Ammo",
     "displayName": "ammo-12x76-dart [bad]"
-  },
-  {
-    "id": "ammo_12x76_dart",
-    "name": "ammo-12x76-dart",
-    "category": "Ammo",
-    "displayName": "ammo-12x76-dart [default]"
   },
   {
     "id": "ammo_12x76_dart_verybad",
@@ -126,16 +198,16 @@
     "displayName": "ammo-12x76-dart [verybad]"
   },
   {
+    "id": "ammo_12x76_zhekan",
+    "name": "ammo-12x76-zhekan",
+    "category": "Ammo",
+    "displayName": "ammo-12x76-zhekan"
+  },
+  {
     "id": "ammo_12x76_zhekan_bad",
     "name": "ammo-12x76-zhekan",
     "category": "Ammo",
     "displayName": "ammo-12x76-zhekan [bad]"
-  },
-  {
-    "id": "ammo_12x76_zhekan",
-    "name": "ammo-12x76-zhekan",
-    "category": "Ammo",
-    "displayName": "ammo-12x76-zhekan [default]"
   },
   {
     "id": "ammo_12x76_zhekan_verybad",
@@ -144,16 +216,16 @@
     "displayName": "ammo-12x76-zhekan [verybad]"
   },
   {
+    "id": "ammo_magnum_300",
+    "name": "ammo-338-lapua",
+    "category": "Ammo",
+    "displayName": "ammo-338-lapua"
+  },
+  {
     "id": "ammo_magnum_300_bad",
     "name": "ammo-338-lapua",
     "category": "Ammo",
     "displayName": "ammo-338-lapua [bad]"
-  },
-  {
-    "id": "ammo_magnum_300",
-    "name": "ammo-338-lapua",
-    "category": "Ammo",
-    "displayName": "ammo-338-lapua [default]"
   },
   {
     "id": "ammo_magnum_300_verybad",
@@ -162,16 +234,16 @@
     "displayName": "ammo-338-lapua [verybad]"
   },
   {
+    "id": "ammo_357_hp_mag",
+    "name": "ammo-357-hp",
+    "category": "Ammo",
+    "displayName": "ammo-357-hp"
+  },
+  {
     "id": "ammo_357_hp_mag_bad",
     "name": "ammo-357-hp",
     "category": "Ammo",
     "displayName": "ammo-357-hp [bad]"
-  },
-  {
-    "id": "ammo_357_hp_mag",
-    "name": "ammo-357-hp",
-    "category": "Ammo",
-    "displayName": "ammo-357-hp [default]"
   },
   {
     "id": "ammo_357_hp_mag_verybad",
@@ -180,16 +252,16 @@
     "displayName": "ammo-357-hp [verybad]"
   },
   {
+    "id": "ammo_4.6x30_fmj",
+    "name": "ammo-4.6x30-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-4.6x30-fmj"
+  },
+  {
     "id": "ammo_4.6x30_fmj_bad",
     "name": "ammo-4.6x30-fmj",
     "category": "Ammo",
     "displayName": "ammo-4.6x30-fmj [bad]"
-  },
-  {
-    "id": "ammo_4.6x30_fmj",
-    "name": "ammo-4.6x30-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-4.6x30-fmj [default]"
   },
   {
     "id": "ammo_4.6x30_fmj_verybad",
@@ -198,16 +270,16 @@
     "displayName": "ammo-4.6x30-fmj [verybad]"
   },
   {
+    "id": "ammo_5.45x39_ap",
+    "name": "ammo-5.45x39-ap",
+    "category": "Ammo",
+    "displayName": "ammo-5.45x39-ap"
+  },
+  {
     "id": "ammo_5.45x39_ap_bad",
     "name": "ammo-5.45x39-ap",
     "category": "Ammo",
     "displayName": "ammo-5.45x39-ap [bad]"
-  },
-  {
-    "id": "ammo_5.45x39_ap",
-    "name": "ammo-5.45x39-ap",
-    "category": "Ammo",
-    "displayName": "ammo-5.45x39-ap [default]"
   },
   {
     "id": "ammo_5.45x39_ap_verybad",
@@ -216,16 +288,16 @@
     "displayName": "ammo-5.45x39-ap [verybad]"
   },
   {
+    "id": "ammo_5.45x39_ep",
+    "name": "ammo-5.45x39-ep",
+    "category": "Ammo",
+    "displayName": "ammo-5.45x39-ep"
+  },
+  {
     "id": "ammo_5.45x39_ep_bad",
     "name": "ammo-5.45x39-ep",
     "category": "Ammo",
     "displayName": "ammo-5.45x39-ep [bad]"
-  },
-  {
-    "id": "ammo_5.45x39_ep",
-    "name": "ammo-5.45x39-ep",
-    "category": "Ammo",
-    "displayName": "ammo-5.45x39-ep [default]"
   },
   {
     "id": "ammo_5.45x39_ep_verybad",
@@ -234,16 +306,16 @@
     "displayName": "ammo-5.45x39-ep [verybad]"
   },
   {
+    "id": "ammo_5.45x39_fmj",
+    "name": "ammo-5.45x39-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-5.45x39-fmj"
+  },
+  {
     "id": "ammo_5.45x39_fmj_bad",
     "name": "ammo-5.45x39-fmj",
     "category": "Ammo",
     "displayName": "ammo-5.45x39-fmj [bad]"
-  },
-  {
-    "id": "ammo_5.45x39_fmj",
-    "name": "ammo-5.45x39-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-5.45x39-fmj [default]"
   },
   {
     "id": "ammo_5.45x39_fmj_verybad",
@@ -252,16 +324,16 @@
     "displayName": "ammo-5.45x39-fmj [verybad]"
   },
   {
+    "id": "ammo_5.56x45_ap",
+    "name": "ammo-5.56x45-ap",
+    "category": "Ammo",
+    "displayName": "ammo-5.56x45-ap"
+  },
+  {
     "id": "ammo_5.56x45_ap_bad",
     "name": "ammo-5.56x45-ap",
     "category": "Ammo",
     "displayName": "ammo-5.56x45-ap [bad]"
-  },
-  {
-    "id": "ammo_5.56x45_ap",
-    "name": "ammo-5.56x45-ap",
-    "category": "Ammo",
-    "displayName": "ammo-5.56x45-ap [default]"
   },
   {
     "id": "ammo_5.56x45_ap_verybad",
@@ -270,16 +342,16 @@
     "displayName": "ammo-5.56x45-ap [verybad]"
   },
   {
+    "id": "ammo_5.56x45_fmj",
+    "name": "ammo-5.56x45-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-5.56x45-fmj"
+  },
+  {
     "id": "ammo_5.56x45_fmj_bad",
     "name": "ammo-5.56x45-fmj",
     "category": "Ammo",
     "displayName": "ammo-5.56x45-fmj [bad]"
-  },
-  {
-    "id": "ammo_5.56x45_fmj",
-    "name": "ammo-5.56x45-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-5.56x45-fmj [default]"
   },
   {
     "id": "ammo_5.56x45_fmj_verybad",
@@ -288,16 +360,16 @@
     "displayName": "ammo-5.56x45-fmj [verybad]"
   },
   {
+    "id": "ammo_5.56x45_ss190",
+    "name": "ammo-5.56x45-ss190",
+    "category": "Ammo",
+    "displayName": "ammo-5.56x45-ss190"
+  },
+  {
     "id": "ammo_5.56x45_ss190_bad",
     "name": "ammo-5.56x45-ss190",
     "category": "Ammo",
     "displayName": "ammo-5.56x45-ss190 [bad]"
-  },
-  {
-    "id": "ammo_5.56x45_ss190",
-    "name": "ammo-5.56x45-ss190",
-    "category": "Ammo",
-    "displayName": "ammo-5.56x45-ss190 [default]"
   },
   {
     "id": "ammo_5.56x45_ss190_verybad",
@@ -306,16 +378,16 @@
     "displayName": "ammo-5.56x45-ss190 [verybad]"
   },
   {
+    "id": "ammo_5.7x28_ss190",
+    "name": "ammo-5.7x28-ss190",
+    "category": "Ammo",
+    "displayName": "ammo-5.7x28-ss190"
+  },
+  {
     "id": "ammo_5.7x28_ss190_bad",
     "name": "ammo-5.7x28-ss190",
     "category": "Ammo",
     "displayName": "ammo-5.7x28-ss190 [bad]"
-  },
-  {
-    "id": "ammo_5.7x28_ss190",
-    "name": "ammo-5.7x28-ss190",
-    "category": "Ammo",
-    "displayName": "ammo-5.7x28-ss190 [default]"
   },
   {
     "id": "ammo_5.7x28_ss190_verybad",
@@ -324,16 +396,16 @@
     "displayName": "ammo-5.7x28-ss190 [verybad]"
   },
   {
+    "id": "ammo_5.7x28_ss195",
+    "name": "ammo-5.7x28-ss195",
+    "category": "Ammo",
+    "displayName": "ammo-5.7x28-ss195"
+  },
+  {
     "id": "ammo_5.7x28_ss195_bad",
     "name": "ammo-5.7x28-ss195",
     "category": "Ammo",
     "displayName": "ammo-5.7x28-ss195 [bad]"
-  },
-  {
-    "id": "ammo_5.7x28_ss195",
-    "name": "ammo-5.7x28-ss195",
-    "category": "Ammo",
-    "displayName": "ammo-5.7x28-ss195 [default]"
   },
   {
     "id": "ammo_5.7x28_ss195_verybad",
@@ -342,16 +414,16 @@
     "displayName": "ammo-5.7x28-ss195 [verybad]"
   },
   {
+    "id": "ammo_50_bmg",
+    "name": "ammo-50-bmg",
+    "category": "Ammo",
+    "displayName": "ammo-50-bmg"
+  },
+  {
     "id": "ammo_50_bmg_bad",
     "name": "ammo-50-bmg",
     "category": "Ammo",
     "displayName": "ammo-50-bmg [bad]"
-  },
-  {
-    "id": "ammo_50_bmg",
-    "name": "ammo-50-bmg",
-    "category": "Ammo",
-    "displayName": "ammo-50-bmg [default]"
   },
   {
     "id": "ammo_50_bmg_verybad",
@@ -360,16 +432,16 @@
     "displayName": "ammo-50-bmg [verybad]"
   },
   {
+    "id": "ammo_7.62x25_p",
+    "name": "ammo-7.62x25-p",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x25-p"
+  },
+  {
     "id": "ammo_7.62x25_p_bad",
     "name": "ammo-7.62x25-p",
     "category": "Ammo",
     "displayName": "ammo-7.62x25-p [bad]"
-  },
-  {
-    "id": "ammo_7.62x25_p",
-    "name": "ammo-7.62x25-p",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x25-p [default]"
   },
   {
     "id": "ammo_7.62x25_p_verybad",
@@ -378,16 +450,16 @@
     "displayName": "ammo-7.62x25-p [verybad]"
   },
   {
+    "id": "ammo_7.62x25_ps",
+    "name": "ammo-7.62x25-ps",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x25-ps"
+  },
+  {
     "id": "ammo_7.62x25_ps_bad",
     "name": "ammo-7.62x25-ps",
     "category": "Ammo",
     "displayName": "ammo-7.62x25-ps [bad]"
-  },
-  {
-    "id": "ammo_7.62x25_ps",
-    "name": "ammo-7.62x25-ps",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x25-ps [default]"
   },
   {
     "id": "ammo_7.62x25_ps_verybad",
@@ -396,16 +468,16 @@
     "displayName": "ammo-7.62x25-ps [verybad]"
   },
   {
+    "id": "ammo_7.62x39_ap",
+    "name": "ammo-7.62x39_ap",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x39_ap"
+  },
+  {
     "id": "ammo_7.62x39_ap_bad",
     "name": "ammo-7.62x39_ap",
     "category": "Ammo",
     "displayName": "ammo-7.62x39_ap [bad]"
-  },
-  {
-    "id": "ammo_7.62x39_ap",
-    "name": "ammo-7.62x39_ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x39_ap [default]"
   },
   {
     "id": "ammo_7.62x39_ap_verybad",
@@ -414,16 +486,16 @@
     "displayName": "ammo-7.62x39_ap [verybad]"
   },
   {
+    "id": "ammo_7.62x39_fmj",
+    "name": "ammo-7.62x39_fmj",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x39_fmj"
+  },
+  {
     "id": "ammo_7.62x39_fmj_bad",
     "name": "ammo-7.62x39_fmj",
     "category": "Ammo",
     "displayName": "ammo-7.62x39_fmj [bad]"
-  },
-  {
-    "id": "ammo_7.62x39_fmj",
-    "name": "ammo-7.62x39_fmj",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x39_fmj [default]"
   },
   {
     "id": "ammo_7.62x39_fmj_verybad",
@@ -432,16 +504,16 @@
     "displayName": "ammo-7.62x39_fmj [verybad]"
   },
   {
+    "id": "ammo_7.62x51_ap",
+    "name": "ammo-7.62x51_ap",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x51_ap"
+  },
+  {
     "id": "ammo_7.62x51_ap_bad",
     "name": "ammo-7.62x51_ap",
     "category": "Ammo",
     "displayName": "ammo-7.62x51_ap [bad]"
-  },
-  {
-    "id": "ammo_7.62x51_ap",
-    "name": "ammo-7.62x51_ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x51_ap [default]"
   },
   {
     "id": "ammo_7.62x51_ap_verybad",
@@ -450,16 +522,16 @@
     "displayName": "ammo-7.62x51_ap [verybad]"
   },
   {
+    "id": "ammo_7.62x51_fmj",
+    "name": "ammo-7.62x51_fmj",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x51_fmj"
+  },
+  {
     "id": "ammo_7.62x51_fmj_bad",
     "name": "ammo-7.62x51_fmj",
     "category": "Ammo",
     "displayName": "ammo-7.62x51_fmj [bad]"
-  },
-  {
-    "id": "ammo_7.62x51_fmj",
-    "name": "ammo-7.62x51_fmj",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x51_fmj [default]"
   },
   {
     "id": "ammo_7.62x51_fmj_verybad",
@@ -468,16 +540,16 @@
     "displayName": "ammo-7.62x51_fmj [verybad]"
   },
   {
+    "id": "ammo_7.62x54_7h14",
+    "name": "ammo-7.62x54_7n14",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x54_7n14"
+  },
+  {
     "id": "ammo_7.62x54_7h14_bad",
     "name": "ammo-7.62x54_7n14",
     "category": "Ammo",
     "displayName": "ammo-7.62x54_7n14 [bad]"
-  },
-  {
-    "id": "ammo_7.62x54_7h14",
-    "name": "ammo-7.62x54_7n14",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54_7n14 [default]"
   },
   {
     "id": "ammo_7.62x54_7h14_verybad",
@@ -486,16 +558,16 @@
     "displayName": "ammo-7.62x54_7n14 [verybad]"
   },
   {
+    "id": "ammo_7.62x54_7h1",
+    "name": "ammo-7.62x54-7n1",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x54-7n1"
+  },
+  {
     "id": "ammo_7.62x54_7h1_bad",
     "name": "ammo-7.62x54-7n1",
     "category": "Ammo",
     "displayName": "ammo-7.62x54-7n1 [bad]"
-  },
-  {
-    "id": "ammo_7.62x54_7h1",
-    "name": "ammo-7.62x54-7n1",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54-7n1 [default]"
   },
   {
     "id": "ammo_7.62x54_7h1_verybad",
@@ -504,16 +576,16 @@
     "displayName": "ammo-7.62x54-7n1 [verybad]"
   },
   {
+    "id": "ammo_7.62x54_ap",
+    "name": "ammo-7.62x54-ap",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x54-ap"
+  },
+  {
     "id": "ammo_7.62x54_ap_bad",
     "name": "ammo-7.62x54-ap",
     "category": "Ammo",
     "displayName": "ammo-7.62x54-ap [bad]"
-  },
-  {
-    "id": "ammo_7.62x54_ap",
-    "name": "ammo-7.62x54-ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54-ap [default]"
   },
   {
     "id": "ammo_7.62x54_ap_verybad",
@@ -522,16 +594,16 @@
     "displayName": "ammo-7.62x54-ap [verybad]"
   },
   {
+    "id": "ammo_pkm_100",
+    "name": "ammo-7.62x54-r",
+    "category": "Ammo",
+    "displayName": "ammo-7.62x54-r"
+  },
+  {
     "id": "ammo_pkm_100_bad",
     "name": "ammo-7.62x54-r",
     "category": "Ammo",
     "displayName": "ammo-7.62x54-r [bad]"
-  },
-  {
-    "id": "ammo_pkm_100",
-    "name": "ammo-7.62x54-r",
-    "category": "Ammo",
-    "displayName": "ammo-7.62x54-r [default]"
   },
   {
     "id": "ammo_pkm_100_verybad",
@@ -540,16 +612,16 @@
     "displayName": "ammo-7.62x54-r [verybad]"
   },
   {
+    "id": "ammo_7.92x33_ap",
+    "name": "ammo-7.92x33_ap",
+    "category": "Ammo",
+    "displayName": "ammo-7.92x33_ap"
+  },
+  {
     "id": "ammo_7.92x33_ap_bad",
     "name": "ammo-7.92x33_ap",
     "category": "Ammo",
     "displayName": "ammo-7.92x33_ap [bad]"
-  },
-  {
-    "id": "ammo_7.92x33_ap",
-    "name": "ammo-7.92x33_ap",
-    "category": "Ammo",
-    "displayName": "ammo-7.92x33_ap [default]"
   },
   {
     "id": "ammo_7.92x33_ap_verybad",
@@ -558,16 +630,16 @@
     "displayName": "ammo-7.92x33_ap [verybad]"
   },
   {
+    "id": "ammo_7.92x33_fmj",
+    "name": "ammo-7.92x33_fmj",
+    "category": "Ammo",
+    "displayName": "ammo-7.92x33_fmj"
+  },
+  {
     "id": "ammo_7.92x33_fmj_bad",
     "name": "ammo-7.92x33_fmj",
     "category": "Ammo",
     "displayName": "ammo-7.92x33_fmj [bad]"
-  },
-  {
-    "id": "ammo_7.92x33_fmj",
-    "name": "ammo-7.92x33_fmj",
-    "category": "Ammo",
-    "displayName": "ammo-7.92x33_fmj [default]"
   },
   {
     "id": "ammo_7.92x33_fmj_verybad",
@@ -576,16 +648,16 @@
     "displayName": "ammo-7.92x33_fmj [verybad]"
   },
   {
+    "id": "ammo_9x18_ap",
+    "name": "ammo-9x18-ap",
+    "category": "Ammo",
+    "displayName": "ammo-9x18-ap"
+  },
+  {
     "id": "ammo_9x18_ap_bad",
     "name": "ammo-9x18-ap",
     "category": "Ammo",
     "displayName": "ammo-9x18-ap [bad]"
-  },
-  {
-    "id": "ammo_9x18_ap",
-    "name": "ammo-9x18-ap",
-    "category": "Ammo",
-    "displayName": "ammo-9x18-ap [default]"
   },
   {
     "id": "ammo_9x18_ap_verybad",
@@ -594,16 +666,16 @@
     "displayName": "ammo-9x18-ap [verybad]"
   },
   {
+    "id": "ammo_9x18_fmj",
+    "name": "ammo-9x18-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-9x18-fmj"
+  },
+  {
     "id": "ammo_9x18_fmj_bad",
     "name": "ammo-9x18-fmj",
     "category": "Ammo",
     "displayName": "ammo-9x18-fmj [bad]"
-  },
-  {
-    "id": "ammo_9x18_fmj",
-    "name": "ammo-9x18-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-9x18-fmj [default]"
   },
   {
     "id": "ammo_9x18_fmj_verybad",
@@ -612,16 +684,16 @@
     "displayName": "ammo-9x18-fmj [verybad]"
   },
   {
+    "id": "ammo_9x18_pmm",
+    "name": "ammo-9x18-pmm",
+    "category": "Ammo",
+    "displayName": "ammo-9x18-pmm"
+  },
+  {
     "id": "ammo_9x18_pmm_bad",
     "name": "ammo-9x18-pmm",
     "category": "Ammo",
     "displayName": "ammo-9x18-pmm [bad]"
-  },
-  {
-    "id": "ammo_9x18_pmm",
-    "name": "ammo-9x18-pmm",
-    "category": "Ammo",
-    "displayName": "ammo-9x18-pmm [default]"
   },
   {
     "id": "ammo_9x18_pmm_verybad",
@@ -630,16 +702,16 @@
     "displayName": "ammo-9x18-pmm [verybad]"
   },
   {
+    "id": "ammo_9x19_ap",
+    "name": "ammo-9x19-ap",
+    "category": "Ammo",
+    "displayName": "ammo-9x19-ap"
+  },
+  {
     "id": "ammo_9x19_ap_bad",
     "name": "ammo-9x19-ap",
     "category": "Ammo",
     "displayName": "ammo-9x19-ap [bad]"
-  },
-  {
-    "id": "ammo_9x19_ap",
-    "name": "ammo-9x19-ap",
-    "category": "Ammo",
-    "displayName": "ammo-9x19-ap [default]"
   },
   {
     "id": "ammo_9x19_ap_verybad",
@@ -648,16 +720,16 @@
     "displayName": "ammo-9x19-ap [verybad]"
   },
   {
+    "id": "ammo_9x19_fmj",
+    "name": "ammo-9x19-fmj",
+    "category": "Ammo",
+    "displayName": "ammo-9x19-fmj"
+  },
+  {
     "id": "ammo_9x19_fmj_bad",
     "name": "ammo-9x19-fmj",
     "category": "Ammo",
     "displayName": "ammo-9x19-fmj [bad]"
-  },
-  {
-    "id": "ammo_9x19_fmj",
-    "name": "ammo-9x19-fmj",
-    "category": "Ammo",
-    "displayName": "ammo-9x19-fmj [default]"
   },
   {
     "id": "ammo_9x19_fmj_verybad",
@@ -666,16 +738,16 @@
     "displayName": "ammo-9x19-fmj [verybad]"
   },
   {
+    "id": "ammo_9x19_pbp",
+    "name": "ammo-9x19-pbp",
+    "category": "Ammo",
+    "displayName": "ammo-9x19-pbp"
+  },
+  {
     "id": "ammo_9x19_pbp_bad",
     "name": "ammo-9x19-pbp",
     "category": "Ammo",
     "displayName": "ammo-9x19-pbp [bad]"
-  },
-  {
-    "id": "ammo_9x19_pbp",
-    "name": "ammo-9x19-pbp",
-    "category": "Ammo",
-    "displayName": "ammo-9x19-pbp [default]"
   },
   {
     "id": "ammo_9x19_pbp_verybad",
@@ -684,16 +756,16 @@
     "displayName": "ammo-9x19-pbp [verybad]"
   },
   {
+    "id": "ammo_9x39_ap",
+    "name": "ammo-9x39-ap",
+    "category": "Ammo",
+    "displayName": "ammo-9x39-ap"
+  },
+  {
     "id": "ammo_9x39_ap_bad",
     "name": "ammo-9x39-ap",
     "category": "Ammo",
     "displayName": "ammo-9x39-ap [bad]"
-  },
-  {
-    "id": "ammo_9x39_ap",
-    "name": "ammo-9x39-ap",
-    "category": "Ammo",
-    "displayName": "ammo-9x39-ap [default]"
   },
   {
     "id": "ammo_9x39_ap_verybad",
@@ -702,16 +774,16 @@
     "displayName": "ammo-9x39-ap [verybad]"
   },
   {
+    "id": "ammo_9x39_pab9",
+    "name": "ammo-9x39-pab9",
+    "category": "Ammo",
+    "displayName": "ammo-9x39-pab9"
+  },
+  {
     "id": "ammo_9x39_pab9_bad",
     "name": "ammo-9x39-pab9",
     "category": "Ammo",
     "displayName": "ammo-9x39-pab9 [bad]"
-  },
-  {
-    "id": "ammo_9x39_pab9",
-    "name": "ammo-9x39-pab9",
-    "category": "Ammo",
-    "displayName": "ammo-9x39-pab9 [default]"
   },
   {
     "id": "ammo_9x39_pab9_verybad",
@@ -720,16 +792,16 @@
     "displayName": "ammo-9x39-pab9 [verybad]"
   },
   {
+    "id": "ammo_gauss",
+    "name": "ammo-gauss",
+    "category": "Ammo",
+    "displayName": "ammo-gauss"
+  },
+  {
     "id": "ammo_gauss_bad",
     "name": "ammo-gauss",
     "category": "Ammo",
     "displayName": "ammo-gauss [bad]"
-  },
-  {
-    "id": "ammo_gauss",
-    "name": "ammo-gauss",
-    "category": "Ammo",
-    "displayName": "ammo-gauss [default]"
   },
   {
     "id": "ammo_gauss_verybad",
@@ -744,16 +816,16 @@
     "displayName": "ammo-gauss_cardan"
   },
   {
+    "id": "ammo_m209",
+    "name": "ammo-m209",
+    "category": "Ammo",
+    "displayName": "ammo-m209"
+  },
+  {
     "id": "ammo_m209_bad",
     "name": "ammo-m209",
     "category": "Ammo",
     "displayName": "ammo-m209 [bad]"
-  },
-  {
-    "id": "ammo_m209",
-    "name": "ammo-m209",
-    "category": "Ammo",
-    "displayName": "ammo-m209 [default]"
   },
   {
     "id": "ammo_m209_verybad",
@@ -762,16 +834,16 @@
     "displayName": "ammo-m209 [verybad]"
   },
   {
+    "id": "ammo_og-7b",
+    "name": "ammo-og-7b",
+    "category": "Ammo",
+    "displayName": "ammo-og-7b"
+  },
+  {
     "id": "ammo_og-7b_bad",
     "name": "ammo-og-7b",
     "category": "Ammo",
     "displayName": "ammo-og-7b [bad]"
-  },
-  {
-    "id": "ammo_og-7b",
-    "name": "ammo-og-7b",
-    "category": "Ammo",
-    "displayName": "ammo-og-7b [default]"
   },
   {
     "id": "ammo_og-7b_verybad",
@@ -780,16 +852,16 @@
     "displayName": "ammo-og-7b [verybad]"
   },
   {
+    "id": "ammo_vog-25",
+    "name": "ammo-vog-25",
+    "category": "Ammo",
+    "displayName": "ammo-vog-25"
+  },
+  {
     "id": "ammo_vog-25_bad",
     "name": "ammo-vog-25",
     "category": "Ammo",
     "displayName": "ammo-vog-25 [bad]"
-  },
-  {
-    "id": "ammo_vog-25",
-    "name": "ammo-vog-25",
-    "category": "Ammo",
-    "displayName": "ammo-vog-25 [default]"
   },
   {
     "id": "ammo_vog-25_verybad",
@@ -940,6 +1012,18 @@
     "name": "csky_novice_outfit_name",
     "category": "Outfits",
     "displayName": "csky_novice_outfit_name"
+  },
+  {
+    "id": "mutant_part_general_meat",
+    "name": "default",
+    "category": "Misc",
+    "displayName": "default [mutant_part_general_meat]"
+  },
+  {
+    "id": "tch_repair",
+    "name": "default",
+    "category": "Misc",
+    "displayName": "default [tch_repair]"
   },
   {
     "id": "dolg_exo_outfit",
@@ -1272,6 +1356,18 @@
     "displayName": "isg_scientific_outfit_name"
   },
   {
+    "id": "monolith_shard",
+    "name": "item_monolith_shard_name",
+    "category": "Misc",
+    "displayName": "item_monolith_shard_name"
+  },
+  {
+    "id": "jup_b1_half_artifact",
+    "name": "jup_b1_half_artifact",
+    "category": "Misc",
+    "displayName": "jup_b1_half_artifact"
+  },
+  {
     "id": "light_dolg_outfit",
     "name": "light_dolg_outfit_name",
     "category": "Outfits",
@@ -1320,7 +1416,8 @@
     "displayName": "lttz_ll_wpn_gauss_quest_name",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "merc_combat_scientific_outfit",
@@ -1527,10 +1624,76 @@
     "displayName": "mutant_boar_chop"
   },
   {
+    "id": "mutant_part_boar_leg",
+    "name": "mutant_boar_leg",
+    "category": "Misc",
+    "displayName": "mutant_boar_leg"
+  },
+  {
+    "id": "mutant_part_brain_burer",
+    "name": "mutant_brain_burer",
+    "category": "Misc",
+    "displayName": "mutant_brain_burer"
+  },
+  {
+    "id": "mutant_part_burer_hand",
+    "name": "mutant_burer_hand",
+    "category": "Misc",
+    "displayName": "mutant_burer_hand"
+  },
+  {
+    "id": "mutant_part_cat_claw",
+    "name": "mutant_cat_claw",
+    "category": "Misc",
+    "displayName": "mutant_cat_claw"
+  },
+  {
+    "id": "mutant_part_cat_tail",
+    "name": "mutant_cat_tail",
+    "category": "Misc",
+    "displayName": "mutant_cat_tail"
+  },
+  {
+    "id": "mutant_part_cat_thyroid",
+    "name": "mutant_cat_thyroid",
+    "category": "Misc",
+    "displayName": "mutant_cat_thyroid"
+  },
+  {
+    "id": "mutant_part_chimera_claw",
+    "name": "mutant_chimera_claw",
+    "category": "Misc",
+    "displayName": "mutant_chimera_claw"
+  },
+  {
+    "id": "mutant_part_chimera_kogot",
+    "name": "mutant_chimera_cogot",
+    "category": "Misc",
+    "displayName": "mutant_chimera_cogot"
+  },
+  {
     "id": "mutant_part_chimera_meat",
     "name": "mutant_chimera_meat",
     "category": "Food",
     "displayName": "mutant_chimera_meat"
+  },
+  {
+    "id": "mutant_part_controller_hand",
+    "name": "mutant_controller_hand",
+    "category": "Misc",
+    "displayName": "mutant_controller_hand"
+  },
+  {
+    "id": "mutant_part_dog_heart",
+    "name": "mutant_dog_heart",
+    "category": "Misc",
+    "displayName": "mutant_dog_heart"
+  },
+  {
+    "id": "mutant_part_dog_liver",
+    "name": "mutant_dog_liver",
+    "category": "Misc",
+    "displayName": "mutant_dog_liver"
   },
   {
     "id": "mutant_part_dog_meat",
@@ -1539,10 +1702,52 @@
     "displayName": "mutant_dog_meat"
   },
   {
+    "id": "mutant_part_dog_tail",
+    "name": "mutant_dog_tail",
+    "category": "Misc",
+    "displayName": "mutant_dog_tail"
+  },
+  {
+    "id": "mutant_part_fang_psevdodog",
+    "name": "mutant_fang_psevdodog",
+    "category": "Misc",
+    "displayName": "mutant_fang_psevdodog"
+  },
+  {
+    "id": "mutant_part_flesh_eye",
+    "name": "mutant_flesh_eye",
+    "category": "Misc",
+    "displayName": "mutant_flesh_eye"
+  },
+  {
     "id": "mutant_part_flesh_meat",
     "name": "mutant_flesh_meat",
     "category": "Food",
     "displayName": "mutant_flesh_meat"
+  },
+  {
+    "id": "mutant_part_fracture_hand",
+    "name": "mutant_fracture_hand",
+    "category": "Misc",
+    "displayName": "mutant_fracture_hand"
+  },
+  {
+    "id": "mutant_part_heart_bloodsucker",
+    "name": "mutant_heart_bloodsucker",
+    "category": "Misc",
+    "displayName": "mutant_heart_bloodsucker"
+  },
+  {
+    "id": "mutant_part_heart_chimera",
+    "name": "mutant_heart_chimera",
+    "category": "Misc",
+    "displayName": "mutant_heart_chimera"
+  },
+  {
+    "id": "mutant_part_krovosos_jaw",
+    "name": "mutant_krovosos_jaw",
+    "category": "Misc",
+    "displayName": "mutant_krovosos_jaw"
   },
   {
     "id": "mutant_part_krovosos_meat",
@@ -1551,16 +1756,58 @@
     "displayName": "mutant_krovosos_meat"
   },
   {
+    "id": "mutant_part_lurker_eye",
+    "name": "mutant_lurker_eye",
+    "category": "Misc",
+    "displayName": "mutant_lurker_eye"
+  },
+  {
     "id": "mutant_part_lurker_meat",
     "name": "mutant_lurker_meat",
     "category": "Food",
     "displayName": "mutant_lurker_meat"
   },
   {
+    "id": "mutant_part_lurker_tail",
+    "name": "mutant_lurker_tail",
+    "category": "Misc",
+    "displayName": "mutant_lurker_tail"
+  },
+  {
+    "id": "mutant_part_controller_glass",
+    "name": "mutant_part_controller_brain_tissue",
+    "category": "Misc",
+    "displayName": "mutant_part_controller_brain_tissue"
+  },
+  {
+    "id": "mutant_part_pseudogigant_eye",
+    "name": "mutant_pseudogigant_eye",
+    "category": "Misc",
+    "displayName": "mutant_pseudogigant_eye"
+  },
+  {
+    "id": "mutant_part_pseudogigant_hand",
+    "name": "mutant_pseudogigant_hand",
+    "category": "Misc",
+    "displayName": "mutant_pseudogigant_hand"
+  },
+  {
     "id": "mutant_part_psevdodog_meat",
     "name": "mutant_psevdodog_meat",
     "category": "Food",
     "displayName": "mutant_psevdodog_meat"
+  },
+  {
+    "id": "mutant_part_psevdodog_tail",
+    "name": "mutant_psevdodog_tail",
+    "category": "Misc",
+    "displayName": "mutant_psevdodog_tail"
+  },
+  {
+    "id": "mutant_part_psysucker_hand",
+    "name": "mutant_psysucker_hand",
+    "category": "Misc",
+    "displayName": "mutant_psysucker_hand"
   },
   {
     "id": "mutant_part_psysucker_meat",
@@ -1575,10 +1822,40 @@
     "displayName": "mutant_snork_hand"
   },
   {
+    "id": "mutant_part_snork_leg",
+    "name": "mutant_snork_leg",
+    "category": "Misc",
+    "displayName": "mutant_snork_leg"
+  },
+  {
+    "id": "mutant_part_snork_mask",
+    "name": "mutant_snork_mask",
+    "category": "Misc",
+    "displayName": "mutant_snork_mask"
+  },
+  {
+    "id": "mutant_part_tushkano_head",
+    "name": "mutant_tushkano_head",
+    "category": "Misc",
+    "displayName": "mutant_tushkano_head"
+  },
+  {
     "id": "mutant_part_tushkano_meat",
     "name": "mutant_tushkano_meat",
     "category": "Food",
     "displayName": "mutant_tushkano_meat"
+  },
+  {
+    "id": "mutant_part_tusk_boar",
+    "name": "mutant_tusk_boar",
+    "category": "Misc",
+    "displayName": "mutant_tusk_boar"
+  },
+  {
+    "id": "mutant_part_zombi_hand",
+    "name": "mutant_zombi_hand",
+    "category": "Misc",
+    "displayName": "mutant_zombi_hand"
   },
   {
     "id": "nbc_dolg_outfit",
@@ -1603,6 +1880,12 @@
     "name": "nbc_outfit_name",
     "category": "Outfits",
     "displayName": "nbc_outfit_name"
+  },
+  {
+    "id": "mine_new_blow",
+    "name": "nil",
+    "category": "Misc",
+    "displayName": "nil"
   },
   {
     "id": "nomad_outfit",
@@ -2010,7 +2293,13 @@
     "id": "af_electra_flash",
     "name": "st_af_electra_flash_name",
     "category": "Artefacts",
-    "displayName": "st_af_electra_flash_name"
+    "displayName": "st_af_electra_flash_name [af_electra_flash]"
+  },
+  {
+    "id": "marker",
+    "name": "st_af_electra_flash_name",
+    "category": "Misc",
+    "displayName": "st_af_electra_flash_name [marker]"
   },
   {
     "id": "af_electra_moonlight",
@@ -2277,6 +2566,12 @@
     "displayName": "st_af_plates_up_name"
   },
   {
+    "id": "af_quest_b14_twisted",
+    "name": "st_af_quest_b14_twisted",
+    "category": "Misc",
+    "displayName": "st_af_quest_b14_twisted"
+  },
+  {
     "id": "af_repei",
     "name": "st_af_repei_name",
     "category": "Artefacts",
@@ -2385,6 +2680,12 @@
     "displayName": "st_akvatab"
   },
   {
+    "id": "ammo_box",
+    "name": "st_ammo_box",
+    "category": "Misc",
+    "displayName": "st_ammo_box"
+  },
+  {
     "id": "analgetic",
     "name": "st_analgetic",
     "category": "Medicine",
@@ -2427,6 +2728,24 @@
     "displayName": "st_antirad_kalium"
   },
   {
+    "id": "armor_repair_fa",
+    "name": "st_armor_repair_fa",
+    "category": "Misc",
+    "displayName": "st_armor_repair_fa"
+  },
+  {
+    "id": "army_bowler",
+    "name": "st_army_bowler",
+    "category": "Misc",
+    "displayName": "st_army_bowler"
+  },
+  {
+    "id": "army_patch",
+    "name": "st_army_fp",
+    "category": "Misc",
+    "displayName": "st_army_fp"
+  },
+  {
     "id": "wpn_axe",
     "name": "st_axe",
     "category": "Melee",
@@ -2439,10 +2758,46 @@
     "displayName": "st_axe3"
   },
   {
+    "id": "ball_hammer",
+    "name": "st_ball_hammer",
+    "category": "Misc",
+    "displayName": "st_ball_hammer"
+  },
+  {
+    "id": "explo_balon_gas",
+    "name": "st_balon_gas",
+    "category": "Misc",
+    "displayName": "st_balon_gas"
+  },
+  {
+    "id": "explo_balon_gas_empty",
+    "name": "st_balon_gas_empty",
+    "category": "Misc",
+    "displayName": "st_balon_gas_empty"
+  },
+  {
     "id": "bandage",
     "name": "st_bandage",
     "category": "Medicine",
     "displayName": "st_bandage"
+  },
+  {
+    "id": "bandit_patch",
+    "name": "st_bandit_fp",
+    "category": "Misc",
+    "displayName": "st_bandit_fp"
+  },
+  {
+    "id": "batteries_dead",
+    "name": "st_batteries",
+    "category": "Misc",
+    "displayName": "st_batteries"
+  },
+  {
+    "id": "beadspread",
+    "name": "st_beadspread",
+    "category": "Misc",
+    "displayName": "st_beadspread"
   },
   {
     "id": "beans",
@@ -2457,10 +2812,40 @@
     "displayName": "st_beer"
   },
   {
+    "id": "wpn_binoc_inv",
+    "name": "st_binocular_name",
+    "category": "Misc",
+    "displayName": "st_binocular_name"
+  },
+  {
+    "id": "bolts_pack",
+    "name": "st_bolts_pack",
+    "category": "Misc",
+    "displayName": "st_bolts_pack"
+  },
+  {
+    "id": "bolt",
+    "name": "st_bolty",
+    "category": "Misc",
+    "displayName": "st_bolty"
+  },
+  {
+    "id": "boots",
+    "name": "st_boots",
+    "category": "Misc",
+    "displayName": "st_boots"
+  },
+  {
     "id": "bottle_metal",
     "name": "st_bottle_metal",
     "category": "Food",
     "displayName": "st_bottle_metal"
+  },
+  {
+    "id": "box_matches",
+    "name": "st_box_matches",
+    "category": "Misc",
+    "displayName": "st_box_matches"
   },
   {
     "id": "bread",
@@ -2475,10 +2860,34 @@
     "displayName": "st_breadold"
   },
   {
+    "id": "broken_detector",
+    "name": "st_broken_detector",
+    "category": "Misc",
+    "displayName": "st_broken_detector"
+  },
+  {
     "id": "caffeine",
     "name": "st_caffeine",
     "category": "Medicine",
     "displayName": "st_caffeine"
+  },
+  {
+    "id": "cards",
+    "name": "st_cards",
+    "category": "Misc",
+    "displayName": "st_cards"
+  },
+  {
+    "id": "cash",
+    "name": "st_cash_name",
+    "category": "Misc",
+    "displayName": "st_cash_name"
+  },
+  {
+    "id": "charcoal",
+    "name": "st_charcoal",
+    "category": "Misc",
+    "displayName": "st_charcoal"
   },
   {
     "id": "chili",
@@ -2535,16 +2944,70 @@
     "displayName": "st_cigarettes_russian"
   },
   {
+    "id": "cleaning_kit_p",
+    "name": "st_cleaning_kit_p",
+    "category": "Misc",
+    "displayName": "st_cleaning_kit_p"
+  },
+  {
+    "id": "cleaning_kit_r5",
+    "name": "st_cleaning_kit_r5",
+    "category": "Misc",
+    "displayName": "st_cleaning_kit_r5"
+  },
+  {
+    "id": "cleaning_kit_r7",
+    "name": "st_cleaning_kit_r7",
+    "category": "Misc",
+    "displayName": "st_cleaning_kit_r7"
+  },
+  {
+    "id": "cleaning_kit_s",
+    "name": "st_cleaning_kit_s",
+    "category": "Misc",
+    "displayName": "st_cleaning_kit_s"
+  },
+  {
+    "id": "cleaning_kit_u",
+    "name": "st_cleaning_kit_u",
+    "category": "Misc",
+    "displayName": "st_cleaning_kit_u"
+  },
+  {
+    "id": "csky_patch",
+    "name": "st_clearsky_fp",
+    "category": "Misc",
+    "displayName": "st_clearsky_fp"
+  },
+  {
     "id": "cocaine",
     "name": "st_cocaine",
     "category": "Medicine",
     "displayName": "st_cocaine"
   },
   {
+    "id": "compression_bag",
+    "name": "st_compression_bag",
+    "category": "Misc",
+    "displayName": "st_compression_bag"
+  },
+  {
     "id": "conserva",
     "name": "st_conserva",
     "category": "Food",
-    "displayName": "st_conserva"
+    "displayName": "st_conserva [conserva]"
+  },
+  {
+    "id": "tch_money",
+    "name": "st_conserva",
+    "category": "Misc",
+    "displayName": "st_conserva [tch_money]"
+  },
+  {
+    "id": "cooking",
+    "name": "st_cooking",
+    "category": "Misc",
+    "displayName": "st_cooking"
   },
   {
     "id": "corn",
@@ -2561,8 +3024,86 @@
   {
     "id": "cutlery",
     "name": "st_cutlery",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_cutlery"
+  },
+  {
+    "id": "detector_simple",
+    "name": "st_detector1",
+    "category": "Misc",
+    "displayName": "st_detector1 [detector_simple]"
+  },
+  {
+    "id": "tch_detector",
+    "name": "st_detector1",
+    "category": "Misc",
+    "displayName": "st_detector1 [tch_detector]"
+  },
+  {
+    "id": "detector_advanced",
+    "name": "st_detector2",
+    "category": "Misc",
+    "displayName": "st_detector2"
+  },
+  {
+    "id": "detector_elite",
+    "name": "st_detector3",
+    "category": "Misc",
+    "displayName": "st_detector3"
+  },
+  {
+    "id": "detector_scientific",
+    "name": "st_detector4",
+    "category": "Misc",
+    "displayName": "st_detector4"
+  },
+  {
+    "id": "detector_anomaly",
+    "name": "st_detector8",
+    "category": "Misc",
+    "displayName": "st_detector8"
+  },
+  {
+    "id": "detector_radio",
+    "name": "st_detector9",
+    "category": "Misc",
+    "displayName": "st_detector9"
+  },
+  {
+    "id": "device_flashlight",
+    "name": "st_device_flashlight",
+    "category": "Misc",
+    "displayName": "st_device_flashlight"
+  },
+  {
+    "id": "device_torch_dummy",
+    "name": "st_device_torch_name",
+    "category": "Misc",
+    "displayName": "st_device_torch_name"
+  },
+  {
+    "id": "device_torch_nv_1",
+    "name": "st_device_torch_nv_1_name",
+    "category": "Misc",
+    "displayName": "st_device_torch_nv_1_name"
+  },
+  {
+    "id": "device_torch_nv_2",
+    "name": "st_device_torch_nv_2_name",
+    "category": "Misc",
+    "displayName": "st_device_torch_nv_2_name"
+  },
+  {
+    "id": "device_torch_nv_3",
+    "name": "st_device_torch_nv_3_name",
+    "category": "Misc",
+    "displayName": "st_device_torch_nv_3_name"
+  },
+  {
+    "id": "dolg_patch",
+    "name": "st_dolg_fp",
+    "category": "Misc",
+    "displayName": "st_dolg_fp"
   },
   {
     "id": "drink_crow",
@@ -2609,14 +3150,20 @@
   {
     "id": "duct_tape",
     "name": "st_duct_tape",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_duct_tape"
   },
   {
     "id": "e_syringe",
     "name": "st_e_syringe",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_e_syringe"
+  },
+  {
+    "id": "ecolog_patch",
+    "name": "st_ecolog_fp",
+    "category": "Misc",
+    "displayName": "st_ecolog_fp"
   },
   {
     "id": "ecolog_outfit_blue",
@@ -2685,10 +3232,64 @@
     "displayName": "st_equ_touristpack_name"
   },
   {
+    "id": "exo_repair_kit",
+    "name": "st_exo_repair_kit",
+    "category": "Misc",
+    "displayName": "st_exo_repair_kit"
+  },
+  {
+    "id": "heavy_repair_kit",
+    "name": "st_exolight_repair_kit",
+    "category": "Misc",
+    "displayName": "st_exolight_repair_kit"
+  },
+  {
+    "id": "fieldcooker",
+    "name": "st_fieldcooker",
+    "category": "Misc",
+    "displayName": "st_fieldcooker"
+  },
+  {
+    "id": "flashlight_broken",
+    "name": "st_flashlight_broken",
+    "category": "Misc",
+    "displayName": "st_flashlight_broken"
+  },
+  {
     "id": "flask",
     "name": "st_flask",
     "category": "Food",
     "displayName": "st_flask"
+  },
+  {
+    "id": "freedom_patch",
+    "name": "st_freedom_fp",
+    "category": "Misc",
+    "displayName": "st_freedom_fp"
+  },
+  {
+    "id": "tch_fuel_1_ico",
+    "name": "st_fuel_tier_1",
+    "category": "Misc",
+    "displayName": "st_fuel_tier_1"
+  },
+  {
+    "id": "tch_fuel_2_ico",
+    "name": "st_fuel_tier_2",
+    "category": "Misc",
+    "displayName": "st_fuel_tier_2"
+  },
+  {
+    "id": "detector_geiger",
+    "name": "st_geiger_dead",
+    "category": "Misc",
+    "displayName": "st_geiger_dead"
+  },
+  {
+    "id": "gloves",
+    "name": "st_gloves",
+    "category": "Misc",
+    "displayName": "st_gloves"
   },
   {
     "id": "glucose",
@@ -2703,13 +3304,44 @@
     "displayName": "st_glucose_s"
   },
   {
+    "id": "glue_a",
+    "name": "st_glue_a",
+    "category": "Misc",
+    "displayName": "st_glue_a"
+  },
+  {
+    "id": "glue_b",
+    "name": "st_glue_b",
+    "category": "Misc",
+    "displayName": "st_glue_b"
+  },
+  {
+    "id": "glue_e",
+    "name": "st_glue_e",
+    "category": "Misc",
+    "displayName": "st_glue_e"
+  },
+  {
+    "id": "grease",
+    "name": "st_grease",
+    "category": "Misc",
+    "displayName": "st_grease"
+  },
+  {
+    "id": "greh_patch",
+    "name": "st_greh_fp",
+    "category": "Misc",
+    "displayName": "st_greh_fp"
+  },
+  {
     "id": "grenade_f1",
     "name": "st_grenade_f1",
     "category": "Explosives",
     "displayName": "st_grenade_f1",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_addon_grenade_launcher",
@@ -2730,7 +3362,8 @@
     "displayName": "st_grenade_rgd5",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "grenade_smoke",
@@ -2739,7 +3372,8 @@
     "displayName": "st_grenade_smoke",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "grenade_gd-05",
@@ -2748,13 +3382,68 @@
     "displayName": "st_grenade_thermite",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
+  },
+  {
+    "id": "grooming",
+    "name": "st_grooming",
+    "category": "Misc",
+    "displayName": "st_grooming"
+  },
+  {
+    "id": "guitar_a",
+    "name": "st_guitar_name",
+    "category": "Misc",
+    "displayName": "st_guitar_name"
+  },
+  {
+    "id": "gun_oil",
+    "name": "st_gun_oil",
+    "category": "Misc",
+    "displayName": "st_gun_oil"
+  },
+  {
+    "id": "gun_oil_ru",
+    "name": "st_gun_oil_ru",
+    "category": "Misc",
+    "displayName": "st_gun_oil_ru"
+  },
+  {
+    "id": "gun_oil_ru_d",
+    "name": "st_gun_oil_ru_d",
+    "category": "Misc",
+    "displayName": "st_gun_oil_ru_d"
   },
   {
     "id": "hand_rolling_tobacco",
     "name": "st_hand_rolling_tobacco",
     "category": "Food",
     "displayName": "st_hand_rolling_tobacco"
+  },
+  {
+    "id": "hand_watch",
+    "name": "st_hand_watch",
+    "category": "Misc",
+    "displayName": "st_hand_watch"
+  },
+  {
+    "id": "harmonica_a",
+    "name": "st_harmonica_name",
+    "category": "Misc",
+    "displayName": "st_harmonica_name"
+  },
+  {
+    "id": "headlamp",
+    "name": "st_headlamp",
+    "category": "Misc",
+    "displayName": "st_headlamp"
+  },
+  {
+    "id": "heavy_sewing_thread",
+    "name": "st_heavy_sewing_thread",
+    "category": "Misc",
+    "displayName": "st_heavy_sewing_thread"
   },
   {
     "id": "helm_bandana",
@@ -2784,7 +3473,7 @@
     "id": "helm_hardhat",
     "name": "st_helm_hardhat",
     "category": "Helmets",
-    "displayName": "st_helm_hardhat [default]"
+    "displayName": "st_helm_hardhat"
   },
   {
     "id": "helm_hardhat_snag",
@@ -2820,7 +3509,7 @@
     "id": "helm_respirator",
     "name": "st_helm_respirator",
     "category": "Helmets",
-    "displayName": "st_helm_respirator [default]"
+    "displayName": "st_helm_respirator"
   },
   {
     "id": "helm_respirator_old",
@@ -2845,6 +3534,12 @@
     "name": "st_helm_tactic",
     "category": "Helmets",
     "displayName": "st_helm_tactic"
+  },
+  {
+    "id": "helmet_repair_kit",
+    "name": "st_helmet_repair_kit",
+    "category": "Misc",
+    "displayName": "st_helmet_repair_kit"
   },
   {
     "id": "hide_bloodsucker",
@@ -2919,7 +3614,26 @@
     "displayName": "st_ied",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
+  },
+  {
+    "id": "ied_blow",
+    "name": "st_ied",
+    "category": "Misc",
+    "displayName": "st_ied [blow]"
+  },
+  {
+    "id": "ied_new_blow",
+    "name": "st_ied",
+    "category": "Misc",
+    "displayName": "st_ied [new_blow]"
+  },
+  {
+    "id": "ied_new",
+    "name": "st_ied",
+    "category": "Misc",
+    "displayName": "st_ied [new]"
   },
   {
     "id": "ied_rpg",
@@ -2928,7 +3642,38 @@
     "displayName": "st_ied_rpg",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
+  },
+  {
+    "id": "ied_rpg_new",
+    "name": "st_ied_rpg",
+    "category": "Misc",
+    "displayName": "st_ied_rpg [new]"
+  },
+  {
+    "id": "isg_patch",
+    "name": "st_isg_fp",
+    "category": "Misc",
+    "displayName": "st_isg_fp"
+  },
+  {
+    "id": "itm_actor_backpack",
+    "name": "st_itm_actor_backpack_name",
+    "category": "Misc",
+    "displayName": "st_itm_actor_backpack_name"
+  },
+  {
+    "id": "itm_advancedkit",
+    "name": "st_itm_advancedkit_name",
+    "category": "Misc",
+    "displayName": "st_itm_advancedkit_name"
+  },
+  {
+    "id": "itm_ammokit",
+    "name": "st_itm_ammokit",
+    "category": "Misc",
+    "displayName": "st_itm_ammokit"
   },
   {
     "id": "artefact_container",
@@ -2940,13 +3685,139 @@
     "id": "itm_backpack",
     "name": "st_itm_backpack_name",
     "category": "Belt Attachments",
-    "displayName": "st_itm_backpack_name"
+    "displayName": "st_itm_backpack_name [itm_backpack]"
+  },
+  {
+    "id": "test_container",
+    "name": "st_itm_backpack_name",
+    "category": "Misc",
+    "displayName": "st_itm_backpack_name [test_container]"
+  },
+  {
+    "id": "itm_basickit",
+    "name": "st_itm_basickit_name",
+    "category": "Misc",
+    "displayName": "st_itm_basickit_name"
+  },
+  {
+    "id": "itm_deployable_mgun",
+    "name": "st_itm_deployable_mgun_name",
+    "category": "Misc",
+    "displayName": "st_itm_deployable_mgun_name"
+  },
+  {
+    "id": "itm_drugkit",
+    "name": "st_itm_drugkit",
+    "category": "Misc",
+    "displayName": "st_itm_drugkit"
+  },
+  {
+    "id": "itm_expertkit",
+    "name": "st_itm_expertkit_name",
+    "category": "Misc",
+    "displayName": "st_itm_expertkit_name"
+  },
+  {
+    "id": "tch_mapkit",
+    "name": "st_itm_mapkit",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit"
+  },
+  {
+    "id": "itm_mapkit_1",
+    "name": "st_itm_mapkit_1",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_1"
+  },
+  {
+    "id": "itm_mapkit_2",
+    "name": "st_itm_mapkit_2",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_2"
+  },
+  {
+    "id": "itm_mapkit_3",
+    "name": "st_itm_mapkit_3",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_3"
+  },
+  {
+    "id": "itm_mapkit_4",
+    "name": "st_itm_mapkit_4",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_4"
+  },
+  {
+    "id": "itm_mapkit_5",
+    "name": "st_itm_mapkit_5",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_5"
+  },
+  {
+    "id": "itm_mapkit_6",
+    "name": "st_itm_mapkit_6",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_6"
+  },
+  {
+    "id": "itm_mapkit_7",
+    "name": "st_itm_mapkit_7",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_7"
+  },
+  {
+    "id": "itm_mapkit_8",
+    "name": "st_itm_mapkit_8",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_8"
+  },
+  {
+    "id": "itm_mapkit_9",
+    "name": "st_itm_mapkit_9",
+    "category": "Misc",
+    "displayName": "st_itm_mapkit_9"
+  },
+  {
+    "id": "itm_sleepbag",
+    "name": "st_itm_sleepbag_name",
+    "category": "Misc",
+    "displayName": "st_itm_sleepbag_name"
+  },
+  {
+    "id": "itm_tent_bag",
+    "name": "st_itm_tent_bag",
+    "category": "Misc",
+    "displayName": "st_itm_tent_bag"
+  },
+  {
+    "id": "itm_tent",
+    "name": "st_itm_tent_name",
+    "category": "Misc",
+    "displayName": "st_itm_tent_name"
   },
   {
     "id": "jar",
     "name": "st_jar",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_jar"
+  },
+  {
+    "id": "explo_jerrycan_fuel",
+    "name": "st_jerrycan_fuel",
+    "category": "Misc",
+    "displayName": "st_jerrycan_fuel"
+  },
+  {
+    "id": "explo_jerrycan_fuel_empty",
+    "name": "st_jerrycan_fuel_empty",
+    "category": "Misc",
+    "displayName": "st_jerrycan_fuel_empty"
+  },
+  {
+    "id": "jewelry_box",
+    "name": "st_jewelry_box",
+    "category": "Misc",
+    "displayName": "st_jewelry_box"
   },
   {
     "id": "jgut",
@@ -2959,6 +3830,18 @@
     "name": "st_joint",
     "category": "Food",
     "displayName": "st_joint"
+  },
+  {
+    "id": "journal",
+    "name": "st_journal",
+    "category": "Misc",
+    "displayName": "st_journal"
+  },
+  {
+    "id": "kerosene",
+    "name": "st_kerosene",
+    "category": "Misc",
+    "displayName": "st_kerosene"
   },
   {
     "id": "kit_hunt",
@@ -3003,10 +3886,34 @@
     "displayName": "st_kolbasa"
   },
   {
+    "id": "leatherman_tool",
+    "name": "st_leatherman_tool",
+    "category": "Misc",
+    "displayName": "st_leatherman_tool"
+  },
+  {
+    "id": "light_repair_kit",
+    "name": "st_light_repair_kit",
+    "category": "Misc",
+    "displayName": "st_light_repair_kit"
+  },
+  {
     "id": "marijuana",
     "name": "st_marijuana",
     "category": "Food",
     "displayName": "st_marijuana"
+  },
+  {
+    "id": "matches",
+    "name": "st_matches",
+    "category": "Misc",
+    "displayName": "st_matches"
+  },
+  {
+    "id": "meat_bloodsucker",
+    "name": "st_meat_bloodsucker",
+    "category": "Food",
+    "displayName": "st_meat_bloodsucker"
   },
   {
     "id": "meat_bloodsucker_a",
@@ -3021,10 +3928,10 @@
     "displayName": "st_meat_bloodsucker [b]"
   },
   {
-    "id": "meat_bloodsucker",
-    "name": "st_meat_bloodsucker",
+    "id": "meat_boar",
+    "name": "st_meat_boar",
     "category": "Food",
-    "displayName": "st_meat_bloodsucker [default]"
+    "displayName": "st_meat_boar"
   },
   {
     "id": "meat_boar_a",
@@ -3039,10 +3946,10 @@
     "displayName": "st_meat_boar [b]"
   },
   {
-    "id": "meat_boar",
-    "name": "st_meat_boar",
+    "id": "meat_chimera",
+    "name": "st_meat_chimera",
     "category": "Food",
-    "displayName": "st_meat_boar [default]"
+    "displayName": "st_meat_chimera"
   },
   {
     "id": "meat_chimera_a",
@@ -3057,10 +3964,10 @@
     "displayName": "st_meat_chimera [b]"
   },
   {
-    "id": "meat_chimera",
-    "name": "st_meat_chimera",
+    "id": "meat_dog",
+    "name": "st_meat_dog",
     "category": "Food",
-    "displayName": "st_meat_chimera [default]"
+    "displayName": "st_meat_dog"
   },
   {
     "id": "meat_dog_a",
@@ -3075,10 +3982,10 @@
     "displayName": "st_meat_dog [b]"
   },
   {
-    "id": "meat_dog",
-    "name": "st_meat_dog",
+    "id": "meat_flesh",
+    "name": "st_meat_flesh",
     "category": "Food",
-    "displayName": "st_meat_dog [default]"
+    "displayName": "st_meat_flesh"
   },
   {
     "id": "meat_flesh_a",
@@ -3093,10 +4000,10 @@
     "displayName": "st_meat_flesh [b]"
   },
   {
-    "id": "meat_flesh",
-    "name": "st_meat_flesh",
+    "id": "meat_lurker",
+    "name": "st_meat_lurker",
     "category": "Food",
-    "displayName": "st_meat_flesh [default]"
+    "displayName": "st_meat_lurker"
   },
   {
     "id": "meat_lurker_a",
@@ -3111,10 +4018,10 @@
     "displayName": "st_meat_lurker [b]"
   },
   {
-    "id": "meat_lurker",
-    "name": "st_meat_lurker",
+    "id": "meat_pseudodog",
+    "name": "st_meat_pseudodog",
     "category": "Food",
-    "displayName": "st_meat_lurker [default]"
+    "displayName": "st_meat_pseudodog"
   },
   {
     "id": "meat_pseudodog_a",
@@ -3129,10 +4036,10 @@
     "displayName": "st_meat_pseudodog [b]"
   },
   {
-    "id": "meat_pseudodog",
-    "name": "st_meat_pseudodog",
+    "id": "meat_psysucker",
+    "name": "st_meat_psysucker",
     "category": "Food",
-    "displayName": "st_meat_pseudodog [default]"
+    "displayName": "st_meat_psysucker"
   },
   {
     "id": "meat_psysucker_a",
@@ -3147,10 +4054,10 @@
     "displayName": "st_meat_psysucker [b]"
   },
   {
-    "id": "meat_psysucker",
-    "name": "st_meat_psysucker",
+    "id": "meat_snork",
+    "name": "st_meat_snork",
     "category": "Food",
-    "displayName": "st_meat_psysucker [default]"
+    "displayName": "st_meat_snork"
   },
   {
     "id": "meat_snork_a",
@@ -3165,10 +4072,10 @@
     "displayName": "st_meat_snork [b]"
   },
   {
-    "id": "meat_snork",
-    "name": "st_meat_snork",
+    "id": "meat_tushkano",
+    "name": "st_meat_tushkano",
     "category": "Food",
-    "displayName": "st_meat_snork [default]"
+    "displayName": "st_meat_tushkano"
   },
   {
     "id": "meat_tushkano_a",
@@ -3183,16 +4090,40 @@
     "displayName": "st_meat_tushkano [b]"
   },
   {
-    "id": "meat_tushkano",
-    "name": "st_meat_tushkano",
-    "category": "Food",
-    "displayName": "st_meat_tushkano [default]"
+    "id": "medium_repair_kit",
+    "name": "st_medium_repair_kit",
+    "category": "Misc",
+    "displayName": "st_medium_repair_kit"
   },
   {
     "id": "medkit",
     "name": "st_medkit",
     "category": "Medicine",
     "displayName": "st_medkit"
+  },
+  {
+    "id": "medkit_script",
+    "name": "st_medkit",
+    "category": "Misc",
+    "displayName": "st_medkit [script]"
+  },
+  {
+    "id": "medkit_ai1",
+    "name": "st_medkit_ai1",
+    "category": "Misc",
+    "displayName": "st_medkit_ai1"
+  },
+  {
+    "id": "medkit_ai2",
+    "name": "st_medkit_ai2",
+    "category": "Misc",
+    "displayName": "st_medkit_ai2"
+  },
+  {
+    "id": "medkit_ai3",
+    "name": "st_medkit_ai3",
+    "category": "Misc",
+    "displayName": "st_medkit_ai3"
   },
   {
     "id": "medkit_army",
@@ -3207,13 +4138,50 @@
     "displayName": "st_medkit_science"
   },
   {
+    "id": "meinkampf",
+    "name": "st_meinkampf",
+    "category": "Misc",
+    "displayName": "st_meinkampf"
+  },
+  {
+    "id": "itm_guide_usb_1",
+    "name": "st_memory_stick_name",
+    "category": "Misc",
+    "displayName": "st_memory_stick_name [1]"
+  },
+  {
+    "id": "itm_guide_usb_2",
+    "name": "st_memory_stick_name",
+    "category": "Misc",
+    "displayName": "st_memory_stick_name [2]"
+  },
+  {
+    "id": "killer_patch",
+    "name": "st_merc_fp",
+    "category": "Misc",
+    "displayName": "st_merc_fp"
+  },
+  {
+    "id": "explo_metalcan_powder",
+    "name": "st_metalcan_powder",
+    "category": "Misc",
+    "displayName": "st_metalcan_powder"
+  },
+  {
     "id": "mine",
     "name": "st_mine_name",
     "category": "Explosives",
     "displayName": "st_mine_name",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
+  },
+  {
+    "id": "mine_new",
+    "name": "st_mine_name",
+    "category": "Misc",
+    "displayName": "st_mine_name [new]"
   },
   {
     "id": "mineral_water",
@@ -3228,6 +4196,18 @@
     "displayName": "st_mint"
   },
   {
+    "id": "mirror",
+    "name": "st_mirror",
+    "category": "Misc",
+    "displayName": "st_mirror"
+  },
+  {
+    "id": "monolith_patch",
+    "name": "st_monolith_fp",
+    "category": "Misc",
+    "displayName": "st_monolith_fp"
+  },
+  {
     "id": "morphine",
     "name": "st_morphine",
     "category": "Medicine",
@@ -3240,10 +4220,76 @@
     "displayName": "st_mre"
   },
   {
+    "id": "mutant_part_crow_beak",
+    "name": "st_mutant_part_crow_beak",
+    "category": "Misc",
+    "displayName": "st_mutant_part_crow_beak"
+  },
+  {
     "id": "nuts",
     "name": "st_nuts",
     "category": "Food",
     "displayName": "st_nuts"
+  },
+  {
+    "id": "device_pda_1",
+    "name": "st_pda_1_name",
+    "category": "Misc",
+    "displayName": "st_pda_1_name"
+  },
+  {
+    "id": "device_pda_2",
+    "name": "st_pda_2_name",
+    "category": "Misc",
+    "displayName": "st_pda_2_name"
+  },
+  {
+    "id": "device_pda_3",
+    "name": "st_pda_3_name",
+    "category": "Misc",
+    "displayName": "st_pda_3_name"
+  },
+  {
+    "id": "itm_pda_common",
+    "name": "st_pda_name",
+    "category": "Misc",
+    "displayName": "st_pda_name [common]"
+  },
+  {
+    "id": "itm_pda_rare",
+    "name": "st_pda_name",
+    "category": "Misc",
+    "displayName": "st_pda_name [rare]"
+  },
+  {
+    "id": "itm_pda_uncommon",
+    "name": "st_pda_name",
+    "category": "Misc",
+    "displayName": "st_pda_name [uncommon]"
+  },
+  {
+    "id": "itm_pda_personal",
+    "name": "st_perspda",
+    "category": "Misc",
+    "displayName": "st_perspda"
+  },
+  {
+    "id": "picture_woman",
+    "name": "st_picture_woman",
+    "category": "Misc",
+    "displayName": "st_picture_woman"
+  },
+  {
+    "id": "porn",
+    "name": "st_porn",
+    "category": "Misc",
+    "displayName": "st_porn"
+  },
+  {
+    "id": "porn2",
+    "name": "st_porn2",
+    "category": "Misc",
+    "displayName": "st_porn2"
   },
   {
     "id": "powder_poltergeist",
@@ -3414,10 +4460,34 @@
     "displayName": "st_prt_o_retardant_7"
   },
   {
+    "id": "radio",
+    "name": "st_radio",
+    "category": "Misc",
+    "displayName": "st_radio"
+  },
+  {
+    "id": "radio2",
+    "name": "st_radio2",
+    "category": "Misc",
+    "displayName": "st_radio2"
+  },
+  {
     "id": "raisins",
     "name": "st_raisins",
     "category": "Food",
     "displayName": "st_raisins"
+  },
+  {
+    "id": "ramrod_tool",
+    "name": "st_ramrod_tool",
+    "category": "Misc",
+    "displayName": "st_ramrod_tool"
+  },
+  {
+    "id": "rasp_tool",
+    "name": "st_rasp_tool",
+    "category": "Misc",
+    "displayName": "st_rasp_tool"
   },
   {
     "id": "ration_ru",
@@ -3438,10 +4508,160 @@
     "displayName": "st_rebirth"
   },
   {
+    "id": "renegade_patch",
+    "name": "st_renegade_fp",
+    "category": "Misc",
+    "displayName": "st_renegade_fp"
+  },
+  {
+    "id": "toolkit_p",
+    "name": "st_repair_kit_p",
+    "category": "Misc",
+    "displayName": "st_repair_kit_p"
+  },
+  {
+    "id": "toolkit_r5",
+    "name": "st_repair_kit_r5",
+    "category": "Misc",
+    "displayName": "st_repair_kit_r5"
+  },
+  {
+    "id": "toolkit_r7",
+    "name": "st_repair_kit_r7",
+    "category": "Misc",
+    "displayName": "st_repair_kit_r7"
+  },
+  {
+    "id": "toolkit_s",
+    "name": "st_repair_kit_s",
+    "category": "Misc",
+    "displayName": "st_repair_kit_s"
+  },
+  {
     "id": "rope",
     "name": "st_rope",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_rope"
+  },
+  {
+    "id": "money_10_50",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_10_50]"
+  },
+  {
+    "id": "money_100_200",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_100_200]"
+  },
+  {
+    "id": "money_1000_5000",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_1000_5000]"
+  },
+  {
+    "id": "money_200_300",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_200_300]"
+  },
+  {
+    "id": "money_300_400",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_300_400]"
+  },
+  {
+    "id": "money_400_500",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_400_500]"
+  },
+  {
+    "id": "money_50_100",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_50_100]"
+  },
+  {
+    "id": "money_500_600",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_500_600]"
+  },
+  {
+    "id": "money_5000_end",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_5000_end]"
+  },
+  {
+    "id": "money_600_700",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_600_700]"
+  },
+  {
+    "id": "money_700_800",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_700_800]"
+  },
+  {
+    "id": "money_800_900",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_800_900]"
+  },
+  {
+    "id": "money_900_1000",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [money_900_1000]"
+  },
+  {
+    "id": "roubles",
+    "name": "st_roubles",
+    "category": "Misc",
+    "displayName": "st_roubles [roubles]"
+  },
+  {
+    "id": "money_10",
+    "name": "st_roubles_10_name",
+    "category": "Misc",
+    "displayName": "st_roubles_10_name"
+  },
+  {
+    "id": "money_100",
+    "name": "st_roubles_100_name",
+    "category": "Misc",
+    "displayName": "st_roubles_100_name"
+  },
+  {
+    "id": "money_1000",
+    "name": "st_roubles_1000_name",
+    "category": "Misc",
+    "displayName": "st_roubles_1000_name"
+  },
+  {
+    "id": "money_50",
+    "name": "st_roubles_50_name",
+    "category": "Misc",
+    "displayName": "st_roubles_50_name"
+  },
+  {
+    "id": "money_500",
+    "name": "st_roubles_500_name",
+    "category": "Misc",
+    "displayName": "st_roubles_500_name"
+  },
+  {
+    "id": "money_5000",
+    "name": "st_roubles_5000_name",
+    "category": "Misc",
+    "displayName": "st_roubles_5000_name"
   },
   {
     "id": "salicidic_acid",
@@ -3462,10 +4682,70 @@
     "displayName": "st_sausage"
   },
   {
+    "id": "sewing_kit_a",
+    "name": "st_sewing_kit_a",
+    "category": "Misc",
+    "displayName": "st_sewing_kit_a"
+  },
+  {
+    "id": "sewing_kit_b",
+    "name": "st_sewing_kit_b",
+    "category": "Misc",
+    "displayName": "st_sewing_kit_b"
+  },
+  {
+    "id": "sewing_kit_h",
+    "name": "st_sewing_kit_h",
+    "category": "Misc",
+    "displayName": "st_sewing_kit_h"
+  },
+  {
+    "id": "sewing_thread",
+    "name": "st_sewing_thread",
+    "category": "Misc",
+    "displayName": "st_sewing_thread"
+  },
+  {
+    "id": "sharpening_stones",
+    "name": "st_sharpening_stones",
+    "category": "Misc",
+    "displayName": "st_sharpening_stones"
+  },
+  {
+    "id": "shovel_mili",
+    "name": "st_shovel_mili",
+    "category": "Misc",
+    "displayName": "st_shovel_mili"
+  },
+  {
+    "id": "shovel_old",
+    "name": "st_shovel_old",
+    "category": "Misc",
+    "displayName": "st_shovel_old"
+  },
+  {
     "id": "drug_sleepingpills",
     "name": "st_sleepingpills",
     "category": "Medicine",
     "displayName": "st_sleepingpills"
+  },
+  {
+    "id": "solvent",
+    "name": "st_solvent",
+    "category": "Misc",
+    "displayName": "st_solvent"
+  },
+  {
+    "id": "stalker_patch",
+    "name": "st_stalker_fp",
+    "category": "Misc",
+    "displayName": "st_stalker_fp"
+  },
+  {
+    "id": "steel_wool",
+    "name": "st_steel_wool",
+    "category": "Misc",
+    "displayName": "st_steel_wool"
   },
   {
     "id": "stimpack",
@@ -3494,8 +4774,20 @@
   {
     "id": "swiss_knife",
     "name": "st_swiss",
-    "category": "Materials",
+    "category": "Misc",
     "displayName": "st_swiss"
+  },
+  {
+    "id": "synthrope",
+    "name": "st_synthrope",
+    "category": "Misc",
+    "displayName": "st_synthrope"
+  },
+  {
+    "id": "tarpaulin",
+    "name": "st_tarpaulin",
+    "category": "Misc",
+    "displayName": "st_tarpaulin"
   },
   {
     "id": "tea",
@@ -3528,7 +4820,8 @@
     "displayName": "st_trg_sako",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "tushonka",
@@ -3537,10 +4830,22 @@
     "displayName": "st_tushonka"
   },
   {
+    "id": "underwear",
+    "name": "st_underwear",
+    "category": "Misc",
+    "displayName": "st_underwear"
+  },
+  {
     "id": "vodka",
     "name": "st_vodka",
     "category": "Food",
     "displayName": "st_vodka"
+  },
+  {
+    "id": "vodka_script",
+    "name": "st_vodka",
+    "category": "Misc",
+    "displayName": "st_vodka [script]"
   },
   {
     "id": "vodka_quality",
@@ -3555,10 +4860,28 @@
     "displayName": "st_vodka2"
   },
   {
+    "id": "walkie",
+    "name": "st_walkie",
+    "category": "Misc",
+    "displayName": "st_walkie"
+  },
+  {
     "id": "water_drink",
     "name": "st_water_drink",
     "category": "Food",
     "displayName": "st_water_drink"
+  },
+  {
+    "id": "device_weather_radar",
+    "name": "st_weather_radar",
+    "category": "Misc",
+    "displayName": "st_weather_radar"
+  },
+  {
+    "id": "welding_goggles",
+    "name": "st_welding_goggles",
+    "category": "Misc",
+    "displayName": "st_welding_goggles"
   },
   {
     "id": "wpn_9a91",
@@ -3567,7 +4890,8 @@
     "displayName": "st_wpn_9a91",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_abakan",
@@ -3576,7 +4900,8 @@
     "displayName": "st_wpn_abakan",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_abakan_camo",
@@ -3585,7 +4910,8 @@
     "displayName": "st_wpn_abakan_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ace21",
@@ -3594,7 +4920,8 @@
     "displayName": "st_wpn_ace21",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aek",
@@ -3603,7 +4930,8 @@
     "displayName": "st_wpn_aek971",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aek_camo",
@@ -3612,7 +4940,8 @@
     "displayName": "st_wpn_aek971_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aek_duty",
@@ -3621,7 +4950,8 @@
     "displayName": "st_wpn_aek973",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak",
@@ -3630,7 +4960,8 @@
     "displayName": "st_wpn_ak",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak101",
@@ -3639,7 +4970,8 @@
     "displayName": "st_wpn_ak101",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak101_camo",
@@ -3648,7 +4980,8 @@
     "displayName": "st_wpn_ak101_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak102",
@@ -3657,7 +4990,8 @@
     "displayName": "st_wpn_ak102",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak103",
@@ -3666,7 +5000,8 @@
     "displayName": "st_wpn_ak103",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak103_camo",
@@ -3675,7 +5010,8 @@
     "displayName": "st_wpn_ak103_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak104",
@@ -3684,7 +5020,8 @@
     "displayName": "st_wpn_ak104",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak105",
@@ -3693,7 +5030,8 @@
     "displayName": "st_wpn_ak105",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak12",
@@ -3702,7 +5040,8 @@
     "displayName": "st_wpn_ak12",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74",
@@ -3711,7 +5050,8 @@
     "displayName": "st_wpn_ak74",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74_alt",
@@ -3720,7 +5060,8 @@
     "displayName": "st_wpn_ak74_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74_custom",
@@ -3729,7 +5070,8 @@
     "displayName": "st_wpn_ak74_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74_rpk",
@@ -3738,7 +5080,8 @@
     "displayName": "st_wpn_ak74_eot",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74_modern",
@@ -3747,7 +5090,8 @@
     "displayName": "st_wpn_ak74_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74_old",
@@ -3756,7 +5100,8 @@
     "displayName": "st_wpn_ak74_old",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74m",
@@ -3765,7 +5110,8 @@
     "displayName": "st_wpn_ak74m",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74m_alt",
@@ -3774,7 +5120,8 @@
     "displayName": "st_wpn_ak74m_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74m_camo",
@@ -3783,7 +5130,8 @@
     "displayName": "st_wpn_ak74m_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74m_custom",
@@ -3792,7 +5140,8 @@
     "displayName": "st_wpn_ak74m_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74m_duty",
@@ -3801,7 +5150,8 @@
     "displayName": "st_wpn_ak74m_duty",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74m_pka",
@@ -3810,7 +5160,8 @@
     "displayName": "st_wpn_ak74m_pk-a",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74u",
@@ -3819,7 +5170,8 @@
     "displayName": "st_wpn_ak74u",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74u_camo",
@@ -3828,7 +5180,8 @@
     "displayName": "st_wpn_ak74u_camo",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74u_custom",
@@ -3837,7 +5190,8 @@
     "displayName": "st_wpn_ak74u_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74u_old",
@@ -3846,7 +5200,8 @@
     "displayName": "st_wpn_ak74u_old",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ak74u_snag",
@@ -3855,7 +5210,8 @@
     "displayName": "st_wpn_ak74u_snag",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_akm",
@@ -3864,7 +5220,8 @@
     "displayName": "st_wpn_akm",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_akms",
@@ -3873,7 +5230,8 @@
     "displayName": "st_wpn_akms",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_akms_alt",
@@ -3882,7 +5240,8 @@
     "displayName": "st_wpn_akms_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aks",
@@ -3891,7 +5250,8 @@
     "displayName": "st_wpn_aks",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aks74",
@@ -3900,7 +5260,8 @@
     "displayName": "st_wpn_aks74",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aks74_new",
@@ -3909,7 +5270,8 @@
     "displayName": "st_wpn_aks74_new",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aps",
@@ -3918,7 +5280,8 @@
     "displayName": "st_wpn_aps",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ash12",
@@ -3927,7 +5290,8 @@
     "displayName": "st_wpn_ash12",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aug",
@@ -3936,7 +5300,8 @@
     "displayName": "st_wpn_aug",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aug_a3",
@@ -3945,7 +5310,8 @@
     "displayName": "st_wpn_aug_a3",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aug_custom",
@@ -3954,7 +5320,8 @@
     "displayName": "st_wpn_aug_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aug_freedom",
@@ -3963,7 +5330,8 @@
     "displayName": "st_wpn_aug_freedom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aug_merc",
@@ -3972,7 +5340,8 @@
     "displayName": "st_wpn_aug_merc",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_aug_modern",
@@ -3981,7 +5350,8 @@
     "displayName": "st_wpn_aug_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_beretta",
@@ -3990,7 +5360,8 @@
     "displayName": "st_wpn_beretta",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_beretta_alt",
@@ -3999,7 +5370,8 @@
     "displayName": "st_wpn_beretta_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_beretta_camo",
@@ -4008,7 +5380,8 @@
     "displayName": "st_wpn_beretta_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_beretta_modern",
@@ -4017,7 +5390,8 @@
     "displayName": "st_wpn_beretta_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_bizon",
@@ -4026,7 +5400,8 @@
     "displayName": "st_wpn_bizon",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_bm16",
@@ -4035,7 +5410,8 @@
     "displayName": "st_wpn_bm16",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_bm16_alt",
@@ -4044,7 +5420,8 @@
     "displayName": "st_wpn_bm16_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_bm16_full",
@@ -4053,7 +5430,8 @@
     "displayName": "st_wpn_bm16_full",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_bm16_full_alt",
@@ -4062,7 +5440,8 @@
     "displayName": "st_wpn_bm16_full_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_colt1911",
@@ -4071,7 +5450,8 @@
     "displayName": "st_wpn_colt1911",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_colt1911_alt",
@@ -4080,7 +5460,8 @@
     "displayName": "st_wpn_colt1911_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_colt1911_camo",
@@ -4089,7 +5470,8 @@
     "displayName": "st_wpn_colt1911_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_colt1911_custom",
@@ -4098,7 +5480,8 @@
     "displayName": "st_wpn_colt1911_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_colt1911_duty",
@@ -4107,7 +5490,8 @@
     "displayName": "st_wpn_colt1911_duty",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_colt1911_merc",
@@ -4116,7 +5500,8 @@
     "displayName": "st_wpn_colt1911_merc",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_colt1911_modern",
@@ -4125,7 +5510,8 @@
     "displayName": "st_wpn_colt1911_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_colt1911_new",
@@ -4134,7 +5520,8 @@
     "displayName": "st_wpn_colt1911_new",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_cz75",
@@ -4143,7 +5530,8 @@
     "displayName": "st_wpn_cz75",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_desert_eagle",
@@ -4152,7 +5540,8 @@
     "displayName": "st_wpn_desert_eagle",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_desert_eagle_custom",
@@ -4161,7 +5550,8 @@
     "displayName": "st_wpn_desert_eagle_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_desert_eagle_modern",
@@ -4170,7 +5560,8 @@
     "displayName": "st_wpn_desert_eagle_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_desert_eagle_nimble",
@@ -4179,7 +5570,8 @@
     "displayName": "st_wpn_desert_eagle_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fal",
@@ -4188,7 +5580,8 @@
     "displayName": "st_wpn_fal",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_famas3",
@@ -4197,7 +5590,8 @@
     "displayName": "st_wpn_famas3",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fn2000",
@@ -4206,7 +5600,8 @@
     "displayName": "st_wpn_fn2000",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fn2000_camo",
@@ -4215,7 +5610,8 @@
     "displayName": "st_wpn_fn2000_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fn2000_custom",
@@ -4224,7 +5620,8 @@
     "displayName": "st_wpn_fn2000_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fn2000_nimble",
@@ -4233,7 +5630,8 @@
     "displayName": "st_wpn_fn2000_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fn57",
@@ -4242,7 +5640,8 @@
     "displayName": "st_wpn_fn57",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fnc",
@@ -4251,7 +5650,8 @@
     "displayName": "st_wpn_fnc",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fnp45",
@@ -4260,7 +5660,8 @@
     "displayName": "st_wpn_fnp45",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fnp45_custom",
@@ -4269,7 +5670,8 @@
     "displayName": "st_wpn_fnp45_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fnx45",
@@ -4278,7 +5680,8 @@
     "displayName": "st_wpn_fnx45",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fnx45_alt",
@@ -4287,7 +5690,8 @@
     "displayName": "st_wpn_fnx45_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fnx45_custom",
@@ -4296,16 +5700,18 @@
     "displayName": "st_wpn_fnx45_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fort",
     "name": "st_wpn_fort",
     "category": "Pistols",
-    "displayName": "st_wpn_fort [default]",
+    "displayName": "st_wpn_fort",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fort_snag",
@@ -4314,7 +5720,8 @@
     "displayName": "st_wpn_fort [snag]",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_fort500",
@@ -4323,7 +5730,8 @@
     "displayName": "st_wpn_fort500",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_g3",
@@ -4332,16 +5740,18 @@
     "displayName": "st_wpn_g3",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_g36",
     "name": "st_wpn_g36",
     "category": "Rifles",
-    "displayName": "st_wpn_g36 [default]",
+    "displayName": "st_wpn_g36",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_g36_nimble",
@@ -4350,7 +5760,8 @@
     "displayName": "st_wpn_g36 [nimble]",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_g36_camo",
@@ -4359,7 +5770,8 @@
     "displayName": "st_wpn_g36_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_g36k",
@@ -4368,7 +5780,8 @@
     "displayName": "st_wpn_g36k",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_g3sg1",
@@ -4377,7 +5790,8 @@
     "displayName": "st_wpn_g3sg1",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_g43",
@@ -4386,7 +5800,8 @@
     "displayName": "st_wpn_g43",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_galil",
@@ -4395,7 +5810,8 @@
     "displayName": "st_wpn_galil",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_galil_custom",
@@ -4404,7 +5820,8 @@
     "displayName": "st_wpn_galil_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_galil_modern",
@@ -4413,7 +5830,8 @@
     "displayName": "st_wpn_galil_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_gauss",
@@ -4422,7 +5840,8 @@
     "displayName": "st_wpn_gauss",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_glock",
@@ -4431,7 +5850,8 @@
     "displayName": "st_wpn_glock",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_glock_custom",
@@ -4440,7 +5860,8 @@
     "displayName": "st_wpn_glock_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_glock_modern",
@@ -4449,7 +5870,8 @@
     "displayName": "st_wpn_glock_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp443",
@@ -4458,7 +5880,8 @@
     "displayName": "st_wpn_grach",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_groza",
@@ -4467,7 +5890,8 @@
     "displayName": "st_wpn_groza",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_groza_nimble",
@@ -4476,7 +5900,8 @@
     "displayName": "st_wpn_groza_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_gsh18",
@@ -4485,7 +5910,8 @@
     "displayName": "st_wpn_gsh18",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_gsh18_custom",
@@ -4494,7 +5920,8 @@
     "displayName": "st_wpn_gsh18_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_hk416",
@@ -4503,7 +5930,8 @@
     "displayName": "st_wpn_hk416",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_hk417",
@@ -4512,7 +5940,8 @@
     "displayName": "st_wpn_hk417",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_hpsa",
@@ -4521,7 +5950,8 @@
     "displayName": "st_wpn_hpsa",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_hpsa_alt",
@@ -4530,7 +5960,8 @@
     "displayName": "st_wpn_hpsa_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_k98",
@@ -4539,7 +5970,8 @@
     "displayName": "st_wpn_k98",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_kiparis",
@@ -4548,7 +5980,8 @@
     "displayName": "st_wpn_kiparis",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_l85",
@@ -4557,7 +5990,8 @@
     "displayName": "st_wpn_l85",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_l85_alt",
@@ -4566,7 +6000,8 @@
     "displayName": "st_wpn_l85_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_l85_custom",
@@ -4575,7 +6010,8 @@
     "displayName": "st_wpn_l85_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_l85_modern",
@@ -4584,7 +6020,8 @@
     "displayName": "st_wpn_l85_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_l85a2",
@@ -4593,7 +6030,8 @@
     "displayName": "st_wpn_l85a2",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_l85a2_alt",
@@ -4602,7 +6040,8 @@
     "displayName": "st_wpn_l85a2_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_l85a2_custom",
@@ -4611,7 +6050,8 @@
     "displayName": "st_wpn_l85a2_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_l85a2_modern",
@@ -4620,7 +6060,8 @@
     "displayName": "st_wpn_l85a2_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_l96a1",
@@ -4629,7 +6070,8 @@
     "displayName": "st_wpn_l96a1",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_l96a1m",
@@ -4638,7 +6080,8 @@
     "displayName": "st_wpn_l96a1m",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_lr300",
@@ -4647,7 +6090,8 @@
     "displayName": "st_wpn_lr300",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_lr300_camo",
@@ -4656,7 +6100,8 @@
     "displayName": "st_wpn_lr300_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_lr300_custom",
@@ -4665,7 +6110,8 @@
     "displayName": "st_wpn_lr300_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m16",
@@ -4674,7 +6120,8 @@
     "displayName": "st_wpn_m16",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m16a2",
@@ -4683,7 +6130,8 @@
     "displayName": "st_wpn_m16a2",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m24",
@@ -4692,7 +6140,8 @@
     "displayName": "st_wpn_m24",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m249",
@@ -4701,7 +6150,8 @@
     "displayName": "st_wpn_m249",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m4",
@@ -4710,7 +6160,8 @@
     "displayName": "st_wpn_m4",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m4a1",
@@ -4719,7 +6170,8 @@
     "displayName": "st_wpn_m4a1",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m4a1_camo",
@@ -4728,7 +6180,8 @@
     "displayName": "st_wpn_m4a1_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m4a1_custom",
@@ -4737,7 +6190,8 @@
     "displayName": "st_wpn_m4a1_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m4a1_freedom",
@@ -4746,7 +6200,8 @@
     "displayName": "st_wpn_m4a1_freedom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m60",
@@ -4755,7 +6210,8 @@
     "displayName": "st_wpn_m60",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m79",
@@ -4764,7 +6220,8 @@
     "displayName": "st_wpn_m79",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m82",
@@ -4773,7 +6230,8 @@
     "displayName": "st_wpn_m82",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_m98b",
@@ -4782,7 +6240,8 @@
     "displayName": "st_wpn_m98b",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mk14",
@@ -4791,7 +6250,8 @@
     "displayName": "st_wpn_mk14",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mosin",
@@ -4800,7 +6260,8 @@
     "displayName": "st_wpn_mosin",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mossberg590",
@@ -4809,7 +6270,8 @@
     "displayName": "st_wpn_mossberg590",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp133",
@@ -4818,7 +6280,8 @@
     "displayName": "st_wpn_mp133",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp153",
@@ -4827,7 +6290,8 @@
     "displayName": "st_wpn_mp153",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp412",
@@ -4836,7 +6300,8 @@
     "displayName": "st_wpn_mp412",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp5",
@@ -4845,7 +6310,8 @@
     "displayName": "st_wpn_mp5",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp5_alt",
@@ -4854,7 +6320,8 @@
     "displayName": "st_wpn_mp5_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp5_custom",
@@ -4863,7 +6330,8 @@
     "displayName": "st_wpn_mp5_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp5_nimble",
@@ -4872,7 +6340,8 @@
     "displayName": "st_wpn_mp5_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp5sd",
@@ -4881,7 +6350,8 @@
     "displayName": "st_wpn_mp5sd",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp5sd_custom",
@@ -4890,7 +6360,8 @@
     "displayName": "st_wpn_mp5sd_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp5sd_new",
@@ -4899,7 +6370,8 @@
     "displayName": "st_wpn_mp5sd_new",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_mp7",
@@ -4908,7 +6380,8 @@
     "displayName": "st_wpn_mp7",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_oc33",
@@ -4917,7 +6390,8 @@
     "displayName": "st_wpn_oc33",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_p90",
@@ -4926,7 +6400,8 @@
     "displayName": "st_wpn_p90",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_pb",
@@ -4935,7 +6410,8 @@
     "displayName": "st_wpn_pb",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_pb_custom",
@@ -4944,7 +6420,8 @@
     "displayName": "st_wpn_pb_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_pkm_zulus",
@@ -4953,7 +6430,8 @@
     "displayName": "st_wpn_pkm_zulus",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_pkp",
@@ -4962,7 +6440,8 @@
     "displayName": "st_wpn_pkp",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_pm",
@@ -4971,7 +6450,8 @@
     "displayName": "st_wpn_pm",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_pm_actor",
@@ -4980,7 +6460,8 @@
     "displayName": "st_wpn_pm_actor",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_pm_custom",
@@ -4989,7 +6470,8 @@
     "displayName": "st_wpn_pm_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_pmm",
@@ -4998,7 +6480,8 @@
     "displayName": "st_wpn_pmm",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_pp2000",
@@ -5007,7 +6490,8 @@
     "displayName": "st_wpn_pp2000",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ppsh41",
@@ -5016,7 +6500,8 @@
     "displayName": "st_wpn_ppsh41",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ppsh41_rednew",
@@ -5025,7 +6510,8 @@
     "displayName": "st_wpn_ppsh41_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ppsh41_woodnew",
@@ -5034,7 +6520,8 @@
     "displayName": "st_wpn_ppsh41_new",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_protecta",
@@ -5043,7 +6530,8 @@
     "displayName": "st_wpn_protecta",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_protecta_aim",
@@ -5052,7 +6540,8 @@
     "displayName": "st_wpn_protecta_aim",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_protecta_camo",
@@ -5061,7 +6550,8 @@
     "displayName": "st_wpn_protecta_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_protecta_custom",
@@ -5070,7 +6560,8 @@
     "displayName": "st_wpn_protecta_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_protecta_nimble",
@@ -5079,7 +6570,8 @@
     "displayName": "st_wpn_protecta_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_remington700",
@@ -5088,7 +6580,8 @@
     "displayName": "st_wpn_remington700",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_remington870",
@@ -5097,7 +6590,8 @@
     "displayName": "st_wpn_remington870",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_rg-6",
@@ -5106,7 +6600,8 @@
     "displayName": "st_wpn_rg6",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_pkm",
@@ -5115,7 +6610,8 @@
     "displayName": "st_wpn_rp",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_rpd",
@@ -5124,7 +6620,8 @@
     "displayName": "st_wpn_rpd",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_rpg7",
@@ -5133,7 +6630,8 @@
     "displayName": "st_wpn_rpg7",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_rpk",
@@ -5142,7 +6640,8 @@
     "displayName": "st_wpn_rpk",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_rpk74",
@@ -5151,7 +6650,8 @@
     "displayName": "st_wpn_rpk74",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_saiga12s",
@@ -5160,7 +6660,8 @@
     "displayName": "st_wpn_saiga12s",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_scar",
@@ -5169,7 +6670,8 @@
     "displayName": "st_wpn_scar",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_scar_custom",
@@ -5178,7 +6680,8 @@
     "displayName": "st_wpn_scar_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_scar_new",
@@ -5187,7 +6690,8 @@
     "displayName": "st_wpn_scar_new",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sig220",
@@ -5196,7 +6700,8 @@
     "displayName": "st_wpn_sig220",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sig220_custom",
@@ -5205,7 +6710,8 @@
     "displayName": "st_wpn_sig220_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sig220_nimble",
@@ -5214,7 +6720,8 @@
     "displayName": "st_wpn_sig220_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sig550",
@@ -5223,7 +6730,8 @@
     "displayName": "st_wpn_sig550",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sig550_camo",
@@ -5232,7 +6740,8 @@
     "displayName": "st_wpn_sig550_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sig550_custom",
@@ -5241,7 +6750,8 @@
     "displayName": "st_wpn_sig550_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sig550_sniper",
@@ -5250,7 +6760,8 @@
     "displayName": "st_wpn_sig550_sniper",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sig550_luckygun",
@@ -5259,7 +6770,8 @@
     "displayName": "st_wpn_sig550_strelok",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sig552",
@@ -5268,7 +6780,8 @@
     "displayName": "st_wpn_sig552",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sks",
@@ -5277,7 +6790,8 @@
     "displayName": "st_wpn_sks",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sks_modern",
@@ -5286,7 +6800,8 @@
     "displayName": "st_wpn_sks_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_spas12",
@@ -5295,7 +6810,8 @@
     "displayName": "st_wpn_spas12",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_spas12_custom",
@@ -5304,7 +6820,8 @@
     "displayName": "st_wpn_spas12_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_spas12_nimble",
@@ -5313,7 +6830,8 @@
     "displayName": "st_wpn_spas12_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sr25",
@@ -5322,7 +6840,8 @@
     "displayName": "st_wpn_sr25",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sv98",
@@ -5331,7 +6850,8 @@
     "displayName": "st_wpn_sv98",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_sv98_custom",
@@ -5340,7 +6860,8 @@
     "displayName": "st_wpn_sv98_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_svd",
@@ -5349,7 +6870,8 @@
     "displayName": "st_wpn_svd",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_svd_custom",
@@ -5358,7 +6880,8 @@
     "displayName": "st_wpn_svd_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_svd_nimble",
@@ -5367,7 +6890,8 @@
     "displayName": "st_wpn_svd_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_svt40",
@@ -5376,7 +6900,8 @@
     "displayName": "st_wpn_svt40",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_svt40_modern",
@@ -5385,7 +6910,8 @@
     "displayName": "st_wpn_svt40_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_svu",
@@ -5394,7 +6920,8 @@
     "displayName": "st_wpn_svu",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_svu_alt",
@@ -5403,7 +6930,8 @@
     "displayName": "st_wpn_svu_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_svu_nimble",
@@ -5412,16 +6940,18 @@
     "displayName": "st_wpn_svu_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_wincheaster1300",
     "name": "st_wpn_toz194",
     "category": "Shotguns",
-    "displayName": "st_wpn_toz194 [default]",
+    "displayName": "st_wpn_toz194",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_wincheaster1300_trapper",
@@ -5430,7 +6960,8 @@
     "displayName": "st_wpn_toz194 [trapper]",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_toz34",
@@ -5439,7 +6970,8 @@
     "displayName": "st_wpn_toz34",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_toz34_bull",
@@ -5448,7 +6980,8 @@
     "displayName": "st_wpn_toz34_bull",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_toz34_custom",
@@ -5457,7 +6990,8 @@
     "displayName": "st_wpn_toz34_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_toz34_decor",
@@ -5466,7 +7000,8 @@
     "displayName": "st_wpn_toz34_decor",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_toz34_mark4",
@@ -5475,7 +7010,8 @@
     "displayName": "st_wpn_toz34_mark4",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_toz34_obrez",
@@ -5484,7 +7020,8 @@
     "displayName": "st_wpn_toz34_obrez",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_toz34_obrez_custom",
@@ -5493,7 +7030,8 @@
     "displayName": "st_wpn_toz34_obrez_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_toz34_obrez_decor",
@@ -5502,7 +7040,8 @@
     "displayName": "st_wpn_toz34_obrez_decor",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_tt33",
@@ -5511,7 +7050,8 @@
     "displayName": "st_wpn_tt33",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_tt33_modern",
@@ -5520,7 +7060,8 @@
     "displayName": "st_wpn_tt33_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_type63",
@@ -5529,7 +7070,8 @@
     "displayName": "st_wpn_type63",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "pri_a17_gauss_rifle",
@@ -5538,7 +7080,8 @@
     "displayName": "st_wpn_umirotvoritel",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ump45",
@@ -5547,7 +7090,8 @@
     "displayName": "st_wpn_ump45",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_ump45_custom",
@@ -5556,7 +7100,8 @@
     "displayName": "st_wpn_ump45_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_usas12",
@@ -5565,7 +7110,8 @@
     "displayName": "st_wpn_usas12",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_usp",
@@ -5574,7 +7120,8 @@
     "displayName": "st_wpn_usp",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_usp_custom",
@@ -5583,7 +7130,8 @@
     "displayName": "st_wpn_usp_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_usp_match",
@@ -5592,7 +7140,8 @@
     "displayName": "st_wpn_usp_match",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_usp_nimble",
@@ -5601,7 +7150,8 @@
     "displayName": "st_wpn_usp_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_val",
@@ -5610,7 +7160,8 @@
     "displayName": "st_wpn_val",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_val_modern",
@@ -5619,7 +7170,8 @@
     "displayName": "st_wpn_val_modern",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vepr",
@@ -5628,7 +7180,8 @@
     "displayName": "st_wpn_vepr12",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vihr",
@@ -5637,7 +7190,18 @@
     "displayName": "st_wpn_vihr",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
+  },
+  {
+    "id": "wpn_vintorez",
+    "name": "st_wpn_vintorez",
+    "category": "Rifles",
+    "displayName": "st_wpn_vintorez",
+    "hasNpcWeaponDrop": true,
+    "inStartingLoadout": false,
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vintorez_1pn93",
@@ -5646,16 +7210,8 @@
     "displayName": "st_wpn_vintorez [1pn93]",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
-  },
-  {
-    "id": "wpn_vintorez",
-    "name": "st_wpn_vintorez",
-    "category": "Rifles",
-    "displayName": "st_wpn_vintorez [default]",
-    "hasNpcWeaponDrop": true,
-    "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vintorez_alt",
@@ -5664,7 +7220,8 @@
     "displayName": "st_wpn_vintorez_alt",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vintorez_nimble",
@@ -5673,7 +7230,8 @@
     "displayName": "st_wpn_vintorez_nimble",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vityaz",
@@ -5682,7 +7240,8 @@
     "displayName": "st_wpn_vityaz",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vsk94",
@@ -5691,7 +7250,8 @@
     "displayName": "st_wpn_vsk94",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vssk",
@@ -5700,7 +7260,8 @@
     "displayName": "st_wpn_vssk",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vz61",
@@ -5709,7 +7270,8 @@
     "displayName": "st_wpn_vz61",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vz61_alt",
@@ -5718,7 +7280,8 @@
     "displayName": "st_wpn_vz61_alt",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vz61_camo",
@@ -5727,7 +7290,8 @@
     "displayName": "st_wpn_vz61_camo",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_vz61_freedom",
@@ -5736,7 +7300,8 @@
     "displayName": "st_wpn_vz61_freedom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_wa2000",
@@ -5745,7 +7310,8 @@
     "displayName": "st_wpn_wa2000",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "wpn_walther",
@@ -5754,7 +7320,8 @@
     "displayName": "st_wpn_walther",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_walther_custom",
@@ -5763,7 +7330,8 @@
     "displayName": "st_wpn_walther_custom",
     "hasNpcWeaponDrop": true,
     "inStartingLoadout": false,
-    "unobtainable": false
+    "unobtainable": false,
+    "tacticalKit": false
   },
   {
     "id": "wpn_xm8",
@@ -5772,7 +7340,8 @@
     "displayName": "st_wpn_xm8",
     "hasNpcWeaponDrop": false,
     "inStartingLoadout": false,
-    "unobtainable": true
+    "unobtainable": true,
+    "tacticalKit": false
   },
   {
     "id": "yadylin",

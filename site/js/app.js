@@ -490,6 +490,9 @@ export const appDefinition = {
                 silencers: (addons.silencers || []).map(id => silencerMap[id]).filter(Boolean).map(i => mark(i, integral.silencer)).sort(byName),
                 launchers: (addons.launchers || []).map(id => launcherMap[id]).filter(Boolean).map(i => mark(i, integral.launcher)).sort(byName),
                 kits: (addons.kits || []).map(id => kitMap[id]).filter(Boolean).sort(byName),
+                // Set when the weapon takes a launcher only after the mount upgrade. No export
+                // names the launcher model that fits, so the UI names the upgrade instead.
+                launcherViaUpgrade: !!addons.launcherViaUpgrade,
             };
         },
 
@@ -1365,7 +1368,7 @@ export const appDefinition = {
                     if (def.key === "_has_launcher") {
                         const isWeaponCat = WEAPON_CATEGORIES.includes(this.activeCategory) || this.activeCategory === CAT.ALL_WEAPONS;
                         return isWeaponCat && !!this.weaponAddonsCache &&
-                            Object.values(this.weaponAddonsCache).some(a => a.launchers && a.launchers.length > 0);
+                            Object.values(this.weaponAddonsCache).some(a => (a.launchers && a.launchers.length > 0) || a.launcherViaUpgrade);
                     }
                     return raw.includes(def.key) && items.some(i => i[def.key]);
                 }
@@ -4356,10 +4359,11 @@ export const appDefinition = {
             if (entries.length === 0) return items;
             return items.filter(item => {
                 for (const [key, val] of entries) {
-                    // Virtual: grenade launcher availability check
+                    // Virtual: grenade launcher availability check. Counts weapons that only
+                    // mount one after the mount upgrade (the AK family) as well as native ones.
                     if (key === "_has_launcher") {
                         const addons = this.weaponAddonsCache ? (this.weaponAddonsCache[item.id] || null) : null;
-                        const hasLauncher = !!(addons && addons.launchers && addons.launchers.length > 0);
+                        const hasLauncher = !!(addons && ((addons.launchers && addons.launchers.length > 0) || addons.launcherViaUpgrade));
                         if (val === true && !hasLauncher) return false;
                         if (val === false && hasLauncher) return false;
                         continue;

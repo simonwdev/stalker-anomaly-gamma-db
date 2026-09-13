@@ -27,7 +27,10 @@
       "displayName": "st_grenade_smoke",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false
     },
     {
       "id": "grenade_gd-05",
@@ -43,7 +46,10 @@
       "displayName": "st_grenade_thermite",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false
     },
     {
       "id": "grenade_f1",
@@ -59,7 +65,10 @@
       "displayName": "st_grenade_f1",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false
     },
     {
       "id": "ied_rpg",
@@ -75,7 +84,10 @@
       "displayName": "st_ied_rpg",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false
     },
     {
       "id": "grenade_rgd5",
@@ -91,7 +103,10 @@
       "displayName": "st_grenade_rgd5",
       "hasNpcWeaponDrop": true,
       "hasStashDrop": true,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": false,
+      "tacticalKit": false,
+      "nimble": false
     },
     {
       "id": "mine",
@@ -107,7 +122,10 @@
       "displayName": "st_mine_name",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false
     },
     {
       "id": "ied",
@@ -123,7 +141,10 @@
       "displayName": "st_ied",
       "hasNpcWeaponDrop": false,
       "hasStashDrop": false,
-      "hasDisassemble": false
+      "hasDisassemble": false,
+      "unobtainable": true,
+      "tacticalKit": false,
+      "nimble": false
     }
   ]
 }

@@ -828,7 +828,7 @@
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
       "ui_inv_outfit_additional_weight": "0",
-      "displayName": "st_meat_bloodsucker [default]",
+      "displayName": "st_meat_bloodsucker",
       "hasDisassemble": false
     },
     {
@@ -924,7 +924,7 @@
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
       "ui_inv_outfit_additional_weight": "0",
-      "displayName": "st_meat_boar [default]",
+      "displayName": "st_meat_boar",
       "hasDisassemble": false
     },
     {
@@ -1020,7 +1020,7 @@
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
       "ui_inv_outfit_additional_weight": "0",
-      "displayName": "st_meat_chimera [default]",
+      "displayName": "st_meat_chimera",
       "hasDisassemble": false
     },
     {
@@ -1116,7 +1116,7 @@
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
       "ui_inv_outfit_additional_weight": "0",
-      "displayName": "st_meat_dog [default]",
+      "displayName": "st_meat_dog",
       "hasDisassemble": false
     },
     {
@@ -1212,7 +1212,7 @@
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
       "ui_inv_outfit_additional_weight": "0",
-      "displayName": "st_meat_flesh [default]",
+      "displayName": "st_meat_flesh",
       "hasDisassemble": false
     },
     {
@@ -1308,7 +1308,7 @@
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
       "ui_inv_outfit_additional_weight": "0",
-      "displayName": "st_meat_lurker [default]",
+      "displayName": "st_meat_lurker",
       "hasDisassemble": false
     },
     {
@@ -1404,7 +1404,7 @@
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
       "ui_inv_outfit_additional_weight": "0",
-      "displayName": "st_meat_pseudodog [default]",
+      "displayName": "st_meat_pseudodog",
       "hasDisassemble": false
     },
     {
@@ -1500,7 +1500,7 @@
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
       "ui_inv_outfit_additional_weight": "0",
-      "displayName": "st_meat_psysucker [default]",
+      "displayName": "st_meat_psysucker",
       "hasDisassemble": false
     },
     {
@@ -1596,7 +1596,7 @@
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
       "ui_inv_outfit_additional_weight": "0",
-      "displayName": "st_meat_snork [default]",
+      "displayName": "st_meat_snork",
       "hasDisassemble": false
     },
     {
@@ -1692,7 +1692,7 @@
       "ui_inv_outfit_chemical_burn_protection": "0%",
       "ui_inv_outfit_telepatic_protection": "0",
       "ui_inv_outfit_additional_weight": "0",
-      "displayName": "st_meat_tushkano [default]",
+      "displayName": "st_meat_tushkano",
       "hasDisassemble": false
     },
     {
